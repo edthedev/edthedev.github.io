@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "strapdown": "*"
+    "strapdown": "*",
+    "bootstrap": "~3.3.5"
   }
 }
