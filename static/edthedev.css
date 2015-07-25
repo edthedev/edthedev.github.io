@@ -18,3 +18,22 @@ div
 	font-family: 'times new roman', times, serif;
 	font-size:140%;
 }
+
+.nav
+{
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: inline block;
+}
+
+code 
+{
+	background-color:#727282;
+}
+
+.pun
+{
+	color:#000 !important;
+}
