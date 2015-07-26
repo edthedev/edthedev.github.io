@@ -12,6 +12,9 @@ p
 h1,h2
 {
 	font:'courier new',courier,monospace;
+	background-color:#FFF !important;
+	border: 1px solid #CCCC00;
+	border-radius: 10px;
 }
 div
 {
