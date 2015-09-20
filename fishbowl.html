@@ -1,0 +1,35 @@
+<html>
+<body>
+
+<style>
+p { 
+	position: absolute; 
+	background-color: #abc;
+	left: 0px;
+	margin: 5px; 
+}
+
+</style>
+<script>
+function swim(){
+	var fish1 = $("#fish1");
+	console.log("fish1", fish1);
+	fish1.animate({left: '+=100px'}, 2000);
+}
+</script>
+
+<div id=sea onClick="swim();"></div>
+<script src="static/jquery/dist/jquery.js"></script>
+<script src="static/nav.js"></script>
+
+<script>
+var sea = $("#sea");
+var fish = "<img src=''>";
+var fish = "<p id=fish1 >I'm a fish, I guess.</p>";
+console.log("sea", sea);
+sea.val("Hello");
+sea.append(fish);
+
+</script>
+</body>
+</html>
