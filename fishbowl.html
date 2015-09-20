@@ -10,12 +10,8 @@ p, img {
 }
 
 </style>
+<script src="static/react/react-with-addons.min.js" />
 <script>
-function swim(){
-	var fish1 = $("#fish1");
-	console.log("fish1", fish1);
-	fish1.animate({left: '+=100px'}, 2000);
-}
 </script>
 
 <div id=sea onClick="swim();"></div>
@@ -23,12 +19,32 @@ function swim(){
 <script src="static/nav.js"></script>
 
 <script>
+
+function swim_left(){
+	var fish1 = $("#fish1");
+	console.log("fish1", fish1);
+	fish1.animate({left: '-=800px'}, 3000);
+	window.setTimeout(swim_right, 3000);
+}
+
+function swim_right(){
+	var fish1 = $("#fish1");
+	console.log("fish1", fish1);
+	fish1.animate({left: '+=800px'}, 3000);
+	window.setTimeout(swim_left, 3000);
+}
+
+function swim_loop(){
+	swim_right();
+}
+
 var sea = $("#sea");
-var fish = "<img id=fish1 src='static/img/fish/toothFish.png'>";
+var newFish = "<img id=fish1 src='static/img/fish/toothFish.png'>";
 // var fish = "<p id=fish1 >I'm a fish, I guess.</p>";
 console.log("sea", sea);
 sea.val("Hello");
-sea.append(fish);
+sea.append(newFish);
+swim_loop();
 
 </script>
 </body>
