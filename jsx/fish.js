@@ -17,7 +17,7 @@ var Fish = React.createClass({
 		var fish1 = $("#" + this.props.id);
 		fish1.attr("src", this.props.img + "L" + this.props.ext);
 
-		var swimTime = Math.random() * 5000 + 1000;
+		var swimTime = Math.random() * 5000 + 1500;
 
 		var upDrift = this.getRndUpDrift();
 
@@ -38,7 +38,7 @@ var Fish = React.createClass({
 		var fish1 = $("#" + this.props.id);
 		fish1.attr("src", this.props.img + this.props.ext);
 
-		var swimTime = Math.random() * 5000 + 1000;
+		var swimTime = Math.random() * 5000 + 1500;
 
 		var upDrift = this.getRndUpDrift();
 		fish1.animate({left: '+=800px', top: upDrift}, swimTime);
