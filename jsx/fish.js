@@ -39,7 +39,7 @@ var Fish = React.createClass({
 		this.swim_right();
 	},
 	render: function() {
-		return <img id={this.props.id} src="static/img/fish/toothFishL.png" />;
+		return <img id={this.props.id} src={this.props.img} />;
 	}
 });
 
@@ -48,7 +48,7 @@ var FishBowl = React.createClass({
 		console.log("render bowl");
 		return <div>
 			<Fish id="f1" img="static/img/fish/toothFishL.png" />
-			<Fish id="f2" img="static/img/fish/toothFishL.png" />
+			<Fish id="f2" img="static/img/fish/scaredFishL.png" />
 			<Fish id="f3" img="static/img/fish/toothFishL.png" />
 		</div>;
 	}
