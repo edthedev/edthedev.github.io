@@ -2,7 +2,7 @@
 <body>
 
 <style>
-p { 
+p, img { 
 	position: absolute; 
 	background-color: #abc;
 	left: 0px;
@@ -10,12 +10,8 @@ p {
 }
 
 </style>
+<script src="static/react/react-with-addons.min.js" />
 <script>
-function swim(){
-	var fish1 = $("#fish1");
-	console.log("fish1", fish1);
-	fish1.animate({left: '+=100px'}, 2000);
-}
 </script>
 
 <div id=sea onClick="swim();"></div>
@@ -23,12 +19,46 @@ function swim(){
 <script src="static/nav.js"></script>
 
 <script>
-var sea = $("#sea");
-var fish = "<img src=''>";
-var fish = "<p id=fish1 >I'm a fish, I guess.</p>";
-console.log("sea", sea);
-sea.val("Hello");
-sea.append(fish);
+
+function swim_left(){
+	var fish1 = $("#fish1");
+
+	srcAttr = fish1.attr("src").replace(".png","");
+	fish1.attr("src", srcAttr + "L.png");
+
+	fish1.animate({left: '-=800px'}, 3000);
+	window.setTimeout(swim_right, 3000);
+}
+
+function swim_right(){
+	var fish1 = $("#fish1");
+
+	srcAttr = fish1.attr("src").replace("L.png","");
+	fish1.attr("src", srcAttr + ".png");
+
+	console.log("src attr", srcAttr);
+	console.log("fish1", fish1);
+	fish1.animate({left: '+=800px'}, 3000);
+	window.setTimeout(swim_left, 3000);
+}
+
+function swim_loop(){
+	swim_right();
+}
+
+function new_fish(){
+	var sea = $("#sea");
+	var newFish = "<img id=fish1 src='static/img/fish/toothFishL.png'>";
+	sea.append(newFish);
+	var newFish = $("#fish1");
+	var newTop = Math.random() * 400;
+	var newLeft = Math.random() * 900;
+	newFish.css({top: newTop, left: newLeft, position:'absolute'});
+}
+
+// var fish = "<p id=fish1 >I'm a fish, I guess.</p>";
+new_fish();
+swim_loop();
 
 </script>
 </body>
