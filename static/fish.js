@@ -19,15 +19,29 @@ var Fish = React.createClass({displayName: "Fish",
 
 		var swimTime = Math.random() * 5000 + 1000;
 
-		fish1.animate({left: '-=800px'}, swimTime);
+		var upDrift = this.getRndUpDrift();
+
+		fish1.animate({left: '-=800px', top: upDrift}, swimTime);
 		window.setTimeout(this.swim_right, swimTime);
+	},
+	getRndUpDrift: function() {
+		var upDriftAmt = Math.random() * 200;
+		var smallDriftAmt = Math.random() * 50;
+		if(Math.random > .1) upDriftAmt = smallDriftAmt;
+
+		var upDriftDir = "+";
+		if(Math.random() > .5) upDriftDir = "-";
+		var upDrift = upDriftDir + "=" + upDriftAmt;
+		return upDrift;
 	},
 	swim_right: function(){
 		var fish1 = $("#" + this.props.id);
 		fish1.attr("src", this.props.img + this.props.ext);
 
 		var swimTime = Math.random() * 5000 + 1000;
-		fish1.animate({left: '+=800px'}, swimTime);
+
+		var upDrift = this.getRndUpDrift();
+		fish1.animate({left: '+=800px', top: upDrift}, swimTime);
 		window.setTimeout(this.swim_left, swimTime);
 	},
 	swim_loop: function(){
