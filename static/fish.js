@@ -19,7 +19,7 @@ var Fish = React.createClass({displayName: "Fish",
 		srcAttr = fish1.attr("src").replace(".png","");
 		fish1.attr("src", srcAttr + "L.png");
 
-		var swimTime = Math.random() * 5000;
+		var swimTime = Math.random() * 5000 + 1000;
 
 		fish1.animate({left: '-=800px'}, swimTime);
 		window.setTimeout(this.swim_right, swimTime);
@@ -31,7 +31,7 @@ var Fish = React.createClass({displayName: "Fish",
 		fish1.attr("src", srcAttr + ".png");
 
 
-		var swimTime = Math.random() * 5000;
+		var swimTime = Math.random() * 5000 + 1000;
 		fish1.animate({left: '+=800px'}, swimTime);
 		window.setTimeout(this.swim_left, swimTime);
 	},
