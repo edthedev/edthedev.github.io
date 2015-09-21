@@ -15,9 +15,7 @@ var Fish = React.createClass({
 	},
 	swim_left: function(){
 		var fish1 = $("#" + this.props.id);
-
-		srcAttr = fish1.attr("src").replace(".png","");
-		fish1.attr("src", srcAttr + "L.png");
+		fish1.attr("src", this.props.img + "L" + this.props.ext);
 
 		var swimTime = Math.random() * 5000 + 1000;
 
@@ -26,10 +24,7 @@ var Fish = React.createClass({
 	},
 	swim_right: function(){
 		var fish1 = $("#" + this.props.id);
-
-		srcAttr = fish1.attr("src").replace("L.png","");
-		fish1.attr("src", srcAttr + ".png");
-
+		fish1.attr("src", this.props.img + this.props.ext);
 
 		var swimTime = Math.random() * 5000 + 1000;
 		fish1.animate({left: '+=800px'}, swimTime);
@@ -39,18 +34,38 @@ var Fish = React.createClass({
 		this.swim_right();
 	},
 	render: function() {
-		return <img id={this.props.id} src={this.props.img} />;
+		return <img id={this.props.id} src={this.props.img + this.props.ext} />;
 	}
 });
 
 var FishBowl = React.createClass({
 	render: function() {
 		console.log("render bowl");
+		var fishCount = [];
+		for(i=0; i<9; i++){
+			fishCount.push(i);
+		}
+		var tinyFish = fishCount.map( function( id ) {
+			return <Fish id={"tinyFish" + id} img="static/img/fish/tinyFish" ext=".jpg" />;
+		});
 		return <div>
-			<Fish id="f1" img="static/img/fish/toothFishL.png" />
-			<Fish id="f2" img="static/img/fish/scaredFishL.png" />
-			<Fish id="f3" img="static/img/fish/toothFishL.png" />
+			<Fish id="s1" img="static/img/fish/scaredFish" ext=".png" />
+			<Fish id="s2" img="static/img/fish/scaredFish" ext=".png" />
+			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" />
+			{tinyFish}
 		</div>;
 	}
 });
 React.render(<FishBowl />, document.getElementById('sea'));
+/*
+ *
+ *
+
+			<Fish id="f1" img="static/img/fish/toothFishL.jpg" />
+			<Fish id="f2" img="static/img/fish/scaredFishL.jpg" />
+			<Fish id="f3" img="static/img/fish/toothFishL.jpg" />
+			<Fish id="f4" img="static/img/fish/tinyFishL.jpg" />
+			<Fish id="f4" img="static/img/fish/tinyFishL.jpg" />
+
+ */
+
