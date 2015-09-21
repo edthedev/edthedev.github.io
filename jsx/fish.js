@@ -31,7 +31,14 @@ var Fish = React.createClass({
 		window.setTimeout(this.swim_left, swimTime);
 	},
 	swim_loop: function(){
-		this.swim_right();
+		if(Math.random() > .5)
+		{
+			this.swim_right();
+		}
+		else
+		{
+			this.swim_left();
+		}
 	},
 	render: function() {
 		return <img id={this.props.id} src={this.props.img + this.props.ext} />;
