@@ -11,6 +11,7 @@ var Fish = React.createClass({displayName: "Fish",
 		var newLeft = Math.random() * 900;
 		// console.log("moving", this.props.id, "to", newtop, newLeft);
 		newFish.css({top: newTop, left: newLeft, position:'absolute'});
+		this.swim_loop();
 	},
 	swim_left: function(){
 		var fish1 = $("#" + this.props.id);
@@ -19,7 +20,7 @@ var Fish = React.createClass({displayName: "Fish",
 		fish1.attr("src", srcAttr + "L.png");
 
 		fish1.animate({left: '-=800px'}, 3000);
-		window.setTimeout(swim_right, 3000);
+		window.setTimeout(this.swim_right, 3000);
 	},
 	swim_right: function(){
 		var fish1 = $("#" + this.props.id);
@@ -30,10 +31,10 @@ var Fish = React.createClass({displayName: "Fish",
 		console.log("src attr", srcAttr);
 		console.log("fish1", fish1);
 		fish1.animate({left: '+=800px'}, 3000);
-		window.setTimeout(swim_left, 3000);
+		window.setTimeout(this.swim_left, 3000);
 	},
 	swim_loop: function(){
-		swim_right();
+		this.swim_right();
 	},
 	render: function() {
 		return React.createElement("img", {id: this.props.id, src: "static/img/fish/toothFishL.png"});
