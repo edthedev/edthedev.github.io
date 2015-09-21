@@ -46,12 +46,18 @@ function swim_loop(){
 	swim_right();
 }
 
-var sea = $("#sea");
-var newFish = "<img id=fish1 src='static/img/fish/toothFishL.png'>";
+function new_fish(){
+	var sea = $("#sea");
+	var newFish = "<img id=fish1 src='static/img/fish/toothFishL.png'>";
+	sea.append(newFish);
+	var newFish = $("#fish1");
+	var newTop = Math.random() * 400;
+	var newLeft = Math.random() * 900;
+	newFish.css({top: newTop, left: newLeft, position:'absolute'});
+}
+
 // var fish = "<p id=fish1 >I'm a fish, I guess.</p>";
-console.log("sea", sea);
-sea.val("Hello");
-sea.append(newFish);
+new_fish();
 swim_loop();
 
 </script>
