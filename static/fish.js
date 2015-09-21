@@ -19,8 +19,10 @@ var Fish = React.createClass({displayName: "Fish",
 		srcAttr = fish1.attr("src").replace(".png","");
 		fish1.attr("src", srcAttr + "L.png");
 
-		fish1.animate({left: '-=800px'}, 3000);
-		window.setTimeout(this.swim_right, 3000);
+		var swimTime = Math.random() * 5000;
+
+		fish1.animate({left: '-=800px'}, swimTime);
+		window.setTimeout(this.swim_right, swimTime);
 	},
 	swim_right: function(){
 		var fish1 = $("#" + this.props.id);
@@ -28,10 +30,10 @@ var Fish = React.createClass({displayName: "Fish",
 		srcAttr = fish1.attr("src").replace("L.png","");
 		fish1.attr("src", srcAttr + ".png");
 
-		console.log("src attr", srcAttr);
-		console.log("fish1", fish1);
-		fish1.animate({left: '+=800px'}, 3000);
-		window.setTimeout(this.swim_left, 3000);
+
+		var swimTime = Math.random() * 5000;
+		fish1.animate({left: '+=800px'}, swimTime);
+		window.setTimeout(this.swim_left, swimTime);
 	},
 	swim_loop: function(){
 		this.swim_right();
@@ -47,7 +49,7 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 		return React.createElement("div", null, 
 			React.createElement(Fish, {id: "f1", img: "static/img/fish/toothFishL.png"}), 
 			React.createElement(Fish, {id: "f2", img: "static/img/fish/toothFishL.png"}), 
-			"Hello world."
+			React.createElement(Fish, {id: "f3", img: "static/img/fish/toothFishL.png"})
 		);
 	}
 });
