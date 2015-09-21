@@ -10,45 +10,22 @@ p, img {
 }
 
 </style>
-<script src="static/react/react-with-addons.min.js" />
+<script src="static/react/react.js" />
 <script>
 </script>
 
 <div id=sea onClick="swim();"></div>
 <script src="static/jquery/dist/jquery.js"></script>
 <script src="static/nav.js"></script>
+<script src="static/fish.js"></script>
 
 <script>
 
-function swim_left(){
-	var fish1 = $("#fish1");
-
-	srcAttr = fish1.attr("src").replace(".png","");
-	fish1.attr("src", srcAttr + "L.png");
-
-	fish1.animate({left: '-=800px'}, 3000);
-	window.setTimeout(swim_right, 3000);
-}
-
-function swim_right(){
-	var fish1 = $("#fish1");
-
-	srcAttr = fish1.attr("src").replace("L.png","");
-	fish1.attr("src", srcAttr + ".png");
-
-	console.log("src attr", srcAttr);
-	console.log("fish1", fish1);
-	fish1.animate({left: '+=800px'}, 3000);
-	window.setTimeout(swim_left, 3000);
-}
-
-function swim_loop(){
-	swim_right();
-}
 
 function new_fish(){
 	var sea = $("#sea");
-	var newFish = "<img id=fish1 src='static/img/fish/toothFishL.png'>";
+	// var newFish = "<img id=fish1 src='static/img/fish/toothFishL.png'>";
+	// var newFish = Fish()
 	sea.append(newFish);
 	var newFish = $("#fish1");
 	var newTop = Math.random() * 400;
@@ -57,8 +34,8 @@ function new_fish(){
 }
 
 // var fish = "<p id=fish1 >I'm a fish, I guess.</p>";
-new_fish();
-swim_loop();
+// new_fish();
+// swim_loop();
 
 </script>
 </body>
