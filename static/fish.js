@@ -73,6 +73,7 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			React.createElement(Fish, {id: "s1", img: "static/img/fish/scaredFish", ext: ".png"}), 
 			React.createElement(Fish, {id: "s2", img: "static/img/fish/scaredFish", ext: ".png"}), 
 			React.createElement(Fish, {id: "t1", img: "static/img/fish/toothFish", ext: ".png"}), 
+			React.createElement(Fish, {id: "bt1", img: "static/img/fish/bigTooth", ext: ".jpg"}), 
 			tinyFish
 		);
 	}
