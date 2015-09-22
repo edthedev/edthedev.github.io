@@ -35,29 +35,58 @@ var Fish = React.createClass({displayName: "Fish",
 		return upDrift;
 	},
 	swim_right: function(){
-		var fish1 = $("#" + this.props.id);
-		fish1.attr("src", this.props.img + this.props.ext);
 
 		var swimTime = Math.random() * 5000 + 1500;
 
 		var upDrift = this.getRndUpDrift();
-		fish1.animate({left: '+=800px', top: upDrift}, swimTime);
-		window.setTimeout(this.swim_left, swimTime);
 	},
 	swim_loop: function(){
-		if(Math.random() > .5)
-		{
-			this.swim_right();
+
+		var fish1 = $("#" + this.props.id);
+		console.log("fish1", fish1);
+		var left = this.props.brain.left();
+		var up = this.props.brain.up();
+		var swimTime = this.props.brain.speed();
+		var upDrift = this.getRndUpDrift();
+		console.log("stuff", left, up, swimTime, upDrift);
+
+		var leftAnim;
+		if(left > 0) {
+			fish1.attr("src", this.props.img + this.props.ext);
+			leftAnim = "+" + left + "px";
+		} else {
+			fish1.attr("src", this.props.img + "L" + this.props.ext);
+			leftAnim = left + "px";
 		}
-		else
-		{
-			this.swim_left();
-		}
+
+		fish1.animate({left: leftAnim, top: upDrift}, swimTime);
+
+		window.setTimeout(this.swim_loop, swimTime);
+
 	},
 	render: function() {
 		return React.createElement("img", {id: this.props.id, src: this.props.img + this.props.ext});
 	}
 });
+
+var TinyBrain = {
+	left: function() {
+		if(Math.random() > .5)
+		{
+			return 800;
+		}
+		else
+		{
+			return -800
+		}
+	},
+	up: function() {
+		return 0;
+	},
+	speed: function() {
+		return 1000;
+	}
+};
 
 var FishBowl = React.createClass({displayName: "FishBowl",
 	render: function() {
@@ -67,13 +96,13 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			fishCount.push(i);
 		}
 		var tinyFish = fishCount.map( function( id ) {
-			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".jpg"});
+			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".jpg", brain: TinyBrain});
 		});
 		return React.createElement("div", null, 
-			React.createElement(Fish, {id: "s1", img: "static/img/fish/scaredFish", ext: ".png"}), 
-			React.createElement(Fish, {id: "s2", img: "static/img/fish/scaredFish", ext: ".png"}), 
-			React.createElement(Fish, {id: "t1", img: "static/img/fish/toothFish", ext: ".png"}), 
-			React.createElement(Fish, {id: "bt1", img: "static/img/fish/bigTooth", ext: ".jpg"}), 
+			React.createElement(Fish, {id: "s1", img: "static/img/fish/scaredFish", ext: ".png", brain: TinyBrain}), 
+			React.createElement(Fish, {id: "s2", img: "static/img/fish/scaredFish", ext: ".png", brain: TinyBrain}), 
+			React.createElement(Fish, {id: "t1", img: "static/img/fish/toothFish", ext: ".png", brain: TinyBrain}), 
+			React.createElement(Fish, {id: "bt1", img: "static/img/fish/bigTooth", ext: ".jpg", brain: TinyBrain}), 
 			tinyFish
 		);
 	}
