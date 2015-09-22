@@ -13,52 +13,25 @@ var Fish = React.createClass({
 		newFish.css({top: newTop, left: newLeft, position:'absolute'});
 		this.swim_loop();
 	},
-	swim_left: function(){
-		var fish1 = $("#" + this.props.id);
-		fish1.attr("src", this.props.img + "L" + this.props.ext);
-
-		var swimTime = Math.random() * 5000 + 1500;
-
-		var upDrift = this.getRndUpDrift();
-
-		fish1.animate({left: '-=800px', top: upDrift}, swimTime);
-		window.setTimeout(this.swim_right, swimTime);
-	},
-	getRndUpDrift: function() {
-		var upDriftAmt = Math.random() * 200;
-		var smallDriftAmt = Math.random() * 50;
-		if(Math.random > .1) upDriftAmt = smallDriftAmt;
-
-		var upDriftDir = "+";
-		if(Math.random() > .5) upDriftDir = "-";
-		var upDrift = upDriftDir + "=" + upDriftAmt;
-		return upDrift;
-	},
-	swim_right: function(){
-
-		var swimTime = Math.random() * 5000 + 1500;
-
-		var upDrift = this.getRndUpDrift();
-	},
 	swim_loop: function(){
 
 		var fish1 = $("#" + this.props.id);
 		console.log("fish1", fish1);
 		var left = this.props.brain.left();
-		var up = this.props.brain.up();
+		var upDrift = this.props.brain.up();
 		var swimTime = this.props.brain.speed();
-		var upDrift = this.getRndUpDrift();
-		console.log("stuff", left, up, swimTime, upDrift);
+		console.log("stuff", left, swimTime, upDrift);
 
 		var leftAnim;
 		if(left > 0) {
 			fish1.attr("src", this.props.img + this.props.ext);
-			leftAnim = "+" + left + "px";
+			leftAnim = "+=" + left + "px";
 		} else {
 			fish1.attr("src", this.props.img + "L" + this.props.ext);
-			leftAnim = left + "px";
+			leftAnim = "-=" + Math.abs(left) + "px";
 		}
 
+		console.log("leftAnim", leftAnim);
 		fish1.animate({left: leftAnim, top: upDrift}, swimTime);
 
 		window.setTimeout(this.swim_loop, swimTime);
@@ -81,12 +54,70 @@ var TinyBrain = {
 		}
 	},
 	up: function() {
-		return 0;
+		var upDriftAmt = Math.random() * 400;
+		var smallDriftAmt = Math.random() * 50;
+		if(Math.random > .1) upDriftAmt = smallDriftAmt;
+
+		var upDriftDir = "+";
+		if(Math.random() > .5) upDriftDir = "-";
+		var upDrift = upDriftDir + "=" + upDriftAmt;
+		return upDrift;
 	},
 	speed: function() {
-		return 1000;
+		return Math.random() * 5000 + 1500;
 	}
 };
+
+var WiggleBrain = {
+	dir: 1,
+	upDir: 1,
+	left: function() {
+		if(Math.random() > .9) this.dir = -this.dir;
+		return this.dir * 200;
+	},
+	up: function() {
+		this.upDir = -this.upDir;
+		var upDriftAmt = Math.random() * 100;
+		var smallDriftAmt = Math.random() * 50;
+		if(Math.random > .1) upDriftAmt = smallDriftAmt;
+
+		var upDriftDir = "+";
+		if(this.upDir < 0) upDriftDir = "-";
+		var upDrift = upDriftDir + "=" + upDriftAmt;
+		return upDrift;
+	},
+	speed: function() {
+		return Math.random() * 4000 + 500;
+	}
+};
+
+
+var SlowBrain = {
+	left: function() {
+		if(Math.random() > .5)
+		{
+			return 300;
+		}
+		else
+		{
+			return -300
+		}
+	},
+	up: function() {
+		var upDriftAmt = Math.random() * 200;
+		var smallDriftAmt = Math.random() * 50;
+		if(Math.random > .1) upDriftAmt = smallDriftAmt;
+
+		var upDriftDir = "+";
+		if(Math.random() > .5) upDriftDir = "-";
+		var upDrift = upDriftDir + "=" + upDriftAmt;
+		return upDrift;
+	},
+	speed: function() {
+		return Math.random() * 5000 + 1500;
+	}
+};
+
 
 var FishBowl = React.createClass({
 	render: function() {
@@ -99,10 +130,10 @@ var FishBowl = React.createClass({
 			return <Fish id={"tinyFish" + id} img="static/img/fish/tinyFish" ext=".jpg" brain={TinyBrain} />;
 		});
 		return <div>
-			<Fish id="s1" img="static/img/fish/scaredFish" ext=".png" brain={TinyBrain} />
-			<Fish id="s2" img="static/img/fish/scaredFish" ext=".png" brain={TinyBrain} />
-			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={TinyBrain} />
-			<Fish id="bt1" img="static/img/fish/bigTooth" ext=".jpg" brain={TinyBrain} />
+			<Fish id="s1" img="static/img/fish/scaredFish" ext=".png" brain={WiggleBrain} />
+			<Fish id="s2" img="static/img/fish/scaredFish" ext=".png" brain={WiggleBrain} />
+			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={WiggleBrain} />
+			<Fish id="bt1" img="static/img/fish/bigTooth" ext=".jpg" brain={SlowBrain} />
 			{tinyFish}
 		</div>;
 	}
