@@ -38,7 +38,7 @@ var Fish = React.createClass({displayName: "Fish",
 
 	},
 	render: function() {
-		return React.createElement("img", {id: this.props.id, src: this.props.img + this.props.ext});
+		return React.createElement("img", {id: this.props.id, src: this.props.img + this.props.ext, style: {width:this.props.size}});
 	}
 });
 
@@ -127,9 +127,10 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			fishCount.push(i);
 		}
 		var tinyFish = fishCount.map( function( id ) {
-			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".jpg", brain: TinyBrain});
+			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".jpg", brain: TinyBrain, size: "30px"});
 		});
 		return React.createElement("div", null, 
+			React.createElement(Fish, {id: "eye1", img: "static/img/fish/eyeStalk", ext: ".jpg", brain: SlowBrain, size: "200px"}), 
 			React.createElement(Fish, {id: "s1", img: "static/img/fish/scaredFish", ext: ".png", brain: WiggleBrain}), 
 			React.createElement(Fish, {id: "s2", img: "static/img/fish/scaredFish", ext: ".png", brain: WiggleBrain}), 
 			React.createElement(Fish, {id: "t1", img: "static/img/fish/toothFish", ext: ".png", brain: WiggleBrain}), 

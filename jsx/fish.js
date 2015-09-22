@@ -38,7 +38,7 @@ var Fish = React.createClass({
 
 	},
 	render: function() {
-		return <img id={this.props.id} src={this.props.img + this.props.ext} />;
+		return <img id={this.props.id} src={this.props.img + this.props.ext} style={{width:this.props.size}} />;
 	}
 });
 
@@ -127,9 +127,10 @@ var FishBowl = React.createClass({
 			fishCount.push(i);
 		}
 		var tinyFish = fishCount.map( function( id ) {
-			return <Fish id={"tinyFish" + id} img="static/img/fish/tinyFish" ext=".jpg" brain={TinyBrain} />;
+			return <Fish id={"tinyFish" + id} img="static/img/fish/tinyFish" ext=".jpg" brain={TinyBrain} size="30px" />;
 		});
 		return <div>
+			<Fish id="eye1" img="static/img/fish/eyeStalk" ext=".jpg" brain={SlowBrain} size="200px"/>
 			<Fish id="s1" img="static/img/fish/scaredFish" ext=".png" brain={WiggleBrain} />
 			<Fish id="s2" img="static/img/fish/scaredFish" ext=".png" brain={WiggleBrain} />
 			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={WiggleBrain} />
