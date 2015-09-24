@@ -68,6 +68,11 @@ var TinyBrain = {
 	}
 };
 
+var FastBrain = TinyBrain;
+FastBrain.speed = function() {
+		return Math.random() * 2000 + 600;
+};
+
 var WiggleBrain = {
 	dir: 1,
 	upDir: 1,
@@ -135,7 +140,7 @@ var FishBowl = React.createClass({
 			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={WiggleBrain} />
 			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".jpg" brain={TinyBrain} />
 			<Fish id="bt1" img="static/img/fish/bigTooth" ext=".jpg" brain={SlowBrain} />
-			<Fish id="bt2" img="static/img/fish/scarySharpToothBanana" ext=".jpg" brain={TinyBrain} />
+			<Fish id="bt2" img="static/img/fish/scarySharpTeethBanana" ext=".jpg" brain={FastBrain} size="450px"/>
 			{tinyFish}
 		</div>;
 	}
