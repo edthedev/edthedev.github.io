@@ -22,6 +22,12 @@ var Fish = React.createClass({displayName: "Fish",
 		var swimTime = this.props.brain.speed();
 		console.log("stuff", left, swimTime, upDrift);
 
+		var pos = fish1.position();
+		if(pos.top < 0) upDrift = "+100px";
+		if(pos.top > 700) upDrift = "-100px";
+		if(pos.left < 0) left = 500;
+		if(pos.left > 700) left = -500;
+
 		var leftAnim;
 		if(left > 0) {
 			fish1.attr("src", this.props.img + this.props.ext);
