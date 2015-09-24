@@ -68,7 +68,7 @@ var TinyBrain = {
 	}
 };
 
-var FastBrain = TinyBrain;
+var FastBrain = jQuery.extend({}, TinyBrain);
 FastBrain.speed = function() {
 		return Math.random() * 2000 + 600;
 };
