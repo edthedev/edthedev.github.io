@@ -24,9 +24,9 @@ var Fish = React.createClass({
 
 		var pos = fish1.position();
 		if(pos.top < 0) upDrift = "+100px";
-		if(pos.top > 700) upDrift = "-100px";
+		if(pos.top > screen.height) upDrift = "-100px";
 		if(pos.left < 0) left = 500;
-		if(pos.left > 700) left = -500;
+		if(pos.left > screen.width) left = -500;
 
 		var leftAnim;
 		if(left > 0) {
