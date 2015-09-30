@@ -147,6 +147,9 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			React.createElement(Fish, {id: "t2", img: "static/img/fish/buckToothFish", ext: ".jpg", brain: TinyBrain}), 
 			React.createElement(Fish, {id: "bt1", img: "static/img/fish/bigTooth", ext: ".jpg", brain: SlowBrain}), 
 			React.createElement(Fish, {id: "bt2", img: "static/img/fish/scarySharpTeethBanana", ext: ".jpg", brain: FastBrain, size: "450px"}), 
+			React.createElement(Fish, {id: "sub1", img: "static/img/fish/subYellow", ext: ".jpg", brain: SlowBrain}), 
+			React.createElement(Fish, {id: "sub2", img: "static/img/fish/subGreen", ext: ".jpg", brain: SlowBrain}), 
+			React.createElement(Fish, {id: "sub3", img: "static/img/fish/subBlack", ext: ".jpg", brain: SlowBrain}), 
 			tinyFish
 		);
 	}

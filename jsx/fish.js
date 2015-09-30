@@ -147,6 +147,9 @@ var FishBowl = React.createClass({
 			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".jpg" brain={TinyBrain} />
 			<Fish id="bt1" img="static/img/fish/bigTooth" ext=".jpg" brain={SlowBrain} />
 			<Fish id="bt2" img="static/img/fish/scarySharpTeethBanana" ext=".jpg" brain={FastBrain} size="450px"/>
+			<Fish id="sub1" img="static/img/fish/subYellow" ext=".jpg" brain={SlowBrain} />
+			<Fish id="sub2" img="static/img/fish/subGreen" ext=".jpg" brain={SlowBrain} />
+			<Fish id="sub3" img="static/img/fish/subBlack" ext=".jpg" brain={SlowBrain} />
 			{tinyFish}
 		</div>;
 	}
