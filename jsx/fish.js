@@ -44,7 +44,7 @@ var Fish = React.createClass({
 
 	},
 	render: function() {
-		return <img id={this.props.id} src={this.props.img + this.props.ext} style={{width:this.props.size}} />;
+		return <img id={this.props.id} src={this.props.img + this.props.ext} style={{width:this.props.size, backgroundColor:"transparent"}} />;
 	}
 });
 
@@ -150,7 +150,7 @@ var FishBowl = React.createClass({
 			<Fish id="sub1" img="static/img/fish/subYellow" ext=".jpg" brain={SlowBrain} size="90px"/>
 			<Fish id="sub2" img="static/img/fish/subGreen" ext=".jpg" brain={SlowBrain} size="90px"/>
 			<Fish id="sub3" img="static/img/fish/subBlack" ext=".jpg" brain={SlowBrain} size="90px"/>
-			<Fish id="squid" img="static/img/fish/squid" ext=".jpg" brain={TinyBrain} size="120px"/>
+			<Fish id="squid" img="static/img/fish/squid" ext=".png" brain={TinyBrain} size="120px"/>
 			{tinyFish}
 		</div>;
 	}
