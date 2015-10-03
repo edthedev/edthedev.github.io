@@ -138,7 +138,7 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			fishCount.push(i);
 		}
 		var tinyFish = fishCount.map( function( id ) {
-			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".jpg", brain: TinyBrain, size: "30px"});
+			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".png", brain: TinyBrain, size: "30px"});
 		});
 		return React.createElement("div", null, 
 			React.createElement(Fish, {id: "eye1", img: "static/img/fish/eyeStalk", ext: ".jpg", brain: SlowBrain, size: "150px"}), 
@@ -146,7 +146,6 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			React.createElement(Fish, {id: "t1", img: "static/img/fish/toothFish", ext: ".png", brain: WiggleBrain, size: "40px"}), 
 			React.createElement(Fish, {id: "t2", img: "static/img/fish/buckToothFish", ext: ".jpg", brain: TinyBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "bt1", img: "static/img/fish/bigTooth", ext: ".jpg", brain: SlowBrain, size: "100px"}), 
-			React.createElement(Fish, {id: "bt2", img: "static/img/fish/scarySharpTeethBanana", ext: ".jpg", brain: SlowBrain, size: "200px"}), 
 			React.createElement(Fish, {id: "sub1", img: "static/img/fish/subYellow", ext: ".jpg", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "sub2", img: "static/img/fish/subGreen", ext: ".jpg", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "sub3", img: "static/img/fish/subBlack", ext: ".png", brain: SlowBrain, size: "90px"}), 
@@ -159,6 +158,7 @@ React.render(React.createElement(FishBowl, null), document.getElementById('sea')
 /*
  *
  *
+			<Fish id="bt2" img="static/img/fish/scarySharpTeethBanana" ext=".jpg" brain={SlowBrain} size="200px"/>
 
 			<Fish id="f1" img="static/img/fish/toothFishL.jpg" />
 			<Fish id="f2" img="static/img/fish/scaredFishL.jpg" />
