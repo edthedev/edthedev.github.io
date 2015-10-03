@@ -1,0 +1,9 @@
+p, img { 
+	position: absolute; 
+	background-color: #abc;
+	left: 0px;
+	margin: 5px; 
+}
+body {
+    background-color: #78D6D6;
+}
