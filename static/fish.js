@@ -142,6 +142,10 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".png", brain: TinyBrain, size: "30px"});
 		});
 		return React.createElement("div", null, 
+			React.createElement(Fish, {id: "t2", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
+			React.createElement(Fish, {id: "t3", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
+			React.createElement(Fish, {id: "t4", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
+			React.createElement(Fish, {id: "t5", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "sub3", img: "static/img/fish/subBlack", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "squid", img: "static/img/fish/squid", ext: ".png", brain: TinyBrain, size: "120px"}), 
 			tinyFish
@@ -159,7 +163,6 @@ React.render(React.createElement(FishBowl, null), document.getElementById('sea')
 			<Fish id="eye1" img="static/img/fish/eyeStalk" ext=".jpg" brain={SlowBrain} size="150px"/>
 			<Fish id="s1" img="static/img/fish/scaredFish" ext=".png" brain={WiggleBrain} size="30px" />
 			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={WiggleBrain} size="40px" />
-			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".jpg" brain={TinyBrain} size="45px" />
  *
  *
 			<Fish id="bt2" img="static/img/fish/scarySharpTeethBanana" ext=".jpg" brain={SlowBrain} size="200px"/>
