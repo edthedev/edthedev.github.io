@@ -1,3 +1,25 @@
+var AniHelp = {
+	toPlusMinus: function( value ) {
+		var valueAnim;
+		if(value > 0) {
+			// fish1.attr("src", this.props.img + this.props.ext);
+			valueAnim = "+=" + value + "px";
+		} else {
+			// fish1.attr("src", this.props.img + "L" + this.props.ext);
+			valueAnim = "-=" + Math.abs(value) + "px";
+		}
+		return valueAnim;
+	},
+	toImgSrc: function( base, value, ext) {
+		if(value > 0) {
+			// fish1.attr("src", this.props.img + this.props.ext);
+			return base + ext;
+		} else {
+			return base + "L" + ext;
+		}
+	}
+}
+
 var Fish = React.createClass({
 	componentDidMount: function() {
 		console.log("mount");
@@ -23,22 +45,18 @@ var Fish = React.createClass({
 		console.log("stuff", left, swimTime, upDrift);
 
 		var pos = fish1.position();
-		if(pos.top < 0) upDrift = "+100px";
-		if(pos.top > screen.height) upDrift = "-100px";
-		if(pos.left < 0) left = 500;
-		if(pos.left > screen.width) left = -500;
+		if(pos.top < 0) upDrift = 100;
+		if(pos.top > screen.height) upDrift = -100;
+		if(pos.left + left < 0) left = 0;
+		if(pos.left + left > screen.width) left = 0;
 
-		var leftAnim;
-		if(left > 0) {
-			fish1.attr("src", this.props.img + this.props.ext);
-			leftAnim = "+=" + left + "px";
-		} else {
-			fish1.attr("src", this.props.img + "L" + this.props.ext);
-			leftAnim = "-=" + Math.abs(left) + "px";
-		}
+		// Set left/right
+		fish1.attr("src", AniHelp.toImgSrc(this.props.img, left, this.props.ext));
+		var leftAnim = AniHelp.toPlusMinus(left);
+		var upAnim = AniHelp.toPlusMinus(upDrift);
 
 		console.log("leftAnim", leftAnim);
-		fish1.animate({left: leftAnim, top: upDrift}, swimTime);
+		fish1.animate({left: leftAnim, top: upAnim}, swimTime);
 
 		window.setTimeout(this.swim_loop, swimTime);
 
@@ -48,6 +66,16 @@ var Fish = React.createClass({
 		return <img id={this.props.id} src={this.props.img + this.props.ext} style={{width:this.props.size, backgroundColor:"transparent"}} />;
 	}
 });
+
+var BrainHelp = {
+	up: function( small, large) {
+		var upDriftAmt = Math.random() * large;
+		var smallDriftAmt = Math.random() * small;
+		if(Math.random > .1) upDriftAmt = smallDriftAmt;
+		if(Math.random() > .5) upDriftAmt *= -1;
+		return upDriftAmt;
+	}
+}
 
 var TinyBrain = {
 	left: function() {
@@ -61,14 +89,7 @@ var TinyBrain = {
 		}
 	},
 	up: function() {
-		var upDriftAmt = Math.random() * 400;
-		var smallDriftAmt = Math.random() * 50;
-		if(Math.random > .1) upDriftAmt = smallDriftAmt;
-
-		var upDriftDir = "+";
-		if(Math.random() > .5) upDriftDir = "-";
-		var upDrift = upDriftDir + "=" + upDriftAmt;
-		return upDrift;
+		return BrainHelp.up(50, 400);
 	},
 	speed: function() {
 		return Math.random() * 5000 + 1500;
@@ -103,7 +124,6 @@ var WiggleBrain = {
 	}
 };
 
-
 var SlowBrain = {
 	left: function() {
 		if(Math.random() > .5)
@@ -116,14 +136,7 @@ var SlowBrain = {
 		}
 	},
 	up: function() {
-		var upDriftAmt = Math.random() * 200;
-		var smallDriftAmt = Math.random() * 50;
-		if(Math.random > .1) upDriftAmt = smallDriftAmt;
-
-		var upDriftDir = "+";
-		if(Math.random() > .5) upDriftDir = "-";
-		var upDrift = upDriftDir + "=" + upDriftAmt;
-		return upDrift;
+		return BrainHelp.up(50, 200);
 	},
 	speed: function() {
 		return Math.random() * 5000 + 1500;
@@ -147,6 +160,8 @@ var FishBowl = React.createClass({
 			<Fish id="t3" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t4" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t5" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="t6" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="t7" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="sub3" img="static/img/fish/subBlack" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="subG" img="static/img/fish/subGreen" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="subY" img="static/img/fish/subYellow" ext=".png" brain={SlowBrain} size="90px"/>
