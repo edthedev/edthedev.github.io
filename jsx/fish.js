@@ -141,12 +141,12 @@ var FishBowl = React.createClass({
 			return <Fish id={"tinyFish" + id} img="static/img/fish/tinyFish" ext=".jpg" brain={TinyBrain} size="30px" />;
 		});
 		return <div>
-			<Fish id="eye1" img="static/img/fish/eyeStalk" ext=".jpg" brain={SlowBrain} size="200px"/>
-			<Fish id="s1" img="static/img/fish/scaredFish" ext=".png" brain={WiggleBrain} />
-			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={WiggleBrain} />
-			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".jpg" brain={TinyBrain} />
-			<Fish id="bt1" img="static/img/fish/bigTooth" ext=".jpg" brain={SlowBrain} />
-			<Fish id="bt2" img="static/img/fish/scarySharpTeethBanana" ext=".jpg" brain={FastBrain} size="450px"/>
+			<Fish id="eye1" img="static/img/fish/eyeStalk" ext=".jpg" brain={SlowBrain} size="150px"/>
+			<Fish id="s1" img="static/img/fish/scaredFish" ext=".png" brain={WiggleBrain} size="30px" />
+			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={WiggleBrain} size="40px" />
+			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".jpg" brain={TinyBrain} size="45px" />
+			<Fish id="bt1" img="static/img/fish/bigTooth" ext=".jpg" brain={SlowBrain} size="100px"/>
+			<Fish id="bt2" img="static/img/fish/scarySharpTeethBanana" ext=".jpg" brain={SlowBrain} size="200px"/>
 			<Fish id="sub1" img="static/img/fish/subYellow" ext=".jpg" brain={SlowBrain} size="90px"/>
 			<Fish id="sub2" img="static/img/fish/subGreen" ext=".jpg" brain={SlowBrain} size="90px"/>
 			<Fish id="sub3" img="static/img/fish/subBlack" ext=".jpg" brain={SlowBrain} size="90px"/>
