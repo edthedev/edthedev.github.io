@@ -44,6 +44,7 @@ var Fish = React.createClass({displayName: "Fish",
 
 	},
 	render: function() {
+		// TODO: This method of rendering results in a lot of GET requests.
 		return React.createElement("img", {id: this.props.id, src: this.props.img + this.props.ext, style: {width:this.props.size, backgroundColor:"transparent"}});
 	}
 });
