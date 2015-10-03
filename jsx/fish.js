@@ -142,6 +142,7 @@ var FishBowl = React.createClass({
 			return <Fish id={"tinyFish" + id} img="static/img/fish/tinyFish" ext=".png" brain={TinyBrain} size="30px" />;
 		});
 		return <div>
+<img id="sand" src="static/img/fish/sand.png" style={{top:screen.height-400, left:-10, width:screen.width+20, backgroundColor:"transparent"}} />
 			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t3" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t4" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
@@ -155,6 +156,8 @@ var FishBowl = React.createClass({
 	}
 });
 React.render(<FishBowl />, document.getElementById('sea'));
+
+
 /*
  *
  *

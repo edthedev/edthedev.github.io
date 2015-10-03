@@ -142,6 +142,7 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".png", brain: TinyBrain, size: "30px"});
 		});
 		return React.createElement("div", null, 
+React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", style: {top:screen.height-400, left:-10, width:screen.width+20, backgroundColor:"transparent"}}), 
 			React.createElement(Fish, {id: "t2", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "t3", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "t4", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
@@ -155,6 +156,8 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 	}
 });
 React.render(React.createElement(FishBowl, null), document.getElementById('sea'));
+
+
 /*
  *
  *
