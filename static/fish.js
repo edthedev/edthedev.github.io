@@ -45,8 +45,8 @@ var Fish = React.createClass({displayName: "Fish",
 		console.log("stuff", left, swimTime, upDrift);
 
 		var pos = fish1.position();
-		if(pos.top < 0) upDrift = 100;
-		if(pos.top > screen.height) upDrift = -100;
+		if(pos.top + upDrift < 0) upDrift = 0;
+		if(pos.top + upDrift > screen.height - 50) upDrift = 0;
 		if(pos.left + left < 0) left = 0;
 		if(pos.left + left > screen.width) left = 0;
 
