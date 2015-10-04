@@ -166,7 +166,8 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Fish, {id: "subG", img: "static/img/fish/subGreen", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "subY", img: "static/img/fish/subYellow", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "squid", img: "static/img/fish/squid", ext: ".png", brain: TinyBrain, size: "120px"}), 
-			tinyFish
+			tinyFish, 
+			React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: SlowBrain, size: "200px"})
 		);
 	}
 });
@@ -185,7 +186,6 @@ React.render(React.createElement(FishBowl, null), document.getElementById('sea')
 			<Fish id="t1" img="static/img/fish/toothFish" ext=".png" brain={WiggleBrain} size="40px" />
  *
  *
-			<Fish id="bt2" img="static/img/fish/scarySharpTeethBanana" ext=".jpg" brain={SlowBrain} size="200px"/>
 
 			<Fish id="f1" img="static/img/fish/toothFishL.jpg" />
 			<Fish id="f2" img="static/img/fish/scaredFishL.jpg" />
