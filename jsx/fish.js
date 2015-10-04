@@ -49,11 +49,11 @@ var Fish = React.createClass({
 		if(pos.top + upDrift > screen.height - 100) upDrift = 0;
 		if(pos.left + left < 0) {
 			upDrift = 0; // Do not ever swim straight up and down.
-			left = pos.left + 20; // Do not hold totally still.
+			left = 20; // Do not hold totally still.
 		}
 		if(pos.left + left > screen.width) {
 			upDrift = 0;
-			left = pos.left - 20;
+			left = - 20;
 		}
 
 		// Set left/right
