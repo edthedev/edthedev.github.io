@@ -98,7 +98,7 @@ var TinyBrain = {
 
 var FastBrain = jQuery.extend({}, TinyBrain);
 FastBrain.speed = function() {
-		return Math.random() * 2000 + 600;
+		return Math.random() * 1000 + 700;
 };
 
 var WiggleBrain = {
@@ -167,7 +167,7 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Fish, {id: "subY", img: "static/img/fish/subYellow", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "squid", img: "static/img/fish/squid", ext: ".png", brain: TinyBrain, size: "120px"}), 
 			tinyFish, 
-			React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: SlowBrain, size: "200px"})
+			React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: FastBrain, size: "200px"})
 		);
 	}
 });
