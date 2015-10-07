@@ -32,7 +32,7 @@ var Flora = React.createClass({
 			var topish  = Math.random() * 10 + 10;
 			var shortish = Math.random() * 40;
 			return <img id={"plant" + this.props.id + id} 
-					src=this.props.img
+					src={this.props.img}
 					style={{
 						top:topish + shortish + "%",
 						height:this.props.height - shortish + "%",
@@ -72,7 +72,7 @@ var Fish = React.createClass({
 
 		var pos = fish1.position();
 		if(pos.top + upDrift < 0) upDrift = 0;
-		if(pos.top + upDrift > screen.height - 100) upDrift = 0;
+		if(pos.top + upDrift > .4*screen.height ) upDrift = 0;
 		if(pos.left + left < 0) {
 			upDrift = 0; // Do not ever swim straight up and down.
 			left = 20; // Do not hold totally still.
