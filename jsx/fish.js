@@ -22,10 +22,27 @@ var AniHelp = {
 
 var Flora = React.createClass({
 	render: function() {
-		return <img src="static/img/fish/seaweed.png" style={{
-			top:"20%",
-			height:this.props.height
-		}} />;
+		var newTop = Math.random() * 400;
+		floraCount = [];
+		for(i=0; i<3; i++){
+			floraCount.push(i);
+		}
+		var flora = floraCount.map( function( id ) {
+			var pos = Math.random() * 90;
+			var topish  = Math.random() * 10 + 10;
+			var shortish = Math.random() * 40;
+			return <img id={"plant" + this.props.id + id} 
+					src="static/img/fish/seaweed.png" 
+					style={{
+						top:topish + shortish + "%",
+						height:this.props.height - shortish + "%",
+						left:pos + "%"
+					}} 
+					/>;
+		}.bind(this));
+		return <span>
+			{flora}
+		</span>;
 	}
 });
 
@@ -172,8 +189,6 @@ var FishBowl = React.createClass({
 		return <div>
 <img id="sand" src="static/img/fish/sand.png" className="sand" />
 			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Fish id="t3" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Fish id="t4" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t5" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t6" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t7" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
@@ -181,9 +196,12 @@ var FishBowl = React.createClass({
 			<Fish id="subG" img="static/img/fish/subGreen" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="subY" img="static/img/fish/subYellow" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="squid" img="static/img/fish/squid" ext=".png" brain={TinyBrain} size="120px"/>
-			<Flora height="80%" />
-			{tinyFish}
 			<Fish id="scary" img="static/img/fish/scarySharpTeethBanana" ext=".png" brain={FastBrain} size="200px"/>
+			{tinyFish}
+			<Flora id="flora1" height="80" />
+			<Fish id="t3" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="t4" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Flora id="flora2" height="80" />
 		</div>;
 	}
 });

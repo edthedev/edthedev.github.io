@@ -22,10 +22,27 @@ var AniHelp = {
 
 var Flora = React.createClass({displayName: "Flora",
 	render: function() {
-		return React.createElement("img", {src: "static/img/fish/seaweed.png", style: {
-			top:"20%",
-			height:this.props.height
-		}});
+		var newTop = Math.random() * 400;
+		floraCount = [];
+		for(i=0; i<3; i++){
+			floraCount.push(i);
+		}
+		var flora = floraCount.map( function( id ) {
+			var pos = Math.random() * 90;
+			var topish  = Math.random() * 10 + 10;
+			var shortish = Math.random() * 40;
+			return React.createElement("img", {id: "plant" + this.props.id + id, 
+					src: "static/img/fish/seaweed.png", 
+					style: {
+						top:topish + shortish + "%",
+						height:this.props.height - shortish + "%",
+						left:pos + "%"
+					}}
+					);
+		}.bind(this));
+		return React.createElement("span", null, 
+			flora
+		);
 	}
 });
 
@@ -172,8 +189,6 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 		return React.createElement("div", null, 
 React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", className: "sand"}), 
 			React.createElement(Fish, {id: "t2", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
-			React.createElement(Fish, {id: "t3", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
-			React.createElement(Fish, {id: "t4", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "t5", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "t6", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "t7", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
@@ -181,9 +196,12 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Fish, {id: "subG", img: "static/img/fish/subGreen", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "subY", img: "static/img/fish/subYellow", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "squid", img: "static/img/fish/squid", ext: ".png", brain: TinyBrain, size: "120px"}), 
-			React.createElement(Flora, {height: "80%"}), 
+			React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: FastBrain, size: "200px"}), 
 			tinyFish, 
-			React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: FastBrain, size: "200px"})
+			React.createElement(Flora, {id: "flora1", height: "80"}), 
+			React.createElement(Fish, {id: "t3", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
+			React.createElement(Fish, {id: "t4", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
+			React.createElement(Flora, {id: "flora2", height: "80"})
 		);
 	}
 });
