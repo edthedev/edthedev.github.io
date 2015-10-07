@@ -32,7 +32,7 @@ var Flora = React.createClass({
 			var topish  = Math.random() * 10 + 10;
 			var shortish = Math.random() * 40;
 			return <img id={"plant" + this.props.id + id} 
-					src="static/img/fish/seaweed.png" 
+					src=this.props.img
 					style={{
 						top:topish + shortish + "%",
 						height:this.props.height - shortish + "%",
@@ -190,6 +190,7 @@ var FishBowl = React.createClass({
 <img id="sand" src="static/img/fish/sand.png" className="sand" />
 			<Fish id="t2" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t5" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Flora id="flora3" img="static/img/fish/seaweedL.png" height="80" />
 			<Fish id="t6" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t7" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="sub3" img="static/img/fish/subBlack" ext=".png" brain={SlowBrain} size="90px"/>
@@ -198,10 +199,10 @@ var FishBowl = React.createClass({
 			<Fish id="squid" img="static/img/fish/squid" ext=".png" brain={TinyBrain} size="120px"/>
 			<Fish id="scary" img="static/img/fish/scarySharpTeethBanana" ext=".png" brain={FastBrain} size="200px"/>
 			{tinyFish}
-			<Flora id="flora1" height="80" />
+			<Flora id="flora1" img="static/img/fish/seaweed.png" height="80" />
 			<Fish id="t3" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t4" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Flora id="flora2" height="80" />
+			<Flora id="flora2" img="static/img/fish/seaweed.png" height="80" />
 		</div>;
 	}
 });
