@@ -20,6 +20,15 @@ var AniHelp = {
 	}
 }
 
+var Flora = React.createClass({displayName: "Flora",
+	render: function() {
+		return React.createElement("img", {src: "static/img/fish/seaweed.png", style: {
+			top:"20%",
+			height:this.props.height
+		}});
+	}
+});
+
 var Fish = React.createClass({displayName: "Fish",
 	componentDidMount: function() {
 		console.log("mount");
@@ -172,6 +181,7 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Fish, {id: "subG", img: "static/img/fish/subGreen", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "subY", img: "static/img/fish/subYellow", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "squid", img: "static/img/fish/squid", ext: ".png", brain: TinyBrain, size: "120px"}), 
+			React.createElement(Flora, {height: "80%"}), 
 			tinyFish, 
 			React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: FastBrain, size: "200px"})
 		);

@@ -20,6 +20,15 @@ var AniHelp = {
 	}
 }
 
+var Flora = React.createClass({
+	render: function() {
+		return <img src="static/img/fish/seaweed.png" style={{
+			top:"20%",
+			height:this.props.height
+		}} />;
+	}
+});
+
 var Fish = React.createClass({
 	componentDidMount: function() {
 		console.log("mount");
@@ -172,6 +181,7 @@ var FishBowl = React.createClass({
 			<Fish id="subG" img="static/img/fish/subGreen" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="subY" img="static/img/fish/subYellow" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="squid" img="static/img/fish/squid" ext=".png" brain={TinyBrain} size="120px"/>
+			<Flora height="80%" />
 			{tinyFish}
 			<Fish id="scary" img="static/img/fish/scarySharpTeethBanana" ext=".png" brain={FastBrain} size="200px"/>
 		</div>;
