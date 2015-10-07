@@ -183,6 +183,11 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 		for(i=0; i<9; i++){
 			fishCount.push(i);
 		}
+		var scaryFish = "";
+		if(Math.random() > .9)
+		{
+			scaryFish = React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: FastBrain, size: "200px"});
+		} 
 		var tinyFish = fishCount.map( function( id ) {
 			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".png", brain: TinyBrain, size: "30px"});
 		});
@@ -197,7 +202,7 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Fish, {id: "subG", img: "static/img/fish/subGreen", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "subY", img: "static/img/fish/subYellow", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "squid", img: "static/img/fish/squid", ext: ".png", brain: TinyBrain, size: "120px"}), 
-			React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: FastBrain, size: "200px"}), 
+			scaryFish, 
 			tinyFish, 
 			React.createElement(Flora, {id: "flora1", img: "static/img/fish/seaweed.png", height: "80"}), 
 			React.createElement(Fish, {id: "t3", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
