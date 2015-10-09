@@ -1,20 +1,20 @@
 body
 {
 	color:#000000;
-	background-color:#727282;
+	background-color:#EBBBA1;
 }
 a
 {
-	color:#131D5F;
+	color:#5A8695;
 }
-p
-
-h1,h2
+h2
 {
+	color:#000000;
 	font:'courier new',courier,monospace;
-	background-color:#FFF !important;
+	background-color:#785FF1 !important;
 	border: 1px solid #CCCC00;
 	border-radius: 10px;
+	padding: 10px 10px 10px 10px;
 }
 div
 {
@@ -22,13 +22,15 @@ div
 	font-size:140%;
 }
 
-.nav
+#navlist li
 {
-	float: left;
+	color:#000000;
+	/* float: left; */
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	display: inline block;
+	display: inline;
+	padding-right: 20px;
 }
 
 code 
