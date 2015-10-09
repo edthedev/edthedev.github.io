@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="static/edthedev.css" />
+	</head>
+	<body>
+
+<nav id='navlist' class="navbar navbar-default"> </nav>
+<xmp theme="united">
+
+Original script URL:
+http://nuts4.net/?tag=/TamperMonkey
+
+
+	// ==UserScript==
+
+	// @name       TFS Team Room notifications in Chrome
+
+	// @namespace  http://nuts4.net
+
+	// @version    1.0
+
+	// @description Getting tired of switching back and forth between a browser and Visual Studio...just to see if you have any chat notifications?  Use this script, and get your notifications directly on your desktop!
+
+	// @match      https://*.visualstudio.com/_rooms*
+
+	// @copyright  2013 Joe Coutcher
+	// @copyright  2015 Edward Delaporte
+	// Original Script by Joe Coutcher. 
+	// Updated browser compatibilty by Edward Delaporte.
+	// This script is provided As Is.
+
+	// ==/UserScript==
+
+	// Bookmarklet to activate Chrome notifications on TFS Team Room Chat
+
+	$(function() {
+
+	 
+	  // Let's check if the browser supports notifications
+	  if (!("Notification" in window)) {
+		alert("This browser does not support desktop notification");
+	  }
+
+	  // Let's check whether notification permissions have already been granted
+	  else if (Notification.permission === "granted") {
+		// If it's okay let's create a notification
+		// var notification = new Notification("TFS Notifications started.");
+		  console.log("TFS Notification previously granted permission.");
+		  
+	  }
+
+	  // Otherwise, we need to ask the user for permission
+	  else if (Notification.permission !== 'denied') {
+		Notification.requestPermission(function (permission) {
+		  // If the user accepts, let's create a notification
+		  if (permission === "granted") {
+			// var notification = new Notification("TFS Notifications started.");
+			  console.log("TFS Notification just granted permission.");
+		  }
+		  else{
+			  console.log("TFS Notification was denied permission to notify.");
+		  }
+		});
+
+	  // At last, if the user has denied notifications, and you 
+	  // want to be respectful there is no need to bother them any more.
+	}
+
+		console.log("TFS Notifications - Setting up 10 second delay...");
+
+		// Activate the plugin after 10 seconds
+
+		window.setTimeout(function() {
+
+			$.connection.chatHub.on('messageReceived', function(roomId, message) {
+
+				var messageNotification = function(image, title, content) {
+
+				   var _notification = new Notification(content);
+					
+
+
+					// If you are mentioned in the chat, keep it displayed until you actively close it.
+
+					if (message.Mentions.length == 0) {
+
+						window.setTimeout(function() {
+
+							_notification.close();
+
+						}, 5000);
+
+				   }
+
+				};
+
+				 
+
+				if (message.PostedByUserTfId != $.connection.chatHub.state.id) {
+
+					if (message.Content.indexOf("{") == 0) {
+
+						var _tfsServerIcon = "/_static/tfs/20131021T164530/_content/tfs-large-icons.png";
+
+						var serverMessage = $.parseJSON(message.Content);
+
+						messageNotification(_tfsServerIcon, serverMessage.type, serverMessage.title);
+
+					} else {
+
+						var _tfsIcon = "/_api/_common/IdentityImage?id=" + message.PostedByUserTfId;
+						messageNotification(_tfsIcon, message.PostedByUserName, message.Content);
+
+					}
+
+				}
+
+			});
+
+			console.log("TFS Notification code has loaded.");
+
+		}, 10000);
+
+	});
+
+
+</xmp>
+
+<script src="static/jquery/dist/jquery.js"></script>
+<script src="static/nav.js"></script>
+<script src="static/strapdown/strapdown.js"></script>
+</body>
+</html>
