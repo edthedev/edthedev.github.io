@@ -48,7 +48,7 @@ var Flora = React.createClass({
 
 var Fish = React.createClass({
 	componentDidMount: function() {
-		console.log("mount");
+		// console.log("mount");
 		// Be random start point
 		// var sea = $("#sea");
 	// var newFish = "<img id=fish1 src='static/img/fish/toothFishL.png'>";
@@ -64,11 +64,11 @@ var Fish = React.createClass({
 	swim_loop: function(){
 
 		var fish1 = $("#" + this.props.id);
-		console.log("fish1", fish1);
+		// console.log("fish1", fish1);
 		var left = this.props.brain.left();
 		var upDrift = this.props.brain.up();
 		var swimTime = this.props.brain.speed();
-		console.log("stuff", left, swimTime, upDrift);
+		// console.log("stuff", left, swimTime, upDrift);
 
 		var pos = fish1.position();
 		if(pos.top + upDrift < 0) upDrift = 0;
@@ -83,11 +83,17 @@ var Fish = React.createClass({
 		}
 
 		// Set left/right
-		fish1.attr("src", AniHelp.toImgSrc(this.props.img, left, this.props.ext));
+		var baseImg = this.props.img;
+		if(typeof this.props.brain.changeImg === "function"){
+			console.log("change?");
+			baseImg = this.props.brain.changeImg(baseImg);
+		}
+		fish1.attr("src", AniHelp.toImgSrc(baseImg, left, this.props.ext));
+
 		var leftAnim = AniHelp.toPlusMinus(left);
 		var upAnim = AniHelp.toPlusMinus(upDrift);
 
-		console.log("leftAnim", leftAnim);
+		// console.log("leftAnim", leftAnim);
 		fish1.animate({left: leftAnim, top: upAnim}, swimTime);
 
 		window.setTimeout(this.swim_loop, swimTime);
@@ -127,6 +133,7 @@ var TinyBrain = {
 		return Math.random() * 5000 + 1500;
 	}
 };
+
 
 var FastBrain = jQuery.extend({}, TinyBrain);
 FastBrain.speed = function() {
@@ -175,6 +182,23 @@ var SlowBrain = {
 	}
 };
 
+var PuffBrain = jQuery.extend({}, SlowBrain);
+PuffBrain.img = "static/img/fish/littlePuff";
+PuffBrain.changeImg = function(img) {
+	return PuffBrain.img;
+};
+PuffBrain.speed = function() {
+	var bit = Math.random();
+	if(bit < .25)
+	{
+		PuffBrain.img = "static/img/fish/littlePuff";
+	}
+	if(bit > .9)
+	{
+		PuffBrain.img = "static/img/fish/bigPuff";
+	}
+	return bit * 5000 + 1500;
+};
 
 var FishBowl = React.createClass({
 	render: function() {
@@ -202,7 +226,7 @@ var FishBowl = React.createClass({
 			<Fish id="subG" img="static/img/fish/subGreen" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="subY" img="static/img/fish/subYellow" ext=".png" brain={SlowBrain} size="90px"/>
 			<Fish id="squid" img="static/img/fish/squid" ext=".png" brain={TinyBrain} size="120px"/>
-			<Fish id="puff" img="static/img/fish/littlePuff" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="puff" img="static/img/fish/littlePuff" ext=".png" brain={PuffBrain} size="45px" />
 			{scaryFish}
 			{tinyFish}
 			<Flora id="flora1" img="static/img/fish/seaweed.png" height="80" />
