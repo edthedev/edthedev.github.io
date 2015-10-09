@@ -202,6 +202,7 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Fish, {id: "subG", img: "static/img/fish/subGreen", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "subY", img: "static/img/fish/subYellow", ext: ".png", brain: SlowBrain, size: "90px"}), 
 			React.createElement(Fish, {id: "squid", img: "static/img/fish/squid", ext: ".png", brain: TinyBrain, size: "120px"}), 
+			React.createElement(Fish, {id: "puff", img: "static/img/fish/littlePuff", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			scaryFish, 
 			tinyFish, 
 			React.createElement(Flora, {id: "flora1", img: "static/img/fish/seaweed.png", height: "80"}), 
