@@ -200,6 +200,33 @@ PuffBrain.speed = function() {
 	return bit * 5000 + 1500;
 };
 
+var Bubbler = React.createClass({
+	getInitialState: function() {
+		return {open:false,
+			leftPos: Math.random() * .5 * screen.width,
+			wide: screen.width * .15,
+		
+		};
+	},
+	componentDidMount: function() {
+		this.endBubble();
+	},
+	bubble: function() {
+		this.setState({open:true});
+		setTimeout(this.endBubble, 1500);
+	},
+	endBubble: function() {
+		this.setState({open:false});
+		setTimeout(this.bubble, Math.random() * 10000);
+	},
+	render: function() {
+		var open = "";
+		if(this.state.open)
+			open = "Open";
+		return <img src={this.props.img + open + this.props.ext} style={{top:"80%", width: this.state.wide, height:"20%", left: this.state.leftPos}}/>;
+	}
+});
+
 var FishBowl = React.createClass({
 	render: function() {
 		console.log("render bowl");
@@ -229,6 +256,7 @@ var FishBowl = React.createClass({
 			<Fish id="puff" img="static/img/fish/littlePuff" ext=".png" brain={PuffBrain} size="45px" />
 			{scaryFish}
 			{tinyFish}
+			<Bubbler id="chest" img="static/img/fish/treasure" ext=".png" />
 			<Flora id="flora1" img="static/img/fish/seaweed.png" height="80" />
 			<Fish id="t3" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t4" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
