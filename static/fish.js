@@ -217,7 +217,7 @@ var Bubbler = React.createClass({displayName: "Bubbler",
 	},
 	endBubble: function() {
 		this.setState({open:false});
-		setTimeout(this.bubble, Math.random() * 10000);
+		setTimeout(this.bubble, Math.random() * 30000);
 	},
 	render: function() {
 		var open = "";
