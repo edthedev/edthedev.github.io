@@ -213,10 +213,10 @@ var Bubbler = React.createClass({
 	},
 	bubble: function() {
 		this.setState({open:true});
-		console.log("bubbles", this.props.id + "bubbles");
-		$(this.props.id + "bubbles").show();
-		$(this.props.id + "bubbles").top = "80%";
-		$(this.props.id + "bubbles").animate({left: 0, top: "5%"}, 3000);
+		var bubs = $(this.props.id + "bubbles");
+		console.log("bubbles", bubs);
+		bubs.top = "80%";
+		bubs.animate({left: 0, top: "-20%"}, 300);
 		setTimeout(this.endBubble, 1500);
 	},
 	endBubble: function() {
