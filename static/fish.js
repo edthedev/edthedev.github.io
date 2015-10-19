@@ -211,18 +211,21 @@ var Bubbler = React.createClass({displayName: "Bubbler",
 	componentDidMount: function() {
 		this.endBubble();
 	},
-	bubble: function() {
-		this.setState({open:true});
-		var bubs = $(this.props.id + "bubbles");
-		console.log("bubbles", bubs);
+	moveBubble: function( timeIt ) {
+		var bubs = $("#" + this.props.id + "bubbles");
 		bubs.top = "80%";
-		bubs.animate({left: 0, top: "-20%"}, 300);
+		bubs.animate({top: "0px" }, 2000);
+		console.log("animating?");
+	},
+	bubble: function() {
+		this.moveBubble();
 		setTimeout(this.endBubble, 1500);
+		this.setState({open:true});
 	},
 	endBubble: function() {
 		this.setState({open:false});
 		$(this.props.id + "bubbles").hide();
-		setTimeout(this.bubble, Math.random() * 30000);
+		setTimeout(this.bubble, Math.random() * 3000);
 	},
 	render: function() {
 		var open = "";
