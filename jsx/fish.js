@@ -235,7 +235,7 @@ var Bubbler = React.createClass({
 			open = "Open";
 		return <div>
 			<img src={this.props.img + open + this.props.ext} style={{top:"80%", width: this.state.wide, height:"20%", left: this.state.leftPos}} onClick={this.bubble}/>
-			<img id={this.props.id + "bubbles"} src="static/img/fish/bubbles.png" style={{top:"60%", height:"40%", left:this.state.leftPos}}/>
+			<img id={this.props.id + "bubbles"} src={this.props.bubbleImg}  style={{top:"60%", height:"40%", left:this.state.leftPos}}/>
 			</div>;
 	}
 });
@@ -252,6 +252,14 @@ var FishBowl = React.createClass({
 		{
 			scaryFish = <Fish id="scary" img="static/img/fish/scarySharpTeethBanana" ext=".png" brain={FastBrain} size="200px"/>;
 		} 
+
+
+		var bubbler = <Bubbler id="chest" img="static/img/fish/treasure" ext=".png" bubbleImg="static/img/fish/bubbles.png" />;
+		if(Math.random() > .95)
+		{
+			bubbler = <Bubbler id="chest" img="static/img/fish/treasure" ext=".png" bubbleImg="static/img/fish/bubbleMan.png" />;
+		}
+
 		var tinyFish = fishCount.map( function( id ) {
 			return <Fish id={"tinyFish" + id} img="static/img/fish/tinyFish" ext=".png" brain={TinyBrain} size="30px" />;
 		});
@@ -269,7 +277,7 @@ var FishBowl = React.createClass({
 			<Fish id="puff" img="static/img/fish/littlePuff" ext=".png" brain={PuffBrain} size="45px" />
 			{scaryFish}
 			{tinyFish}
-			<Bubbler id="chest" img="static/img/fish/treasure" ext=".png" />
+			{bubbler}
 			<Flora id="flora1" img="static/img/fish/seaweed.png" height="80" />
 			<Fish id="t3" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
 			<Fish id="t4" img="static/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />

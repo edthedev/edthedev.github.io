@@ -235,7 +235,7 @@ var Bubbler = React.createClass({displayName: "Bubbler",
 			open = "Open";
 		return React.createElement("div", null, 
 			React.createElement("img", {src: this.props.img + open + this.props.ext, style: {top:"80%", width: this.state.wide, height:"20%", left: this.state.leftPos}, onClick: this.bubble}), 
-			React.createElement("img", {id: this.props.id + "bubbles", src: "static/img/fish/bubbles.png", style: {top:"60%", height:"40%", left:this.state.leftPos}})
+			React.createElement("img", {id: this.props.id + "bubbles", src: this.props.bubbleImg, style: {top:"60%", height:"40%", left:this.state.leftPos}})
 			);
 	}
 });
@@ -252,6 +252,14 @@ var FishBowl = React.createClass({displayName: "FishBowl",
 		{
 			scaryFish = React.createElement(Fish, {id: "scary", img: "static/img/fish/scarySharpTeethBanana", ext: ".png", brain: FastBrain, size: "200px"});
 		} 
+
+
+		var bubbler = React.createElement(Bubbler, {id: "chest", img: "static/img/fish/treasure", ext: ".png", bubbleImg: "static/img/fish/bubbles.png"});
+		if(Math.random() > .95)
+		{
+			bubbler = React.createElement(Bubbler, {id: "chest", img: "static/img/fish/treasure", ext: ".png", bubbleImg: "static/img/fish/bubbleMan.png"});
+		}
+
 		var tinyFish = fishCount.map( function( id ) {
 			return React.createElement(Fish, {id: "tinyFish" + id, img: "static/img/fish/tinyFish", ext: ".png", brain: TinyBrain, size: "30px"});
 		});
@@ -269,7 +277,7 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Fish, {id: "puff", img: "static/img/fish/littlePuff", ext: ".png", brain: PuffBrain, size: "45px"}), 
 			scaryFish, 
 			tinyFish, 
-			React.createElement(Bubbler, {id: "chest", img: "static/img/fish/treasure", ext: ".png"}), 
+			bubbler, 
 			React.createElement(Flora, {id: "flora1", img: "static/img/fish/seaweed.png", height: "80"}), 
 			React.createElement(Fish, {id: "t3", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "t4", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
