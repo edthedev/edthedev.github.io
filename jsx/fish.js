@@ -209,20 +209,22 @@ var Bubbler = React.createClass({
 		};
 	},
 	componentDidMount: function() {
-		this.endBubble();
+		this.bubble();
 	},
 	moveBubble: function( timeIt ) {
 		var bubs = $("#" + this.props.id + "bubbles");
-		bubs.top = "80%";
-		bubs.animate({top: "0px" }, 2000);
-		console.log("animating?");
+		bubs.css({top:"75%"});
+		bubs.show();
+		bubs.animate({top: "0px" }, 2000, function() {
+			bubs.hide();
+		});
 	},
 	bubble: function() {
 		this.moveBubble();
-		setTimeout(this.endBubble, 1500);
+		setTimeout(this.close, 1500);
 		this.setState({open:true});
 	},
-	endBubble: function() {
+	close: function() {
 		this.setState({open:false});
 		$(this.props.id + "bubbles").hide();
 		setTimeout(this.bubble, Math.random() * 3000);
