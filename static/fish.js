@@ -215,7 +215,7 @@ var Bubbler = React.createClass({displayName: "Bubbler",
 		var bubs = $("#" + this.props.id + "bubbles");
 		bubs.css({top:"75%"});
 		bubs.show();
-		bubs.animate({top: "0px" }, 2000, function() {
+		bubs.animate({top: "-150px" }, 2000, function() {
 			bubs.hide();
 		});
 	},
