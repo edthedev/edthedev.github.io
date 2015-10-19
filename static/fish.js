@@ -227,15 +227,15 @@ var Bubbler = React.createClass({displayName: "Bubbler",
 	close: function() {
 		this.setState({open:false});
 		$(this.props.id + "bubbles").hide();
-		setTimeout(this.bubble, Math.random() * 3000);
+		setTimeout(this.bubble, Math.random() * 10000 + 1500);
 	},
 	render: function() {
 		var open = "";
 		if(this.state.open)
 			open = "Open";
 		return React.createElement("div", null, 
-			React.createElement("img", {id: this.props.id + "bubbles", src: "static/img/fish/bubbles.png", style: {top:"60%", height:"40%", left:this.state.leftPos}}), 
-			React.createElement("img", {src: this.props.img + open + this.props.ext, style: {top:"80%", width: this.state.wide, height:"20%", left: this.state.leftPos}, onClick: this.bubble})
+			React.createElement("img", {src: this.props.img + open + this.props.ext, style: {top:"80%", width: this.state.wide, height:"20%", left: this.state.leftPos}, onClick: this.bubble}), 
+			React.createElement("img", {id: this.props.id + "bubbles", src: "static/img/fish/bubbles.png", style: {top:"60%", height:"40%", left:this.state.leftPos}})
 			);
 	}
 });
