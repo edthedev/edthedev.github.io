@@ -1,6 +1,5 @@
-
-<!-- saved from url=(0040)http://regexp.s3.amazonaws.com/list.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html>
+	<head>
 <!-- 
 
 Amazon S3 Bucket listing.
@@ -24,7 +23,7 @@ Copyright (C) 2008 Francesco Pasqualini
 -->
 
 		<title>Bucket listing</title>
-<script>
+<SCRIPT>
 
 //document.write(window.location.search);
 
@@ -82,7 +81,7 @@ function createRequestObject(){
 /* The variable http will hold our new XMLHttpRequest object. */
 var http = createRequestObject(); 
 function getList(){
-	http.open('get', location.protocol+'//'+location.hostname);
+	http.open('get', 'https://'+location.hostname);
 	http.onreadystatechange = handleList; 
 	http.send(null);
 }
@@ -203,19 +202,21 @@ function getLinkLastmod(){
 }
 
 
-</script>
+</SCRIPT>
 	</head>
-	<body onload="getList();">
-		<div id="bucket_list"><pre>             <a href="http://regexp.s3.amazonaws.com/list.html?sort=size&sortdir=asc">Size</a>  <a href="http://regexp.s3.amazonaws.com/list.html?sort=lastmod&sortdir=asc">Lastmodified</a>              <a href="http://regexp.s3.amazonaws.com/list.html?sort=name&sortdir=asc">Name</a>   <br>            994 B  2008-09-07T19:52:44.000Z  <a href="http://regexp.s3.amazonaws.com/README.txt">README.txt</a>                                         <br>          47013 B  2012-07-30T13:41:15.000Z  <a href="http://regexp.s3.amazonaws.com/elechi.xml">elechi.xml</a>                                         <br>           3425 B  2008-09-07T22:43:11.000Z  <a href="http://regexp.s3.amazonaws.com/l.txt">l.txt</a>                                              <br>           6032 B  2008-09-27T08:40:24.000Z  <a href="./list_files/list.html">list.html</a>                                          <br>           7206 B  2012-07-30T13:41:18.000Z  <a href="http://regexp.s3.amazonaws.com/ruolo.xlst">ruolo.xlst</a>                                         <br></pre></div>
-<br>
-<small>
-<pre>Amazon S3 Bucket list v 1.1
-</pre>
-</small>
+	<body onLoad="getList();">
+		<div id="bucket_list">
+			<!--This is where we'll be displaying the products once they're loaded-->
+		</div>
+<BR>
+<SMALL>
+<PRE>
+Amazon S3 Bucket list v 1.1
+</PRE>
+</SMALL>
 
 
 
-	
+	</body>
+</html>
 
-
-</body></html>

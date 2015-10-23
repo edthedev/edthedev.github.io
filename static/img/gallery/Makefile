@@ -4,3 +4,6 @@ config_aws:
 
 upload:
 	aws s3 sync . s3://edthedev.gallery
+
+index:
+	echo "You wish"
