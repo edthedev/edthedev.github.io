@@ -176,7 +176,7 @@
     <Content Include="gallery.html" />
     <Content Include="index.html" />
     <Content Include="jsx\fish.js" />
-    <Content Include="remark-latest.min.js" />
+    <Content Include="static\remark-latest.min.js" />
     <Content Include="rest-ish.html" />
     <Content Include="software_rules.html" />
     <Content Include="static\bootstrap\dist\css\bootstrap-theme.css" />
