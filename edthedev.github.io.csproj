@@ -171,11 +171,12 @@
     <None Include="static\strapdown\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DelaportePresentationWebCon2016.html" />
+    <Content Include="WebCon2016.html" />
     <Content Include="fishbowl.html" />
     <Content Include="gallery.html" />
     <Content Include="index.html" />
     <Content Include="jsx\fish.js" />
+    <Content Include="VisualStudio.html" />
     <Content Include="static\remark-latest.min.js" />
     <Content Include="rest-ish.html" />
     <Content Include="software_rules.html" />
