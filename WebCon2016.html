@@ -17,11 +17,44 @@
     </style>
   </head>
   <body>
-    <textarea id="source">
+<textarea id="source">
 
-# RouteConfig.cs
+# Overview
+- Introduction
+- Cool URIs don't change.
+- Razor Table from ViewModel
+- Razor Form from ViewModel
+- Submit Razor Form with JavaScript
+- Bundling JavaScript
+- React Bundle
 
-The MVC template comes with this:
+???
+- Visit http://edward.delaporte.us/WebCon2016.html
+- Press P to see my notes.
+- Or just view the source.
+
+---
+
+# Cool URIs don't change.
+
+"Cool URIs don't change."
+(Tim Berner's Lee, _Weaving the Web_, 1999)
+
+???
+
+- URL = URI
+- People like to bookmark things.
+- URL should reflect purpose.
+- New thing? New purpose? New URL.
+- Redirects are a thing. Use them.
+- Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
+
+---
+
+# Great URLs Never Change
+
+### RouteConfig.cs
+The MVC template comes with a 'RouteConfig.cs' like this:
 .small[
 ```CSharp
 public class RouteConfig {
@@ -59,7 +92,7 @@ public class PaymentsController : Controller {
 
 ---
 
-# RouteConfig.cs
+# Great URLs Never Change
 Use this instead:
 .small[
 ```CSharp
