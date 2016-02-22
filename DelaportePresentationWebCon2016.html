@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+# RouteConfig.cs
+
+The MVC template comes with this:
+.small[
+```CSharp
+public class RouteConfig {
+    public static void RegisterRoutes(RouteCollection routes) {
+
+        routes.MapRoute(
+            name: "Default",
+            url: "{controller}/{action}/{id}",
+        );
+
+    }
+}
+```
+]
+
+***
+
+.small[
+```CSharp
+public class PaymentsController : Controller {
+    [HttpGet]
+    public ActionResult Single() {
+        /// ... Omitted ...
+    }
+}
+```
+]
+
+???
+
+- URLS are determined by controller class names.
+- Great URLs never change.
+- Great code changes often.
+- Controller class names should not be tied to routes.
+
+---
+
+# RouteConfig.cs
+Use this instead:
+.small[
+```CSharp
+public class RouteConfig {
+    public static void RegisterRoutes(RouteCollection routes) {
+
+        routes.MapMvcAttributeRoutes();
+
+    }
+}
+```
+]
+
+***
+.small[
+```CSharp
+public class SensibleNameController : Controller {
+    [HttpGet]
+    [Route("Payments/Single")]
+    public ActionResult SensibleName() {
+        /// ... Omitted ...
+    }
+}
+
+```
+]
+???
+
+- Change controller name without changing URL.
+- Better! - Change URL without renaming controller.
+- Bonus - Keep your sanity by keeping your routes next to your controllers.
+
+---
+
+# ViewModel.cs
+# View.cs
+# _PartialView.cs
+# Scripts/UserExperience.js
+???
+- User experience is important.
+- User experience belongs as close to the user as possible, so it goes in the JavaScript.
+- Think of Razor View as Initial View. 
+        - JavaScript takes over.
+        - But! Getting it right on the first try still has value.
+- JavaScript increases accessibility, by improving user experience.
+- JavaScript is no longer a significant source of vulnerability. 
+        - Tell your paranoid friends they can turn it back on.
+        - Tell them to update their browser first.
+
+# ReactComponent.jsx
+
+    </textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
