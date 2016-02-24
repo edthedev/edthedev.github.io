@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+<textarea id="source">
+
+# Under Construction
+
+Please be aware that this presentation is still under contruction.
+
+Presented at [University of Illinois WebCon](http://webcon.illinois.edu/) on April 28, 2016
+
+---
+
+
+# Overview
+- Cool stuff that comes with MVC
+    - Clean static URLs with MapMvcAttributeRoutes
+    - Fast forms and tables with Razor and ViewModels.
+    - Refresh client view using AJAX to fetch HTML from server side partials.
+        - Want to spend some time on this vs React.js, Pro/Con list.
+- Cool stuff that comes with React.js
+    - Client side rendering with JSX.
+    - JavaScript event based updates.
+- Cool stuff that comes with React.js.Net
+    - React Bundling
+    - Server side rendering of JSX
+- Example Code
+- Things we did not have time to cover.
+    (I plan to add web URLs to resources for each...)
+    - NuGet
+    - Linq
+    - Web.config transforms
+
+# Example Code
+- RouteConfig.cs
+- Razor Table from ViewModel
+- Razor Form from ViewModel
+- Submit Razor Form with JavaScript
+- Bundling JavaScript
+- React Bundle
+
+???
+- Visit http://edward.delaporte.us/WebCon2016.html
+- Press P to see my notes.
+- Or just view the source.
+
+---
+
+# Lessons
+
+- "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
+- Render (most) HTML server side.
+
+???
+
+- URL = URI
+- People like to bookmark things.
+- URL should reflect purpose.
+- New thing? New purpose? New URL.
+- Redirects are a thing. Use them.
+- Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
+
+---
+
+# Examples
+- RouteConfig.cs
+
+---
+
+# RouteConfig.cs
+
+The MVC template comes with a 'RouteConfig.cs' like this:
+.small[
+```CSharp
+public class RouteConfig {
+    public static void RegisterRoutes(RouteCollection routes) {
+
+        routes.MapRoute(
+            name: "Default",
+            url: "{controller}/{action}/{id}",
+        );
+
+    }
+}
+```
+]
+
+***
+
+.small[
+```CSharp
+public class PaymentsController : Controller {
+    [HttpGet]
+    public ActionResult Single() {
+        /// ... Omitted ...
+    }
+}
+```
+]
+
+???
+
+- URLS are determined by controller class names.
+- Great URLs never change.
+- Great code changes often.
+- Controller class names should not be tied to routes.
+
+---
+
+# RouteConfig.cs
+
+Use this instead:
+.small[
+```CSharp
+public class RouteConfig {
+    public static void RegisterRoutes(RouteCollection routes) {
+
+        routes.MapMvcAttributeRoutes();
+
+    }
+}
+```
+]
+
+***
+.small[
+```CSharp
+public class SensibleNameController : Controller {
+    [HttpGet]
+    [Route("Payments/Single")]
+    public ActionResult SensibleName() {
+        /// ... Omitted ...
+    }
+}
+
+```
+]
+???
+
+- Change controller name without changing URL.
+- Better! - Change URL without renaming controller.
+- Bonus - Keep your sanity by keeping your routes next to your controllers.
+
+---
+
+# _PartialTable.cshtml
+
+MVC can generate something like this from the ViewModel:
+![Rate Table Parial](static/img/webcon2016/ratepartial.png)
+
+???
+
+- Added CSS for Bold first row.
+
+---
+
+# _PartialTable.cshtml
+
+MVC can generate something like this from the ViewModel:
+.small[
+```CSharp
+
+@model IEnumerable<RateCompareWeb.ViewModels.RateViewModel>
+@{
+    Layout = null;
+}
+
+<table id="rateTable" class="table table-condensed">
+    <tr> 
+        <th> @Html.DisplayNameFor(model => model.Provider) </th>
+        ... More headers ...
+    </tr>
+
+    @foreach (var item in Model) {
+    <tr class="@( item.IsOurRate ? " our_rate":"")">
+        <td> @Html.DisplayFor(modelItem => item.Provider) </td>
+        ... More Row Data ...
+    </tr>
+    }
+</table>
+
+```
+]
+
+???
+
+- This is great. We love it.
+
+---
+
+---
+        # ViewModel.cs
+        # View.cs
+        # _PartialView.cs
+        # Scripts/UserExperience.js
+        ???
+        - User experience is important.
+        - User experience belongs as close to the user as possible, so it goes in the JavaScript.
+        - Think of Razor View as Initial View.
+        - JavaScript takes over.
+        - But! Getting it right on the first try still has value.
+        - JavaScript increases accessibility, by improving user experience.
+        - JavaScript is no longer a significant source of vulnerability.
+        - Tell your paranoid friends they can turn it back on.
+        - Tell them to update their browser first.
+
+        # ReactComponent.jsx
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="static/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
