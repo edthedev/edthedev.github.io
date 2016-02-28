@@ -7,3 +7,4 @@ $( "#navlist" ).append( "<li><a href='VisualStudio.html'>Visual Studio with Git<
 $( "#navlist" ).append( "<li><a href='WebCon2016.html'>WebCon 2016 Presentation</a></li>" );
 /* $( "#navlist" ).append( "<li><a href='ultisnips.html'>Ultisnips</a></li>" ); */
 $( "#navlist" ).append( "</ul>");
+$( "#navlist" ).append( "<br/>");
