@@ -4,6 +4,13 @@ body
 	font-size:140%;
 }
 
+h1, h2, h3, h4 {
+	padding-left: 1em;
+	font-family: 'times new roman', times, serif !important;
+	font-size:140%;
+	border-bottom-style:solid;
+}
+
 #navlist li
 {
 	list-style-type: none;
