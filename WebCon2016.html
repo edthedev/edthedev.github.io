@@ -195,7 +195,61 @@ public class SensibleNameController : Controller {
 
 ---
 
+# Trivial ViewModel
+
+```CSharp
+namespace RateCompareWeb.ViewModels {
+    public class RateViewModel {
+        public string Provider { get; set; }
+        public decimal? Rate { get; set; }
+        public decimal EstimatedValue { get; set; }
+        public decimal OurAdvantage { get; set; }
+    }
+}
+ ``` 
+
+???
+
+- Just a class object with some attributes
+- Sometimes use separate ViewModels for Add/Edit/List
+- Fields may be input/output or calculated
+
+---
+
+# Typical ViewModel
+
+```CSharp
+namespace RateCompareWeb.ViewModels {
+    public class RateViewModel {
+        public string Provider { get; set; }
+
+        [Display(Name = "APY")]
+        public decimal? Rate { get; set; }
+
+        [Display(Name = "Estimated Value")]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
+        public decimal EstimatedValue { get; set; }
+
+        [Display(Name = "Our Advantage")]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
+        public decimal OurAdvantage { get; set; }
+    }
+}
+ ``` 
+
+???
+
+- Attributes customize display (label and data format)
+- Attributes apply to all generated views (including add/edit/list)
+- Other Attributes (Not Shown) add server or client validation
+
+---
+
 # _PartialTable.cshtml
+
+MVC can generate a decent list table from a ViewModel.
 ![Rate Table Parial](static/img/webcon2016/addview.png)
 
 ---
@@ -207,7 +261,6 @@ public class SensibleNameController : Controller {
 
 # _PartialTable.cshtml
 
-MVC can generate something like this from the ViewModel:
 .small[
 ```CSharp
 
@@ -241,7 +294,6 @@ MVC can generate something like this from the ViewModel:
 
 # _PartialTable.cshtml
 
-MVC can generate something like this from the ViewModel:
 ![Rate Table Parial](static/img/webcon2016/ratepartial.png)
 
 ???
