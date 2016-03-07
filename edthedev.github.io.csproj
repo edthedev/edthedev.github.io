@@ -171,6 +171,9 @@
     <None Include="static\strapdown\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\img\addListViewModelPartial.png" />
+    <Content Include="static\img\addview.png" />
+    <Content Include="static\img\ratepartial.png" />
     <Content Include="WebCon2016.html" />
     <Content Include="fishbowl.html" />
     <Content Include="gallery.html" />
