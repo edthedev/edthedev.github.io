@@ -247,7 +247,7 @@ namespace RateCompareWeb.ViewModels {
 
 ---
 
-# _PartialTable.cshtml
+# Generate a List Partial
 
 MVC can generate a decent list table from a ViewModel.
 ![Rate Table Parial](static/img/webcon2016/addview.png)
@@ -289,6 +289,7 @@ MVC can generate a decent list table from a ViewModel.
 ???
 
 - This is great. We love it.
+- Layout = null tells Razor not to add header/footer
 
 ---
 
@@ -298,8 +299,35 @@ MVC can generate a decent list table from a ViewModel.
 
 ???
 
-- Added CSS for Bold first row.
+- We added CSS for Bold first row.
 
+---
+
+# Include _PartialTable.cshtml in another page.
+
+Assuming the ratepartial is served at /Home/_RateTable, we can embed it in another page with:
+```CSharp
+<div id="rateList">
+    Html.RenderAction("_RateTable", "Home");
+</div>
+```
+And then refresh it on the client side later with:
+```JavaScript
+$.ajax({
+    url: "/Home/_RateTable"
+    method: "GET",
+    contentType: 'application/json',
+    success: function (data, status, xhr) {
+        $("#rateList").html(data);
+    }
+});
+```
+
+???
+
+- We gave id rateList to the div so that we could find it with jQuery.
+- First part does the server side render.
+- Second part allows client side updates without reloading the entire page.
 
 ---
         # ViewModel.cs
