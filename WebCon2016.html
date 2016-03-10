@@ -195,20 +195,72 @@ public class SensibleNameController : Controller {
 
 ---
 
-# _PartialTable.cshtml
+# Trivial ViewModel
 
-MVC can generate something like this from the ViewModel:
-![Rate Table Parial](static/img/webcon2016/ratepartial.png)
+```CSharp
+namespace RateCompareWeb.ViewModels {
+    public class RateViewModel {
+        public string Provider { get; set; }
+        public decimal? Rate { get; set; }
+        public decimal EstimatedValue { get; set; }
+        public decimal OurAdvantage { get; set; }
+    }
+}
+ ``` 
 
 ???
 
-- Added CSS for Bold first row.
+- Just a class object with some attributes
+- Sometimes use separate ViewModels for Add/Edit/List
+- Fields may be input/output or calculated
+
+---
+
+# Typical ViewModel
+
+```CSharp
+namespace RateCompareWeb.ViewModels {
+    public class RateViewModel {
+        public string Provider { get; set; }
+
+        [Display(Name = "APY")]
+        public decimal? Rate { get; set; }
+
+        [Display(Name = "Estimated Value")]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
+        public decimal EstimatedValue { get; set; }
+
+        [Display(Name = "Our Advantage")]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
+        public decimal OurAdvantage { get; set; }
+    }
+}
+ ``` 
+
+???
+
+- Attributes customize display (label and data format)
+- Attributes apply to all generated views (including add/edit/list)
+- Other Attributes (Not Shown) add server or client validation
+
+---
+
+# Generate a List Partial
+
+MVC can generate a decent list table from a ViewModel.
+![Rate Table Parial](static/img/webcon2016/addview.png)
+
+---
+
+# _PartialTable.cshtml
+![Rate Table Parial](static/img/webcon2016/addListViewModelPartial.png)
 
 ---
 
 # _PartialTable.cshtml
 
-MVC can generate something like this from the ViewModel:
 .small[
 ```CSharp
 
@@ -237,10 +289,56 @@ MVC can generate something like this from the ViewModel:
 ???
 
 - This is great. We love it.
+- Layout = null tells Razor not to add header/footer
 
 ---
 
+# _PartialTable.cshtml
+
+![Rate Table Parial](static/img/webcon2016/ratepartial.png)
+
+???
+
+- We added CSS for Bold first row.
+
 ---
+
+# Include _PartialTable.cshtml in another page.
+
+Assuming the ratepartial is served at /Home/_RateTable, we can embed it in another page with:
+```CSharp
+<div id="rateList">
+    Html.RenderAction("_RateTable", "Home");
+</div>
+```
+And then refresh it on the client side later with:
+```JavaScript
+$.ajax({
+    url: "/Home/_RateTable"
+    method: "GET",
+    contentType: 'application/json',
+    success: function (data, status, xhr) {
+        $("#rateList").html(data);
+    }
+});
+```
+
+???
+
+- We gave id rateList to the div so that we could find it with jQuery.
+- First part does the server side render.
+- Second part allows client side updates without reloading the entire page.
+
+---
+# Add / Edit
+???
+    - Same basic steps to generate an HTML form and post it.
+    - When you generate a form from a ViewModel, Microsoft Unobtrusive Validation (Open Source JavaScript library for client side validation) is included by default.
+    - You may want to use AJAX to POST the form. You can. It works fine.
+
+---
+???
+    More misc notes:
         # ViewModel.cs
         # View.cs
         # _PartialView.cs
