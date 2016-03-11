@@ -335,103 +335,38 @@ $.ajax({
 
 ![Rate Edit Form Parital](static/img/webcon2016/addEditViewModelPartial.png)
 
+???
+
+- TODO: Capture a screenshot of the form while on the work network.
+
 ---
 
 # Edit Partial
 
 ```CSharp
-      @model RateCompareWeb.ViewModels.RateViewModel
+@model RateCompareWeb.ViewModels.RateViewModel
 
 
-      @using (Html.BeginForm())
-      {
-      @Html.AntiForgeryToken()
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
 
-      <div class="form-horizontal">
-          <h4>RateViewModel</h4>
-          <hr />
-          @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-          <div class="form-group">
-              @Html.LabelFor(model => model.Provider, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  @Html.EditorFor(model => model.Provider, new { htmlAttributes = new { @class = "form-control" } })
-                  @Html.ValidationMessageFor(model => model.Provider, "", new { @class = "text-danger" })
-              </div>
-          </div>
-
-          <div class="form-group">
-              @Html.LabelFor(model => model.IsOurRate, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  <div class="checkbox">
-                      @Html.EditorFor(model => model.IsOurRate)
-                      @Html.ValidationMessageFor(model => model.IsOurRate, "", new { @class = "text-danger" })
-                  </div>
-              </div>
-          </div>
-
-          <div class="form-group">
-              @Html.LabelFor(model => model.Rate, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  @Html.EditorFor(model => model.Rate, new { htmlAttributes = new { @class = "form-control" } })
-                  @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
-              </div>
-          </div>
-
-          <div class="form-group">
-              @Html.LabelFor(model => model.Principal, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  @Html.EditorFor(model => model.Principal, new { htmlAttributes = new { @class = "form-control" } })
-                  @Html.ValidationMessageFor(model => model.Principal, "", new { @class = "text-danger" })
-              </div>
-          </div>
-
-          <div class="form-group">
-              @Html.LabelFor(model => model.EstimatedValue, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  @Html.EditorFor(model => model.EstimatedValue, new { htmlAttributes = new { @class = "form-control" } })
-                  @Html.ValidationMessageFor(model => model.EstimatedValue, "", new { @class = "text-danger" })
-              </div>
-          </div>
-
-          <div class="form-group">
-              @Html.LabelFor(model => model.OurAdvantage, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  @Html.EditorFor(model => model.OurAdvantage, new { htmlAttributes = new { @class = "form-control" } })
-                  @Html.ValidationMessageFor(model => model.OurAdvantage, "", new { @class = "text-danger" })
-              </div>
-          </div>
-
-          <div class="form-group">
-              @Html.LabelFor(model => model.MonthlyAdvantage, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  @Html.EditorFor(model => model.MonthlyAdvantage, new { htmlAttributes = new { @class = "form-control" } })
-                  @Html.ValidationMessageFor(model => model.MonthlyAdvantage, "", new { @class = "text-danger" })
-              </div>
-          </div>
-
-          <div class="form-group">
-              @Html.LabelFor(model => model.MonthlyReturn, htmlAttributes: new { @class = "control-label col-md-2" })
-              <div class="col-md-10">
-                  @Html.EditorFor(model => model.MonthlyReturn, new { htmlAttributes = new { @class = "form-control" } })
-                  @Html.ValidationMessageFor(model => model.MonthlyReturn, "", new { @class = "text-danger" })
-              </div>
-          </div>
-
-          <div class="form-group">
-              <div class="col-md-offset-2 col-md-10">
-                  <input type="submit" value="Save" class="btn btn-default" />
-              </div>
-          </div>
+<div class="form-horizontal">
+  <h4>RateViewModel</h4>
+  <hr />
+  @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+      @Html.LabelFor(model => model.Rate, htmlAttributes: new { @class = "control-label col-md-2" })
+      <div class="col-md-10">
+          @Html.EditorFor(model => model.Rate, new { htmlAttributes = new { @class = "form-control" } })
+          @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
       </div>
-      }
-
-      <div>
-          @Html.ActionLink("Back to List", "Index")
+      <div class="col-md-offset-2 col-md-10">
+          <input type="submit" value="Save" class="btn btn-default" />
       </div>
+</div>
+}
 
-      @section Scripts {
-      @Scripts.Render("~/bundles/jqueryval")
-      }
+<div> @Html.ActionLink("Back to List", "Index") </div>
 ```
 
 ???
@@ -440,6 +375,38 @@ $.ajax({
     - You may want to use AJAX to POST the form. You can. It works fine.
 
 ---
+
+# Submit Form with AJAX
+
+```JavaScript
+$("#editForm").on("submit", function (event) {
+    // Prevent HTML POST
+    if(event) event.preventDefault();
+    // Get values from form
+    fields = {};
+    $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
+        fields[item.id] = item.value;
+    });
+    // ... Do clever things here...
+    // Submit AJAX POST
+    $.post("api/thing/", fields, function ( post_response, status ) {
+        $("#result").html(post_response);
+    });
+});
+````
+
+???
+- Bind to submit - captures submit button, Enter key, other JavaScript posting the form.
+- Prevent page reload.
+- Test in Firefox - it works, but it can be sensitive.
+- jQuery.find to find fields.
+- jQuery .map to update dictionary for each field.
+- jQuery .post to submit the form.
+- jQuery .html to paste the response HTML right into our output status field.
+- Whole update without a page reload.
+
+---
+
 ???
     More misc notes:
         # ViewModel.cs
