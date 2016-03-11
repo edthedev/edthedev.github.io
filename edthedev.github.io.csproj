@@ -171,6 +171,7 @@
     <None Include="static\strapdown\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\img\addEditViewModelPartial.png" />
     <Content Include="static\img\addListViewModelPartial.png" />
     <Content Include="static\img\addview.png" />
     <Content Include="static\img\ratepartial.png" />
