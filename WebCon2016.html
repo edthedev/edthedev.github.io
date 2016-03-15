@@ -480,7 +480,7 @@ $("#editForm").on("submit", function (event) {
     $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
         fields[item.id] = item.value;
     });
-    // ... Do clever things here...
+    // ... Do clever user-friendly things here...
     // Submit AJAX POST
     $.post("api/thing/", fields, function ( post_response, status ) {
         $("#result").html(post_response);
@@ -489,10 +489,10 @@ $("#editForm").on("submit", function (event) {
 ````
 
 ???
-- Bind to submit - captures submit button, Enter key, other JavaScript posting the form.
+- Bind to JavaScript submit event - captures submit button, Enter key, other JavaScript posting the form.
 - Prevent page reload.
 - Test in Firefox - it works, but it can be sensitive.
-- jQuery.find to find fields.
+- jQuery .find to find fields.
 - jQuery .map to update dictionary for each field.
 - jQuery .post to submit the form.
 - jQuery .html to paste the response HTML right into our output status field.
@@ -520,7 +520,7 @@ $("#editForm").on("submit", function (event) {
         # ReactComponent.jsx
 
 Maybe add a link to further reading about Entity Framework and Linq on last page...
-
+Maybe talk briefly about NuGet and have a screenshot or two...
 
 </textarea>
     <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
