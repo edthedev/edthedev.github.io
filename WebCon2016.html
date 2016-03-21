@@ -405,7 +405,7 @@ $.ajax({
 
 ---
 
-# Edit Partial
+# Razor Edit Partial
 
 ![Rate Edit Form Parital](static/img/webcon2016/addEditViewModelPartial.png)
 
@@ -416,7 +416,7 @@ $.ajax({
 
 ---
 
-# Edit Partial
+# Razor Edit Partial
 
 ```CSharp
 @model RateCompareWeb.ViewModels.RateViewModel
@@ -452,7 +452,13 @@ $.ajax({
 
 ---
 
-# Razor Generated HTML
+# Razor Edit Partial
+
+![Edit Form Parital](static/img/webcon2016/editrate.png)
+
+---
+
+# Razor Edit Partial HTML
 
 ```HTML
   <form action="/" method="post" novalidate="novalidate">
@@ -481,17 +487,19 @@ $.ajax({
 
 ???
 
+Quick Tour
 - Razor creates HTML and JavaScript
-- Quick Tour
-    - CSRF Token
-    - Title (Not Magic)
-    - Form groups contain input box and hidden validation message.
-    - Lots of data- markup.
-    - Activate some JavaScript.
+- CSRF Token
+- Title (Not Magic)
+- Form groups contain input box and hidden validation message.
+- Lots of data- markup.
+- Activate some JavaScript.
 - If you can write these data- attributes, Unobtrusive Validation with work with any server side technology (Django, Java, Ruby on Rails, Perl, PHP)
 - You can write these data- attributes.
 
---- 
+HIGHLIGHT THE UNOBTRUSIVE BEFORE SWITCHING SLIDES.
+
+---
 
 # Unobtrusive Validation Up Close
 
@@ -516,6 +524,8 @@ $.ajax({
 - Unobtrusive Validaiton is Declarative
 - JS library reads the data- attributes, and binds itself to the JS events (change, click, submit)
 
+HOW DID RAZOR KNOW TO ADD THIS VALIDATION?
+
 ---
 
 # Validation Attribute
@@ -537,27 +547,6 @@ public class PaymentViewModel {
 - Data type
 - Client and server side validation is applied.
 - Most are server side, some are client side, some both.
-
----
-
-# Validation Attribute
-
-TODO: Screenshot of field with validation triggered
-
-
-
-
----
-
-# Validation Attribute
-Razor Generated HTML
-TODO: Include Generated HTML with unobtrusive validation
-
-???
-
-- Microsoft Unobtrusive Validation
-- Razor generated the needed markup, based on the validation attributes
-- Feels like HTML5 - Expressive rather than declarative.
 
 ---
 
