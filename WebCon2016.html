@@ -435,6 +435,7 @@ $.ajax({
           @Html.EditorFor(model => model.Rate, new { htmlAttributes = new { @class = "form-control" } })
           @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
       </div>
+      <!-- ... More fields ... -->
       <div class="col-md-offset-2 col-md-10">
           <input type="submit" value="Save" class="btn btn-default" />
       </div>
@@ -451,60 +452,62 @@ $.ajax({
 
 ---
 
-# Razor Generated Form
-
-
----
-
 # Razor Generated HTML
 
 ```HTML
+  <form action="/" method="post" novalidate="novalidate">
+  <input name="__RequestVerificationToken" type="hidden" value="TLeX43jnhexgznkhND0hD8aPJPfMTKomWnp1juSDchb6AFp66AuULNMlFJKTsOovQhvDPA2pErjjh-aAIcAWznX1MVnNP-06Dx5MX6gsdno1">    <div class="form-horizontal">
+  <h4>Add a Rate</h4>
+  <hr>
+  <!-- ... More fields ... -->
+  <div class="form-group">
+      <label class="control-label col-md-2" for="Rate">APY</label>
+      <div class="col-md-10">
+          <input class="form-control text-box single-line input-validation-error" data-val="true" data-val-number="The field APY must be a number." id="Rate" name="Rate" type="text" value="">
+          <span class="text-danger field-validation-error" data-valmsg-for="Rate" data-valmsg-replace="true"><span for="Rate" class="">The field APY must be a number.</span></span>
+      </div>
+  </div>
+      <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+              <input type="submit" value="Save" class="btn btn-default">
+          </div>
+      </div>
+  </div>
+  </form>
+  <script src="/Scripts/jquery-1.10.2.js"></script>
+  <script src="/Scripts/jquery.validate.js"></script>
+  <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+```
 
-                      <form action="/" method="post" novalidate="novalidate">
-                          <input name="__RequestVerificationToken" type="hidden" value="TLeX43jnhexgznkhND0hD8aPJPfMTKomWnp1juSDchb6AFp66AuULNMlFJKTsOovQhvDPA2pErjjh-aAIcAWznX1MVnNP-06Dx5MX6gsdno1">    <div class="form-horizontal">
-                              <h4>RateViewModel</h4>
-                              <hr>
+???
 
-                              <div class="form-group">
-                                  <label class="control-label col-md-2" for="Provider">Provider</label>
-                                  <div class="col-md-10">
-                                      <input class="form-control text-box single-line valid" id="Provider" name="Provider" type="text" value="">
-                                      <span class="field-validation-valid text-danger" data-valmsg-for="Provider" data-valmsg-replace="true"></span>
-                                  </div>
-                              </div>
+- Razor creates HTML and JavaScript
+- If you can write these data- attributes, Unobtrusive Validation with work with any server side technology (Django, Java, Ruby on Rails, Perl, PHP)
 
-                              <div class="form-group">
-                                  <label class="control-label col-md-2" for="IsOurRate">This is our rate</label>
-                                  <div class="col-md-10">
-                                      <div class="checkbox">
-                                          <input class="check-box" data-val="true" data-val-required="The This is our rate field is required." id="IsOurRate" name="IsOurRate" type="checkbox" value="true"><input name="IsOurRate" type="hidden" value="false">
-                                          <span class="field-validation-valid text-danger" data-valmsg-for="IsOurRate" data-valmsg-replace="true"></span>
-                                      </div>
-                                  </div>
-                              </div>
+--- 
 
-                              <div class="form-group">
-                                  <label class="control-label col-md-2" for="Rate">APY</label>
-                                  <div class="col-md-10">
-                                      <input class="form-control text-box single-line input-validation-error" data-val="true" data-val-number="The field APY must be a number." id="Rate" name="Rate" type="text" value="">
-                                      <span class="text-danger field-validation-error" data-valmsg-for="Rate" data-valmsg-replace="true"><span for="Rate" class="">The field APY must be a number.</span></span>
-                                  </div>
-                              </div>
+# Up-Close: Razor Generated HTML
 
-                              <div class="form-group">
-                                  <div class="col-md-offset-2 col-md-10">
-                                      <input type="submit" value="Save" class="btn btn-default">
-                                  </div>
-                              </div>
-                          </div>
-                      </form>
+```HTML
+<input class="form-control text-box single-line input-validation-error" 
+       data-val="true" 
+       data-val-number="The field APY must be a number." 
+       id="Rate" 
+       name="Rate" 
+       type="text" 
+       value="">
+<span class="text-danger field-validation-error" 
+      data-valmsg-for="Rate" 
+      data-valmsg-replace="true">
+    <span for="Rate" 
+          class="">The field APY must be a number.</span>
+</span>
 ```
 
 ???
 
 - Unobtrusive Validaiton is Declarative
 - JS library reads the data- attributes, and binds itself to the JS events (change, click, submit)
-- If you can write these data- attributes, Unobtrusive Validation with work with any server side technology (Django, Java, Ruby on Rails, Perl, PHP)
 
 ---
 
