@@ -567,8 +567,27 @@ Is:
 - Available in NuGet and Bower
 
 ---
-
 # Microsoft Unobtrusive Validation
+
+```HTML
+<input id="ZipCode" name="ZipCode" type="text" value="" maxlength="10"
+       data-val="true" 
+       data-val-required="A Postal Code is required." 
+       data-val-length="A 5 or 10 digit Postal Code is required." 
+       data-val-length-max="10" 
+       data-val-length-min="5" 
+       data-val-regex="The Postal Code is not formatted properly." 
+       data-val-regex-pattern="^\d{5}(-?(\d{4}))?$" 
+       >
+```
+
+???
+- Razor can generate data-val-* or you can write it.
+- Notice that we have three built-in validators here:
+    - required, length, regex
+
+---
+# Microsoft Unobtrusive Validation - jQuery Validators
 [JQuery Validation](https://github.com/jzaefferer/jquery-validation/) Example
 ```JavaScript
 $.validator.addMethod("validatezipcode",
@@ -591,8 +610,9 @@ $.validator.addMethod("validatezipcode",
 jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 ```
 ???
-- Notice that it is a jQuery extension.
+- Unobtrusive validators are jQuery validation validators
 - $.validator.addMethod
+- jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 
 ---
 
