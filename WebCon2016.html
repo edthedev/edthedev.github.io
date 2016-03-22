@@ -606,6 +606,25 @@ $("#editForm").on("submit", function (event) {
 - Whole update without a page reload.
 
 ---
+# JSX Example
+
+```HTML
+<h2>Do These Today</h2>
+<div id='todayActions' />
+```
+```JS
+React.render(
+	<ActionList title="Today's Actions" api="api/actions/today"/>
+    ,document.getElementById('ActionList')
+);
+```
+
+???
+
+- ActionList.setState calls ActionList.render.
+- Multiple calls to setState will render only once.
+
+--- 
 
 # JSX Example
 ```JSX
@@ -613,84 +632,42 @@ var ActionList = React.createClass({
   getInitialState: function() {
     return {actions: []};
   }, 
-  componentDidMount: function() {
-	this.refresh();
-  },
-  componentDidUpdate: function() {
-	if(this.state.actions.length == 0){
-		$("#" + this.props.empty_list_ctl).show();
-	}
-	else {
-		$("#" + this.props.empty_list_ctl).hide();
-	}
-  },
-  refresh: function()
-	{
-		$.ajax({
-		  url:this.props.api_src,
-		  dataType: 'json',
-		  success: function(data) {
-			console.log("success fetching action list", data);
-			this.setState({actions: unpack(data)});
-		  }.bind(this),
-		  error: function(xhr, status, err) {
-			console.error(" API returned error: ", status, err.toString());
-		  }
-		});
-  },
-  addAction: function() {
-	  var nameCtl = React.findDOMNode(this.refs.name);
-	  var name = nameCtl.value.trim();
-	  console.log("adding to goal id", this.props.goal_id);
-	  updates = {'name':name, 'goal_id':this.props.goal_id};
-	  nameCtl.value = "";
-		$.ajax({
-		url: 'api/action',
-		type: 'POST',
-		dataType: 'json',
-		contentType: "application/json; charset=utf-8",
-		data: JSON.stringify(updates),
-			success: function(result) {
-				console.log("successful add action.");
-				this.refresh();
-			}.bind(this),
-			error: function( xhr, code, message ){
-				console.log("post new action failed", code, message);
-			}
-		});
-  },
+  refresh: function() {
+	$.get(this.props.url, function (data) {
+		this.setState(data);
+	}.bind(this));
+  }.bind(this),
   render: function()
   {
-
 	actions = this.state.actions.map(function (item) {
       return (
-		<Action show_when={this.props.show_dates} ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
+		<Action ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
 		);
     }.bind(this));
-
-	console.log("show_add", this.props.show_add);
-	var add_action = null;
-	if(this.props.show_add) {
-		add_action = <AddAction goal_id={this.props.goal_id} ref_parent={this.refresh} />;
-	}
-
 	return (
 			<table className="table">
 			<thead>
 			<th>{this.props.title}</th>
 			</thead>
 			<tbody>
-			{add_action}
 			{actions}
 			</tbody>
 			</table>
     );
   }
 });
-
-
 ```
 
+???
+Cool stuff
+- React components can be Composed of other React components.
+- props are set in the HTML attributes
+- state is set at runtime
+Weird stuff
+- Use className instead of class
+- .bind(this) to call setState on the outer object.
+- ReactJS.Net will call render and getInitialState sever side.
+- Keep render and getInitialState as empty as you can.
 ---
 
 ???
