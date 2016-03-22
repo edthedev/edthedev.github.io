@@ -592,27 +592,27 @@ Is:
 ```JavaScript
 $.validator.addMethod("validatezipcode",
     function (value, element, param) {
-        try {
-            if (!(new RegExp(/^\d{5}(-?\d{4})?$/)).test(value))
-            {
-                Utility.log("So not valid!");
-                return false;
-            }
-            Utility.log("Valid!");
-            return true;
-        }
-        catch (exc) {
-            Utility.log("Error not valid!", exc);
+        if (!(new RegExp(/^\d{5}(-?\d{4})?$/)).test(value))
+        {
             return false;
         }
+        return true;
     }
 );
 jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
+```
+
+```HTML
+<input id="search_zip" 
+    data-val="true"
+    data-val-validatezipcode="Enter 5 or 9 digits of the Postal Code." 
+/>
 ```
 ???
 - Unobtrusive validators are jQuery validation validators
 - $.validator.addMethod
 - jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
+
 
 ---
 
@@ -620,18 +620,18 @@ jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 
 ```JavaScript
 $("#editForm").on("submit", function (event) {
-    // Prevent HTML POST
-    if(event) event.preventDefault();
-    // Get values from form
-    fields = {};
-    $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
-        fields[item.id] = item.value;
-    });
-    // ... Do clever user-friendly things here...
-    // Submit AJAX POST
-    $.post("api/thing/", fields, function ( post_response, status ) {
-        $("#result").html(post_response);
-    });
+// Prevent HTML POST
+if(event) event.preventDefault();
+// Get values from form
+fields = {};
+$("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
+fields[item.id] = item.value;
+});
+// ... Do clever user-friendly things here...
+// Submit AJAX POST
+$.post("api/thing/", fields, function ( post_response, status ) {
+$("#result").html(post_response);
+});
 });
 ````
 
@@ -654,8 +654,8 @@ $("#editForm").on("submit", function (event) {
 ```
 ```JS
 React.render(
-	<ActionList title="Today's Actions" api="api/actions/today"/>
-    ,document.getElementById('ActionList')
+<ActionList title="Today's Actions" api="api/actions/today" />
+,document.getElementById('ActionList')
 );
 ```
 
@@ -664,37 +664,37 @@ React.render(
 - ActionList.setState calls ActionList.render.
 - Multiple calls to setState will render only once.
 
---- 
+---
 
 # JSX Example
 ```JSX
 var ActionList = React.createClass({
-  getInitialState: function() {
-    return {actions: []};
-  }, 
-  refresh: function() {
-	$.get(this.props.url, function (data) {
-		this.setState(data);
-	}.bind(this));
-  }.bind(this),
-  render: function()
-  {
-	actions = this.state.actions.map(function (item) {
-      return (
-		<Action ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
-		);
-    }.bind(this));
-	return (
-			<table className="table">
-			<thead>
-			<th>{this.props.title}</th>
-			</thead>
-			<tbody>
-			{actions}
-			</tbody>
-			</table>
-    );
-  }
+getInitialState: function() {
+return {actions: []};
+},
+refresh: function() {
+$.get(this.props.url, function (data) {
+this.setState(data);
+}.bind(this));
+}.bind(this),
+render: function()
+{
+actions = this.state.actions.map(function (item) {
+return (
+<Action ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
+);
+}.bind(this));
+return (
+<table className="table">
+  <thead>
+  <th>{this.props.title}</th>
+  </thead>
+  <tbody>
+      {actions}
+  </tbody>
+</table>
+);
+}
 });
 ```
 
@@ -711,23 +711,23 @@ Weird stuff
 ---
 
 ???
-    More misc notes:
-        # ViewModel.cs
-        # View.cs
-        # _PartialView.cs
-        # Scripts/UserExperience.js
-        ???
-        - User experience is important.
-        - User experience belongs as close to the user as possible, so it goes in the JavaScript.
-        - Think of Razor View as Initial View.
-        - JavaScript takes over.
-        - But! Getting it right on the first try still has value.
-        - JavaScript increases accessibility, by improving user experience.
-        - JavaScript is no longer a significant source of vulnerability.
-        - Tell your paranoid friends they can turn it back on.
-        - Tell them to update their browser first.
+More misc notes:
+# ViewModel.cs
+# View.cs
+# _PartialView.cs
+# Scripts/UserExperience.js
+???
+- User experience is important.
+- User experience belongs as close to the user as possible, so it goes in the JavaScript.
+- Think of Razor View as Initial View.
+- JavaScript takes over.
+- But! Getting it right on the first try still has value.
+- JavaScript increases accessibility, by improving user experience.
+- JavaScript is no longer a significant source of vulnerability.
+- Tell your paranoid friends they can turn it back on.
+- Tell them to update their browser first.
 
-        # ReactComponent.jsx
+# ReactComponent.jsx
 
 Maybe add a link to further reading about Entity Framework and Linq on last page...
 Maybe talk briefly about NuGet and have a screenshot or two...
