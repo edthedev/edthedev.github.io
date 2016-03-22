@@ -569,10 +569,30 @@ Is:
 ---
 
 # Microsoft Unobtrusive Validation
-Without Razor
-
-TODO: Example JS to use Unobtrusive with non-Razor form elements.
-
+[JQuery Validation](https://github.com/jzaefferer/jquery-validation/) Example
+```JavaScript
+$.validator.addMethod("validatezipcode",
+    function (value, element, param) {
+        try {
+            if (!(new RegExp(/^\d{5}(-?\d{4})?$/)).test(value))
+            {
+                Utility.log("So not valid!");
+                return false;
+            }
+            Utility.log("Valid!");
+            return true;
+        }
+        catch (exc) {
+            Utility.log("Error not valid!", exc);
+            return false;
+        }
+    }
+);
+jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
+```
+???
+- Notice that it is a jQuery extension.
+- $.validator.addMethod
 
 ---
 
