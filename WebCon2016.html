@@ -607,6 +607,92 @@ $("#editForm").on("submit", function (event) {
 
 ---
 
+# JSX Example
+```JSX
+var ActionList = React.createClass({
+  getInitialState: function() {
+    return {actions: []};
+  }, 
+  componentDidMount: function() {
+	this.refresh();
+  },
+  componentDidUpdate: function() {
+	if(this.state.actions.length == 0){
+		$("#" + this.props.empty_list_ctl).show();
+	}
+	else {
+		$("#" + this.props.empty_list_ctl).hide();
+	}
+  },
+  refresh: function()
+	{
+		$.ajax({
+		  url:this.props.api_src,
+		  dataType: 'json',
+		  success: function(data) {
+			console.log("success fetching action list", data);
+			this.setState({actions: unpack(data)});
+		  }.bind(this),
+		  error: function(xhr, status, err) {
+			console.error(" API returned error: ", status, err.toString());
+		  }
+		});
+  },
+  addAction: function() {
+	  var nameCtl = React.findDOMNode(this.refs.name);
+	  var name = nameCtl.value.trim();
+	  console.log("adding to goal id", this.props.goal_id);
+	  updates = {'name':name, 'goal_id':this.props.goal_id};
+	  nameCtl.value = "";
+		$.ajax({
+		url: 'api/action',
+		type: 'POST',
+		dataType: 'json',
+		contentType: "application/json; charset=utf-8",
+		data: JSON.stringify(updates),
+			success: function(result) {
+				console.log("successful add action.");
+				this.refresh();
+			}.bind(this),
+			error: function( xhr, code, message ){
+				console.log("post new action failed", code, message);
+			}
+		});
+  },
+  render: function()
+  {
+
+	actions = this.state.actions.map(function (item) {
+      return (
+		<Action show_when={this.props.show_dates} ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
+		);
+    }.bind(this));
+
+	console.log("show_add", this.props.show_add);
+	var add_action = null;
+	if(this.props.show_add) {
+		add_action = <AddAction goal_id={this.props.goal_id} ref_parent={this.refresh} />;
+	}
+
+	return (
+			<table className="table">
+			<thead>
+			<th>{this.props.title}</th>
+			</thead>
+			<tbody>
+			{add_action}
+			{actions}
+			</tbody>
+			</table>
+    );
+  }
+});
+
+
+```
+
+---
+
 ???
     More misc notes:
         # ViewModel.cs
