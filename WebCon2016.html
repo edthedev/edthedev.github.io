@@ -179,6 +179,32 @@ My relationship with Microsoft
 - RouteConfig.cs
 
 ---
+
+# JavaScript Object Pattern
+```JavaScript
+var AddressHelper = {
+    FormId: "AddressForm",
+    ListId: "AddressList",
+    add: function() {
+        $.post("/api/property", function(data) { $("#" + AddressHelper.ListId).html(data); } )
+    },
+    setup: function () {
+        $("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
+    }
+}
+AddressHelper.setup();
+```
+
+???
+- Most JavaScript patterns suck.
+- Globals are bad, except when they are well named, and used only on a page or two.
+- This looks a lot like a React component, but is just a JavaScript object.
+- This JavaScript object knows things, and can do things.
+- Since it is JavaScript, it is also very flexible.
+    - You could replace the FormId or ListId or even the functions in realtime, if needed.
+
+---
+
 # JavaScript Bundling
 
 ```CSharp
