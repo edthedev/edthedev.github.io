@@ -165,6 +165,29 @@ My relationship with Microsoft
 - RouteConfig.cs
 
 ---
+# JavaScript Bundling
+
+```CSharp
+public static void RegisterBundles(BundleCollection bundles) {
+    bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+        "~/Scripts/jquery-{version}.js",
+        "~/Scripts/jquery-ui-{version}.js"));
+}
+```
+
+???
+
+Notice
+- JavaScript Bundles are minified when the debug flag is removed from web.config.
+    - There are many nice ways to remove debug from web.config during your publish step.
+- Bundle has no extension
+
+Tips
+- Use more than one bundle. 
+- Organize your bundles by types of pages you want to serve them on.
+- User authorization level (public, registered, admin) is a good starting point.
+
+---
 
 # GET Request
 
