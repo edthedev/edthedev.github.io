@@ -710,6 +710,24 @@ Weird stuff
 - Keep render and getInitialState as empty as you can.
 ---
 
+# Alternative to JSX 
+Reload the partial with JQuery. 
+```JavaScript
+$.get("/PropertyManager/_PropertyList", function (html) {
+    $("#PropertyList").html(html);
+}
+```
+
+??? 
+- Rendering stays server side.
+- Still avoids page reload.
+- Still works with Single Page App
+- Eliminates the need to alternate between Razor and JSX for form layout.
+- No surprises during Server side pre-render, as with JSX.
+- Benefits fully from ViewModel Attributes and ViewBag
+
+---
+
 ???
 More misc notes:
 # ViewModel.cs
