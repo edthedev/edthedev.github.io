@@ -636,6 +636,17 @@ jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 - $.validator.addMethod
 - jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 
+---
+# Using Unobtrusive with React.js and other Dynamic Page Content
+```JavaScript
+$.validator.unobtrusive.parse("#EditForm");
+```
+
+???
+- Unobtrusive will parse the page once when the library loads.
+- If scripts dynamically add or remove data-val-* attributes, use this snippet after.
+- Note that React.JS continuously rewrites the page to save memory.
+- You may need this snippet in .render for certain React.JS components that use unobtrusive validation.
 
 ---
 
