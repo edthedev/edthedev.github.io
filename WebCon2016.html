@@ -34,7 +34,7 @@ at [University of Illinois WebCon](http://webcon.illinois.edu/) on April 28, 201
 # Why this presentation, why today?
 
 - Microsoft Recently open sourced much of ASP.Net
-- React.Js was the new hot thing last year.
+- React.Js was a new hot thing last year.
 
 ---
 
@@ -54,11 +54,11 @@ These code examples are:
 
 ---
 # Terminology: Single Page Application (SPA)
-    - Examples: Facebook, Google Maps, Twitter
-    - Can be Fast
-    - Can be Slow
-    - Typically better for mobile than non-SPA
-    - [Microsoft Resources for SPA](http://www.asp.net/single-page-application)
+- Examples: Facebook, Google Maps, Twitter
+- Can be Fast
+- Can be Slow
+- Typically better for mobile than non-SPA
+- [Microsoft Resources for SPA](http://www.asp.net/single-page-application)
 
 ???
 SPA
@@ -234,60 +234,6 @@ My relationship with Microsoft
 - New thing? New purpose? New URL.
 - Redirects are a thing. Use them.
 - Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
-
----
-
-# Examples
-- RouteConfig.cs
-
----
-
-# JavaScript Object Pattern
-```JavaScript
-var AddressHelper = {
-    FormId: "AddressForm",
-    ListId: "AddressList",
-    add: function() {
-        $.post("/api/property", function(data) { $("#" + AddressHelper.ListId).html(data); } )
-    },
-    setup: function () {
-        $("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
-    }
-}
-AddressHelper.setup();
-```
-
-???
-- Most JavaScript patterns suck.
-- Globals are bad, except when they are well named, and used only on a page or two.
-- This looks a lot like a React component, but is just a JavaScript object.
-- This JavaScript object knows things, and can do things.
-- Since it is JavaScript, it is also very flexible.
-    - You could replace the FormId or ListId or even the functions in realtime, if needed.
-
----
-
-# JavaScript Bundling
-
-```CSharp
-public static void RegisterBundles(BundleCollection bundles) {
-    bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-        "~/Scripts/jquery-{version}.js",
-        "~/Scripts/jquery-ui-{version}.js"));
-}
-```
-
-???
-
-Notice
-- JavaScript Bundles are minified when the debug flag is removed from web.config.
-    - There are many nice ways to remove debug from web.config during your publish step.
-- Bundle has no extension
-
-Tips
-- Use more than one bundle. 
-- Organize your bundles by types of pages you want to serve them on.
-- User authorization level (public, registered, admin) is a good starting point.
 
 ---
 
@@ -530,6 +476,52 @@ $.ajax({
 
 ---
 
+# JavaScript Object Pattern
+```JavaScript
+var AddressHelper = {
+    FormId: "AddressForm",
+    ListId: "AddressList",
+    add: function() {
+        $.post("/api/property", function(data) { $("#" + AddressHelper.ListId).html(data); } )
+    },
+    setup: function () {
+        $("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
+    }
+}
+AddressHelper.setup();
+```
+
+???
+- Most JavaScript patterns suck.
+- Globals are bad, except when they are well named, and used only on a page or two.
+- This looks a lot like a React component, but is just a JavaScript object.
+- This JavaScript object knows things, and can do things.
+- Since it is JavaScript, it is also very flexible.
+    - You could replace the FormId or ListId or even the functions in realtime, if needed.
+
+---
+
+# JavaScript Bundling
+
+```CSharp
+public static void RegisterBundles(BundleCollection bundles) {
+    bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+        "~/Scripts/jquery-{version}.js",
+        "~/Scripts/jquery-ui-{version}.js"));
+}
+```
+
+???
+
+Notice
+- JavaScript Bundles are minified when the debug flag is removed from web.config.
+    - There are many nice ways to remove debug from web.config during your publish step.
+- Bundle has no extension
+
+Tips
+- Use more than one bundle. 
+- Organize your bundles by types of pages you want to serve them on.
+- User authorization level (public, registered, admin) is a good starting point.
 # Razor Edit Partial
 
 ![Rate Edit Form Parital](static/img/webcon2016/addEditViewModelPartial.png)
@@ -802,7 +794,7 @@ React.render(
 
 ---
 
-# JSX Example
+# ReactComponent.jsx - JSX Example
 ```JSX
 var ActionList = React.createClass({
 getInitialState: function() {
@@ -858,7 +850,8 @@ $.get("/PropertyManager/_PropertyList", function (html) {
 }
 ```
 
-??? 
+???
+
 - Rendering stays server side.
 - Still avoids page reload.
 - Still works with Single Page App
@@ -866,15 +859,12 @@ $.get("/PropertyManager/_PropertyList", function (html) {
 - No surprises during Server side pre-render, as with JSX.
 - Benefits fully from ViewModel Attributes and ViewBag
 
----
-
-???
 More misc notes:
 # ViewModel.cs
 # View.cs
 # _PartialView.cs
 # Scripts/UserExperience.js
-???
+
 - User experience is important.
 - User experience belongs as close to the user as possible, so it goes in the JavaScript.
 - Think of Razor View as Initial View.
@@ -885,7 +875,14 @@ More misc notes:
 - Tell your paranoid friends they can turn it back on.
 - Tell them to update their browser first.
 
-# ReactComponent.jsx
+---
+
+# Links to Further Reading
+
+???
+
+TODO: Copy links from earlier intro slides.
+Add links to Linq, etc.
 
 Maybe add a link to further reading about Entity Framework and Linq on last page...
 Maybe talk briefly about NuGet and have a screenshot or two...
