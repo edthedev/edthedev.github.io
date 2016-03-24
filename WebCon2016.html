@@ -840,10 +840,14 @@ Cool stuff
 - props are set in the HTML attributes
 - state is set at runtime
 Weird stuff
+- Put each JSX file into both ReactConfig.cs and BundleConfig.cs
+- ReactConfig.cs to allow ReactJS.Net to server side pre-render for speed.
+- BundleConfig.cs to allow MVC to minify the React.JS JavaScript in production.
 - Use className instead of class
 - .bind(this) to call setState on the outer object.
 - ReactJS.Net will call render and getInitialState sever side.
 - Keep render and getInitialState as empty as you can.
+
 ---
 
 # Alternative to JSX 
