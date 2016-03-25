@@ -34,21 +34,28 @@ at [University of Illinois WebCon](http://webcon.illinois.edu/) on April 28, 201
 # Why this presentation, why today?
 - Microsoft Recently open sourced much of ASP.Net
 - React.Js was the newest framework ever, when it released.
-- Unobtrusive Validation is forever.
+- Unobtrusive Validation should be everywhere forever.
 
 ???
+
+I spent 2000-2004 writing .Net and pre-.Net versions of Visual Basic with Active Server Pages
+I spent 2004-2015 writing C++, Perl, PHP, Python, JavaScript and React.Js
+I spent the most of the last year writing C# ASP.Net, jQuery and React.Js 
+
+The last third of this presentation is JavaScript, and will run on any Apache server, even one running PHP.
+
 - ASP.Net
     - C# and ASP.Net have always been pretty great. 
     - ASP.Net is Open Source and runs, in theory, everywhere. 
-    - MVC is somewhat new, and pretty great.
-    - Side note: You could use Visual Basic.Net, but consider that you are going to need JavaScript and by using C# you can avoid mixing ; and non-; languages.
 - React.JS
-    - Written by Facebook
     - Introduces several valuable patterns to client JavaScript.
-    - Is way more sane than Google's Angular.js
-        - This title could have been Do Cool Things Slowly and Painfully with ASP.Net MVC and Angular.js
-        - If you want cool and quick, do not use Angular.
     - Integrates well with plain old JavaScript.
+    - Spoiler: We just finished removing React.js from our biggest product.
+    - I am going to show you how to get most of the benefits of React.js without using React.js
+- Unobtrusive
+    - Unobtrusive Validation is the best thing to happen to JavaScript in a while.
+    - It deserves to be part of the HTML5 specification.
+    - It will work with Ruby on Rails, PHP, Python/Django, Perl CGI, and anything that can serve a website.
 
 ---
 
@@ -92,18 +99,18 @@ SPA
 ???
 
 # About ASP
+- ASP.Net is a Microsoft Technology
+- Most of ASP.Net is Open Source 
 - Server side
 - ASP is for Active Server Pages
 - ASP code is typically C# or Visual Basic.Net
-- ASP is a Microsoft Technology
-- ASP was first released in 1996 - Turns 20 in December.
-       (Context: Perl - 1987, Python - 1994, PHP - 1994, Ruby - 1996, Java - 1996, C# and ASP.Net 2002)
-- C# is C++ that looks and tastes like Java
-- ASP.Net is Microsoft's Open Source 
+    - C# is C++ that looks and tastes like Java
+    - Side note: You could use Visual Basic.Net, but consider that you are going to need JavaScript and by using C# you can avoid mixing ; and non-; languages.
 - Provides package management with NuGet
 - NuGet is like Bower or NPM
 
 # About MVC
+- MVC is somewhat new, and pretty great.
 - Sometimes MVVC (Model ViewModel View Controller)
 - MVC is equivalent to Rails, Django, 
 - Microsoft has been incrementally releasing parts of MVC as Open Source (Your Mileage May Vary)
@@ -131,6 +138,17 @@ SPA
 
 ???
 
+# About React.js
+- Client side JavaScript
+- Written by Facebook
+- Works with any server side technology
+- Is way more sane than Google's Angular.js
+    - This title could have been Do Cool Things Slowly and Painfully with ASP.Net MVC and Angular.js
+    - If you want cool and quick, do not use Angular.
+
+# ReactJs.Net 
+- NuGet package for ASP.Net
+
 --- 
 # We are going to talk about
 - MVC
@@ -146,45 +164,6 @@ Lessons I learned:
 - Our sweet spot turned out to be using ideas from React.js without using React.js
 
 --- 
-
-# Terminology
-
-- React.js
-- ReactJs.Net
-
-???
-
-
-
-# About React.js
-- Client side
-- Works with any server side technology
-- ReactJs.Net is nice NuGet package for ASP.Net
-
-- Minimal lines of example code for a working web application in ASP.Net MVC with React.js
-- Answers for each bit: What do I recommend? Why?
-
----
-
-
-# Overview
-- Cool stuff that comes with MVC
-    - Clean static URLs with MapMvcAttributeRoutes
-    - Fast forms and tables with Razor and ViewModels.
-    - Refresh client view using AJAX to fetch HTML from server side partials.
-        - Want to spend some time on this vs React.js, Pro/Con list.
-- Cool stuff that comes with React.js
-    - Client side rendering with JSX.
-    - JavaScript event based updates.
-- Cool stuff that comes with React.js.Net
-    - React Bundling
-    - Server side rendering of JSX
-- Example Code
-- Things we did not have time to cover.
-    (I plan to add web URLs to resources for each...)
-    - NuGet
-    - Linq
-    - Web.config transforms
 
 # Example GET
 - GET diagram
