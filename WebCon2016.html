@@ -36,9 +36,11 @@ Edward
 - My Career: ASP, ASP.Net (1), PHP, Perl CGI, Python WSGI, React.js, ASP.Net MVC (4.5).
 
 Zach
-- IT Professional since... ?
-- When I started, Zach answered a lot of "How do I do X in ASP.Net MVC 4.5?" questions for me.
+- IT Professional since 2010.
+- When I started, Zach answered all of my "How do I do X in ASP.Net MVC 4.5?" questions for me.
 - We hope this presentation will do that for you.
+- Core builder of RocketRent.SoonToBeRenamed.com
+- Here to answer your questions honestly in case I lie to you.
 
 ---
 
@@ -52,7 +54,7 @@ Zach
 
 - ASP.Net
     - C# and ASP.Net have always been pretty great. 
-    - ASP.Net is Open Source and runs, in theory, everywhere. 
+    - ASP.Net is now Open Source and runs, in theory, everywhere. 
 - React.JS
     - Introduces several valuable patterns to client JavaScript.
     - Integrates well with plain old JavaScript.
@@ -72,13 +74,40 @@ Zach
 - Improve your PHP Web App
 
 ???
-- We will cover Create/Read/Update/Destroy with MVC.
+- One of the fast CRUD - Create/Read/Update/Destroy recipes for MVC.
 - We will introduce some techniques used in Single Page Apps.
 - In theory, everything you see here will run on an Apache server.
     - Possible follow up presentation: "I built a Microsoft App on Linux: Here's What Didn't Work."
 - The last third of this presentation is JavaScript, and will run on any Apache server, even one running PHP.
 
 ---
+# Quick Poll
+- Raise a hand if the term Model View Controller is already familiar to you.
+
+???
+- Jargon Disclaimer
+ - As I explain some Jargon, I will use more Jargon. 
+ - You don't need to recognize every tool or framework I mention to get value from this talk.
+ - Think of the passing references to other tools as landmarks
+ - Some veterans will find these landmarks valuable for orientation.
+ - But ASP.Net MVC is terrific for beginners and veterans.
+ - So try not to worry if you do not recognize some 'this tastes like Perl::DBI type references'.
+
+- How many of you know what the Model View Controller Pattern is?
+- Why MVC?
+ - Software development is hard.
+ - Everything in life is easier if you make and keep promises to yourself and your team.
+
+- If needed, do a quick run-down of MVC in general, here.
+ - All database connections go through the models.
+ - All interface elements go in the views.
+ - Most logic goes libraries called only by the controllers.
+ - Data from models only reaches views through controllers.
+ - Data from views only reaches models through controllers.
+
+
+---
+
 # Terminology: Single Page Application (SPA)
 - Examples: Facebook, Google Maps, Twitter
 - Can be Fast
@@ -87,32 +116,86 @@ Zach
 - [Microsoft Resources for SPA](http://www.asp.net/single-page-application)
 
 ???
+
+
 SPA
     - Fast because they only load/reload the content you ask for.
-    - Slow (particularly on small processors) because they render JSON data to HTML in your browser instead of at the server.
-    - Slow (particularly on devices will small amounts of RAM memory) because they often do not benefit from server side caching.
-    - Fast because user interactions do not have to wait on network traffic.
-    - Louie CK says "It's going to SPACE! Could you give it a minute?!"
+    - Slow (particularly on small processors) 
+    -- because they often render data to HTML in using browser instead of at the server.
+    - Slow (particularly on devices will small amounts of RAM memory) 
+    -- because they often do not benefit from server side caching.
+    - Fast because user interactions do not wait on network traffic.
+    -- Louie CK says "It's going to SPACE! Could you give it a minute?!"
+    - Many apps are more pleasant as SPA
+    - not every app should be.
+    - There are hybrid approaches.
 
---- 
+---
+
 # Terminology: ASP.Net
-- [ASP.Net](http://www.asp.net/web-pages) [which is Open Source](https://github.com/aspnet)
-- [Model View Controller](http://www.asp.net/mvc)
-- [NuGet Gallery](https://www.nuget.org/packages)
-- [Entity Framework](http://www.asp.net/entity-framework)
+- [Active Server Pages](http://www.asp.net/web-pages) 
+- Relies on the Microsoft .Net Framework
+- [Recently Became Open Source!](https://github.com/aspnet)
 
 ???
 
-# About ASP
-- ASP.Net is a Microsoft Technology
-- Most of ASP.Net is Open Source 
+# About ASP.Net
+- Made by Microsoft
+- Much of ASP.Net is Open Source 
+-- The Project list is five pages long on GitHub!
 - Server side
-- ASP is for Active Server Pages
 - ASP code is typically C# or Visual Basic.Net
     - C# is C++ that looks and tastes like Java
-    - Side note: You could use Visual Basic.Net, but consider that you are going to need JavaScript and by using C# you can avoid mixing ; and non-; languages.
+    - If you don't have a preference, use C#.
+    - Avoids mixing ; and non-;
+    - Opinion: All great VB features are also in C#.
+
+---
+
+# Terminology: Visual Studio, NuGet
+- Visual Studio Professional 2015
+- Visual Studio Code
+- [NuGet Gallery](https://www.nuget.org/packages)
+
+???
+
+# About Visual Studio Code
+- Made by Microsoft
+- Free
+- Open Source
+- Works on Windows, Mac, Linux
+- Microsoft's message to Linux developers: We think you will like our stuff.
+-- Visual Studio Code Team recently committed to Vim levels of plugin support.
+- Totally Hypothetical situation: 
+-- You maintain a .Net API to bridge your Linux web apps to your MS Unified communications system.
+-- Visual Studio Code and ASP.Net may simplify your development stack in the future.
+
+# About NuGet Gallery
+- Package manager for Visual Studio Professional
+- .Net Equivalent to
+ - CPAN for Perl
+ - npm for JavaScript
+ - bower for JavaScript
+- Integrates with Visual Studio version control (including Git!)
 - Provides package management with NuGet
 - NuGet is like Bower or NPM
+
+
+---
+
+# Terminology: Model View Controller
+- Web framework for Asp.Net
+- [Made by Microsoft](http://www.asp.net/mvc), [Licensed under Apache 2.0 License](https://github.com/aspnet/Mvc/blob/dev/LICENSE.txt)
+- MVC is to Asp.Net as:
+ - Ruby to Rails
+ - Django to Python
+- MVC is often used with Microsoft's [Entity Framework](http://www.asp.net/entity-framework)
+- Entity Framework is to Asp.Net as:
+ - dbi is to Perl
+ - SQLAlchemy is to Python 
+ - DjangoORM is to Python
+
+???
 
 # About MVC
 - MVC is somewhat new, and pretty great.
@@ -120,13 +203,6 @@ SPA
 - MVC is equivalent to Rails, Django, 
 - Microsoft has been incrementally releasing parts of MVC as Open Source (Your Mileage May Vary)
 
-# About NuGet Gallery
-- Package manager
-- .Net Equivalent to
-    CPAN for Perl
-    npm for JavaScript
-    bower for JavaScript
-- Integrates with Visual Studio version control (including Git!)
 
 # About Entity Framework
 - This presenation is not about Entity Framework
