@@ -67,6 +67,21 @@ Zach
 
 ---
 
+# Topics
+- MVC
+- Razor
+- React.js 
+- Razor again
+
+???
+Lessons I learned:
+- MVC is great.
+- Razor (part of MVC) with React.js is nice.
+- Razor without React.js is better.
+- Our sweet spot turned out to be using ideas from React.js without using React.js
+
+---
+
 # This presentation will help you:
 - Make a Simple CRUD Application Quickly with ASP.Net MVC
 - Make a Single Page Application (SPA) Quickly with ASP.Net MVC, jQuery and maybe React.js
@@ -105,6 +120,72 @@ Zach
  - Data from models only reaches views through controllers.
  - Data from views only reaches models through controllers.
 
+---
+
+# Terminology: ASP.Net
+- [Active Server Pages](http://www.asp.net/web-pages) 
+- Relies on the Microsoft .Net Framework
+- [Recently Became Open Source!](https://github.com/aspnet)
+
+???
+
+# About ASP.Net
+- Made by Microsoft
+- Much of ASP.Net is Open Source 
+-- The Project list is five pages long on GitHub!
+- Server side
+- ASP code is typically C# or Visual Basic.Net
+    - If you don't have a preference, use C# to Avoids mixing ; and non-;
+
+---
+
+# Terminology: Model View Controller
+- Web framework for ASP.Net
+- [Made by Microsoft](http://www.asp.net/mvc), [Licensed under Apache 2.0 License](https://github.com/aspnet/Mvc/blob/dev/LICENSE.txt)
+- MVC is made up of:
+ - Models (typically using [Entity Framework](http://www.asp.net/entity-framework))
+ - ViewModels (simple class objects)
+ - Views (using [Razor](https://github.com/aspnet/Razor))
+ - Controllers 
+
+???
+
+# About MVC
+- MVC is somewhat new, and pretty great.
+- Sometimes MVVC (Model ViewModel View Controller)
+- MVC is equivalent to Rails, Django, 
+- Microsoft has been incrementally releasing parts of MVC as Open Source (Your Mileage May Vary)
+- EF and Razor are open source and on GitHub
+
+---
+
+# Terminology: Model View Controller
+- MVC is to Asp.Net as:
+ - Ruby to Rails
+ - Django to Python
+- Razor is to ASP.Net as:
+ - ASP Web Forms are to ASP.Net
+ - Django Views are to Python
+ - Jinja is to Python
+ - JSP is to Java
+- Entity Framework is to ASP.Net as:
+ - dbi is to Perl
+ - SQLAlchemy is to Python 
+ - DjangoORM is to Python
+
+???
+# About Razor
+- You need a view rendering engine. Razor is one.
+- This presenation is not about Razor
+- This presnetation will have Razor code.
+
+# About Entity Framework
+- Is an ORM (Object Relational Mapping)
+- This presenation is not about Entity Framework
+- You do not need an ORM, but they can be nice.
+- Allows Code-First or Database-First generation. Make one, generate the other.
+- No EF code in these slides.
+- EF is cool, but we only have so much time.
 
 ---
 
@@ -132,25 +213,6 @@ SPA
 
 ---
 
-# Terminology: ASP.Net
-- [Active Server Pages](http://www.asp.net/web-pages) 
-- Relies on the Microsoft .Net Framework
-- [Recently Became Open Source!](https://github.com/aspnet)
-
-???
-
-# About ASP.Net
-- Made by Microsoft
-- Much of ASP.Net is Open Source 
--- The Project list is five pages long on GitHub!
-- Server side
-- ASP code is typically C# or Visual Basic.Net
-    - C# is C++ that looks and tastes like Java
-    - If you don't have a preference, use C#.
-    - Avoids mixing ; and non-;
-    - Opinion: All great VB features are also in C#.
-
----
 
 # Terminology: Visual Studio, NuGet
 - Visual Studio Professional 2015
@@ -158,6 +220,10 @@ SPA
 - [NuGet Gallery](https://www.nuget.org/packages)
 
 ???
+
+# Visual Studio Professional
+- Still pretty great.
+- Worth the price
 
 # About Visual Studio Code
 - Made by Microsoft
@@ -183,35 +249,6 @@ SPA
 
 ---
 
-# Terminology: Model View Controller
-- Web framework for Asp.Net
-- [Made by Microsoft](http://www.asp.net/mvc), [Licensed under Apache 2.0 License](https://github.com/aspnet/Mvc/blob/dev/LICENSE.txt)
-- MVC is to Asp.Net as:
- - Ruby to Rails
- - Django to Python
-- MVC is often used with Microsoft's [Entity Framework](http://www.asp.net/entity-framework)
-- Entity Framework is to Asp.Net as:
- - dbi is to Perl
- - SQLAlchemy is to Python 
- - DjangoORM is to Python
-
-???
-
-# About MVC
-- MVC is somewhat new, and pretty great.
-- Sometimes MVVC (Model ViewModel View Controller)
-- MVC is equivalent to Rails, Django, 
-- Microsoft has been incrementally releasing parts of MVC as Open Source (Your Mileage May Vary)
-
-
-# About Entity Framework
-- This presenation is not about Entity Framework
-- EF is cool, but we only have so much time.
-- Is an ORM (Object Relational Mapping)
-- Allows Code-First or Database-First generation. Make one, generate the other.
-- Similar to ORM in Django, Rails, SQLAlchemy, Propel, Perl ORM, DbIx
-
----
 
 # Terminology: ReactJs.Net
 - React.Js
@@ -230,19 +267,6 @@ SPA
 # ReactJs.Net 
 - NuGet package for ASP.Net
 
---- 
-# We are going to talk about
-- MVC
-- Razor
-- React.js 
-- Razor again
-
-???
-Lessons I learned:
-- MVC is great.
-- Razor with React.js is nice.
-- Razor without React.js is better.
-- Our sweet spot turned out to be using ideas from React.js without using React.js
 
 --- 
 
