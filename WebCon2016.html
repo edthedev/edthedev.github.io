@@ -284,44 +284,23 @@ SPA
 
 ---
 
-# MVC Code Examples
-<table>
-    <thead>
-    <tr><th style="text-align:left">Component</th><th style="text-align:left">Example Code</th></tr>
-    </thead>
-    <tbody>
-    <tr><td>Web Browser Event &nbsp;</td><td>GET Request / POST Request</td></tr>
-    <tr><td>Router</td><td>RouteConfig.cs</td></tr>
-    <tr><td>Controller</td><td>PaymentsController.cs</td></tr>
-    <tr><td>Model / ViewModel &nbsp;</td><td>PaymentViewModel.cs</td></tr>
-    <tr><td>View</td><td>AddPayment.cshtml / _PaymentTablePartial.cshtml</td></tr>
-    </tbody>
-</table>
+# Code Example Tour as a Stack Trace
+
+1. User does something in the browser.
+2. GET or POST Request is sent.
+3. RouteConfig.cs decides which controller to pass the request to.
+4. PaymentController.cs verifies the request.
+4. PaymentController.cs applies business rules.
+4. PaymentController.cs fetches data.
+4. PaymentController.cs assembles data on a ViewModel.
+4. PaymentController.cs passes the ViewModel to it's favorite Razor Template.
+4. AddPayment.cshtml renders the data from the ViewModel as HTML
 
 ???
-
----
-
-???
-
-
-
---- 
-
-
-# Lessons
-
-- "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
-- Render (most) HTML server side.
-
-???
-
-- URL = URI
-- People like to bookmark things.
-- URL should reflect purpose.
-- New thing? New purpose? New URL.
-- Redirects are a thing. Use them.
-- Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
+- Version using React might use mostly React.js JSX for that last step.
+- An SPA might do this several times per page view - getting little bits at a time.
+- Keep controllers light by building code logic modules.
+- Most code, and unit tests are outside MVC in ordinary modules called by the controller in step 5.
 
 ---
 
@@ -416,6 +395,10 @@ public class SensibleNameController : Controller {
 - Change controller name without changing URL.
 - Better! - Change URL without renaming controller.
 - Bonus - Keep your sanity by keeping your routes next to your controllers.
+
+---
+
+# Trivial Controller
 
 ---
 
@@ -971,6 +954,21 @@ More misc notes:
 - Razor Partials can replace many React.js use cases.
 - jQuery Unobtrusive Validation is terrific.
 - ...whether you use Microsoft stack or not!
+- Render (most) HTML server side.
+
+- "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
+
+???
+
+- URL = URI
+- People like to bookmark things.
+- URL should reflect purpose.
+- New thing? New purpose? New URL.
+- Redirects are a thing. Use them.
+- Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
+
+---
+
 
 ---
 # Microsoft Resources
