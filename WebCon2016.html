@@ -410,7 +410,8 @@ public class SensibleNameController : Controller {
 ---
 
 # Trivial Controller Method
-```
+
+```CSharp
 public ActionResult Contact() {
     ViewBag.Message = "Your contact page.";
     return View();
@@ -418,7 +419,7 @@ public ActionResult Contact() {
 ```
 
 # Typical Controller Method
-```
+```CSharp
     [HttpGet]
     [AllowAnonymous]
     [Route("/Property/{id}")]
@@ -547,56 +548,57 @@ MVC can generate a decent list table from a ViewModel.
         }
     </table>
 
-    ```
-    ]
+```
+]
 
-    ???
+???
 
-    - This is great. We love it.
-    - Layout = null tells Razor not to add header/footer
+- This is great. We love it.
+- Layout = null tells Razor not to add header/footer
 
-    ---
+---
 
-    # _PartialTable.cshtml
+# _PartialTable.cshtml
 
-    ![Rate Table Parial](static/img/webcon2016/ratepartial.png)
+![Rate Table Parial](static/img/webcon2016/ratepartial.png)
 
-    ???
+???
 
-    - We added CSS for Bold first row.
+- We added CSS for Bold first row.
 
-    ---
+---
 
-    # Include _PartialTable.cshtml in another page.
+# Include _PartialTable.cshtml in another page.
 
-    Assuming the ratepartial is served at /Home/_RateTable, we can embed it in another page with:
-    ```Razor
-    <div id="rateList">
-        @Html.RenderAction("_RateTable", "Home")
-    </div>
-    ```
-    And then refresh it on the client side later with:
-    ```JavaScript
-    $.ajax({
-    url: "/Home/_RateTable"
-    method: "GET",
-    contentType: 'application/json',
-    success: function (data, status, xhr) {
-    $("#rateList").html(data);
-    }
-    });
-    ```
+Assuming the ratepartial is served at /Home/_RateTable, we can embed it in another page with:
 
-    ???
+```Razor
+<div id="rateList">
+	@Html.RenderAction("_RateTable", "Home")
+</div>
+```
+And then refresh it on the client side later with:
+```JavaScript
+$.ajax({
+	url: "/Home/_RateTable"
+	method: "GET",
+	contentType: 'application/json',
+	success: function (data, status, xhr) {
+		$("#rateList").html(data);
+	}
+});
+```
+
+???
 
     - id allows jQuery to find it.
     - First part does the server side render.
     - Second part allows client side updates without reloading the entire page.
 
-    ---
+---
 
-    # JavaScript Object Pattern
-    ```JavaScript
+# JavaScript Object Pattern
+```JavaScript
     var AddressHelper = {
     FormId: "AddressForm",
     ListId: "AddressList",
@@ -604,13 +606,13 @@ MVC can generate a decent list table from a ViewModel.
     $.post("/api/property", function(data) { $("#" + AddressHelper.ListId).html(data); } )
     },
     setup: function () {
-    $("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
+		$("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
     }
-    }
-    AddressHelper.setup();
-    ```
+}
+AddressHelper.setup();
+```
 
-    ???
+???
     - Most JavaScript patterns suck.
     - Globals are bad, except when they are well named, and used only on a page or two.
     - This looks a lot like a React component, but is just a JavaScript object.
@@ -618,11 +620,11 @@ MVC can generate a decent list table from a ViewModel.
     - Since it is JavaScript, it is also very flexible.
     - You could replace the FormId or ListId or even the functions in realtime, if needed.
 
-    ---
+---
 
-    # JavaScript Bundling
+# JavaScript Bundling
 
-    ```CSharp
+```CSharp
     public static void RegisterBundles(BundleCollection bundles) {
     bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
     "~/Scripts/jquery-{version}.js",
@@ -630,31 +632,34 @@ MVC can generate a decent list table from a ViewModel.
     }
     ```
 
-    ???
+???
 
-    Notice
+Notice
     - JavaScript Bundles are minified when the debug flag is removed from web.config.
     - There are many nice ways to remove debug from web.config during your publish step.
     - Bundle has no extension
 
-    Tips
+Tips
     - Use more than one bundle.
     - Organize your bundles by types of pages you want to serve them on.
     - User authorization level (public, registered, admin) is a good starting point.
-    # Razor Edit Partial
 
-    ![Rate Edit Form Parital](static/img/webcon2016/addEditViewModelPartial.png)
+---
 
-    ???
+# Razor Edit Partial
+
+![Rate Edit Form Parital](static/img/webcon2016/addEditViewModelPartial.png)
+
+???
 
     - TODO: Capture a screenshot of the form while on the work network.
     - TODO: Capture the generated HTML while on work network.
 
-    ---
+---
 
-    # Razor Edit Partial
+# Razor Edit Partial
 
-    ```CSharp
+```CSharp
     @model RateCompareWeb.ViewModels.RateViewModel
 
 
@@ -676,27 +681,28 @@ MVC can generate a decent list table from a ViewModel.
             <input type="submit" value="Save" class="btn btn-default" />
         </div>
     </div>
-    }
+}
 
     <div> @Html.ActionLink("Back to List", "Index") </div>
-    ```
+```
 
-    ???
+???
+
     - Same basic steps to generate an HTML form and post it.
     - When you generate a form from a ViewModel, Microsoft Unobtrusive Validation (Open Source JavaScript library for client side validation) is included by default.
     - You may want to use AJAX to POST the form. You can. It works fine.
 
-    ---
+---
 
     # Razor Edit Partial
 
     ![Edit Form Parital](static/img/webcon2016/editrate.png)
 
-    ---
+---
 
-    # Razor Edit Partial HTML
+# Razor Edit Partial HTML
 
-    ```HTML
+```HTML
     <form action="/" method="post" novalidate="novalidate">
         <input name="__RequestVerificationToken" type="hidden" value="TLeX43jnhexgznkhND0hD8aPJPfMTKomWnp1juSDchb6AFp66AuULNMlFJKTsOovQhvDPA2pErjjh-aAIcAWznX1MVnNP-06Dx5MX6gsdno1">    <div class="form-horizontal">
             <h4>Add a Rate</h4>
@@ -719,9 +725,9 @@ MVC can generate a decent list table from a ViewModel.
     <script src="/Scripts/jquery-1.10.2.js"></script>
     <script src="/Scripts/jquery.validate.js"></script>
     <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
-    ```
+```
 
-    ???
+???
 
     Quick Tour
     - Razor creates HTML and JavaScript
