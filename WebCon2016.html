@@ -22,11 +22,14 @@
 		  background-image: url("static/img/webcon2016/slidebg.jpg");
 	  }
 	  img {
-		  height:200px;
 		  float:right;
 		  border-radius:22px;
 	  }
 	  img.little {
+		  height:200px;
+	  }
+	  img.capture {
+		  border-radius:1px;
 	  }
 	  img.stretch {
 		  width:45%;
@@ -531,7 +534,7 @@ namespace RateCompareWeb.ViewModels {
 
 # Typical ViewModel
 
-![Rate Table Parial](static/img/webcon2016/ratepartial.png)
+<img src='static/img/webcon2016/ratepartial.png' class=''/>
 
 ???
 - Display Attributes cause labels.
@@ -541,12 +544,12 @@ namespace RateCompareWeb.ViewModels {
 # Generate a List Partial
 
 MVC can generate a decent list table from a ViewModel.
-![Rate Table Parial](static/img/webcon2016/addview.png)
+<img src='static/img/webcon2016/addview.png' class=''/>
 
 ---
 
 # Generate a List Partial
-![Rate Table Parial](static/img/webcon2016/addListViewModelPartial.png)
+<img src='static/img/webcon2016/addListViewModelPartial.png' class='capture'/>
 
 ---
 
@@ -554,7 +557,6 @@ MVC can generate a decent list table from a ViewModel.
 
 .small[
 ```CSharp
-
 @model IEnumerable<RateCompareWeb.ViewModels.RateViewModel>
     @{
     Layout = null;
@@ -674,7 +676,7 @@ Tips
 
 # Razor Edit Partial
 
-![Rate Edit Form Parital](static/img/webcon2016/addEditViewModelPartial.png)
+<img src='static/img/webcon2016/addEditViewModelPartial.png' class='capture'/>
 
 ???
 
