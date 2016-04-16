@@ -25,6 +25,9 @@
 		  float:right;
 		  border-radius:22px;
 	  }
+	  img.left {
+		  float:left;
+	  }
 	  img.little {
 		  height:200px;
 	  }
@@ -943,6 +946,8 @@ public class PaymentViewModel {
     );
 ```
 
+<img class='stretch left little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
+
 ???
 
     - ActionList.setState calls ActionList.render.
@@ -1005,6 +1010,7 @@ Reload the partial with JQuery.
     $("#PropertyList").html(html);
     }
 ```
+<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
 
 ???
 
@@ -1041,6 +1047,55 @@ More misc notes:
 - ...whether you use Microsoft stack or not!
 - Render (most) HTML server side.
 
+
+<img class='left stretch little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
+<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
+???
+
+    - ActionList.setState calls ActionList.render.
+    - Multiple calls to setState will render only once.
+
+---
+
+# ReactComponent.jsx - JSX Example
+```JSX
+    var ActionList = React.createClass({
+    getInitialState: function() {
+    return {actions: []};
+    },
+    refresh: function() {
+    $.get(this.props.url, function (data) {
+    this.setState(data);
+    }.bind(this));
+    }.bind(this),
+    render: function()
+    {
+    actions = this.state.actions.map(function (item) {
+    return (
+    <Action ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
+    );
+    }.bind(this));
+    return (
+    <table className="table">
+        <thead>
+        <th>{this.props.title}</th>
+        </thead>
+        <tbody>
+            {actions}
+        </tbody>
+    </table>
+    );
+    }
+    });
+    ```
+
+???
+    Cool stuff
+    - React components can be Composed of other React components.
+    - props are set in the HTML attributes
+    - state is set at runtime
+    Weird stuff
+    - Put each JSX file into both React
 
 ???
 - "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
