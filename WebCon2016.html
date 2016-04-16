@@ -476,12 +476,15 @@ public ActionResult Contact() {
 
 ```CSharp
 namespace RateCompareWeb.ViewModels {
-public class RateViewModel {
-public string Provider { get; set; }
-public decimal? Rate { get; set; }
-public decimal EstimatedValue { get; set; }
-public decimal OurAdvantage { get; set; }
-}
+
+	public class RateViewModel {
+
+		public string Provider { get; set; }
+		public decimal? Rate { get; set; }
+		public decimal EstimatedValue { get; set; }
+		public decimal OurAdvantage { get; set; }
+
+	}
 }
 ```
 
@@ -497,22 +500,24 @@ public decimal OurAdvantage { get; set; }
 
 ```CSharp
 namespace RateCompareWeb.ViewModels {
-public class RateViewModel {
-public string Provider { get; set; }
 
-[Display(Name = "Rate")]
-public decimal? RateAPY { get; set; }
+	public class RateViewModel {
+		public string Provider { get; set; }
 
-[Display(Name = "Estimated Value")]
-[DataType(DataType.Currency)]
-[DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
-public decimal EstimatedValue { get; set; }
+		[Display(Name = "Rate")]
+		public decimal? RateAPY { get; set; }
 
-[Display(Name = "Our Advantage")]
-[DataType(DataType.Currency)]
-[DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
-public decimal OurAdvantage { get; set; }
-}
+		[Display(Name = "Estimated Value")]
+		[DataType(DataType.Currency)]
+		[DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
+		public decimal EstimatedValue { get; set; }
+
+		[Display(Name = "Our Advantage")]
+		[DataType(DataType.Currency)]
+		[DisplayFormat(DataFormatString = "{0:C}", ApplyFormatInEditMode = true)]
+		public decimal OurAdvantage { get; set; }
+
+	}
 }
 ```
 
