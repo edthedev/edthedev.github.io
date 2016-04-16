@@ -769,11 +769,11 @@ Tips
 
     HIGHLIGHT THE UNOBTRUSIVE BEFORE SWITCHING SLIDES.
 
-    ---
+---
 
-    # Unobtrusive Validation Up Close
+# Unobtrusive Validation Up Close
 
-    ```HTML
+```HTML
     <input class="form-control text-box single-line input-validation-error"
            data-val="true"
            data-val-number="The field APY must be a number."
@@ -787,40 +787,44 @@ Tips
         <span for="Rate"
               class="">The field APY must be a number.</span>
     </span>
-    ```
+```
 
-    ???
+???
 
     - Unobtrusive Validaiton is Declarative
     - JS library reads the data- attributes, and binds itself to the JS events (change, click, submit)
 
     HOW DID RAZOR KNOW TO ADD THIS VALIDATION?
 
-    ---
+---
 
-    # Validation Attribute
+# Validation Attribute
 
-    ```CSharp
-    public class PaymentViewModel {
+```CSharp
+public class PaymentViewModel {
+
     [Display(Name = "Payment Amount")]
-    [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:F2}")]
-    [Required(ErrorMessage = "Please supply a {0}.")]
+	[DisplayFormat(
+		ApplyFormatInEditMode = true, 
+		DataFormatString = "{0:F2}")]
     [DataType(DataType.Currency)]
+    [Required(ErrorMessage = "Please supply a {0}.")]
     public decimal Amount { get; set; }
     // ...
-    }
-    ```
+}
+```
 
-    ???
+???
+	- This is a single Getter/Setter
     - Validation Attribute examples
     - Required attribute
     - Data type
     - Client and server side validation is applied.
     - Most are server side, some are client side, some both.
 
-    ---
+---
 
-    # Microsoft Unobtrusive Validation
+# Microsoft Unobtrusive Validation
     Is:
     - JavaScript
     - [Open Source](https://github.com/aspnet/jquery-ajax-unobtrusive/blob/master/LICENSE.txt)
@@ -828,7 +832,7 @@ Tips
     - Useful without ASP.Net or Razor
     - Declarative, like HTML5
 
-    ???
+???
     - Razor will generate the markup and include the .js reference for you.
     - No server side needed
     - Apache 2 License
@@ -836,10 +840,10 @@ Tips
     - Try it with Django, Rails, WordPress, Drupal or Node.js
     - Available in NuGet and Bower
 
-    ---
-    # Microsoft Unobtrusive Validation
+---
+# Microsoft Unobtrusive Validation
 
-    ```HTML
+```HTML
     <input id="ZipCode" name="ZipCode" type="text" value="" maxlength="10"
            data-val="true"
            data-val-required="A Postal Code is required."
@@ -848,17 +852,17 @@ Tips
            data-val-length-min="5"
            data-val-regex="The Postal Code is not formatted properly."
            data-val-regex-pattern="^\d{5}(-?(\d{4}))?$">
-    ```
+```
 
-    ???
+???
     - Razor can generate data-val-* or you can write it.
     - Notice that we have three built-in validators here:
     - required, length, regex
 
-    ---
+---
     # Microsoft Unobtrusive Validation - jQuery Validators
-    [JQuery Validation](https://github.com/jzaefferer/jquery-validation/) Example
-    ```JavaScript
+[JQuery Validation](https://github.com/jzaefferer/jquery-validation/) Example
+```JavaScript
     $.validator.addMethod("validatezipcode",
     function (value, element, param) {
     if (!(new RegExp(/^\d{5}(-?\d{4})?$/)).test(value))
@@ -869,35 +873,36 @@ Tips
     }
     );
     jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
-    ```
+```
 
-    ```HTML
+```HTML
     <input id="search_zip"
            data-val="true"
            data-val-validatezipcode="Enter 5 or 9 digits of the Postal Code." />
-    ```
-    ???
+```
+
+???
     - Unobtrusive validators are jQuery validation validators
     - $.validator.addMethod
     - jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 
-    ---
-    # Using Unobtrusive with React.js and other Dynamic Page Content
-    ```JavaScript
+---
+# Using Unobtrusive with React.js and other Dynamic Page Content
+```JavaScript
     $.validator.unobtrusive.parse("#EditForm");
-    ```
+```
 
-    ???
+???
     - Unobtrusive will parse the page once when the library loads.
     - If scripts dynamically add or remove data-val-* attributes, use this snippet after.
     - Note that React.JS continuously rewrites the page to save memory.
     - You may need this snippet in .render for certain React.JS components that use unobtrusive validation.
 
-    ---
+---
 
-    # Submit Form with AJAX
+# Submit Form with AJAX
 
-    ```JavaScript
+```JavaScript
     $("#editForm").on("submit", function (event) {
     // Prevent HTML POST
     if(event) event.preventDefault();
@@ -912,9 +917,9 @@ Tips
     $("#result").html(post_response);
     });
     });
-    ````
+````
 
-    ???
+???
     - Bind to JavaScript submit event - captures submit button, Enter key, other JavaScript posting the form.
     - Prevent page reload.
     - Test in Firefox - it works, but it can be sensitive.
@@ -924,29 +929,29 @@ Tips
     - jQuery .html to paste the response HTML right into our output status field.
     - Whole update without a page reload.
 
-    ---
-    # JSX Example
+---
+# JSX Example
 
-    ```HTML
+```HTML
     <h2>Do These Today</h2>
     <div id='todayActions' />
-    ```
-    ```JS
+```
+```JS
     React.render(
     <ActionList title="Today's Actions" api="api/actions/today" />
     ,document.getElementById('ActionList')
     );
-    ```
+```
 
-    ???
+???
 
     - ActionList.setState calls ActionList.render.
     - Multiple calls to setState will render only once.
 
-    ---
+---
 
-    # ReactComponent.jsx - JSX Example
-    ```JSX
+# ReactComponent.jsx - JSX Example
+```JSX
     var ActionList = React.createClass({
     getInitialState: function() {
     return {actions: []};
@@ -977,7 +982,7 @@ Tips
     });
     ```
 
-    ???
+???
     Cool stuff
     - React components can be Composed of other React components.
     - props are set in the HTML attributes
@@ -991,17 +996,17 @@ Tips
     - ReactJS.Net will call render and getInitialState sever side.
     - Keep render and getInitialState as empty as you can.
 
-    ---
+---
 
-    # Alternative to JSX
-    Reload the partial with JQuery.
-    ```JavaScript
+# Alternative to JSX
+Reload the partial with JQuery.
+```JavaScript
     $.get("/PropertyManager/_PropertyList", function (html) {
     $("#PropertyList").html(html);
     }
-    ```
+```
 
-    ???
+???
 
     - Rendering stays server side.
     - Still avoids page reload.
@@ -1010,7 +1015,7 @@ Tips
     - No surprises during Server side pre-render, as with JSX.
     - Benefits fully from ViewModel Attributes and ViewBag
 
-    More misc notes:
+More misc notes:
     # ViewModel.cs
     # View.cs
     # _PartialView.cs
@@ -1026,19 +1031,19 @@ Tips
     - Tell your paranoid friends they can turn it back on.
     - Tell them to update their browser first.
 
-    ---
-    # Conclusions
-    - Build common needs fast in ASP.Net MVC.
-    - ...even if you want Single Page Application!
-    - React.js integration with MVC is good.
-    - Razor Partials can replace many React.js use cases.
-    - jQuery Unobtrusive Validation is terrific.
-    - ...whether you use Microsoft stack or not!
-    - Render (most) HTML server side.
+---
+# Conclusions
+- Build common needs fast in ASP.Net MVC.
+- ...even if you want Single Page Application!
+- React.js integration with MVC is good.
+- Razor Partials can replace many React.js use cases.
+- jQuery Unobtrusive Validation is terrific.
+- ...whether you use Microsoft stack or not!
+- Render (most) HTML server side.
 
-    - "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
 
-    ???
+???
+- "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
 
     - URL = URI
     - People like to bookmark things.
@@ -1047,32 +1052,29 @@ Tips
     - Redirects are a thing. Use them.
     - Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
 
-    ---
-
-
-    ---
-    # Microsoft Resources
+---
+# Microsoft Resources
     - [Microsoft Resources for SPA](http://www.asp.net/single-page-application)
     - [ASP.Net](http://www.asp.net/web-pages) [which is Open Source](https://github.com/aspnet)
     - [Model View Controller](http://www.asp.net/mvc)
     - [NuGet Gallery](https://www.nuget.org/packages)
     - [Entity Framework](http://www.asp.net/entity-framework)
 
-    # JavaScript Resources
+# JavaScript Resources
     - [JQuery Validation](https://github.com/jzaefferer/jquery-validation/)
     - [Unobtrusive Validation](https://github.com/aspnet/jquery-ajax-unobtrusive)
 
-    ---
+---
 
-    # About Us
-    - Contact Info: [Edward.Delaporte@Busey.com](mailto:edward.delaporte@busey.com)
-    - Download Slides: http://edward.delaporte.us/WebCon2016.html
+# About Us
+- Contact Info: [Edward.Delaporte@Busey.com](mailto:edward.delaporte@busey.com)
+- Download Slides: http://edward.delaporte.us/WebCon2016.html
 
-    ???
+???
 
-    - [JavaScript Slide Deck with ReMark](https://gnab.github.io/remark)
+- [JavaScript Slide Deck with ReMark](https://gnab.github.io/remark)
 
-    Add links to Linq, etc.
+Add links to Linq, etc.
 
     Maybe add a link to further reading about Entity Framework and Linq on last page...
     Maybe talk briefly about NuGet and have a screenshot or two...
