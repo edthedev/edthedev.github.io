@@ -15,7 +15,6 @@
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 	  .remark-slide, .remark-slide-container {
-		  background-color: blue;
 		  background-image: url("static/img/webcon2016/slidesidebar.jpg");
 	  }
 	  .remark-slide-content {
@@ -58,6 +57,7 @@ at [University of Illinois WebCon](http://webcon.illinois.edu/) on April 28, 201
 
 # Read Along
 - Visit http://edward.delaporte.us/WebCon2016.html
+- [JavaScript Slide Deck with ReMark](https://gnab.github.io/remark)
 - Background images created with [Aza Raskin's Algorithm Ink](http://azarask.in/projects/algorithm-ink/#b32debe8)
 
 - Press P to see my notes.
@@ -394,9 +394,12 @@ public class PaymentsController : Controller {
 ???
 
 - URLS are determined by controller class names.
-- Great URLs never change.
+- "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
 - Great code changes often.
 - Controller class names should not be tied to routes.
+- New thing? New URL.
+- Redirects are a thing. Use them.
+- Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
 
 ---
 
@@ -934,15 +937,16 @@ public class PaymentViewModel {
 
 ---
 # JSX Example
-
+HTML
 ```HTML
     <h2>Do These Today</h2>
     <div id='todayActions' />
 ```
+JSX
 ```JS
     React.render(
     <ActionList title="Today's Actions" api="api/actions/today" />
-    ,document.getElementById('ActionList')
+    ,document.getElementById('todayActions')
     );
 ```
 
@@ -956,38 +960,37 @@ public class PaymentViewModel {
 ---
 
 # ReactComponent.jsx - JSX Example
+JSX
 ```JSX
-    var ActionList = React.createClass({
+var ActionList = React.createClass({
     getInitialState: function() {
-    return {actions: []};
+		return {actions: []};
     },
-    refresh: function() {
-    $.get(this.props.url, function (data) {
-    this.setState(data);
-    }.bind(this));
-    }.bind(this),
     render: function()
     {
-    actions = this.state.actions.map(function (item) {
-    return (
-    <Action ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
-    );
-    }.bind(this));
-    return (
-    <table className="table">
-        <thead>
-        <th>{this.props.title}</th>
-        </thead>
-        <tbody>
-            {actions}
-        </tbody>
-    </table>
-    );
-    }
-    });
-    ```
+		actions = this.state.actions.map(function (item) {
+			return (
+			<Action ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
+			);
+		}.bind(this));
+		return (
+		<table className="table">
+			<thead>
+			<th>{this.props.title}</th>
+			</thead>
+			<tbody>
+				{actions}
+			</tbody>
+		</table>
+		);
+	}
+});
+```
 
 ???
+- ActionList.setState calls ActionList.render.
+- Multiple calls to setState will render only once.
+
     Cool stuff
     - React components can be Composed of other React components.
     - props are set in the HTML attributes
@@ -1007,7 +1010,7 @@ public class PaymentViewModel {
 Reload the partial with JQuery.
 ```JavaScript
     $.get("/PropertyManager/_PropertyList", function (html) {
-    $("#PropertyList").html(html);
+		$("#PropertyList").html(html);
     }
 ```
 <img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
@@ -1020,22 +1023,6 @@ Reload the partial with JQuery.
     - Eliminates the need to alternate between Razor and JSX for form layout.
     - No surprises during Server side pre-render, as with JSX.
     - Benefits fully from ViewModel Attributes and ViewBag
-
-More misc notes:
-    # ViewModel.cs
-    # View.cs
-    # _PartialView.cs
-    # Scripts/UserExperience.js
-
-    - User experience is important.
-    - User experience belongs as close to the user as possible, so it goes in the JavaScript.
-    - Think of Razor View as Initial View.
-    - JavaScript takes over.
-    - But! Getting it right on the first try still has value.
-    - JavaScript increases accessibility, by improving user experience.
-    - JavaScript is no longer a significant source of vulnerability.
-    - Tell your paranoid friends they can turn it back on.
-    - Tell them to update their browser first.
 
 ---
 # Conclusions
@@ -1050,62 +1037,21 @@ More misc notes:
 
 <img class='left stretch little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
 <img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
-???
-
-    - ActionList.setState calls ActionList.render.
-    - Multiple calls to setState will render only once.
-
----
-
-# ReactComponent.jsx - JSX Example
-```JSX
-    var ActionList = React.createClass({
-    getInitialState: function() {
-    return {actions: []};
-    },
-    refresh: function() {
-    $.get(this.props.url, function (data) {
-    this.setState(data);
-    }.bind(this));
-    }.bind(this),
-    render: function()
-    {
-    actions = this.state.actions.map(function (item) {
-    return (
-    <Action ref_parent={this.refresh} id={item.id} key={item.id} data={item} />
-    );
-    }.bind(this));
-    return (
-    <table className="table">
-        <thead>
-        <th>{this.props.title}</th>
-        </thead>
-        <tbody>
-            {actions}
-        </tbody>
-    </table>
-    );
-    }
-    });
-    ```
 
 ???
-    Cool stuff
-    - React components can be Composed of other React components.
-    - props are set in the HTML attributes
-    - state is set at runtime
-    Weird stuff
-    - Put each JSX file into both React
 
-???
-- "Cool URIs don't change." (Tim Berner's Lee, _Weaving the Web_, 1999)
+# Conclusion notes
+- User experience is important.
+- User experience belongs as close to the user as possible, so it goes in the JavaScript.
+- Think of Razor View as Initial View.
+- JavaScript takes over.
+- But! Getting it right on the first try still has value.
 
-    - URL = URI
-    - People like to bookmark things.
-    - URL should reflect purpose.
-    - New thing? New purpose? New URL.
-    - Redirects are a thing. Use them.
-    - Online article: [W3.org Style Guide - Cool URIs don't change](https://www.w3.org/Provider/Style/URI.html)
+# Random thoughts On JavaScript
+- JavaScript increases accessibility, by improving user experience.
+- JavaScript is no longer a significant source of vulnerability.
+- Tell your paranoid friends they can turn it back on.
+- Tell them to update their browser first.
 
 ---
 # Microsoft Resources
@@ -1114,10 +1060,15 @@ More misc notes:
     - [Model View Controller](http://www.asp.net/mvc)
     - [NuGet Gallery](https://www.nuget.org/packages)
     - [Entity Framework](http://www.asp.net/entity-framework)
+	- [LINQ](https://msdn.microsoft.com/en-us/library/bb397926.aspx)
 
 # JavaScript Resources
     - [JQuery Validation](https://github.com/jzaefferer/jquery-validation/)
     - [Unobtrusive Validation](https://github.com/aspnet/jquery-ajax-unobtrusive)
+
+???
+
+- No room for Linq in this presenation. It is a query builder language that works with EDMX and other data stores.
 
 ---
 
@@ -1126,13 +1077,6 @@ More misc notes:
 - Download Slides: http://edward.delaporte.us/WebCon2016.html
 
 ???
-
-- [JavaScript Slide Deck with ReMark](https://gnab.github.io/remark)
-
-Add links to Linq, etc.
-
-    Maybe add a link to further reading about Entity Framework and Linq on last page...
-    Maybe talk briefly about NuGet and have a screenshot or two...
 
 </textarea>
     <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
