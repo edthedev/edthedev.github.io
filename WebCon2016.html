@@ -737,12 +737,28 @@ About the generated Razor form
     - LabelFor - Gets text from the Display attribute from the ViewModel. Does not presently add ARIA accessibilty markup, but you can do by hand in the htmlAttributes.
     - submit - You get a normal submit buton. Unobtrusive has attached it's validation events for field.blur() and form.submit()
     - You may want to use AJAX to POST the form. You can. It works fine.
+    - You can mix freeform HTML in with Razor as needed. It works fine.
 
 ---
 
 # Razor Edit Partial
 
 ![Edit Form Parital](static/img/webcon2016/editrate.png)
+
+???
+
+- Notice the label text was not in the Razor. It is instead coming from the View Model.
+    -  This lets you change a label in one place, the ViewModel, and have it update in all Add/Edit/List Razor views.
+- String fields became input boxes.
+- Boolean field became a checkbox.
+    - Do not try to implement 'By checking this box I agree...' at the ViewModel level. 
+    - MVC requires false to be a valid option in any boolean field in the ViewModel.
+    - Microsoft's response to 'By checking this box I agree...' is "Stop that, it's silly."
+    - You will need to write a custom validator if you decide to do so anyway.
+- Validation text appears automatically on field.blur and form.submit.
+    - Validation text also comes from the ViewModel attributes, for the same reason as display names do.
+    - You can change validation text in one place and have it apply to all forms.
+
 
 ---
 
