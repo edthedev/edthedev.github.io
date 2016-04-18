@@ -678,13 +678,14 @@ In Views/Shared/_Layout.cshtml
 
 Notice
     - JavaScript Bundles are minified when the debug flag is removed from web.config.
-    - There are many nice ways to remove debug from web.config during your publish step.
+    - Visual Studio removes debug from web.config when you publish in Release configuration.
     - Bundle has no extension
 
 Tips
     - Use more than one bundle.
     - Organize your bundles by types of pages you want to serve them on.
-    - User authorization level (public, registered, admin) is a good starting point.
+    - User authorization level (i.e. public, registered, admin) 
+            may be a good starting point for dividing up your JavaScript bundles.
 
 ---
 
@@ -694,8 +695,7 @@ Tips
 
 ???
 
-    - TODO: Capture a screenshot of the form while on the work network.
-    - TODO: Capture the generated HTML while on work network.
+- Visual Studio can generate a decent Edit Partial with Bootstrap already included.
 
 ---
 
@@ -730,8 +730,12 @@ Tips
 
 ???
 
-    - Same basic steps to generate an HTML form and post it.
-    - When you generate a form from a ViewModel, Microsoft Unobtrusive Validation (Open Source JavaScript library for client side validation) is included by default.
+About the generated Razor form
+    - class="col-md-10" - Bootstrap responsive column hints are included by default.
+        - Maybe demo a responsive MVC form here?
+    - ValidationSummary / ValidationMessageFor - Microsoft Unobtrusive Validation (Open Source JavaScript library for client side validation) is included by default.
+    - LabelFor - Gets text from the Display attribute from the ViewModel. Does not presently add ARIA accessibilty markup, but you can do by hand in the htmlAttributes.
+    - submit - You get a normal submit buton. Unobtrusive has attached it's validation events for field.blur() and form.submit()
     - You may want to use AJAX to POST the form. You can. It works fine.
 
 ---
