@@ -633,11 +633,13 @@ $.ajax({
 
 # JavaScript Object Pattern
 ```JavaScript
-    var AddressHelper = {
+var AddressHelper = {
     FormId: "AddressForm",
     ListId: "AddressList",
     add: function() {
-    $.post("/api/property", function(data) { $("#" + AddressHelper.ListId).html(data); } )
+        $.post("/api/property", function(data) { 
+            $("#" + AddressHelper.ListId).html(data); 
+        } )
     },
     setup: function () {
 		$("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
@@ -658,13 +660,19 @@ AddressHelper.setup();
 
 # JavaScript Bundling
 
+In App_Start/BundleConfig.cs
 ```CSharp
-    public static void RegisterBundles(BundleCollection bundles) {
+public static void RegisterBundles(BundleCollection bundles) {
+
     bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
     "~/Scripts/jquery-{version}.js",
     "~/Scripts/jquery-ui-{version}.js"));
-    }
-    ```
+}
+```
+In Views/Shared/_Layout.cshtml
+```Razor
+    @Scripts.Render("~/bundles/jquery")
+```
 
 ???
 
