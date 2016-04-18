@@ -896,16 +896,15 @@ public class PaymentViewModel {
 # Microsoft Unobtrusive Validation - jQuery Validators
 [JQuery Validation](https://github.com/jzaefferer/jquery-validation/) Example
 ```JavaScript
-    $.validator.addMethod("validatezipcode",
+$.validator.addMethod("validatezipcode",
     function (value, element, param) {
-    if (!(new RegExp(/^\d{5}(-?\d{4})?$/)).test(value))
-    {
-    return false;
+    if (!(new RegExp(/^\d{5}(-?\d{4})?$/)).test(value)) {
+        return false;
     }
     return true;
     }
-    );
-    jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
+);
+jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 ```
 
 ```HTML
@@ -936,20 +935,24 @@ public class PaymentViewModel {
 # Submit Form with AJAX
 
 ```JavaScript
-    $("#editForm").on("submit", function (event) {
-    // Prevent HTML POST
+$("#editForm").on("submit", function (event) {
+    // Prevent full page HTTP submit.
     if(event) event.preventDefault();
-    // Get values from form
+    
+    // Gather field data.
     fields = {};
     $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
-    fields[item.id] = item.value;
+        fields[item.id] = item.value;
     });
+
     // ... Do clever user-friendly things here...
+
     // Submit AJAX POST
     $.post("api/thing/", fields, function ( post_response, status ) {
-    $("#result").html(post_response);
+        $("#result").html(post_response);
+        // ... Do more clever user-friendly things here...
     });
-    });
+});
 ````
 
 ???
@@ -961,6 +964,7 @@ public class PaymentViewModel {
     - jQuery .post to submit the form.
     - jQuery .html to paste the response HTML right into our output status field.
     - Whole update without a page reload.
+    - Clever things such as showing and hiding a spinner.
 
 ---
 # JSX Example
