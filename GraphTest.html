@@ -1,8 +1,9 @@
 ﻿Using:
 https://bramp.github.io/js-sequence-diagrams/
 
-GET->RouteConfig.cs: /Receipt/1400
-Note right of RouteConfig.cs: Call matching method.
-RouteConfig.cs->Controller: Receipt( 1400 )
-Controller->Database: GetData( 1400 )
-Database->Controller: ReceiptViewModel
+Browser->RouteConfig.cs: GET /Receipt/1400
+RouteConfig.cs->Controller: call Receipt( webRequest, id = 1400 )
+Controller->Data Service: GetReceiptViewModel( id = 1400 )
+Data Service->Controller: return new ReceiptViewModel vm
+Controller->Razor: View( vm )
+Razor->Browser: 200 OK w/ HTML
