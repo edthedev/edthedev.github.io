@@ -136,6 +136,9 @@
     <None Include="static\bootstrap\LICENSE" />
     <None Include="static\bootstrap\package.json" />
     <None Include="static\bootstrap\README.md" />
+    <None Include="static\cytoscape\cytoscape.js.map" />
+    <None Include="static\cytoscape\cytoscape.min.js.map" />
+    <None Include="static\cytoscape\LICENSE" />
     <None Include="static\img\fish\bigPuff.xcf" />
     <None Include="static\img\fish\bigToothL.xcf" />
     <None Include="static\img\fish\bubbleMan.xcf" />
@@ -171,7 +174,10 @@
     <None Include="static\strapdown\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GraphTest.html" />
     <Content Include="resume.html" />
+    <Content Include="static\cytoscape\cytoscape.js" />
+    <Content Include="static\cytoscape\cytoscape.min.js" />
     <Content Include="static\img\addEditViewModelPartial.png" />
     <Content Include="static\img\addListViewModelPartial.png" />
     <Content Include="static\img\addview.png" />
