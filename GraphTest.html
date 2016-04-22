@@ -2,9 +2,16 @@
 https://bramp.github.io/js-sequence-diagrams/
 
 Note over Browser: You Are Here
+
+First Image Source:
+participant Browser
+participant RouteConfig.cs
+participant Controller
+participant Razor
+participant Data Service
 Browser->RouteConfig.cs: GET /Receipt/1400
-RouteConfig.cs->Controller: call Receipt( webRequest, id = 1400 )
-Controller->Data Service: GetReceiptViewModel( id = 1400 )
-Data Service->Controller: return new ReceiptViewModel vm
+RouteConfig.cs->Controller: id = 1400
+Controller->Data Service: id = 1400
+Data Service->Controller: ReceiptViewModel vm
 Controller->Razor: View( vm )
-Razor->Browser: 200 OK w/ HTML
+Razor->Browser: 200 OK + HTML
