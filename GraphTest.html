@@ -3,15 +3,26 @@ https://bramp.github.io/js-sequence-diagrams/
 
 Note over Browser: You Are Here
 
-First Image Source:
-participant Browser
-participant RouteConfig.cs
-participant Controller
-participant Razor
-participant Data Service
+Basic MVC GEt
 Browser->RouteConfig.cs: GET /Receipt/1400
 RouteConfig.cs->Controller: id = 1400
 Controller->Data Service: id = 1400
 Data Service->Controller: ReceiptViewModel vm
 Controller->Razor: View( vm )
 Razor->Browser: 200 OK + HTML
+
+
+MVC List Partial
+Browser->RouteConfig.cs: GET /_ReceiptList
+RouteConfig.cs->Controller:
+Controller->Data Service: session_user_id = 7
+Data Service->Controller: IEnumerable<ReceiptViewModel> models
+Controller->Razor: View( models )
+Razor->Browser: 200 OK + HTML
+
+JSON API
+ Browser->RouteConfig.cs: GET /api/receipt/1400
+ RouteConfig.cs->Controller: id = 1400
+ Controller->Data Service: id = 1400
+ Data Service->Controller: ReceiptViewModel vm
+ Controller->Browser: 200 OK + JSON
