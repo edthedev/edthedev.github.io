@@ -26,3 +26,19 @@ JSON API
  Controller->Data Service: id = 1400
  Data Service->Controller: ReceiptViewModel vm
  Controller->Browser: 200 OK + JSON
+
+
+MVC React PreRender:
+ Browser->RouteConfig.cs: GET /api/receipt/1400
+ RouteConfig.cs->Controller: id = 1400
+ Controller->Data Service: id = 1400
+ Data Service->Controller: ReceiptViewModel vm
+ Controller->Browser: 200 OK + JSONV
+
+MVC React after first load:
+     Browser->JSX: Type or Click
+     JSX->Controller: GET /api/receipt/1400
+     Controller->Data Service: id = 1400
+     Data Service->Controller: ReceiptViewModel vm
+     Controller->JSX: 200 OK + JSON
+     JSX->Browser: HTML
