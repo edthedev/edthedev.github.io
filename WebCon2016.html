@@ -997,6 +997,36 @@ $("#editForm").on("submit", function (event) {
     - Clever things such as showing and hiding a spinner.
 
 ---
+
+# React.js JSX - Client Side Render
+<img class='flow' src="static/img/webcon2016/reactClientJsx.svg" />
+
+???
+
+- Browser gets JSON
+- JavaScript library converts JSON into HTML
+- Great for small page updates.
+- Bad for first page load.
+ - Browser sends GET request
+ - Gets JSON data
+ - Gets JSX markup
+ - Gets JavaScript library React.js
+ - Uses JavaScript to generate HTML
+ - Renders the HTML
+- Why not respond with HTML for the first request then?
+
+---
+
+# ReactJs.Net JSX - Server Side Pre-Render
+<img class='flow' src="static/img/webcon2016/mvcReactPreRender.svg" />
+
+???
+- ReactJS.***Net*** is primarily a server side JSX rendering library.
+- ReactJS.Net pre-renders the ViewModel into HTML on the server
+- ...following the JSX rules.
+
+---
+
 # JSX Example
 HTML
 ```HTML
