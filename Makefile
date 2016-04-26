@@ -1,6 +1,9 @@
 open:
 	open index.html
 
+openPres:
+	open WebCon2016.html
+
 openFish: 
 	open fishbowl.html
 

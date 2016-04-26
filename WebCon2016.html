@@ -37,6 +37,11 @@
 		  width:45%;
 		  padding: 10px;
 	  }
+	  img.flow{
+		  width: 100%;
+		  padding: 10px;
+		  background-color: white;
+	  }
     </style>
   </head>
   <body>
@@ -209,6 +214,12 @@ Lessons I learned:
 ---
 
 # Terminology: Model View Controller
+
+<img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+---
+
+# Terminology: Model View Controller
 - MVC is to Asp.Net as:
  - Ruby to Rails
  - Django to Python
@@ -321,7 +332,32 @@ SPA
 
 ---
 
+# GET example.com/Payments/Single
+
+```
+    Request URL: https://example.com/Payments/Single
+    Request Method:GET
+    Status Code:200 OK
+    Remote Address:10.55.36.184:8080
+
+	<html>
+	<p>Hello World!</p>
+	</html>
+```
+<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-56-49 PM.jpg'/>
+
+???
+- Do this lots of times.
+- Plain Text
+- Returned HTML and status code 200 OK
+- Payments/Single
+
+---
+
 # Code Example Tour as a Stack Trace
+<img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+???
 
 1. User does something in the browser.
 2. GET or POST Request is sent.
@@ -333,29 +369,10 @@ SPA
 4. PaymentController.cs passes the ViewModel to it's favorite Razor Template.
 4. AddPayment.cshtml renders the data from the ViewModel as HTML
 
-???
 - Version using React might use mostly React.js JSX for that last step.
 - An SPA might do this several times per page view - getting little bits at a time.
 - Keep controllers light by building code logic modules.
 - Most code, and unit tests are outside MVC in ordinary modules called by the controller in step 5.
-
----
-
-# GET Request
-
-```
-    Request URL: https://example.com/Payments/Single
-    Request Method:GET
-    Status Code:200 OK
-    Remote Address:10.55.36.184:8080
-```
-<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-56-49 PM.jpg'/>
-
-???
-- Reminder / Context
-- Plain Text
-- Returned HTML and status code 200 OK
-- Payments/Single
 
 ---
 
@@ -440,6 +457,19 @@ public class SensibleNameController : Controller {
 ---
 
 # Trivial Controller Method
+<img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+???
+
+- Controller matches incoming URL to a bit of code.
+- Controller calls the data service to fetch data as needed.
+- Data Service returns a ViewModel.
+- Controller passes the ViewModel to the Razor View.
+- Data Service separates the controller from the raw data models.
+
+---
+
+# Trivial Controller Method
 
 ```CSharp
 public ActionResult Contact() {
@@ -478,6 +508,16 @@ public ActionResult Contact() {
 - ViewBag lets you pass data that does not belong in your ViewModel.
  - Whether today is Taco Tuesday has nothing to do with the selected Property Address.
 
+
+---
+
+# Trivial ViewModel
+<img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+???
+
+- ViewModel is returned by the Data Service.
+- ViewModel is passed to Razor
 
 ---
 
@@ -547,14 +587,25 @@ namespace RateCompareWeb.ViewModels {
 
 ---
 
-# Generate a List Partial
+# Razor View
+<img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+???
+
+- Controller passes a ViewModel full of data to the Razor View.
+- Razor View generates HTML, given a ViewModel.
+- Visual Studio can generate typical Create/Read/Update/Delete Razor Views from the ViewModel.
+
+---
+
+# Generate a List Partial Razor View
 
 MVC can generate a decent list table from a ViewModel.
 <img src='static/img/webcon2016/addview.png' class='left'/>
 
 ---
 
-# Generate a List Partial
+# Generate a List Partial Razor View
 <img src='static/img/webcon2016/addListViewModelPartial.png' class='capture left'/>
 
 ---
@@ -589,6 +640,9 @@ MVC can generate a decent list table from a ViewModel.
 
 - This is great. We love it.
 - Layout = null tells Razor not to add header/footer
+- @ sign invokes CSharp code.
+- Do your display work here.
+- You got your data fetching and number crunching done in the controller.
 
 ---
 
