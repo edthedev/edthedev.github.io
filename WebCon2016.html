@@ -803,6 +803,35 @@ About the generated Razor form
 
 ---
 
+# Unobtrusive Validation
+<img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+???
+
+- Unobtrusvie Validation happens at the browser...mostly.
+- Clever JavaScript library reads HTML to do immediate validation.
+- Razor reads Attributes on the ViewModel to add HTML that the JavaScript can read.
+
+---
+
+# Microsoft Unobtrusive Validation
+- JavaScript
+- [Open Source](https://github.com/aspnet/jquery-ajax-unobtrusive/blob/master/LICENSE.txt)
+- [On GitHub](https://github.com/aspnet/jquery-ajax-unobtrusive)
+- Useful without ASP.Net or Razor
+- Declarative, like HTML5
+
+???
+
+- MVC automatically includes the JavaScript library for you.
+- Razor generates the HTML markup for you.
+- Like HTML5 - declares desired outcome, rather than steps.
+- The JavaScript library is open source under the Apache 2 License
+- Available in NuGet and Bower
+- Try it with Django, Rails, WordPress, Drupal or Node.js
+
+---
+
 # Unobtrusive Validation Up Close
 
 ```HTML
@@ -854,22 +883,6 @@ public class PaymentViewModel {
     - Client and server side validation is applied.
     - Most are server side, some are client side, some both.
 
----
-
-# Microsoft Unobtrusive Validation
-- JavaScript
-- [Open Source](https://github.com/aspnet/jquery-ajax-unobtrusive/blob/master/LICENSE.txt)
-- [On GitHub](https://github.com/aspnet/jquery-ajax-unobtrusive)
-- Useful without ASP.Net or Razor
-- Declarative, like HTML5
-
-???
-- Razor will generate the markup and include the .js reference for you.
-- No server side needed
-- Apache 2 License
-- Like HTML5 - declares desired outcome, rather than steps.
-- Try it with Django, Rails, WordPress, Drupal or Node.js
-- Available in NuGet and Bower
 
 ---
 # Microsoft Unobtrusive Validation
