@@ -587,14 +587,16 @@ namespace RateCompareWeb.ViewModels {
 
 ---
 
-# Razor View
-<img class='flow' src="static/img/webcon2016/mvc.svg" />
+# Razor Partial View
+<img class='flow' src="static/img/webcon2016/mvcPartial.svg" />
 
 ???
 
 - Controller passes a ViewModel full of data to the Razor View.
 - Razor View generates HTML, given a ViewModel.
 - Visual Studio can generate typical Create/Read/Update/Delete Razor Views from the ViewModel.
+- Normal view includes Title, header, footer.
+- Partial view includes just content HTML.
 
 ---
 
@@ -940,6 +942,23 @@ jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
     - If scripts dynamically add or remove data-val-* attributes, use this snippet after.
     - Note that React.JS continuously rewrites the page to save memory.
     - You may need this snippet in .render for certain React.JS components that use unobtrusive validation.
+
+---
+
+# Submit Form with POST
+<img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+???
+- Just looking at this one more time before changing it.
+
+---
+
+# Submit Form with AJAX
+<img class='flow' src="static/img/webcon2016/mvc_json.svg" />
+
+???
+- Razor drops out.
+- Controller returns JSON instead of HTML
 
 ---
 
