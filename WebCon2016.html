@@ -74,11 +74,14 @@ Zach
 ---
 
 # Why this presentation, why today?
-### Microsoft Recently open sourced much of ASP.Net
-### React.Js was the newest framework ever, when it released.
+### Microsoft Recently open sourced [much](https://github.com/aspnet) of ASP.Net
+### React.Js was the [newest framework ever](http://www.isaacchansky.me/days-since-last-new-js-framework/), when it released.
 ### Unobtrusive Validation is amazing.
 
 ???
+
+- 5 pages of repositories...
+- Find out days since last JavaScript framework. 10 is the highest I have seen.
 
 - ASP.Net is Active Server Pages (As opposed to static.)
 - ASP.Net is now Open Source and runs, in theory, everywhere. 
@@ -99,47 +102,7 @@ Lessons I learned:
 - Razor without React.js is better.
 - Our sweet spot turned out to be using ideas from React.js without using React.js
 
----
 
-# This presentation will help you:
-- Make a Simple CRUD Application Quickly with ASP.Net MVC
-- Make a Single Page Application (SPA) Quickly with ASP.Net MVC, jQuery and maybe React.js
-- Make a Linux web application using Open Source Microsoft technologies.
-- Improve your PHP Web App
-
-???
-- One of the fast CRUD - Create/Read/Update/Destroy recipes for MVC.
-- We will introduce some techniques used in Single Page Apps.
-- In theory, everything you see here will run on an Apache server.
-    - Possible follow up presentation: "I built a Microsoft App on Linux: Here's What Didn't Work."
-- The last third of this presentation is JavaScript, and will run on any Apache server, even one running PHP.
-
----
-# Quick Poll
-- Raise a hand if the term Model View Controller is already familiar to you.
-<img class='stretch little' src='static/img/gallery/abstract_ipad/11 10-56-31 PM.jpg'/>
-<img class='stretch little' src='static/img/gallery/abstract_ipad/10 10-22-34 PM.jpg'/>
-
-???
-- Jargon Disclaimer
- - As I explain some Jargon, I will use more Jargon. 
- - You don't need to recognize every tool or framework I mention to get value from this talk.
- - Think of the passing references to other tools as landmarks
- - Some veterans will find these landmarks valuable for orientation.
- - But ASP.Net MVC is terrific for beginners and veterans.
- - So try not to worry if you do not recognize some 'this tastes like Perl::DBI type references'.
-
-- How many of you know what the Model View Controller Pattern is?
-- Why MVC?
- - Software development is hard.
- - Everything in life is easier if you make and keep promises to yourself and your team.
-
-- If needed, do a quick run-down of MVC in general, here.
- - All database connections go through the models.
- - All interface elements go in the views.
- - Most logic goes libraries called only by the controllers.
- - Data from models only reaches views through controllers.
- - Data from views only reaches models through controllers.
 
 ???
 
@@ -159,23 +122,38 @@ Lessons I learned:
 - MVC is made up of:
  - Models (connects to your database typically using [Entity Framework](http://www.asp.net/entity-framework))
  - ViewModels (simple class objects)
- - Views (using [Razor](https://github.com/aspnet/Razor))
- - Controllers 
+ - Views (using [Razor](https://github.com/aspnet/Razor) to render HTML)
+ - Controllers (tie everything together)
 <img class='stretch little' src='static/img/gallery/abstract_ipad/11 6-48-14 PM.jpg'/>
 
 ???
 
+# Poll: Who has heard the term MVC?
+    - Skip ahead if most hands raise.
+
 # About MVC
 - MVC is somewhat new, and pretty great.
+- Fast way to do CRUD - Create/Read/Update/Destroy.
 - Sometimes MVVC (Model ViewModel View Controller)
 - Microsoft has been incrementally releasing parts of MVC as Open Source
-- Entity Framework and Razor are open source and on GitHub
+- All database connections go through the models.
+- All interface elements go in the views.
+- Most logic goes libraries called only by the controllers.
+- Data from models only reaches views through controllers.
+- Data from views only reaches models through controllers.
+
+- In theory, everything you see here will run on an Apache server.
+    - Possible follow up presentation: "I built a Microsoft App on Linux: Here's What worked / Didn't Work."
 
 ---
 
 # Picture for Model View Controller
 
 <img class='flow' src="static/img/webcon2016/mvc.svg" />
+
+???
+
+You will see this many times.
 
 ---
 
@@ -194,80 +172,17 @@ Lessons I learned:
  - DjangoORM is to Python
 
 ???
+
+- Jargon as Landmarks - if you don't recognize something, do not fret.
+- But ASP.Net MVC is terrific for beginners and veterans.
+
 # About Razor
 - You need a view rendering engine. Razor is one.
 - This presenation is not about Razor
 - This presnetation will have Razor code.
 
-# About Entity Framework
-- Is an ORM (Object Relational Mapping)
-- This presenation is not about Entity Framework
-- You do not need an ORM, but they can be nice.
-- Allows Code-First or Database-First generation. Make one, generate the other.
-- No EF code in these slides.
-- EF is cool, but we only have so much time.
-
----
-
-# Terminology: Single Page Application (SPA)
-- Examples: Facebook, Google Maps, Twitter
-- Can be Fast
-- Can be Slow
-- Typically better for mobile than non-SPA
-- [Microsoft Resources for SPA](http://www.asp.net/single-page-application)
-<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-25-52 PM.jpg'/>
-
-???
-
-
-SPA
-    - Fast because they only load/reload the content you ask for.
-    - Slow (particularly on small processors) 
-    -- because they often render data to HTML in using browser instead of at the server.
-    - Slow (particularly on devices will small amounts of RAM memory) 
-    -- because they often do not benefit from server side caching.
-    - Fast because user interactions do not wait on network traffic.
-    -- Louie CK says "It's going to SPACE! Could you give it a minute?!"
-    - Many apps are more pleasant as SPA
-    - not every app should be.
-    - There are hybrid approaches.
-
----
-
-
-# Terminology: Visual Studio, NuGet
-- Visual Studio Professional 2015
-- Visual Studio Code
-- [NuGet Gallery](https://www.nuget.org/packages)
-<img class='stretch little' src='static/img/gallery/abstract_ipad/10 12-55-29 AM.jpg'/>
-
-???
-
-# Visual Studio Professional
-- Still pretty great.
-- Worth the price
-
-# About Visual Studio Code
-- Made by Microsoft
-- Free
-- Open Source
-- Works on Windows, Mac, Linux
-- Microsoft's message to Linux developers: We think you will like our stuff.
--- Visual Studio Code Team recently committed to Vim levels of plugin support.
-- Totally Hypothetical situation: 
--- You maintain a .Net API to bridge your Linux web apps to your MS Unified communications system.
--- Visual Studio Code and ASP.Net may simplify your development stack in the future.
-
-# About NuGet Gallery
-- Package manager for Visual Studio Professional
-- .Net Equivalent to
- - CPAN for Perl
- - npm for JavaScript
- - bower for JavaScript
-- Integrates with Visual Studio version control (including Git!)
-- Provides package management with NuGet
-- NuGet is like Bower or NPM
-
+- Entity Framework is a database connector.
+- It's fine, but this presentation is only 50 minutes long.
 
 ---
 
