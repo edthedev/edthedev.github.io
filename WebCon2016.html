@@ -235,7 +235,7 @@ Do Laser Pointer Walkthrough
 ---
 
 
-# RouteConfig.cs
+# Bad RouteConfig.cs
 
 The MVC template comes with a 'RouteConfig.cs' like this:
 .small[
@@ -278,7 +278,7 @@ public class PaymentsController : Controller {
 
 ---
 
-# RouteConfig.cs
+# Good RouteConfig.cs
 
 Use this instead:
 .small[
@@ -319,11 +319,8 @@ public class SensibleNameController : Controller {
 
 ???
 
-- Controller matches incoming URL to a bit of code.
-- Controller calls the data service to fetch data as needed.
-- Data Service returns a ViewModel.
-- Controller passes the ViewModel to the Razor View.
-- Data Service separates the controller from the raw data models.
+- Laser Pointer: Controller 
+- You are Here
 
 ---
 
@@ -351,20 +348,13 @@ public ActionResult Contact() {
 ```
 
 ???
-# RouteConfig uses URL and GET vs POST to decide which method to call.
-- Attribute also applies authorization decisions.
-- This Pattern works for API calls too.
-- Do not use the special API controllers, they are going away.
 
 # Tips
-- Write a module named DataService to keep your Controller 
- - from knowing too much about your data access layer.
-
 - Notice that data and logic, if needed, go here.
- - Keeping controller code simple makes writing unit tests of your logic easier.
-
+- Keeping controller code simple makes writing unit tests of your logic easier.
 - ViewBag lets you pass data that does not belong in your ViewModel.
- - Whether today is Taco Tuesday has nothing to do with the selected Property Address.
+- Whether today is Taco Tuesday has nothing to do with the selected Property Address.
+- Do not use the special API controllers, they are going away.
 
 
 ---
