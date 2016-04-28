@@ -535,7 +535,7 @@ $.ajax({
 
 ---
 
-# Razor Edit Partial
+# Razor Edit Form
 
 <img src='static/img/webcon2016/addEditViewModelPartial.png' class='capture'/>
 
@@ -545,7 +545,7 @@ $.ajax({
 
 ---
 
-# Razor Edit Partial
+# Razor Edit Form - Generated View Code
 
 ```CSharp
     @model RateCompareWeb.ViewModels.RateViewModel
@@ -586,28 +586,7 @@ About the generated Razor form
 
 ---
 
-# Razor Edit Partial
-
-![Edit Form Parital](static/img/webcon2016/editrate.png)
-
-???
-
-- Notice the label text was not in the Razor. It is instead coming from the View Model.
-    -  This lets you change a label in one place, the ViewModel, and have it update in all Add/Edit/List Razor views.
-- String fields became input boxes.
-- Boolean field became a checkbox.
-    - Do not try to implement 'By checking this box I agree...' at the ViewModel level. 
-    - MVC requires false to be a valid option in any boolean field in the ViewModel.
-    - Microsoft's response to 'By checking this box I agree...' is "Stop that, it's silly."
-    - You will need to write a custom validator if you decide to do so anyway.
-- Validation text appears automatically on field.blur and form.submit.
-    - Validation text also comes from the ViewModel attributes, for the same reason as display names do.
-    - You can change validation text in one place and have it apply to all forms.
-
-
----
-
-# Razor Edit Partial HTML
+# Razor Edit Form - Resulting HTML
 
 ```HTML
     <form action="/" method="post" novalidate="novalidate">
@@ -649,6 +628,26 @@ About the generated Razor form
     HIGHLIGHT THE UNOBTRUSIVE BEFORE SWITCHING SLIDES.
 
 ---
+# Razor Edit Form
+
+![Edit Form Parital](static/img/webcon2016/editrate.png)
+
+???
+
+- Notice the label text was not in the Razor. It is instead coming from the View Model.
+    -  This lets you change a label in one place, the ViewModel, and have it update in all Add/Edit/List Razor views.
+- String fields became input boxes.
+- Boolean field became a checkbox.
+    - Do not try to implement 'By checking this box I agree...' at the ViewModel level. 
+    - MVC requires false to be a valid option in any boolean field in the ViewModel.
+    - Microsoft's response to 'By checking this box I agree...' is "Stop that, it's silly."
+    - You will need to write a custom validator if you decide to do so anyway.
+- Validation text appears automatically on field.blur and form.submit.
+    - Validation text also comes from the ViewModel attributes, for the same reason as display names do.
+    - You can change validation text in one place and have it apply to all forms.
+
+---
+
 
 # Unobtrusive Validation
 <img class='flow' src="static/img/webcon2016/mvc.svg" />
@@ -682,27 +681,25 @@ About the generated Razor form
 # Unobtrusive Validation Up Close
 
 ```HTML
-    <input class="form-control text-box single-line input-validation-error"
+    <input id="ZipCode" name="ZipCode" type="text" value="" maxlength="10"
            data-val="true"
-           data-val-number="The field APY must be a number."
-           id="Rate"
-           name="Rate"
-           type="text"
-           value="">
-    <span class="text-danger field-validation-error"
-          data-valmsg-for="Rate"
-          data-valmsg-replace="true">
-        <span for="Rate"
-              class="">The field APY must be a number.</span>
-    </span>
+           data-val-required="A Postal Code is required."
+           data-val-length="A 5 or 10 digit Postal Code is required."
+           data-val-length-max="10"
+           data-val-length-min="5"
+           data-val-regex="The Postal Code is not formatted properly."
+           data-val-regex-pattern="^\d{5}(-?(\d{4}))?$">
 ```
 
 ???
 
-    - Unobtrusive Validaiton is Declarative
-    - JS library reads the data- attributes, and binds itself to the JS events (change, blur, submit)
+- Unobtrusive Validaiton is Declarative
+- JS library reads the data- attributes, and binds itself to the JS events (change, blur, submit)
+- Razor can generate data-val-* or you can write it.
+- Notice that we have three built-in validators here:
+- required, length, regex
 
-    HOW DID RAZOR KNOW TO ADD THIS VALIDATION?
+BUT HOW DID RAZOR DECIDE TO ADD THIS VALIDATION?
 
 ---
 
@@ -723,36 +720,13 @@ public class PaymentViewModel {
 ```
 
 ???
-	- This is a single Getter/Setter
-    - Validation Attribute examples
-    - Required attribute
-    - Data type
-    - Client and server side validation is applied.
-    - Most are server side, some are client side, some both.
 
+- This is just one data field. 
+- Typically validation is applied both client and server side, but there are exceptions.
 
 ---
-# Microsoft Unobtrusive Validation
-
-```HTML
-    <input id="ZipCode" name="ZipCode" type="text" value="" maxlength="10"
-           data-val="true"
-           data-val-required="A Postal Code is required."
-           data-val-length="A 5 or 10 digit Postal Code is required."
-           data-val-length-max="10"
-           data-val-length-min="5"
-           data-val-regex="The Postal Code is not formatted properly."
-           data-val-regex-pattern="^\d{5}(-?(\d{4}))?$">
-```
-
-???
-    - Razor can generate data-val-* or you can write it.
-    - Notice that we have three built-in validators here:
-    - required, length, regex
-
----
-# Microsoft Unobtrusive Validation - jQuery Validators
-[JQuery Validation](https://github.com/jzaefferer/jquery-validation/) Example
+# Unobtrusive Validation - Custom jQuery Validator
+Unobtrusive validators are built on jQuery validation.
 ```JavaScript
 $.validator.addMethod("validatezipcode",
     function (value, element, param) {
@@ -772,9 +746,8 @@ jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 ```
 
 ???
-    - Unobtrusive validators are jQuery validation validators
-    - $.validator.addMethod
-    - jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
+- Sometimes we need a custom client side validator.
+- Notice that once the validator is created, we apply it using an HTML attribute.
 
 ---
 # Using Unobtrusive with React.js and other Dynamic Page Content
