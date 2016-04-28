@@ -761,60 +761,9 @@ jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
     - Note that React.JS continuously rewrites the page to save memory.
     - You may need this snippet in .render for certain React.JS components that use unobtrusive validation.
 
----
-
-# Submit Form with POST
-<img class='flow' src="static/img/webcon2016/mvc.svg" />
-
-???
-- Just looking at this one more time before changing it.
 
 ---
 
-# Submit Form with AJAX
-<img class='flow' src="static/img/webcon2016/mvc_json.svg" />
-
-???
-- Razor drops out.
-- Controller returns JSON instead of HTML
-
----
-
-# Submit Form with AJAX
-
-```JavaScript
-$("#editForm").on("submit", function (event) {
-    // Prevent full page HTTP submit.
-    if(event) event.preventDefault();
-    
-    // Gather field data.
-    fields = {};
-    $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
-        fields[item.id] = item.value;
-    });
-
-    // ... Do clever user-friendly things here...
-
-    // Submit AJAX POST
-    $.post("api/thing/", fields, function ( post_response, status ) {
-        $("#result").html(post_response);
-        // ... Do more clever user-friendly things here...
-    });
-});
-````
-
-???
-    - Bind to JavaScript submit event - captures submit button, Enter key, other JavaScript posting the form.
-    - Prevent page reload.
-    - Test in Firefox - it works, but it can be sensitive.
-    - jQuery .find to find fields.
-    - jQuery .map to update dictionary for each field.
-    - jQuery .post to submit the form.
-    - jQuery .html to paste the response HTML right into our output status field.
-    - Whole update without a page reload.
-    - Clever things such as showing and hiding a spinner.
-
----
 
 # React.js JSX - Client Side Render
 <img class='flow' src="static/img/webcon2016/reactClientJsx.svg" />
@@ -845,30 +794,7 @@ $("#editForm").on("submit", function (event) {
 
 ---
 
-# JSX Example
-HTML
-```HTML
-    <h2>Do These Today</h2>
-    <div id='todayActions' />
-```
-JSX
-```JS
-    React.render(
-    <ActionList title="Today's Actions" api="api/actions/today" />
-    ,document.getElementById('todayActions')
-    );
-```
-
-<img class='stretch left little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
-
-???
-
-    - ActionList.setState calls ActionList.render.
-    - Multiple calls to setState will render only once.
-
----
-
-# ReactComponent.jsx - JSX Example
+# React.js Example - 1
 JSX
 ```JSX
 var ActionList = React.createClass({
@@ -897,26 +823,47 @@ var ActionList = React.createClass({
 ```
 
 ???
-- ActionList.setState calls ActionList.render.
-- Multiple calls to setState will render only once.
 
-    Cool stuff
-    - React components can be Composed of other React components.
-    - props are set in the HTML attributes
-    - state is set at runtime
-    Weird stuff
-    - Put each JSX file into both ReactConfig.cs and BundleConfig.cs
-    - ReactConfig.cs to allow ReactJS.Net to server side pre-render for speed.
-    - BundleConfig.cs to allow MVC to minify the React.JS JavaScript in production.
-    - Use className instead of class
-    - .bind(this) to call setState on the outer object.
-    - ReactJS.Net will call render and getInitialState sever side.
-    - Keep render and getInitialState as empty as you can.
+Cool stuff
+- React components can be Composed of other React components.
+- props are set in the HTML attributes
+- state is set at runtime
+
+Weird stuff
+- Put each JSX file into both ReactConfig.cs and BundleConfig.cs
+- ReactConfig.cs to allow ReactJS.Net to server side pre-render for speed.
+- BundleConfig.cs to allow MVC to minify the React.JS JavaScript in production.
+- Use className instead of class
+- .bind(this) to call setState on the outer object.
+- ReactJS.Net will call render and getInitialState sever side.
+- Keep render and getInitialState as empty as you can.
+
+---
+
+# React.js Example - 2
+HTML
+```HTML
+    <h2>Do These Today</h2>
+    <div id='todayActions' />
+```
+JSX
+```JS
+    React.render(
+    <ActionList title="Today's Actions" api="api/actions/today" />
+    ,document.getElementById('todayActions')
+    );
+```
+
+<img class='stretch left little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
+
+???
+- Just for completeness.
+- This did not fit on the previous slide.
 
 ---
 
 # Alternative to JSX
-Reload the partial with JQuery.
+Reload a server side Razor partial using JQuery.
 ```JavaScript
     $.get("/PropertyManager/_PropertyList", function (html) {
 		$("#PropertyList").html(html);
@@ -926,16 +873,16 @@ Reload the partial with JQuery.
 
 ???
 
-    - Rendering stays server side.
-    - Still avoids page reload.
-    - Still works with Single Page App
-    - Eliminates the need to alternate between Razor and JSX for form layout.
-    - No surprises during Server side pre-render, as with JSX.
-    - Benefits fully from ViewModel Attributes and ViewBag
+- Rendering stays server side.
+- Still avoids full page reload.
+- Still works with Single Page App
+- Eliminates the need to alternate between Razor and JSX for form layout.
+- No surprises during Server side pre-render, as with JSX.
+- Benefits fully from ViewModel Attributes and ViewBag
 
 ---
 
-# JavaScript Object Pattern
+# Bonus Recipe: JavaScript Object Pattern
 ```JavaScript
 var AddressHelper = {
     FormId: "AddressForm",
@@ -953,19 +900,20 @@ AddressHelper.setup();
 ```
 
 ???
-    - Most JavaScript patterns suck.
-	- React.js uses JavaScript object pattern.
-	- JavaScript object pattern is the one easy win for using React.js.
-	- But you can use JavaScript Object pattern without React.js
-    - Globals are bad, except when they are well named, and used only on a page or two.
-    - This looks a lot like a React component, but is just a JavaScript object.
-    - This JavaScript object knows things, and can do things.
-    - Since it is JavaScript, it is also very flexible.
-    - You could replace the FormId or ListId or even the functions in realtime, if needed.
+
+- Most JavaScript patterns suck.
+- React.js uses JavaScript object pattern.
+- JavaScript object pattern is the one easy win for using React.js.
+- But you can use JavaScript Object pattern without React.js
+- Globals are bad, except when they are well named, and used only on a page or two.
+- This looks a lot like a React component, but is just a JavaScript object.
+- This JavaScript object knows things, and can do things.
+- Since it is JavaScript, it is also very flexible.
+- You could replace the FormId or ListId or even the functions in realtime, if needed.
 
 ---
 
-# JavaScript Bundling
+# Bonus Warning: Be Aware of MVC JavaScript Bundling
 
 In App_Start/BundleConfig.cs
 ```CSharp
@@ -996,15 +944,56 @@ Tips
 
 ---
 
+# Bonus Recipe: Submit Form with AJAX
+<img class='flow' src="static/img/webcon2016/mvc_json.svg" />
+
+???
+- Razor drops out.
+- Controller returns JSON instead of HTML
+# Bonus Recipe: Submit Form with AJAX
+
+```JavaScript
+$("#editForm").on("submit", function (event) {
+    // Prevent full page HTTP submit.
+    if(event) event.preventDefault();
+    
+    // Gather field data.
+    fields = {};
+    $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
+        fields[item.id] = item.value;
+    });
+
+    // ... Do clever user-friendly things here...
+
+    // Submit AJAX POST
+    $.post("api/thing/", fields, function ( post_response, status ) {
+        $("#result").html(post_response);
+        // ... Do more clever user-friendly things here...
+    });
+});
+````
+
+???
+
+(Skip for time.)
+
+- Bind to JavaScript submit event - captures submit button, Enter key, other JavaScript posting the form.
+- Prevent page reload.
+- Test in Firefox - it works, but it can be sensitive.
+- jQuery .find to find fields.
+- jQuery .map to update dictionary for each field.
+- jQuery .post to submit the form.
+- jQuery .html to paste the response HTML right into our output status field.
+- Whole update without a page reload.
+- Clever things such as showing and hiding a spinner.
+
+---
+
 # Conclusions
-- Build common needs fast in ASP.Net MVC.
-- ...even if you want Single Page Application!
+- We can build common needs fast in ASP.Net MVC.
 - React.js integration with MVC is good.
 - Razor Partials can replace many React.js use cases.
 - jQuery Unobtrusive Validation is terrific.
-- ...whether you use Microsoft stack or not!
-- Render (most) HTML server side.
-
 
 <img class='left stretch little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
 <img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
@@ -1012,17 +1001,7 @@ Tips
 ???
 
 # Conclusion notes
-- User experience is important.
-- User experience belongs as close to the user as possible, so it goes in the JavaScript.
-- Think of Razor View as Initial View.
-- JavaScript takes over.
-- But! Getting it right on the first try still has value.
-
-# Random thoughts On JavaScript
-- JavaScript increases accessibility, by improving user experience.
-- JavaScript is no longer a significant source of vulnerability.
-- Tell your paranoid friends they can turn it back on.
-- Tell them to update their browser first.
+- I like these things. You may also.
 
 ---
 # Microsoft Resources
@@ -1037,21 +1016,17 @@ Tips
 # JavaScript Resources
 - [JQuery Validation](https://github.com/jzaefferer/jquery-validation/)
 - [Unobtrusive Validation](https://github.com/aspnet/jquery-ajax-unobtrusive)
-
-???
-- We did not cover NuGet, LINQ, Entity Framework.
-- You would typically use these.
-
-Entity Framework and LINQ
-- Most MVC style frameworks also have an Object Relational Mapping. The ORM for MVC is called Entity Framework.
-- Linq is a query builder language that works with Entity Framework and other data stores.
-
-- Links here to more reading, if you are interested.
-- You can find this slide deck at Edward.Delaporte.us
-
-# More stuff.
 - [JavaScript Slide Deck with ReMark](https://gnab.github.io/remark)
 - Background images created with [Aza Raskin's Algorithm Ink](http://azarask.in/projects/algorithm-ink/#b32debe8)
+
+???
+- Links here to more reading, if you are interested.
+
+(Skip for time)
+- We did not cover NuGet, LINQ, Entity Framework.
+- NuGet is a package manager.
+- Linq is a query builder language that works with Entity Framework and other data stores.
+- We would typically use these with MVC.
 
 ---
 
@@ -1059,6 +1034,10 @@ Entity Framework and LINQ
 
 - edward.delaporte@busey.com
 - zach.carrington@busey.com
+
+???
+
+- You can find this slide deck at Edward.Delaporte.us
 
 </textarea>
     <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
