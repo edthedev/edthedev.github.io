@@ -60,6 +60,7 @@ at [University of Illinois WebCon](http://webcon.illinois.edu/) on April 28, 201
 This slide deck is online at http://edward.delaporte.us
 
 ???
+Get out your lasert pointer. Test it.
 
 Edward
 - Writing Web Application Solutions since 2000.
@@ -135,29 +136,13 @@ Lessons I learned:
 - MVC is somewhat new, and pretty great.
 - Fast way to do CRUD - Create/Read/Update/Destroy.
 - Sometimes MVVC (Model ViewModel View Controller)
-- Microsoft has been incrementally releasing parts of MVC as Open Source
-- All database connections go through the models.
-- All interface elements go in the views.
-- Most logic goes libraries called only by the controllers.
-- Data from models only reaches views through controllers.
-- Data from views only reaches models through controllers.
 
 - In theory, everything you see here will run on an Apache server.
-    - Possible follow up presentation: "I built a Microsoft App on Linux: Here's What worked / Didn't Work."
+    - Possible follow up presentation: "I built a Microsoft App on Linux..."
 
 ---
 
-# Picture for Model View Controller
-
-<img class='flow' src="static/img/webcon2016/mvc.svg" />
-
-???
-
-You will see this many times.
-
----
-
-# Terminology: Model View Controller
+# Comparisons for Model View Controller
 - MVC is to Asp.Net as:
  - Ruby to Rails
  - Django to Python
@@ -173,36 +158,31 @@ You will see this many times.
 
 ???
 
-- Jargon as Landmarks - if you don't recognize something, do not fret.
 - But ASP.Net MVC is terrific for beginners and veterans.
 
-# About Razor
+# Stuff I will Gloss over
+- Jargon as Landmarks - if you don't recognize something, do not fret.
 - You need a view rendering engine. Razor is one.
 - This presenation is not about Razor
-- This presnetation will have Razor code.
-
+- This presentation will have Razor code.
 - Entity Framework is a database connector.
-- It's fine, but this presentation is only 50 minutes long.
+- Entity Framework is fine, but this presentation is only 50 minutes long.
 
 ---
 
-# Terminology: React.js
-- [React](https://facebook.github.io/react/) was written by Facebook
-- Open Source under [BSD License](https://github.com/facebook/react/blob/master/LICENSE)
-- [ReactJS.Net](http://reactjs.net/) is available in NuGet Gallery
-<img class='stretch little' src='static/img/gallery/abstract_ipad/10 9-47-38 PM.jpg'/>
+# About React.js
+### Released as [open source](https://facebook.github.io/react/) by Facebook
+### Renders a markup language called JSX into HTML client side
+### ReactJS.Net integrates React.js with ASP.Net MVC
 
 ???
 
 # About React.js
-- Client side JavaScript
 - Works with any server side technology
-- Primarily for writing SPAs
-- Is way more sane than Google's Angular.js
-- This title could have been Do Cool Things Slowly and Painfully with ASP.Net MVC and Angular.js
+- Primarily for writing Single Page Applications.
+- Alternate talk: Do Cool Things Slowly with ASP.Net MVC and Angular.js
 
 # ReactJs.Net 
-- NuGet package for ASP.Net
 - Includes server side pre-compilation of React client side templates
 
 ---
@@ -222,10 +202,10 @@ You will see this many times.
 <img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-56-49 PM.jpg'/>
 
 ???
-- Do this lots of times.
-- Plain Text
-- Returned HTML and status code 200 OK
-- Payments/Single
+- Reminder that everything is text.
+- You may do this lots of times for each page. 
+- Laser: Returned HTML and status code 200 OK
+- Laser: Payments/Single
 
 ---
 
@@ -234,20 +214,22 @@ You will see this many times.
 
 ???
 
+Unit test only code that does not fit on this diagram.
+Do Laser Pointer Walkthrough
+Introduce each box.
+
+(Panic text)
 1. User does something in the browser.
 2. GET or POST Request is sent.
 3. RouteConfig.cs decides which controller to pass the request to.
-4. PaymentController.cs verifies the request.
-4. PaymentController.cs applies business rules.
-4. PaymentController.cs fetches data.
-4. PaymentController.cs assembles data on a ViewModel.
-4. PaymentController.cs passes the ViewModel to it's favorite Razor Template.
-4. AddPayment.cshtml renders the data from the ViewModel as HTML
+4. Controller verifies the request.
+4. Controller applies business rules.
+4. Controller requests data from Data Service 
+4. Controller makes and populates a ViewModel instance. 
+4. Controller passes the populated ViewModel to it's favorite Razor View.
+4. Razor View renders the data from the ViewModel as HTML
 
-- Version using React might use mostly React.js JSX for that last step.
-- An SPA might do this several times per page view - getting little bits at a time.
-- Keep controllers light by building code logic modules.
-- Most code, and unit tests are outside MVC in ordinary modules called by the controller in step 5.
+- Keep controllers light by building code separate testable logic modules.
 
 ---
 
