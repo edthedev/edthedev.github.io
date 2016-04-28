@@ -882,110 +882,6 @@ Reload a server side Razor partial using JQuery.
 
 ---
 
-# Bonus Recipe: JavaScript Object Pattern
-```JavaScript
-var AddressHelper = {
-    FormId: "AddressForm",
-    ListId: "AddressList",
-    add: function() {
-        $.post("/api/property", function(data) { 
-            $("#" + AddressHelper.ListId).html(data); 
-        } )
-    },
-    setup: function () {
-		$("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
-    }
-}
-AddressHelper.setup();
-```
-
-???
-
-- Most JavaScript patterns suck.
-- React.js uses JavaScript object pattern.
-- JavaScript object pattern is the one easy win for using React.js.
-- But you can use JavaScript Object pattern without React.js
-- Globals are bad, except when they are well named, and used only on a page or two.
-- This looks a lot like a React component, but is just a JavaScript object.
-- This JavaScript object knows things, and can do things.
-- Since it is JavaScript, it is also very flexible.
-- You could replace the FormId or ListId or even the functions in realtime, if needed.
-
----
-
-# Bonus Warning: Be Aware of MVC JavaScript Bundling
-
-In App_Start/BundleConfig.cs
-```CSharp
-public static void RegisterBundles(BundleCollection bundles) {
-
-    bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-    "~/Scripts/jquery-{version}.js",
-    "~/Scripts/jquery-ui-{version}.js"));
-}
-```
-In Views/Shared/_Layout.cshtml
-```Razor
-    @Scripts.Render("~/bundles/jquery")
-```
-
-???
-
-Notice
-    - JavaScript Bundles are minified when the debug flag is removed from web.config.
-    - Visual Studio removes debug from web.config when you publish in Release configuration.
-    - Bundle has no extension
-
-Tips
-    - Use more than one bundle.
-    - Organize your bundles by types of pages you want to serve them on.
-    - User authorization level (i.e. public, registered, admin) 
-            may be a good starting point for dividing up your JavaScript bundles.
-
----
-
-# Bonus Recipe: Submit Form with AJAX
-<img class='flow' src="static/img/webcon2016/mvc_json.svg" />
-
-???
-- Razor drops out.
-- Controller returns JSON instead of HTML
-# Bonus Recipe: Submit Form with AJAX
-
-```JavaScript
-$("#editForm").on("submit", function (event) {
-    // Prevent full page HTTP submit.
-    if(event) event.preventDefault();
-    
-    // Gather field data.
-    fields = {};
-    $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
-        fields[item.id] = item.value;
-    });
-
-    // ... Do clever user-friendly things here...
-
-    // Submit AJAX POST
-    $.post("api/thing/", fields, function ( post_response, status ) {
-        $("#result").html(post_response);
-        // ... Do more clever user-friendly things here...
-    });
-});
-````
-
-???
-
-(Skip for time.)
-
-- Bind to JavaScript submit event - captures submit button, Enter key, other JavaScript posting the form.
-- Prevent page reload.
-- Test in Firefox - it works, but it can be sensitive.
-- jQuery .find to find fields.
-- jQuery .map to update dictionary for each field.
-- jQuery .post to submit the form.
-- jQuery .html to paste the response HTML right into our output status field.
-- Whole update without a page reload.
-- Clever things such as showing and hiding a spinner.
 
 ---
 
@@ -1038,6 +934,114 @@ $("#editForm").on("submit", function (event) {
 ???
 
 - You can find this slide deck at Edward.Delaporte.us
+
+---
+# Bonus Recipe: JavaScript Object Pattern
+```JavaScript
+var AddressHelper = {
+    FormId: "AddressForm",
+    ListId: "AddressList",
+    add: function() {
+        $.post("/api/property", function(data) { 
+            $("#" + AddressHelper.ListId).html(data); 
+        } )
+    },
+    setup: function () {
+		$("#" + AddressHelper.FormId).on("submit", AddressHelper.add);
+    }
+}
+AddressHelper.setup();
+```
+
+???
+
+- Most JavaScript patterns suck.
+- React.js uses JavaScript object pattern.
+- JavaScript object pattern is the one easy win for using React.js.
+- But you can use JavaScript Object pattern without React.js
+- Globals are bad, except when they are well named, and used only on a page or two.
+- This looks a lot like a React component, but is just a JavaScript object.
+- This JavaScript object knows things, and can do things.
+- Since it is JavaScript, it is also very flexible.
+- You could replace the FormId or ListId or even the functions in realtime, if needed.
+
+---
+
+
+# Bonus Recipe: Submit Form with AJAX
+<img class='flow' src="static/img/webcon2016/mvc_json.svg" />
+
+???
+- Razor drops out.
+- Controller returns JSON instead of HTML
+
+---
+
+# Bonus Recipe: Submit Form with AJAX
+
+```JavaScript
+$("#editForm").on("submit", function (event) {
+    // Prevent full page HTTP submit.
+    if(event) event.preventDefault();
+    
+    // Gather field data.
+    fields = {};
+    $("#editFormId").find("input[type=text],input[type=hidden]").map(function (id, item) {
+        fields[item.id] = item.value;
+    });
+
+    // ... Do clever user-friendly things here...
+
+    // Submit AJAX POST
+    $.post("api/thing/", fields, function ( post_response, status ) {
+        $("#result").html(post_response);
+        // ... Do more clever user-friendly things here...
+    });
+});
+````
+
+???
+
+(Skip for time.)
+
+- Bind to JavaScript submit event - captures submit button, Enter key, other JavaScript posting the form.
+- Prevent page reload.
+- Test in Firefox - it works, but it can be sensitive.
+- jQuery .find to find fields.
+- jQuery .map to update dictionary for each field.
+- jQuery .post to submit the form.
+- jQuery .html to paste the response HTML right into our output status field.
+- Whole update without a page reload.
+- Clever things such as showing and hiding a spinner.
+
+# Bonus Warning: Be Aware of MVC JavaScript Bundling
+
+In App_Start/BundleConfig.cs
+```CSharp
+public static void RegisterBundles(BundleCollection bundles) {
+
+    bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+    "~/Scripts/jquery-{version}.js",
+    "~/Scripts/jquery-ui-{version}.js"));
+}
+```
+In Views/Shared/_Layout.cshtml
+```Razor
+    @Scripts.Render("~/bundles/jquery")
+```
+
+???
+
+Notice
+    - JavaScript Bundles are minified when the debug flag is removed from web.config.
+    - Visual Studio removes debug from web.config when you publish in Release configuration.
+    - Bundle has no extension
+
+Tips
+    - Use more than one bundle.
+    - Organize your bundles by types of pages you want to serve them on.
+    - User authorization level (i.e. public, registered, admin) 
+            may be a good starting point for dividing up your JavaScript bundles.
 
 </textarea>
     <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
