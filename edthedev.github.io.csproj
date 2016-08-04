@@ -192,6 +192,7 @@
     <Content Include="nav.html" />
     <Content Include="static\img\webcon2016\reactClientJsx.svg" />
     <Content Include="static\img\webcon2016\slidebg.jpg" />
+    <Content Include="GitFlow.html" />
     <Content Include="WebCon2016.html" />
     <Content Include="fishbowl.html" />
     <Content Include="gallery.html" />
