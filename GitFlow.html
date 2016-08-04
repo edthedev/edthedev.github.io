@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Git Flow</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("static/img/webcon2016/slidesidebar.jpg");
+	  }
+	  .remark-slide-content {
+		  background-image: url("");
+          background-color:bisque;
+	  }
+      a {
+          color: black;
+      }
+	  img {
+		  float:right;
+		  border-radius:22px;
+	  }
+	  img.left {
+		  float:left;
+	  }
+	  img.little {
+		  height:200px;
+	  }
+	  img.capture {
+		  border-radius:1px;
+	  }
+	  img.stretch {
+		  width:45%;
+		  padding: 10px;
+	  }
+	  img.flow{
+		  width: 100%;
+		  padding: 10px;
+		  background-color: white;
+	  }
+    </style>
+  </head>
+  <body>
+<textarea id="source">
+
+# Git Flow
+
+Presented by [Edward Delaporte](mailto:edward.delaporte@busey.com) 
+for [Busey Bank](https://www.busey.com)
+
+This slide deck is *not actually* online at http://edward.delaporte.us
+
+???
+- Why Git?
+- Why Git flow? Everybody is doing it.
+- Annecodate about the Git vs Mercurial poll.
+
+---
+
+# What makes Git different?
+
+- Distributed
+- Works fine in local-only mode
+- Supports Branches
+- Merge actually works a lot of the time.
+
+---
+
+# Sources of Confusion
+
+- To *Commit* creates a *Commit*.
+- Visual Studio frequently refuses instructions when there are *changes* that have not been turned into 'commits'.
+- This is because all Git operations act on *commits*, so Git is pretty useless around uncommitted changes.
+- All commits are reversible.
+
+???
+- Sometimes it is worthwhile to *commmit* unwanted changes and then revert the created *commit*, rather than trying to back them out.
+- Git assumes you know you can just revert your commit, and so sometimes expects you to do dumb things...
+
+---
+
+# Understanding the Stage
+
+![Git Stage](stage.png)
+
+???
+- The stage controls what goes in a commit.
+- Commits are created completely locally.
+- .git folder is where your commits actually are.
+- You can track and reverse your changes while offline, even check out other branches.
+
+--- 
+
+# Git Commands
+
+<img src="git-flow-commands.png" width="100%" />
+
+
+???
+
+---
+
+# Git Flow
+
+<img src="gitflow.png" width="100%" />
+
+---
+
+# Merge often
+
+![Merge often](git_merge_often.png)
+
+---
+
+# Common Branch Names in Git Flow
+
+- feature (aka backlog)
+- master (aka production)
+- hotfix (aka bug fix)
+- develop (aka merge nightmare)
+- tags (aka where did I put that, anyway?)
+
+???
+
+- Explain purpose of each.
+- Git Flow is a technique that helps avoid breaking develop and master.
+- Your colleagues will only notice if you break develop or master.
+
+---
+
+# Continuous Deployment Pipeline
+
+<img src="pipeline.jpg" width="100%" />
+
+# Developer Close-Up of Pipeline
+
+<img src="devpipeline.png" width="100%" />
+
+---
+
+# Resources
+
+- Code Academy https://www.codecademy.com/learn/learn-git
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="static/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
