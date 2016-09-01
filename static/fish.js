@@ -134,6 +134,25 @@ var TinyBrain = {
 	}
 };
 
+var CrawlBrain = {
+	left: function() {
+		if(Math.random() > .5)
+		{
+			return 20;
+		}
+		else
+		{
+			return -20
+		}
+	},
+	up: function() {
+		return BrainHelp.up(10, 20);
+	},
+	speed: function() {
+		return Math.random() * 1000 + 5000;
+	}
+};
+
 
 var FastBrain = jQuery.extend({}, TinyBrain);
 FastBrain.speed = function() {
@@ -281,6 +300,7 @@ React.createElement("img", {id: "sand", src: "static/img/fish/sand.png", classNa
 			React.createElement(Flora, {id: "flora1", img: "static/img/fish/seaweed.png", height: "80"}), 
 			React.createElement(Fish, {id: "t3", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
 			React.createElement(Fish, {id: "t4", img: "static/img/fish/buckToothFish", ext: ".png", brain: SlowBrain, size: "45px"}), 
+			React.createElement(Fish, {id: "slug", img: "static/img/fish/slug1", ext: ".png", brain: CrawlBrain, size: "15px"}), 
 			React.createElement(Flora, {id: "flora2", img: "static/img/fish/seaweed.png", height: "80"})
 		);
 	}
