@@ -14,3 +14,5 @@ Install Yo and Generator Code
 
     npm install -g yo generator-code
     yo code
+
+https://code.visualstudio.com/docs/extensions/example-hello-world
