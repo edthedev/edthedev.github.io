@@ -12,6 +12,7 @@ Install Node.js, and make sure it is on the terminal `PATH`.
 Open the Embedded Terminal (`Ctrl+~`)
 Install Yo and Generator Code
 
+
     npm install -g yo generator-code
     yo code
 
