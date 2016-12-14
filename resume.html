@@ -6,7 +6,7 @@
 	<body>
 
 <nav id='navlist' class="navbar navbar-default"> </nav>
-<xmp theme="united">
+<xmp id='xmp' theme="united">
 
 # Edward C. Delaporte V						
 
@@ -173,8 +173,20 @@ Ablesoft Solutions Inc. Oregon, IL
 
 </xmp>
 
+<div id="content">
+	<p>Loading, please wait.</p>
+</div>
+
 <script src="static/jquery/dist/jquery.js"></script>
 <script src="static/nav.js"></script>
 <script src="static/strapdown/strapdown.js"></script>
+<script>
+	$( document ).ready( function() {
+		$.get('http://edward.delaporte.us/Resume.Edward.Delaporte.md', function(data) {
+			$('#content').html(marked(data));
+		}
+	});
+</script>
+
 </body>
 </html>
