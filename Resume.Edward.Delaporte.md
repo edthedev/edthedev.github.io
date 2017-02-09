@@ -153,11 +153,13 @@ Ablesoft Solutions Inc. Oregon, IL
  - [Kivy: Interactive Applications in Python, Second Edition](https://www.packtpub.com/application-development/kivy-interactive-applications-python) (ISBN 978-1-78328-159-6) 
  - [Kivy Blueprints](https://www.packtpub.com/application-development/kivy-blueprints) (ISBN 978-1-78398-784-9)
 
-#### Additional Professional Training						
+#### Additional Professional Training
 
- - Completed University of Illinois Information Technology Manager Development Training
- - Completed University of Illinois Information Technology Leadership Workshop
- - Completed [SANS](https://www.sans.org/) On-site Secure Software Development Training
- - Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
- - Presented at [Illinois Web Master's Conference](http://webcon.illinois.edu/) 2016.
- - Presented at [Illinois IT Professionals Forum](https://www.itproforum.illinois.edu/) 2016
+- University of Illinois Information Technology Services Manager Development Training
+- University of Illinois Information Technology Leadership Workshop
+- [SANS](https://www.sans.org/) On-site Secure Software Development Training
+- Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
+- Attended and presented at University of Illinois Webmaster's Conference 2016
+- Attended and presented at University of Illinois IT Professional's Forum 2016
+- OWASP Top Ten - Citigal 2017
+- Defensive Programming for C# - Citigal 2017
