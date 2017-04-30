@@ -18,11 +18,20 @@ I make computers better at meeting the needs of humans.
 
 ## Career
 
-#### Senior IT Programmer				July 2015  - Present
+#### Programming Team Lead				January 2017  - Present
+First Busey Corporation - Busey Bank, Champaign, IL
+
+- Manages three software developer direct reports.
+- Ensures resource and timeline needs are met for software development projects.
+
+- Occassionally presents technology demonstrations to prospective clients.
+- Collaborates with security, infrastructure, operations and sales teams to improve our baseline product offerings.
+
+#### Senior IT Programmer				July 2015  - January 2017
 First Busey Corporation - Busey Bank, Champaign, IL
 
  - Builds financial transaction websites using Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials and React.js.
- - Guides projects through the software development life-cycle, including requirements, implementation, delivery, testing and maintenance:
+ - Guides projects through the software development life-cycle, including requirements, implementation, delivery, testing and maintenance.
  - Was recognized as a key contributor in the integration of Pulaski Bank infrastructure.
  - Proactively collaborates across the organization.
  - Launched [MyPropertyPay.com](https://secure.mypropertypay.com).
@@ -31,6 +40,7 @@ First Busey Corporation - Busey Bank, Champaign, IL
  - Researches, tests, prototypes, documents, and presents technology stack improvements.
  - Communicates with project stakeholders frequently, promptly, and clearly.
  - Helps ensure standards of security, quality, accessibility and usability are met.
+ - Presents technology training at local conferences as part of the First Busey commitment to building our community.
 
 #### Lead Software Developer				November  2011 - July 2015
 Technology Services at University of Illinois, Urbana-Champaign, IL
