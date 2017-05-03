@@ -19,6 +19,4 @@ setupPdf:
 	rpm -Uvh wkhtmltox-0.12.2.1_linux-centos6-amd64.rpm
 
 pdf:
-	wkhtmltopdf Resume.md Resume.pdf
-
-
+	wkhtmltopdf resume.html Resume.Edward.Delaporte.pdf
