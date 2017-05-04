@@ -25,5 +25,8 @@ setupYarn:
 	yum-config-manager --enable yarn
 	yum install yarn
 
+yarnstall:
+	yarn add bookmark
+
 pdf:
 	wkhtmltopdf resume.html Resume.Edward.Delaporte.pdf
