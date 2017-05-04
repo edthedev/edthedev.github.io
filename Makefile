@@ -19,9 +19,11 @@ setupPdf:
 	rpm -Uvh wkhtmltox-0.12.2.1_linux-centos6-amd64.rpm
 
 setupYarn:
-	sudo wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.rep
-	curl --silent --location https://rpm.nodesource.com/setup_6.x | bash -
-	sudo yum install yarn
+	# wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.rep
+	sudo wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo
+	# yum install nodejs
+	yum-config-manager --enable yarn
+	yum install yarn
 
 pdf:
 	wkhtmltopdf resume.html Resume.Edward.Delaporte.pdf
