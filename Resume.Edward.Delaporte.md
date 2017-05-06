@@ -7,7 +7,6 @@ I make computers better at meeting the needs of humans.
 - Email: edward@delaporte.us
 - Website: http://edward.delaporte.us					
 - GitHub: [EdTheDev](http://github.com/edthedev)
-- [Resume as PDF](http://edward.delaporte.us/Resume.Edward.Delaporte.pdf) 
 
 ## Highlights
 
