@@ -30,3 +30,6 @@ yarnstall:
 
 pdf:
 	wkhtmltopdf resume.html Resume.Edward.Delaporte.pdf
+
+setupApache:
+	yum install -y httpd24
