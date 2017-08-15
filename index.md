@@ -1,4 +1,4 @@
 ## More Posts
 
-- [Blog 2017.05.02](blog/2017.05.02.md)
+- [Older Posts at EdTheDev.com](http://EdTheDev.com)
 - [Older Posts on GitHub](https://github.com/edthedev/edthedev.github.io/tree/master/blog)
