@@ -172,3 +172,8 @@ Ablesoft Solutions Inc. Oregon, IL
 - Attended and presented at University of Illinois IT Professional's Forum 2016
 - OWASP Top Ten - Citigal 2017
 - Defensive Programming for C# - Citigal 2017
+
+
+#### Community Involvement
+
+- Hosts free "Learn Programming In Scratch!" class for elementary students at the Urbana Free Library
