@@ -164,6 +164,8 @@ Ablesoft Solutions Inc. Oregon, IL
 
 #### Additional Professional Training
 
+- Attended DevUp 2017
+- Attended PowerShell Summit 2017
 - University of Illinois Information Technology Services Manager Development Training
 - University of Illinois Information Technology Leadership Workshop
 - [SANS](https://www.sans.org/) On-site Secure Software Development Training
