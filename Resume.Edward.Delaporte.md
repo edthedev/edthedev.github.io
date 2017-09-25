@@ -164,6 +164,7 @@ Ablesoft Solutions Inc. Oregon, IL
 
 #### Additional Professional Training
 
+- Evolve: Two year internal leadership training program at Busey
 - Attended DevUp 2017
 - Attended PowerShell Summit 2017
 - University of Illinois Information Technology Services Manager Development Training
