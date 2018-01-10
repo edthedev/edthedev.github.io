@@ -1,1 +1,46 @@
 This may become a thing.
+
+Task: <input id = "Now" name = "Now">
+Last: <input id = Last>
+Full: <input id = All>
+
+<script>
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    console.debug('All Stuff: ' + ca);
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        console.debug('Stuff: ' + c);
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+/*
+window.getCookie = function(name) {
+  match = document.cookie.match(new RegExp(name + '=([^;]+)'));
+  if (match) return match[1];
+}*/
+
+// document.getElementById('Last').value=getCookie('username');
+// document.getElementById('Full').value=document.cookie;
+document.cookie = 'username="John Doe";expires="Thu, 18 Dec 2022 12:00:00 UTC";path=/;';
+document.getElementById('Now').value=getCookie('username');
+console.debug('Cookie ' + document.cookie);
+
+document.getElementById('Now').value = window.name;
+window.name = 'Test';
+
+// document.getElementById('Later').value;
+
+
+</script>
+<a href="" >Reload</a>
