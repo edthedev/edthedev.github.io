@@ -1,7 +1,7 @@
 <html>
-<input id=Address >
-  2111 Galen Dr, Champaign, IL 61821
-  </input>
+<input id=Address 
+       value="2111 Galen Dr, Champaign, IL 61821"
+  />
 <button id=go value=Go />
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.js"
@@ -10,13 +10,15 @@
 <script 
         src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"
         />
-<script>
-
 <script id="handlebars-demo" type="text/x-handlebars-template">
    <div>
       My name is {{name}}. I am a {{occupation}}.
    </div>
 </script>
+
+
+<script>
+
 
 
 $('#go').click(function () {
@@ -25,6 +27,7 @@ $('#go').click(function () {
   var address2 = "University+%26+Neil+(SW+Corner),+Champaign,+IL";
 
   var address = $('#Address').val();
+  address = address.Replace(' ', '+');
   var url = "https://www.google.com/maps/dir/ADDRESS1/ADDRESS2";
   url = url.Replace("ADDRESS1", address);
   url = url.Replace("ADDRESS2", address2);
