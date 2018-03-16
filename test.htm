@@ -1,14 +1,35 @@
 <html>
-<button id=go />
+<input id=Address >
+  2111 Galen Dr, Champaign, IL 61821
+  </input>
+<button id=go value=Go />
 <script
   src="https://code.jquery.com/jquery-3.3.1.slim.js"
   integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
   crossorigin="anonymous"></script>
+<script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"
+        />
 <script>
+
+<script id="handlebars-demo" type="text/x-handlebars-template">
+   <div>
+      My name is {{name}}. I am a {{occupation}}.
+   </div>
+</script>
+
 
 $('#go').click(function () {
 
-  var url = "https://www.google.com/maps/dir/2111+Galen+Dr,+Champaign,+IL+61821/University+%26+Neil+(SW+Corner),+Champaign,+IL/@40.1024284,-88.2720523,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x880cd1210172c421:0x1913f78d064a6884!2m2!1d-88.2629226!2d40.0885936!1m5!1m1!1s0x880cd74b82752461:0xb2b0222eb2ef9f6!2m2!1d-88.2436767!2d40.1162433";
+  var template = $('#handlebars-demo').html();
+  var address2 = "University+%26+Neil+(SW+Corner),+Champaign,+IL";
+
+  var address = $('#Address').val();
+  var url = "https://www.google.com/maps/dir/ADDRESS1/ADDRESS2";
+  url = url.Replace("ADDRESS1", address);
+  url = url.Replace("ADDRESS2", address2);
+
+  // var url = "https://www.google.com/maps/dir/+Galen+Dr,+Champaign,+IL+61821/University+%26+Neil+(SW+Corner),+Champaign,+IL/@40.1024284,-88.2720523,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x880cd1210172c421:0x1913f78d064a6884!2m2!1d-88.2629226!2d40.0885936!1m5!1m1!1s0x880cd74b82752461:0xb2b0222eb2ef9f6!2m2!1d-88.2436767!2d40.1162433";
   
   var win = window.open(url, '_blank');
 if (win) {
