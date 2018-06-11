@@ -50,6 +50,85 @@
 <!--
 
 
+-->
+
+
+<textarea id="source">
+
+# Securing cPanel 
+
+.small[
+Presented by [Edward Delaporte](mailto:edward.delaporte@busey.com)
+
+for [Busey Bank](https://www.busey.com)
+
+at [University of Illinois IT Professionals Forum](https://www.itproforum.illinois.edu/) on June 14, 2018.
+]
+
+This slide deck is online at http://edward.delaporte.us
+
+???
+
+Edward
+- I am a web server security expert.
+- Upfront: I am no longer a cPanel expert. The product has advanced a lot since I last used it.
+- Writing Web Application Solutions since 2000.
+- Hosting cloud microsites since 2007.
+- Worked for Office of Privacy and Information Assurance from around 2007 to 2015.
+- I don't speak for Network Security, but I do speak *with* them. :)
+- Now work for First Busey Corporation - leading a development team subject to both 
+- Payment Card Industry
+- Financial Sector Regulations
+
+Why I care
+- This is my Alma mater: Graduated with Degree in Comp Sci from College of Enginering in 06
+- You're part of my brand.
+- We (successful IT professionals) need to pay it forward to the next students 
+
+Why Busey Cares
+- The kids you're teaching are our future customers.
+- Technology Partnerships
+- FirsTech subsidiary - quiet integration partner
+
+---
+
+# Why this presentation, why today?
+
+### cPanel 
+- cPanel does everything. Maybe too much?
+- No one is safe.
+
+???
+
+--- 
+
+### Threat CheckList
+
+- Misconfigurations
+  - Stack Overflow - the difference from a quick working example and the best example could be security. Do the extra work to stay safe. Future you thanks you.
+- Add-Ons
+  - Vet your add-ons
+- Comments
+  - Anonymous comments
+  - Unmoderated comments
+  - Spam comments
+  - XSS attacks
+- Uploads
+  - Some attacks are big. Set a trivial limit to prevent these.
+  - Whitelist by type: Don't allow file types you don't expect. PHP, INI, etc.
+- Stale Users
+  - OS Users -
+    > lastlog -t 10000 > temp1; lastlog -t 10 > temp2; diff temp1 temp2; rm temp1; rm temp2
+  - App users - specific per app
+- Apply [cPanel Community Recommendations](https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist)
+and [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic+Security+Concepts)
+- Need logins? Use SSO 
+  - Getting Authentication right is hard. Let central IT do it for you. (See Engineering IT FAQ).
+  - You don't want to manage users and passwords, if you don't have to.
+  - You certaintly don't want to have duplicate passwords and expose them.
+
+--- 
+
 How to Secure SSH:
   https://documentation.cpanel.net/display/CKB/How+to+Secure+SSH
     Suggest as follow-up practice.
@@ -61,21 +140,11 @@ Engineering IT CPanel User Guide:
   https://answers.uillinois.edu/illinois.engineering/page.php?id=80857
 
 
-# Securing cPanel
-## Outline
-### Intro Topic
-### Intro Self
+TODO: Screenshots to grab: 
+  - Engineering Answers page
+  - cPanel HowTos page
 
-  - This is my Alma mater: Graduated with Degree in Comp Sci from College of Enginering in 06
-  - You're part of my brand.
-  - We (successful IT professionals) need to pay it forward to the next students 
-  My credentials:
-  - Worked for NetSec for 3 years
-  - Worked for Tech Services for another 5 years
-  - I don't speak for Network Security, but I do speak *with* them. :)
-  - Worked for Bank and Payment a processor for 3 years
-  - PCI and Bank IT Audit
-  - Given many nerdy talks.
+### Intro Self
 
 ### Secure your stand alone / or don't run one
 ### Secure your connections
@@ -85,12 +154,16 @@ Engineering IT CPanel User Guide:
   - Publisher
   - GitHub activity (recent, evidence of patches)
   - Ask an expert (message template)
-  - If a plugin doesn't work out of the box, that might be good security. It's a good reason to double-check that there isn't a newer more securit plugin.
+  - If a plugin doesn't work out of the box, that might be good security. It's a good reason to double-check that there isn't a newer safer plugin.
+
 ### Stuff to keep up on
   - Public comments and XSS
   - Who can upload and why not to let them 
   - What file types can be uploaded. Disable exotic stuff.
   - think about your audiences - can students upload files for professors to read, etc.
+
+    Tweak Settings => PHP Settings => Maximum Upload Size
+
 ### Be a good neighbor
   - limit file uploads
   - actively moderate, or just disable comments and discussion groups
@@ -144,54 +217,13 @@ Happy to hear that you're talking on this. cPanel is neat, and
 - in a single managed bucket. 
 - But there has to be agreement on everything from purpose to features to limits (and that's really where I think it gets fuzzy).
 
+--- 
 
--->
+# Questions?
 
+- edward.delaporte@busey.com
 
-<textarea id="source">
-
-# Securing cPanel 
-
-.small[
-Presented by [Edward Delaporte](mailto:edward.delaporte@busey.com)
-
-for [Busey Bank](https://www.busey.com)
-
-at [University of Illinois IT Professionals Forum](https://www.itproforum.illinois.edu/) on June 14, 2018.
-]
-
-This slide deck is online at http://edward.delaporte.us
-
-???
-
-Get out your lasert pointer. Test it.
-
-Edward
-- Writing Web Application Solutions since 2000.
-- Hosting cloud microsites since 2007.
-- My Career: ASP, ASP.Net (1), PHP, Perl CGI, Python WSGI, React.js, ASP.Net MVC (4.5).
-
----
-
-# Why this presentation, why today?
-### Microsoft Recently open sourced [much](https://github.com/aspnet) of ASP.Net
-### React.Js was the [newest framework ever](http://www.isaacchansky.me/days-since-last-new-js-framework/), when it released.
-### Unobtrusive Validation is amazing.
-
-???
-
-
-Notes from <Chuck:>
-
-Sounds great! Ok, right to it, pain point: The largest number of compromised host events for a single host is on an official campus cPanel instance. This is a very bad title to hold. The biggest issue we had with that was in policy and management. I'm pretty sure they let customers (students and staff) access parts of the admin panel I would govern more, mainly the ability to bring in 3rd party apps, add-ons, and plugins. They also fell behind on patches/updates. I do not know if they still allow people full access to spin up instances on their own, but that was a huge issue since the admin had no specific knowledge or expectations on individual configurations. Now having said that, cPanel moved over to the enterprise side, and since then Security has received "assurances". We actually haven't seen many issues since, so we're hopeful that it's well managed now. (knock on wood)
-
-I guess the last gap is in visibility- whether we keep controls loose and let folks do a lot (too much?) or not, I think it's important to be acutely aware of the state of things and keep on top of any irregularities. Indeed the most severe incident in the pile threatened to take the entire cPanel instance offline in the middle of the semester, which generated much ado.
-
-
-
-Happy to hear that you're talking on this. cPanel is neat, and when it's done right it can help Security by placing a whole host of disparate host instances under common management and policy, in a single managed bucket. But there has to be agreement on everything from purpose to features to limits (and that's really where I think it gets fuzzy).
-
-</Chuck:>
+--- 
 <img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-56-49 PM.jpg'/>
 <img class='flow' src="static/img/webcon2016/mvc.svg" />
 <img class='flow' src="static/img/webcon2016/mvc.svg" />
@@ -215,9 +247,6 @@ Happy to hear that you're talking on this. cPanel is neat, and when it's done ri
 
 ---
 
-# Questions?
-
-- edward.delaporte@busey.com
 
 ???
 
