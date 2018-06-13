@@ -144,7 +144,7 @@ Vet your add-ons
 
 - Watch for innocent looking comment text with link URL to spam.
 
-TODO: Embed Spam short here?
+TODO: Embed Monty Python Spam short here?
 
 ---
 
@@ -211,12 +211,31 @@ For each, you need
 
 ## Additional References
 
-- Apply [cPanel Community Recommendations](https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist)
-and [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic+Security+Concepts)
+- [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic+Security+Concepts)
+- [cPanel Recommended Secuirty Settings](https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings) 
+- [cPanel Community Recommendations](https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist)
 - Follow [Tips to Make Your cPanel Server More Secure](https://documentation.cpanel.net/display/CKB/Tips+to+Make+Your+Server+More+Secure)
 - Rember to [Secure SSH](https://documentation.cpanel.net/display/CKB/How+to+Secure+SSH)
 - [Engineering IT cPanel Welcome Guide](https://answers.uillinois.edu/illinois.engineering/page.php?id=79074)
 - [Engineering IT cPanel FAQ](https://answers.uillinois.edu/illinois.engineering/page.php?id=80857)
+
+---
+
+## If Nothing Else
+
+These people got burned, and took the time to put up a warning sign: 
+- [EasyApache Modules to Avoid](https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist#RecommendedSecuritySettingsChecklist-EasyApacheconfigurationchecklist)
+
+
+---
+
+## Questions & Answers
+
+- Edward Delaporte 
+- edward.delaporte@busey.com
+- Slide deck is online at http://edward.delaporte.us
+
+---
 
 ???
 
@@ -224,11 +243,6 @@ and [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic
 ### Secure your connections
   - API keys - only put them where they're needed.
   - SQL passwords (don't use sa, do set a long password, don't reuse a password)
-### Validate your Plugins
-  - Publisher
-  - GitHub activity (recent, evidence of patches)
-  - Ask an expert (message template)
-  - If a plugin doesn't work out of the box, that might be good security. It's a good reason to double-check that there isn't a newer safer plugin.
 
 ### Stuff to keep up on
   - Public comments and XSS
@@ -238,18 +252,7 @@ and [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic
 
     Tweak Settings => PHP Settings => Maximum Upload Size
 
-### Be a good neighbor
-  - limit file uploads
-  - actively moderate, or just disable comments and discussion groups
-  - turn off what you're no longer using.
 ### Use CheckLists
-
-  https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings
-
-  https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist
-
-  Basics:
-    - https://documentation.cpanel.net/display/CKB/Basic+Security+Concepts
 
   Basics:
     Authentication methods
@@ -258,10 +261,6 @@ and [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic
     Security tokens
     URL referrer checks
     Password strength
-
-  CPanel Recommended Security Settings Checklist:
-  https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist
-    IMPORTANT: Call attention to "EasyApache Modules to avoid"
 
 ## General Principles
   - if you run a chmod command, don't miss.
