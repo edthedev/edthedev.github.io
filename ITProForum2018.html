@@ -17,9 +17,10 @@
 	  .remark-slide, .remark-slide-container {
 		  background-image: url("static/img/webcon2016/slidesidebar.jpg");
 	  }
+    /*
 	  .remark-slide-content {
 		  background-image: url("static/img/webcon2016/slidebg.jpg");
-	  }
+	  }*/
 	  img {
 		  float:right;
 		  border-radius:22px;
@@ -46,12 +47,6 @@
   </head>
   <body>
 
-<!-- Raw Notes -->
-<!--
-
-
--->
-
 
 <textarea id="source">
 
@@ -68,6 +63,8 @@ at [University of Illinois IT Professionals Forum](https://www.itproforum.illino
 This slide deck is online at http://edward.delaporte.us
 
 ???
+
+TODO: Grab screenshots of resource websites.
 
 Edward
 - I am a web server security expert.
@@ -90,42 +87,131 @@ Why Busey Cares
 - Technology Partnerships
 - FirsTech subsidiary - quiet integration partner
 
+Overview: 7ish slides.
+2 minutes per slide. 
+Works out to 15 minutes?
+Want to bump that up to 30 minutes, then leave plenty of time for Q and A.
+
+Disclaimer: My security team is amazing, so my edge may have dulled.
+
 ---
 
-# Why this presentation, why today?
+# Threats
 
-### cPanel 
-- cPanel does everything. Maybe too much?
-- No one is safe.
+- Misconfigurations
+- Add-Ons
+- Comments
+- Uploads
+- Stale Users
+
+---
+
+# Solutions
+
+- Hosted cPanel
+- Disable Unused Features 
+- Use Single Sign On
+- Apply Checklists 
+
+---
+
+## Misconfiguration
+
+ "The difference from an easy example solution and the best example could be security."
+
+---
+
+## Add-Ons
+
+Vet your add-ons
+- License
+- Commit History
+- Open / Closed Issues
+- Number of Forks
+
+---
+
+## Bad Comments
+
+- Spam
+- Links to more spam.
+- Links to viruses.
+- Cross Site Script (XSS) Attacks
+  - Steal Passwords
+  - Launch Pop-Ups
 
 ???
 
---- 
+- Watch for innocent looking comment text with link URL to spam.
 
-### Threat CheckList
+TODO: Embed Spam short here?
 
-- Misconfigurations
-  - Stack Overflow - the difference from a quick working example and the best example could be security. Do the extra work to stay safe. Future you thanks you.
-- Add-Ons
-  - Vet your add-ons
-- Comments
-  - Anonymous comments
-  - Unmoderated comments
-  - Spam comments
-  - XSS attacks
-- Uploads
-  - Some attacks are big. Set a trivial limit to prevent these.
-  - Whitelist by type: Don't allow file types you don't expect. PHP, INI, etc.
-- Stale Users
-  - OS Users -
-    > lastlog -t 10000 > temp1; lastlog -t 10 > temp2; diff temp1 temp2; rm temp1; rm temp2
-  - App users - specific per app
-- Apply [cPanel Community Recommendations](https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist)
-and [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic+Security+Concepts)
-- Need logins? Use SSO 
+---
+
+## Good Comments
+
+- Are authenticated
+- Are moderated
+- Or are disabled
+
+---
+
+## Uploads
+
+- Set file size limits.
+  - Some of the worst attacks are really big. 
+  - Most useful files are small.
+- Set file type limits. 
+  - Most attacks require unusual file types.
+  - Do allow file types you expect.
+  - Don't allow any other file types.
+
+---
+
+## Stale Users
+
+- Operating system users
+  > lastlog -t 10000 > temp1; lastlog -t 10 > temp2; diff temp1 temp2; rm temp1; rm temp2
+- Wordpress logins
+- SQL logins
+- Drupal logins
+- Wiki logins
+- Knowledge base logins
+
+For each, you need 
+- strong password rules
+- discourage password reuse
+- enforce periodic password changes
+- monitor login activity - not from unexpected part of the world, not robot speed, not brute force guessing passwords...
+- clean up stale logins
+
+???
+
   - Getting Authentication right is hard. Let central IT do it for you. (See Engineering IT FAQ).
   - You don't want to manage users and passwords, if you don't have to.
   - You certaintly don't want to have duplicate passwords and expose them.
+
+---
+
+## Stale Users
+
+***Or***
+
+---
+
+## Stale Users
+
+*use Single Sign On*
+
+???
+
+TODO: Link and screenshot here.
+
+---
+
+- Apply [cPanel Community Recommendations](https://documentation.cpanel.net/display/CKB/Recommended+Security+Settings+Checklist)
+and [Basic Security Concepts](https://documentation.cpanel.net/display/CKB/Basic+Security+Concepts)
+- Need logins? Use SSO 
 
 --- 
 
@@ -133,6 +219,8 @@ How to Secure SSH:
   https://documentation.cpanel.net/display/CKB/How+to+Secure+SSH
     Suggest as follow-up practice.
 
+Securing cPanel
+https://documentation.cpanel.net/display/CKB/Tips+to+Make+Your+Server+More+Secure
 
 Engineering IT CPanel User Guide:
   https://answers.uillinois.edu/illinois.engineering/page.php?id=79074
@@ -218,7 +306,6 @@ Happy to hear that you're talking on this. cPanel is neat, and
 - But there has to be agreement on everything from purpose to features to limits (and that's really where I think it gets fuzzy).
 
 --- 
-
 # Questions?
 
 - edward.delaporte@busey.com
@@ -232,11 +319,6 @@ Happy to hear that you're talking on this. cPanel is neat, and
 <img class='flow' src="static/img/webcon2016/mvcPartial.svg" />
 <img src='static/img/webcon2016/addview.png' class='left'/>
 <img src='static/img/webcon2016/addListViewModelPartial.png' class='capture left'/>
-
-
-- Layout = null tells Razor not to add Busey Logo header and copyright footer so we can include it in another page.
-- @ sign invokes CSharp code.
-- We did our data fetching and number crunching in the controller.
 
 ---
 
