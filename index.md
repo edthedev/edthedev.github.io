@@ -1,4 +1,3 @@
 ## More Posts
 
-- [Older Posts at EdTheDev.com](http://EdTheDev.com)
-- [Older Posts on GitHub](https://github.com/edthedev/edthedev.github.io/tree/master/blog)
+- [Fall 2018 IT Pros Forum - Intro to Terraform](http://joanna.delaporte.us/terraform.html)
