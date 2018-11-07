@@ -14,13 +14,14 @@
         font-weight: normal;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-	  /* .remark-slide, .remark-slide-container {
+	   .remark-slide, .remark-slide-container {
 		  background-image: url("static/img/webcon2016/slidesidebar.jpg");
-	  }*/
+	  }
     
+		/*
 	  .remark-slide-content {
 		  background-image: url("static/img/itpro2018/bg_others.jpg");
-	  }
+	  }*/
 	  img {
 		  float:right;
 		  border-radius:22px;
@@ -80,11 +81,21 @@ EdTheDev on GitHub
 # Overview: 
 
 - Why Git?
-- Some hands-on Git
-- A web based tutorial
+- Hands on with Git (and PowerShell)
 - Quick Tour of some Tools
+- Advanced Git Web Exercies
 - Question / Answer
 - Optional Bonus: Your First GitHub Pull Request
+
+???
+
+- Examples use PowerShell for consistency
+- you can probably get by without PowerShell for these exercises.
+- Remind me to take breaks. 
+- Please ask questions as we go. 
+- Interupt me. 
+- Let's interact.
+- You may finish early or run later, I'm here to support your learning. 
 
 ---
 
@@ -92,32 +103,36 @@ EdTheDev on GitHub
 
 - An Annecdote
 - [Stack Overflow on Git Usage](https://insights.stackoverflow.com/survey/2018/#work-version-control)
+- Not just for Software Developers
 
-```
 "Git is the dominant choice for version control for developers today, with almost 90% of developers checking in their code via Git."
-- Stack Overflow 2018 Survey
-```
 
-```
 "The majority of developers check in code multiple times per day. Professional developers are less likely to check in code rarely or never."
-- Stack Overflow 2018 Survey
-```
+
+Both quotes are from the Stack Overflow 2018 Survey
 
 ???
 
 - Tell Annecode - I voted Mercurial. Everyone else voted git.
 - Pull up linked Stack Overflow visual
-- we use Git as a Microsoft shop
+- Busey is a fully Microsoft shop - we use Git 
 - Maybe scroll down to salary --- coincidence?
+- With Intrastructure as Code - Knowledge workers who are not developers are benefiting from developer tools
+- You don't have to become a developer
 
 ---
 
 # Why Git?
 
-```git init
-git add *
-git commit -a -m "Let's keep track of all this for later."
+```powershell
+	git init
+	git add *
+	git commit -a -m "Let's keep track of all this for later."
 ```
+
+<a href="https://xkcd.com/1597/">
+<img class='capture' src='static/img/itpro2018fall/git.png'/>
+</a>
 
 ???
 
@@ -129,6 +144,17 @@ git commit -a -m "Let's keep track of all this for later."
 ---
 
 # Hands On with Git and PowerShell
+
+.small[
+"If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. 
+
+Just wait through a few minutes of 
+
+'It's really pretty simple, just think of branches as...' 
+
+and eventually you'll learn the commands that will fix everything."
+]
+
 
 - Some Git Basics
 - Create a Git Remote
@@ -147,6 +173,8 @@ https://learngitbranching.js.org/
 ---
 
 # Git Tools Tour
+
+<img class='flow' src='static/img/itpro2018fall/git_commit.png'/>
 
 - VSCode
 - Visual Studio Professional / Community
