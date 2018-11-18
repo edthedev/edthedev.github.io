@@ -190,3 +190,4 @@ Ablesoft Solutions Inc. Oregon, IL
 #### Community Involvement
 
 - Hosts free "Learn Programming In Scratch!" class for elementary students at the Urbana Free Library
+- Webmaster - Rotary Club of Champaign
