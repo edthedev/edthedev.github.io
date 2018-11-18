@@ -151,7 +151,7 @@ Ablesoft Solutions Inc. Oregon, IL
 
 #### Web Site Administrator, Various (pro bono)		January 2007 - Present
 
- - Created [MyGoal.space](https://mygoal.space) - Helps you plan your "To Do" list around goals that server your vision. 
+
  - Writes Ansible playbooks to maintain various permutations of the LAMP stack.
  - Handles hosting, DNS and administration of various not-for-profit websites.
  - Operates various web services including WordPress, Drupal, Dokuwiki, and Minecraft.
