@@ -17,14 +17,24 @@ I make computers better at meeting the needs of humans.
 
 ## Career
 
-#### Programming Team Lead				January 2017  - Present
+#### Assistant Vice President Manager of Software Development    August 2018 - Preaent
+
+- Manages all senior software engineers and senior automation engineers for First Busey Corporation.
+- Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
+- Led successful custom software implementations that added another $1 million new revenue in 2018.
+  
+#### Programming Team Lead				January 2017  - August 2018
 First Busey Corporation - Busey Bank, Champaign, IL
 
 - Manages three software developer direct reports.
 - Ensures resource and timeline needs are met for software development projects.
 
-- Occassionally presents technology demonstrations to prospective clients.
+- Presents technology demonstrations to prospective clients.
 - Collaborates with security, infrastructure, operations and sales teams to improve our baseline product offerings.
+- Provided integration solutions to support the aquisitions of Pulaski Bank of St. Loius and First Community Bank of Chicago.
+- Provided data analysis support as the organization grew from $3.7 billion in 2015 managed assets to $7.9 billion in 2017.
+
+
 
 #### Senior IT Programmer				July 2015  - January 2017
 First Busey Corporation - Busey Bank, Champaign, IL
