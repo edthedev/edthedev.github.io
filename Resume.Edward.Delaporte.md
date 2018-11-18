@@ -181,13 +181,18 @@ Ablesoft Solutions Inc. Oregon, IL
 - University of Illinois Information Technology Leadership Workshop
 - [SANS](https://www.sans.org/) On-site Secure Software Development Training
 - Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
-- Attended and presented at University of Illinois Webmaster's Conference 2016
-- Attended and presented at University of Illinois IT Professional's Forum 2016
-- OWASP Top Ten - Citigal 2017
+- Presented at University of Illinois Webmaster's Conference 2016
+- Presented at University of Illinois IT Professional's Forum 2016
+- Presented at Urbana IT Professionals Forum Spring 2018
+- Presented at Urbana IT Professional Forum Fall 2018
+- Completed OWASP Top Ten Training - Citigal 2017, 2018
 - Defensive Programming for C# - Citigal 2017
 
 
 #### Community Involvement
 
 - Hosts free "Learn Programming In Scratch!" class for elementary students at the Urbana Free Library
-- Webmaster - Rotary Club of Champaign
+- Webmaster - Rotary Club of Champaign 2018
+
+- OWASP Top Ten Privacy Project - Core contributor 2015
+
