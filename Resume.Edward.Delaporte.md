@@ -17,7 +17,7 @@ I make computers better at meeting the needs of humans.
 
 ## Career
 
-#### Assistant Vice President Manager of Software Development    August 2018 - Preaent
+#### Assistant Vice President - Manager of Software Development    August 2018 - Preaent
 
 - Manages all senior software engineers and senior automation engineers for First Busey Corporation.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
