@@ -1,4 +1,10 @@
 
+## PowerShell Examples
+
+PowerShell is my favorite shell environment. I'll never consider using crusty old disgusting `bash`, `zsh`, or `csh` again. In comparison, they are terrible. PowerShell 6 is open source and runs everywhere. There's no reasonable exscuse for any professional to be using anything else as their primary shell, today.
+
+Holy war inducing comments out of the way, here's some scripts I wrote that include some surprisingly re-usable patterns.
+If you're reading this, I probably am standing behind you and asked you to Google for this page because I could not remember my own favorite command syntax. Hi, future me! Glad this page is helping you and your friend!
 
 ```powershell
 <#
