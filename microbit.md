@@ -7,7 +7,7 @@
 
 I wanted a trivial demo to make my Microbit smile. So I wrote one in less time than it took me to realize that the same exact program was available in the second tutorial on the main site. Many of my ideas a very unoriginal. This is one. Ask me about the time I wrote a binary clockface for my Pebble smart watch.
 
-[Count up to 5 of 5 different thing](https://makecode.microbit.org/_Heid2TJmobLM)
+[Count up to 5 of 5 different things](https://makecode.microbit.org/_Heid2TJmobLM)
 
 Need to keep track of a small number of things, and only have an obscrure microchip and two AAA batteries? In that unlikely case, I have just the solution you're looking for!
 
