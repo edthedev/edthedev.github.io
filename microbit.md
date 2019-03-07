@@ -13,7 +13,7 @@ Need to keep track of a small number of things, and only have an obscrure microc
 
 [Strobe Nametag](https://makecode.microbit.org/_KvUaa2KjyE0C)
 
-If I ever use Microbit as a name tag, I want a little extra puzzazz.
+If I ever use Microbit as a name tag, I want a little extra pizzazz.
 
 ## Radio Demos
 
