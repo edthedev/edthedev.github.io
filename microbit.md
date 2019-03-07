@@ -11,6 +11,10 @@ I wanted a trivial demo to make my Microbit smile. So I wrote one in less time t
 
 Need to keep track of a small number of things, and only have an obscrure microchip and two AAA batteries? In that unlikely case, I have just the solution you're looking for!
 
+[Strobe Nametag](https://makecode.microbit.org/_KvUaa2KjyE0C)
+
+If I ever use Microbit as a name tag, I want a little extra puzzazz.
+
 ## Radio Demos
 
 Micro:Bit is a terrific platform for learning asynchronous communication.
