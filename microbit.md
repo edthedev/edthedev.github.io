@@ -38,6 +38,6 @@ The [RingBig Car][1] frame is the most affordable robot body I have found.
 
 ### WaveShare Joystick for Micro:Bit
 
-[Musical Gamepad][3] turns your WaveShare Joystick into a primitive Midi keyboard. This was my first test that the library and hardware are compatible. Also, it is not obvious at a glance, but the WaveShare Joystick can sing!
+[Musical Gamepad][3] turns your WaveShare Joystick into a primitive Midi keyboard. This was my first test that the library and hardware are compatible. And the WaveShare Joystick can sing!
 
 [3]: https://makecode.microbit.org/_hubWLC3u7DRH
