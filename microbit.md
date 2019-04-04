@@ -18,7 +18,6 @@ If I ever use Microbit as a name tag, I want a little extra pizzazz.
 
 Micro:Bit is a terrific platform for learning asynchronous communication.
 
-
 [Secret Messenger](https://makecode.microbit.org/_PLj13fcW50Wm)
 
 Send messages to a friend's Micro:Bit, one bit LED at a time. Push A to send a blank space. Push B to send a lit LED. Push A and B to reset the grid.
@@ -27,7 +26,7 @@ Send messages to a friend's Micro:Bit, one bit LED at a time. Push A to send a b
 
 Why play a terrific game with a simple clothes button, when you can use batteries, microchips, and radios instead?
 
-## Robot Frame Demos
+### Robot Frame Demos
 
 The [RingBig Car][1] frame is the most affordable robot body I have found.
 [Wanderer](https://makecode.microbit.org/_MeWdP5dk9ELC) is a simple demonstration program that makes it wander randomly around the room. This is for an older version of the MicroBit framework, so it can be hard to find the RingBit control library without a direct link, at the moment.
@@ -37,8 +36,7 @@ The [RingBig Car][1] frame is the most affordable robot body I have found.
 [1]: https://www.elecfreaks.com/estore/ring-bit-car-mirco-bit-educational-smart-robot-kit-for-kids-ringbit-car.html
 [2]: https://makecode.microbit.org/_02D1CwRYqMWD
 
-
-## WaveShare Joystick for Micro:Bit
+### WaveShare Joystick for Micro:Bit
 
 [Musical Gamepad][3] turns your WaveShare Joystick into a primitive Midi keyboard. This was my first test that the library and hardware are compatible. Also, it is not obvious at a glance, but the WaveShare Joystick can sing!
 
