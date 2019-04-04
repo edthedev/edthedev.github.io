@@ -5,7 +5,14 @@ body
 	background-color: #EEE !important;
 }
 
-h1, h2, h3, h4 {
+h1 {
+	font-size: 3.5em;
+	font-weight: 400;
+	letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2, h3, h4 {
 	padding-left: 1em;
 	font-family: 'times new roman', times, serif !important;
 	font-size:140%;
