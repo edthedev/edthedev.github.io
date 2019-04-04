@@ -41,3 +41,14 @@ The [RingBig Car][1] frame is the most affordable robot body I have found.
 [Musical Gamepad][3] turns your WaveShare Joystick into a primitive Midi keyboard. This was my first test that the library and hardware are compatible. And the WaveShare Joystick can sing!
 
 [3]: https://makecode.microbit.org/_hubWLC3u7DRH
+
+### Remote Control your RingBitCar
+
+What could be more fun than having a remote control robot?
+
+Download [Remote Control - RingBitCar][4] to your RingBitCar, and [Remote Control - WaveShare Joystick][5] to your WaveShare JoyStick and enjoy!
+
+[4]: https://makecode.microbit.org/_00c0adJDK9wJ
+
+
+[5]: https://makecode.microbit.org/_aThU8kXhwLW7
