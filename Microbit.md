@@ -52,3 +52,12 @@ Download [Remote Control - RingBitCar][4] to your RingBitCar, and [Remote Contro
 
 
 [5]: https://makecode.microbit.org/_aThU8kXhwLW7
+
+
+### Swarm Programs for RingBitCaro
+
+You will want two or more MicroBits connected to RingBitCar to use this program.
+
+[Rat!] is a program for MicroBit and RingBitCar that uses the Bluetooth radio and wheels to seek out other nearby robots who are running the same program.
+
+[6]: https://makecode.microbit.org/_2DfLE1ir202a
