@@ -60,4 +60,9 @@ You will want two or more MicroBits connected to RingBitCar to use this program.
 
 [Rat!][6] is a program for MicroBit and RingBitCar that uses the Bluetooth radio and wheels to seek out other nearby robots who are running the same program.
 
-[6]: https://makecode.microbit.org/_2DfLE1ir202a[
+[6]: https://makecode.microbit.org/_2DfLE1ir202a
+
+[Remote Rat Car][7] and [Remote Rat Remote][8] can be added to the mix if you want to control a member of the swarm. If you want to use a stand-alone Microbit as the remote, then try [Trivial Rat Remote][9]
+[7]: https://makecode.microbit.org/_10DW3jLJ0Vdq
+[8]: https://makecode.microbit.org/_VkrYeTMc00q5
+[9]: https://makecode.microbit.org/_L2bWHEhtLadu
