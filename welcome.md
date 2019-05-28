@@ -1,3 +1,3 @@
 ## Welcome to Joanna Delaporte's Site
 
-I share various ideas and solutions here.
+[Joanna Delaporte on LinkedIn](https://www.linkedin.com/in/joanna-delaporte-81a13182/)
