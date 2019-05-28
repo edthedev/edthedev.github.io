@@ -1,2 +1,2 @@
-You have found the source code to (the next version of) the website EdTheDev.com.
-You can also [read EdTheDev.com as HTML](http://edthedev.github.io).
+You have found the source code to the website Edward.Delaporte.us.
+You can also [read Edward.Delaporte.us as HTML](http://edthedev.github.io).
