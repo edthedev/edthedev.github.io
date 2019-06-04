@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Securing cPanel</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("static/img/webcon2016/slidesidebar.jpg");
+	  }
+    
+	  .remark-slide-content {
+		  background-image: url("static/img/itpro2018/bg_others.jpg");
+	  }
+	  img {
+		  float:right;
+		  border-radius:22px;
+	  }
+	  img.left {
+		  float:left;
+	  }
+	  img.little {
+		  height:200px;
+	  }
+	  img.capture {
+		  border-radius:1px;
+	  }
+	  img.stretch {
+		  width:45%;
+		  padding: 10px;
+	  }
+	  img.flow{
+		  width: 100%;
+		  padding: 10px;
+		  background-color: white;
+	  }
+    </style>
+  </head>
+  <body>
+
+
+<textarea id="source">
+
+# Git Cookbook
+
+*** or ***
+
+**How I learned to stop worrying, and love `git reset --hard HEAD`**
+
+.small[
+Presented by [Edward Delaporte](mailto:edward.delaporte@busey.com)
+
+for [Busey Bank](https://www.busey.com)
+
+at [University of Illinois IT Professionals Forum](https://www.itproforum.illinois.edu/) on June 14, 2018.
+]
+
+This slide deck is online at http://edward.delaporte.us
+
+???
+
+Edward
+- Team of 10 software developers
+- Team across 4 cities (Champaign, Decatur, Blomington, St. Louis)
+- Support 120 products
+- We move about $1 million per day
+- Payment Card Industry
+- Financial Sector Regulations
+- 100% code review shop
+- All developers take extensive security training
+- Everything is audited
+- Out of date JavaScript libs end up on the desk of the EVP of Risk and Compliance who reports to our CEO
+
+Slide Count:
+
+--- 
+
+TOC
+
++ Who broke this? `git blame`
++ git Log -L
++ Why revert? (Tell of revert revert)
++ git reset --patch
++ git checkout -p filename
++ cherry pick
+
+
+(IMPORTANT??)If I made a commit and merge and then found a bug, how do I find the change involved in making that bug happen and fixing it? (Bisect)
+
+---
+
+## What am I about to commit?
+
+```
+git diff {filename}
+```
+---
+
+## What else can `git diff` do?
+
+[Quite a bit][2]
+
+[2]: https://git-scm.com/docs/git-diff
+
+```
+git diff [<options>] [<commit>] [--] [<path>…​]
+git diff [<options>] --cached [<commit>] [--] [<path>…​]
+git diff [<options>] <commit> <commit> [--] [<path>…​]
+git diff [<options>] <blob> <blob>
+git diff [<options>] --no-index [--] <path> <path>
+```
+
+???
+
+- Diff can do more
+- but the default target is the last commit
+
+--- 
+
+## I committed on `master`
+
+If you're lucky, and it was only a commit or two
+```
+# Find my commit is named CWB57
+git log
+# Where I meant to be
+git checkout story_0700
+git cherry-pick CWB57
+# Clean up local master
+git checkout master
+git reset --hard origin/master
+# Back to work
+git checkout story_0700
+```
+--- 
+
+## I committed on `master`
+
+If you committed a lot, and want to use commands you understand
+```
+# Making a new branch brings along your unpushed commits)
+git branch -b story_0700_temp
+# Clean up local master
+git checkout master
+git reset --hard origin/master
+# Get back to work
+git checkout story_0700
+git merge story_0700_temp
+# Clean up
+git branch -D story_0700_temp
+```
+
+--- 
+
+## I committed on `master`
+
+If you used Stack Overlfow, you may see something more like this.
+It keeps your commit history cleaner.
+```
+# New branch (brings your unpushed commits)
+git branch -b story_0700
+# Cleaner (to history) way to get caught up
+git rebase develop
+# Clean up local master
+git checkout -B master origin/master
+# Back to work
+git checkout story_0700
+```
+
+---
+
+## I committed on `master`
+
+How to prevent committing to master?
+
+[Full solution at Stack Overflow][10]
+[10]: https://stackoverflow.com/questions/40462111/git-prevent-commits-in-master-branch
+
+#!/bin/sh
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+(At the repo)
+Create file .git/hooks/pre-commit with following content:
+if [ "$branch" = "master" ]; then
+  echo "You can't commit directly to master branch"
+  exit 1
+fi
+Make it executable (not required on Windows):
+
+$ chmod +x .git/hooks/pre-commit
+
+
+checkout vs reset vs revert vs rebase
+
+---
+
+<img class='stretch left little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
+<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
+<img class='left stretch little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
+<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
+
+---
+
+
+???
+
+- You can find this slide deck at Edward.Delaporte.us
+
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="static/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
