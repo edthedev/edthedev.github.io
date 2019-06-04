@@ -11,7 +11,6 @@ You can also read [a few notes about my tool chain](tech.html).
 
 - [About Myself](/myself.html)
 - [On Coding](/coding.html) 
-- [Presentations](/presentations.html)
 - [My Art](/gallery.html)
 - [Fish Bowl](/fishbowl.html)
 - [Resume](/resume.html)
