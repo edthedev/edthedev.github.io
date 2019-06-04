@@ -17,7 +17,7 @@ I make computers better at meeting the needs of humans.
 
 ## Career
 
-#### Assistant Vice President - Manager of Software Development    August 2018 - Preaent
+#### Assistant Vice President - Manager of Software Development    August 2018 - Present
 
 - Manages all senior software engineers and senior automation engineers for First Busey Corporation.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
@@ -185,7 +185,7 @@ Ablesoft Solutions Inc. Oregon, IL
 - Presented at University of Illinois IT Professional's Forum 2016
 - Presented at Urbana IT Professionals Forum Spring 2018
 - Presented at Urbana IT Professional Forum Fall 2018
-- Completed OWASP Top Ten Training - Citigal 2017, 2018
+- Completed OWASP Top Ten Training - Citigal 2017, 2018, 2019
 - Defensive Programming for C# - Citigal 2017
 
 
