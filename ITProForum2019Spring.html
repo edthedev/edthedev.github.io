@@ -124,7 +124,7 @@ git diff [<options>] --no-index [--] <path> <path>
 - Diff can do more
 - but the default target is the last commit
 
---- 
+---
 
 ## I committed on `master`
 
@@ -141,7 +141,7 @@ git reset --hard origin/master
 # Back to work
 git checkout story_0700
 ```
---- 
+---
 
 ## I committed on `master`
 
@@ -159,7 +159,7 @@ git merge story_0700_temp
 git branch -D story_0700_temp
 ```
 
---- 
+---
 
 ## I committed on `master`
 
@@ -185,6 +185,7 @@ How to prevent committing to master?
 [Full solution at Stack Overflow][10]
 [10]: https://stackoverflow.com/questions/40462111/git-prevent-commits-in-master-branch
 
+```
 #!/bin/sh
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
@@ -195,10 +196,13 @@ if [ "$branch" = "master" ]; then
   echo "You can't commit directly to master branch"
   exit 1
 fi
+```
 Make it executable (not required on Windows):
-
+```
 $ chmod +x .git/hooks/pre-commit
+```
 
+---
 
 checkout vs reset vs revert vs rebase
 
@@ -216,6 +220,7 @@ Why?
 
 ---
 
+## Discuss
 
 ---
 
