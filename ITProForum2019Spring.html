@@ -82,11 +82,15 @@ Edward
 
 Slide Count:
 
---- 
+---
 
-TOC
+## Cookbook Contents 
 
-+ Who broke this? `git blame`
++ One Liners
++ Pretty Tools
++ Who decided that?! (git blame)
++ The Revert-Revert pattern
+
 + git Log -L
 + Why revert? (Tell of revert revert)
 + git reset --patch
@@ -95,6 +99,108 @@ TOC
 
 
 (IMPORTANT??)If I made a commit and merge and then found a bug, how do I find the change involved in making that bug happen and fixing it? (Bisect)
+
+---
+
+## One Liners
+
+*What am I about to commit?*
+
+>git diff
+
+---
+
+## Atlassian SourceTree
+
+- [Atlassian SourceTree for Mac and Windows](https://www.sourcetreeapp.com/) 
+
+???
+
+- Point and click your way through Git history
+- Visual branch/merge history
+- See past revisions
+- Diff between arbitrary revisions
+- Manage branches and branch operations in a visual way
+
+---
+
+## Visual Studio Code 
+
+- [Free/Open/Cross Platform from Microsoft](https://code.visualstudio.com/)
+- [GitLens](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
+
+???
+
+- VsCode Handles git out of the box.
+- Searching Git in the plugin marketplace returned 5 pages of results.
+- Code Lens - see who changed which line last
+- Various visual ways to explore history
+
+
+---
+
+## git log -L
+
+```powershell
+PS C:\Users\edthe\edthedev.github.io> git log -L 7,10:index.html
+```
+
+```powershell
+commit 4443e18da5c5729bdb8b7251dda5a8bb46b698a3
+Author: EdTheDev <edward@delaporte.us>
+Date:   Mon Jun 3 21:23:45 2019 -0500
+
+    Move presentations into more recent format
+
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -7,4 +7,4 @@
+ <body>
+ <div class="bootmark"
+-data-src="Welcome.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
++data-src="Welcome.md presentations.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
+ data-join="---"
+
+commit 8a76e94d789cc20c8b24987b94275462382b4acb
+Author: EdTheDev <edward@delaporte.us>
+Date:   Wed Apr 3 20:47:48 2019 -0500
+
+    Change up the order a bit.
+
+...more of same from above...
+```
+
+---
+
+## git blame
+
+```powershell
+PS C:\Users\edthe\edthedev.github.io> git blame .\index.html
+```
+
+```powershell
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500  1) <!DOCTYPE html>
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500  2) <html>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  3) <head>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  4) <link rel="stylesheet" href="static/edthedev.css" />
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  5) <script src="static/bootmark.min.js"></script>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  6) </head>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  7) <body>
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000  8) <div class="bootmark"
+4443e18d (EdTheDev         2019-06-03 21:23:45 -0500  9) data-src="Welcome.md presentations.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000 10) data-join="---"
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000 11) ></div>
+7cf65857 (Edward Delaporte 2015-07-25 12:19:15 -0500 12) </body>
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500 13) </html>
+```
+
+???
+
++ Each line of the file.
++ Who last modified each line.
++ When last modified each line.
+
 
 ---
 
