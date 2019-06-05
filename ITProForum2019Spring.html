@@ -88,11 +88,10 @@ Slide Count:
 
 + One Liners
 + Why revert? (Introducing the Revert-Revert pattern)
++ Git Interactive
 + Why are lines 7-10 of this file so strange? (git log -L)
 + Who decided that?! (git blame)
 + Pretty Tools
-+ git reset --patch
-+ git checkout -p filename
 + I committed to master.
 + How to protect master
 
@@ -150,35 +149,6 @@ index 6a58513..323781d 100644
 
 Stage this hunk [y,n,q,a,d,e,?]?
 ```
-
----
-
-## Atlassian SourceTree
-
-- [Atlassian SourceTree for Mac and Windows](https://www.sourcetreeapp.com/) 
-
-???
-
-- Point and click your way through Git history
-- Visual branch/merge history
-- See past revisions
-- Diff between arbitrary revisions
-- Manage branches and branch operations in a visual way
-
----
-
-## Visual Studio Code 
-
-- [Free/Open/Cross Platform from Microsoft](https://code.visualstudio.com/)
-- [GitLens](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
-
-???
-
-- VsCode Handles git out of the box.
-- Searching Git in the plugin marketplace returned 5 pages of results.
-- Code Lens - see who changed which line last
-- Various visual ways to explore history
-
 
 ---
 
@@ -247,33 +217,35 @@ e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  7) <body>
 
 ---
 
-## What am I about to commit?
+## Atlassian SourceTree
 
-```
-git diff {filename}
-```
----
-
-## What else can `git diff` do?
-
-[Quite a bit][2]
-
-[2]: https://git-scm.com/docs/git-diff
-
-```
-git diff [<options>] [<commit>] [--] [<path>…​]
-git diff [<options>] --cached [<commit>] [--] [<path>…​]
-git diff [<options>] <commit> <commit> [--] [<path>…​]
-git diff [<options>] <blob> <blob>
-git diff [<options>] --no-index [--] <path> <path>
-```
+- [Atlassian SourceTree for Mac and Windows](https://www.sourcetreeapp.com/) 
 
 ???
 
-- Diff can do more
-- but the default target is the last commit
+- Point and click your way through Git history
+- Visual branch/merge history
+- See past revisions
+- Diff between arbitrary revisions
+- Manage branches and branch operations in a visual way
 
 ---
+
+## Visual Studio Code 
+
+- [Free/Open/Cross Platform from Microsoft](https://code.visualstudio.com/)
+- [GitLens](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
+
+???
+
+- VsCode Handles git out of the box.
+- Searching Git in the plugin marketplace returned 5 pages of results.
+- Code Lens - see who changed which line last
+- Various visual ways to explore history
+
+
+---
+
 
 ## I committed on `master`
 
@@ -401,6 +373,27 @@ index 652d5ca..52e0f9e 100644
                   float:right;
 Apply this hunk to index and worktree [y,n,q,a,d,j,J,g,/,e,?]?
 ```
+
+---
+
+## What else can `git diff` do?
+
+[Quite a bit][2]
+
+[2]: https://git-scm.com/docs/git-diff
+
+```
+git diff [<options>] [<commit>] [--] [<path>…​]
+git diff [<options>] --cached [<commit>] [--] [<path>…​]
+git diff [<options>] <commit> <commit> [--] [<path>…​]
+git diff [<options>] <blob> <blob>
+git diff [<options>] --no-index [--] <path> <path>
+```
+
+???
+
+- Diff can do more
+- but the default target is the last commit
 
 ---
 
