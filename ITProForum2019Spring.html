@@ -87,16 +87,14 @@ Slide Count:
 ## Cookbook Contents 
 
 + One Liners
-+ Pretty Tools
++ Why revert? (Introducing the Revert-Revert pattern)
++ Why are lines 7-10 of this file so strange? (git log -L)
 + Who decided that?! (git blame)
-+ The Revert-Revert pattern
-
-+ git Log -L
-+ Why revert? (Tell of revert revert)
++ Pretty Tools
 + git reset --patch
 + git checkout -p filename
-+ cherry pick
-
++ I committed to master.
++ How to protect master
 
 (IMPORTANT??)If I made a commit and merge and then found a bug, how do I find the change involved in making that bug happen and fixing it? (Bisect)
 
@@ -112,9 +110,15 @@ Slide Count:
 
 >git revert {commit hash}
 
+*I need a git server, but all I have is a Windows file share.*
+
+>cd \\remote\share\folder
+>git init --bare
+
 ???
 
 + Talk about the Revert Revert pattern
++ Talk about using a Windows folder like any other remote
 
 ---
 
