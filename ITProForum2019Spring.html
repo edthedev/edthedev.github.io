@@ -87,13 +87,14 @@ Slide Count:
 ## Cookbook Contents 
 
 + One Liners
-+ Why revert? (Introducing the Revert-Revert pattern)
++ General Advice
 + Git Interactive
 + Why are lines 7-10 of this file so strange? (git log -L)
-+ Who decided that?! (git blame)
++ Who decided lines 7-10 of this file should be so strange?! (git blame)
 + Pretty Tools
-+ I committed to master.
-+ How to protect master
++ What to do when I committed to master.
++ How to protect master.
++ Time for Discussion
 
 ---
 
@@ -120,6 +121,28 @@ Slide Count:
 
 + Talk about the Revert Revert pattern
 + Talk about using a Windows folder like any other remote
+
+---
+
+## General Advice 
+
+*I pushed a bad tag*
+
+> Make a new tag. Seriously.
+
+*I know what I want the final files to look like, but not how to get it there in git.*
+
+> Copy/Paste is your friend.
+
+???
+
+Why make a new tag?
+- You can delete and remake the tag, but your correction may not move across your team as quick as the mistake.
+- So fixing the tag is gambling, while adding a minor release digit keeps everyone on the same page.
+
+Why is copy/paste great?
+- Just make it right.
+- Your history will show you got lost, and forced it right. That has value.
 
 ---
 
@@ -299,12 +322,8 @@ git checkout story_0700
 
 ---
 
-## I committed on `master`
+## How to protect `master`
 
-How to prevent committing to master?
-
-[Full solution at Stack Overflow][10]
-[10]: https://stackoverflow.com/questions/40462111/git-prevent-commits-in-master-branch
 
 ```
 #!/bin/sh
@@ -323,23 +342,17 @@ Make it executable (not required on Windows):
 $ chmod +x .git/hooks/pre-commit
 ```
 
----
-
-checkout vs reset vs revert vs rebase
-
----
-
-## I pushed a bad tag
-
-Make a new tag. Seriously.
+[Full solution at Stack Overflow][10]
+[10]: https://stackoverflow.com/questions/40462111/git-prevent-commits-in-master-branch
 
 ???
 
-Why?
-- You can delete and remake the tag, but your correction may not move across your team as quick as the mistake.
-- So fixing the tag is gambling, while adding a minor release digit keeps everyone on the same page.
++ Git hooks are just shell scripts.
++ You can and should do more with them.
++ You can make your chat bot cuss out whoever broke the build or forgot to comment.
 
 ---
+
 
 ## Discuss
 
