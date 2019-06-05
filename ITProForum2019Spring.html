@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
   <head>
-    <title>Securing cPanel</title>
+    <title>Advanced Git - Cookbook</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -96,8 +96,6 @@ Slide Count:
 + I committed to master.
 + How to protect master
 
-(IMPORTANT??)If I made a commit and merge and then found a bug, how do I find the change involved in making that bug happen and fixing it? (Bisect)
-
 ---
 
 ## One Liners
@@ -105,6 +103,10 @@ Slide Count:
 *What am I about to commit?*
 
 >git diff
+
+*That was a stupid change.*
+
+>git reset HEAD .\ITProForum2019Spring.html
 
 *Well that was a stupid commit.*
 
@@ -380,6 +382,28 @@ Why?
 <img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
 
 ---
+
+
+```
+PS C:\Users\edthe\edthedev.github.io> git checkout --patch 57f04be6c2d85684869a3194c6a8a24859e60f59
+diff --git b/ITProForum2019Spring.html a/ITProForum2019Spring.html
+index 652d5ca..52e0f9e 100644
+--- b/ITProForum2019Spring.html
++++ a/ITProForum2019Spring.html
+@@ -19,7 +19,7 @@
+          }
+
+          .remark-slide-content {
+-                 background-image: url("static/img/itpro2019spring/background.png");
++                 background-image: url("static/img/itpro2018/bg_others.jpg");
+          }
+          img {
+                  float:right;
+Apply this hunk to index and worktree [y,n,q,a,d,j,J,g,/,e,?]?
+```
+
+---
+
 
 
 ???
