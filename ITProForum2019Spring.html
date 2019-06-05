@@ -108,6 +108,43 @@ Slide Count:
 
 >git diff
 
+*Well that was a stupid commit.*
+
+>git revert {commit hash}
+
+???
+
++ Talk about the Revert Revert pattern
+
+---
+
+*Can I do better at staging my un-commited work?*
+
+>git add --interactive
+
+```
+*** Commands ***
+  1: status       2: update       3: revert       4: add untracked
+  5: patch        6: diff         7: quit         8: help
+What now> p
+           staged     unstaged path
+  1:    unchanged        +4/-0 ITProForum2019Spring.html
+Patch update>>
+diff --git a/ITProForum2019Spring.html b/ITProForum2019Spring.html
+index 6a58513..323781d 100644
+--- a/ITProForum2019Spring.html
++++ b/ITProForum2019Spring.html
+@@ -108,6 +108,10 @@ Slide Count:
+
+ >git diff
+
++*Can I do better at staging my un-commited work?*
++
++>git add --interactive
+
+Stage this hunk [y,n,q,a,d,e,?]?
+```
+
 ---
 
 ## Atlassian SourceTree
