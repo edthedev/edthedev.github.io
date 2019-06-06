@@ -381,14 +381,21 @@ VSCode
 If you're lucky, and it was only a commit or two
 ```
 # Find my commit is named 0219e5ce9
+
 git log
+
 # Where I meant to be
+
 git checkout story_0700
 git cherry-pick 0219e5ce9
+
 # Clean up local master
+
 git checkout master
 git reset --hard origin/master
+
 # Back to work
+
 git checkout story_0700
 ```
 ---
@@ -398,14 +405,21 @@ git checkout story_0700
 If you committed a lot, and want to use commands you understand
 ```
 # Making a new branch brings along your unpushed commits)
+
 git branch -b story_0700_temp
+
 # Clean up local master
+
 git checkout master
 git reset --hard origin/master
+
 # Get back to work
+
 git checkout story_0700
 git merge story_0700_temp
+
 # Clean up
+
 git branch -D story_0700_temp
 ```
 
@@ -417,12 +431,19 @@ If you used Stack Overlfow, you may see something more like this.
 It keeps your commit history cleaner.
 ```
 # New branch (brings your unpushed commits)
+
 git branch -b story_0700
+
 # Cleaner (to history) way to get caught up
+
 git rebase develop
+
 # Clean up local master
+
 git checkout -B master origin/master
+
 # Back to work
+
 git checkout story_0700
 ```
 
