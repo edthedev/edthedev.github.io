@@ -90,8 +90,9 @@ Slide Count:
 + General Advice
 + Your Questions
 + Git Interactive
-+ Why are lines 7-10 of this file so strange? (git log -L)
-+ Who decided lines 7-10 of this file should be so strange?! (git blame)
++ How did line 9 of this file become so strange?  (git log -L)
++ Who decided line 9 should be strange?! (git blame)
+
 + Pretty Tools
 + What to do when I committed to master.
 + How to protect master.
@@ -226,8 +227,9 @@ Git Status
 
 ## Can I do better at staging my un-commited work?
 
-```
-git add --interactive
+`git add --interactive`
+
+```powershell
 *** Commands ***
   1: status       2: update       3: revert       4: add untracked
   5: patch        6: diff         7: quit         8: help
@@ -258,7 +260,7 @@ Stage this hunk [y,n,q,a,d,e,?]?
 
 ---
 
-## Why are lines 7-10 of this file so strange? 
+## How did line 9 of this file become so strange? 
 
 `git log -L`
 
@@ -294,7 +296,7 @@ Date:   Wed Apr 3 20:47:48 2019 -0500
 
 ---
 
-## Who decided lines 7-10 of this file should be so strange?!
+## Who decided line 9 should be strange?!
 
 `git blame`
 
