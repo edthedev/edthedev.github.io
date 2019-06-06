@@ -92,7 +92,6 @@ Slide Count:
 + Git Interactive
 + How did line 9 of this file become so strange?  (git log -L)
 + Who decided line 9 should be strange?! (git blame)
-
 + Pretty Tools
 + What to do when I committed to master.
 + How to protect master.
@@ -392,7 +391,7 @@ git log
 
 # Where I meant to be
 
-git checkout story_0700
+git checkout -b story_0700
 git cherry-pick 0219e5ce9
 
 # Clean up local master
@@ -412,7 +411,7 @@ If you committed a lot, and want to use commands you understand
 ```
 # Making a new branch brings along your unpushed commits)
 
-git branch -b story_0700_temp
+git checkout -b story_0700_temp
 
 # Clean up local master
 
@@ -438,7 +437,7 @@ It keeps your commit history cleaner.
 ```
 # New branch (brings your unpushed commits)
 
-git branch -b story_0700
+git checkout -b story_0700
 
 # Cleaner (to history) way to get caught up
 
