@@ -12,7 +12,8 @@ I make computers better at meeting the needs of humans.
 
 - Bachelor's Degree In Computer Science from the College of Engineering at UIUC in 2006.
 - Writing software professionally since the year 2000.
-- Built a lot of websites for a lot of purposes with a lot of different technologies.
+- Leading software teams since 2011.
+- Has built a lot of websites for a lot of purposes with a lot of different technologies.
 - Has effective work habits and great interpersonal skills.
 
 ## Career
@@ -22,6 +23,13 @@ I make computers better at meeting the needs of humans.
 - Manages all senior software engineers and senior automation engineers for First Busey Corporation.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
+- Interprets vuln scan results and mentors junior and Senior developers in how to remediate
+- Implemented development team self scanning
+- Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
+- Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
+- Led the development team to sucessfully implement ongoing 100% code review.
+- Onboarded the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review.
+- Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly 1/4 million is annual savings.
   
 #### Programming Team Lead				January 2017  - August 2018
 First Busey Corporation - Busey Bank, Champaign, IL
