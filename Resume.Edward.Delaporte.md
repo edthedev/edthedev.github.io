@@ -125,11 +125,6 @@ Ablesoft Solutions Inc. Oregon, IL
  - Created an elegant extensible project template in VB.Net which allowed us to create all our applications more quickly with better standard features.
  - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and Javascript to build advanced web interfaces.
 
-#### Web Site Administrator, Various (pro bono)		January 2007 - Present
-
- - Writes Ansible playbooks to maintain various permutations of the LAMP stack.
- - Handles hosting, DNS and administration of various not-for-profit websites.
- - Has operated various web services including WordPress, Drupal, Dokuwiki, and Minecraft.
 
 #### Open Source Contributions				October 2012 - Present
 
@@ -140,30 +135,29 @@ Ablesoft Solutions Inc. Oregon, IL
 
 #### Reviewer for Packt Publishing  		October 2014 - Present
 
+Acts as a subject matter expert for Pakt Publishing.
+
  - [Data Mining with Python](https://www.packtpub.com/big-data-and-business-intelligence/learning-data-mining-python) (ISBN 978-1-78439-605-3) 
  - [Kivy: Interactive Applications in Python, Second Edition](https://www.packtpub.com/application-development/kivy-interactive-applications-python) (ISBN 978-1-78328-159-6) 
  - [Kivy Blueprints](https://www.packtpub.com/application-development/kivy-blueprints) (ISBN 978-1-78398-784-9)
 
 #### Additional Professional Training
 
-- Evolve: Two year internal leadership training program at Busey
-- Attended DevUp 2017
-- Attended PowerShell Summit 2017
-- University of Illinois Information Technology Services Manager Development Training
-- University of Illinois Information Technology Leadership Workshop
-- [SANS](https://www.sans.org/) On-site Secure Software Development Training
+- Completed Evolve: Two year internal leadership training program at Busey 2018, 2019
+- Completed Citigal OWASP Top Ten Training in 2017, 2018, 2019
+- Completed Defensive Programming for C# - Citigal 2017
+- Attended DevUp St Louis 2017, PowerShell Summit 2017
+- Completed U of I Information Technology Services Manager Development (MgrDev) 
+- Completed U of I Information Technology Leadership Workshop (ITLW)
+- Completed [SANS](https://www.sans.org/) On-site Secure Software Development Training
 - Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
-- Presented at University of Illinois Webmaster's Conference 2016
-- Presented at University of Illinois IT Professional's Forum 2016
-- Presented at Urbana IT Professionals Forum Spring 2018
-- Presented at Urbana IT Professional Forum Fall 2018
-- Completed OWASP Top Ten Training - Citigal 2017, 2018, 2019
-- Defensive Programming for C# - Citigal 2017
-
 
 #### Community Involvement
 
-- Hosts free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
+- Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
 - Webmaster - Rotary Club of Champaign since 2018
+- Hosts a free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
+- Presented at University of Illinois Webmaster's Conference 2016
 - OWASP Top Ten Privacy Project - Core contributor since 2015
-
+- Handles hosting, DNS and administration of various not-for-profit websites since 2007
+- Operated various web services including WordPress, Drupal, Dokuwiki, and Minecraft.
