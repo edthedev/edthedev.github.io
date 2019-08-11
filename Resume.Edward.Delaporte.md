@@ -23,7 +23,7 @@ I make computers better at meeting the needs of humans.
 - Manages all senior software engineers and senior automation engineers for First Busey Corporation.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
-- Interprets vuln scan results and mentors junior and Senior developers in how to remediate
+- Interprets vuln scan results and mentors junior and senior developers in how to remediate
 - Implemented development team self scanning
 - Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
 - Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
@@ -199,8 +199,7 @@ Ablesoft Solutions Inc. Oregon, IL
 
 #### Community Involvement
 
-- Hosts free "Learn Programming In Scratch!" class for elementary students at the Urbana Free Library
-- Webmaster - Rotary Club of Champaign 2018
-
-- OWASP Top Ten Privacy Project - Core contributor 2015
+- Hosts free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
+- Webmaster - Rotary Club of Champaign since 2018
+- OWASP Top Ten Privacy Project - Core contributor since 2015
 
