@@ -29,7 +29,7 @@ I make computers better at meeting the needs of humans.
 - Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
 - Led the development team to sucessfully implement ongoing 100% code review.
 - Onboarded the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review.
-- Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly 1/4 million is annual savings.
+- Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly 1/4 million in annual savings.
   
 #### January 2017 - August 2018: Programming Team Lead at Busey Bank, Champaign, IL
 
