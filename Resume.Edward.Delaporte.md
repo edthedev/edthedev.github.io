@@ -133,6 +133,7 @@ Acts as a subject matter expert for Pakt Publishing.
 
 #### Professional Training - Highlights
 
+- Microsoft Azure Workshop: n-Tier Server Provisioning and Deployment Pipelines with Docker, 2019
 - Completed Evolve: Two year internal leadership training program at Busey 2018, 2019
 - Completed Citigal OWASP Top Ten Training in 2017, 2018, 2019
 - Completed Defensive Programming for C# - Citigal 2017
