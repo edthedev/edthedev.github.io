@@ -20,15 +20,16 @@ I make computers better at meeting the needs of humans.
 
 #### August 2018 - Present: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
 
-- Manages all senior software engineers and senior automation engineers for First Busey Corporation.
+- Codes fully secure and compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
+- Manages senior software engineers and senior automation engineers for First Busey Corporation.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
 - Interprets scan results and mentors junior and senior developers in how to remediate vulnerabilities.
-- Implemented development team self scanning.
+- Implemented development team self scanning with Accunetix.
 - Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
 - Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
 - Led the development team to sucessfully implement ongoing 100% code review.
-- Onboarded the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review.
+- Onboarded the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review in support of infrastructure-as-code implementations.
 - Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly 1/4 million in annual savings.
   
 #### January 2017 - August 2018: Programming Team Lead at Busey Bank, Champaign, IL
@@ -39,7 +40,7 @@ I make computers better at meeting the needs of humans.
 
 #### July 2015  - January 2017: Senior IT Programmer at Busey Bank, Champaign, IL
 
- - Builds financial transaction websites using Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials and React.js.
+ - Built financial transaction websites using Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials and React.js.
  - Guides projects through the software development life-cycle, including requirements, implementation, delivery, testing and maintenance.
  - Recognized as a key contributor in the integration of Pulaski Bank infrastructure.
  - Built and launched [MyPropertyPay.com](https://secure.mypropertypay.com).
