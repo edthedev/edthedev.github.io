@@ -15,6 +15,8 @@ I make computers better at meeting the needs of humans.
 - Leading software teams since 2011.
 - Has built a lot of websites for a lot of purposes with a lot of different technologies.
 - Has effective work habits and great interpersonal skills.
+- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps.
+- Linux Tech:  Python, C#, Perl, Java, PHP, Active Directory, Apache, Django, JSON, LDAP, Linux shell, Syslog, SQL, WSGI, GitHub enterprise.
 
 ## Career
 
@@ -24,7 +26,7 @@ I make computers better at meeting the needs of humans.
 - Manages senior software engineers and senior automation engineers for First Busey Corporation.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
-- Interprets scan results and mentors junior and senior developers in how to remediate vulnerabilities.
+- Interprets security scan results and teaches other developers how to remediate vulnerabilities.
 - Implemented development team self scanning with Accunetix.
 - Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
 - Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
