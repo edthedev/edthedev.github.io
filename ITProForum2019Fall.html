@@ -137,13 +137,44 @@ Edward
 
 ---
 
-## Git Reset
+# Sometimes Surprising Results of Git Reset
+
+## git commit {first commit}
 
 <img class='stretch left little' src='static/img/itpro2019fall/Trees1.PNG'/>
+
+## git commit {second commit}
 <img class='stretch little' src='static/img/itpro2019fall/Trees2_Expected.PNG'/>
+
+---
+
+# Sometimes Surprising Results of Git Reset
+
+## git commit {third commit}
+<img class='stretch little' src='static/img/itpro2019fall/Trees3.PNG'/>
+
+## git revert {third commit}
+<img class='stretch left little' src='static/img/itpro2019fall/Trees2_Expected.PNG'/>
+
+???
+
+- As expected, we went back in time to a previous state.
+
+---
+
+# Sometimes Surprising Results of Git Reset
+
+## git commit {third commit}
+
 <img class='stretch left little' src='static/img/itpro2019fall/Trees3.PNG'/>
+
+## git revert { second commit }
+
 <img class='stretch little' src='static/img/itpro2019fall/Trees2.PNG'/>
 
+???
+
+- Surprise - this state has never existed.
 
 ---
 
