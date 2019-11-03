@@ -335,7 +335,6 @@ VSCode
 
 ???
 
-+ Confidence - I ran git reset on *this slide deck* while writing it.
 + using a Windows folder like any other remote
 
 ---
@@ -444,82 +443,7 @@ e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  7) <body>
 
 ---
 
-
-## I committed on `master`
-
-If you're lucky, and it was only a commit or two
-```
-# Find my commit is named 0219e5ce9
-
-git log
-
-# Where I meant to be
-
-git checkout -b story_0700
-git cherry-pick 0219e5ce9
-
-# Clean up local master
-
-git checkout master
-git reset --hard origin/master
-
-# Back to work
-
-git checkout story_0700
-```
----
-
-## I committed on `master`
-
-If you committed a lot, and want to use commands you understand
-```
-# Making a new branch brings along your unpushed commits)
-
-git checkout -b story_0700_temp
-
-# Clean up local master
-
-git checkout master
-git reset --hard origin/master
-
-# Get back to work
-
-git checkout story_0700
-git merge story_0700_temp
-
-# Clean up
-
-git branch -D story_0700_temp
-```
-
----
-
-## I committed on `master`
-
-If you used Stack Overlfow, you may see something more like this.
-It keeps your commit history cleaner.
-```
-# New branch (brings your unpushed commits)
-
-git checkout -b story_0700
-
-# Cleaner (to history) way to get caught up
-
-git rebase develop
-
-# Clean up local master
-
-git checkout -B master origin/master
-
-# Back to work
-
-git checkout story_0700
-```
-
----
-
 ## How to protect `master`
-
 
 ```
 #!/bin/sh
@@ -546,29 +470,6 @@ $ chmod +x .git/hooks/pre-commit
 + Git hooks are just shell scripts.
 + You can and should do more with them.
 + You can make your chat bot cuss out whoever broke the build or forgot to comment.
-
----
-
-
-## git checkout --patch
-
-```
-PS C:\Users\edthe\edthedev.github.io> git checkout --patch 57f04be6c2d85684869a3194c6a8a24859e60f59
-diff --git b/ITProForum2019Spring.html a/ITProForum2019Spring.html
-index 652d5ca..52e0f9e 100644
---- b/ITProForum2019Spring.html
-+++ a/ITProForum2019Spring.html
-@@ -19,7 +19,7 @@
-          }
-
-          .remark-slide-content {
--                 background-image: url("static/img/itpro2019spring/background.png");
-+                 background-image: url("static/img/itpro2018/bg_others.jpg");
-          }
-          img {
-                  float:right;
-Apply this hunk to index and worktree [y,n,q,a,d,j,J,g,/,e,?]?
-```
 
 ---
 
