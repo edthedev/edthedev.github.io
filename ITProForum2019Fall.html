@@ -85,24 +85,20 @@ Edward
 # Topics
 
 1. `git status` and `git diff` - Taking stock of the situation.
-1. `git revert` seen through abstract computer generated art
-3. `git commit -a -m "did stuff"` - "bad commits are better than no commits"
-2. `git log` as a meditation form
-4. Pretty tools
-
-???
-
-- yo
+2. Undo
+3. The sometimes surprising results of `git revert` seen through abstract computer generated art
+4. Frequently Asked Questions - Answered.
+5. Pretty tools
 
 ---
 
 # Taking Stock
 
-*LOLWHUT?*
+*Where am I?*
 
 >git status
 
-*What have I done?
+*What have I done?*
 
 >git diff
 
@@ -234,15 +230,7 @@ Git Status
 
 ---
 
-## General Advice 
-
-*I pushed a bad tag*
-
-> Make a new tag. Seriously.
-
-*I know what I want the final files to look like, but not how to get it there in git.*
-
-> Copy/Paste is your friend.
+# Your Questions
 
 *How do I keep these two branches separate forever?*
 
@@ -250,20 +238,88 @@ Git Status
 
 ???
 
-Why make a new tag?
-- You can delete and remake the tag, but your correction may not move across your team as quick as the mistake.
-- So fixing the tag is gambling, while adding a minor release digit keeps everyone on the same page.
-
 Separate branches forever?
 - Think of branches as streams flowing together to become rivers.
 - Anything you drop into any stream will someday reach the ocean (master branch).
+
+---
+
+# Your Questions
+
+*I know what I want the final files to look like, but not how to get it there in git?*
+
+> Copy/Paste is your friend.
+
+???
 
 Why is copy/paste great?
 - Just make it right.
 - Your history will show you got lost, and forced it right. That has value.
 
+---
 
-# OLDER SLIDES START HERE
+# Pretty Tools
+
+[Tortoise Git](https://tortoisegit.org/)
+
+- Add right-click menu items to Windows Explorer
+- Like TortoiseSvn, but for Git
+
+Atlassian SourceTree
+
+- [Atlassian SourceTree for Mac and Windows](https://www.sourcetreeapp.com/) 
+
+GitHub Desktop
+
+- [GitHub Desktop](https://desktop.github.com/)
+
+???
+
+Tortoise - Right click can be fun
+
+SourceTree
+- Point and click your way through Git history
+- Visual branch/merge history
+- See past revisions
+- Diff between arbitrary revisions
+- Manage branches and branch operations in a visual way
+
+---
+
+# Pretty Tools
+
+Visual Studio Code 
+
+- [Free/Open/Cross Platform from Microsoft](https://code.visualstudio.com/)
+- [GitLens Plugin](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
+- Other great plugins include: VsVim, RainbowCSV, Markdown Paste, Markdown PDF
+
+???
+
+VSCode 
+
+- VsCode Handles git out of the box.
+- Searching Git in the plugin marketplace returned 5 pages of results.
+- Code Lens - see who changed which line last
+- Various visual ways to explore history
+- Native integrated shell
+
+---
+
+## Discussion
+
+- This slide deck is online at http://Edward.Delaporte.us
+- Need more git? Advanced Git session is after the break. 
+
+???
+
+- You can find this slide deck at Edward.Delaporte.us
+
+---
+
+
+
+# BONUS SLIDES
 
 ---
 
@@ -383,54 +439,6 @@ e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  7) <body>
 
 ---
 
-## Pretty Tools
-
-[Tortoise Git](https://tortoisegit.org/)
-
-- Add right-click menu items to Windows Explorer
-- Like TortoiseSvn, but for Git
-
-Atlassian SourceTree
-
-- [Atlassian SourceTree for Mac and Windows](https://www.sourcetreeapp.com/) 
-
-GitHub Desktop
-
-- [GitHub Desktop](https://desktop.github.com/)
-
-???
-
-Tortoise - Right click can be fun
-
-SourceTree
-- Point and click your way through Git history
-- Visual branch/merge history
-- See past revisions
-- Diff between arbitrary revisions
-- Manage branches and branch operations in a visual way
-
----
-
-## Pretty Tools
-
-Visual Studio Code 
-
-- [Free/Open/Cross Platform from Microsoft](https://code.visualstudio.com/)
-- [GitLens Plugin](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
-- Other great plugins include: VsVim, RainbowCSV, Markdown Paste, Markdown PDF
-
-???
-
-VSCode 
-
-- VsCode Handles git out of the box.
-- Searching Git in the plugin marketplace returned 5 pages of results.
-- Code Lens - see who changed which line last
-- Various visual ways to explore history
-- Native integrated shell
-
----
-
 
 ## I committed on `master`
 
@@ -536,14 +544,6 @@ $ chmod +x .git/hooks/pre-commit
 
 ---
 
-
-## Discuss
-
-???
-
-- You can find this slide deck at Edward.Delaporte.us
-
----
 
 ## git checkout --patch
 
