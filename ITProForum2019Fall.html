@@ -85,7 +85,7 @@ Edward
 # Topics
 
 1. `git status` and `git diff` - Taking stock of the situation.
-1. `git revert` seen through Celtic art
+1. `git revert` seen through abstract computer generated art
 3. `git commit -a -m "did stuff"` - "bad commits are better than no commits"
 2. `git log` as a meditation form
 4. Pretty tools
@@ -112,10 +112,15 @@ Edward
 
 ???
 
-- think of an empty `git status` as a home base - return to it often.
 - Visual tools and `git diff` are a great way to take stock.
 - Most visual editors will have a right-click way to see git diff --cached
 - If you see two separate threads of work in git diff --cached, it is time to check some work in.
+
+Git Status
+- think of an empty `git status` as a home base - return to it often.
+- Anything in git status is an unresolved future problem
+- untracked files not in gitignore
+- unpushed or unpulled commits
 
 ---
 
@@ -159,6 +164,7 @@ Edward
 ???
 
 - As expected, we went back in time to a previous state.
++ The Revert Revert pattern - today's stupid mistake is tomorrow's 'good enough'
 
 ---
 
@@ -179,21 +185,52 @@ Edward
 
 ---
 
-# OLDER SLIDES START HERE
+# Your Questions
+
+*Someone checked in a password.*
+
+- Change the password.
+
+*How to fix a merge that contained incorrect files.*
+
+- If it went really badly, throw away your local (merge) branch and fix the original branches.
+- Otherwise, use the git tools to review and make correction, and commit the corrections.
+- Copy/Paste is your friend.
 
 ---
 
+# Your Questions
 
-*I need a git server, but all I have is a Windows file share.*
+*Testing/writing code in different branches that use common local files.*
 
->cd \\remote\share\folder.git\
->git init --bare
+- Merge from your friend's branches early and often.
+- Ignore your enemies' branches.
+- Merge from `develop` and `master` early and often.
+- Submit pull requests earlier and more often. 
+- No one rejects a pull request for being too easy to review.
+
+---
+
+# Your Questions
+
+*Letting different machines fall out of sync with origin and trying to merge work cleanly.*
+
+- Start with `git pull`
+- Use branches to experiment. Throw them away if they don't work.
+- Copy/Paste is your friend.
+
+---
+
+# Your Questions
+
+*Removing accidentally-checked in files from repos, without deleting them locally.*
+
+> git rm --cached .\BadFile.txt
 
 ???
 
-+ Confidence - I ran git reset on *this slide deck* while writing it.
-+ The Revert Revert pattern - today's stupid mistake is tomorrow's 'good enough'
-+ using a Windows folder like any other remote
+- You won't remember this next slide, 
+- but you will remember that Copy/Paste is your friend.
 
 ---
 
@@ -206,10 +243,6 @@ Edward
 *I know what I want the final files to look like, but not how to get it there in git.*
 
 > Copy/Paste is your friend.
-
-*Advice on git status*
-
-> Your goal is always to get git status back to returning nothing.
 
 *How do I keep these two branches separate forever?*
 
@@ -225,59 +258,20 @@ Why is copy/paste great?
 - Just make it right.
 - Your history will show you got lost, and forced it right. That has value.
 
-Git Status
-- Anything in git status is an unresolved future problem
-- untracked files not in gitignore
-- unpushed unpulled commits
+
+# OLDER SLIDES START HERE
 
 ---
 
-## Your Questions
+*I need a git server, but all I have is a Windows file share.*
 
-*Someone checked in a password.*
-
-- Change the password.
-
-*How to fix a merge that contained incorrect files.*
-
-- If it went really badly, throw away your local (merge) branch and fix the original branches.
-- Otherwise, use the git tools to review and make correction, and commit the corrections.
-- Copy/Paste is your friend.
-
----
-
-## Your Questions
-
-*Testing/writing code in different branches that use common local files.*
-
-- Merge from your friend's branches early and often.
-- Ignore your enemies' branches.
-- Merge from `develop` and `master` early and often.
-- Submit pull requests earlier and more often. 
-- No one rejects a pull request for being too easy to review.
-
----
-
-## Your Questions
-
-*Letting different machines fall out of sync with origin and trying to merge work cleanly.*
-
-- Start with `git pull`
-- Use branches to experiment. Throw them away if they don't work.
-- Copy/Paste is your friend.
-
----
-
-## Your Questions
-
-*Removing accidentally-checked in files from repos, without deleting them locally.*
-
-> git rm --cached .\BadFile.txt
+>cd \\remote\share\folder.git\
+>git init --bare
 
 ???
 
-- You won't remember this next slide, 
-- but you will remember that Copy/Paste is your friend.
++ Confidence - I ran git reset on *this slide deck* while writing it.
++ using a Windows folder like any other remote
 
 ---
 
