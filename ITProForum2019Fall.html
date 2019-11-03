@@ -137,9 +137,6 @@ Git Status
 
 ???
 
-- when in doubt, use git revert - reset can lose work, revert cannot.
-- discuss the value of the revert a revert pattern
-- when do we git reset? along with git squash when our commit is being sent to Google or Facebook.
 
 ---
 
@@ -181,8 +178,33 @@ Git Status
 
 - Surprise - this state has never existed in history.
 
-- Side note: Revert acts *ON* a commit.
+
+---
+
+# Your Questions
+
+*What is the difference between `revert` and  `reset`?*
+
+## Revert
+- Will *not* lose your work.
+- Acts *on* a commit.
+- Supports the 'Revert Revert' pattern, that I love.
+
+## Reset
+- Can lose your work!
+- Takes you *to* a commit.
+- Can help you lie about what you actually did to get here.
+
+???
+
+- when in doubt, use git revert - reset can lose work, revert cannot.
+
+- discuss the value of the revert a revert pattern
+- when do we git reset? when our commit is being sent to Google or Facebook.
+
+- Revert acts *ON* a commit.
 - Reset acts *TO* a commit.
+
 
 ---
 
