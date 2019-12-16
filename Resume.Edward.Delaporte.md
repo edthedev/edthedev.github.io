@@ -20,7 +20,16 @@ I make computers better at meeting the needs of humans.
 
 ## Career
 
-#### August 2018 - Present: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
+#### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
+
+- Hire a small group of future leaders with relevant development experience into Cybersecurity Dev.
+- Support overall Cybersecurity Objectives.
+- Create open lines of communication between development teams and Cybersecurity.
+- Provides SDLC process maturity feedback to the development teams.
+- Drafted a Software Development Lifecycle Road Map (SDLC) full of resources free to University staff.
+- Built a shared tool chain for automated regression testing to prevent re-introduction of security problems by any team whose process satisfies a reasonable level of the security SDLC.
+
+#### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
 
 - Codes fully secure and compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
 - Manages senior software engineers and senior automation engineers for First Busey Corporation.
