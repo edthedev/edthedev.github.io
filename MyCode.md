@@ -40,6 +40,8 @@ I have also written software in:
 - Haskell
 - Android
 - Objective C
+- R Studio
+- Go
 - Ruby on Rails
 - RPG
 - OCaml
@@ -49,4 +51,4 @@ I have also written software in:
 - Pebble native C
 - Pebble JavaScript framework
 
-I h think I have never written a CShell script.
+I think I have never written a CShell script.
