@@ -1,8 +1,6 @@
 ## Conference Bio
 
-Edward Delaporte has been writing web software professionally since the year 2000; which was already 'the future'. Edward writes software with a plethora of technologies. Favorites include C#, jQuery, Perl, PowerShell and Python.
-
-He enjoys sharing his enthusiasm for 'the technology of the future'.
+Edward Delaporte has been writing web software professionally since the year 2000; which at the time was already 'the future'. Edward has written software with a plethora of different tools. Current favorites include C#, jQuery, Python, PowerShell, and R Studio. Edward enjoys sharing his enthusiasm for 'the technology of the future'.
 
 - Twitter: https://twitter.com/edthedev 
 - LinkedIn: https://www.linkedin.com/in/edwarddelaportev 
