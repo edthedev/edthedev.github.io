@@ -6,7 +6,7 @@ These are some principles that apply to any team I run.
 - We value trust over process, but we understand that process builds trust.
 - We maintain a roadmap, which we update as needed. It answers 'why' as well as 'what' we intend to do.
 - Our schedules include time for: slack time (for responsiveness), recovery time (for the unexpected), and time for reflection (for growth and investment).
-- We strive to do things the lazy, proud and impatient way whenever possible [see Laziness Impatience Hubris](https://wiki.c2.com/?LazinessImpatienceHubris). But we get the job done with humility, patience, and hard-work, when needed.
+- We strive to do things the lazy, proud and impatient way whenever possible [see Laziness Impatience Hubris](https://wiki.c2.com/?LazinessImpatienceHubris) or [Three Virtues](http://threevirtues.com/). But we get the job done with humility, patience, and hard-work, when needed.
 - No one is as smart toward the end of the work day as they wish they were. We go home and try again tomorrow.
 - When we can't go home and try tomorrow, then we invite trusted colleagues to look over our shoulder, to help catch the extra mistakes due to fatigue.
 
