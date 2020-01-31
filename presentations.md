@@ -1,6 +1,6 @@
 ## Presentations
 
-
+- [Introduction to HashiCorp Vault: AnsibleCU January 2020](/2020_VaultIntro.html)
 - [Vault Quick Start: AnsibleCU January 2020](/2020_VaultQuickStart.html)
 - [Ansible Variables: AnsibleCU July 2019](/AnsibleVariables2019.html)
 - [Ansible Inventory: AnsibleCU June 2019](/AnsibleInventory2019.html)
