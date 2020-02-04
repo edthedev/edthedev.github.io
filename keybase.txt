@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jdelaporte
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://joanna.delaporte.us
+  * I am jdelaporte (https://keybase.io/jdelaporte) on keybase.
+  * I have a public key ASA_6iG3OcOIcj6N8dMFRHtDiIGRdCSmCivZEQMc5rRosQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203fea21b739c388723e8df1d305447b438881917424a60a2bd911031ce6b468b10a",
+      "host": "keybase.io",
+      "kid": "01203fea21b739c388723e8df1d305447b438881917424a60a2bd911031ce6b468b10a",
+      "uid": "5792bae2c9e2066463a3299890c4a519",
+      "username": "jdelaporte"
+    },
+    "merkle_root": {
+      "ctime": 1580779431,
+      "hash": "05e6ac19375ea278338e24f6f337abd66b064459cb67cf92cca25a24dab2f7d7aa0b02726bb116f52f097aa32ee39a812fcd5c30d834a99aa59daede6ff0b640",
+      "hash_meta": "8b5400976373556db2924cf360b2f4126143c7995f8c2ee1efd67d67d80cf68f",
+      "seqno": 14477405
+    },
+    "service": {
+      "entropy": "x0x6CDGN3pip8rDAAFC2Bat6",
+      "hostname": "joanna.delaporte.us",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.2.0"
+  },
+  "ctime": 1580779449,
+  "expire_in": 504576000,
+  "prev": "cdc89025a83a272196d667819a2a8ed47b44a92d13f17dda7c5895917c75d799",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgP+ohtznDiHI+jfHTBUR7Q4iBkXQkpgor2REDHOa0aLEKp3BheWxvYWTESpcCBsQgzciQJag6JyGW1meBmiqO1HtEqS0T8X3afFiVkXx115nEICjkmokXOgvaxHBu3SiVICkt4LRY6QI9R6F4mo5k4d7yAgHCo3NpZ8RAPuXj761+aN+Z6Nm/W43zaPJEBxmKfg8JB5pSG/FfzrWrBCx0BsYNtzlGWR/AK+NGJZotiml760TrnIRQCN58AKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHbTgwLxe+noqhh0Vt3lKdc9D56jHf2mk08xiVlu8SHLo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jdelaporte
+
+==================================================================
