@@ -10,6 +10,7 @@ You can also read [a few notes about my tool chain](tech.html).
 [1]: https://github.com/obedm503/bootmark
 
 - [About Myself](/myself.html)
+- [Recent Blog Articles](blog2020/index.html)
 - [On Coding](/coding.html) 
 - [My Art](/gallery.html)
 - [Fish Bowl](/fishbowl.html)
