@@ -35,3 +35,6 @@ setupApache:
 	yum install -y httpd24
 	sudo service httpd start
 	mv /home/ec2-user/edthedev.github.io/* /var/www/html/
+
+setupChrome:
+	chrome https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/related?hl=en
