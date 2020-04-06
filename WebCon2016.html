@@ -15,10 +15,10 @@
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 	  .remark-slide, .remark-slide-container {
-		  background-image: url("static/img/webcon2016/slidesidebar.jpg");
+		  background-image: url("img/webcon2016/slidesidebar.jpg");
 	  }
 	  .remark-slide-content {
-		  background-image: url("static/img/webcon2016/slidebg.jpg");
+		  background-image: url("img/webcon2016/slidebg.jpg");
 	  }
 	  img {
 		  float:right;
@@ -125,7 +125,7 @@ Lessons I learned:
  - ViewModels (simple class objects)
  - Views (using [Razor](https://github.com/aspnet/Razor) to render HTML)
  - Controllers (tie everything together)
-<img class='stretch little' src='static/img/gallery/abstract_ipad/11 6-48-14 PM.jpg'/>
+<img class='stretch little' src='img/gallery/abstract_ipad/11 6-48-14 PM.jpg'/>
 
 ???
 
@@ -199,7 +199,7 @@ Lessons I learned:
 	<p>Hello World!</p>
 	</html>
 ```
-<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-56-49 PM.jpg'/>
+<img class='stretch little' src='img/gallery/abstract_ipad/11 8-56-49 PM.jpg'/>
 
 ???
 - Reminder that everything is text.
@@ -210,7 +210,7 @@ Lessons I learned:
 ---
 
 # Bouncing Dot Tour of MVC
-<img class='flow' src="static/img/webcon2016/mvc.svg" />
+<img class='flow' src="img/webcon2016/mvc.svg" />
 
 ???
 
@@ -313,7 +313,7 @@ public class SensibleNameController : Controller {
 ---
 
 # Trivial Controller Method
-<img class='flow' src="static/img/webcon2016/mvc.svg" />
+<img class='flow' src="img/webcon2016/mvc.svg" />
 
 ???
 
@@ -358,7 +358,7 @@ public ActionResult Contact() {
 ---
 
 # Trivial ViewModel
-<img class='flow' src="static/img/webcon2016/mvc.svg" />
+<img class='flow' src="img/webcon2016/mvc.svg" />
 
 ???
 - Laser ViewModel b/w Data Service and Controller
@@ -425,7 +425,7 @@ namespace RateCompareWeb.ViewModels {
 
 # Typical ViewModel
 
-<img src='static/img/webcon2016/ratepartial.png' class=''/>
+<img src='img/webcon2016/ratepartial.png' class=''/>
 
 ???
 - Display Attributes cause labels.
@@ -433,7 +433,7 @@ namespace RateCompareWeb.ViewModels {
 ---
 
 # Razor Partial View
-<img class='flow' src="static/img/webcon2016/mvcPartial.svg" />
+<img class='flow' src="img/webcon2016/mvcPartial.svg" />
 
 ???
 - Laser Pointer: You are here
@@ -443,7 +443,7 @@ namespace RateCompareWeb.ViewModels {
 # Generate a List Partial Razor View
 
 MVC can generate a decent list table from a ViewModel.
-<img src='static/img/webcon2016/addview.png' class='left'/>
+<img src='img/webcon2016/addview.png' class='left'/>
 
 ???
 - This is Microsoft technology
@@ -452,7 +452,7 @@ MVC can generate a decent list table from a ViewModel.
 ---
 
 # Generate a List Partial Razor View
-<img src='static/img/webcon2016/addListViewModelPartial.png' class='capture left'/>
+<img src='img/webcon2016/addListViewModelPartial.png' class='capture left'/>
 
 ???
 
@@ -496,7 +496,7 @@ MVC can generate a decent list table from a ViewModel.
 
 # _PartialTable.cshtml
 
-![Rate Table Parial](static/img/webcon2016/ratepartial.png)
+![Rate Table Parial](img/webcon2016/ratepartial.png)
 
 ???
 
@@ -537,7 +537,7 @@ $.ajax({
 
 # Razor Edit Form
 
-<img src='static/img/webcon2016/addEditViewModelPartial.png' class='capture'/>
+<img src='img/webcon2016/addEditViewModelPartial.png' class='capture'/>
 
 ???
 
@@ -630,7 +630,7 @@ About the generated Razor form
 ---
 # Razor Edit Form
 
-![Edit Form Parital](static/img/webcon2016/editrate.png)
+![Edit Form Parital](img/webcon2016/editrate.png)
 
 ???
 
@@ -650,7 +650,7 @@ About the generated Razor form
 
 
 # Unobtrusive Validation
-<img class='flow' src="static/img/webcon2016/mvc.svg" />
+<img class='flow' src="img/webcon2016/mvc.svg" />
 
 ???
 
@@ -766,7 +766,7 @@ jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 
 
 # React.js JSX - Client Side Render
-<img class='flow' src="static/img/webcon2016/reactClientJsx.svg" />
+<img class='flow' src="img/webcon2016/reactClientJsx.svg" />
 
 ???
 
@@ -785,7 +785,7 @@ jQuery.validator.unobtrusive.adapters.addBool("validatezipcode");
 ---
 
 # ReactJs.Net JSX - Server Side Pre-Render
-<img class='flow' src="static/img/webcon2016/mvcReactPreRender.svg" />
+<img class='flow' src="img/webcon2016/mvcReactPreRender.svg" />
 
 ???
 - ReactJS.***Net*** is primarily a server side JSX rendering library.
@@ -854,7 +854,7 @@ JSX
     );
 ```
 
-<img class='stretch left little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
+<img class='stretch left little' src='img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
 
 ???
 - Just for completeness.
@@ -869,7 +869,7 @@ Reload a server side Razor partial using JQuery.
 		$("#PropertyList").html(html);
     }
 ```
-<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
+<img class='stretch little' src='img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
 
 ???
 
@@ -888,8 +888,8 @@ Reload a server side Razor partial using JQuery.
 - Razor Partials can replace many React.js use cases.
 - jQuery Unobtrusive Validation is terrific.
 
-<img class='left stretch little' src='static/img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
-<img class='stretch little' src='static/img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
+<img class='left stretch little' src='img/gallery/abstract_ipad/11 8-29-50 PM.jpg'/>
+<img class='stretch little' src='img/gallery/abstract_ipad/11 8-46-35 PM.jpg'/>
 
 ???
 
@@ -966,7 +966,7 @@ AddressHelper.setup();
 
 
 # Bonus Recipe: Submit Form with AJAX
-<img class='flow' src="static/img/webcon2016/mvc_json.svg" />
+<img class='flow' src="img/webcon2016/mvc_json.svg" />
 
 ???
 - Razor drops out.
