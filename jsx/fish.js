@@ -51,7 +51,7 @@ var Fish = React.createClass({
 		// console.log("mount");
 		// Be random start point
 		// var sea = $("#sea");
-	// var newFish = "<img id=fish1 src='img/fish/toothFishL.png'>";
+	// var newFish = "<img id=fish1 src='/img/fish/toothFishL.png'>";
 	// var newFish = Fish()
 	// sea.append(newFish);
 		var newFish = $("#" + this.props.id);
@@ -202,7 +202,7 @@ var SlowBrain = {
 };
 
 var PuffBrain = jQuery.extend({}, SlowBrain);
-PuffBrain.img = "img/fish/littlePuff";
+PuffBrain.img = "/img/fish/littlePuff";
 PuffBrain.changeImg = function(img) {
 	return PuffBrain.img;
 };
@@ -210,11 +210,11 @@ PuffBrain.speed = function() {
 	var bit = Math.random();
 	if(bit < .25)
 	{
-		PuffBrain.img = "img/fish/littlePuff";
+		PuffBrain.img = "/img/fish/littlePuff";
 	}
 	if(bit > .9)
 	{
-		PuffBrain.img = "img/fish/bigPuff";
+		PuffBrain.img = "/img/fish/bigPuff";
 	}
 	return bit * 5000 + 1500;
 };
@@ -269,39 +269,39 @@ var FishBowl = React.createClass({
 		var scaryFish = "";
 		if(Math.random() > .9)
 		{
-			scaryFish = <Fish id="scary" img="img/fish/scarySharpTeethBanana" ext=".png" brain={FastBrain} size="200px"/>;
+			scaryFish = <Fish id="scary" img="/img/fish/scarySharpTeethBanana" ext=".png" brain={FastBrain} size="200px"/>;
 		} 
 
 
-		var bubbler = <Bubbler id="chest" img="img/fish/treasure" ext=".png" bubbleImg="img/fish/bubbles.png" />;
+		var bubbler = <Bubbler id="chest" img="/img/fish/treasure" ext=".png" bubbleImg="/img/fish/bubbles.png" />;
 		if(Math.random() > .95)
 		{
-			bubbler = <Bubbler id="chest" img="img/fish/treasure" ext=".png" bubbleImg="img/fish/bubbleMan.png" />;
+			bubbler = <Bubbler id="chest" img="/img/fish/treasure" ext=".png" bubbleImg="/img/fish/bubbleMan.png" />;
 		}
 
 		var tinyFish = fishCount.map( function( id ) {
-			return <Fish id={"tinyFish" + id} img="img/fish/tinyFish" ext=".png" brain={TinyBrain} size="30px" />;
+			return <Fish id={"tinyFish" + id} img="/img/fish/tinyFish" ext=".png" brain={TinyBrain} size="30px" />;
 		});
 		return <div>
-<img id="sand" src="img/fish/sand.png" className="sand" />
-			<Fish id="t2" img="img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Fish id="t5" img="img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Flora id="flora3" img="img/fish/seaweedL.png" height="80" />
-			<Fish id="t6" img="img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Fish id="t7" img="img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Fish id="sub3" img="img/fish/subBlack" ext=".png" brain={SlowBrain} size="90px"/>
-			<Fish id="subG" img="img/fish/subGreen" ext=".png" brain={SlowBrain} size="90px"/>
-			<Fish id="subY" img="img/fish/subYellow" ext=".png" brain={SlowBrain} size="90px"/>
-			<Fish id="squid" img="img/fish/squid" ext=".png" brain={TinyBrain} size="120px"/>
-			<Fish id="puff" img="img/fish/littlePuff" ext=".png" brain={PuffBrain} size="45px" />
+<img id="sand" src="/img/fish/sand.png" className="sand" />
+			<Fish id="t2" img="/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="t5" img="/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Flora id="flora3" img="/img/fish/seaweedL.png" height="80" />
+			<Fish id="t6" img="/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="t7" img="/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="sub3" img="/img/fish/subBlack" ext=".png" brain={SlowBrain} size="90px"/>
+			<Fish id="subG" img="/img/fish/subGreen" ext=".png" brain={SlowBrain} size="90px"/>
+			<Fish id="subY" img="/img/fish/subYellow" ext=".png" brain={SlowBrain} size="90px"/>
+			<Fish id="squid" img="/img/fish/squid" ext=".png" brain={TinyBrain} size="120px"/>
+			<Fish id="puff" img="/img/fish/littlePuff" ext=".png" brain={PuffBrain} size="45px" />
 			{scaryFish}
 			{tinyFish}
 			{bubbler}
-			<Flora id="flora1" img="img/fish/seaweed.png" height="80" />
-			<Fish id="t3" img="img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Fish id="t4" img="img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
-			<Fish id="slug" img="img/fish/slug1" ext=".png" brain={CrawlBrain} size="15px"/>
-			<Flora id="flora2" img="img/fish/seaweed.png" height="80" />
+			<Flora id="flora1" img="/img/fish/seaweed.png" height="80" />
+			<Fish id="t3" img="/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="t4" img="/img/fish/buckToothFish" ext=".png" brain={SlowBrain} size="45px" />
+			<Fish id="slug" img="/img/fish/slug1" ext=".png" brain={CrawlBrain} size="15px"/>
+			<Flora id="flora2" img="/img/fish/seaweed.png" height="80" />
 		</div>;
 	}
 });
@@ -312,20 +312,20 @@ React.render(<FishBowl />, document.getElementById('sea'));
  *
  *
  * These need their backgrounds fixed:
-			<Fish id="bt1" img="img/fish/bigTooth" ext=".jpg" brain={SlowBrain} size="100px"/>
-			<Fish id="sub1" img="img/fish/subYellow" ext=".jpg" brain={SlowBrain} size="90px"/>
-			<Fish id="sub2" img="img/fish/subGreen" ext=".jpg" brain={SlowBrain} size="90px"/>
-			<Fish id="eye1" img="img/fish/eyeStalk" ext=".jpg" brain={SlowBrain} size="150px"/>
-			<Fish id="s1" img="img/fish/scaredFish" ext=".png" brain={WiggleBrain} size="30px" />
-			<Fish id="t1" img="img/fish/toothFish" ext=".png" brain={WiggleBrain} size="40px" />
+			<Fish id="bt1" img="/img/fish/bigTooth" ext=".jpg" brain={SlowBrain} size="100px"/>
+			<Fish id="sub1" img="/img/fish/subYellow" ext=".jpg" brain={SlowBrain} size="90px"/>
+			<Fish id="sub2" img="/img/fish/subGreen" ext=".jpg" brain={SlowBrain} size="90px"/>
+			<Fish id="eye1" img="/img/fish/eyeStalk" ext=".jpg" brain={SlowBrain} size="150px"/>
+			<Fish id="s1" img="/img/fish/scaredFish" ext=".png" brain={WiggleBrain} size="30px" />
+			<Fish id="t1" img="/img/fish/toothFish" ext=".png" brain={WiggleBrain} size="40px" />
  *
  *
 
-			<Fish id="f1" img="img/fish/toothFishL.jpg" />
-			<Fish id="f2" img="img/fish/scaredFishL.jpg" />
-			<Fish id="f3" img="img/fish/toothFishL.jpg" />
-			<Fish id="f4" img="img/fish/tinyFishL.jpg" />
-			<Fish id="f4" img="img/fish/tinyFishL.jpg" />
+			<Fish id="f1" img="/img/fish/toothFishL.jpg" />
+			<Fish id="f2" img="/img/fish/scaredFishL.jpg" />
+			<Fish id="f3" img="/img/fish/toothFishL.jpg" />
+			<Fish id="f4" img="/img/fish/tinyFishL.jpg" />
+			<Fish id="f4" img="/img/fish/tinyFishL.jpg" />
 
  */
 
