@@ -16,4 +16,4 @@ You can also read [a few notes about my tool chain](tech.html).
 - [Learn to Code](learn2code)
 - [My Art](/gallery.html)
 - [Fish Bowl](/fishbowl.html)
-- [Resume](/resume.html)
+- [Resume](/resume)
