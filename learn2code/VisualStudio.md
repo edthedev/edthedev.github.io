@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-theme.min.css" />
-		<link rel="stylesheet" href="static/edthedev.css" />
-	</head>
-	<body>
-
-<nav id='navlist' class="navbar navbar-default"> </nav>
-<xmp>
-
 # Visual Studio with Git
 
 I recently switched to doing most of my professional work with C#. As a result, I am rediscovering the delightful Visual Studio IDE.
@@ -29,10 +17,3 @@ Generate a token, copy it to the clipboard, paste it into the auth box in Visual
 [3]: https://git-scm.com/
 [4]: https://github.com/settings/tokens
 [5]: https://github.com/settings/security
-</xmp>
-
-<script src="static/jquery/dist/jquery.js"></script>
-<script src="static/nav.js"></script>
-<script src="static/strapdown/strapdown.js"></script>
-</body>
-</html>

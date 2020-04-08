@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-theme.min.css" />
-		<link rel="stylesheet" href="static/edthedev.css" />
-	</head>
-	<body>
-
-<nav id='navlist' class="navbar navbar-default"> </nav>
-<xmp theme="united">
 # Working with Ultisnips
 
 ## Install Ultisnips
@@ -27,11 +16,3 @@ In your Vim buffer, let Ultisnips know that you want to work with the new strapd
 In this example, you most likely would prefer to invoke the contents of both `snippets/markdown.snippets` and `snippets/strapdown.snippets`:
 
 	UltiSnipsAddFiletypes markdown.strapdown
-
-</xmp>
-
-<script src="static/jquery/dist/jquery.js"></script>
-<script src="static/nav.js"></script>
-<script src="static/strapdown/strapdown.js"></script>
-</body>
-</html>	

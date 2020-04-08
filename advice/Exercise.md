@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-theme.min.css" />
-		<link rel="stylesheet" href="static/edthedev.css" />
-	</head>
-	<body>
-
-<nav id='navlist' class="navbar navbar-default"> </nav>
-<xmp theme="united">
-
 # Stay Healthy at Your Desk
 
 Disclaimer: These are my personal notes, for myself. Talk to your doctor, or whatever.
@@ -51,12 +39,3 @@ Apply these actions to different areas: closing, opening, pressing.
 Areas: neck, glutes, head, shoulders, fingers, core.
 Chin back, shoulders back, set pelvis.
 Use hips to strengthen back.
-
-
-</xmp>
-
-<script src="static/jquery/dist/jquery.js"></script>
-<script src="static/nav.js"></script>
-<script src="static/strapdown/strapdown.js"></script>
-</body>
-</html>

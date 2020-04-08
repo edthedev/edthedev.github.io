@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="static/edthedev.css" />
-	</head>
-	<body>
-
-<nav id='navlist' class="navbar navbar-default"> <a href="nav.html">Navigation</a></nav>
-<xmp theme="united">
-## Tools behind this site
+## Tech behind this site
 
 ### Editing
 Original editing was done in Vim.
@@ -29,11 +20,3 @@ Publishing is simple with Git through Visual Studio Code.
 - Commit: Ctrl+Shifg+G, Type commit message, Ctrl+Enter
 - To publish: Ctrl+Shift+P, Git Push, Enter.
 - Ctrl+Shitf+E to return to the file explorer.
-
-</xmp>
-
-<script src="static/jquery/dist/jquery.js"></script>
-<script src="static/nav.js"></script>
-<script src="static/strapdown/strapdown.js"></script>
-</body>
-</html>

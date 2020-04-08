@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="static/bootstrap/dist/css/bootstrap-theme.min.css" />
-		<link rel="stylesheet" href="static/edthedev.css" />
-	</head>
-	<body>
-
-<div class='nav'></div>
-<xmp>
 
 # My Top Three Rules of Software Development
 Individual software developers can apply these, but they work best if the whole team adopts them as a culture.
@@ -47,11 +36,3 @@ I have seen low quality technology stacks being used to do really cool things, a
 The mantra to repeat is: Technology facilitates people.
 
 Without the right people, the right technology cannot be competitive.
-
-</xmp>
-
-<script src="static/jquery/dist/jquery.js"></script>
-<script src="static/nav.js"></script>
-<script src="static/strapdown/strapdown.js"></script>
-</body>
-</html>
