@@ -14,8 +14,6 @@ You can also read [a few notes about my tool chain](tech.html).
 - [Recent Blog Articles](blog2020/index.html)
 - [Robots](robots/index.html)
 - [Learn to Code](learn2code/index.html)
-- [On Coding](/coding.html) 
 - [My Art](/gallery.html)
 - [Fish Bowl](/fishbowl.html)
 - [Resume](/resume.html)
-- [Older Posts](/older.html)
