@@ -9,11 +9,11 @@ You can also read [a few notes about my tool chain](tech.html).
 
 [1]: https://github.com/obedm503/bootmark
 
-- [About Myself](/myself.html)
-- [My Slide Decks](/slides/index.html)
-- [Recent Blog Articles](blog2020/index.html)
-- [Robots](robots/index.html)
-- [Learn to Code](learn2code/index.html)
+- [About Myself](/me)
+- [My Slide Decks](/slides)
+- [Recent Blog Articles](blog2020)
+- [Robots](robots)
+- [Learn to Code](learn2code)
 - [My Art](/gallery.html)
 - [Fish Bowl](/fishbowl.html)
 - [Resume](/resume.html)

@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="static/edthedev.css" />
-	</head>
-	<body>
-
-<nav id='navlist' class="navbar navbar-default"> </nav>
-<xmp theme="united">
 ## Code
 My favorite tools are [Visual Studio Professional](https://www.visualstudio.com) and [Vim](http://www.vim.org/). 
 I am falling in love with [Visual Studio Code](https://code.visualstudio.com), thanks to excellent plugins such as [VsCode Vim Plugin](https://github.com/VSCodeVim/Vim).
@@ -50,11 +41,3 @@ I wrote [Lift! for Pebble](https://apps.getpebble.com/en_US/application/569d3518
 
 ## Other Contributions 
 I have minor commits accepted into [Kivy](https://kivy.org/), [Angular.js](https://angularjs.org/) and [A leading Vim plugin for Visual Studio Code](https://github.com/VSCodeVim/Vim). 
-
-</xmp>
-
-<script src="static/jquery/dist/jquery.js"></script>
-<script src="static/nav.js"></script>
-<script src="static/strapdown/strapdown.js"></script>
-</body>
-</html>
