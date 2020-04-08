@@ -13,5 +13,5 @@ You can also read [a few notes about my tool chain](tech.html).
 - [My Slide Decks](/slides)
 - [Learn to Code](/learn2code)
 - [Make Robots](/robots)
-- [My Art](/gallery.html)
+- [My Art](/art)
 - [Resume](/resume)
