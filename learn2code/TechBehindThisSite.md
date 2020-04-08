@@ -13,6 +13,8 @@ Publishing is simple with Git through Visual Studio Code.
 - To publish: Ctrl+Shift+P, Git Push, Enter.
 - Ctrl+Shitf+E to return to the file explorer.
 
+Local testing is done using the [Web Server for Chrome Plugin](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/reviews)
+
 ### Editing
 Original editing was done in Vim.
 Recently I have been using Visual Studio Code with the delightful VsVim plugin.
