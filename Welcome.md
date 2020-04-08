@@ -8,6 +8,4 @@ I share various technology solutions here. Officially so that you can read them;
 - [My Slide Decks](/slides)
 - [Learn to Code](/learn2code)
 - [Make Robots](/robots)
-- [My Art](/art)
-- [Resume](/resume)
 - [About This Site](learn2code/aboutSite.html)
