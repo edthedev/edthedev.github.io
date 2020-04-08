@@ -15,3 +15,5 @@ It really is life changing. It's secretly about more than tidying up.
 - Contains a lot of solid principles.
 - Rigorously gather the right people - then let them decide where to take the team.
 - It is worth noting that some of the very successful companies from this study are dead or in trouble today.
+
+### 
