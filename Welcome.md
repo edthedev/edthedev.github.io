@@ -11,9 +11,8 @@ You can also read [a few notes about my tool chain](tech.html).
 
 - [About Myself](/me)
 - [My Slide Decks](/slides)
-- [Recent Blog Articles](blog2020)
-- [Robots](robots)
-- [Learn to Code](learn2code)
+- [Robots](/robots)
+- [Learn to Code](/learn2code)
 - [My Art](/gallery.html)
 - [Fish Bowl](/fishbowl.html)
 - [Resume](/resume)
