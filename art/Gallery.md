@@ -111,7 +111,6 @@ Purple
 </xmp>
 
 <script src="static/jquery/dist/jquery.js"></script>
-<script src="static/nav.js"></script>
 <script src="static/strapdown/strapdown.js"></script>
 <style>
 
