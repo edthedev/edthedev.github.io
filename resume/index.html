@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="/style/edthedev.css" />
 		<script src="/js/nav.js"></script></head>
 	</head>
-	<body>
+<body>
 
 <nav class="ye_navbar"> <a href="/">Edward.Delaporte.us</a> </nav>
 
@@ -16,9 +16,18 @@
 <script src="/js/marked/marked.min.js"></script>
 <script>
 	$( document ).ready( function() {
+
+		// Dirty hack - repeating the content of nav.js here. 
+		// This page will get refactored with the next JS library update anyway.
+    $.get('/nav/').done( function( data ) { 
+        $(".ye_navbar").html(data);
+    } );
+
+		// Main functionality - get ye Markdown Resume and render here.
 		$.get('/resume/Resume.Edward.Delaporte.md', function(data) {
 			$('#content').html(marked(data));
 		});
+
 	});
 </script>
 
