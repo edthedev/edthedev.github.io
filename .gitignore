@@ -10,6 +10,9 @@ CoverLetter*
 .module-cache
 .DS_Store
 
+# Archimate .bak files
+*.archimate.bak
+
 # User-specific files
 *.suo
 *.user
