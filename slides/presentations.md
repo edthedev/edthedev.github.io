@@ -5,7 +5,7 @@ I give presentations on technical topics rather often.
 
 Recently I have begun collecting the slide decks here.
 
-- [IT Pro Forum 2020 Fall - ... ](ITProForum2020Spring.html#1)
+- [IT Pro Forum 2020 Fall - Putting the Security in SecDevOps](ITProForum2020Spring.html#1)
 - [Cybersecurity Operations 2020 Spring](SecOps2020Spring.html)
 - [IT Pro Forum 2019 Fall - Practical Git Tips and Tricks](ITProForum2019Fall.html#1)
 - [IT Pro Forum 2019 Spring - Advanced Git](ITProForum2019Spring.html#1)
