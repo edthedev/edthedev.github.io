@@ -152,6 +152,8 @@ TRANSITION: Where can I get GitHub?
 
 - Per the website: Full Rollout for IT Professionals is happening Summer 2020
 
+TRANSITION: So what does a CI/CD pipeline look like?
+
 ---
 
 ### Automation with Drone CI / CD
@@ -172,10 +174,14 @@ pipeline:
 
 ???
 
-- CI / CD can kick off any command line takes
-- Look for common tools for your environment
-- You can and should test products you did not write
-- Using Drone now, but looking into GitHub Actions as part of our move to GitHub Enterprise
+- ADMISSION: Not using GitHub Actions yet. Looking forward to trying.
+- supports any command line task
+- `pytest`
+- `flake8`
+- Your commands may vary.
+- DO test vendor products - integration testing
+
+TRANSITION: More on unit testing.
 
 ---
 
@@ -203,6 +209,8 @@ Con
 - We care about regressions because they are how we prevent repeat bugs.
 - Vulnerabilities in the wild are often repeat bugs.
 
+TRANSITION: Visual on Unit Testing
+
 ---
 
 #### Automated Unit Testing
@@ -211,7 +219,11 @@ Con
 
 ???
 
+TRANSITION: But I cannot write unit tests for a vendor product.
+
 TRANSITION: How is integration testing different?
+
+TRANSITION: Visual on Integration Testing
 
 ---
 
