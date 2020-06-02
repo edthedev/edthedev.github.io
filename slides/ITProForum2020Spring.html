@@ -61,6 +61,9 @@ Presented by:
 
 ???
 
+Expectations: 
+- This will be a whirlwind tour of tools you can try.
+
 We will walk through a high level overview of the ways a DevOps pipeline can make your work day better and while making your products secure - even if the product is from a vendor!
 
 Track: Cloudy with a Chance of Terraforming
@@ -217,7 +220,7 @@ Tools
 
 ---
 
-#### Automated Integration Testing
+#### Automated API Integration Testing
 
 Newman Example
 
@@ -246,7 +249,7 @@ TRANSITION: mycollection.json can be created with PostMan
 
 ---
 
-#### Automated Integration Testing
+#### Automated API Integration - Writing the Test Suite
 
 Build the API test collection with PostMan
 <img class='stretch' src='img/itpro2020spring/PostMan.PNG'/>
@@ -256,6 +259,28 @@ Build the API test collection with PostMan
 #### Automated Integration Testing
 
 - [Selenium with RoboFramework][12]
+- [Selenium for RobotFramework][22]
+
+Example `Test.robot` file:
+```robot
+
+Library   Dialogs    
+Library   SeleniumLibrary  
+
+*** Keywords ***
+
+Fill In Form
+  Input Text        mondayTimesheetHourValue    8   clear=false
+  Input Text        tuesdayTimesheetHourValue    8   clear=false
+  Input Text        wednesdayTimesheetHourValue    8   clear=false
+  Input Text        thursdayTimesheetHourValue    8   clear=false
+  Input Text        fridayTimesheetHourValue    8   clear=false
+  Execute Manual Step   Please Confirm or Correct Values then press Pass
+  Click Element    //input[@name="btnSubmit"]
+  Page Should contain     You have successfully submitted your time
+```
+
+[22]: https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
 
 ---
 
