@@ -133,9 +133,9 @@ Example `.drone.yml` file:
 ```YAML
 pipeline:
   build:
-    image: python:3
+    image: python:2.7
     commands:
-      - apt-get update && apt-get install -y build-essential python3-dev libldap2-dev libsasl2-dev
+      - apt-get update && apt-get install -y build-essential python2.7-dev libldap2-dev libsasl2-dev
       - export DOCKER_RUN="bash -c"
       - export PYTHONPATH="$PWD/lib/cites/jira:$PWD/lib/cites/opia"
       - pip install -r requirements.txt
@@ -158,22 +158,23 @@ pipeline:
 
 Pro
 
- - Runs fast.
- - Runs everywhere.
+ - ***Fast***.
+ - Runs anywhere.
  - Answers "What did we expect?"
  - The easiest regression tests are unit tests.
 
 Con
 
- - Legacy Code
+ - Hard to add to Legacy Code
  - Doesn't answer "Why did we do that?"
- - Many regressions cannot be unit tested without a refactor.
+ - Many **regressions** cannot be unit tested without a refactor.
 
 <img class='stretch' src='img/itpro2020spring/UnitTestExample.PNG'/>
 
 ???
 
-- Why Unit Test?
+- We care about regressions because they are how we prevent repeat bugs.
+- Vulnerabilities in the wild are often repeat bugs.
 
 ---
 
