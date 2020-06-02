@@ -129,7 +129,19 @@ You can automated feedback for:
 
 ### Automation with Drone CI / CD
 
-<img class='stretch' src='img/itpro2020spring/DroneYml.PNG'/>
+Example `.drone.yml` file:
+```YAML
+pipeline:
+  build:
+    image: python:3
+    commands:
+      - apt-get update && apt-get install -y build-essential python3-dev libldap2-dev libsasl2-dev
+      - export DOCKER_RUN="bash -c"
+      - export PYTHONPATH="$PWD/lib/cites/jira:$PWD/lib/cites/opia"
+      - pip install -r requirements.txt
+			- $(DOCKER_RUN) 'pytest tests/unit'
+			- $(DOCKER_RUN) 'flake8'
+```
 
 ???
 
