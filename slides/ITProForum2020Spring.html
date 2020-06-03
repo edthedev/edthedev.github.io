@@ -72,7 +72,14 @@ Just add "Sec" to the beginning of everything and call it a day.
 
 ???
 
-TRANSITION: But seriously - it's all about capturing feedback.
+Challenge:
+- Complex space.
+- Long wishlists.
+
+Today:
+- I want to shine a light on the widest path that leads to success.
+
+TRANSITION: That path is **automated feedback**.
 
 ---
 
@@ -191,6 +198,7 @@ Con
 
 ???
 
+- Define **Regression**
 - We care about regressions because they are how we prevent repeat bugs.
 - Vulnerabilities in the wild are often repeat bugs.
 
@@ -208,15 +216,21 @@ TRANSITION: But I cannot write unit tests for a vendor product.
 
 TRANSITION: How is integration testing different?
 
-TRANSITION: Visual on Integration Testing
-
 ---
 
 #### Automated Integration Testing
 
 <img class='stretch' src='img/itpro2020spring/IntegrationTestDiagram.PNG'/>
 
+???
+
+- Blue Box == live test server
+- Docker-compose or Terraform or Ansible can help
+
+TRANSITION: Pros and Cons of Integration Testing
+
 ---
+
 
 #### Automated Integration Testing
 
@@ -238,6 +252,10 @@ Tools
 
 - Why integration test?
 - Catches what you didn't even think to test for.
+- Regressions are much easier to build in integration tests.
+- Three major categories: Web, API, Mobile
+
+TRANSITION: API testing with Newman
 
 ---
 
@@ -266,7 +284,11 @@ $ newman run mycollection.json -d data.json
 
 ???
 
-TRANSITION: mycollection.json can be created with PostMan
+- PostMan is an IDE for crafting API tests.
+- Newman is the command line runner.
+- mycollection.json can be created with PostMan
+
+TRANSITION: Let's take a peek at PostMan
 
 ---
 
@@ -274,6 +296,17 @@ TRANSITION: mycollection.json can be created with PostMan
 
 Build the API test collection with PostMan
 <img class='stretch' src='img/itpro2020spring/PostMan.PNG'/>
+
+???
+
+- Link to learn PostMan at the end of the slide deck.
+Recipe: 
+
+- Experiment with a Swagger file (or curl) 
+- Copy your successes into PostMan
+- Refactor the PostMan suite into "Arrange, Act, Assert" pattern.
+
+TRANSITION: What about web interfaces?
 
 ---
 
@@ -305,13 +338,14 @@ Fill In Form
 
 ???
 
-- TRANSITION: Example output
 - Script is a bit longer than what you see here - to fit the slide.
 - Needed an example that we could all relate to.
 - Positive Time Reporting 
 - I picked a tool that most of us can access
 - and that we all want to make sure it is up and running.
 - Link is in the slides - the goal here is to learn the tool.
+
+TRANSITION: Example output
 
 ---
 
