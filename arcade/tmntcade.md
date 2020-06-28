@@ -1,9 +1,20 @@
 
 # TMNT RetroPi Conversion
 
-## The Big Idea
+## Parts List
+
+- 4x USB Controller
+- 4x "Player" start buttons
+- 4x "Coin" buttons
+- Raspberry Pi Model 3 (Replaced almost immediately with a Model 4)
+- Video Encoder Chip
+- Sound Amplifier
 
 ![USB Controller](img/usb_1.jpg)
+
+This USB chip will allow the existing cabinet controls to be connected to the [Raspbery Pi][1] as USB controllers. Rewiring these controls was the most time-consuming part of the project. I used four of these - one for each player (Leo, Mikey, Don and Raph).
+
+
 
 ## Raw Notes Follow
 
