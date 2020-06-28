@@ -1,7 +1,14 @@
 
 # TMNT RetroPi Conversion
 
+## The Big Idea
+
+![USB Controller](img/usb_1.jpg)
+
+## Raw Notes Follow
+
 + For the joysticks I had to [learn how to disconnect and reconnect a JDT connector](https://youtu.be/kRvDgiX4Sk4) The wires were in sets of 4, and my USB board needed sets of 2. I didn't have to pick anywhere special to put them - I just put them on the next open slot - following the usual advice to keep every control set wired in the same order.
+
 + For the buttons, I used a pliers and moved the existing JST connectors to my [USB Connectors](https://smile.amazon.com/gp/aw/d/B01FZ797OC?psc=1&ref=ppx_pop_mob_b_asin_title)
 + To get all the USB controllers wires out of the controls box, I used a rotorary cutting tool to cut the existing plastic opening larger.
 + For the monitor I used the usual adapter board.
