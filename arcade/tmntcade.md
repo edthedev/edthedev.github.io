@@ -13,6 +13,7 @@
 - 3.5mm to RCA adapter
 - 3x 12 V power adapter (purchased two additional, and reused the one that came with the cabinet)
 - Surge protector
+- Voice Controlled Outlet - because the original on/off button no longer works.
 
 ![USB Controller](img/usb_1.jpg)
 
