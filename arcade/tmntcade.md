@@ -1,6 +1,18 @@
 
 # TMNT RetroPi Conversion
 
+## My Approach
+
+My goal was not to have a cabinet that runs every game in existence, but rather to take a specific list of curated games I already own and move them into a stand-up side-by-side arcade cabinet experience.
+
+I decided that one of my limits to this project is that I have chosen not to drill any new holes in the top of the cabinet. This limits the game selection to those in my collection that can be played with only one joystick and one or two buttons per player. That's still a lot of games.
+
+I decided I was okay with drilling holes through the "J" panel on the front of the cabinet, which will allow me to reclaim all four "start" buttons on the top of the cabinet for gameplay. They are not positioned for easy reach - but most of the 3 button games I am thinking of adding only use the 3rd button sparingly - often for a rare "special" power on some kind of cool-down between uses. So I think it will work fine.
+
+I drilled 8 holes (2 per player) in the front of the cabinet. These act as the "select" and "start" buttons that many games require to get started playing.
+
+The heart of this build is a Raspberry Pi, but pretty much any game system that can accept 4 USB controller and output HDMI, VGA or DVI video would have worked. The chief considerations are availability of titles that do not need many buttons, and systems that do not require swapping physical media. An upgrade that would satisfy these well would be a Steam Box, which I might end up doing.
+
 ## Parts List
 
 - 4x USB Controller
@@ -17,8 +29,17 @@
 
 ![USB Controller](img/usb_1.jpg)
 
-This USB chip will allow the existing cabinet controls to be connected to the [Raspbery Pi][1] as USB controllers. Rewiring these controls was the most time-consuming part of the project. I used four of these - one for each player (Leo, Mikey, Don and Raph).
+This USB chip allowed the existing cabinet controls to be connected to the [Raspbery Pi][1] as USB controllers. Rewiring these controls was the most time-consuming part of the project. I used four of these - one for each player (Leo, Mikey, Don and Raph).
 
+## Wiring the Controls
+
++ For the buttons, I used a pliers and moved the existing JST connectors to my [USB Connectors](https://smile.amazon.com/gp/aw/d/B01FZ797OC?psc=1&ref=ppx_pop_mob_b_asin_title). In some places there was some epoxy. I dealt with it by pulling harder with the pliers. I very nearly stripped one of the wires, but it worked out.
++ For the joysticks I had to [learn how to disconnect and reconnect a JDT connector](https://youtu.be/kRvDgiX4Sk4). The joystick wires were in sets of 4, and my USB board needed sets of 2. I didn't have to pick anywhere special to put them - I just put them on the next open slot - following the usual advice to **keep every control set wired in the same order**.
++ To allow all the USB controllers wires to connect into the controls box, I used a rotorary cutting tool to cut the existing plastic opening larger.
+
+## Wiring the Screen
+
+I used the part that gets recommended in most guides. It worked fine, except I haven't restored sound yet. It was initially not obvious to me that I had to a remove a cover on the back of the monitor, but once I did, I started finding connectors that matched up as I needed. I pretty much just plugged each wire where it fit, and it worked on the first try.
 
 ## First Configuration - Only supports 2 button games
 
@@ -30,24 +51,23 @@ But my real intent is to drill holes in the front panel and add two more buttons
 
 By adding 8 buttons to the panel "J" on the front of the cabinet, the will free-up the 4 "start" buttons on the top of the cabinet for use during gameplay.
 
-## Raw Notes Follow
+## Challenges
 
-+ For the joysticks I had to [learn how to disconnect and reconnect a JDT connector](https://youtu.be/kRvDgiX4Sk4) The wires were in sets of 4, and my USB board needed sets of 2. I didn't have to pick anywhere special to put them - I just put them on the next open slot - following the usual advice to keep every control set wired in the same order.
+### Sound
 
-+ For the buttons, I used a pliers and moved the existing JST connectors to my [USB Connectors](https://smile.amazon.com/gp/aw/d/B01FZ797OC?psc=1&ref=ppx_pop_mob_b_asin_title)
-+ To get all the USB controllers wires out of the controls box, I used a rotorary cutting tool to cut the existing plastic opening larger.
-+ For the monitor I used the usual adapter board.
-+ For the heart, I have a RetroPi model 3.
+As of this writing, I do not have sound. The Raspberry Pi outputs the sound into the HDMI signal, and the split that comes out of the video adapter is not strong enough to drive the speaker. I understand ETA Prime has a guide to solving this, and I plan to revisit.
 
+### Power
+
+Some people wire the external on/off and sound controls deep into the heart of the their Raspberry Pi, but as of this writing I have not bothered. To solve turning the system on and off, I purchased a voice control ready wall outlet switch. So I just tell my voice control gadget to turn the arcade on and off as needed.
 
 ## Issues after first build
 
-+ On/off is at surge protector. Plan is to add a voice controlled outlet.
++ FIXED: On/off is at surge protector. Plan is to add a voice controlled outlet.
++ FIXED: Only Leo and Donny are recognized. Plan to debug this after I have a full set of buttons. This problem went away after a reboot.
++ FIXEd: It deserves a fan and ventilation. I plan to replace the Pi model 3 with a model 4 that will come with heat sinks and a fan. - I upgraded to a Pi model 4 that came with a fan, and I have left the back off for now.
++ FIXED: Should upgrade it to a Pi4.
 + No sound. I plan to buy an amplifier. There are some good YouTube videos about this.
-+ Only Leo and Donny are recognized. Plan to debug this after I have a full set of buttons.
 + Arcade games like TMNT aren't playable without both a Coin and a Start button per player. Plan to order longer button wires and add 8 new coin and start buttons to the angled lower front panel. This keeps me from having to drill through the plastic controls case, and I will look the look better.
-+ It deserves a fan and ventilation. I plan to replace the Pi model 3 with a model 4 that will come with heat sinks and a fan.
 + It deserves lights. I'm planning to run a simple light strip along the back of the cabinet.
-+ Should upgrade it to a Pi4.
-+ Doesn't have enough buttons to do things like save/load or manage favorites.
-+ 
++ Doesn't have enough buttons to do things like save/load or manage favorites. - I am contemplating removing the On/Off and Sound controls, and adding a small custom made button box that sits on top in the same space, and adds buttons for L/R shoulders to manage save states. I could run the wires through the On/Off button space without drilling any new holes. I might not bother as this is a Raspberry Pi specific need, and if my other plan to upgrade to a Steam Box happens first, there will be no need.
