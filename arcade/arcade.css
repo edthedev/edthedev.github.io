@@ -3,4 +3,7 @@ img {
     max-width:30em;
     max-height:30em;
     margin-left: 4em;
+    -webkit-box-shadow: 10px 10px 31px 10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 31px 10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 31px 10px rgba(0,0,0,0.75);
 }
