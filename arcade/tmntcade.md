@@ -3,6 +3,8 @@
 
 ## My Approach
 
+![cabinet upgraded with 8 additional front buttons](img/upgraded.jpg)
+
 My goal was not to have a cabinet that runs every game in existence, but rather to take a specific list of curated games I already own and move them into a stand-up side-by-side arcade cabinet experience.
 
 I decided that one of my limits to this project is that I have chosen not to drill any new holes in the top of the cabinet. This limits the game selection to those in my collection that can be played with only one joystick and one or two buttons per player. That's still a lot of games.
@@ -14,6 +16,8 @@ I drilled 8 holes (2 per player) in the front of the cabinet. These act as the "
 The heart of this build is a Raspberry Pi, but pretty much any game system that can accept 4 USB controller and output HDMI, VGA or DVI video would have worked. The chief considerations are availability of titles that do not need many buttons, and systems that do not require swapping physical media. An upgrade that would satisfy these well would be a Steam Box, which I might end up doing.
 
 ## Parts List
+
+![power supply and raspberry pi](img/power_pi.jpg)
 
 - 4x USB Controller
 - 4x "Player" start buttons
@@ -41,7 +45,13 @@ This USB chip allowed the existing cabinet controls to be connected to the [Rasp
 ![this 4 wire connector had to be turned into a pair of two wire connectors](img/rewired.jpg)
 
 + For the joysticks I had to [learn how to disconnect and reconnect a JDT connector](https://youtu.be/kRvDgiX4Sk4). The joystick wires were in sets of 4, and my USB board needed sets of 2. I didn't have to pick anywhere special to put them - I just put them on the next open slot - following the usual advice to **keep every control set wired in the same order**.
-+ To allow all the USB controllers wires to connect into the controls box, I used a rotorary cutting tool to cut the existing plastic opening larger.
+
+
+![hole I cut larger to allow controller USB A to B wires through](img/hole.jpg)
+
++ To allow all the USB controllers wires to connect into the controls box, I used a rotary cutting tool to cut the existing plastic opening larger.
+
+![controller USB A to B wires going through the cut out](img/controller_wires.jpg)
 
 ## Wiring the Screen
 
