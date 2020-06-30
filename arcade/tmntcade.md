@@ -33,6 +33,8 @@ This USB chip allowed the existing cabinet controls to be connected to the [Rasp
 
 ## Wiring the Controls
 
+![the back of the TMNT contol board - panel c](img/buttons.jpg)
+
 + For the buttons, I used a pliers and moved the existing JST connectors to my [USB Connectors](https://smile.amazon.com/gp/aw/d/B01FZ797OC?psc=1&ref=ppx_pop_mob_b_asin_title). In some places there was some epoxy. I dealt with it by pulling harder with the pliers. I very nearly stripped one of the wires, but it worked out.
 
 
@@ -53,6 +55,8 @@ But my real intent is to drill holes in the front panel and add two more buttons
 
 ## Second Configuration - Supports 3 button games
 
+![j panel drilled for additional buttons](img/jpanel.jpg)
+
 By adding 8 buttons to the panel "J" on the front of the cabinet, the will free-up the 4 "start" buttons on the top of the cabinet for use during gameplay.
 
 ## Challenges
@@ -62,6 +66,8 @@ By adding 8 buttons to the panel "J" on the front of the cabinet, the will free-
 As of this writing, I do not have sound. The Raspberry Pi outputs the sound into the HDMI signal, and the split that comes out of the video adapter is not strong enough to drive the speaker. I understand ETA Prime has a guide to solving this, and I plan to revisit.
 
 ### Power
+
+![12 volt power supply](img/power.jpg)
 
 Some people wire the external on/off and sound controls deep into the heart of the their Raspberry Pi, but as of this writing I have not bothered. To solve turning the system on and off, I purchased a voice control ready wall outlet switch. So I just tell my voice control gadget to turn the arcade on and off as needed.
 
