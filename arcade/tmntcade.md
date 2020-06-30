@@ -34,6 +34,10 @@ This USB chip allowed the existing cabinet controls to be connected to the [Rasp
 ## Wiring the Controls
 
 + For the buttons, I used a pliers and moved the existing JST connectors to my [USB Connectors](https://smile.amazon.com/gp/aw/d/B01FZ797OC?psc=1&ref=ppx_pop_mob_b_asin_title). In some places there was some epoxy. I dealt with it by pulling harder with the pliers. I very nearly stripped one of the wires, but it worked out.
+
+
+![this 4 wire connector had to be turned into a pair of two wire connectors](img/rewired.jpg)
+
 + For the joysticks I had to [learn how to disconnect and reconnect a JDT connector](https://youtu.be/kRvDgiX4Sk4). The joystick wires were in sets of 4, and my USB board needed sets of 2. I didn't have to pick anywhere special to put them - I just put them on the next open slot - following the usual advice to **keep every control set wired in the same order**.
 + To allow all the USB controllers wires to connect into the controls box, I used a rotorary cutting tool to cut the existing plastic opening larger.
 
