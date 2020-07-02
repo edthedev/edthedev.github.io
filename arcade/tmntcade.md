@@ -5,18 +5,15 @@
 
 ![cabinet upgraded with 8 additional front buttons](img/upgraded.jpg)
 
-My goal was not to have a cabinet that runs every game in existence, but rather to take a specific list of curated games I already own and move them into a stand-up side-by-side arcade cabinet experience.
+The vision for TMNTcade is to bring a shoulder-to-shoulder play experience to a selected set of games I own on other platforms - and to take apart an arcade machine and see how it ticks.
 
-I decided that one of my limits to this project is that I have chosen not to drill any new holes in the top of the cabinet. This limits the game selection to those in my collection that can be played with only one joystick and one or two buttons per player. That's still a lot of games.
+A limit I set for myself is that I will not drill any new holes in the control surface. So I have four joysticks and at most 3 buttons per player to work with. 
 
-I decided I was okay with drilling holes through the "J" panel on the front of the cabinet, which will allow me to reclaim all four "start" buttons on the top of the cabinet for gameplay. They are not positioned for easy reach - but most of the 3 button games I am thinking of adding only use the 3rd button sparingly - often for a rare "special" power on some kind of cool-down between uses. So I think it will work fine.
+I was okay with drilling holes through the "J" panel on the front of the cabinet, so I added "start" and "coin" buttons for each player to the front of the cabinet. This let me reclaim the "start" button on top for gameplay, bringing the total per player up to 3.
 
-I drilled 8 holes (2 per player) in the front of the cabinet. These act as the "select" and "start" buttons that many games require to get started playing.
-
-The heart of this build is a Raspberry Pi, but pretty much any game system that can accept 4 USB controller and output HDMI, VGA or DVI video would have worked. The chief considerations are availability of titles that do not need many buttons, and systems that do not require swapping physical media. An upgrade that would satisfy these well would be a Steam Box, which I might end up doing.
+The original "start" buttons per player are not close of the other controls, so unless the third button is a rarely used "special", we will likely play only 1 and 2 button games.
 
 ## Parts List
-
 
 - 4x [Zero Delay Generic Game Controller USB][8]
 - 4x ["Player" start buttons][6]
@@ -45,6 +42,10 @@ This USB chip allowed the existing cabinet controls to be connected to the [Rasp
 [6]: https://smile.amazon.com/gp/product/B07S31JY9M
 [7]: https://smile.amazon.com/gp/product/B07ZVMWPZP
 [8]: https://smile.amazon.com/gp/product/B01FZ797OC
+
+## Heart
+
+The heart of this build is a Raspberry Pi, but pretty much any game system that can accept 4 USB controller and output HDMI, VGA or DVI video would have worked. The chief considerations are availability of titles that do not need many buttons, and systems that do not require swapping physical media. I might end up upgrading to a Steam machine.
 
 ## Wiring the Controls
 
