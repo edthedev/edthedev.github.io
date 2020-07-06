@@ -112,59 +112,40 @@ Git Status
 + CI/CD automation can prevent regressions *and* increase communication
 
 ---
-
-# Sometimes Surprising Results of Git Revert
-
-## git commit {first commit}
-
-<img class='stretch left little' src='img/itpro2019fall/Trees1.PNG'/>
-
-## git commit {second commit}
-<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
-
 ---
 
-# Sometimes Surprising Results of Git Revert
+## CI/CD Automation Example
+### Pester with GitHub Actions
 
-## git commit {third commit}
-<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
-
-## git revert {third commit}
-<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
-
-???
-
-- As expected, we went back in time to a previous state.
-+ The Revert Revert pattern - today's stupid mistake is tomorrow's 'good enough'
-
----
-
-# Sometimes Surprising Results of Git Revert
-
-## git commit {third commit}
-<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
-
-## git revert { second commit }
-<img class='stretch little' src='img/itpro2019fall/Trees2.PNG'/>
-
-???
-
-- Surprise - this state has never existed in history.
-
-
----
-
----
-
-## Files needed for Pester with GitHub Actions
-
+![github action in progress](img/pug20200708/github_action_in_progress.PNG)
++ Pester Tests: [site.tests.ps1](https://github.com/edthedev/edthedev.github.io/blob/master/tests/site.tests.ps1)
 + Tell GitHub to run Pester: [pester.yml](https://github.com/edthedev/edthedev.github.io/blob/master/.github/workflows/pester.yml)
-+ Actual Pester Tests: [site.tests.ps1](https://github.com/edthedev/edthedev.github.io/blob/master/tests/site.tests.ps1)
 + The traditional place to add our Pass/Fail badge: [ReadMe.md](https://github.com/edthedev/edthedev.github.io/blob/master/readme.md)
 
 ---
 
+## site.tests.ps1
+```powershell
+Describe 'Site Content Tests' {
+    It 'has an index file' {
+      Test-Path -Path ./index.html | Should -Be $true
+    }
+    It 'has no penguin file' {
+      Test-Path -Path ./penguins_are_cool.html | Should -Be $false
+    }
+    $index_content = Get-Content ./index.html
 
+    It 'has the correct page title' {
+      $expected_title = "<title>Edward.Delaporte.us</title>"
+      '.\index.html' | Should -FileContentMatch $expected_title
+    }
+
+}
+```
+
+---
+
+## pester.yml
 
 ```yaml
 name: Pester Tests
@@ -195,17 +176,18 @@ jobs:
 
 ---
 
-![github action in progress](img/pug20200708/github_action_in_progress.PNG)
-
----
-
 ## Create a Badge
 
 + Click 'Actions'
 + Click on one of the actions that are setup.
 + Click 'Create status badge'
 
-![github action in progress](img/pug20200708/create_badge.PNG)
+![github badge](img/pug20200708/create_badge.PNG)
+
+### ReadMe.md
+```markdown
+![badge](https://github.com/edthedev/edthedev.github.io/workflows/Pester%20Tests/badge.svg)
+```
 
 ---
 
@@ -553,6 +535,50 @@ git diff [<options>] --no-index [--] <path> <path>
 
 - Diff can do more
 - but the default target is the last commit
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {first commit}
+
+<img class='stretch left little' src='img/itpro2019fall/Trees1.PNG'/>
+
+## git commit {second commit}
+<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {third commit}
+<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
+
+## git revert {third commit}
+<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
+
+???
+
+- As expected, we went back in time to a previous state.
++ The Revert Revert pattern - today's stupid mistake is tomorrow's 'good enough'
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {third commit}
+<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
+
+## git revert { second commit }
+<img class='stretch little' src='img/itpro2019fall/Trees2.PNG'/>
+
+???
+
+- Surprise - this state has never existed in history.
+
+
+---
+
 
 </textarea>
     <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
