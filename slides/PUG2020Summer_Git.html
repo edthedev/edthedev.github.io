@@ -89,6 +89,17 @@ Git Status
 
 ---
 
+## Git Revert vs Reset
+
+*Not yet committed - acts on a file.*
+
+>git reset HEAD .\ITProForum2019Spring.html
+*Already committed - acts on entire commit.*
+
+>git revert {commit hash}
+
+---
+
 ## GitHub Enterprise Shared Service
 
 <img class='stretch' src='img/itpro2020spring/UofIGitHub.PNG'/>
@@ -103,14 +114,28 @@ TRANSITION: So what does a CI/CD pipeline look like?
 
 ---
 
-## Undo
+### Tools for Git and PowerShell
 
-*Not yet committed - acts on a file.*
++ [Posh Git - Git Aware PowerShell Prompt](https://github.com/dahlbyk/posh-git#installation)
++ [Tortoise Git](https://tortoisegit.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [GitLens Plugin](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
 
->git reset HEAD .\ITProForum2019Spring.html
-*Already committed - acts on entire commit.*
+```powershell
+choco install poshgit
+codoe install vscode
+```
 
->git revert {commit hash}
+???
+
++ Post Git is a git aware PowerShell prompt
++ VSCode is my personal primary git interface
++ VSCode has built in Git
++ VSCode is free and open source and cross Platform
++ VSCode has a great Vim plugin
++ Weirdly VScode is a great PowerShell editor, SQL editor, Azure deployment file editor, etc.
++ GitLens for VSCode
++ Tortoise Git integrates with Windows Explorer
 
 ---
 
