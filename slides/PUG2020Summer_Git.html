@@ -19,8 +19,8 @@
 
 *** or ***
 
-## How I learned to stop worrying, 
-## and love `GitHub Actions`
+### How I learned to stop worrying, 
+### and love `GitHub Actions`
 
 .small[
 Presented by [Edward Delaporte](mailto:delaport@illinois.edu)
@@ -33,6 +33,15 @@ at **social distancing from home** on July 8, 2020.
 This slide deck is online at http://edward.delaporte.us
 
 ---
+
+## The files we need
+
++ Tell GitHub to run Pester: [pester.yml](https://github.com/edthedev/edthedev.github.io/blob/master/.github/workflows/pester.yml)
++ Actual Pester Tests: [site.tests.ps1](https://github.com/edthedev/edthedev.github.io/blob/master/tests/site.tests.ps1)
++ The traditional place to add our Pass/Fail badge: [ReadMe.md](https://github.com/edthedev/edthedev.github.io/blob/master/readme.md)
+
+---
+
 
 
 ```yaml
@@ -62,7 +71,7 @@ jobs:
       shell: pwsh
 ```
 
-![github action in progress]()
+![github action in progress](img/pug20200708/github_action_in_progress.PNG)
 
 ---
 
