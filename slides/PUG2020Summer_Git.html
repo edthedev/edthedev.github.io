@@ -89,12 +89,25 @@ Git Status
 
 ---
 
+## GitHub Enterprise Shared Service
+
+<img class='stretch' src='img/itpro2020spring/UofIGitHub.PNG'/>
+- Email the Shared Service team: githubsupport@uillinois.edu
+- Website: https://github.uillinois.edu
+
+???
+
+- Per the website: Full Rollout for IT Professionals is happening Summer 2020
+
+TRANSITION: So what does a CI/CD pipeline look like?
+
+---
+
 ## Undo
 
 *Not yet committed - acts on a file.*
 
 >git reset HEAD .\ITProForum2019Spring.html
-
 *Already committed - acts on entire commit.*
 
 >git revert {commit hash}
@@ -106,12 +119,28 @@ Git Status
 + code review 
 + CI/CD automation
 
+![a pull request](img/itpro2020spring/GitHubFeedback.PNG)
+
 ???
 
 + code review catches mistakes *and* spreads knowledge
 + CI/CD automation can prevent regressions *and* increase communication
 
 ---
+
+## Why setup CI/CD Automation?
+
+![ci cd diagram](img/itpro2020spring/CICDAll.PNG)
+
+???
+
+What can I add via CI/CD automation?
+- Code style analysis
+- unit test results
+- API test results
+- Web interface interaction results
+- Cybersecurity scan results
+
 ---
 
 ## CI/CD Automation Example

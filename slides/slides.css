@@ -11,7 +11,8 @@
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
     
 	  img {
-		  float:right;
+			width: 80%;
+		  /* float:right; */
 		  border-radius:22px;
 	  }
 	  img.left {
