@@ -32,9 +32,25 @@ at **social distancing from home** on July 8, 2020.
 
 This slide deck is online at http://edward.delaporte.us
 
+???
+
+TODO:
+
+- [ ] Add some git basics to the beginning.
+- [ ] Move graphical git tools tour near the beginning
+- [x] Add some PowerShell specific git stuff - 
+- [x] ask MK for a psprompt 
+- [ ] grab some CI/CD diagrams from my last IT Pro Forum talk.
+
+Outline:
+ + Visual tour of the Basics of Git - commits, repos, push, pull, pull request, PR driven code review, pr driven automation
+ + 
+
+
 ---
 
-## Some Git Basics
+
+## Git Basics - Getting Oriented
 
 *Where am I?*
 
@@ -62,18 +78,38 @@ Git Status
 
 ---
 
+## Git Basics - Getting Work Done
+
++ stage
++ commit
++ add remote
++ push
++ merge
++ revert
+
+---
+
 ## Undo
 
-*That was a stupid change.*
+*Not yet committed - acts on a file.*
 
 >git reset HEAD .\ITProForum2019Spring.html
 
-*Well that was a stupid commit.*
+*Already committed - acts on entire commit.*
 
 >git revert {commit hash}
 
+---
+
+## Why Collaborate via Pull Request?
+
++ code review 
++ CI/CD automation
+
 ???
 
++ code review catches mistakes *and* spreads knowledge
++ CI/CD automation can prevent regressions *and* increase communication
 
 ---
 
@@ -172,23 +208,6 @@ jobs:
 ![github action in progress](img/pug20200708/create_badge.PNG)
 
 ---
-
-# OLD SLIDES FOLLOW
-
-# PowerShell User Group 2020 Git and CI/CD Basics
-
-???
-
-TODO:
-
-- [ ] Add some git basics to the beginning.
-- [ ] Add some PowerShell specific git stuff - 
-- [x] ask MK for a psprompt 
-- [ ] grab some CI/CD diagrams from my last IT Pro Forum talk.
-
-Outline:
- + Visual tour of the Basics of Git - commits, repos, push, pull, pull request, PR driven code review, pr driven automation
- + 
 
 ---
 
