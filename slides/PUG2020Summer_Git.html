@@ -2,53 +2,71 @@
 <html>
   <head>
     <title>PowerShell User Group 2020 Git and CI/CD Basics</title>
-    <meta charset="utf-8">
+    <link rel="stylesheet" href="/slides/slides.css" />
     <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-      body { font-family: 'Droid Serif'; }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-      }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-	  .remark-slide, .remark-slide-container {
-		  background-image: url("img/webcon2016/slidesidebar.jpg");
-	  }
-    
 	  .remark-slide-content {
-		  background-image: url("img/itpro2019fall/background.png");
-	  }
-	  img {
-		  float:right;
-		  border-radius:22px;
-	  }
-	  img.left {
-		  float:left;
-	  }
-	  img.little {
-		  height:200px;
-	  }
-	  img.capture {
-		  border-radius:1px;
-	  }
-	  img.stretch {
-		  width:45%;
-		  padding: 10px;
-	  }
-	  img.flow{
-		  width: 100%;
-		  padding: 10px;
-		  background-color: white;
+		  /* background-image: url("img/itpro2020spring/slide_bg.PNG"); */
 	  }
     </style>
+    <meta charset="utf-8">
   </head>
   <body>
 
 
 <textarea id="source">
+
+## Pester in CI/CD
+
+*** or ***
+
+## How I learned to stop worrying, 
+## and love `GitHub Actions`
+
+.small[
+Presented by [Edward Delaporte](mailto:delaport@illinois.edu)
+
+for [University of Illinois Cybersecurity](https://techservices.illinois.edu/content/cybersecurity-support)
+
+at **social distancing from home** on July 8, 2020.
+]
+
+This slide deck is online at http://edward.delaporte.us
+
+---
+
+
+```yaml
+name: Pester Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies PowerShell 7
+      run: Install-Module -Name 'Pester' -Force -SkipPublisherCheck
+      shell: pwsh
+    - name: Run tests PowerShell 7
+      run: Invoke-Pester -Path '.\tests\' -CI
+      shell: pwsh
+```
+
+![github action in progress]()
+
+---
+
+# OLD SLIDES FOLLOW
 
 # PowerShell User Group 2020 Git and CI/CD Basics
 
@@ -64,22 +82,6 @@ TODO:
 Outline:
  + Visual tour of the Basics of Git - commits, repos, push, pull, pull request, PR driven code review, pr driven automation
  + 
-
-
-*** or ***
-
-## How I learned to stop worrying, 
-## and love `git revert`
-
-.small[
-Presented by [Edward Delaporte](mailto:edward.delaporte@busey.com)
-
-for [Busey Bank](https://www.busey.com)
-
-at [University of Illinois IT Professionals Forum](https://www.itproforum.illinois.edu/) on Nov 7, 2019.
-]
-
-This slide deck is online at http://edward.delaporte.us
 
 ???
 
