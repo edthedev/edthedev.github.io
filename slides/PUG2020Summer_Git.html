@@ -35,37 +35,70 @@ at **social distancing from home** on July 8, 2020.
 
 This slide deck is online at http://edward.delaporte.us
 
-???
-
-TODO:
-
-- [ ] Add some git basics to the beginning.
-- [ ] Move graphical git tools tour near the beginning
-- [x] Add some PowerShell specific git stuff - 
-- [x] ask MK for a psprompt 
-- [ ] grab some CI/CD diagrams from my last IT Pro Forum talk.
-
-Outline:
- + Visual tour of the Basics of Git - commits, repos, push, pull, pull request, PR driven code review, pr driven automation
- + 
-
-
 ---
 
+## Git Basics - Getting Started
+
+*Join a project*
+
+```powershell
+git clone
+```
+
+*Start a new project*
+
+```powershell
+git init
+```
+---
+
+## Git Basics - Getting Work Done
+
+*Stage some work*
+
+```powershell
+git add
+```
+
+*Start tracking work*
+
+```powershell
+git commit
+```
+
+*Share your work*
+
+```powershell
+git push
+```
+
+???
+
++ add remote
++ merge
++ revert
+
+---
 
 ## Git Basics - Getting Oriented
 
 *Where am I?*
 
->git status
+```powershell
+git status
+```
 
 *What have I done?*
 
->git diff
+```powershell
+git diff
+```
 
 *What am I about to commit?*
 
->git diff --cached
+```powershell
+git diff --cached
+```
 
 ???
 
@@ -78,17 +111,6 @@ Git Status
 - Anything in git status is an unresolved future problem
 - untracked files not in gitignore
 - unpushed or unpulled commits
-
----
-
-## Git Basics - Getting Work Done
-
-+ stage
-+ commit
-+ add remote
-+ push
-+ merge
-+ revert
 
 ---
 
