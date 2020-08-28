@@ -1,5 +1,6 @@
 ## Presentations
-
+- [Ansible Technical Introduction](2020_AnsibleIntro.html)
+- vRealize Automate 8 and Ansible Tower: AnsibleCU June/July 2020
 - Introduction to HashiCorp Vault: AnsibleCU January 2020
 - [Vault Quick Start: AnsibleCU January 2020](/2020_VaultQuickStart.html)
 - [Ansible Variables: AnsibleCU July 2019](/2019_AnsibleVariables.html)
