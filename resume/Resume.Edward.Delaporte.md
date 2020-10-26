@@ -126,11 +126,11 @@ Application Security Engineer Responsibilities
 #### May 2000 - Dec 2005: Software Developer at Ablesoft Solutions Inc. Oregon, IL
 
  - Created an elegant extensible project template in VB.Net which allowed us to create all our applications more quickly with better standard features.
- - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and Javascript to build advanced web interfaces.
+ - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and JavaScript to build advanced web interfaces.
 
 #### Open Source Contributions				October 2012 - Present
 
- - GitHub Arctic Code Vault Contributor 2020 - for commits to facebook/react-native, angular/angular.js, kivy/kivy and more.
+ - GitHub Arctic Code Vault Contributor 2020 - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
  - Collaborator on [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
  - Core contributor to the OWASP Ten Privacy Risks Projects 2015 - Present
  - Created a popular Python client for the InCommon SSL API: GitHub.com/edthedev/incommon_ssl
