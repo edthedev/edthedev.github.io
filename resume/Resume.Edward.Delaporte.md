@@ -145,6 +145,14 @@ Acts as a subject matter expert for Pakt Publishing.
 
 #### Professional Training - Highlights
 
+- AnsibleFest 2020
+- PrivacyCon 2020
+- DockerCon 2020
+- MS Build 2020
+- Microsoft Azure Fundamentals Workshop, 2020
+- Ansible Tower Workshop, 2020
+- CampIT Risk Conference, February 2020
+- ISACA Securing Web Applications, Insider Threats, Introduction to the MITRE ATT&CK Framework, January 2020
 - Microsoft Azure Workshop: n-Tier Server Provisioning and Deployment Pipelines with Docker, 2019
 - Completed Evolve: Two year internal leadership training program at Busey 2018, 2019
 - Completed Citigal OWASP Top Ten Training in 2017, 2018, 2019
@@ -157,6 +165,8 @@ Acts as a subject matter expert for Pakt Publishing.
 
 #### Community Involvement
 
+- Presenting to Internet2 on Cybersecurity in Safer Illinois - University of Illinois COVID response, 2020
+- Presented Putting the Sec in SecDevOps - Urbana IT Professionals Forum - Spring 2020
 - Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
 - Webmaster - Rotary Club of Champaign since 2018
 - Hosts a free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
