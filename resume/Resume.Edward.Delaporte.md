@@ -130,9 +130,11 @@ Application Security Engineer Responsibilities
 
 #### Open Source Contributions				October 2012 - Present
 
- - Core contributor to the OWASP Ten Privacy Risks Project
+ - GitHub Arctic Code Vault Contributor 2020 - for commits to facebook/react-native, angular/angular.js, kivy/kivy and more.
+ - Collaborator on [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
+ - Core contributor to the OWASP Ten Privacy Risks Projects 2015 - Present
  - Created a popular Python client for the InCommon SSL API: GitHub.com/edthedev/incommon_ssl
- - Created and maintains several Vim editor plugins, such as GitHub.com/edthedev/text-helper.vim
+ - Created and maintained several Vim editor plugins, such as GitHub.com/edthedev/text-helper.vim
  - Has commits accepted to popular projects including AngularJs, Ansible, and Kivy.
 
 #### Reviewer for Packt Publishing  		October 2014 - Present
