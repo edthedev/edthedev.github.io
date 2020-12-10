@@ -8,7 +8,14 @@ function draw() {
 
 function mouseClicked() {
   // background(220);
-  tree(mouseX, mouseY, 20)
+  // tree(mouseX, mouseY, 20)
+  spinny(mouseX, mouseY, 20)
+}
+
+function spinny(x, y, size) {
+  for(i=0;i<360;i++){
+    circle(x + i, y + 360 - i, size)
+  }
 }
 
 function tree(x, y, size) {
