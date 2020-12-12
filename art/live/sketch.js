@@ -1,9 +1,25 @@
 function setup() {
   createCanvas(400, 400);
-  background(200,200) 
+  background(200,200);
+  balls = [];
+  for(i=0;i<6;i++){
+    balls.push([0,i*15, 1, 1]);
+  }
+}
+
+function dewit(ball) {
+  ball[0]+=ball[2];
+  ball[1]+=ball[3];
+  if(ball[0]>200) ball[2] = -1;
+  if(ball[1]>200) ball[3] = -1;
+  if(ball[0]<0) ball[2] = 1;
+  if(ball[1]<0) ball[3] = 1;
+  circle(ball[0], ball[1], 20);
+  return ball;
 }
 
 function draw() {
+  balls = balls.map( dewit );
 }
 
 function mouseClicked() {
