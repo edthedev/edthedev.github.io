@@ -26,10 +26,11 @@ You get a bunch of LEDs, a couple of button, a radio, and a connector for an alw
 
 https://makecode.microbit.org/#
 
+### p5.js
 
-### Algorithm Ink
+[P5.js](https://p5js.org/learn/) is a fun web-based way to experiment with both JavaScript and drawing with code at the same time.
 
-[Algorithm Ink](http://azarask.in/projects/algorithm-ink/#0656fbe7) is a beautiful way to experiment with code and art.
+You can read the source code of [my live interactive art](/art/live) for some ideas.
 
 ### Code.org
 
