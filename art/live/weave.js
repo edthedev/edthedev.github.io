@@ -4,7 +4,8 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   balls = [];
-  for(i=0;i<6;i++){
+  ballcount = random(3,15);
+  for(i=0;i<ballcount;i++){
     balls.push([random(0, maxim),i*15, 1, 1]);
   }
 }
