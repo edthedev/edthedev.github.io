@@ -1,17 +1,19 @@
 function setup() {
-  createCanvas(400, 400);
-  background(200,200);
+  // maxim = .5 * window.innderWidth;
+  maxim = 400
+  createCanvas(maxim, maxim);
+  background(maxim,maxim);
   balls = [];
   for(i=0;i<6;i++){
-    balls.push([random(0, 400),i*15, 1, 1]);
+    balls.push([random(0, maxim),i*15, 1, 1]);
   }
 }
 
 function dewit(ball) {
   ball[0]+=ball[2];
   ball[1]+=ball[3];
-  if(ball[0]>400) ball[2] = -1;
-  if(ball[1]>400) ball[3] = -1;
+  if(ball[0]>maxim) ball[2] = -1;
+  if(ball[1]>maxim) ball[3] = -1;
   if(ball[0]<0) ball[2] = 1;
   if(ball[1]<0) ball[3] = 1;
   circle(ball[0], ball[1], 20);
