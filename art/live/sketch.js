@@ -1,28 +1,42 @@
+var ball = {
+  x: 0,
+  y: 0,
+  dx: 1,
+  dy: 1,
+  size: 20,
+  ruleset: dewit
+};
+
 function setup() {
   // maxim = .5 * window.innderWidth;
-  maxim = 400
+  maxim = 400;
+  midline = maxim / 2;
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   balls = [];
-  for(i=0;i<6;i++){
-    balls.push([random(0, maxim),i*15, 1, 1, random(10,40)]);
+  ballcount = random(3,15);
+
+
+  theball = Object(ball);
+  for(i=0;i<ballcount;i++){
+    newb = Object.assign({}, theball);
+    maxline = random(maxim/2, maxim);
+    minline = random(0, maxim/2);
+    newb.x = random(0,maxline);
+    newb.y = i * 22;
+    balls.push(newb);
   }
 }
 
 function dewit(ball) {
-  ball[0]+=ball[2];
-  ball[1]+=ball[3];
+  ball.x += ball.dx;
+  ball.y += ball.dy;
 
-  // Bounces
-  if(ball[0] % ball[4] < 1) ball[2] = ball[2] * -1;
-
-
-  // Walls
-  if(ball[0]>maxim) ball[2] = -1;
-  if(ball[1]>maxim) ball[3] = -1;
-  if(ball[0]<0) ball[2] = 1;
-  if(ball[1]<0) ball[3] = 1;
-  circle(ball[0], ball[1], 20);
+  if(ball.x>maxim) ball.dx = -1;
+  if(ball.y>maxim) ball.dy = -1;
+  if(ball.x<0) ball.dx = 1;
+  if(ball.y<0) ball.dy = 1;
+  circle(ball.x, ball.y, ball.size);
   return ball;
 }
 
