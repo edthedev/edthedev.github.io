@@ -3,8 +3,8 @@ var ball = {
   y: 0,
   dx: 1,
   dy: 1,
-  size: 20,
-  ruleset: dewit
+  rulefun: dewit,
+  size: 20
 };
 
 function setup() {
@@ -14,7 +14,7 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   balls = [];
-  ballcount = random(3,15);
+  ballcount = random(3,5);
 
 
   theball = Object(ball);
@@ -24,7 +24,7 @@ function setup() {
     minline = random(0, maxim/2);
     newb.x = random(0,maxline);
     newb.y = i * 22;
-    balls.push(newb);
+    balls.push([newb, dewit]);
   }
 }
 
@@ -36,12 +36,28 @@ function dewit(ball) {
   if(ball.y>maxim) ball.dy = -1;
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
-  circle(ball.x, ball.y, ball.size);
-  return ball;
+  circle(ball.x, ball.y, 20);
+  if(ball.y>maxim) {
+    return [ball, backwards];
+  }
+  return [ball, dewit];
+}
+
+function backwards(ball) {
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+
+  if(ball.x>maxim) ball.dx = -1;
+  if(ball.y>maxim) ball.dy = -1;
+  if(ball.x<0) ball.dx = 1;
+  if(ball.y<0) ball.dy = 1;
+  square(ball.x, ball.y, 20);
+  return [ball, backwards];
+
 }
 
 function draw() {
-  balls = balls.map( dewit );
+  balls = balls.map( item => item[1](item[0]) );
 }
 
 function mouseClicked() {
