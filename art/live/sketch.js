@@ -38,6 +38,7 @@ function dewit(ball) {
   if(ball.y<0) ball.dy = 1;
   circle(ball.x, ball.y, 20);
   if(ball.y>maxim) {
+    ball.dx = -1 * ball.dx;
     return [ball, backwards];
   }
   return [ball, dewit];
@@ -52,6 +53,12 @@ function backwards(ball) {
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   square(ball.x, ball.y, 20);
+
+  if(ball.y>maxim) {
+    ball.dx = -1 * ball.dx;
+    return [ball, dewit];
+  }
+
   return [ball, backwards];
 
 }
