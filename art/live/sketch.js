@@ -1,4 +1,4 @@
-var ball = {
+var sprite = {
   x: 0,
   y: 0,
   dx: 1,
@@ -17,7 +17,7 @@ function setup() {
   ballcount = random(3,5);
 
 
-  theball = Object(ball);
+  theball = Object(sprite);
   for(i=0;i<ballcount;i++){
     newb = Object.assign({}, theball);
     maxline = random(maxim/2, maxim);
@@ -37,7 +37,8 @@ function dewit(ball) {
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   circle(ball.x, ball.y, 20);
-  if(ball.y>maxim) {
+  if(ball.y>maxim && random(0,2) > 1) {
+    ball.x -= 20;
     ball.dx = -1 * ball.dx;
     return [ball, backwards];
   }
@@ -54,7 +55,8 @@ function backwards(ball) {
   if(ball.y<0) ball.dy = 1;
   square(ball.x, ball.y, 20);
 
-  if(ball.y>maxim) {
+  if(ball.y>maxim && random(0,2) > 1) {
+    ball.x -= 20;
     ball.dx = -1 * ball.dx;
     return [ball, dewit];
   }
