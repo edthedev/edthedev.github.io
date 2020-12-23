@@ -32,12 +32,16 @@ function dewit(ball) {
   ball.x += ball.dx;
   ball.y += ball.dy;
 
-  if(ball.x>maxim) ball.dx = -1;
-  if(ball.y>maxim) ball.dy = -1;
+  if(ball.x>maxim) ball.dx = -4;
+  if(ball.y>maxim) ball.dy = -4;
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   circle(ball.x, ball.y, 20);
   if(ball.y>maxim && random(0,2) > 1) {
+    // Random color
+    let c = color(random(0,10)*25,random(0,10)*25, random(0,10)*25);
+    fill(c);
+
     ball.x -= 20;
     ball.dx = -1 * ball.dx;
     return [ball, backwards];
