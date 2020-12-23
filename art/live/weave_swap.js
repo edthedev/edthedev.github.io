@@ -1,3 +1,21 @@
+/*
+
+"Weave / Swap" is a Live Art work created by Edward Delaporte.
+
+This script is Copyright Edward Delaporte 2020.
+
+This script and the art it creates are licensed under 
+a Creative Commons Attribution-ShareAlike 4.0 
+International License.
+
+http://creativecommons.org/licenses/by-sa/4.0/
+
+You can share your own remix of this code 
+as long as you display this license and attribution.
+
+*/
+
+
 var ball = {
   x: 0,
   y: 0,

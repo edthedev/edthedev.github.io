@@ -53,8 +53,8 @@ function backwards(ball) {
   ball.x += ball.dx;
   ball.y += ball.dy;
 
-  if(ball.x>maxim) ball.dx = -1;
-  if(ball.y>maxim) ball.dy = -1;
+  if(ball.x>maxim) ball.dx = -2;
+  if(ball.y>maxim) ball.dy = -2;
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   square(ball.x, ball.y, 20);
