@@ -1,3 +1,4 @@
+# Where you have admin access to Vault (local, Tower, etc)
 In terminal:
 ```
 export VAULT_ADDR=<yourvaultcluster>:8200
