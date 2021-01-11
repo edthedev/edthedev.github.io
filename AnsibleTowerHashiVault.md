@@ -1,4 +1,5 @@
 # Configuring HashiCorp Vault Agent with Approle for Ansible Tower
+Note: Omit namespace arguments if you are not using namespaces.
 
 ## Where you have admin access to Vault (local, Tower, etc)
 In terminal:
