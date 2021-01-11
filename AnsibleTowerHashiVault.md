@@ -75,12 +75,15 @@ vault write -f auth/approle/role/ansibletower/secret-id
 
 # Steps on Tower
 On Tower, become awx user:
-
+```
 sudo su - awx
 cd /etc/vault.d
 mkdir tower
 cd tower/
- 
+mkdir approle
+chmod 0700 approle/
+```
+
 Write the Vault Agent config file:
 `vim vault-agent.hcl`
 ```
@@ -130,8 +133,9 @@ Write the vault template:
 
 This example writes the Vault secret at secret/ansible/toweragent key=test into a file.
 The destination file is defined in the Vault Agent config template section.
+
+`vim approle/tower_creds.ctmpl`
 ```
-vim approle/tower_creds.ctmpl
 {{- with secret "secret/ansible/toweragent" -}}
 {{- if .Data.data -}}
 {{ .Data.data.test }}
