@@ -73,12 +73,16 @@ Generate a secret-id from the role:
 vault write -f auth/approle/role/ansibletower/secret-id
 ```
 
+# Steps on Tower
 On Tower, become awx user:
 
 sudo su - awx
-cd /etc/vault.d/tower
+cd /etc/vault.d
+mkdir tower
+cd tower/
  
 Write the Vault Agent config file:
+`vim vault-agent.hcl`
 ```
 exit_after_auth = false
 pid_file = "./pidfile"
@@ -87,7 +91,6 @@ listener "tcp" {
    address = "127.0.0.1:8200" #Use "127.0.0.1:8100" for local dev-server or for port collisions.
    tls_disable = true
 }
-
 
 auto_auth {
   method "approle" {
