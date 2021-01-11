@@ -10,17 +10,17 @@ Authenticate to Vault as an administrative user:
 vault login -method userpass username=<user>
 ```
 
-Determine which policies I have:
+Determine which policies you have:
 ```
 vault token lookup
 ```
 
-Determine which paths I can access based on my policies:
+Determine which paths you can access based on your policies:
 ```
 vault policy read admins (or other policy you have on your token)
 ```
 
-Add kv-v2 secrets engine to a path I can write to:
+Add kv-v2 secrets engine to a path you can write to:
 ```
 vault secrets enable -path secret/ansible kv-v2
 ```
