@@ -1,4 +1,6 @@
-# Where you have admin access to Vault (local, Tower, etc)
+# Configuring HashiCorp Vault Agent with Approle for Ansible Tower
+
+## Where you have admin access to Vault (local, Tower, etc)
 In terminal:
 ```
 export VAULT_ADDR=<yourvaultcluster>:8200
@@ -74,8 +76,8 @@ Generate a secret-id from the role:
 vault write -f auth/approle/role/ansibletower/secret-id
 ```
 
-# Steps on Tower
-On Tower, become awx user:
+## Steps on Tower Server
+On a terminal connected to Tower, become awx user:
 ```
 sudo su - awx
 cd /etc/vault.d
