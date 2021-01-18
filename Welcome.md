@@ -9,4 +9,5 @@ I share various technology solutions here. Officially so that you can read them;
 - [My Slide Decks](/slides)
 - [Learn to Code](/learn2code)
 - [Make Robots](/robots)
+- [Tech Topic Cheat Sheets](https://github.com/edthedev/dotfiles/tree/master/cheatsheets)
 - [About This Site](learn2code/aboutSite.html)
