@@ -1,6 +1,6 @@
 /*
 
-This is a Live Art work created by Edward Delaporte.
+"Weave / Swap" is a Live Art work created by Edward Delaporte.
 
 This script is Copyright Edward Delaporte 2020.
 
@@ -15,7 +15,8 @@ as long as you display this license and attribution.
 
 */
 
-var sprite = {
+
+var ball = {
   x: 0,
   y: 0,
   dx: 1,
@@ -34,7 +35,7 @@ function setup() {
   ballcount = random(3,5);
 
 
-  theball = Object(sprite);
+  theball = Object(ball);
   for(i=0;i<ballcount;i++){
     newb = Object.assign({}, theball);
     maxline = random(maxim/2, maxim);
@@ -49,17 +50,12 @@ function dewit(ball) {
   ball.x += ball.dx;
   ball.y += ball.dy;
 
-  if(ball.x>maxim) ball.dx = -4;
-  if(ball.y>maxim) ball.dy = -4;
+  if(ball.x>maxim) ball.dx = -1;
+  if(ball.y>maxim) ball.dy = -1;
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   circle(ball.x, ball.y, 20);
-  if(ball.y>maxim && random(0,2) > 1) {
-    // Random color
-    let c = color(random(0,10)*25,random(0,10)*25, random(0,10)*25);
-    fill(c);
-
-    ball.x -= 20;
+  if(ball.y>maxim) {
     ball.dx = -1 * ball.dx;
     return [ball, backwards];
   }
@@ -70,14 +66,13 @@ function backwards(ball) {
   ball.x += ball.dx;
   ball.y += ball.dy;
 
-  if(ball.x>maxim) ball.dx = -2;
-  if(ball.y>maxim) ball.dy = -2;
+  if(ball.x>maxim) ball.dx = -1;
+  if(ball.y>maxim) ball.dy = -1;
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   square(ball.x, ball.y, 20);
 
-  if(ball.y>maxim && random(0,2) > 1) {
-    ball.x -= 20;
+  if(ball.y>maxim) {
     ball.dx = -1 * ball.dx;
     return [ball, dewit];
   }

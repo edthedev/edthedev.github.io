@@ -1,6 +1,6 @@
 /*
 
-This is a Live Art work created by Edward Delaporte.
+"Weave Strange" is a Live Art work created by Edward Delaporte.
 
 This script is Copyright Edward Delaporte 2020.
 

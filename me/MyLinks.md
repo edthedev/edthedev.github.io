@@ -1,6 +1,7 @@
 ### My Art
 
-- [My Art](/art)
+- [Sketch Art](/art)
+- [Live Art](/art/live)
 
 ### My Resume
 
