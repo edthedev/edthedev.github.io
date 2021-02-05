@@ -28,14 +28,17 @@ I make computers better at meeting the needs of humans.
 - Provides SDLC process maturity feedback to campus research and development teams.
 - Drafted a Software Development Lifecycle Road Map (SDLC) full of resources free to University staff.
 - Built a shared tool chain for automated regression testing to prevent re-introduction of security problems by any team whose process satisfies a reasonable level of the security SDLC.
+- Mentors developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
+- Mentors DevOps teams across campus in Secure Software Development Lifecycle (SDLC) practices.
+- Assisted and mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
 
 #### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
 
-- Codes fully secure and compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
-- Manages senior software engineers and senior automation engineers for First Busey Corporation.
+- Managed remote DevOps team of 11 software engineers and automation engineers for Busey Bank and FirsTech Payment processor.
+- Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
-- Interprets security scan results and teaches other developers how to remediate vulnerabilities.
+- Mentored developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
 - Implemented development team self scanning with Accunetix.
 - Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
 - Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
