@@ -15,17 +15,17 @@ I make computers better at meeting the needs of humans.
 - Leading software teams since 2011.
 - Has built a lot of websites for a lot of purposes with a lot of different technologies.
 - Has effective work habits and great interpersonal skills.
-- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps.
-- Linux Tech:  Python, C#, Perl, Java, PHP, Active Directory, Apache, Django, JSON, LDAP, Linux shell, Syslog, SQL, WSGI, GitHub enterprise.
+- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, Active Directory, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps.
+- Linux Tech:  Python, Perl, Java, PHP, Apache, NGinx, Django, SOAP, REST, JSON, LDAP, Linux shell, Syslog, SQL, WSGI, GitHub enterprise, AWS.
 
 ## Career
 
 #### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
 
-- Hire a small group of future leaders with relevant development experience into Cybersecurity Dev.
-- Support overall Cybersecurity Objectives.
-- Create open lines of communication between development teams and Cybersecurity.
-- Provides SDLC process maturity feedback to the development teams.
+- Hired a small group of future leaders with relevant development experience into Cybersecurity Dev.
+- Supports overall Cybersecurity Objectives.
+- Created open lines of communication between development teams and Cybersecurity.
+- Provides SDLC process maturity feedback to campus research and development teams.
 - Drafted a Software Development Lifecycle Road Map (SDLC) full of resources free to University staff.
 - Built a shared tool chain for automated regression testing to prevent re-introduction of security problems by any team whose process satisfies a reasonable level of the security SDLC.
 
