@@ -140,14 +140,6 @@ Application Security Engineer Responsibilities
  - Created and maintained several Vim editor plugins, such as GitHub.com/edthedev/text-helper.vim
  - Has commits accepted to popular projects including AngularJs, Ansible, and Kivy.
 
-#### Reviewer for Packt Publishing  		October 2014 - Present
-
-Acts as a subject matter expert for Pakt Publishing.
-
- - [Data Mining with Python](https://www.packtpub.com/big-data-and-business-intelligence/learning-data-mining-python) (ISBN 978-1-78439-605-3) 
- - [Kivy: Interactive Applications in Python, Second Edition](https://www.packtpub.com/application-development/kivy-interactive-applications-python) (ISBN 978-1-78328-159-6) 
- - [Kivy Blueprints](https://www.packtpub.com/application-development/kivy-blueprints) (ISBN 978-1-78398-784-9)
-
 #### Professional Training - Highlights
 
 - AnsibleFest 2020
@@ -171,12 +163,11 @@ Acts as a subject matter expert for Pakt Publishing.
 
 #### Community Involvement
 
-- Presenting to Internet2 on Cybersecurity in Safer Illinois - University of Illinois COVID response, 2020
-- Presented Putting the Sec in SecDevOps - Urbana IT Professionals Forum - Spring 2020
-- Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
 - Webmaster - Rotary Club of Champaign since 2018
 - Hosts a free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
-- Presented at University of Illinois Webmaster's Conference 2016
 - OWASP Top Ten Privacy Project - Core contributor since 2015
-- Handles hosting, DNS and administration of various not-for-profit websites since 2007
-- Operated various web services including WordPress, Drupal, Dokuwiki, and Minecraft.
+- Presented to Internet2 on Cybersecurity in Safer Illinois - University of Illinois COVID response, 2020
+- Presented Putting the Sec in SecDevOps - Urbana IT Professionals Forum - Spring 2020
+- Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
+- Presented at University of Illinois Webmaster's Conference 2016
+- Handled hosting, DNS and administration of various not-for-profit websites since 2007
