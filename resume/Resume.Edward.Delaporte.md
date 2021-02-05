@@ -167,6 +167,7 @@ Acts as a subject matter expert for Pakt Publishing.
 - Completed U of I Information Technology Leadership Workshop (ITLW)
 - Completed [SANS](https://www.sans.org/) On-site Secure Software Development Training
 - Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
+- Completed [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
 
 #### Community Involvement
 
