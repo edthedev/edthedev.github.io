@@ -1,4 +1,5 @@
 ## Presentations
+- [Deploy Files with Ansible - Copy and Template Modules: AnsibleCU February 2021](2021_AnsibleFiles.html)
 - [vRA 8 Integration with Ansible Tower: AnsibleFest 2020](2020_vRA_Tower.html)
 - [Ansible Technical Introduction: AnsibleCU August 2020](2020_AnsibleIntro.html)
 - [vRealize Automate 8 and Ansible Tower: AnsibleCU June/July 2020](2020_vRA_Tower.html)
