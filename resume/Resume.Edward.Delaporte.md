@@ -30,6 +30,7 @@ I make computers better at meeting the needs of humans.
 - Built a shared tool chain for automated regression testing to prevent re-introduction of security problems by any team whose process satisfies a reasonable level of the security SDLC.
 - Mentors developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
 - Mentors DevOps teams across campus in Secure Software Development Lifecycle (SDLC) practices.
++ Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020
 - Assisted and mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
 
 #### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
@@ -163,6 +164,7 @@ Application Security Engineer Responsibilities
 
 #### Community Involvement
 
++ Rotary Club of Champaign - Website Committee Chair since 2020
 - Webmaster - Rotary Club of Champaign since 2018
 - Hosts a free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
 - OWASP Top Ten Privacy Project - Core contributor since 2015
