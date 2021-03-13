@@ -46,8 +46,6 @@ Select your language and region. For example `en.UTF8` means English with Unicod
 
 > sudo apt-get install git
 
-
-
 ## Clone the Setup Files
 
 This bit will vary by the environment you want to set up, but should look something like this:
@@ -65,5 +63,14 @@ Ideally all commands in `install.sh` require no user interaction, while commands
 
 Optionally, we can stop acting as the `pi` user.
 
-> useradd bob
-> sudo su bob
+Add a new user:
+> userdel -r -f bob
+> sudo adduser bob
+
+If desired - grant `sudo` permissions to the new user.
+> sudo visudo
+
+To immediately switch to using the new user:
+> sudo -u bob bash
+
+After rebooting, we can simply login directly as the new user.
