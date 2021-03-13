@@ -61,3 +61,13 @@ Copy the SSH public key into the [Security tab on GitHub][3].
 > cat ~/.ssh/id_rsa.pub
 
 [3]: https://github.com/settings/keys
+
+
+## Clone your `doffiles` repository
+
+```
+cd ~
+git clone git@github.com:edthedev/dotfiles.git
+```
+
+Then run any relevant setup script.
