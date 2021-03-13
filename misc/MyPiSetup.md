@@ -33,7 +33,17 @@ So instead, we are going to enable incoming SSH to the Raspberry Pi.
 
 > sudo raspi-config
 
-TODO
+`System` - `Interfaces` - `Enable SSH`
+
+Restart.
+
+Verify SSH is running.
+
+> service ssh status
+
+Check the IP address.
+
+> ifconfig
 
 ## Advanced Bootstrapping
 
@@ -43,7 +53,7 @@ It if fine to accept the default options.
 
 Remember to run this command from a computer with a web browser that is connected to the same local network as the Pi. 
 
-> ssh pi@raspberrypi
+> ssh pi@192.168.xx.xx
 > ssh-keygen
 
 Copy the SSH public key into the [Security tab on GitHub][3].
