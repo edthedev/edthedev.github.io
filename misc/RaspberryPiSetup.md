@@ -46,8 +46,24 @@ Select your language and region. For example `en.UTF8` means English with Unicod
 
 > sudo apt-get install git
 
+
+
+## Clone the Setup Files
+
+This bit will vary by the environment you want to set up, but should look something like this:
+
+> git clone <instructors git repository> setup
+> cd setup
+> sudo ./install.sh
+> ./setup.sh
+
+I recommend putting the commands that need `sudo` permission into `install.sh` and the commands that do not require `sudo` into `setup.sh` as a convention.
+
+Ideally all commands in `install.sh` require no user interaction, while commands in `setup.sh` might prompt the end user for some user specific information - i.e. which lesson they are setting up to work through.
+
 ## Personal User
 
-We can also stop acting as the `pi` user.
+Optionally, we can stop acting as the `pi` user.
 
 > useradd bob
+> sudo su bob
