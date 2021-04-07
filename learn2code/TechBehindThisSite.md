@@ -20,8 +20,13 @@ Local testing is done using the [Web Server for Chrome Plugin](https://chrome.go
 + Original editing was done in Vim.
 + Recently I have been using Visual Studio Code with the delightful VsVim plugin.
 + When I want a really focused editing experience, I use my [Journal Pi Setup](../pi/)
-+ [Web.Dev for better accessibility](https://web.dev/measure/)
+
+## Optimizing
+
++ [Web.Dev](https://web.dev/measure/)
 + [Functional Accessibility Assessor](https://fae.disability.illinois.edu/)
++ [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#cli)
++ [Contrast Checker](https://webaim.org/resources/linkcontrastchecker/)
 
 ### Art
 Most art was done on an iPad.
