@@ -1,4 +1,4 @@
-# Edward.Delaporte.us
+# Edward Delaporte's Blog
 
 Welcome to EdTheDev's Technology Blog on programming, art and education.
 
