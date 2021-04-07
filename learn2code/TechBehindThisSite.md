@@ -20,7 +20,10 @@ Local testing is done using the [Web Server for Chrome Plugin](https://chrome.go
 + Original editing was done in Vim.
 + Recently I have been using Visual Studio Code with the delightful VsVim plugin.
 + When I want a really focused editing experience, I use my [Journal Pi Setup](../pi/)
++ [Web.Dev for better accessibility](https://web.dev/measure/)
++ [Functional Accessibility Assessor](https://fae.disability.illinois.edu/)
 
 ### Art
 Most art was done on an iPad.
 The fish bowl was mostly done on a Wacom Bamboo tablet, which I do not recommend, due to the surpressingly small sensitivity area. I understand it has been discontinued, so Wacom agrees. More recent art may have been done on a Huion 610 Pro Tablet or Microsoft Surface Go.
+
