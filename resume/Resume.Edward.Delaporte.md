@@ -143,6 +143,7 @@ Application Security Engineer Responsibilities
 
 #### Professional Training - Highlights
 
+- CampIT Enterprise Risk / Security Management, March 2021
 - AnsibleFest 2020
 - PrivacyCon 2020
 - DockerCon 2020
@@ -164,10 +165,11 @@ Application Security Engineer Responsibilities
 
 #### Community Involvement
 
-+ Rotary Club of Champaign - Website Committee Chair since 2020
+- Rotary Club of Champaign - Website Committee Chair since 2020
 - Webmaster - Rotary Club of Champaign since 2018
 - Hosts a free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
 - OWASP Top Ten Privacy Project - Core contributor since 2015
+- Presented at University of Illinois WebCon, 2021
 - Presented to Internet2 on Cybersecurity in Safer Illinois - University of Illinois COVID response, 2020
 - Presented Putting the Sec in SecDevOps - Urbana IT Professionals Forum - Spring 2020
 - Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
