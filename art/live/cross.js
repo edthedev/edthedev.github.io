@@ -22,8 +22,10 @@ var ball = {
   dx: 1,
   dy: 1,
   size: 20,
-  bouncex: 50,
-  bouncey: 50
+  minx: 0,
+  miny: 0,
+  maxx: 50,
+  maxy: 50
 };
 
 function setup() {
@@ -44,8 +46,10 @@ function setup() {
     minline = random(0, maxim/2);
     newb.x = random(0,maxline);
     newb.y = i * 22;
-    newb.bouncex = maxline;
-    newb.bouncey = maxline;
+    newb.minx = 0;
+    newb.miny = 0;
+    newb.maxx = maxline;
+    newb.maxy = maxline;
     balls.push(newb);
   }
 }
@@ -54,10 +58,10 @@ function doBall(ball) {
   ball.x += ball.dx;
   ball.y += ball.dy;
 
-  if(ball.x>ball.bouncex) ball.dx = -1;
-  if(ball.y>ball.bouncey) ball.dy = -1;
-  if(ball.x<0) ball.dx = 1;
-  if(ball.y<0) ball.dy = 1;
+  if(ball.x>ball.maxx) ball.dx = -1;
+  if(ball.y>ball.maxy) ball.dy = -1;
+  if(ball.x<ball.minx) ball.dx = 1;
+  if(ball.y<ball.miny) ball.dy = 1;
   circle(ball.x, ball.y, ball.size);
   return ball;
 }
@@ -69,11 +73,27 @@ function draw() {
 function mouseClicked() {
   if(xory == 1) {
     line(0, mouseY, maxim, mouseY);
-    balls.forEach( ball => ball.bouncey = mouseY );
+    balls.forEach( ball => function foo( ball ) {
+      if(ball.y > mouseY) {
+        ball.miny = mouseY;
+      } else {
+        ball.maxy = mouseY;
+      }
+      return ball;
+    }
+    );
     xory = 0;
   } else {
     line(mouseX, 0, mouseX, maxim);
-    balls.forEach( ball => ball.bouncex = mouseX );
+    // balls.forEach( ball => ball.maxx = mouseX );
+    balls.forEach( (ball, idx) => {
+      if(balls[idx].x > mouseX) {
+        balls[idx].minx = mouseX;
+      } else {
+        balls[idx].maxx= mouseX;
+      }
+    }
+    );
     xory = 1;
   }
 }
