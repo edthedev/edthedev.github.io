@@ -33,12 +33,12 @@ function setup() {
   // maxim = .5 * window.innderWidth;
   maxim = 400;
   midline = maxim / 2;
+  noStroke();
 
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   balls = [];
   ballcount = random(3,15);
-  xory = 0;
 
   theball = Object(ball);
   for(i=0;i<ballcount;i++){
@@ -74,29 +74,17 @@ function draw() {
 }
 
 function mouseClicked() {
-  if(xory == 1) {
-    line(0, mouseY, maxim, mouseY);
-
-    balls.forEach( (ball, idx) => {
-      if(balls[idx].y > mouseY) {
-        balls[idx].miny = mouseY;
-      } else {
-        balls[idx].maxy= mouseY;
-      }
+  balls.forEach( (ball, idx) => {
+    if(balls[idx].y > mouseY) {
+      balls[idx].miny = mouseY;
+    } else {
+      balls[idx].maxy= mouseY;
     }
-    );
 
-    xory = 0;
-  } else {
-    line(mouseX, 0, mouseX, maxim);
-    balls.forEach( (ball, idx) => {
-      if(balls[idx].x > mouseX) {
-        balls[idx].minx = mouseX;
-      } else {
-        balls[idx].maxx= mouseX;
-      }
+    if(balls[idx].x > mouseX) {
+      balls[idx].minx = mouseX;
+    } else {
+      balls[idx].maxx= mouseX;
     }
-    );
-    xory = 1;
-  }
+  });
 }
