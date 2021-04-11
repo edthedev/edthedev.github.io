@@ -35,6 +35,7 @@ function setup() {
   background(maxim,maxim);
   balls = [];
   ballcount = random(3,15);
+  xory = 0;
 
   theball = Object(ball);
   for(i=0;i<ballcount;i++){
@@ -54,7 +55,7 @@ function doBall(ball) {
   ball.y += ball.dy;
 
   if(ball.x>ball.bouncex) ball.dx = -1;
-  if(ball.y>maxim) ball.dy = -1;
+  if(ball.y>ball.bouncey) ball.dy = -1;
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   circle(ball.x, ball.y, ball.size);
@@ -66,5 +67,13 @@ function draw() {
 }
 
 function mouseClicked() {
-  balls.forEach( ball => ball.bouncex = mouseX );
+  if(xory == 1) {
+    line(0, mouseY, maxim, mouseY);
+    balls.forEach( ball => ball.bouncey = mouseY );
+    xory = 0;
+  } else {
+    line(mouseX, 0, mouseX, maxim);
+    balls.forEach( ball => ball.bouncex = mouseX );
+    xory = 1;
+  }
 }
