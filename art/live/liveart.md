@@ -18,7 +18,7 @@ Copyright Edward Delaporte 2020.
 
 [Weave Pattern](weave.html)
 <a href="weave.html">
-<img src="weave.PNG" alt="Weave Pattern Art" />
+![Weave Art Screenshot](weave.PNG)
 </a>
 
 ## Strange Weave
