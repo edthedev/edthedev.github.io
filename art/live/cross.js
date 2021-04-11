@@ -73,19 +73,19 @@ function draw() {
 function mouseClicked() {
   if(xory == 1) {
     line(0, mouseY, maxim, mouseY);
-    balls.forEach( ball => function foo( ball ) {
-      if(ball.y > mouseY) {
-        ball.miny = mouseY;
+
+    balls.forEach( (ball, idx) => {
+      if(balls[idx].y > mouseY) {
+        balls[idx].miny = mouseY;
       } else {
-        ball.maxy = mouseY;
+        balls[idx].maxy= mouseY;
       }
-      return ball;
     }
     );
+
     xory = 0;
   } else {
     line(mouseX, 0, mouseX, maxim);
-    // balls.forEach( ball => ball.maxx = mouseX );
     balls.forEach( (ball, idx) => {
       if(balls[idx].x > mouseX) {
         balls[idx].minx = mouseX;
