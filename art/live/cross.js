@@ -45,7 +45,7 @@ function setup() {
     newb = Object.assign({}, theball);
     maxline = random(maxim/2, maxim);
     minline = random(0, maxim/2);
-    newb.x = random(0,maxline);
+    newb.x = random(0,10) * maxline / 10;
     newb.y = i * 22;
     newb.minx = 0;
     newb.miny = 0;
