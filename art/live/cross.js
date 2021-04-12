@@ -26,7 +26,9 @@ var ball = {
   miny: 0,
   maxx: 50,
   maxy: 50,
-  color: 0
+  color1: 0,
+  color2: 0,
+  color1: 0
 };
 
 function setup() {
@@ -51,7 +53,9 @@ function setup() {
     newb.miny = 0;
     newb.maxx = maxline;
     newb.maxy = maxline;
-    newb.color = color(random(150,255), random(150,255), random(150,255));
+    newb.color1 = color(random(150,255), random(150,255), random(150,255));
+    newb.color2 = color(random(150,255), random(150,255), random(150,255));
+    newb.color3 = color(random(150,255), random(150,255), random(150,255));
     balls.push(newb);
   }
 }
@@ -64,8 +68,12 @@ function doBall(ball) {
   if(ball.y>ball.maxy) ball.dy = -1;
   if(ball.x<ball.minx) ball.dx = 1;
   if(ball.y<ball.miny) ball.dy = 1;
-  fill(ball.color);
+  fill(ball.color1);
   circle(ball.x, ball.y, ball.size);
+  fill(ball.color2);
+  circle(ball.x + ball.size/2, ball.y + ball.size/2, ball.size/2);
+  fill(ball.color3);
+  circle(ball.x + ball.size/2, ball.y - ball.size/2, ball.size/4);
   return ball;
 }
 
