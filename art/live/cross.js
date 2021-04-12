@@ -51,7 +51,7 @@ function setup() {
     newb.miny = 0;
     newb.maxx = maxline;
     newb.maxy = maxline;
-    newb.color = color(random(100,255), random(100,255), random(100,255));
+    newb.color = color(random(150,255), random(150,255), random(150,255));
     balls.push(newb);
   }
 }
