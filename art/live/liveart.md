@@ -27,7 +27,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 [Weave Pattern](weave.html)
 <a href="weave.html">
-![Weave Art Screenshot](weave.png)
+![Weave Art Screenshot](weave2.PNG)
 </a>
 
 ## Strange Weave
