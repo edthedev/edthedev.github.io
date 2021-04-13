@@ -9,7 +9,7 @@ Copyright Edward Delaporte 2020.
 
 Be sure to try clicking the art pieces. Some of them interact.
 
-## Balls in Boxes
+## Crossing Paths
 
 [Crossing Paths](cross.html)
 <a href="cross.html">

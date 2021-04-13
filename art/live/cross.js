@@ -21,7 +21,7 @@ var ball = {
   y: 0,
   dx: 1,
   dy: 1,
-  size: 20,
+  size: 16,
   minx: 0,
   miny: 0,
   maxx: 50,
@@ -71,7 +71,7 @@ function doBall(ball) {
   fill(ball.color1);
   circle(ball.x, ball.y, ball.size);
   fill(ball.color2);
-  circle(ball.x + ball.size/2, ball.y + ball.size/2, ball.size/2);
+  circle(ball.x + ball.size, ball.y + ball.size, ball.size/4);
   fill(ball.color3);
   circle(ball.x + ball.size/2, ball.y - ball.size/2, ball.size/4);
   return ball;
