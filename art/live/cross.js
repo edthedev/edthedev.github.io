@@ -21,7 +21,7 @@ var ball = {
   y: 0,
   dx: 1,
   dy: 1,
-  size: 16,
+  size: 10,
   minx: 0,
   miny: 0,
   maxx: 50,
@@ -82,17 +82,13 @@ function draw() {
 }
 
 function mouseClicked() {
+  // Clicking shifts all balls direction.
+  dxdir = -1;
+  if(mouseX > maxline/2) {
+    // Everyone head to the right!
+    dxdir = 1;
+  }
   balls.forEach( (ball, idx) => {
-    if(balls[idx].y > mouseY) {
-      balls[idx].miny = mouseY;
-    } else {
-      balls[idx].maxy= mouseY;
-    }
-
-    if(balls[idx].x > mouseX) {
-      balls[idx].minx = mouseX;
-    } else {
-      balls[idx].maxx= mouseX;
-    }
+    ball.dx = dxdir;
   });
 }
