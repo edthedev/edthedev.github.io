@@ -31,6 +31,20 @@ var ball = {
   color1: 0
 };
 
+function starfield() {
+  // White start on black backgroud
+  background('#222222');
+  fill(color(255,255,255));
+  
+  // Randomly scatter stars.
+  starcount = random(20,60);
+  for(i=0;i<starcount;i++){
+    starx = random(0, maxim);
+    stary = random(0, maxim);
+    circle(starx, stary, 2);
+  }
+}
+
 function setup() {
   // maxim = .5 * window.innderWidth;
   maxim = 400;
@@ -38,7 +52,8 @@ function setup() {
   noStroke();
 
   createCanvas(maxim, maxim);
-  background(maxim,maxim);
+  starfield();
+  // background(maxim,maxim);
   balls = [];
   ballcount = random(3,15);
 
