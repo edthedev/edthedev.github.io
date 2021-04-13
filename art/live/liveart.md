@@ -11,8 +11,15 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 ## Balls in Boxes
 
-[Balls in Boxes](cross.html)
+[Crossing Paths](cross.html)
 <a href="cross.html">
+![Crossing Paths](boxes.PNG)
+</a>
+
+## Balls in Boxes
+
+[Balls in Boxes](boxes.html)
+<a href="boxes.html">
 ![Balls in Boxes](boxes.PNG)
 </a>
 
@@ -20,7 +27,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 [Weave Pattern](weave.html)
 <a href="weave.html">
-![Weave Art Screenshot](weave.PNG)
+![Weave Art Screenshot](weave.png)
 </a>
 
 ## Strange Weave
