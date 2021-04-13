@@ -13,7 +13,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 [Crossing Paths](cross.html)
 <a href="cross.html">
-![Crossing Paths](boxes.PNG)
+![Crossing Paths](crossing.PNG)
 </a>
 
 ## Balls in Boxes
