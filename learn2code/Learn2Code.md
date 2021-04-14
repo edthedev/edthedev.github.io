@@ -14,6 +14,13 @@ Kids need shelter, food, love, and a hand-held that they can write their own gam
 
 Even without the device, kids can get started using the online emulator and [MakeCode Arcade Tutorials](https://arcade.makecode.com/).
 
+I made a game called [Monkey Treasure Hunt](https://makecode.com/_Tkm4pxeVeMmE).
+
+And a better game than mine:
+
++ [Tony Albatross - Pro Dolphin](https://arcade.makecode.com/26346-72733-28413-39259)
+
+
 ### MIT Scratch
 
 [MIT Scratch](https://scratch.mit.edu/projects/editor/?tutorial=home) is the original block based code learning environment.
