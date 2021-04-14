@@ -14,7 +14,7 @@ Kids need shelter, food, love, and a hand-held that they can write their own gam
 
 Even without the device, kids can get started using the online emulator and [MakeCode Arcade Tutorials](https://arcade.makecode.com/).
 
-I made a game called [Monkey Treasure Hunt](https://makecode.com/_Tkm4pxeVeMmE).
+I made a game called [Monkey Treasure Hunt](https://makecode.com/_TWAV1bia4Jcd).
 
 And a better game than mine:
 
