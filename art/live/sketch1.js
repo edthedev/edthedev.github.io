@@ -20,6 +20,11 @@ function freshcolor() {
   fill(c);
 }
 
+function mutecolor() {
+  let c = color(random(0,5)*30,random(0,5)*30, random(0,5)*30);
+  fill(c);
+}
+
 
 function starfield() {
   // White start on black backgroud
@@ -48,6 +53,14 @@ function topspike() {
   freshcolor();
 }
 
+function oneglobe() {
+  var gx = random(1, 3);
+  var gy = random(2, 3);
+  var gsize = 100 * random(1, 3);
+
+  globe(gx * 100 + 50,gy*100+50, gsize);
+}
+
 function globe(gx, gy, size) {
   freshcolor();
   circle(gx, gy, size);
@@ -74,7 +87,16 @@ function globe(gx, gy, size) {
 
 }
 
-// var colorshade = 0;
+function helix(hx, hy) {
+  var size = 100 * random(3, 6);
+
+  for(i=0; i<size; i++){
+    mutecolor();
+    var ix = i + (1 - (i % 4)) * 2;
+    var iy = i/2 + (1 - (i % 6)) * 2;
+    circle(hx+ix, hy+iy, 20);
+  }
+}
 
 function setup() {
   maxim = 400;
@@ -83,12 +105,13 @@ function setup() {
   background(maxim,maxim);
   starfield();
 
-  // Globes
-  var gx = random(1, 3);
-  var gy = random(2, 3);
-  var gsize = 100 * random(1, 3);
+  var hx = -200 + 100 * random(0, 4);
+  helix(hx, 0);
+  var dx = 50 * random(1, 3);
+  helix(hx+dx, 0);
 
-  globe(gx * 100 + 50,gy*100+50, gsize);
-
+  oneglobe();
   topspike();
+
+
 }
