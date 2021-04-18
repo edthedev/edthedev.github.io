@@ -27,7 +27,8 @@ function setup() {
   background(maxim,maxim);
   cornercount = random(3,10);
   for(i=0;i<cornercount;i++){
-    cornerstroke(0,0,50 * i,50*i+30);
+    // cornerstroke(0,0,50 * i,50*i+30);
+    triangle(0,0, 50*i, 50*i+30, maxim/i, 0);
   }
 
 }
