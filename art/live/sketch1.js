@@ -21,7 +21,7 @@ function freshcolor() {
 }
 
 function mutecolor() {
-  let c = color(random(0,5)*30,random(0,5)*30, random(0,5)*30);
+  let c = color(random(0,3)*40,random(0,3)*40, random(0,3)*30);
   fill(c);
 }
 
@@ -87,7 +87,7 @@ function globe(gx, gy, size) {
 
 }
 
-function helix(hx, hy) {
+function braid(hx, hy) {
   var size = 100 * random(3, 6);
 
   for(i=0; i<size; i++){
@@ -105,10 +105,10 @@ function setup() {
   background(maxim,maxim);
   starfield();
 
-  var hx = -200 + 100 * random(0, 4);
-  helix(hx, 0);
+  var hx = -300 + 100 * random(0, 4);
+  braid(hx, 0);
   var dx = 50 * random(1, 3);
-  helix(hx+dx, 0);
+  braid(hx+dx, 0);
 
   oneglobe();
   topspike();
