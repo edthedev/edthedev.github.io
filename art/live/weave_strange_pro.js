@@ -131,6 +131,7 @@ function draw() {
     balls = balls.map( item => item[1](item[0]) );
   }
   if(counttofreeze == 0){
+    noStroke();
     topspike();
   }
 }
