@@ -82,13 +82,13 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   starfield();
-  cornercount = random(3,10);
-  for(i=0;i<cornercount;i++){
-    freshcolor();
-    // cornerstroke(0,0,50 * i,50*i+30);
-    triangle(0,0, 50*i, 50*i+30, maxim/i, 0);
-  }
+
+  // Globes
   var gx = random(1, 3);
   var gy = random(2, 3);
-  globe(gx * 100 + 50,gy*100+50, 101);
+  var gsize = 100 * random(1, 3);
+
+  globe(gx * 100 + 50,gy*100+50, gsize);
+
+  topspike();
 }
