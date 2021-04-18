@@ -53,6 +53,24 @@ function globe(gx, gy, size) {
   circle(gx, gy, size);
   freshcolor();
   triangle(gx-size/3, gy-size/3, gx+size/2, gy, gx+size/4, gy+size/4);
+  if(size>100) {
+    var gnext = Math.floor(random(1, 3));
+    var gxnext = 0;
+    var gynext = 0;
+    if(gnext == 1) {
+      gxnext = gx-size/3;
+      gynext = gy-size/3;
+    }
+    if(gnext == 2) {
+      gxnext = gx+size/2;
+      gynext = gy;
+    }
+    if(gnext == 3) {
+      gxnext = gx+size/4;
+      gynext = gy+size/4;
+    }
+    globe(gxnext, gynext, size/3+(5*random(0,5)));
+  }
 
 }
 
@@ -72,5 +90,5 @@ function setup() {
   }
   var gx = random(1, 3);
   var gy = random(2, 3);
-  globe(gx * 100 + 50,gy*100+50, 100);
+  globe(gx * 100 + 50,gy*100+50, 101);
 }
