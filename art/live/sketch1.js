@@ -15,6 +15,12 @@ as long as you display this license and attribution.
 
 */
 
+function freshcolor() {
+  let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  fill(c);
+}
+
+
 function starfield() {
   // White start on black backgroud
   background('#222222');
@@ -26,14 +32,28 @@ function starfield() {
     starx = random(0, maxim);
     stary = random(0, maxim);
     circle(starx, stary, 4);
+    if(random(0,5)==1) {
+      circle(starx -4, stary -4, 4);
+    }
+
   }
 }
 
+function topspike() {
+  cornercount = random(6,10);
+  for(i=0;i<cornercount;i++){
+    freshcolor();
+    triangle(0,0, 50*i, 50*i+30, maxim/i, 0);
+  }
+  freshcolor();
+}
 
+function globe(gx, gy, size) {
+  freshcolor();
+  circle(gx, gy, size);
+  freshcolor();
+  triangle(gx-size/3, gy-size/3, gx+size/2, gy, gx+size/4, gy+size/4);
 
-function cornerstroke(sx1, sy1, sx2, sy2) {
-  line(sx1, sy1, sx2, sy2/2);
-  line(sx2, sy2/2, sx1, sy2);
 }
 
 // var colorshade = 0;
@@ -46,11 +66,11 @@ function setup() {
   starfield();
   cornercount = random(3,10);
   for(i=0;i<cornercount;i++){
-    // colorshade+=40;
-    let c = color(random(0,10)*25,random(0,10)*25, random(0,10)*25);
-    fill(c);
+    freshcolor();
     // cornerstroke(0,0,50 * i,50*i+30);
     triangle(0,0, 50*i, 50*i+30, maxim/i, 0);
   }
-
+  var gx = random(1, 3);
+  var gy = random(2, 3);
+  globe(gx * 100 + 50,gy*100+50, 100);
 }
