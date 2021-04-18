@@ -24,6 +24,11 @@ var sprite = {
   size: 20
 };
 
+function freshcolor() {
+  let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  fill(c);
+}
+
 
 function starfield() {
   // White start on black backgroud
@@ -35,19 +40,20 @@ function starfield() {
   for(i=0;i<starcount;i++){
     starx = random(0, maxim);
     stary = random(0, maxim);
-    circle(starx, stary, 4);
+    circle(starx -1, stary -1, 4);
+    circle(starx +1, stary -1, 4);
+    circle(starx -1, stary +1, 4);
+    circle(starx +1, stary +1, 4);
   }
 }
 
 function topspike() {
   cornercount = random(6,10);
   for(i=0;i<cornercount;i++){
-    let c = color(random(0,10)*25,random(0,10)*25, random(0,10)*25);
-    fill(c);
+    freshcolor();
     triangle(0,0, 50*i, 50*i+30, maxim/i, 0);
   }
-  let c = color(random(0,10)*25,random(0,10)*25, random(0,10)*25);
-  fill(c);
+  freshcolor();
 }
 
 
@@ -88,8 +94,7 @@ function dewit(ball) {
   circle(ball.x, ball.y, 20);
   if(ball.y>maxim && random(0,2) > 1) {
     // Random color
-    let c = color(random(0,10)*25,random(0,10)*25, random(0,10)*25);
-    fill(c);
+    freshcolor();
 
     ball.x -= 20;
     ball.dx = -1 * ball.dx;
