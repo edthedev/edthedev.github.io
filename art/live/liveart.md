@@ -9,6 +9,14 @@ Copyright Edward Delaporte 2020.
 
 Be sure to try clicking the art pieces. Some of them interact.
 
+## April 18 Sketch
+
+[April 18 Sketch](sketch1.html)
+<a href="sketch1.html">
+![April 18 Sketch Preview](sketch1.PNG)
+</a>
+
+
 ## Crossing Paths
 
 [Crossing Paths](cross.html)
