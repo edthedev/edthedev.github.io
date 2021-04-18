@@ -40,10 +40,11 @@ function starfield() {
   for(i=0;i<starcount;i++){
     starx = random(0, maxim);
     stary = random(0, maxim);
-    circle(starx -1, stary -1, 4);
-    circle(starx +1, stary -1, 4);
-    circle(starx -1, stary +1, 4);
-    circle(starx +1, stary +1, 4);
+    circle(starx, stary, 4);
+    if(random(0,5)==1) {
+      circle(starx -4, stary -4, 4);
+    }
+
   }
 }
 
