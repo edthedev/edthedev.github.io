@@ -1,3 +1,6 @@
+## Ignore Eleventy site output - for now.
+_site/*
+
 ## Ignore Visual Studio temporary files, build results, and
 
 ##
