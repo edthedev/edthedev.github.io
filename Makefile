@@ -1,16 +1,10 @@
 .PHONY: serve open
 
-SITEDIR=c:\src\site
-
 open: serve
 	open http://localhost:3001
 
 serve:
-	eleventy --serve --output=$(SITEDIR)
-
-publish:
-	cd $(SITEDIR); git commit -am "Updated."; git push -u origin gh_pages
-
+	eleventy --serve --input=_src
 
 # watch:
 # 	eleventy --serve --watch --input=_src

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rescue Bots - Undoing Mistakes with Git</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+		margin-top: 1.5em;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+	   .remark-slide, .remark-slide-container {
+		  background-image: url("img/webcon2016/slidesidebar.jpg");
+	  }
+	  .remark-slide-content {
+		  background-image: url("img/itpro2018fall/itpro_bg3.png");
+	  }
+	  img {
+		  float:right;
+		  border-radius:22px;
+	  }
+	  img.left {
+		  float:left;
+	  }
+	  img.little {
+		  height:200px;
+	  }
+	  img.capture {
+		  border-radius:1px;
+	  }
+	  img.stretch {
+		  width:45%;
+		  padding: 10px;
+	  }
+	  img.flow{
+		  width: 100%;
+		  padding: 10px;
+		  background-color: white;
+	  }
+    </style>
+  </head>
+  <body>
+
+
+<textarea id="source">
+
+# Rescue Bots: Undoing Mistakes with Git
+
+.small[
+Presented by [Edward Delaporte](mailto:edward.delaporte@busey.com)
+
+for [Busey Bank](https://www.busey.com)
+
+at [Urbana IT Professionals Forum](https://www.itproforum.illinois.edu/) on November 8, 2018.
+]
+
+This slide deck is online at http://edward.delaporte.us
+
+???
+
+EdTheDev on GitHub
+- Been working with Version Control for a bit over 2 decades.
+- GitHub User since 2012.
+- Have written apps for The Web, Web Frameworks, Arduino Chipset, SmartWatch
+- Have coded in NodeJS, Python, Perl, C#, C++, Java
+- Contributed to React-Native, Angular, Ansible, Kivy, and around 80 repositories of my own.
+- Once maintainer of that time-reporting app you probably shouldn't admit to using.
+- All of my presentations are hosted on GitHub.
+- Worked for Office of Privacy and Information Assurance from 2007 to 2015, Busey Bank from 2015 till today.
+- This is my Alma Mater, part of my brand.
+
+---
+
+# Overview: 
+
+- Why Git?
+- Hands on with Git (and PowerShell)
+- Quick Tour of some Tools
+- Advanced Git Web Exercies
+- Question / Answer
+- Optional Bonus: Your First GitHub Pull Request
+
+Slack Channel: https://rescuebots.slack.com
+
+???
+
+- Examples use PowerShell for consistency
+- you can probably get by without PowerShell for these exercises.
+- Remind me to take breaks. 
+- Please ask questions as we go. 
+- Interupt me. 
+- Let's interact.
+- You may finish early or run later, I'm here to support your learning. 
+
+---
+
+# Why Git?
+
+- An Annecdote
+- [Stack Overflow on Git Usage](https://insights.stackoverflow.com/survey/2018/#work-version-control)
+- Not just for Software Developers
+
+"Git is the dominant choice for version control for developers today, with almost 90% of developers checking in their code via Git."
+
+"The majority of developers check in code multiple times per day. Professional developers are less likely to check in code rarely or never."
+
+Both quotes are from the Stack Overflow 2018 Survey
+
+```powershell
+	git init
+	git add *
+	git commit -a -m "Let's keep track of all this for later."
+```
+
+???
+
+- Tell Annecode - I voted Mercurial. Everyone else voted git.
+- Pull up linked Stack Overflow visual
+- Busey is a fully Microsoft shop - we use Git 
+- Maybe scroll down to salary --- coincidence?
+- With Intrastructure as Code - Knowledge workers who are not developers are benefiting from developer tools
+- You don't have to become a developer
+
+---
+
+# Why Git?
+
+
+<a href="https://xkcd.com/1597/">
+<img class='capture' src='img/itpro2018fall/git.png'/>
+</a>
+
+???
+
+"If that doesn't fix it, git.txt contains the phone number of a friend of mine who understands git. 
+
+Just wait through a few minutes of 
+
+'It's really pretty simple, just think of branches as...' 
+
+and eventually you'll learn the commands that will fix everything."
+
+
+- It is everywhere. 
+- Most linux environments already have it.
+- Every worthwhile dev installs it.  (Including VSCode, which is good for a lot more than dev!)
+- A few quick commands, and your future self thanks you.
+
+---
+
+# Git Tools Tour
+
+
+- VSCode
+- Visual Studio Professional / Community
+- Atlassian SourceTree
+
+???
+
+Other than Visual Studio Pro, these are free.
+
+---
+
+# Hands On with Git and PowerShell
+
+<img class='flow' src='img/itpro2018fall/git_commit.png'/>
+
+---
+
+# Hands On with Git and PowerShell
+
+[Git Exercies](https://github.com/edthedev/2018-git-lessons)
+- Some Git Basics
+- Create a Git Remote
+- Push/Pull
+
+???
+
+- Ask for a volunteer to run the overhead.
+
+---
+
+# Learn Git Branching
+
+https://learngitbranching.js.org/
+
+- Branch
+- Merge
+- Rebase
+
+---
+
+# Questions Answered
+
+Slides and links are online at http://edward.delaporte.us
+
+???
+
+- FAQ: I accidentally committed my password.
+- FAQ: I accidentally committed and pushed my password.
+- How to stage only certain commits for a pull request.
+- Difference values of branching and forking.
+
+- TU: keep the best of both timelines - checkout first branch, revert a mistake, switch back, rebase, merge
+
+## Upcoming Lesssons
+
+Offsite backup
+  - delete all local files
+  - restore from remote
+  - Change to a new remote.
+
+Stash / Stash apply
+
+Tags
+- Add a tag
+- Push a tag
+- Fetches tags
+- Checkout a tag
+- Reset to a tag
+
+Branches
+- Take it in a whole new direction in a branch.
+- Diff our branch for code review
+- Merge our branch.
+- Rebase
+
+Cherry Picking
+- Revert an old commit.
+- Cherry-pick a commit from another branch.
+- Make a branch based on an old tag. (Let's try something different)
+
+
+Taking a breather \ changing course
+  - git stash
+  - git branch
+
+Collaborating
+  - fetch, pull and rebase
+  - code review
+
+---
+
+# Additional Resources
+
+- [Learn Git Branching](https://learngitbranching.js.org/) - Interactive Git Lessons
+- [Oh shit, Git!](https://ohshitgit.com/) - Common Git situation solutions
+- [eBook Edition of Pro Git](https://git-scm.com/book/en/v2)
+- [Stack Overflow Answer with Git Reset Diagram](https://stackoverflow.com/a/45047313)
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

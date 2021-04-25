@@ -1,0 +1,663 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>PowerShell User Group 2020 Git and CI/CD Basics</title>
+    <link rel="stylesheet" href="/slides/slides.css" />
+    <style>
+	  .remark-slide-content {
+		  background-image: url("img/itpro2020spring/slide_bg.PNG");
+	  }
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("img/webcon2016/slidesidebar.jpg");
+	  }
+    </style>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+
+<textarea id="source">
+
+## GitHub for PowerShell
+
+*** or ***
+
+### How I learned to stop worrying, 
+### and love `GitHub Actions`
+
+.small[
+Presented by [Edward Delaporte](mailto:delaport@illinois.edu)
+
+for [University of Illinois Cybersecurity](https://techservices.illinois.edu/content/cybersecurity-support)
+
+at **social distancing from home** on July 8, 2020.
+]
+
+This slide deck is online at http://edward.delaporte.us
+
+---
+
+## Git Basics - Getting Started
+
+*Join a project*
+
+```powershell
+git clone
+```
+
+*Start a new project*
+
+```powershell
+git init
+```
+---
+
+## Git Basics - Getting Work Done
+
+*Stage some work*
+
+```powershell
+git add
+```
+
+*Start tracking work*
+
+```powershell
+git commit
+```
+
+*Share your work*
+
+```powershell
+git push
+```
+
+???
+
++ add remote
++ merge
++ revert
+
+---
+
+## Git Basics - Getting Oriented
+
+*Where am I?*
+
+```powershell
+git status
+```
+
+*What have I done?*
+
+```powershell
+git diff
+```
+
+*What am I about to commit?*
+
+```powershell
+git diff --cached
+```
+
+???
+
+- Visual tools and `git diff` are a great way to take stock.
+- Most visual editors will have a right-click way to see git diff --cached
+- If you see two separate threads of work in git diff --cached, it is time to check some work in.
+
+Git Status
+- think of an empty `git status` as a home base - return to it often.
+- Anything in git status is an unresolved future problem
+- untracked files not in gitignore
+- unpushed or unpulled commits
+
+---
+
+## Git Revert vs Reset
+
+*Not yet committed - acts on a file.*
+
+>git reset HEAD .\ITProForum2019Spring.html
+*Already committed - acts on entire commit.*
+
+>git revert {commit hash}
+
+---
+
+## GitHub Enterprise Shared Service
+
+<img class='stretch' src='img/itpro2020spring/UofIGitHub.PNG'/>
+- Email the Shared Service team: githubsupport@uillinois.edu
+- Website: https://github.uillinois.edu
+
+???
+
+- Per the website: Full Rollout for IT Professionals is happening Summer 2020
+
+TRANSITION: So what does a CI/CD pipeline look like?
+
+---
+
+## Tools for Git and PowerShell
+
+My favorites
+
++ [Posh Git - Git Aware PowerShell Prompt](https://github.com/dahlbyk/posh-git#installation)
++ [Visual Studio Code](https://code.visualstudio.com/)
++ [GitLens Plugin](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
+
+More options
++ [Tortoise Git](https://tortoisegit.org/) - [Screenshots](https://tortoisegit.org/about/screenshots/)
++ [Atlassian SourceTree for Mac and Windows](https://www.sourcetreeapp.com/) 
++ [GitHub Desktop](https://desktop.github.com/)
+
+```powershell
+choco install poshgit
+codoe install vscode
+```
+
+???
+
+My favorites
++ Posh Git is a git aware PowerShell prompt
++ VsCode has built in Git and PowerShell windows by default.
++ VsCode is also a great Markdown editor for your ReadMe and ChangeLog files.
++ VSCode is my personal primary git interface
++ Searching Git in the plugin marketplace returned 5 pages of results.
++ VSCode has built in Git
++ VSCode is free and open source and cross Platform
++ VSCode has a great Vim plugin
++ Weirdly VScode is a great PowerShell editor, SQL editor, Azure deployment file editor, etc.
+
+My VSCode Plugins:
++ GitLens
++ PowerShell
++ VsVim
++ Markdown Paste
++ Markdown PDF
++ RainbowCSV
+
+Other tools
++ Tortoise Git integrates with Windows Explorer
++ SourceTree and GitHub Desktop are full featured Git explorers.
+
+---
+
+## Why Collaborate via Pull Request?
+
++ code review 
++ CI/CD automation
+
+![a pull request](img/itpro2020spring/GitHubFeedback.PNG)
+
+???
+
++ code review catches mistakes *and* spreads knowledge
++ CI/CD automation can prevent regressions *and* increase communication
+
+---
+
+## Why setup CI/CD Automation?
+
+![ci cd diagram](img/itpro2020spring/CICDAll.PNG)
+
+???
+
+What can I add via CI/CD automation?
+- Code style analysis
+- unit test results
+- API test results
+- Web interface interaction results
+- Cybersecurity scan results
+
+---
+
+## CI/CD Automation Example
+### Pester with GitHub Actions
+
+![github action in progress](img/pug20200708/github_action_in_progress.PNG)
++ Pester Tests: [site.tests.ps1](https://github.com/edthedev/edthedev.github.io/blob/master/tests/site.tests.ps1)
++ Tell GitHub to run Pester: [pester.yml](https://github.com/edthedev/edthedev.github.io/blob/master/.github/workflows/pester.yml)
++ The traditional place to add our Pass/Fail badge: [ReadMe.md](https://github.com/edthedev/edthedev.github.io/blob/master/readme.md)
+
+---
+
+## Pester with GitHub Actions - Otuput
+
+![pester output](img/pug20200708/github_action_run.PNG)
+
+
+from my [GitHub Actions Run Logs](https://github.com/edthedev/edthedev.github.io/runs/843080213?check_suite_focus=true)
+
+---
+
+## site.tests.ps1
+```powershell
+Describe 'Site Content Tests' {
+
+  # Arrange & Act
+  It 'has an index file' {
+    Test-Path -Path ./index.html | Should -Be $true
+  }
+  $index_content = Get-Content ./index.html
+
+  # Assert
+  It 'has the correct page title' {
+    $expected_title = "<title>Edward.Delaporte.us</title>"
+    '.\index.html' | Should -FileContentMatch $expected_title
+  }
+  It 'has navigation' {
+    '.\index.html' | Should -FileContentMatch 'navbar'
+    '.\index.html' | Should -FileContentMatch 'nav.js'
+  }
+}
+```
+
+---
+
+## pester.yml
+
+```yaml
+name: Pester Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies PowerShell 7
+      run: Install-Module -Name 'Pester' -Force -SkipPublisherCheck
+      shell: pwsh
+    - name: Run tests PowerShell 7
+      run: Invoke-Pester -Path '.\tests\' -CI
+      shell: pwsh
+```
+
+???
+
++ I recommend not allowing push to master - but this is my solo site
++ os options include windows, ubuntu
++ installs my dependencies
++ invokes pester
+
+---
+
+## Create a Badge
+
++ Click 'Actions'
++ Click on one of the actions that are setup.
++ Click 'Create status badge'
+
+![github badge](img/pug20200708/create_badge.PNG)
+
+---
+
+### ReadMe.md
+```markdown
+## About
+
+You have found the source code to the website Edward.Delaporte.us.
+You can also [read Edward.Delaporte.us as HTML](http://edthedev.github.io).
+
+## Test Status
+![badge](https://github.com/edthedev/edthedev.github.io/workflows/Pester%20Tests/badge.svg)
+Many thanks to [MKletz](https://github.com/MKletz) for helping inform the GitHub actions pattern I use to PowerShell Pester test this site.
+```
+
+![github badge](img/pug20200708/readme_rendered.PNG)
+
+---
+
+# Questions / Discussion
+
+---
+
+# BONUS SLIDES - Common Git Questions
+
+---
+
+# Your Questions
+
+*What is the difference between `revert` and  `reset`?*
+
+## Revert
+- Will *not* lose your work.
+- Acts *on* a commit.
+- Supports the 'Revert Revert' pattern, that I love.
+
+## Reset
+- Takes you *to* a commit.
+- Often *throws away* work!
+- Can help you lie about what you actually did to get here.
+
+???
+
+- when in doubt, use git revert - reset can lose work, revert cannot.
+
+- discuss the value of the revert a revert pattern
+- when do we git reset? when our commit is being sent to Google or Facebook.
+
+- Revert acts *ON* a commit.
+- Reset acts *TO* a commit.
+
+
+---
+
+# Your Questions
+
+*Someone checked in and published a password.*
+
+- Change the password.
+
+???
+
+- History is impractical to change.
+- The Internet Way back Machine exists, even if you did change it.
+- Evil web crawler bots are looking for passwords, and they work fast. 
+- They may have already harvested it.
+
+---
+
+# Your Questions
+
+*How to fix a merge that contained incorrect files.*
+
+- If it went really badly, throw away your local (merge) branch and fix the original branches.
+- Otherwise, use the git tools to review and make correction, and commit the corrections.
+- Copy/Paste is your friend.
+
+---
+
+# Your Questions
+
+*Testing/writing code in different branches that use common local files.*
+
+- Merge from your friend's branches early and often.
+- Ignore your enemies' branches.
+- Merge from `develop` and `master` early and often.
+- Submit pull requests earlier and more often. 
+- No one rejects a pull request for being too easy to review.
+
+---
+
+# Your Questions
+
+*Letting different machines fall out of sync with origin and trying to merge work cleanly.*
+
+- Start with `git pull`
+- Use branches to experiment. Throw them away if they don't work.
+- Copy/Paste is your friend.
+
+---
+
+# Your Questions
+
+*Removing accidentally-checked in files from repos, without deleting them locally.*
+
+> git rm --cached .\BadFile.txt
+
+???
+
+- You won't remember this next slide, 
+- but you will remember that Copy/Paste is your friend.
+
+---
+
+# Your Questions
+
+*How do I keep these two branches separate forever?*
+
+> Separate the repositories. Everything in every branch is destined for master.
+
+???
+
+Separate branches forever?
+- Think of branches as streams flowing together to become rivers.
+- Anything you drop into any stream will someday reach the ocean (master branch).
+
+---
+
+# Your Questions
+
+*I know what I want the final files to look like, but not how to get it there in git?*
+
+> Copy/Paste is your friend.
+
+???
+
+Why is copy/paste great?
+- Just make it right.
+- Your history will show you got lost, and forced it right. That has value.
+
+---
+
+# Git INIT
+
+*I need a git server, but all I have is a Windows file share.*
+
+>cd \\remote\share\folder.git\
+>git init --bare
+
+???
+
++ using a Windows folder like any other remote
+
+---
+
+## Can I do better at staging my un-commited work?
+
+`git add --interactive`
+
+```powershell
+*** Commands ***
+  1: status       2: update       3: revert       4: add untracked
+  5: patch        6: diff         7: quit         8: help
+What now> p
+           staged     unstaged path
+  1:    unchanged        +4/-0 ITProForum2019Spring.html
+Patch update>>
+diff --git a/ITProForum2019Spring.html b/ITProForum2019Spring.html
+index 6a58513..323781d 100644
+--- a/ITProForum2019Spring.html
++++ b/ITProForum2019Spring.html
+@@ -108,6 +108,10 @@ Slide Count:
+ >git diff
+
++*Can I do better at staging my un-commited work?*
++
++>git add --interactive
+
+Stage this hunk [y,n,q,a,d,e,?]?
+```
+
+???
+
++ Yes. You can.
++ Not as scary as it looks here.
++ Giving it a try can give you an idea of the possibilities.
++ You can point and click to get this effect too. 
+
+---
+
+## How did line 9 of this file become so strange? 
+
+`git log -L`
+
+```powershell
+PS C:\Users\edthe\edthedev.github.io> git log -L 7,10:index.html
+```
+
+```powershell
+commit 4443e18da5c5729bdb8b7251dda5a8bb46b698a3
+Author: EdTheDev <edward@delaporte.us>
+Date:   Mon Jun 3 21:23:45 2019 -0500
+
+    Move presentations into more recent format
+
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -7,4 +7,4 @@
+ <body>
+ <div class="bootmark"
+-data-src="Welcome.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
++data-src="Welcome.md presentations.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
+ data-join="---"
+
+commit 8a76e94d789cc20c8b24987b94275462382b4acb
+Author: EdTheDev <edward@delaporte.us>
+Date:   Wed Apr 3 20:47:48 2019 -0500
+
+    Change up the order a bit.
+
+...more of same from above...
+```
+
+---
+
+## Who decided line 9 should be strange?!
+
+`git blame`
+
+```powershell
+PS C:\Users\edthe\edthedev.github.io> git blame .\index.html
+```
+
+```powershell
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500  1) <!DOCTYPE html>
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500  2) <html>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  3) <head>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  4) <link rel="stylesheet" href="static/edthedev.css" />
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  5) <script src="static/bootmark.min.js"></script>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  6) </head>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  7) <body>
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000  8) <div class="bootmark"
+4443e18d (EdTheDev         2019-06-03 21:23:45 -0500  9) data-src="Welcome.md presentations.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000 10) data-join="---"
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000 11) ></div>
+7cf65857 (Edward Delaporte 2015-07-25 12:19:15 -0500 12) </body>
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500 13) </html>
+```
+
+???
+
++ Each line of the file.
++ Who last modified each line.
++ When last modified each line.
+
+
+---
+
+## How to protect `master`
+
+```
+#!/bin/sh
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+(At the repo)
+Create file .git/hooks/pre-commit with following content:
+if [ "$branch" = "master" ]; then
+  echo "You can't commit directly to master branch"
+  exit 1
+fi
+```
+Make it executable (not required on Windows):
+```
+$ chmod +x .git/hooks/pre-commit
+```
+
+[Full solution at Stack Overflow][10]
+[10]: https://stackoverflow.com/questions/40462111/git-prevent-commits-in-master-branch
+
+???
+
++ Git hooks are just shell scripts.
++ You can and should do more with them.
++ You can make your chat bot cuss out whoever broke the build or forgot to comment.
+
+---
+
+## What else can `git diff` do?
+
+[Quite a bit][2]
+
+[2]: https://git-scm.com/docs/git-diff
+
+```
+git diff [<options>] [<commit>] [--] [<path>…​]
+git diff [<options>] --cached [<commit>] [--] [<path>…​]
+git diff [<options>] <commit> <commit> [--] [<path>…​]
+git diff [<options>] <blob> <blob>
+git diff [<options>] --no-index [--] <path> <path>
+```
+
+???
+
+- Diff can do more
+- but the default target is the last commit
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {first commit}
+
+<img class='stretch left little' src='img/itpro2019fall/Trees1.PNG'/>
+
+## git commit {second commit}
+<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {third commit}
+<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
+
+## git revert {third commit}
+<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
+
+???
+
+- As expected, we went back in time to a previous state.
++ The Revert Revert pattern - today's stupid mistake is tomorrow's 'good enough'
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {third commit}
+<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
+
+## git revert { second commit }
+<img class='stretch little' src='img/itpro2019fall/Trees2.PNG'/>
+
+???
+
+- Surprise - this state has never existed in history.
+
+---
+
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
