@@ -1,10 +1,15 @@
 .PHONY: serve open
 
+OUTDIR=C:\src\site
+
 open: serve
 	open http://localhost:3001
 
 serve:
-	eleventy --serve --input=_src
+	eleventy --serve --output=$(OUTDIR)
+
+clean:
+	rm "$(OUTDIR)" -r -fo
 
 # watch:
 # 	eleventy --serve --watch --input=_src

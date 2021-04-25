@@ -1,4 +1,8 @@
-## Conference Bio
+---
+layout: layout.njk
+---
+
+# Conference Bio
 
  ![Picture of Edward Delaporte](/img/EdwardDelaporte.jpg "Picture of Edward Delaporte")
 
