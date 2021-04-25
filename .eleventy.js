@@ -8,7 +8,7 @@ module.exports = eleventyConfig => {
   return {
     dir: {
       input: ".",
-      output: "c:\src\site"
+      output: "_site"
     }
   }
 };
