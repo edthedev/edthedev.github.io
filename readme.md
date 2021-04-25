@@ -9,6 +9,10 @@ Many thanks to [MKletz](https://github.com/MKletz) for helping inform the GitHub
 
 ## Upgrading to Eleventy
 
+Working locally:
+> eleventy --serve
+
+On deploying:
 https://www.linkedin.com/pulse/eleventy-github-pages-lea-tortay/
 
 https://snook.ca/archives/servers/deploying-11ty-to-gh-pages
