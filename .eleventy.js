@@ -1,10 +1,19 @@
-module.exports = function(eleventyConfig) {
-  eleventyConfig.setTemplateFormats([
-    "md",
-    "html",
-    "css", // css is not yet a recognized template extension in Eleventy
-  ]);
-  eleventyConfig.addPassthroughCopy("style");
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("slides");
+
+const del = require("del").sync;
+
+module.exports = eleventyConfig => {
+  // Clean the output directory.
+  del("./www/");
+
+  eleventyConfig.addPassthroughCopy("./static/");
+  //eleventyConfig.setTemplateFormats([
+  //  "md"
+  //]);
+
+  return {
+    dir: {
+      input: "",
+      output: "www"
+    }
+  }
 };
