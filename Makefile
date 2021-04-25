@@ -1,4 +1,4 @@
-.PHONY: serve open
+.PHONY: serve open clean
 
 OUTDIR=C:\src\site
 
@@ -9,10 +9,4 @@ serve:
 	eleventy --serve --output=$(OUTDIR)
 
 clean:
-	rm "$(OUTDIR)" -r -fo
-
-# watch:
-# 	eleventy --serve --watch --input=_src
-
-setupChrome:
-	chrome https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/related?hl=en
+	rm C:\src\site -r -fo
