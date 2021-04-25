@@ -20,4 +20,4 @@ Recently I have begun collecting the slide decks here.
 - [WebCon 2016 - Make Cool Things Quickly with MVC and React.js](WebCon2016.html)
 - [WebCon 2016 Tech Demo: Fish Bowl](fishbowl.html) - View source to watch the Document Object Modeal (DOM) change in real time.
 - [IT Caffeine Break - Automated Web Testing](AutomatedWebTesting2017.html)
-- [IT Pro Forum 2016 - Boring Push-Ups with Ansible](ITProForum2016.html)
+- [IT Pro Forum 2016 - Boring Push-Ups with Ansible](/slides/ITProForum2016)
