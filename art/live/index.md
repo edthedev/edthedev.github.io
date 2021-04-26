@@ -15,13 +15,20 @@ Art is Copyright Edward Delaporte 2021.
 
 Be sure to try clicking the art pieces. Some of them interact.
 
+## April 25 Sketch
+
+[April 18 Sketch](/art/live/deep)
+<a href="/art/live/deep">
+![April 18 Sketch Preview](/img/art/deep.PNG)
+</a>
+
+
 ## April 18 Sketch
 
 [April 18 Sketch](/art/live/sketch1)
 <a href="/art/live/sketch1">
 ![April 18 Sketch Preview](/img/art/sketch1.PNG)
 </a>
-
 
 ## Crossing Paths
 
