@@ -23,21 +23,23 @@ script: /js/art/cross.js
   <title>{{ title }}</title>
   <script src="/js/p5.js"></script>
   <script src="{{script}}"></script>
+
+
 </head> 
 <body>
-
 <nav class="ye_navbar"> 
-<a href="/">Edward.Delaporte.us</a>
-<a href="/art/live">Live Art</a>
-<a href="/slides">Presentations</a>
-<a href="/resume">Resume</a>
+  <a href="/">Edward.Delaporte.us</a>
+  <a href="/art/live">Live Art</a>
+  <a href="/slides">Presentations</a>
+  <a href="/resume">Resume</a>
 </nav>
-<div>
-{{ content | safe }}
+
+<div class="content">
+  {{ content | safe }}
     <main>
     </main>
-</div>
-<div>
-  <p>Copyright 2021 Edward Delaporte</p>
+  <div>
+    <p>Copyright 2021 Edward Delaporte</p>
+  </div>
 </div>
 </html>
