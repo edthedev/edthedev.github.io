@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: gallery.njk
 title: Live Art by Edward Delaporte
 ---
 
@@ -19,7 +19,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 [April 18 Sketch](sketch1.html)
 <a href="sketch1.html">
-![April 18 Sketch Preview](sketch1.PNG)
+![April 18 Sketch Preview](/img/art/sketch1.PNG)
 </a>
 
 
@@ -27,26 +27,26 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 [Crossing Paths](cross.html)
 <a href="cross.html">
-![Crossing Paths](crossing.PNG)
+![Crossing Paths](/img/art/crossing.PNG)
 </a>
 
 ## Balls in Boxes
 
 [Balls in Boxes](boxes.html)
 <a href="boxes.html">
-![Balls in Boxes](boxes.PNG)
+![Balls in Boxes](/img/art/boxes.PNG)
 </a>
 
 ## Weave Pattern
 
 [Weave Pattern](weave.html)
 <a href="weave.html">
-![Weave Art Screenshot](weave2.PNG)
+![Weave Art Screenshot](/img/art/weave2.PNG)
 </a>
 
 ## Strange Weave
 
 [Strange Weave Pattern](weave_strange.html)
 <a href="weave_strange.html">
-![Strange Weave Screenshot](weave_strange2.PNG)
+![Strange Weave Screenshot](/img/art/weave_strange2.PNG)
 </a>
