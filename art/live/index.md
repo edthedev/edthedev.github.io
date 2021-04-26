@@ -25,8 +25,8 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 ## Crossing Paths
 
-[Crossing Paths](cross.html)
-<a href="cross.html">
+[Crossing Paths](/art/live/cross)
+<a href="/art/live/cross">
 ![Crossing Paths](/img/art/crossing.PNG)
 </a>
 
