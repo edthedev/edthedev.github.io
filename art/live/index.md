@@ -17,8 +17,8 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 ## April 18 Sketch
 
-[April 18 Sketch](sketch1.html)
-<a href="sketch1.html">
+[April 18 Sketch](/art/live/sketch1)
+<a href="/art/live/sketch1">
 ![April 18 Sketch Preview](/img/art/sketch1.PNG)
 </a>
 
@@ -32,21 +32,21 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 ## Balls in Boxes
 
-[Balls in Boxes](boxes.html)
-<a href="boxes.html">
+[Balls in Boxes](/art/live/boxes)
+<a href="/art/live/boxes">
 ![Balls in Boxes](/img/art/boxes.PNG)
 </a>
 
 ## Weave Pattern
 
-[Weave Pattern](weave.html)
-<a href="weave.html">
+[Weave Pattern](/art/live/weave)
+<a href="/art/live/weave">
 ![Weave Art Screenshot](/img/art/weave2.PNG)
 </a>
 
 ## Strange Weave
 
-[Strange Weave Pattern](weave_strange.html)
-<a href="weave_strange.html">
+[Strange Weave Pattern](/art/live/weave_strange)
+<a href="art/live/weave_strange">
 ![Strange Weave Screenshot](/img/art/weave_strange2.PNG)
 </a>
