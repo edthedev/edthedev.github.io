@@ -16,11 +16,19 @@ Publishing is simple with Git through Visual Studio Code.
 Local testing is done using the [Web Server for Chrome Plugin](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/reviews)
 
 ### Editing
-Original editing was done in Vim.
-Recently I have been using Visual Studio Code with the delightful VsVim plugin.
-I keep trying to map new helpful functions to keyboard shortcuts in Visual Studio Code, only to find that native shortcuts exist. I haven't been this delighted discovering an editor since Vim, and before that Visual Studio.
-Sorry Emacs, maybe someday. But I bet Org Mode for Visual Studio Code is coming soon...
+
++ Original editing was done in Vim.
++ Recently I have been using Visual Studio Code with the delightful VsVim plugin.
++ When I want a really focused editing experience, I use my [Journal Pi Setup](../pi/)
+
+## Optimizing
+
++ [Web.Dev](https://web.dev/measure/)
++ [Functional Accessibility Assessor](https://fae.disability.illinois.edu/)
++ [Google Lighthouse](https://developers.google.com/web/tools/lighthouse#cli)
++ [Contrast Checker](https://webaim.org/resources/linkcontrastchecker/)
 
 ### Art
 Most art was done on an iPad.
 The fish bowl was mostly done on a Wacom Bamboo tablet, which I do not recommend, due to the surpressingly small sensitivity area. I understand it has been discontinued, so Wacom agrees. More recent art may have been done on a Huion 610 Pro Tablet or Microsoft Surface Go.
+

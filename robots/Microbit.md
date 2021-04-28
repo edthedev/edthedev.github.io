@@ -2,6 +2,17 @@
 
 ### Single Device Demos
 
+The following programs require only a single MicroBit. 
+They can also run directly in your web browser - try clicking on the picture of a MicroBit at the left hand side.
+
+> The recommended way to enjoy these programs is with one MicroBit with a MicroBit battery pack attached. 
+
+Typically a MicroBit will come with a computer connection cable and a battery pack included. 
+
+Once the program is downloaded to the MicroBit, the program can be used immediately while the MicroBit is powered by the connection cable.
+
+To use the battery pack, open the battery pack up and add batteries. Disconnect the MicroBit from the USB cable, and then connect the battery pack to the MicroBit. Then turn the battery pack switch to 'on'.
+
 [Smiley](https://makecode.microbit.org/_fTx32C4f2Ao1)
 
 I wanted a trivial demo to make my Microbit smile. So I wrote one in less time than it took me to realize that the same exact program was available in the second tutorial on the main site. Many of my ideas a very unoriginal. This is one. Ask me about the time I wrote a binary clockface for my Pebble smart watch.
@@ -9,6 +20,16 @@ I wanted a trivial demo to make my Microbit smile. So I wrote one in less time t
 [Count up to 5 of 5 different things](https://makecode.microbit.org/_Heid2TJmobLM)
 
 Need to keep track of a small number of things, and only have an obscrure microchip and two AAA batteries? In that unlikely case, I have just the solution you're looking for!
+
+[Binary Matching Game](https://makecode.microbit.org/_YapahhRzC4HJ)
+
+Three lights at the top display a number in binary. Press the 'A' button to count upwards in binary until the three lights at the bottom match. Press 'B' to check your match.
+
+> This program is in JavaScript instead of Block Code, because some of the binary math requires functions that are not included in Block code.
+
+To further explore binary numbers, you can check out [this Scratch program](https://scratch.mit.edu/projects/188029887/)
+
+To better understand the math used in both programs, you can [read about converting from binary to decimal](https://www.w3resource.com/javascript-exercises/javascript-math-exercise-2.php).
 
 [Strobe Nametag](https://makecode.microbit.org/_KvUaa2KjyE0C)
 

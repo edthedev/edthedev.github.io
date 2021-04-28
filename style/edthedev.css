@@ -9,6 +9,11 @@ Page Styles
 	background-color: #EEE !important;
 }
 
+canvas{
+    padding-top: 3em;
+    padding-left: 1em;
+}
+
 h1 {
 	font-size: 3.5em;
 	font-weight: 400;

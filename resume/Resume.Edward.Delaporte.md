@@ -15,27 +15,31 @@ I make computers better at meeting the needs of humans.
 - Leading software teams since 2011.
 - Has built a lot of websites for a lot of purposes with a lot of different technologies.
 - Has effective work habits and great interpersonal skills.
-- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps.
-- Linux Tech:  Python, C#, Perl, Java, PHP, Active Directory, Apache, Django, JSON, LDAP, Linux shell, Syslog, SQL, WSGI, GitHub enterprise.
+- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, Active Directory, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps.
+- Linux Tech:  Python, Perl, Java, PHP, Apache, NGinx, Django, SOAP, REST, JSON, LDAP, Linux shell, Syslog, SQL, WSGI, GitHub enterprise, AWS.
 
 ## Career
 
 #### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
 
-- Hire a small group of future leaders with relevant development experience into Cybersecurity Dev.
-- Support overall Cybersecurity Objectives.
-- Create open lines of communication between development teams and Cybersecurity.
-- Provides SDLC process maturity feedback to the development teams.
+- Hired a small group of future leaders with relevant development experience into Cybersecurity Dev.
+- Supports overall Cybersecurity Objectives.
+- Created open lines of communication between development teams and Cybersecurity.
+- Provides SDLC process maturity feedback to campus research and development teams.
 - Drafted a Software Development Lifecycle Road Map (SDLC) full of resources free to University staff.
 - Built a shared tool chain for automated regression testing to prevent re-introduction of security problems by any team whose process satisfies a reasonable level of the security SDLC.
+- Mentors developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
+- Mentors DevOps teams across campus in Secure Software Development Lifecycle (SDLC) practices.
++ Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020
+- Assisted and mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
 
 #### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
 
-- Codes fully secure and compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
-- Manages senior software engineers and senior automation engineers for First Busey Corporation.
+- Managed remote DevOps team of 11 software engineers and automation engineers for Busey Bank and FirsTech Payment processor.
+- Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
-- Interprets security scan results and teaches other developers how to remediate vulnerabilities.
+- Mentored developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
 - Implemented development team self scanning with Accunetix.
 - Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
 - Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
@@ -126,25 +130,28 @@ Application Security Engineer Responsibilities
 #### May 2000 - Dec 2005: Software Developer at Ablesoft Solutions Inc. Oregon, IL
 
  - Created an elegant extensible project template in VB.Net which allowed us to create all our applications more quickly with better standard features.
- - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and Javascript to build advanced web interfaces.
+ - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and JavaScript to build advanced web interfaces.
 
 #### Open Source Contributions				October 2012 - Present
 
- - Core contributor to the OWASP Ten Privacy Risks Project
+ - GitHub Arctic Code Vault Contributor 2020 - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
+ - Collaborator on [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
+ - Core contributor to the OWASP Ten Privacy Risks Projects 2015 - Present
  - Created a popular Python client for the InCommon SSL API: GitHub.com/edthedev/incommon_ssl
- - Created and maintains several Vim editor plugins, such as GitHub.com/edthedev/text-helper.vim
+ - Created and maintained several Vim editor plugins, such as GitHub.com/edthedev/text-helper.vim
  - Has commits accepted to popular projects including AngularJs, Ansible, and Kivy.
-
-#### Reviewer for Packt Publishing  		October 2014 - Present
-
-Acts as a subject matter expert for Pakt Publishing.
-
- - [Data Mining with Python](https://www.packtpub.com/big-data-and-business-intelligence/learning-data-mining-python) (ISBN 978-1-78439-605-3) 
- - [Kivy: Interactive Applications in Python, Second Edition](https://www.packtpub.com/application-development/kivy-interactive-applications-python) (ISBN 978-1-78328-159-6) 
- - [Kivy Blueprints](https://www.packtpub.com/application-development/kivy-blueprints) (ISBN 978-1-78398-784-9)
 
 #### Professional Training - Highlights
 
+- CampIT Enterprise Risk / Security Management, March 2021
+- AnsibleFest 2020
+- PrivacyCon 2020
+- DockerCon 2020
+- MS Build 2020
+- Microsoft Azure Fundamentals Workshop, 2020
+- Ansible Tower Workshop, 2020
+- CampIT Risk Conference, February 2020
+- ISACA Securing Web Applications, Insider Threats, Introduction to the MITRE ATT&CK Framework, January 2020
 - Microsoft Azure Workshop: n-Tier Server Provisioning and Deployment Pipelines with Docker, 2019
 - Completed Evolve: Two year internal leadership training program at Busey 2018, 2019
 - Completed Citigal OWASP Top Ten Training in 2017, 2018, 2019
@@ -154,13 +161,17 @@ Acts as a subject matter expert for Pakt Publishing.
 - Completed U of I Information Technology Leadership Workshop (ITLW)
 - Completed [SANS](https://www.sans.org/) On-site Secure Software Development Training
 - Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
+- Completed [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
 
 #### Community Involvement
 
-- Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
+- Rotary Club of Champaign - Website Committee Chair since 2020
 - Webmaster - Rotary Club of Champaign since 2018
 - Hosts a free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
-- Presented at University of Illinois Webmaster's Conference 2016
 - OWASP Top Ten Privacy Project - Core contributor since 2015
-- Handles hosting, DNS and administration of various not-for-profit websites since 2007
-- Operated various web services including WordPress, Drupal, Dokuwiki, and Minecraft.
+- Presented at University of Illinois WebCon, 2021
+- Presented to Internet2 on Cybersecurity in Safer Illinois - University of Illinois COVID response, 2020
+- Presented Putting the Sec in SecDevOps - Urbana IT Professionals Forum - Spring 2020
+- Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
+- Presented at University of Illinois Webmaster's Conference 2016
+- Handled hosting, DNS and administration of various not-for-profit websites since 2007
