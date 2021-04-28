@@ -7,6 +7,7 @@
   "author": "Edward Delaporte",
   "license": "MIT",
   "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
     "bootmark": "^0.8.0"
   }
 }
