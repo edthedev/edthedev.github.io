@@ -1,4 +1,4 @@
 ## Ignore Eleventy site output - for now.
 _site/*
-
-node_modules
+node_modules/*
+gh-pages*
