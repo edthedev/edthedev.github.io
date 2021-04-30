@@ -2,11 +2,17 @@
 
 Page Styles
 
-*/ body
+*/
+body
 {
 	font-family: 'times new roman', times, serif;
 	font-size:140%;
 	background-color: #EEE !important;
+	margin: 0;
+}
+
+.content {
+	margin: 1em;
 }
 
 canvas{
@@ -15,7 +21,7 @@ canvas{
 }
 
 h1 {
-	font-size: 3.5em;
+	font-size: 2em;
 	font-weight: 400;
 	letter-spacing: 3px;
     text-transform: uppercase;
@@ -54,9 +60,10 @@ Navigation Style
 .ye_navbar {
   overflow: hidden;
   background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
+  /* position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  padding: 0;
 }
 
 /* Links inside the navbar */

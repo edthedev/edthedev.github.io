@@ -1,31 +1,15 @@
-open:
-	open index.html
+.PHONY: serve open clean
 
-openPres:
-	open WebCon2016.html
+OUTDIR=C:\src\site
 
-openFish: 
-	open fishbowl.html
+open: serve
+	open http://localhost:3001
 
-static:
-	jsx -w jsx/ static/
+serve:
+	eleventy --serve 
 
-.PHONY: static
+clean:
+	rm C:\src\site -r -fo
 
-setupYarn:
-	# wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.rep
-	sudo wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo
-	# yum install nodejs
-	yum-config-manager --enable yarn
-	yum install yarn
-
-yarnstall:
-	yarn add bookmark
-
-setupApache:
-	yum install -y httpd24
-	sudo service httpd start
-	mv /home/ec2-user/edthedev.github.io/* /var/www/html/
-
-setupChrome:
-	chrome https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/related?hl=en
+deploy_keys:
+	ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages 
