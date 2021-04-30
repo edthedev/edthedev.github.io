@@ -9,8 +9,5 @@
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "bootmark": "^0.8.0"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
   }
 }
