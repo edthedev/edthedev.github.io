@@ -38,9 +38,16 @@ function setup() {
   frameRate(90); // for testing.
   // frameRate(30);
 
+
+  // sunset
+  var c = color(random(200,255),random(80,160), random(0,100));
+  fill(c);
+  rect(0, 0, maxim, maxim/2);
+
+  // water
   var c = color(random(0,100),random(80,160), random(200,255));
   fill(c);
-  rect(0, maxim/2, maxim, maxim/2);
+  rect(0, maxim/2 - wavetall, maxim, maxim/2 + wavetall);
 
   balls = [];
   ballcount = random(10,20);
