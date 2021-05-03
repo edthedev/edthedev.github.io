@@ -35,6 +35,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 [April 18 Sketch](/art/live/sketch1)
 <a href="/art/live/sketch1">
 ![April 18 Sketch Preview](/img/art/sketch1.PNG)
+![April 18 Sketch Preview](/img/art/sketch11.PNG)
 </a>
 
 ## Crossing Paths
@@ -56,6 +57,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 [Weave Pattern](/art/live/weave)
 <a href="/art/live/weave">
 ![Weave Art Screenshot](/img/art/weave2.PNG)
+![Weave Art Screenshot](/img/art/weave3.PNG)
 </a>
 
 ## Strange Weave
@@ -63,4 +65,5 @@ Be sure to try clicking the art pieces. Some of them interact.
 [Strange Weave Pattern](/art/live/weave_strange)
 <a href="art/live/weave_strange">
 ![Strange Weave Screenshot](/img/art/weave_strange2.PNG)
+![Strange Weave Screenshot](/img/art/weave_strange3.PNG)
 </a>
