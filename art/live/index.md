@@ -15,11 +15,18 @@ Art is Copyright Edward Delaporte 2021.
 
 Be sure to try clicking the art pieces. Some of them interact.
 
+## May 2 Sketch - Waves
+
+[April 18 Sketch](/art/live/waves)
+<a href="/art/live/waves">
+![May 2 Sketch Preview](/img/art/waves.PNG)
+</a>
+
 ## April 25 Sketch
 
 [April 18 Sketch](/art/live/deep)
 <a href="/art/live/deep">
-![April 18 Sketch Preview](/img/art/deep.PNG)
+![April 25 Sketch Preview](/img/art/deep.PNG)
 </a>
 
 
