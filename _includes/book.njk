@@ -1,0 +1,37 @@
+---
+title: Coding is Stupid by Edward Delaporte
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>{{ title }}</title>
+
+<nav class="ye_navbar"> 
+<a href="/book">Book Index</a>
+<a href="/">Author Homepage</a>
+<a href="/resume">Author Resume</a>
+</nav>
+
+</head> 
+<body>
+
+
+<div class="content">
+{{ content | safe }}
+<p>Copyright 2021 Edward Delaporte</p>
+</div>
+</html>
