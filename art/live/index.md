@@ -17,9 +17,11 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 ## May 2 Sketch - Waves
 
-[April 18 Sketch](/art/live/waves)
+[May 2 Sketch - Waves](/art/live/waves)
 <a href="/art/live/waves">
 ![May 2 Sketch Preview](/img/art/waves.PNG)
+![May 2 Sketch Preview](/img/art/waves3.PNG)
+![May 2 Sketch Preview](/img/art/waves2.PNG)
 </a>
 
 ## April 25 Sketch
