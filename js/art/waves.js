@@ -44,8 +44,21 @@ function setup() {
   fill(c);
   rect(0, 0, maxim, maxim/2);
 
+  var stripecount = random(4,7);
+  for(i=0;i<stripecount;i++){
+    c = color(random(200,255),random(80,160), random(0,100));
+    fill(c);
+    rect(0, i*maxim/6, maxim, maxim/2);
+  }
+
+  c = color(random(200,255),random(80,160), random(100,150));
+  fill(c);
+  circle(maxim/2, maxim/2 + maxim/4 - random(0,4)*maxim/8, maxim/4);
+
+
+
   // water
-  var c = color(random(0,100),random(80,160), random(200,255));
+  c = color(random(0,100),random(80,160), random(200,255));
   fill(c);
   rect(0, maxim/2 - wavetall, maxim, maxim/2 + wavetall);
 
