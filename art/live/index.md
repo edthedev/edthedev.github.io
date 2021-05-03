@@ -1,5 +1,5 @@
 ---
-layout: gallery.njk
+layout: liveart.njk
 title: Live Art by Edward Delaporte
 ---
 
