@@ -51,6 +51,9 @@ function setup() {
   }
 }
 
+var wavewide = 40;
+var wavetall = 3;
+
 function dewit(ball) {
   var c = color(random(0,100),random(80,160), random(200,255));
   fill(c);
@@ -60,8 +63,8 @@ function dewit(ball) {
   if(ball.y>maxim) ball.dy = -1;
   if(ball.y<0) ball.dy = 1;
   if(ball.x>maxim) ball.dx = -1;
-  if(ball.x<0) ball.dx = 1;
-  rect(ball.x, ball.y, 30, 3);
+  if(ball.x< -wavewide) ball.dx = 1;
+  rect(ball.x, ball.y, wavewide, wavetall);
 
   if(ball.y>maxim && random(0,2) > 1) {
     ball.x -= 20;
@@ -77,10 +80,10 @@ function backwards(ball) {
 
   if(ball.x>maxim) ball.dx = -1;
   if(ball.y>maxim) ball.dy = -1;
-  if(ball.x<0) ball.dx = 1;
+  if(ball.x< -wavewide) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
   // square(ball.x, ball.y, 20);
-  rect(ball.x, ball.y, 30, 3);
+  rect(ball.x, ball.y, wavewide, wavetall);
 
   if(ball.y>maxim && random(0,2) > 1) {
     ball.x -= 20;
