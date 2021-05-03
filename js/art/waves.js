@@ -37,7 +37,8 @@ function setup() {
   balls = [];
   ballcount = random(5,15);
   noStroke();
-  frameRate(30);
+  frameRate(90); // for testing.
+  // frameRate(30);
 
 
   theball = Object(sprite);
@@ -106,6 +107,8 @@ function mouseClicked() {
 }
 
 function tree(x, y, size, ang=1) {
+  var c = color(0, random(200, 255), random(100, 200));
+  fill(c);
   delta = size * .5
   if(size % 4 == 0){
     deltax = random(delta,delta*2)
