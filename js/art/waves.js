@@ -40,7 +40,7 @@ function setup() {
 
 
   // sunset
-  var c = color(random(200,255),random(80,160), random(0,100));
+  var c = color(random(200,255),random(80,160), random(0,200));
   fill(c);
   rect(0, 0, maxim, maxim/2);
 
@@ -48,14 +48,15 @@ function setup() {
   var stripefade = 20;
   var stripered = random(200, 255);
   var stripegreen = random(80, 160);
+  var stripeblue = random(0, 200);
   for(i=0;i<stripecount;i++){
-    c = color(stripered+i*stripefade,stripegreen+i*stripefade, random(0,100));
+    c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
     fill(c);
     rect(0, i*maxim/6, maxim, maxim/2);
   }
 
   var i = stripecount + 1;
-  c = color(stripered+i*stripefade,stripegreen+i*stripefade, random(0,100));
+  c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
   fill(c);
   circle(maxim/2, maxim/2 + maxim/4 - random(0,4)*maxim/8, maxim/4);
 
