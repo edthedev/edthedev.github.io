@@ -36,8 +36,6 @@ function setup() {
   background(maxim,maxim);
   balls = [];
   ballcount = random(3,5);
-  noStroke();
-  frameRate(30);
 
 
   theball = Object(sprite);
@@ -52,16 +50,13 @@ function setup() {
 }
 
 function dewit(ball) {
-  var c = color(100,random(100,150), (0,random(255)));
-  fill(c);
   ball.y += ball.dy;
-  ball.x += ball.dx;
 
-  if(ball.y>maxim) ball.dy = -1;
-  if(ball.y<0) ball.dy = 1;
   if(ball.x>maxim) ball.dx = -1;
+  if(ball.y>maxim) ball.dy = -1;
   if(ball.x<0) ball.dx = 1;
-  rect(ball.x, ball.y, 30, 3);
+  if(ball.y<0) ball.dy = 1;
+  line(ball.x, ball.y, ball.x+25, ball.y);
 
   if(ball.y>maxim && random(0,2) > 1) {
     ball.x -= 20;
@@ -79,8 +74,7 @@ function backwards(ball) {
   if(ball.y>maxim) ball.dy = -1;
   if(ball.x<0) ball.dx = 1;
   if(ball.y<0) ball.dy = 1;
-  // square(ball.x, ball.y, 20);
-  rect(ball.x, ball.y, 30, 3);
+  square(ball.x, ball.y, 20);
 
   if(ball.y>maxim && random(0,2) > 1) {
     ball.x -= 20;
