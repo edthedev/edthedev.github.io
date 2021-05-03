@@ -35,7 +35,7 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   balls = [];
-  ballcount = random(3,5);
+  ballcount = random(5,15);
   noStroke();
   frameRate(30);
 
@@ -52,7 +52,7 @@ function setup() {
 }
 
 function dewit(ball) {
-  var c = color(100,random(100,150), (0,random(255)));
+  var c = color(random(0,100),random(80,160), random(200,255));
   fill(c);
   ball.y += ball.dy;
   ball.x += ball.dx;
