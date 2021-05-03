@@ -38,6 +38,9 @@ function setup() {
   frameRate(90); // for testing.
   // frameRate(30);
 
+  var c = color(random(0,100),random(80,160), random(200,255));
+  fill(c);
+  rect(0, maxim/2, maxim, maxim/2);
 
   balls = [];
   ballcount = random(10,20);
@@ -62,7 +65,7 @@ function dewit(ball) {
   ball.x += ball.dx;
 
   if(ball.y>maxim) ball.dy = -1;
-  if(ball.y<0) ball.dy = 1;
+  if(ball.y<maxim/2) ball.dy = 1;
   if(ball.x>maxim) ball.dx = -1;
   if(ball.x< -wavewide) ball.dx = 1;
   rect(ball.x, ball.y, wavewide, wavetall);
@@ -82,7 +85,7 @@ function backwards(ball) {
   if(ball.x>maxim) ball.dx = -1;
   if(ball.y>maxim) ball.dy = -1;
   if(ball.x< -wavewide) ball.dx = 1;
-  if(ball.y<0) ball.dy = 1;
+  if(ball.y<maxim/2) ball.dy = 1;
   // square(ball.x, ball.y, 20);
   rect(ball.x, ball.y, wavewide, wavetall);
 
