@@ -34,19 +34,19 @@ function setup() {
   midline = maxim / 2;
   createCanvas(maxim, maxim);
   background(maxim,maxim);
-  balls = [];
-  ballcount = random(5,15);
   noStroke();
   frameRate(90); // for testing.
   // frameRate(30);
 
 
+  balls = [];
+  ballcount = random(10,20);
   theball = Object(sprite);
   for(i=0;i<ballcount;i++){
     newb = Object.assign({}, theball);
     maxline = maxim;
     minline = maxim/2;
-    newb.x = random(maxline/4,3*maxline/4);
+    newb.x = random(0, 3*maxline/4);
     newb.y = maxim/2;
     balls.push([newb, dewit]);
   }
