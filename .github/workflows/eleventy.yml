@@ -22,7 +22,7 @@ jobs:
 
 
         - name: Build static site
-          run: eleventy
+          run: npx @11ty/eleventy
 
 
         - name: Deploy

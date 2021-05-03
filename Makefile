@@ -6,7 +6,7 @@ open: serve
 	open http://localhost:3001
 
 serve:
-	eleventy --serve 
+	npx @11ty/eleventy --serve
 
 clean:
 	rm C:\src\site -r -fo
