@@ -16,6 +16,7 @@ as long as you display this license and attribution.
 
 */
 
+var pulse = 0;
 var fillcount = 0;
 
 var sprite = {
@@ -80,11 +81,18 @@ function setup() {
 }
 
 var wavewide = 40;
-var wavetall = 3;
+var wavetall = 3; 
+
+function colorchange() {
+  // slow down the color changes for waves
+  if(pulse % 3 == 0) {
+    var c = color(random(0,100),random(80,160), random(200,255));
+    fill(c);
+  }
+}
 
 function dewit(ball) {
-  var c = color(random(0,100),random(80,160), random(200,255));
-  fill(c);
+  colorchange();
   ball.y += ball.dy;
   ball.x += ball.dx;
 
@@ -102,30 +110,14 @@ function dewit(ball) {
   return [ball, dewit];
 }
 
-function backwards(ball) {
-  ball.x += ball.dx;
-  ball.y += ball.dy;
-
-  if(ball.x>maxim) ball.dx = -1;
-  if(ball.x< -wavewide) ball.dx = 1;
-  if(ball.y<maxim/2) ball.y = 1;
-  // square(ball.x, ball.y, 20);
-  rect(ball.x, ball.y, wavewide, wavetall);
-
-  if(ball.y>maxim) {
-    ball.x -= 20;
-    // ball.dx = -1 * ball.dx;
-    ball.y = maxim/2;
-    return [ball, dewit];
-  }
-
-  return [ball, backwards];
-
-}
-
 function draw() {
+  // fast fill then slow down
   fillcount+=1;
-  if(fillcount>600) frameRate(20);
+  if(fillcount>800) frameRate(20);
+
+  // puslse for color chnages
+  pulse +=1;
+  if(pulse > 1000) pulse = 0;
   balls = balls.map( item => item[1](item[0]) );
 }
 
