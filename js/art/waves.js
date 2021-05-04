@@ -34,7 +34,7 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   noStroke();
-  frameRate(100); // fast fill, then chill
+  frameRate(200); // fast fill, then chill
 
 
   // sunset
@@ -125,7 +125,7 @@ function backwards(ball) {
 
 function draw() {
   fillcount+=1;
-  if(fillcount>400) frameRate(10);
+  if(fillcount>600) frameRate(20);
   balls = balls.map( item => item[1](item[0]) );
 }
 
