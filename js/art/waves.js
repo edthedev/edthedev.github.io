@@ -106,7 +106,7 @@ function setup() {
   }
 }
 
-var wavewide = 40;
+var wavewide = 120;
 var wavetall = 3; 
 
 function colorchange() {
@@ -150,6 +150,9 @@ function draw() {
     sunsety += 1;
     draw_horizon();
     draw_sun();
+    // fast refill
+    fillcount = 0;
+    frameRate(300);
   }
 
 }
