@@ -17,55 +17,63 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 ## May 2 Sketch - Waves
 
-[May 2 Sketch - Waves](/art/live/waves)
 <a href="/art/live/waves">
+
 ![May 2 Sketch Preview](/img/art/waves.PNG)
 ![May 2 Sketch Preview](/img/art/waves3.PNG)
 ![May 2 Sketch Preview](/img/art/waves2.PNG)
 </a>
 
-## April 25 Sketch
+[May 2 Sketch - Waves](/art/live/waves)
 
-[April 18 Sketch](/art/live/deep)
+## April 2021 Sketches
+
 <a href="/art/live/deep">
+
 ![April 25 Sketch Preview](/img/art/deep.PNG)
 </a>
 
+[April 25 Sketch](/art/live/deep)
 
-## April 18 Sketch
-
-[April 18 Sketch](/art/live/sketch1)
 <a href="/art/live/sketch1">
+
 ![April 18 Sketch Preview](/img/art/sketch1.PNG)
 ![April 18 Sketch Preview](/img/art/sketch11.PNG)
 </a>
 
-## Crossing Paths
+[April 18 Sketch](/art/live/sketch1)
 
-[Crossing Paths](/art/live/cross)
+## Weave Patterns (December 2020)
+
 <a href="/art/live/cross">
+
 ![Crossing Paths](/img/art/crossing.PNG)
 </a>
 
-## Balls in Boxes
+[Crossing Paths](/art/live/cross)
 
-[Balls in Boxes](/art/live/boxes)
+
 <a href="/art/live/boxes">
+
 ![Balls in Boxes](/img/art/boxes.PNG)
 </a>
 
-## Weave Pattern
+[Balls in Boxes](/art/live/boxes)
 
-[Weave Pattern](/art/live/weave)
+
 <a href="/art/live/weave">
+
 ![Weave Art Screenshot](/img/art/weave2.PNG)
 ![Weave Art Screenshot](/img/art/weave3.PNG)
 </a>
 
-## Strange Weave
+[Stark Weave Pattern](/art/live/weave)
 
-[Strange Weave Pattern](/art/live/weave_strange)
+
 <a href="art/live/weave_strange">
+
 ![Strange Weave Screenshot](/img/art/weave_strange2.PNG)
 ![Strange Weave Screenshot](/img/art/weave_strange3.PNG)
 </a>
+
+[Strange Weave Pattern](/art/live/weave_strange)
