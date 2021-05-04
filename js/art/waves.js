@@ -35,9 +35,11 @@ var sunsety = 0;
 var midline = 0;
 
 function draw_horizon() {
+  var horiz_stripe_y;
   for(i=0;i<stripecount;i++){
     fill(stripecolors[i]);
-    rect(0, i*(midline/stripecount), maxim, midline/stripecount);
+    horiz_stripe_y = i*(midline/stripecount);
+    rect(0, horiz_stripe_y, maxim, midline - horiz_stripe_y);
   }
 }
 
