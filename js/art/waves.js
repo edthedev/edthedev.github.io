@@ -16,8 +16,7 @@ as long as you display this license and attribution.
 
 */
 
-var pulse = 0;
-var pulsemax = 100;
+var fillcount = 0;
 
 var sprite = {
   x: 0,
@@ -35,8 +34,7 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   noStroke();
-  // frameRate(90); // for testing.
-  frameRate(30);
+  frameRate(100); // fast fill, then chill
 
 
   // sunset
@@ -97,7 +95,7 @@ function dewit(ball) {
 
   if(ball.y>maxim) {
     ball.x -= 20;
-    ball.dx = -1 * ball.dx;
+    // ball.dx = -1 * ball.dx;
     ball.y = maxim/2;
     // return [ball, backwards];
   }
@@ -116,7 +114,7 @@ function backwards(ball) {
 
   if(ball.y>maxim) {
     ball.x -= 20;
-    ball.dx = -1 * ball.dx;
+    // ball.dx = -1 * ball.dx;
     ball.y = maxim/2;
     return [ball, dewit];
   }
@@ -126,6 +124,8 @@ function backwards(ball) {
 }
 
 function draw() {
+  fillcount+=1;
+  if(fillcount>400) frameRate(10);
   balls = balls.map( item => item[1](item[0]) );
 }
 
