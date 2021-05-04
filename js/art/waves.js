@@ -32,11 +32,12 @@ var stripecount = 0;
 var stripecolors = [];
 var suncolor;
 var sunsety = 0;
+var midline = 0;
 
 function draw_horizon() {
   for(i=0;i<stripecount;i++){
     fill(stripecolors[i]);
-    rect(0, i*maxim/6, maxim, maxim/6); // This height bit is broken.
+    rect(0, i*(midline/stripecount), maxim, midline/stripecount);
   }
 }
 
