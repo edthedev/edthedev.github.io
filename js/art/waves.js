@@ -35,8 +35,8 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   noStroke();
-  frameRate(90); // for testing.
-  // frameRate(30);
+  // frameRate(90); // for testing.
+  frameRate(30);
 
 
   // sunset
@@ -67,6 +67,7 @@ function setup() {
   fill(c);
   rect(0, maxim/2 - wavetall, maxim, maxim/2 + wavetall);
 
+  // waves
   balls = [];
   ballcount = random(10,20);
   theball = Object(sprite);
@@ -75,7 +76,7 @@ function setup() {
     maxline = maxim;
     minline = maxim/2;
     newb.x = random(0, 3*maxline/4);
-    newb.y = maxim/2;
+    newb.y = maxim/2 + random(0, maxim/2);
     balls.push([newb, dewit]);
   }
 }
@@ -89,16 +90,16 @@ function dewit(ball) {
   ball.y += ball.dy;
   ball.x += ball.dx;
 
-  if(ball.y>maxim) ball.dy = -1;
   if(ball.y<maxim/2) ball.dy = 1;
   if(ball.x>maxim) ball.dx = -1;
   if(ball.x< -wavewide) ball.dx = 1;
   rect(ball.x, ball.y, wavewide, wavetall);
 
-  if(ball.y>maxim && random(0,2) > 1) {
+  if(ball.y>maxim) {
     ball.x -= 20;
     ball.dx = -1 * ball.dx;
-    return [ball, backwards];
+    ball.y = maxim/2;
+    // return [ball, backwards];
   }
   return [ball, dewit];
 }
@@ -108,15 +109,15 @@ function backwards(ball) {
   ball.y += ball.dy;
 
   if(ball.x>maxim) ball.dx = -1;
-  if(ball.y>maxim) ball.dy = -1;
   if(ball.x< -wavewide) ball.dx = 1;
-  if(ball.y<maxim/2) ball.dy = 1;
+  if(ball.y<maxim/2) ball.y = 1;
   // square(ball.x, ball.y, 20);
   rect(ball.x, ball.y, wavewide, wavetall);
 
-  if(ball.y>maxim && random(0,2) > 1) {
+  if(ball.y>maxim) {
     ball.x -= 20;
     ball.dx = -1 * ball.dx;
+    ball.y = maxim/2;
     return [ball, dewit];
   }
 
