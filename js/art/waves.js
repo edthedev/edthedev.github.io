@@ -31,6 +31,7 @@ var sprite = {
 var stripecount = 0;
 var stripecolors = [];
 var suncolor;
+var watercolor;
 var sunsety = 0;
 var midline = 0;
 
@@ -44,8 +45,15 @@ function draw_horizon() {
 }
 
 function draw_sun() {
+  draw_water();
   fill(suncolor);
   circle(maxim/2, sunsety, maxim/4);
+  draw_water();
+}
+
+function draw_water() {
+  fill(watercolor);
+  rect(0, maxim/2 - wavetall, maxim, maxim/2 + wavetall);
 }
 
 
@@ -80,13 +88,9 @@ function setup() {
 
   var i = stripecount + 1;
   suncolor = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
+  watercolor = color(random(0,100),random(80,160), random(200,255));
   sunsety = maxim/2 + maxim/4 - random(0,4)*maxim/8;
   draw_sun();
-
-  // water
-  c = color(random(0,100),random(80,160), random(200,255));
-  fill(c);
-  rect(0, maxim/2 - wavetall, maxim, maxim/2 + wavetall);
 
   // waves
   balls = [];
