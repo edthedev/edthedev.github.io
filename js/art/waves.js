@@ -28,6 +28,24 @@ var sprite = {
   size: 20
 };
 
+var stripecount = 0;
+var stripecolors = [];
+var suncolor;
+var sunsety = 0;
+
+function draw_horizon() {
+  for(i=0;i<stripecount;i++){
+    fill(stripecolors[i]);
+    rect(0, i*maxim/6, maxim, maxim/6); // This height bit is broken.
+  }
+}
+
+function draw_sun() {
+  fill(suncolor);
+  circle(maxim/2, sunsety, maxim/4);
+}
+
+
 function setup() {
   // maxim = .5 * window.innderWidth;
   maxim = 400;
@@ -43,23 +61,24 @@ function setup() {
   fill(c);
   rect(0, 0, maxim, maxim/2);
 
-  var stripecount = random(4,7);
+  stripecount = random(4,7);
+  stripecolors = [];
   var stripefade = 20;
   var stripered = random(200, 255);
   var stripegreen = random(80, 160);
   var stripeblue = random(0, 200);
   for(i=0;i<stripecount;i++){
     c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
-    fill(c);
-    rect(0, i*maxim/6, maxim, maxim/2);
+    stripecolors.push(c);
+    // fill(c);
+    // rect(0, i*maxim/6, maxim, maxim/2);
   }
+  draw_horizon();
 
   var i = stripecount + 1;
-  c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
-  fill(c);
-  circle(maxim/2, maxim/2 + maxim/4 - random(0,4)*maxim/8, maxim/4);
-
-
+  suncolor = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
+  sunsety = maxim/2 + maxim/4 - random(0,4)*maxim/8;
+  draw_sun();
 
   // water
   c = color(random(0,100),random(80,160), random(200,255));
@@ -117,8 +136,15 @@ function draw() {
 
   // puslse for color chnages
   pulse +=1;
-  if(pulse > 1000) pulse = 0;
+  if(pulse > 10000) pulse = 0;
   balls = balls.map( item => item[1](item[0]) );
+
+  if(pulse % 1000 == 0) {
+    sunsety += 1;
+    draw_horizon();
+    draw_sun();
+  }
+
 }
 
 function mouseClicked() {
