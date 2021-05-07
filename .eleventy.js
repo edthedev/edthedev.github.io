@@ -6,6 +6,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("slides");
   eleventyConfig.addPassthroughCopy("art/live");
+  eleventyConfig.addPassthroughCopy("pdf");
 
   eleventyConfig.setTemplateFormats([
     "md",
