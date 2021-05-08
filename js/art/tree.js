@@ -45,7 +45,7 @@ function setup() {
   treepulse = 0;
   trunk(maxim - maxim/5,
      maxim, 
-     11, //width
+     7, //width
      maxim/3); // tall
 }
 
@@ -60,18 +60,18 @@ function trunk(x,y, wi, ta) {
   le = 40;
   we = 10;
 
-  for(i=0; i<5; i++) {
-    branch(x + i*wi/5,y-ta, le, we, 0, 0);
-    branch(x + i*wi/5,y-ta, le, we, 0, 0);
+  for(i=1; i<5; i++) {
+    circle(x + i*wi/6, y-ta, 10);
+    circle(x + i*wi/6, y, 10);
+    branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
+    branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
   }
 }
 
-function branch(x, y, le, we, wi, ta) {
+function branch(x, y, le, we, wi, ta, pulse) {
 
-  // leaf behind branch...
-  if(random(0,100)>10){
-    leaf_cluster(x+wi, y-ta);
-  }
+  pulse += 1;
+
 
   strokeWeight(we);
   wi += random(-.2,.2) * le;
@@ -80,12 +80,20 @@ function branch(x, y, le, we, wi, ta) {
   line(x, y, x+wi, y-ta);
   if(we > 2) {
     nle = le-le/random(15,20);
-    branch(x+wi, y-ta, nle, we*4/5, wi, ta);
+    branch(x+wi, y-ta, nle, we*4/5, wi, ta, pulse);
     if(random(0,40)>20){
       wi2 = wi + random(-.4,-.2) * le;
-      branch(x+wi, y-ta, nle, we*4/5, wi2, ta);
+      branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
     }
   }
+
+  if(pulse >3) { // no leaves early on
+    // leaf behind branch...
+    if(random(0,100)>10){
+      leaf_cluster(x+wi, y-ta);
+    }
+  }
+
 }
 
 function leaf_cluster(x, y) {
