@@ -39,8 +39,63 @@ function setup() {
   frameRate(200); // fast tree growth
 
   treepulse = 0;
-  tree(maxim - 50,maxim/2, 50, 200);
+  trunk(maxim - maxim/5,
+     maxim, 
+     maxim/5, 
+     maxim/2);
+}
 
+function trunk(x,y, wi, ta) {
+
+  strokeWeight(10);
+  tree_color = color(80, 80, 0);
+  fill(tree_color);
+  stroke(tree_color);
+  rect(x, y-ta, wi, ta);
+
+  le = wi * 1;
+
+  for(i=0; i<5; i++) {
+
+  }
+  branch(x,y-ta, le);
+  branch(x,y-ta, le);
+  branch(x,y-ta, le);
+}
+
+function branch(x, y, le) {
+  wi = random(-.7,.7) * le;
+  ta = random(.3,.7) * le;
+
+  line(x, y, x+wi, y-ta);
+  if(le > 4) {
+    branch(x+wi, y-ta, le-1);
+  }
+}
+function tree(x, y, dx, dy, le, we) {
+
+  // draw this section
+  // fill(tree_color);
+
+  // add more branches
+  if(dx>4) {
+
+    // get much smaller after trunk
+    if(le >= 200) {
+      le = 50;
+    }
+    we = we * 1/4;
+    le = le * 1/4;
+    dy = dy * 4/5;
+    dx = random(0,2) - 1;
+
+    tree(x-dx*le,y-dy*le,dx, dy, le, we);
+
+    if(dx % 4 == 0){
+      tree(x-dx*le,y-dy*le,dx, dy, le, we);
+    }
+
+  }
 }
 
 function draw() {
@@ -52,28 +107,4 @@ function draw() {
 
 function mouseClicked() {
   setup();
-}
-
-function tree(x, y, dx, dy) {
-  tree_color = color(80, 80, 0);
-  fill(tree_color);
-  stroke(tree_color);
-  if(dx>4) {
-    rect(x, y, dx, dy);
-
-    // get much smaller after trunk
-    if(dy >= 200) {
-      dy = 50;
-    }
-
-    dy = dy * 4/5;
-    dx = dx * 4/5;
-    newy = y - dy;
-    tree(x-dx,y-dy,dx, dy);
-
-    if(dx % 4 == 0){
-      // tree(x-dx,y,dx*4/5, dy*4/5);
-    }
-
-  }
 }
