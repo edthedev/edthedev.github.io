@@ -194,6 +194,12 @@ function leaf_cluster(x, y) {
   fill(green);
   noStroke();
   for(i=0; i<random(1,6); i++) {
+
+    if(season.includes("fall")) {
+      fill(color(
+        random(150, 255), random(100, 200), 100));
+    }
+
     circle(x + random(-4, 4), y + random(-4,4), 4);
     if(season.includes("winter")) {
       fill(color(255,255,255)); // white
