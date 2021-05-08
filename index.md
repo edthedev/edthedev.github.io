@@ -1,16 +1,23 @@
 ---
-layout: layout.njk
+layout: frontpage.njk
 title: Edward Delaporte's Blog
 ---
 
 # Edward Delaporte's Blog
 
-Welcome to EdTheDev's Technology Blog on programming, art and education.
+Welcome to EdTheDev's Blog on programming, art and education.
 
-I share various technology solutions here. Officially so that you can read them; but really just so that I can remember them.
+In this space I share short technology guides and occassional art. 
 
-- [About Myself](/me)
+<a href="/art/live">
+
+![May 8 Sketch Preview](/img/art/tree3.PNG)
+![May 2 Sketch Preview](/img/art/waves.PNG)
+
+</a>
+
 - [Live Interactive Art](/art/live)
+- [About Myself](/me)
 - [My Slide Decks](/slides)
 - [Learn to Code](/learn2code)
 - [Make a Robot](/robots)
