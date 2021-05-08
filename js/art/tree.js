@@ -66,7 +66,8 @@ function branch(x, y, le, we) {
   ta = random(.3,.7) * le;
 
   line(x, y, x+wi, y-ta);
-  if(le > 4) {
+  if(we > 2) {
+    branch(x+wi, y-ta, le-1, we/2);
     branch(x+wi, y-ta, le-1, we/2);
   }
 }
