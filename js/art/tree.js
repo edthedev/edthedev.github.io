@@ -41,7 +41,7 @@ function setup() {
   treepulse = 0;
   trunk(maxim - maxim/5,
      maxim, 
-     maxim/25, //width
+     12, //width
      maxim/3); // tall
 }
 
