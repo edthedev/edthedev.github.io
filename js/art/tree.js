@@ -56,17 +56,18 @@ function trunk(x,y, wi, ta) {
   le = wi * 1;
 
   for(i=0; i<5; i++) {
-    branch(x + i*wi/5,y-ta, le);
+    branch(x + i*wi/5,y-ta, le, wi/5);
   }
 }
 
-function branch(x, y, le) {
+function branch(x, y, le, we) {
+  strokeWeight(we);
   wi = random(-.7,.7) * le;
   ta = random(.3,.7) * le;
 
   line(x, y, x+wi, y-ta);
   if(le > 4) {
-    branch(x+wi, y-ta, le-1);
+    branch(x+wi, y-ta, le-1, we/2);
   }
 }
 function tree(x, y, dx, dy, le, we) {
