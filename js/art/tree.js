@@ -53,22 +53,21 @@ function trunk(x,y, wi, ta) {
   stroke(tree_color);
   rect(x, y-ta, wi, ta);
 
-  le = wi * 1;
+  le = wi / 4;
 
   for(i=0; i<5; i++) {
-    branch(x + i*wi/5,y-ta, le, wi/5);
+    branch(x + i*wi/5,y-ta, le, wi/5, 0, 0);
   }
 }
 
-function branch(x, y, le, we) {
+function branch(x, y, le, we, wi, ta) {
   strokeWeight(we);
-  wi = random(-.7,.7) * le;
-  ta = random(.3,.7) * le;
+  wi += random(-.4,.4) * le;
+  ta += random(.1,.4) * le;
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
-    branch(x+wi, y-ta, le-1, we/2);
-    branch(x+wi, y-ta, le-1, we/2);
+    branch(x+wi, y-ta, le-1, we*4/5, wi, ta);
   }
 }
 function tree(x, y, dx, dy, le, we) {
