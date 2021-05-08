@@ -20,7 +20,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 <a href="/art/live/tree">
 
-![May 8 Sketch Preview](/img/art/waves.PNG)
+![May 8 Sketch Preview](/img/art/tree.PNG)
 </a>
 
 [May 8 Sketch - Tree](/art/live/tree)
