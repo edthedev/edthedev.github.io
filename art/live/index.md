@@ -1,6 +1,6 @@
 ---
 layout: liveart.njk
-title: Live Art by Edward Delaporte
+title: Tree - Live Art by Edward Delaporte
 ---
 
 # Interactive Abstract Art
