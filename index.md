@@ -1,6 +1,6 @@
 ---
 layout: frontpage.njk
-title: Edward Delaporte's Blog
+title: Welcome - Edward Delaporte's Website
 ---
 
 # Edward Delaporte's Blog
