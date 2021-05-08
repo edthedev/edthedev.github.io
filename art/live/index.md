@@ -7,14 +7,11 @@ title: Tree - Live Art by Edward Delaporte
 
 I created these using the [P5.js library][1].
 
+Every visitor experiences a new unique piece art.
+
 [1]: https://p5js.org/reference/
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />These are works and their source code are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-
-Art is Copyright Edward Delaporte 2021.
-
-Be sure to try clicking the art pieces. Some of them interact.
-
+Try clicking the art pieces. Some of them interact.
 
 ## May 6 Sketch - Tree
 
@@ -90,3 +87,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 </a>
 
 [Strange Weave Pattern](/art/live/weave_strange)
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />The source code to this art is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may use and remix this code, as long as you give attribution to Edward Delaporte.
+
+The artwork, itself, is Copyright of Edward Delaporte, 2021.
