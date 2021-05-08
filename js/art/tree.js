@@ -62,14 +62,15 @@ function trunk(x,y, wi, ta) {
 
 function branch(x, y, le, we, wi, ta) {
   strokeWeight(we);
-  wi += random(-.4,.4) * le;
+  wi += random(-.2,.2) * le;
   ta += random(.05,.1) * le;
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
     branch(x+wi, y-ta, le-1, we*4/5, wi, ta);
-    if(random(0,4)>3){
-      branch(x+wi, y-ta, le-1, we*4/5, wi, ta);
+    if(random(0,40)>30){
+      wi2 = wi + random(-.2,.2) * le;
+      branch(x+wi, y-ta, le-1, we*4/5, wi2, ta);
     }
   }
 }
