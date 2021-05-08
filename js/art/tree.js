@@ -60,9 +60,14 @@ function trunk(x,y, wi, ta) {
   le = 40;
   we = 10;
 
+  root = 1;
+  circle(x-3, y-ta, root);
+  circle(x+we, y-ta, root);
+
+  circle(x-3, y, root);
+  circle(x+we, y, root);
+
   for(i=1; i<5; i++) {
-    circle(x + i*wi/6, y-ta, 10);
-    circle(x + i*wi/6, y, 10);
     branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
     branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
   }
