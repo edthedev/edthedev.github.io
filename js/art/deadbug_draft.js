@@ -68,9 +68,6 @@ function branch(x, y, le, we, wi, ta) {
   line(x, y, x+wi, y-ta);
   if(we > 2) {
     branch(x+wi, y-ta, le-1, we*4/5, wi, ta);
-    if(random(0,4)>3){
-      branch(x+wi, y-ta, le-1, we*4/5, wi, ta);
-    }
   }
 }
 function tree(x, y, dx, dy, le, we) {
