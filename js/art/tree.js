@@ -56,11 +56,8 @@ function trunk(x,y, wi, ta) {
   le = wi * 1;
 
   for(i=0; i<5; i++) {
-
+    branch(x + i*wi/5,y-ta, le);
   }
-  branch(x,y-ta, le);
-  branch(x,y-ta, le);
-  branch(x,y-ta, le);
 }
 
 function branch(x, y, le) {
