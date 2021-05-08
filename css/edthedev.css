@@ -85,3 +85,8 @@ Navigation Style
 .bootmark {
   margin-top: 2.5em; /* Add a top margin to avoid content overlay */
 }
+
+img {
+    max-width: 300px;
+    box-shadow: 0.2em 0.2em #757575d2
+}
