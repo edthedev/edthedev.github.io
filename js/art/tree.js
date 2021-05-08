@@ -57,17 +57,18 @@ function draw_background() {
   // ground
   draw_ground();
 
-  // rain
-  if(random(0,10)>5) {
-    setup_rain();
-    dropcount = random(60, 120);
-    for(i=0; i<dropcount; i+=1) {
-      draw_rain();
+  // precipitation
+  if(random(0,10)>6) {
+    if(season.includes("winter")) {
+      draw_snow();
+    } else {
+      setup_rain();
+      dropcount = random(60, 120);
+      for(i=0; i<dropcount; i+=1) {
+        draw_rain();
+      }
     }
   }
-
-
-
 }
 
 
