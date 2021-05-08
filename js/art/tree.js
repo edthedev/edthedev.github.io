@@ -38,6 +38,10 @@ function setup() {
   draw_background();
   frameRate(200); // fast tree growth
 
+  fill(color(255,255,100));
+  circle(maxim/6, maxim/6, random(30, 100));
+
+
   treepulse = 0;
   trunk(maxim - maxim/5,
      maxim, 
