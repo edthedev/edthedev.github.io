@@ -53,59 +53,54 @@ function trunk(x,y, wi, ta) {
   stroke(tree_color);
   rect(x, y-ta, wi, ta);
 
-  le = maxim / 9;
+  le = 50;
   we = 10;
 
   for(i=0; i<5; i++) {
+    branch(x + i*wi/5,y-ta, le, we, 0, 0);
     branch(x + i*wi/5,y-ta, le, we, 0, 0);
   }
 }
 
 function branch(x, y, le, we, wi, ta) {
+
+  // leaf behind branch...
+  if(random(0,100)>10){
+    leaf_cluster(x+wi, y-ta);
+  }
+
   strokeWeight(we);
   wi += random(-.2,.2) * le;
   ta += random(.05,.1) * le;
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
-    branch(x+wi, y-ta, le-1, we*4/5, wi, ta);
+    nle = le-le/random(5,20);
+    branch(x+wi, y-ta, nle, we*4/5, wi, ta);
     if(random(0,40)>30){
       wi2 = wi + random(-.2,.2) * le;
-      branch(x+wi, y-ta, le-1, we*4/5, wi2, ta);
+      branch(x+wi, y-ta, nle, we*4/5, wi2, ta);
     }
   }
 }
-function tree(x, y, dx, dy, le, we) {
 
-  // draw this section
-  // fill(tree_color);
-
-  // add more branches
-  if(dx>4) {
-
-    // get much smaller after trunk
-    if(le >= 200) {
-      le = 50;
-    }
-    we = we * 1/4;
-    le = le * 1/4;
-    dy = dy * 4/5;
-    dx = random(0,2) - 1;
-
-    tree(x-dx*le,y-dy*le,dx, dy, le, we);
-
-    if(dx % 4 == 0){
-      tree(x-dx*le,y-dy*le,dx, dy, le, we);
-    }
-
+function leaf_cluster(x, y) {
+  green = color(33, 150, 33);
+  fill(green);
+  noStroke();
+  for(i=0; i<random(1,6); i++) {
+    circle(x + random(-4, 4), y + random(-4,4), 4);
   }
+  stroke(tree_color);
+  fill(tree_color);
+
 }
+
 
 function draw() {
   // slow down for snowflakes once the tree is drawn
-  treepulse+=1;
-  if(treepulse>800) frameRate(20);
-
+  // treepulse+=1;
+  // if(treepulse>800) frameRate(20);
 }
 
 function mouseClicked() {
