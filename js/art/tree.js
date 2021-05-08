@@ -37,8 +37,7 @@ function draw_background() {
 
 
   // ground
-  fill(color(0, 200, 0));
-  rect(0, 4*maxim/5, maxim, maxim/5);
+  draw_ground();
 
   // rain
   // TODO: Randomize whether it rains
@@ -55,6 +54,17 @@ function draw_background() {
   fill(color(255,255,100));
   circle(maxim/6, maxim/6, random(30, 90));
 
+}
+
+function draw_ground() {
+  noStroke();
+  fill(color(0, 200, 0));
+  y = 4*maxim/5;
+  rect(0, y, maxim, maxim/5);
+  for(x=0;x<maxim;x++){
+    fill(color(0, random(150,200), random(0,100)));
+    rect(x,y-random(0, 4),1,maxim/5);
+  }
 }
 
 function setup() {
