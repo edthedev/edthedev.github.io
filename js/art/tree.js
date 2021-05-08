@@ -41,7 +41,7 @@ function setup() {
   treepulse = 0;
   trunk(maxim - maxim/5,
      maxim, 
-     12, //width
+     11, //width
      maxim/3); // tall
 }
 
@@ -53,7 +53,7 @@ function trunk(x,y, wi, ta) {
   stroke(tree_color);
   rect(x, y-ta, wi, ta);
 
-  le = 50;
+  le = 40;
   we = 10;
 
   for(i=0; i<5; i++) {
@@ -71,14 +71,14 @@ function branch(x, y, le, we, wi, ta) {
 
   strokeWeight(we);
   wi += random(-.2,.2) * le;
-  ta += random(.05,.1) * le;
+  ta += random(.05,.2) * le;
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
-    nle = le-le/random(5,20);
+    nle = le-le/random(15,20);
     branch(x+wi, y-ta, nle, we*4/5, wi, ta);
-    if(random(0,40)>30){
-      wi2 = wi + random(-.2,.2) * le;
+    if(random(0,40)>20){
+      wi2 = wi + random(-.4,-.2) * le;
       branch(x+wi, y-ta, nle, we*4/5, wi2, ta);
     }
   }
