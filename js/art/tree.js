@@ -34,9 +34,6 @@ function draw_background() {
     draw_horizon();
   }
 
-  // sun
-  fill(color(255,255,100));
-  circle(maxim/6, maxim/6, random(30, 100));
 
   // ground
   fill(color(0, 200, 0));
@@ -44,13 +41,18 @@ function draw_background() {
 
   // rain
   // TODO: Randomize whether it rains
-  if(1==1) {
+  if(random(0,10)>7) {
     setup_rain();
-    dropcount = random(20, 60);
+    dropcount = random(40, 90);
     for(i=0; i<dropcount; i+=1) {
       draw_rain();
     }
   }
+
+  // sun
+  noStroke();
+  fill(color(255,255,100));
+  circle(maxim/6, maxim/6, random(30, 90));
 
 }
 
@@ -138,8 +140,8 @@ function branch(x, y, le, we, wi, ta, pulse) {
 }
 
 function setup_rain() {
-  rain_dx = random(0,5);
-  rain_dy = random(10, 20);
+  rain_dx = random(-6,0);
+  rain_dy = random(20, 30);
 }
 
 function draw_rain() {
