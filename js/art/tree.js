@@ -23,7 +23,7 @@ var midline = maxim / 2;
 
 function draw_background() {
   // sky
-  if(random(0,3) > 1) {
+  if(random(0,8) > 1) {
     fill(color(0, 200, 255));
     rect(0, 0, maxim, maxim);
   }
@@ -88,20 +88,36 @@ function branch(x, y, le, we, wi, ta, pulse) {
 
 
   strokeWeight(we);
-  wi += random(-.2,.2) * le;
-  ta += random(.05,.2) * le;
+  if(pulse < 3) {
+    wi += random(-.2,.2) * le;
+    ta += random(.1,.2) * le;
+    nle = le-1;
+  } else {
+    wi += random(-.4,.4) * le; // wider
+    ta += random(.05,.1) * le; // not as tall later
+    nle = le-le/random(1,4);
+  }
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
-    nle = le-le/random(15,20);
     branch(x+wi, y-ta, nle, we*4/5, wi, ta, pulse);
-    if(random(0,40)>20){
+
+    // another branch?
+    if(pulse < 3) {
       wi2 = wi + random(-.4,-.2) * le;
-      branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+      if(random(0,40)>20){
+        branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+      }
+    } else {
+      wi2 = wi + random(-.9,-.3) * wi;
+      ta2 = ta + random(-.9,-.3) * ta;
+      if(random(0,40)>5){ // much more likely
+        branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+      }
     }
   }
 
-  if(pulse >3) { // no leaves early on
+  if(pulse >4) { // no leaves early on
     // leaf behind branch...
     if(random(0,100)>10){
       leaf_cluster(x+wi, y-ta);

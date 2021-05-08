@@ -21,6 +21,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 <a href="/art/live/tree">
 
 ![May 8 Sketch Preview](/img/art/tree.PNG)
+![May 8 Sketch Preview](/img/art/tree2.PNG)
 </a>
 
 [May 8 Sketch - Tree](/art/live/tree)
