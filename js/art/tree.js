@@ -20,6 +20,12 @@ var treepulse = 0;
 
 var maxim = 400;
 var midline = maxim / 2;
+var season = "spring";
+
+function choose(choices) {
+  var index = Math.floor(Math.random() * choices.length);
+  return choices[index];
+}
 
 function draw_background() {
   // sky
@@ -56,16 +62,6 @@ function draw_background() {
 
 }
 
-function draw_ground() {
-  noStroke();
-  fill(color(0, 200, 0));
-  y = 4*maxim/5;
-  rect(0, y, maxim, maxim/5);
-  for(x=0;x<maxim;x++){
-    fill(color(0, random(150,200), random(0,100)));
-    rect(x,y-random(0, 4),1,maxim/5);
-  }
-}
 
 function setup() {
   // maxim = .5 * window.innderWidth;
@@ -74,6 +70,9 @@ function setup() {
   noStroke();
   draw_background();
   frameRate(200); // fast tree growth
+  season = choose(
+    ["spring", "winter", "fall", "summer"]);
+  season = "winter"; // for testing
 
   treepulse = 0;
   trunk(maxim - maxim/5,
@@ -150,6 +149,27 @@ function branch(x, y, le, we, wi, ta, pulse) {
 
 }
 
+function draw_ground() {
+  noStroke();
+  dx = 1;
+  fill(color(0, 200, 0));
+  if(season.includes("winter")) {
+    fill(color(255,255,255)); //white snow
+    dx = 3;
+  }
+
+  y = 4*maxim/5;
+  rect(0, y, maxim, maxim/5);
+
+
+  for(x=0;x<maxim;x+=dx){
+    if(season.includes("spring")) { // random green
+      fill(color(0, random(150,200), random(0,100)));
+    }
+    rect(x,y-random(0, 4),dx,maxim/5);
+  }
+}
+
 function setup_rain() {
   strokeWeight(1);
   rain_dx = random(-6,0);
@@ -170,7 +190,12 @@ function leaf_cluster(x, y) {
   noStroke();
   for(i=0; i<random(1,6); i++) {
     circle(x + random(-4, 4), y + random(-4,4), 4);
+    if(season=="winter") {
+      fill(color(255,255,255)); // white
+      circle(x + random(-4, 4), y + random(-5,3), 4);
+    }
   }
+
   stroke(tree_color);
   fill(tree_color);
 
