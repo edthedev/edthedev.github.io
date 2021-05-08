@@ -16,8 +16,7 @@ as long as you display this license and attribution.
 
 */
 
-var pulse = 0;
-var fillcount = 0;
+var treepulse = 0;
 
 var maxim = 400;
 var midline = maxim / 2;
@@ -39,42 +38,41 @@ function setup() {
   draw_background();
   frameRate(200); // fast tree growth
 
-  tree(maxim/2,maxim/2, 200);
+  treepulse = 0;
+  tree(maxim - 50,maxim/2, 50, 200);
 
 }
 
 function draw() {
   // slow down for snowflakes once the tree is drawn
-  fillcount+=1;
-  if(fillcount>800) frameRate(20);
+  treepulse+=1;
+  if(treepulse>800) frameRate(20);
 
 }
 
 function mouseClicked() {
-  fillcount = 0;
   setup();
 }
 
-function tree(x, y, size, ang=1) {
-  dx = 0;
-  dy = -1;
+function tree(x, y, dx, dy) {
   tree_color = color(80, 80, 0);
   fill(tree_color);
   stroke(tree_color);
-  delta = size * .1
-  if(size>4) {
-    rect(x, y, size / 4, size)
-    deltax = random(0,delta*2)
-    newx = x - deltax
-    newy = y - size * .5
-    tree(newx,newy,size/2)
+  if(dx>4) {
+    rect(x, y, dx, dy);
 
-    if(size % 4 == 0){
-      deltax = random(delta,delta*2)
-      newang = random([-1,1]) 
-      newx = x - deltax
+    // get much smaller after trunk
+    if(dy >= 200) {
+      dy = 50;
+    }
 
-      tree(newx,y,size/2, newang)
+    dy = dy * 4/5;
+    dx = dx * 4/5;
+    newy = y - dy;
+    tree(x-dx,y-dy,dx, dy);
+
+    if(dx % 4 == 0){
+      // tree(x-dx,y,dx*4/5, dy*4/5);
     }
 
   }
