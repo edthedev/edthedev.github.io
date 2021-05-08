@@ -24,10 +24,10 @@ var midline = maxim / 2;
 function draw_background() {
   // sky
   fill(color(0, 200, 255));
-  rect(0, 0, maxim, maxim/2);
+  rect(0, 0, maxim, maxim);
   // ground
   fill(color(0, 200, 0));
-  rect(0, maxim/2, maxim, maxim/2);
+  rect(0, 4*maxim/5, maxim, maxim/5);
 }
 
 function setup() {
