@@ -41,6 +41,17 @@ function draw_background() {
   // ground
   fill(color(0, 200, 0));
   rect(0, 4*maxim/5, maxim, maxim/5);
+
+  // rain
+  // TODO: Randomize whether it rains
+  if(1==1) {
+    setup_rain();
+    dropcount = random(20, 60);
+    for(i=0; i<dropcount; i+=1) {
+      draw_rain();
+    }
+  }
+
 }
 
 function setup() {
@@ -124,6 +135,19 @@ function branch(x, y, le, we, wi, ta, pulse) {
     }
   }
 
+}
+
+function setup_rain() {
+  rain_dx = random(0,5);
+  rain_dy = random(10, 20);
+}
+
+function draw_rain() {
+  var c = color(random(0,100),random(80,160), random(200,255));
+  stroke(c);
+  startx = random(0, maxim);
+  starty = random(0, 4*maxim/5);
+  line(startx, starty, startx+rain_dx, starty+rain_dy);
 }
 
 function leaf_cluster(x, y) {
