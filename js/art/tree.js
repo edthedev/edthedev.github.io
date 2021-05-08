@@ -23,8 +23,21 @@ var midline = maxim / 2;
 
 function draw_background() {
   // sky
-  fill(color(0, 200, 255));
-  rect(0, 0, maxim, maxim);
+  if(random(0,3) > 1) {
+    fill(color(0, 200, 255));
+    rect(0, 0, maxim, maxim);
+  }
+  else {
+    // sunset
+    sunsety = maxim/5;
+    make_horizon();
+    draw_horizon();
+  }
+
+  // sun
+  fill(color(255,255,100));
+  circle(maxim/6, maxim/6, random(30, 100));
+
   // ground
   fill(color(0, 200, 0));
   rect(0, 4*maxim/5, maxim, maxim/5);
@@ -37,10 +50,6 @@ function setup() {
   noStroke();
   draw_background();
   frameRate(200); // fast tree growth
-
-  fill(color(255,255,100));
-  circle(maxim/6, maxim/6, random(30, 100));
-
 
   treepulse = 0;
   trunk(maxim - maxim/5,
@@ -111,6 +120,36 @@ function leaf_cluster(x, y) {
   stroke(tree_color);
   fill(tree_color);
 
+}
+
+var stripecount = 0;
+var stripecolors = [];
+
+function make_horizon() {
+
+  var c = color(random(200,255),random(80,160), random(0,200));
+  fill(c);
+  rect(0, 0, maxim, maxim/2);
+
+  stripecount = random(4,7);
+  stripecolors = [];
+  var stripefade = 20;
+  var stripered = random(200, 255);
+  var stripegreen = random(80, 160);
+  var stripeblue = random(0, 200);
+  for(i=0;i<stripecount;i++){
+    c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
+    stripecolors.push(c);
+  }
+}
+
+function draw_horizon() {
+  var horiz_stripe_y;
+  for(i=0;i<stripecount;i++){
+    fill(stripecolors[i]);
+    horiz_stripe_y = i*(maxim/stripecount);
+    rect(0, horiz_stripe_y, maxim, maxim - horiz_stripe_y);
+  }
 }
 
 
