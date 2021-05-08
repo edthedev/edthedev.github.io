@@ -23,15 +23,16 @@ var midline = maxim / 2;
 
 function draw_background() {
   // sky
-  if(random(0,8) > 1) {
-    fill(color(0, 200, 255));
-    rect(0, 0, maxim, maxim);
-  }
-  else {
+  if(random(0,8) < 7) {
     // sunset
     sunsety = maxim/5;
     make_horizon();
     draw_horizon();
+  }
+  else {
+    // blue sky
+    fill(color(0, 200, 255));
+    rect(0, 0, maxim, maxim);
   }
 
 
@@ -41,9 +42,9 @@ function draw_background() {
 
   // rain
   // TODO: Randomize whether it rains
-  if(random(0,10)>7) {
+  if(random(0,10)>5) {
     setup_rain();
-    dropcount = random(40, 90);
+    dropcount = random(60, 120);
     for(i=0; i<dropcount; i+=1) {
       draw_rain();
     }
@@ -140,6 +141,7 @@ function branch(x, y, le, we, wi, ta, pulse) {
 }
 
 function setup_rain() {
+  strokeWeight(1);
   rain_dx = random(-6,0);
   rain_dy = random(20, 30);
 }
@@ -148,7 +150,7 @@ function draw_rain() {
   var c = color(random(0,100),random(80,160), random(200,255));
   stroke(c);
   startx = random(0, maxim);
-  starty = random(0, 4*maxim/5);
+  starty = random(0, maxim);
   line(startx, starty, startx+rain_dx, starty+rain_dy);
 }
 
