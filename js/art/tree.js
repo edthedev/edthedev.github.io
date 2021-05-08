@@ -21,6 +21,7 @@ var treepulse = 0;
 var maxim = 400;
 var midline = maxim / 2;
 var season = "spring";
+var leaf_green;
 
 function choose(choices) {
   var index = Math.floor(Math.random() * choices.length);
@@ -65,14 +66,15 @@ function draw_background() {
 
 function setup() {
   // maxim = .5 * window.innderWidth;
+  leaf_green = color(33, 150, 33);
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   noStroke();
-  draw_background();
   frameRate(200); // fast tree growth
   season = choose(
     ["spring", "winter", "fall", "summer"]);
-  season = "winter"; // for testing
+  // season = "winter"; // for testing
+  draw_background();
 
   treepulse = 0;
   trunk(maxim - maxim/5,
@@ -151,16 +153,19 @@ function branch(x, y, le, we, wi, ta, pulse) {
 
 function draw_ground() {
   noStroke();
-  dx = 1;
-  fill(color(0, 200, 0));
+  dx = 1; // spiked grass
+  fill(leaf_green); // summer
+  if(season.includes("fall)")) {
+    fill(color(20, 20, 30));
+    dx = 5; // smoother ground
+  }
   if(season.includes("winter")) {
     fill(color(255,255,255)); //white snow
-    dx = 3;
+    dx = 3; // smoother ground
   }
 
   y = 4*maxim/5;
   rect(0, y, maxim, maxim/5);
-
 
   for(x=0;x<maxim;x+=dx){
     if(season.includes("spring")) { // random green
@@ -190,7 +195,7 @@ function leaf_cluster(x, y) {
   noStroke();
   for(i=0; i<random(1,6); i++) {
     circle(x + random(-4, 4), y + random(-4,4), 4);
-    if(season=="winter") {
+    if(season.includes("winter")) {
       fill(color(255,255,255)); // white
       circle(x + random(-4, 4), y + random(-5,3), 4);
     }
