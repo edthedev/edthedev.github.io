@@ -40,6 +40,17 @@ function draw_background() {
     // blue sky
     fill(color(0, 200, 255));
     rect(0, 0, maxim, maxim);
+    draw_clouds(); // always clouds in blue sky
+  }
+
+  // sun
+  noStroke();
+  fill(color(255,255,100));
+  circle(maxim/6, maxim/6, random(30, 90));
+
+  // clouds
+  if(random(0,10)>5) {
+    draw_clouds();
   }
 
 
@@ -47,7 +58,6 @@ function draw_background() {
   draw_ground();
 
   // rain
-  // TODO: Randomize whether it rains
   if(random(0,10)>5) {
     setup_rain();
     dropcount = random(60, 120);
@@ -56,10 +66,7 @@ function draw_background() {
     }
   }
 
-  // sun
-  noStroke();
-  fill(color(255,255,100));
-  circle(maxim/6, maxim/6, random(30, 90));
+
 
 }
 
@@ -242,6 +249,57 @@ function draw_horizon() {
   }
 }
 
+function draw_clouds() {
+
+  noStroke();
+  fill(color(230,230,255));
+  cloud_puff = random(8,27);
+  puff = 2*cloud_puff;
+
+  dropcount = random(3, 10);
+  for(i=0; i<dropcount; i+=1) {
+    
+    x = random(0, 4*maxim/5);
+    y = random(maxim/8, 3*maxim/5);
+
+
+    circle(x+cloud_puff, y-cloud_puff*random(0,1), puff);
+    circle(x+ 2*cloud_puff, y-cloud_puff*random(0,1), puff);
+    circle(x+ 3*cloud_puff, y-cloud_puff*random(0,1), puff);
+
+
+    circle(x, y, puff);
+    circle(x + cloud_puff, y, puff);
+    circle(x + 2 * cloud_puff, y, puff);
+    circle(x + 3 * cloud_puff, y, puff);
+    circle(x + 4 * cloud_puff, y, puff);
+  }
+}
+
+function draw_snow() {
+
+  stroke(color(255,255,255));
+  flake_size = 3;
+
+  dropcount = random(60, 120);
+  for(i=0; i<dropcount; i+=1) {
+    
+    startx = random(0, maxim);
+    starty = random(0, maxim);
+
+    line(startx-flake_size, starty-flake_size, 
+      startx+flake_size, starty+flake_size);
+    line(startx+flake_size, starty-flake_size, 
+      startx-flake_size, starty+flake_size);
+    line(startx, starty-flake_size-1, 
+      startx, starty+flake_size+1);
+    line(startx-flake_size-1, starty, 
+      startx+flake_size+1, starty);
+
+  }
+
+
+}
 
 function draw() {
   // slow down for snowflakes once the tree is drawn
