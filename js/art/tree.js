@@ -110,7 +110,7 @@ function branch(x, y, le, we, wi, ta, pulse) {
       }
     } else {
       wi2 = wi + random(-.9,-.3) * wi;
-      ta2 = ta + random(-.9,-.3) * ta;
+      ta2 = ta + random(-.9,.9) * ta;
       if(random(0,40)>5){ // much more likely
         branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
       }

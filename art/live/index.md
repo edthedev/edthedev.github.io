@@ -22,6 +22,7 @@ Be sure to try clicking the art pieces. Some of them interact.
 
 ![May 8 Sketch Preview](/img/art/tree.PNG)
 ![May 8 Sketch Preview](/img/art/tree2.PNG)
+![May 8 Sketch Preview](/img/art/tree3.PNG)
 </a>
 
 [May 8 Sketch - Tree](/art/live/tree)
