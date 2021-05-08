@@ -48,33 +48,12 @@ function draw_background() {
       draw_rain();
     }
   }
-  draw_sprout();
 
   // sun
   noStroke();
   fill(color(255,255,100));
   circle(maxim/6, maxim/6, random(30, 90));
 
-}
-
-function draw_sprout() {
-  x = maxim/5;
-  y = 4*maxim/5;
-  le = 16;
-
-  nsprout(x,y,le);
-}
-
-function nsprout(x, y, le) {
-  circle(x,y,.3);
-  nx = x;
-  if(le % 6 == 0) {
-    nx = nx + rain_dx;
-  }
-
-  if(le>1) {
-    nsprout(nx,y-2,le-1);
-  }
 }
 
 function draw_ground() {
@@ -101,7 +80,6 @@ function setup() {
      maxim, 
      7, //width
      maxim/3); // tall
-  
 }
 
 function trunk(x,y, wi, ta) {
