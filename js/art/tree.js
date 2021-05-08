@@ -53,7 +53,7 @@ function trunk(x,y, wi, ta) {
   stroke(tree_color);
   rect(x, y-ta, wi, ta);
 
-  le = wi / 4;
+  le = wi / 2;
 
   for(i=0; i<5; i++) {
     branch(x + i*wi/5,y-ta, le, wi/5, 0, 0);
@@ -63,7 +63,7 @@ function trunk(x,y, wi, ta) {
 function branch(x, y, le, we, wi, ta) {
   strokeWeight(we);
   wi += random(-.4,.4) * le;
-  ta += random(.1,.4) * le;
+  ta += random(.05,.1) * le;
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
