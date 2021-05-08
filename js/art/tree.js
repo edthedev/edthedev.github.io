@@ -41,8 +41,8 @@ function setup() {
   treepulse = 0;
   trunk(maxim - maxim/5,
      maxim, 
-     maxim/5, 
-     maxim/2);
+     maxim/25, //width
+     maxim/3); // tall
 }
 
 function trunk(x,y, wi, ta) {
@@ -53,10 +53,11 @@ function trunk(x,y, wi, ta) {
   stroke(tree_color);
   rect(x, y-ta, wi, ta);
 
-  le = wi / 2;
+  le = maxim / 9;
+  we = 10;
 
   for(i=0; i<5; i++) {
-    branch(x + i*wi/5,y-ta, le, wi/5, 0, 0);
+    branch(x + i*wi/5,y-ta, le, we, 0, 0);
   }
 }
 
