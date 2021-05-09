@@ -15,7 +15,21 @@ jobs:
         os: [windows-latest]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
+
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+
+    - run: npm ci
+
+
+    - name: Build static site
+      run: npx @11ty/eleventy
+    
     - name: Install dependencies PowerShell 7
       run: Install-Module -Name 'Pester' -Force -SkipPublisherCheck
       shell: pwsh
