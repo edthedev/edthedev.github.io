@@ -21,12 +21,11 @@ Ask Edward how to make your DevOps pipeline more secure.
 
 ### My Social Media
 
-- Twitter: https://twitter.com/edthedev 
-- LinkedIn: https://www.linkedin.com/in/edwarddelaportev 
+- Twitter: [EdTheDev](https://twitter.com/edthedev)
+- LinkedIn: [Edward Delaporte V](https://www.linkedin.com/in/edwarddelaportev)
 
 ### My Art
 
-- [Sketch Art](/art)
 - [Live Art](/art/live)
 
 ### My Resume
