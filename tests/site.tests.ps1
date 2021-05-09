@@ -19,8 +19,8 @@ Describe 'Site Content Tests' {
       '.\index.html' | Should -FileContentMatch $expected_title
     }
     It 'has navigation' {
-      '.\index.html' | Should -FileContentMatch 'navbar'
-      '.\index.html' | Should -FileContentMatch 'nav.js'
+      '.\index.html' | Should -FileContentMatch 'https://edward.delaporte.us/slides'
+      '.\index.html' | Should -FileContentMatch 'https://edward.delaporte.us/resume'
     }
 
 }
