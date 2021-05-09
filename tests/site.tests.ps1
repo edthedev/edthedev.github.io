@@ -9,9 +9,9 @@ Describe 'Site Content Tests' {
 
     # Arrange & Act
     It 'has an index file' {
-      Test-Path -Path ./index.html | Should -Be $true
+      Test-Path -Path ./_site/index.html | Should -Be $true
     }
-    $index_content = Get-Content ./index.html
+    $index_content = Get-Content ./_site/index.html
 
     # Assert
     It 'has the correct page title' {
