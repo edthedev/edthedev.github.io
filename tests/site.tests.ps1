@@ -8,6 +8,9 @@
 Describe 'Site Content Tests' {
 
     # Arrange & Act
+    It 'generated the _site directory' {
+      Test-Path -Path ./_site | Should -Be $true
+    }
     It 'has an index file' {
       Test-Path -Path ./_site/index.html | Should -Be $true
     }
