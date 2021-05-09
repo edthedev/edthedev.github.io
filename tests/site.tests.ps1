@@ -15,7 +15,7 @@ Describe 'Site Content Tests' {
 
     # Assert
     It 'has the correct page title' {
-      $expected_title = "<title>Edward.Delaporte.us</title>"
+      $expected_title = "<title>Welcome - Edward Delaporte's Website</title>"
       '.\index.html' | Should -FileContentMatch $expected_title
     }
     It 'has navigation' {
