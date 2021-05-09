@@ -18,12 +18,12 @@ Describe 'Site Content Tests' {
 
     # Assert
     It 'has the correct page title' {
-      $expected_title = "<title>Welcome - Edward Delaporte's Website</title>"
+      $expected_title = "<title>Welcome - Edward Delaporte"
       '.\_site\index.html' | Should -FileContentMatch $expected_title
     }
     It 'has navigation' {
-      '.\_site\index.html' | Should -FileContentMatch 'https://edward.delaporte.us/slides'
-      '.\_site\index.html' | Should -FileContentMatch 'https://edward.delaporte.us/resume'
+      '.\_site\index.html' | Should -FileContentMatch '/slides'
+      '.\_site\index.html' | Should -FileContentMatch '/resume'
     }
 
 }
