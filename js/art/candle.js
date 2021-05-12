@@ -14,6 +14,10 @@ http://creativecommons.org/licenses/by-sa/4.0/
 You can share your own remix of this code 
 as long as you display this license and attribution.
 
++ [ ] add drips
++ [ ] soften edges with dribbly bits at top and bottom
++ [ ] build the flame with triangles for more shape control
+
 */
 
 var maxim = 400;
@@ -28,7 +32,7 @@ var flame_beat;
 
 
 function setup_flame() {
-    orange = color(random(230, 255),random(170,230), random(30,90));
+    orange = color(random(170, 230),random(170,230), random(30,90));
     orange2 = color(random(230, 255),random(200,255), random(30,90));
     blue = color(random(60, 100), random(170,230), random(200,255));
     blue2 = color(random(60, 100), random(170,230), random(200,255));
@@ -39,6 +43,7 @@ function draw_flame() {
 flame_beat = 10;
 if(pulse % flame_beat == 0) {
     // outer
+    dx = random(-3, 3);
 
     noStroke();
     if(pulse % (2*flame_beat) == 0) {
@@ -55,7 +60,7 @@ if(pulse % flame_beat == 0) {
     } else {
         fill(blue2);
     }
-    ellipse(3.5*maxim/8, 4.8*maxim/8, .6*maxim/16, .95*maxim/16);
+    ellipse(dx + 3.5*maxim/8, 4.8*maxim/8, .45*maxim/16, .75*maxim/16);
 
     }
 
