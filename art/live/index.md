@@ -17,7 +17,10 @@ Try clicking the art pieces. Some of them interact.
 ## May 11 Sketch - Candle
 
 <a href="/art/live/candle">
-![May 11 Sketch Preview](/img/art/tree.PNG)
+
+![May 11 Sketch Preview](/img/art/candle.PNG)
+![May 11 Sketch Preview](/img/art/candle2.PNG)
+![May 11 Sketch Preview](/img/art/candle3.PNG)
 </a>
 
 [May 11 Sketch - Candle](/art/live/candle)
