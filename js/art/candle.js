@@ -14,9 +14,11 @@ http://creativecommons.org/licenses/by-sa/4.0/
 You can share your own remix of this code 
 as long as you display this license and attribution.
 
++ [ ] add randomized wood grain to the window frame
 + [ ] add drips
 + [ ] soften edges with dribbly bits at top and bottom
 + [ ] build the flame with triangles for more shape control
++ [ ] slowly dribble a bead of wax down once side.
 
 */
 
