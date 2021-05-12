@@ -36,18 +36,20 @@ function setup() {
 
 function draw_candle() {
 
-    // wax
-    wax = color(255,255,255);
-    fill(wax);
-    stroke(wax);
-    rect(3*maxim/8, 5*maxim/8, maxim/8, 5*maxim/16);
 
     // plate
     gold = color(200,200,0);
     fill(gold);
     stroke(color(0,0,0));
-    ellipse(7*maxim/16, 15*maxim/16, 2*maxim/8, maxim/16);
+    ellipse(7*maxim/16, 59*maxim/64, 2*maxim/8, maxim/16);
 
+    // wax
+    wax = color(255,255,255);
+    fill(wax);
+    stroke(wax);
+    rect(3*maxim/8, 5*maxim/8, maxim/8, 4.5*maxim/16);
+
+    // candle base
     fill(wax);
     stroke(wax);
     ellipse(7*maxim/16, 29*maxim/32, maxim/8, maxim/16);
