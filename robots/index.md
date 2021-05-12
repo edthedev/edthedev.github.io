@@ -58,9 +58,22 @@ Send messages to a friend's Micro:Bit, one bit LED at a time. Push A to send a b
 
 Why play a terrific game with a simple clothes button, when you can use batteries, microchips, and radios instead?
 
-### Robot Frame Demos
+### Robots!!! with BBC Micro:Bit
 
-The [RingBig Car][1] frame is the most affordable robot body I have found.
+For about $60.00 (one MicroBit and one CuteBot), your kid can have a robot trucking around the room, following code they wrote. Consider getting an extra MicroBit to act as a remote control via Bluetooth.
+
+[BBC Micro:Bit](https://makecode.microbit.org/) is currently the most afordable hardware I have found that can run block code.
+
+It comes with bunch of LEDs, a couple of buttons, a bluetooth radio, and a connector for an always growing set of add-on boards.
+
+[CuteBot][50] is currently my favorite affordable robot frame. CuteBot integrates some of the best features for the price - including multicolor LED lights, a front connector to easily add a $3.00 distance sensor (often included in the kit).
+
+### More Robot!
+
+The [RingBig Car][1] frame is a great affordable robot body. It doesn't have as many features as [CuteBot][50], but I've found them for as cheap as $20.00, and that's a terrific price for a basic robot frame that rolls around the room.
+
+[50]: https://www.elecfreaks.com/learn-en/microbitKit/smart_cutebot/cutebot_car.html
+
 [Wanderer](https://makecode.microbit.org/_MeWdP5dk9ELC) is a simple demonstration program that makes it wander randomly around the room. This is for an older version of the MicroBit framework, so it can be hard to find the RingBit control library without a direct link, at the moment.
 
 [Dancing Friends][2] is the wandering bots program above, modified so that every ten seconds or so, one of the robots will call out for all the robots to spin in a circle.

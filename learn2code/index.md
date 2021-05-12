@@ -26,6 +26,10 @@ And a better game than mine:
 + [Tony Albatross - Pro Dolphin](https://arcade.makecode.com/26346-72733-28413-39259)
 
 
+### Robots!!
+
+Another great way to start is by [making robots](/robots).
+
 ### MIT Scratch
 
 [MIT Scratch](https://scratch.mit.edu/projects/editor/?tutorial=home) is the original block based code learning environment.
@@ -35,17 +39,6 @@ I think it's still the most feature complete. The ability to add animations, bac
 Scratch also has a built in video tutorial series that explores a bunch of great computer science concepts.
 
 Let me know if you enjoy [my humble Scratch creations](https://scratch.mit.edu/users/edthedev/).
-
-### Robots!!! with BBC Micro:Bit
-
-For about $60.00 (one MicroBit and one CuteBot), your kid can have a robot trucking around the room, following code they wrote. Consider getting an extra MicroBit to act as a remote control via Bluetooth.
-
-[BBC Micro:Bit](https://makecode.microbit.org/) is currently the most afordable hardware I have found that can run block code.
-
-It comes with bunch of LEDs, a couple of buttons, a bluetooth radio, and a connector for an always growing set of add-on boards.
-
-[CuteBot](https://www.elecfreaks.com/learn-en/microbitKit/smart_cutebot/cutebot_car.html) is currently my favorite affordable robot frame. 
-
 
 
 ### Code.org
