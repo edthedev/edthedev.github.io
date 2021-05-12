@@ -6,12 +6,15 @@ Page Styles
 body
 {
 	font-family: 'times new roman', times, serif;
-	font-size:140%;
+	font-size:100%;
 	background-color: #EEE !important;
+  margin: 0em;
 }
 
 .content {
+  align-content: center;
 	margin: 1em;
+  max-width: 30rem;
 }
 
 canvas{
