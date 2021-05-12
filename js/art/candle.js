@@ -120,6 +120,8 @@ function draw_frame() {
     wood_grain_colors = [
         get_wood_brown(),
         get_wood_brown(),
+        get_wood_brown(),
+        get_wood_brown(),
         get_wood_brown()
     ];
 
@@ -148,7 +150,7 @@ function draw_grain(grainx, grainy, grainw, graint) {
 
     dx = 1;
     dy = 1;
-    dt = 20;
+    dt = 30;
     dw = 3;
     if(grainw > graint) { // set grain direction
         temp = dw;
@@ -160,7 +162,8 @@ function draw_grain(grainx, grainy, grainw, graint) {
 
     for(bobx=0; bobx < grainw; bobx+=dw-2) {
         bobx += random(0,2);
-        for(boby=0; boby < graint; boby+=dt) {
+        for(boby=0; boby < graint; boby+=dt-2) {
+            boby += random(0,2);
 
             grainc = choose(wood_grain_colors);
             fill(grainc);
