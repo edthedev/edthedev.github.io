@@ -24,6 +24,7 @@ var maxim = 400;
 var midline = maxim / 2;
 var pulse = 0;
 
+var leaf_green;
 var orange;
 var orange2;
 var blue;
@@ -75,6 +76,7 @@ function setup() {
     noStroke();
     createCanvas(maxim, maxim);
     background(maxim,maxim);
+    leaf_green = color(33, 150, 33);
     draw_background();
     draw_frame();
     draw_candle();
@@ -93,7 +95,7 @@ function draw_candle() {
     ellipse(7*maxim/16, 59*maxim/64, 2*maxim/8, maxim/16);
 
     // wax
-    wax = color(255,255,255);
+    wax = color(random(213, 247), random(213, 247), random(213,247));
     fill(wax);
     stroke(wax);
     rect(3*maxim/8, 5*maxim/8, maxim/8, 4.5*maxim/16);
@@ -149,6 +151,9 @@ function draw_background() {
   if(random(0,10)>5) {
     draw_clouds();
   }
+
+  // ground
+  draw_ground();
 
   // precipitation
   if(random(0,10)>6) {
@@ -258,6 +263,31 @@ function draw_snow() {
 
   }
 }
+
+function draw_ground() {
+  noStroke();
+  dx = 1; // spiked grass
+  fill(leaf_green); // summer
+  if(season.includes("fall)")) {
+    fill(color(20, 20, 30));
+    dx = 5; // smoother ground
+  }
+  if(season.includes("winter")) {
+    fill(color(255,255,255)); //white snow
+    dx = 3; // smoother ground
+  }
+
+  y = 6.5*maxim/8;
+  rect(0, y, maxim, maxim/5);
+
+  for(x=0;x<maxim;x+=dx){
+    if(season.includes("spring")) { // random green
+      fill(color(0, random(150,200), random(0,100)));
+    }
+    rect(x,y-random(0, 4),dx,maxim/5);
+  }
+}
+
 
 function choose(choices) {
   var index = Math.floor(Math.random() * choices.length);
