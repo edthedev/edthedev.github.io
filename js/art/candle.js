@@ -29,7 +29,7 @@ var pulse = 0;
 var leaf_green;
 var orange;
 var orange2;
-var blue;
+var blue1;
 var blue2;
 var flame_beat;
 
@@ -37,7 +37,7 @@ var flame_beat;
 function setup_flame() {
     orange = color(random(170, 230),random(170,230), random(30,90));
     orange2 = color(random(230, 255),random(200,255), random(30,90));
-    blue = color(random(60, 100), random(170,230), random(200,255));
+    blue1 = color(random(60, 100), random(170,230), random(200,255));
     blue2 = color(random(60, 100), random(170,230), random(200,255));
 }
 
@@ -59,7 +59,7 @@ if(pulse % flame_beat == 0) {
     // inner
 
     if(pulse % (2*flame_beat) == 0) {
-        fill(blue);
+        fill(blue1);
     } else {
         fill(blue2);
     }
@@ -117,9 +117,54 @@ function draw_frame() {
     fill(color(200,200,200));
     stroke(color(0,0,0));
     rect(0, 0, maxim/8, maxim); // left
+    draw_grain(0, 0, maxim/8, maxim); // left
     rect(7*maxim/8, 0, maxim/8, maxim); // right
     rect(0, 7*maxim/8, maxim, maxim/8); // bottom
     rect(0, 0, maxim, maxim/8); // top
+}
+
+function draw_grain(grainx, grainy, grainw, graint) {
+    noStroke();
+
+    dx = 1;
+    dy = 1;
+    dt = 15;
+    dw = 5;
+    /* if(fw > ft) { // set grain direction
+        t = 5;
+        w = 40;
+    } */
+    // console.debug("Ix is " + bobx);
+    console.debug("Fw is " + grainw);
+
+    grain1 = color(random(100,255), 
+                random(100, 255),
+                random(100, 255)); //random brown
+    grain2 = color(random(100,255), 
+                random(100, 255),
+                random(100, 255)); //random brown
+    grain3 = color(random(100,255), 
+                random(100, 255),
+                random(100, 255)); //random brown
+
+
+    for(bobx=0; bobx < grainw; bobx+=dw) {
+        bobx += random(0,2);
+        for(boby=0; boby < graint; boby+=dt) {
+
+            grainc = random(0,3);
+            if(grainc == 1) {
+                fill(grain3);
+            }
+            if(grainc == 0) {
+                fill(grain2);
+            } else{
+                fill(grain1);
+            }
+
+            rect(grainx+bobx, grainy+boby, dw, dt);
+        }
+    }
 }
 
 
