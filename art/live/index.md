@@ -13,6 +13,16 @@ Every visitor experiences a new unique piece art.
 
 Try clicking the art pieces. Some of them interact.
 
+
+## May 11 Sketch - Candle
+
+<a href="/art/live/candle">
+![May 11 Sketch Preview](/img/art/tree.PNG)
+</a>
+
+[May 11 Sketch - Candle](/art/live/candle)
+
+
 ## May 6 Sketch - Tree
 
 <a href="/art/live/tree">
@@ -80,7 +90,7 @@ Try clicking the art pieces. Some of them interact.
 [Stark Weave Pattern](/art/live/weave)
 
 
-<a href="art/live/weave_strange">
+<a href="/art/live/weave_strange">
 
 ![Strange Weave Screenshot](/img/art/weave_strange2.PNG)
 ![Strange Weave Screenshot](/img/art/weave_strange3.PNG)
