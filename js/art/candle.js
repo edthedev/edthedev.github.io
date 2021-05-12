@@ -123,6 +123,13 @@ function draw_frame() {
     rect(0, 0, maxim, maxim/8); // top
 }
 
+function get_wood_brown() {
+    return color(
+        random(110,160), 
+        random(100, 130), 
+        random(70, 85)); //random brown
+}
+
 function draw_grain(grainx, grainy, grainw, graint) {
     noStroke();
 
@@ -137,30 +144,17 @@ function draw_grain(grainx, grainy, grainw, graint) {
     // console.debug("Ix is " + bobx);
     console.debug("Fw is " + grainw);
 
-    grain1 = color(random(100,255), 
-                random(100, 255),
-                random(100, 255)); //random brown
-    grain2 = color(random(100,255), 
-                random(100, 255),
-                random(100, 255)); //random brown
-    grain3 = color(random(100,255), 
-                random(100, 255),
-                random(100, 255)); //random brown
+    grain1 = get_wood_brown();
+    grain2 = get_wood_brown();
+    grain3 = get_wood_brown();
 
 
-    for(bobx=0; bobx < grainw; bobx+=dw) {
+    for(bobx=0; bobx < grainw; bobx+=dw-2) {
         bobx += random(0,2);
         for(boby=0; boby < graint; boby+=dt) {
 
-            grainc = random(0,3);
-            if(grainc == 1) {
-                fill(grain3);
-            }
-            if(grainc == 0) {
-                fill(grain2);
-            } else{
-                fill(grain1);
-            }
+            grainc = choose([grain1, grain2, grain3]);
+            fill(grainc);
 
             rect(grainx+bobx, grainy+boby, dw, dt);
         }
