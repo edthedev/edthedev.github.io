@@ -23,6 +23,12 @@ Try clicking the art pieces. Some of them interact.
 ![May 11 Sketch Preview](/img/art/candle3.PNG)
 </a>
 
+My recent meditiation theme has been on slowing down.
+
++ The wood grain algorithm is a refinement on the grass algorithm in the tree sketch.
++ The dribbling wax just makes me smile.
++ The sky algorithm is subtly shifted to later evening, to justify the presence of the candle.
+
 [May 11 Sketch - Candle](/art/live/candle)
 
 
@@ -34,6 +40,9 @@ Try clicking the art pieces. Some of them interact.
 ![May 8 Sketch Preview](/img/art/tree2.PNG)
 ![May 8 Sketch Preview](/img/art/tree5.PNG)
 </a>
+
+This was an interesting technical challenge to create random branching rules that feel natural.
++ Most of the effort on the background was to give the tree a space to feel more alive.
 
 [May 8 Sketch - Tree](/art/live/tree)
 
@@ -47,9 +56,16 @@ Try clicking the art pieces. Some of them interact.
 ![May 2 Sketch Preview](/img/art/waves2.PNG)
 </a>
 
+This is the first sketch where I felt confident enough to try a non-abstract subject.
+
+
 [May 2 Sketch - Waves](/art/live/waves)
 
 ## April 2021 Sketches
+
+The abstract pieces below are loosely based on actual sketches I have drawn.
+
+The final live art has very little in common with the original sketches due to my limited mastery of JavaScript as an art medium. 
 
 <a href="/art/live/deep">
 
