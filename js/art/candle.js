@@ -19,12 +19,38 @@ as long as you display this license and attribution.
 var maxim = 400;
 var midline = maxim / 2;
 
+function mouseClicked() {
+  setup();
+}
+
 function setup() {
 
-  createCanvas(maxim, maxim);
-  background(maxim,maxim);
+    noStroke();
+    createCanvas(maxim, maxim);
+    background(maxim,maxim);
+    draw_background();
     draw_frame();
+    draw_candle();
 
+}
+
+function draw_candle() {
+
+    // wax
+    wax = color(255,255,255);
+    fill(wax);
+    stroke(wax);
+    rect(3*maxim/8, 5*maxim/8, maxim/8, 5*maxim/16);
+
+    // plate
+    gold = color(200,200,0);
+    fill(gold);
+    stroke(color(0,0,0));
+    ellipse(7*maxim/16, 15*maxim/16, 2*maxim/8, maxim/16);
+
+    fill(wax);
+    stroke(wax);
+    ellipse(7*maxim/16, 29*maxim/32, maxim/8, maxim/16);
 }
 
 function draw() {
@@ -32,7 +58,13 @@ function draw() {
 }
 
 function draw_frame() {
-    rect(0, 0, maxim/8, maxim);
+
+    fill(color(200,200,200));
+    stroke(color(0,0,0));
+    rect(0, 0, maxim/8, maxim); // left
+    rect(7*maxim/8, 0, maxim/8, maxim); // right
+    rect(0, 7*maxim/8, maxim, maxim/8); // bottom
+    rect(0, 0, maxim, maxim/8); // top
 }
 
 
@@ -66,10 +98,6 @@ function draw_background() {
   if(random(0,10)>5) {
     draw_clouds();
   }
-
-
-  // ground
-  draw_ground();
 
   // precipitation
   if(random(0,10)>6) {
@@ -177,4 +205,9 @@ function draw_snow() {
       startx+flake_size+1, starty);
 
   }
+}
+
+function choose(choices) {
+  var index = Math.floor(Math.random() * choices.length);
+  return choices[index];
 }
