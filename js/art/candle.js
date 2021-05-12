@@ -130,7 +130,7 @@ function draw_background() {
   }
   else {
     // blue sky
-    fill(color(0, 200, 255));
+    fill(color(0, 100, 155));
     rect(0, 0, maxim, maxim);
     draw_clouds(); // always clouds in blue sky
   }
@@ -178,15 +178,16 @@ var stripecolors = [];
 
 function make_horizon() {
 
-  var c = color(random(200,255),random(80,160), random(0,200));
+  // var c = color(random(200,255),random(80,160), random(0,200));
+  var c = color(random(100,200),random(80,160), random(0,200));
   fill(c);
   rect(0, 0, maxim, maxim/2);
 
   stripecount = random(4,7);
   stripecolors = [];
   var stripefade = 20;
-  var stripered = random(200, 255);
-  var stripegreen = random(80, 160);
+  var stripered = random(140, 200);
+  var stripegreen = random(20, 100);
   var stripeblue = random(0, 200);
   for(i=0;i<stripecount;i++){
     c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
@@ -206,7 +207,7 @@ function draw_horizon() {
 function draw_clouds() {
 
   noStroke();
-  fill(color(230,230,255));
+  fill(color(170,170,200)); // cloud color
   cloud_puff = random(8,27);
   puff = 2*cloud_puff;
 
