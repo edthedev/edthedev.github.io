@@ -126,16 +126,19 @@ function draw_frame() {
     rect(0, 0, maxim/8, maxim); // left
     draw_grain(0, 0, maxim/8, maxim); // left
     rect(7*maxim/8, 0, maxim/8, maxim); // right
+    draw_grain(7*maxim/8, 0, maxim/8, maxim); // right
     rect(0, 7*maxim/8, maxim, maxim/8); // bottom
     draw_grain(0, 7*maxim/8, maxim, maxim/8); // bottom
     rect(0, 0, maxim, maxim/8); // top
+    draw_grain(0, 0, maxim, maxim/8); // top
 }
 
 function get_wood_brown() {
+    basegc = random(50,90);
     return color(
-        random(80,160), 
-        random(70, 110), 
-        random(50, 85)); //random brown
+        basegc + random(30,70), 
+        basegc + random(0,10), 
+        basegc + random(0,10)); //random brown
 }
 
 var wood_grain_colors;
