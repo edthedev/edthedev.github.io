@@ -22,7 +22,8 @@ title: Welcome - Edward Delaporte's Website
 
   <title>{{ title }}</title>
 
-<nav class="ye_navbar"> 
+
+<nav class="ye_navbar" role="navigation"> 
 <a href="/">Edward.Delaporte.us</a>
 <a href="/slides">Presentations</a>
 <a href="/resume">Resume</a>
@@ -31,9 +32,10 @@ title: Welcome - Edward Delaporte's Website
 </head> 
 <body>
 
-
-<div class="content">
+<div class="content" role="main">
 {{ content | safe }}
-<p>Copyright 2021 Edward Delaporte</p>
+<div class="content" role="contentinfo">
+  <p>Copyright 2021 Edward Delaporte</p>
+</div>
 </div>
 </html>
