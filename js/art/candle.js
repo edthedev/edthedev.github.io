@@ -41,6 +41,7 @@ function draw_candle() {
     gold = color(200,200,0);
     fill(gold);
     stroke(color(0,0,0));
+    ellipse(7*maxim/16, 30.5*maxim/32, maxim/8, maxim/32);
     ellipse(7*maxim/16, 59*maxim/64, 2*maxim/8, maxim/16);
 
     // wax
