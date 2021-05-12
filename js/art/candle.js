@@ -15,11 +15,11 @@ You can share your own remix of this code
 as long as you display this license and attribution.
 
 + [x] add randomized wood grain to the window frame
++ [x] randomize cloud colors
 + [ ] add drips
 + [ ] soften edges with dribbly bits at top and bottom
 + [ ] build the flame with triangles for more shape control
 + [ ] slowly dribble a bead of wax down once side.
-+ [ ] randomize cloud colors
 
 */
 
@@ -34,6 +34,9 @@ var blue1;
 var blue2;
 var flame_beat;
 
+
+var dribblex;
+var dribbley;
 
 function setup_flame() {
     orange = color(random(170, 230),random(170,230), random(30,90));
@@ -98,18 +101,32 @@ function draw_candle() {
     ellipse(7*maxim/16, 59*maxim/64, 2*maxim/8, maxim/16);
 
     // wax
+    candle_top = 5*maxim/8;
     wax = color(random(213, 247), random(213, 247), random(213,247));
     fill(wax);
     stroke(wax);
-    rect(3*maxim/8, 5*maxim/8, maxim/8, 4.5*maxim/16);
+    rect(3*maxim/8, candle_top, maxim/8, 4.5*maxim/16);
 
     // candle base
     fill(wax);
     stroke(wax);
     ellipse(7*maxim/16, 29*maxim/32, maxim/8, maxim/16);
-}
 
-function draw() {
+    dribblex = 3*maxim/8;
+    dribbley = 20*maxim/32;
+    dribbley_max = 29*maxim/32;
+    dribblex2 = 4*maxim/8;
+    dribbley2 = 20*maxim/32;
+
+    // dribbly upper edge
+    dy = 0;
+    for(i=6*maxim/16; i<8*maxim/16; i++) {
+        dy+= random(-1, 1);
+        if(dy > 4) dy = 4;
+        if(dy < 0) dy = 0;
+        circle(i, candle_top - dy, 6);
+    }
+
 
 }
 
@@ -370,8 +387,28 @@ function choose(choices) {
   return choices[index];
 }
 
+function draw_dribble() {
+    if(pulse % 100 == 0) {
+        if(dribbley < dribbley_max) {
+            dribbley += random(0,3);
+        }
+    }
+    if(pulse % 100 == 20) {
+        if(dribbley2 < dribbley_max) {
+            dribbley2 += random(0,3);
+        }
+    }
+
+    // dribble
+    fill(wax);
+    circle(dribblex, dribbley, 6);
+    circle(dribblex2, dribbley2, 6);
+}
+
 function draw() {
     pulse += 1;
     if(pulse> 1000) { pulse = 0; }
     draw_flame();
+
+    draw_dribble();
 }
