@@ -14,11 +14,12 @@ http://creativecommons.org/licenses/by-sa/4.0/
 You can share your own remix of this code 
 as long as you display this license and attribution.
 
-+ [ ] add randomized wood grain to the window frame
++ [x] add randomized wood grain to the window frame
 + [ ] add drips
 + [ ] soften edges with dribbly bits at top and bottom
 + [ ] build the flame with triangles for more shape control
 + [ ] slowly dribble a bead of wax down once side.
++ [ ] randomize cloud colors
 
 */
 
@@ -267,10 +268,25 @@ function draw_horizon() {
   }
 }
 
+function get_cloud_color() {
+    basecc = 100;
+    return color(
+        basecc + random(0, 70),
+        basecc + 70,
+        200); // cloud color
+}
+
+var cloud_colors;
+
 function draw_clouds() {
 
+    cloud_colors = [
+        get_cloud_color(),
+        get_cloud_color(),
+        get_cloud_color()
+    ];
+
   noStroke();
-  fill(color(170,170,200)); // cloud color
   cloud_puff = random(8,27);
   puff = 2*cloud_puff;
 
@@ -280,16 +296,23 @@ function draw_clouds() {
     x = random(0, 4*maxim/5);
     y = random(maxim/8, 3*maxim/5);
 
-
+    fill(choose(cloud_colors));
     circle(x+cloud_puff, y-cloud_puff*random(0,1), puff);
+    fill(choose(cloud_colors));
     circle(x+ 2*cloud_puff, y-cloud_puff*random(0,1), puff);
+    fill(choose(cloud_colors));
     circle(x+ 3*cloud_puff, y-cloud_puff*random(0,1), puff);
 
 
+    fill(choose(cloud_colors));
     circle(x, y, puff);
+    fill(choose(cloud_colors));
     circle(x + cloud_puff, y, puff);
+    fill(choose(cloud_colors));
     circle(x + 2 * cloud_puff, y, puff);
+    fill(choose(cloud_colors));
     circle(x + 3 * cloud_puff, y, puff);
+    fill(choose(cloud_colors));
     circle(x + 4 * cloud_puff, y, puff);
   }
 }
