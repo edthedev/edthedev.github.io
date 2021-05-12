@@ -1,5 +1,6 @@
 ---
 layout: layout.njk
+title: About Edward Delaporte
 ---
 
 # Conference Bio

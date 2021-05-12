@@ -1,3 +1,8 @@
+---
+layout: layout.njk
+title: Resume - Edward Delaporte
+---
+
 # Edward C. Delaporte V						
 
 I make computers better at meeting the needs of humans.

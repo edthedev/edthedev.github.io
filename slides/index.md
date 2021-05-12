@@ -1,5 +1,6 @@
 ---
 layout: layout.njk
+title: Presentations by Edward Delaporte
 ---
 
 # Presentations
