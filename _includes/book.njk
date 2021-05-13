@@ -20,20 +20,19 @@ title: Coding is Stupid - by Edward Delaporte
   <link rel="stylesheet" href="/css/edthedev.css" /> 
   <title>{{ title }}</title>
 
-</head> 
-<body>
-
 <nav class="ye_navbar" role="navigation"> 
 <a href="/">Edward.Delaporte.us</a>
 <a href="/slides">Presentations</a>
 <a href="/resume">Resume</a>
 </nav>
 
+</head> 
+<body>
+
 <div class="content" role="main">
-{{ content | toc | safe }}
 {{ content | safe }}
-</div>
 <div class="content" role="contentinfo">
   <p>Copyright 2021 Edward Delaporte</p>
+</div>
 </div>
 </html>

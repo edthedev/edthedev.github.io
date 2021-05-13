@@ -5,6 +5,10 @@ title: Coding is Stupid by Edward Delaporte
 
 # Coding is Stupid
 
+## Index
+
+1. Introduction
+
 ## Introduction
 
 >Coming soon (whenever) - my honest thoughts programming, but mostly about mentorship from both directions - being mentored and mentoring other programmers.

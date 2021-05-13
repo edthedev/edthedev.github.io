@@ -7,8 +7,7 @@ open: serve
 
 setup:
 	npm install @11ty/eleventy --save-dev	
-	npm install --save eleventy-plugin-toc
-	npm install --save markdown-it markdown-it-ancho
+	npm install @11ty/eleventy-navigation --save-dev	
 
 serve:
 	npx @11ty/eleventy --serve
