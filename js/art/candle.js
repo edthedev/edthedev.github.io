@@ -94,6 +94,7 @@ flame_w = maxim/32;
 if(pulse % flame_beat == 0) {
     // outer
     dx = random(-3, 3);
+    dy = random(0, 10);
 
     noStroke();
     fill(choose(oranges));
@@ -124,7 +125,7 @@ if(pulse % flame_beat == 0) {
     // middle
     fill(choose(yellows));
     triangle(dx + flame_x, 
-      flame_top + 2*flame_w, 
+      flame_top + 2*flame_w + dy, 
       flame_x,
       flame_base,
       flame_x + .6*flame_w,
