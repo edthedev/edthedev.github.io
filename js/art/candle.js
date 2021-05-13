@@ -16,10 +16,10 @@ as long as you display this license and attribution.
 
 + [x] add randomized wood grain to the window frame
 + [x] randomize cloud colors
-+ [ ] add drips
-+ [ ] soften edges with dribbly bits at top and bottom
++ [x] add drips
++ [x] soften edges with dribbly bits at top and bottom
++ [x] slowly dribble a bead of wax down once side.
 + [ ] build the flame with triangles for more shape control
-+ [ ] slowly dribble a bead of wax down once side.
 
 */
 
@@ -38,36 +38,123 @@ var flame_beat;
 var dribblex;
 var dribbley;
 
+var yellows;
+var oranges;
+var blues;
+
+function get_flame_yellow() {
+  return color(
+    random(195, 255),
+    random(1800,240), 
+    random(20,80));
+}
+
+function get_flame_orange() {
+  return color(
+    random(170, 255),
+    random(170,200), 
+    random(30,90));
+}
+
+function get_flame_blue() {
+  basefc = 70;
+  return color(
+    basefc + random(0, 30),
+    basefc + random(120, 180),
+    255);
+}
+
 function setup_flame() {
-    orange = color(random(170, 230),random(170,230), random(30,90));
-    orange2 = color(random(230, 255),random(200,255), random(30,90));
-    blue1 = color(random(60, 100), random(170,230), random(200,255));
-    blue2 = color(random(60, 100), random(170,230), random(200,255));
+  oranges = [
+    get_flame_orange(),
+    get_flame_orange(),
+    get_flame_orange()
+  ];
+  yellows = [
+    get_flame_yellow(),
+    get_flame_yellow(),
+    get_flame_yellow()
+  ];
+  blues = [
+    get_flame_blue(),
+    get_flame_blue(),
+    get_flame_blue()
+  ]
 }
 
 function draw_flame() {
 
 flame_beat = 10;
+
+flame_top = 3.5*maxim/8;
+flame_base = 5*maxim/8;
+flame_x = 3.5*maxim/8;
+flame_w = maxim/32;
+
 if(pulse % flame_beat == 0) {
     // outer
     dx = random(-3, 3);
 
     noStroke();
+    fill(choose(oranges));
+    /* 
     if(pulse % (2*flame_beat) == 0) {
         fill(orange);
     } else {
         fill(orange2);
     }
-    ellipse(3.5*maxim/8, 4.4*maxim/8, maxim/16, 2*maxim/16);
+    */
+    // ellipse(3.5*maxim/8, 4.4*maxim/8, maxim/16, 2*maxim/16);
+
+    triangle(flame_x, 
+      flame_top, 
+      flame_x,
+      flame_base,
+      flame_x + flame_w,
+      flame_base - flame_w
+    );
+    triangle(flame_x, 
+      flame_top, 
+      flame_x,
+      flame_base,
+      flame_x - flame_w,
+      flame_base - flame_w
+    );
+
+    // middle
+    fill(choose(yellows));
+    triangle(dx + flame_x, 
+      flame_top + 2*flame_w, 
+      flame_x,
+      flame_base,
+      flame_x + .6*flame_w,
+      flame_base - flame_w
+    );
+    triangle(dx + flame_x, 
+      flame_top + 2*flame_w, 
+      flame_x,
+      flame_base,
+      flame_x - .6*flame_w,
+      flame_base - flame_w
+    );
 
     // inner
 
-    if(pulse % (2*flame_beat) == 0) {
-        fill(blue1);
-    } else {
-        fill(blue2);
-    }
-    ellipse(dx + 3.5*maxim/8, 4.8*maxim/8, .45*maxim/16, .75*maxim/16);
+    fill(choose(blues));
+    triangle(dx + flame_x, 
+      flame_top + 3.5*flame_w, 
+      flame_x,
+      flame_base,
+      flame_x + .4*flame_w,
+      flame_base - flame_w
+    );
+    triangle(dx + flame_x, 
+      flame_top + 3.5*flame_w, 
+      flame_x,
+      flame_base,
+      flame_x - .4*flame_w,
+      flame_base - flame_w
+    );
 
     }
 
