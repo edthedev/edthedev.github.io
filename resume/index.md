@@ -26,7 +26,7 @@ I make computers better at meeting the needs of humans.
 
 ## Career
 
-#### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
+### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
 
 - Hired a small group of future leaders with relevant development experience into Cybersecurity Dev.
 - Supports overall Cybersecurity Objectives.
@@ -39,7 +39,7 @@ I make computers better at meeting the needs of humans.
 + Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020
 - Assisted and mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
 
-#### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
+### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
 
 - Managed remote DevOps team of 11 software engineers and automation engineers for Busey Bank and FirsTech Payment processor.
 - Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
@@ -53,13 +53,13 @@ I make computers better at meeting the needs of humans.
 - Onboarded the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review in support of infrastructure-as-code implementations.
 - Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly 1/4 million in annual savings.
   
-#### January 2017 - August 2018: Programming Team Lead at Busey Bank, Champaign, IL
+### January 2017 - August 2018: Programming Team Lead at Busey Bank, Champaign, IL
 
 - Managed three software developer direct reports.
 - Collaborated with security, infrastructure, operations and sales teams to improve custom software product offerings.
 - Provided data analysis support as the organization grew from $3.7 billion in 2015 managed assets to $7.9 billion in 2017.
 
-#### July 2015  - January 2017: Senior IT Programmer at Busey Bank, Champaign, IL
+### July 2015  - January 2017: Senior IT Programmer at Busey Bank, Champaign, IL
 
  - Built financial transaction websites using Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials and React.js.
  - Guides projects through the software development life-cycle, including requirements, implementation, delivery, testing and maintenance.
@@ -68,7 +68,7 @@ I make computers better at meeting the needs of humans.
  - Builds infrastructure tools with PowerShell.
  - Presents technology training at local conferences as part of the First Busey commitment to building our community.
 
-#### November  2011 - July 2015: Lead Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
+### November  2011 - July 2015: Lead Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
 
 Lead Software Developer Responsibilities
 
@@ -86,7 +86,7 @@ Interim Manager Responsibilities
  - Regularly met one one one with developers to provide feedback and guidance.
  - Proactively communicated context for upcoming organizational changes.
 
-#### July 2010 - November 2011: Senior Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
+### July 2010 - November 2011: Senior Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
 
 Senior Software Developer Responsibilities
 
@@ -104,7 +104,7 @@ Application Security Engineer Responsibilities
  - Provided recommendations to campus stakeholders based on vulnerability scan results (2011 - 2013).
  - Served as a subject matter expert for Software Development Group authentication and authorization practices and technologies.
 
-#### March 2007 - June 2010: Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
+### March 2007 - June 2010: Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
 
  - Developed applications for the Office of Privacy and Information Assurance.
  - Author of a series of Secure Software Development articles for campus IT professionals (2008 - 2013). A few articles are posted publicly to https://security.illinois.edu/blog.
@@ -113,12 +113,12 @@ Application Security Engineer Responsibilities
  - Reviewed the source code of high risk applications for the Office of Privacy and Information Assurance (2009 - 2014).
  - Crafted a password generation module for use in University Admissions, to provide a campus wide compliance solution to a time-sensitive audit result (2010).
 
-#### March 2006 - March 2007: Software Developer at Silicon Graphics Inc.    Champaign, IL
+### March 2006 - March 2007: Software Developer at Silicon Graphics Inc.    Champaign, IL
 
  - Wrote software to track performance of supercomputers at the National Center for Supercomputing Applications (NCSA).
  - Adhered to source code style best practices, including the Python PEP8 Standard and the Zend PHP Style guidelines.
 
-#### Bachelors of Science Degree in Computer Science, from the College of Engineering, at the University of Illinois at Urbana-Champaign, May 2006
+### Bachelors of Science Degree in Computer Science, from the College of Engineering, at the University of Illinois at Urbana-Champaign, May 2006
 
 *Interesting coursework:*
 
@@ -128,17 +128,17 @@ Application Security Engineer Responsibilities
  - Designed and simulated a pipelined computer processor for MIPS assembler.
  - Classwork languages included: Java, Perl, C, C++, Visual Basic, ColdFusion, Mainframe RPG, MIPS Assembler.
 
-#### May 2005 - March 2006: Systems Administrator at Imaging Technology Group at Beckman Institute, U of I     Champaign,IL
+### May 2005 - March 2006: Systems Administrator at Imaging Technology Group at Beckman Institute, U of I     Champaign,IL
 
  - Configured backup, recovery, and software installation systems.
  - Solved diverse software and hardware configuration issues.
 
-#### May 2000 - Dec 2005: Software Developer at Ablesoft Solutions Inc. Oregon, IL
+### May 2000 - Dec 2005: Software Developer at Ablesoft Solutions Inc. Oregon, IL
 
  - Created an elegant extensible project template in VB.Net which allowed us to create all our applications more quickly with better standard features.
  - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and JavaScript to build advanced web interfaces.
 
-#### Open Source Contributions				October 2012 - Present
+## Open Source Contributions				October 2012 - Present
 
  - GitHub Arctic Code Vault Contributor 2020 - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
  - Collaborator on [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
@@ -147,7 +147,7 @@ Application Security Engineer Responsibilities
  - Created and maintained several Vim editor plugins, such as GitHub.com/edthedev/text-helper.vim
  - Has commits accepted to popular projects including AngularJs, Ansible, and Kivy.
 
-#### Professional Training - Highlights
+## Professional Training - Highlights
 
 - CampIT Enterprise Risk / Security Management, March 2021
 - AnsibleFest 2020
@@ -169,7 +169,7 @@ Application Security Engineer Responsibilities
 - Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
 - Completed [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
 
-#### Community Involvement
+## Community Involvement
 
 - Rotary Club of Champaign - Website Committee Chair since 2020
 - Webmaster - Rotary Club of Champaign since 2018

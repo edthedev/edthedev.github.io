@@ -5,13 +5,13 @@ title: Learn 2 Code - Edward Delaporte's Guide
 
 # Learn to Code
 
-### Minecraft Puzzles
+## Minecraft Puzzles
 
 [Minecraft on Code.org](https://studio.code.org/s/hero/stage/1/puzzle/1) is my favorite guided learn-to-code series.
 
 It has a Minecraft theme, stars YouTube celebrities, and has a plot. Along the way, kids get to control Steve while programming a robot ally to solve puzzles.
 
-### MakeCode Arcade & Meowbit
+## MakeCode Arcade & Meowbit
 
 Kids need shelter, food, love, and a hand-held that they can write their own games for.
 
@@ -26,11 +26,11 @@ And a better game than mine:
 + [Tony Albatross - Pro Dolphin](https://arcade.makecode.com/26346-72733-28413-39259)
 
 
-### Robots!!
+## Robots!!
 
 Another great way to start is by [making robots](/robots).
 
-### MIT Scratch
+## MIT Scratch
 
 [MIT Scratch](https://scratch.mit.edu/projects/editor/?tutorial=home) is the original block based code learning environment.
 
@@ -41,11 +41,12 @@ Scratch also has a built in video tutorial series that explores a bunch of great
 Let me know if you enjoy [my humble Scratch creations](https://scratch.mit.edu/users/edthedev/).
 
 
-### Code.org
+## Code.org
 
 [Code.org](https://code.org) also has a lot more than just Minecraft puzzles.
 
-### Intermediate Topics
+
+## Intermediate Topics
 
 - [Learn Python with "Think Python" by Allan Downey](http://greenteapress.com/wp/think-python-2e/)
 - [Free eBooks on PowerShell](https://leanpub.com/u/devopscollective)
@@ -56,7 +57,7 @@ Let me know if you enjoy [my humble Scratch creations](https://scratch.mit.edu/u
 
 You can read the source code of [my live interactive art](/art/live) for some ideas.
 
-### Advanced Topics
+## Advanced Topics
 
 - Get started with version control with [Git Ready](http://gitready.com/beginner/2009/03/13/smartly-save-stashes.html).
 - [Learn Test Driven Development from Harry J.W. Percival](https://www.obeythetestinggoat.com/pages/book.html)
