@@ -24,22 +24,24 @@ script: /js/art/cross.js
   <script src="/js/p5.js"></script>
   <script src="{{script}}"></script>
 
+</head> 
+<body>
+
 <nav class="ye_navbar" role="navigation"> 
 <a href="/">Edward.Delaporte.us</a>
 <a href="/art/live">Live Art</a>
 <a href="/resume">Resume</a>
 </nav>
 
-</head> 
-<body>
 
-<div class="content" role="main">
+<div class="content" role="main"> <!-- No role="main" here because the script will add a main tag. -->
 {{ content | safe }}
+<main role="application"> <!-- Script output will be written here. -->
+</main>
 
-<p>You can read the source code at <a href="https://github.com/edthedev/edthedev.github.io/blob/main{{script}}">{{script}}</a≥
-</p>
-<div class="content" role="contentinfo">
-  <p>Copyright 2021 Edward Delaporte</p>
 </div>
+<div class="content" role="contentinfo">
+  <p>You can read the source code at <a href="https://github.com/edthedev/edthedev.github.io/blob/main{{script}}">{{script}}</a≥</p>
+  <p>Copyright 2021 Edward Delaporte</p>
 </div>
 </html>
