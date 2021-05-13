@@ -149,6 +149,7 @@ Application Security Engineer Responsibilities
 
 ## Professional Training - Highlights
 
+- SANS SEC 510: Public Cloud Security: AWS, Azure, and GCP, May 2021
 - CampIT Enterprise Risk / Security Management, March 2021
 - AnsibleFest 2020
 - PrivacyCon 2020
