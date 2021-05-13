@@ -5,6 +5,10 @@ OUTDIR=C:\src\site
 open: serve
 	open http://localhost:3001
 
+setup:
+	npm install @11ty/eleventy --save-dev	
+	npm install @11ty/eleventy-navigation --save-dev	
+
 serve:
 	npx @11ty/eleventy --serve
 
