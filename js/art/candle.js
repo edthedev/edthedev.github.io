@@ -45,14 +45,14 @@ var blues;
 function get_flame_yellow() {
   return color(
     random(195, 255),
-    random(1800,240), 
+    random(180,240), 
     random(20,80));
 }
 
 function get_flame_orange() {
   return color(
-    random(170, 255),
-    random(170,200), 
+    random(240, 255),
+    random(50,70), 
     random(30,90));
 }
 
@@ -60,7 +60,7 @@ function get_flame_blue() {
   basefc = 70;
   return color(
     basefc + random(0, 30),
-    basefc + random(120, 180),
+    basefc + random(140, 180),
     255);
 }
 
@@ -106,15 +106,15 @@ if(pulse % flame_beat == 0) {
     */
     // ellipse(3.5*maxim/8, 4.4*maxim/8, maxim/16, 2*maxim/16);
 
-    triangle(flame_x, 
-      flame_top, 
+    triangle(flame_x + dx, 
+      flame_top + 1.5*flame_w, 
       flame_x,
       flame_base,
       flame_x + flame_w,
       flame_base - flame_w
     );
-    triangle(flame_x, 
-      flame_top, 
+    triangle(flame_x + dx, 
+      flame_top + 1.5*flame_w, 
       flame_x,
       flame_base,
       flame_x - flame_w,
@@ -130,8 +130,8 @@ if(pulse % flame_beat == 0) {
       flame_x + .6*flame_w,
       flame_base - flame_w
     );
-    triangle(dx + flame_x, 
-      flame_top + 2*flame_w, 
+    triangle(dx + flame_x + 1, 
+      flame_top + 2.9*flame_w, 
       flame_x,
       flame_base,
       flame_x - .6*flame_w,
@@ -142,17 +142,17 @@ if(pulse % flame_beat == 0) {
 
     fill(choose(blues));
     triangle(dx + flame_x, 
-      flame_top + 3.5*flame_w, 
+      flame_top + 4*flame_w, 
       flame_x,
       flame_base,
-      flame_x + .4*flame_w,
+      flame_x + .3*flame_w,
       flame_base - flame_w
     );
-    triangle(dx + flame_x, 
+    triangle(dx + flame_x + 1, 
       flame_top + 3.5*flame_w, 
       flame_x,
       flame_base,
-      flame_x - .4*flame_w,
+      flame_x - .32*flame_w,
       flame_base - flame_w
     );
 
