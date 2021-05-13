@@ -145,14 +145,14 @@ if(pulse % flame_beat == 0) {
     triangle(dx + flame_x, 
       flame_top + 4*flame_w, 
       flame_x,
-      flame_base,
+      flame_base - .5*flame_w,
       flame_x + .3*flame_w,
       flame_base - flame_w
     );
     triangle(dx + flame_x + 1, 
       flame_top + 3.5*flame_w, 
       flame_x,
-      flame_base,
+      flame_base - .5*flame_w,
       flame_x - .32*flame_w,
       flame_base - flame_w
     );
