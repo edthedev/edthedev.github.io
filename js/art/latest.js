@@ -21,6 +21,9 @@ var sprite = {
   dx: 1,
   dy: 1,
   rulefun: dewit,
+  blue: 0,
+  red: 0,
+  green: 0,
   size: 20
 };
 
@@ -31,7 +34,7 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   balls = [];
-  ballcount = random(3,5);
+  ballcount = random(3,20);
   draw_frame();
 
   frame_min = maxim/8;
@@ -48,23 +51,29 @@ function setup() {
 
 function dewit(ball) {
 
-  if(ball.x + 11 >frame_max) ball.dx = -4;
-  if(ball.y + 11 >frame_max) ball.dy = -4;
-  if(ball.x - 14 <frame_min) ball.dx = 1;
-  if(ball.y - 14 <frame_min) ball.dy = 1;
+  if(ball.x + 11 >frame_max) {
+    ball.dx = random(-1, -4);
+    ball.blue += 30;
+  }
+  if(ball.y + 11 >frame_max) {
+    ball.dy = random(-2, -4);
+    ball.red += 70;
+
+  }
+  if(ball.x - 14 <frame_min) {
+    ball.dx = choose([.5, 1]);
+    ball.green += 40;
+  }
+  if(ball.y - 14 <frame_min) {
+    ball.dy = random(0.5, 1);
+    ball.blue += 30;
+  }
 
   ball.x += ball.dx;
   ball.y += ball.dy;
 
+  fill(color(ball.red, ball.green, ball.blue));
   circle(ball.x, ball.y, 20);
-  if(ball.y>maxim && random(0,2) > 1) {
-    // Random color
-    let c = color(random(0,10)*25,random(0,10)*25, random(0,10)*25);
-    fill(c);
-
-    ball.x -= 20;
-    ball.dx = -1 * ball.dx;
-  }
   return [ball, dewit];
 }
 
@@ -75,7 +84,6 @@ function draw() {
     frame_max-frame_min,
     frame_max-frame_min);
 
-  fill(color(255,200,0));
   balls = balls.map( item => item[1](item[0]) );
 }
 
