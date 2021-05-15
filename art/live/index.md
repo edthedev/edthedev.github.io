@@ -16,9 +16,7 @@ Try clicking the art pieces. Some of them interact.
 
 ## Latest Sketch
 
-[
-![Latest Sketch Preview](/img/art/latest.PNG)
-](/art/live/latest)
+[Latest Sketch in Progress](/art/live/latest)
 
 ## May 11 Sketch - Candle
 
