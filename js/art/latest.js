@@ -40,6 +40,7 @@ function setup() {
   frame_min = maxim/8;
   frame_max = 7*maxim/8;
 
+  make_horizon();
   theball = Object(sprite);
   for(i=0;i<ballcount;i++){
     newb = Object.assign({}, theball);
@@ -48,6 +49,23 @@ function setup() {
     balls.push([newb, dewit]);
   }
 }
+
+
+function draw() {
+  fill(color(0,200,255));
+  rect(frame_min, frame_min, 
+    frame_max-frame_min,
+    frame_max-frame_min);
+
+  draw_horizon();
+
+  balls = balls.map( item => item[1](item[0]) );
+}
+
+function mouseClicked() {
+  setup();
+}
+
 
 function dewit(ball) {
 
@@ -91,19 +109,6 @@ function draw_flake(startx, starty) {
     line(startx-flake_size-1, starty, 
       startx+flake_size+1, starty);
 
-}
-
-function draw() {
-  fill(color(0,200,255));
-  rect(frame_min, frame_min, 
-    frame_max-frame_min,
-    frame_max-frame_min);
-
-  balls = balls.map( item => item[1](item[0]) );
-}
-
-function mouseClicked() {
-  setup();
 }
 
 function draw_frame() {
@@ -170,4 +175,35 @@ function draw_grain(grainx, grainy, grainw, graint) {
 function choose(choices) {
   var index = Math.floor(Math.random() * choices.length);
   return choices[index];
+}
+
+var stripecount = 0;
+var stripecolors = [];
+
+function make_horizon() {
+
+  var c = color(random(100,200),random(80,160), random(0,200));
+  fill(c);
+
+  stripecount = random(4,7);
+  stripecolors = [];
+  var stripefade = 20;
+  var stripered = random(140, 200);
+  var stripegreen = random(20, 100);
+  var stripeblue = random(0, 200);
+  for(i=0;i<stripecount;i++){
+    c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
+    stripecolors.push(c);
+  }
+}
+
+function draw_horizon() {
+  var horiz_stripe_y;
+  for(i=0;i<stripecount-1;i++){
+    fill(stripecolors[i]);
+    horiz_stripe_y = frame_min + i*(frame_max/stripecount);
+    rect(frame_min, horiz_stripe_y, 
+      frame_max - frame_min, 
+      frame_max - horiz_stripe_y - frame_min);
+  }
 }
