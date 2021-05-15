@@ -194,6 +194,10 @@ function make_horizon() {
     c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
     stripecolors.push(c);
   }
+
+  sund = random(30,70);
+  sunx = random(frame_min + sund, frame_max - sund);
+  suny = random(frame_min + sund, frame_max/2 - sund);
 }
 
 function draw_horizon() {
@@ -206,4 +210,10 @@ function draw_horizon() {
       frame_max - frame_min, 
       frame_max - horiz_stripe_y - frame_min);
   }
+
+  // sun
+  noStroke();
+  fill(color(255,255,100));
+  circle(sunx, suny, sund);
 }
+
