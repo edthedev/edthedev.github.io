@@ -27,6 +27,8 @@ var sprite = {
   size: 20
 };
 
+var mindx = .1;
+
 function setup() {
   // maxim = .5 * window.innderWidth;
   maxim = 400;
@@ -34,7 +36,8 @@ function setup() {
   createCanvas(maxim, maxim);
   background(maxim,maxim);
   balls = [];
-  ballcount = random(3,20);
+  ballcount = random(9,40);
+  mindx = random(.1, 2);
   draw_frame();
 
   frame_min = maxim/8;
@@ -46,6 +49,7 @@ function setup() {
     newb = Object.assign({}, theball);
     newb.x = random(frame_min + 10,frame_max - 10);
     newb.y = random(frame_min + 10, frame_max - 10);
+    newb.dx = mindx;
     balls.push([newb, dewit]);
   }
 }
@@ -70,21 +74,16 @@ function mouseClicked() {
 function dewit(ball) {
 
   if(ball.x + 11 >frame_max) {
-    ball.dx = random(-1, -4);
-    ball.blue += 30;
+    ball.x = frame_min + 11;
   }
   if(ball.y + 11 >frame_max) {
-    ball.dy = random(-2, -4);
-    ball.red += 70;
-
+    ball.y = frame_min + 11;
   }
   if(ball.x - 14 <frame_min) {
-    ball.dx = choose([.5, 1]);
-    ball.green += 40;
+    ball.dx = mindx + choose([.5, 1]);
   }
   if(ball.y - 14 <frame_min) {
     ball.dy = random(0.5, 1);
-    ball.blue += 30;
   }
 
   ball.x += ball.dx;
@@ -198,6 +197,7 @@ function make_horizon() {
 }
 
 function draw_horizon() {
+  noStroke();
   var horiz_stripe_y;
   for(i=0;i<stripecount-1;i++){
     fill(stripecolors[i]);
