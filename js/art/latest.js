@@ -73,10 +73,25 @@ function dewit(ball) {
   ball.y += ball.dy;
 
   fill(color(ball.red, ball.green, ball.blue));
-  circle(ball.x, ball.y, 20);
+  // circle(ball.x, ball.y, 20);
+  draw_flake(ball.x, ball.y);
   return [ball, dewit];
 }
 
+function draw_flake(startx, starty) {
+  stroke(color(255,255,255));
+  flake_size = 3;
+
+    line(startx-flake_size, starty-flake_size, 
+      startx+flake_size, starty+flake_size);
+    line(startx+flake_size, starty-flake_size, 
+      startx-flake_size, starty+flake_size);
+    line(startx, starty-flake_size-1, 
+      startx, starty+flake_size+1);
+    line(startx-flake_size-1, starty, 
+      startx+flake_size+1, starty);
+
+}
 
 function draw() {
   fill(color(0,200,255));
