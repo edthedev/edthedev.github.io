@@ -19,4 +19,9 @@ Here's a BASIC program that lists the special printable characters available.
 9010 PRINT "GOODBYE"
 ```
 
+Here's the command I used to generate this GIF file:
+```
+	x16emu.exe -bas program.txt -gif out.gif
+```
+
 ![BASIC program - list characters](/img/basic/list_characters.gif)
