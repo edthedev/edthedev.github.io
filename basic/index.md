@@ -3,6 +3,7 @@ layout: basic.njk
 title: BASIC Programs by Edward Delaporte
 ---
 
+Here's a BASIC program that lists the special printable characters available.
 
 ```basic
 10 COUNT = 50
