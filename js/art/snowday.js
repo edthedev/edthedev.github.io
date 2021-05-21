@@ -37,7 +37,7 @@ function setup() {
   background(maxim,maxim);
   balls = [];
   ballcount = random(9,40);
-  mindx = random(.1, 2);
+  mindx = random(.05, 1);
   draw_frame();
 
   frame_min = maxim/8;
@@ -82,7 +82,7 @@ function dewit(ball) {
     ball.y = frame_min + 11;
   }
   if(ball.x - 14 <frame_min) {
-    ball.dx = mindx + choose([.5, 1]);
+    ball.dx = mindx + choose([.05, .3]);
   }
   if(ball.y - 14 <frame_min) {
     ball.dy = random(0.5, 1);
