@@ -14,9 +14,25 @@ Every visitor experiences a new unique piece art.
 Try clicking the art pieces. Some of them interact.
 
 
+<!-- 
 ## Latest Sketch
 
 [Latest Sketch in Progress](/art/live/latest)
+-->
+
+## May 20 Sketch - Snowy Day
+
+[
+![May 20 Sketch Preview](/img/art/snowday.PNG)
+](/art/live/snowday)
+
+The random effects are managed quite differently in this piece,
+because the entire canvas has to be redrawn with every frame.
+
+So there's extra work in the code preventing the window frame color 
+from changing, and the sun from flickering across the sky.
+
+It was pretty adorable when the snowman's arms were flailing randomly, I have to admit.
 
 ## May 11 Sketch - Candle
 
@@ -26,7 +42,7 @@ Try clicking the art pieces. Some of them interact.
 ![May 11 Sketch Preview](/img/art/candle3.PNG)
 ](/art/live/candle)
 
-My recent meditiation theme has been on slowing down.
+My recent meditation theme has been on slowing down.
 
 + The wood grain algorithm is a refinement on the grass algorithm in the tree sketch.
 + The dribbling wax just makes me smile.
