@@ -14,14 +14,17 @@ Every visitor experiences a new unique piece art.
 Try clicking the art pieces. Some of them interact.
 
 
+## Latest Sketch
+
+[Latest Sketch in Progress](/art/live/latest)
+
 ## May 11 Sketch - Candle
 
-<a href="/art/live/candle">
-
+[
 ![May 11 Sketch Preview](/img/art/candle.PNG)
 ![May 11 Sketch Preview](/img/art/candle2.PNG)
 ![May 11 Sketch Preview](/img/art/candle3.PNG)
-</a>
+](/art/live/candle)
 
 My recent meditiation theme has been on slowing down.
 

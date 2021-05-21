@@ -1,7 +1,7 @@
 ---
 layout: liveart.njk
-title: May 11 Sketch - Candle - Art by Edward Delaporte
-script: /js/art/candle.js
+title: May 14 Sketch - Candles - Art by Edward Delaporte
+script: /js/art/candles.js
 ---
 
-Candle. May 11, 2021.
+Candles. May 14, 2021.
