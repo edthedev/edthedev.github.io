@@ -52,16 +52,18 @@ function setup() {
     newb.dx = mindx;
     balls.push([newb, dewit]);
   }
+  setup_snowman();
 }
 
 
 function draw() {
-  fill(color(0,200,255));
+  fill(color(230,230,230));
   rect(frame_min, frame_min, 
     frame_max-frame_min,
     frame_max-frame_min);
 
   draw_horizon();
+  draw_snowman();
 
   balls = balls.map( item => item[1](item[0]) );
 }
@@ -217,3 +219,30 @@ function draw_horizon() {
   circle(sunx, suny, sund);
 }
 
+var snowman = {}
+
+function setup_snowman() {
+  snowman.size = random(40, 80);
+  snowman.x = random(frame_min + snowman.size, frame_max - snowman.size);
+  snowman.y = frame_max - snowman.size / 2;
+}
+
+function draw_snowman() {
+  fill(color(255,255,255));
+  //balls
+  circle(snowman.x, snowman.y, snowman.size / 2);
+  circle(snowman.x, snowman.y - snowman.size/3, snowman.size / 3);
+  head_y = snowman.y - 1.7*snowman.size/3;
+  circle(snowman.x, head_y, snowman.size / 4);
+
+
+  //face
+  eye_y = head_y + snowman.size/32;
+  eye_x = snowman.x - snowman.size/16;
+  fill(color(0,0,0));
+  circle(eye_x, eye_y, 2);
+  eye_x = snowman.x + snowman.size/16;
+  circle(eye_x, eye_y, 2);
+
+
+}
