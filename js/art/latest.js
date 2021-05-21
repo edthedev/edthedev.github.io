@@ -225,6 +225,12 @@ function setup_snowman() {
   snowman.size = random(40, 80);
   snowman.x = random(frame_min + snowman.size, frame_max - snowman.size);
   snowman.y = frame_max - snowman.size / 2;
+  snowman.head_y = snowman.y - 1.7*snowman.size/3;
+  snowman.arm_len = snowman.size/8;
+  snowman.arm_y = snowman.head_y + snowman.size/8;
+  snowman.arm_updown = choose([
+    snowman.arm_y + snowman.arm_len, 
+    snowman.arm_y - snowman.arm_len]);
 }
 
 function draw_snowman() {
@@ -232,17 +238,22 @@ function draw_snowman() {
   //balls
   circle(snowman.x, snowman.y, snowman.size / 2);
   circle(snowman.x, snowman.y - snowman.size/3, snowman.size / 3);
-  head_y = snowman.y - 1.7*snowman.size/3;
-  circle(snowman.x, head_y, snowman.size / 4);
+  circle(snowman.x, snowman.head_y, snowman.size / 4);
 
 
   //face
-  eye_y = head_y + snowman.size/32;
+  eye_y = snowman.head_y + snowman.size/32;
   eye_x = snowman.x - snowman.size/16;
   fill(color(0,0,0));
   circle(eye_x, eye_y, 2);
   eye_x = snowman.x + snowman.size/16;
   circle(eye_x, eye_y, 2);
 
+  // arms
+  stroke(color(120,90,90));
+  arm_x = snowman.x + snowman.size / 8;
+  line(arm_x, snowman.arm_y, arm_x + snowman.arm_len, snowman.arm_updown);
+  arm_x = snowman.x - snowman.size / 8;
+  line(arm_x, snowman.arm_y, arm_x - snowman.arm_len, snowman.arm_updown);
 
 }
