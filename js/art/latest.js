@@ -197,7 +197,7 @@ function make_horizon() {
     stripecolors.push(c);
   }
 
-  sund = random(30,70);
+  sund = random(30,50);
   sunx = random(frame_min + sund, frame_max - sund);
   suny = random(frame_min + sund, frame_max/2 - sund);
 }
