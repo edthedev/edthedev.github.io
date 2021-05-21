@@ -9,7 +9,7 @@ Meetings are from 2 - 4 pm Central US time.
 Topic: Informal Chat
 
 ## February 26, 2021
-Topic: Write files with Ansible's template and copy modules.
+Topic: [Write files with Ansible's template and copy modules](http://joanna.delaporte.us/2021_AnsibleFiles.html).
 
 Speaker: Joanna Delaporte
 
