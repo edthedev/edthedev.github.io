@@ -1,5 +1,3 @@
 ## Meetup Schedules
 
-- [Ansible IL 2021](stuff)
-
-- [Ansible Tower and HashiCorp Vault Agent](AnsibleTowerHashiVault.md)
+- [Ansible IL 2021](2021_Meetup_Schedule.md)
