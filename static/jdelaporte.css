@@ -9,14 +9,14 @@ h1, h2 {
 	padding-left: 1em;
 	font-family: 'times new roman', times, serif !important;
 	font-size:140%;
-	border-bottom-style: 5px solid;
+	border-bottom-style:solid;
 }
 
 h3, h4 {
 	padding-left: 1em;
 	font-family: 'times new roman', times, serif !important;
 	font-size:120%;
-	border-bottom-style: 3px dotted;
+	border-bottom-style:dotted;
 }
 
 #navlist label { 
