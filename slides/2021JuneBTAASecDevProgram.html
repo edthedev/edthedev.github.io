@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BTAA Presentation - Edward Delaporte</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("");
+	  }
+	  .remark-slide-content {
+		  /* 
+      background-image: url("static/img/rings.png");
+      */
+	  }
+	  img {
+		  float:right;
+		  border-radius:22px;
+	  }
+	  img.left {
+		  float:left;
+	  }
+	  img.little {
+		  height:200px;
+	  }
+	  img.capture {
+		  border-radius:1px;
+	  }
+	  img.stretch {
+		  width:45%;
+		  padding: 10px;
+	  }
+	  img.flow{
+		  width: 100%;
+		  padding: 10px;
+		  background-color: white;
+	  }
+    </style>
+  </head>
+  <body>
+<textarea id="source">
+
+
+# Boring Push-Ups
+
+## Automated Deployment with Ansible
+
+Presented by 
+
+*Edward Delaporte*, Software Developer for Busey Bank
+
+*Joanna Delaporte*, Systems Administrator for Parkland College
+
+```
+            _                             _
+           | |                           | |
+         =H| |===========================| |H=
+           |_|                           |_|
+```
+
+---
+
+# Boring Push-Ups 
+```
+            _                             _
+           | |                           | |
+         =H| |========mn=======nm========| |H=
+           |_|        ( \     / )        |_|
+                       \ )(")( /
+                       ( /\_/\ )  <-- Ansible
+                        \     /
+                         )=O=(
+                        /  _  \
+                       /__/ \__\
+                       | |   | |
+                       |_|   |_|
+                       (_)   (_)
+```
+
+???
+
+Server deployments are like push-ups:
+- Form matters. 
+- It's not enough to get the weight there. 
+- How you get it there determines whether you are going to be in a lot of pain later.
+- More=Better. There is no substitute for repetition.
+- If you do them right, your capacity increases over time. 
+- You are better off with a spotter. Collaborate. Have someone check your work.
+Conclusion:
+- It's about not dropping things.
+- The way to know you won't drop it when it matters is to do it again and again and again.
+
+---
+
+## What is Ansible
+
+- [Simple IT Automation](https://www.ansible.com/)
+- Configuration
+- Deployment
+
+???
+
+    Introduce/ explain the name Ansible
+Our Experience with Ansible
+
+- Queue up the BRB video on Instagram in another tab:
+  https://www.instagram.com/p/1tyRfbr463/?taken-by=edelaportev
+- Queue up Ansible output vide: https://www.youtube.com/watch?v=aya7aWBn8Og
+
+---
+
+## Why Bother With Ansible?
+
+### As a Developer
+- I love pushing a big red button and watching my code go live.
+- I value *not* being called by my admin between 4 am and 6 am.
+- I need to know that the problem I am hunting was not caused by the deployment.
+
+### As an Administrator
+- I love parallel efficiency.
+- I value stable custom configuration.
+- I need repeatability. 
+
+
+???
+
+I want you to have a solid deploymemt plan.
+
+3/4 of all the headaches I've experienced
+were when we had a solution, but didn't have a timely, effective way to deploy it.
+
+I might work on something for you or someone who you mentored, someday.
+
+Teaching people one by one by one isn't scaling effectively. 
+
+I hope you will spread the good news that deployments don't have to be unreliable and painful.
+
+Idea: Add photo of Big Red Button
+https://www.instagram.com/p/1MXyCxL46r/?taken-by=edelaportev
+
+Developer says: 
+File copy is reliable and repeatable, but deployment is a lot more than file copy.
+Deployment is: file copy, permissions, web config, app config, host dependencies, host config
+
+Admin says:
+The desired state needs to be achieved, no matter how many times I apply a configuration. 
+Shells are limited by their environment and available commands. Ansible can do anything python or bash or PowerShell can do. 
+
+---
+
+## Why Bother With Ansible?
+
+```BASH
+  make update APP=goals BRANCH=hotfix_1.0.2
+```
+
+<img src="static\img\bigredbutton.png" style="height:400px">
+
+???
+
+- https://www.instagram.com/p/1tyRfbr463/?taken-by=edelaportev
+- https://www.youtube.com/watch?v=aya7aWBn8Og
+
+---
+
+## Things Ansible Does
+- Update a custom web app
+- Harden security settings
+- Install EPEL
+- Setup networking
+- Provision a new AWS host!
+- Create user accounts
+- Update Windows (New!)
+
+???
+???
+ (Add lots of Examples)
+
+---
+## Get Started with AWS
+
+- Create an Amazon Web Services account
+- Configure your default external 'firewall' under EC2 -> Security Groups
+---
+
+## Get Started with Ansible
+
+- [Install Ansible](http://docs.ansible.com/ansible/intro_installation.html) on the Ansible Control Machine
+- Write your [Inventory File](http://docs.ansible.com/ansible/intro_inventory.html) on the Ansible Control Machine
+- Set up SSH Access to the target machine.
+- Set up Sudo rights on the target machine (for most tasks)
+- Tweak Ansible config file. /etc/ansible/ansible.cfg
+- [Ansible Command Line Reference for Ad Hoc commands](http://docs.ansible.com/ansible/intro_adhoc.html)
+
+???
+???
+
+
+Tips
+- All you need is SSH Access and Sudo rights on the target.
+- You need sudo access as normal on the target (most configurations)
+- AWS = Amazon Web Services
+- pip install boto on the Ansible control machine / hive queen
+- Usually start with Root password.
+- For AWS, use AWS user secret and secret key as ENV variables or modules arguments.
+
+---
+
+## Example Ansible Inventory File
+
+```BASH
+[home]
+shockwave
+ratchet
+admins-mac-mini.local
+minecraft.delaporte.us
+
+[vagrant]
+192.168.33.10
+
+[remote]
+learn.delaporte.us
+ansible-chicago-apps
+```
+
+???
+???
+
+- Anything that SSH can resolve works.
+- Short name, IP, FQDN all work.
+- .ssh/config short names also work.
+- Works with localhost screwy networked virtual machines, too.
+
+---
+
+## Getting Things Done with Ansible
+
+### Start Using Playbooks
+Install a Role:
+```BASH
+	ansible-galaxy install burtvv.bind
+```
+
+Run a Playbook:
+```BASH
+	ansible-playbook -VVVV playbook.yml
+```
+
+
+
+???
+
+Ansible Galaxy Role
+- Is a directory.
+- Includes: variables, handlers, tasks, templates
+- templates are Jinja templates (typically for config files)
+
+Ansible Playbook
+- is a YAML file
+- includes ansible commands to run
+- Some commands are included with Ansible.
+- Some commands will come from roles you have installed.
+- -VVVV looks like the SSH verbosity flag.
+- Becuase it is the SSH verbosity flag.
+
+Ansible Users Linked
+- Jeff Gearling wrote the book on Ansible
+- Burt VV has a lot of Enterprise Linux Playbooks for Tomcat, Apache, Bind, Pxe(pixy)
+
+
+Give example commands to contribute to an Ansible Galaxy playbook.
+    Or Link to a Guide to Git? (Use it to track / share your own work.)
+
+Maybe: Add a slide after this on configuring Ansible.
+- Configure non-root sudoer (necessary on Amazon)
+- You can have multiple roles paths...
+- Configure location of hosts file.
+
+---
+
+#### Ansible Playbook - Deploy a Custom Web App
+
+Command
+```BASH
+  make update APP=goals
+  make fix APP=goals BRANCH=hotfix_1.0.2
+```
+
+Makefile
+```BASH
+HOSTNAME=ansible-chicago-apps
+BRANCH=master
+PLAYBOOK=playbook.yml
+VERBOSE="-v"
+# VERBOSE="-vvvv"
+
+ifeq ($(APP),goals)
+	REPO=git@bitbucket.org:edthedev/goals.git
+	FQDN=mygoal.space
+endif
+
+update:
+	ansible-playbook --tags=update $(VERBOSE) $(PLAYBOOK) 
+  --extra-vars="branch=$(BRANCH) hosts=$(HOSTNAME) git_repo=$(REPO) fqdn=$(FQDN)"
+
+fix:
+	ansible-playbook --tags=fixed $(VERBOSE) $(PLAYBOOK) 
+  --extra-vars="branch=$(BRANCH) hosts=$(HOSTNAME) git_repo=$(REPO) fqdn=$(FQDN)"
+
+```
+
+
+???
+
+- I use a Makefile to group up sets of options. 
+- There is probably a much more professional way to do this.
+- Fix is a tag I apply to a sub-set of the total steps in the Playbook
+- I use a Makefile as a way to let teammates see what commands I typically run
+
+---
+
+#### Ansible Playbook - Deploy a Custom Web App
+
+playbook.yml - Make the Target Become a Web Server
+```YAML
+- hosts: "{{ hosts }}"
+  vars:
+    - app_name: "{{ app }}"
+    - app_home: "/var/www/{{ app_name }}"
+    - app_wsgi: "{{ app_home }}/app.wsgi"
+    - git_branch: "{{ branch }}"
+  tasks:
+    - yum:
+        name="{{ item }}"
+        state=installed
+      with_items:
+        - "{{ httpd_service }}"
+        - epel-release
+        - git
+        - mod_wsgi
+        - python-pip
+        - openssl
+        - mod_ssl
+    - file:
+        state=link
+        src=/usr/share/zoneinfo/America/Chicago
+        dest=/etc/localtime
+        force=yes
+```
+
+???
+
+- Set variables at the top for reuse.
+- Pass in variables on command line.
+- I use this to more easily switch between Debian and CentOS
+- I tend to use a Makefile as my starting point. "make update"
+
+
+---
+
+#### Ansible Playbook - Deploy a Custom Web App
+
+playbook.yml - Install Our Custom Python App on the Target
+```YAML
+    - name: install app source code
+	  git: 
+        dest="{{ app_home }}" 
+        repo="{{ git_repo }}"
+        update=yes
+        force=yes
+        depth=1
+        version="{{ git_branch }}"
+        accept_hostkey=True
+      notify: restart_apache
+      tags: update
+    - name: app readable by apache
+      file: 
+        path="{{ app_home }}"
+        group="{{ httpd_group }}"
+        recurse=yes
+        mode=776
+    - name: install prerequisites
+	  pip: 
+        # executable="/usr/bin/pip-3.2"
+        requirements="{{ app_home }}/requirements.txt"
+```
+
+---
+
+
+#### Ansible Playbook - Deploy a Custom Web App
+
+playbook.yml - Configure Apache on the Target
+```YAML
+    - template: src="{{ conf_temp }}" dest="{{ httpd_sites }}/{{ app_name }}.conf"
+      notify: restart_apache
+      tags: update
+    - name: use new config file
+      lineinfile:
+        dest="{{ httpd_conf }}"
+        state=present
+        line="include {{ httpd_sites }}/{{ app_name }}.conf"
+      notify: restart_apache
+    - name: Listen on port 443
+      lineinfile:
+        dest="{{ httpd_conf }}"
+        state=present
+        line='Listen 443'
+      notify: restart_apache
+  handlers:
+    - name: restart_apache
+      service: name="{{ httpd_service }}" state=restarted
+      tags: fixed
+```
+
+---
+
+### First Break for Questions
+
+<img src="static/img/bigredbutton_open.png" />
+
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+---
+- hosts: localhost
+  become: no
+  vars_files:
+  - vars/aws_cli_credentials.yml
+  - vars/aws_allinone.yml
+  - vars/ec2_micro_centos7.yml
+  - name: provision a new instance with swap and log volumes
+    ec2:      
+      image: "{{ aws_image }}"
+      instance_type: "{{ aws_instance_type }}"
+      aws_access_key: "{{ aws_access_key }}"
+      aws_secret_key: "{{ aws_secret_key }}"
+      keypair: "{{ aws_keypair }}"
+      count: 1
+      instance_tags: "{'Name': 'examplehost','client':'{{ansible_user_id}}','role':'aws_allinone' }"
+      region: "{{ aws_region }}"
+      groups: ['default', 'aws_allinone']
+      vpc_subnet_id: "{{ aws_vpc_subnet }}"
+      wait: true
+      volumes:
+      - device_name: /dev/xvds
+        volume_type: gp2
+        volume_size: 4
+		# ...
+    register: ec2_info
+
+```
+
+???
+
+Probably worth talking about:
+    ec2_group:
+    ec2_snapshot:
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+  - name: associate reserved elastic ip to the new instance
+    ec2_eip:
+      in_vpc: true
+      device_id: "{{item.id}}"
+      public_ip: "{{ hostvars['examplehost']['ansible_host'] }}"
+      reuse_existing_ip_allowed: yes
+      region: "{{aws_region}}"
+    with_items:
+    - "{{ ec2_info.instances }}"
+
+  - name: wait for instance to listen on port:22
+    wait_for:
+      state: started
+      host: "{{ hostvars['examplehost']['ansible_host'] }}"
+      port: 22
+ 
+  - name: wait for boot process to finish
+    pause: minutes=2
+```
+
+???
+- Let's make it so we can reach it...
+- Notice we wait for it to boot before we continue...
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+- hosts: aws_allinone
+  become: yes
+  vars_files:
+  - vars/aws_allinone.yml
+  pre_tasks:
+  - name: install useful packages
+    package: 
+      name: "{{ item }}" 
+      state: present
+    with_items:
+    - vim
+    - lvm2
+```
+
+???
+
+- Skip the traditional loss of train of thought because some important tool is not installed.
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+  - name: set hostname for AWS host
+    hostname:
+      name: "{{inventory_hostname}}.{{domain|lower}}"
+
+  - name: add hostname to network file
+    lineinfile:
+      dest: /etc/sysconfig/network
+      line: "HOSTNAME={{ inventory_hostname }}.{{domain|lower}}"
+
+  - name: change cloud init to preserve hostname
+    lineinfile:
+      dest: /etc/cloud/cloud.cfg
+      insertbefore: EOF
+      line: "preserve_hostname: true"
+```
+
+???
+
+- Set a host name 
+- Make AWS respect the host name 
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+  - name: make swap volume
+    shell: "mkswap /dev/xvds"
+    ignore_errors: yes
+  
+  - name: turn on swap volume
+    shell: "swapon /dev/xvds"
+    ignore_errors: yes
+  
+  - name: add swap to fstab
+    mount: 
+      state: present
+      src: /dev/xvds
+      name: swap
+      fstype: swap
+      passno: 0
+      dump: 0
+```
+
+???
+
+Swap can be nice.
+We are skipping over so much in this example.
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+#Need to reboot because the lvms won't be recognized until we do.
+  - name: Restart server
+    command: /sbin/shutdown -r +1
+    async: 0
+    poll: 0
+    ignore_errors: true
+ 
+  - name: wait for instance to listen on port:22
+    become: no
+    local_action: wait_for 
+                  state=started 
+                  host="{{ hostvars['examplehost']['ansible_host']}}" 
+                  delay=70
+                  port=22
+
+  - name: wait for boot process to finish
+    pause: minutes=1
+```
+
+???
+
+Need to reboot? No problem.
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+  post_tasks:
+  - name: make sure home directories are mounted
+    stat:
+      path: /home
+      get_md5: False
+      get_checksum: False
+    register: homedirs
+```
+
+---
+
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+#### CREATE USER DATABASE #######
+### uncomment to create users ###
+
+  - name: add users from included play
+    include: aws_addusers_include.yml
+
+#### Manage quotacheck #########
+  - name: turn quotas off
+    command: /sbin/quotaoff -av
+
+  - name: (re)create aquota.user file
+    command: /sbin/quotacheck -cu /quotadir
+
+  - name: turn quotas back on
+    command: /sbin/quotaon -avu
+
+  - name: create cron job to encourage quotacheck
+    blockinfile: 
+      dest: /etc/cron.daily/quotacheck
+      create: yes
+      state: present 
+      backup: yes
+      marker: "# {mark} ANSIBLE MANAGED BLOCK for quotacheck"
+      block: |
+        #!/bin/bash
+        touch /forcequotacheck
+```
+
+???
+
+Hopefully at this point you are remembering all the little things you sometimes forget when setting up a server.
+
+Lesson: Ansible doesn't forget. Ansible removes surprises.
+
+---
+#### Ansible Playbook - Provision an AWS Host
+
+```YAML
+  - name: install python34
+    include: aws_python34.yml
+    creates: /bin/pip3
+```
+
+???
+
+Include a whole other file full of tasks.
+
+---
+
+# Conclusion / Questions
+
+```
+            _                             _
+           | |                           | |
+         =H| |========mn=======nm========| |H=
+           |_|        ( \     / )        |_|
+                       \ )(")( /
+                       ( /\_/\ )
+                        \     /
+                         )=O=(
+                        /  _  \
+                       /__/ \__\
+                       | |   | |
+                       |_|   |_|
+                       (_)   (_)
+```
+
+---
+
+# Resources
+
+- [Ansible Module Index](http://docs.ansible.com/ansible/modules_by_category.html)
+- [Ansible Guide to AWS](http://docs.ansible.com/ansible/guide_aws.html)
+- [Ansible Galaxy](https://galaxy.ansible.com/)
+- [Jeff Gearling on Ansible Galaxy](https://galaxy.ansible.com/geerlingguy/)
+- [Bert Van Vreckem on Ansible Galaxy](https://galaxy.ansible.com/bertvv/)
+- [Ansible as Vagrant Provisioner](https://www.vagrantup.com/docs/provisioning/ansible.html)
+
+???
+???
+Link a Guide to SSH. (Use it to do anything Ansible cannot yet do)
+Do you like your fellow programmers? Check in an Ansible playbook.
+Last updated 2021.
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="/js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+---
+title: Slides by Edward Delaporte
+backgroundimg: static/img/rings.png
+slideimg: static/img/rings.png
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{title}</title>
+    <meta charset="utf-8">
+    <style>
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("{backgroundimg}");
+	  }
+	  .remark-slide-content {
+      background-image: url("{slideimg}");
+	  }
+    </style>
+  </head>
+  <body>
+<textarea id="source">
+
+
+{{ content | safe }}
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="/js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
