@@ -34,6 +34,22 @@ Illinois COVID Response
 
 ---
 
+## Deliverables
+
++ Guides that connect best practices to available tools to campus standards and policies.
++ Presentations
++ Engagements
+
+???
+
++ Raising awareness of practices and tools and policies all at once.
++ Presentations - Talk about the guides and talk about lessons learned. Tell the story of the journey we're on together.
++ Engagements - Join their stand-ups, join their working sessions, submit pull requests with code changes, share example exploits.
++ Engagements - Never police. Help people understand the risks and make a wise practical choice.
++ Engagements - Be a fun ally. This stuff is boring, dry and scary. It's not actually that hard to become the ally they really want to have in their corner.
+
+---
+
 ## Build a Team
 
 Skillsets desired:
