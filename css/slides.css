@@ -6,10 +6,25 @@
 .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 
 body { font-family: 'Droid Serif'; }
+
 h1, h2, h3 {
   font-family: 'Yanone Kaffeesatz';
   font-weight: normal;
 }
+
+.remark-slide-content {
+  vertical-align: middle;
+  padding-bottom: 5em; /* Slide content up a bit to allow for bottom banner. */
+}
+
+.remark-slide-content h1 {
+  font-size: 2.2em;
+}
+
+.remark-slide-content h2 {
+  font-size: 2em;
+}
+
 img {
   float:right;
   border-radius:22px;
