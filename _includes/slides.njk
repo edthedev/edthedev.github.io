@@ -9,8 +9,8 @@ background: /slides/img/capital_i.PNG
   <head>
     <title>{{ title }}</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/slides.css" /> 
     <style>
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 	  .remark-slide, .remark-slide-container {
 		  background-image: url("{{ margin }}");
 	  }
@@ -21,7 +21,6 @@ background: /slides/img/capital_i.PNG
   </head>
   <body>
 <textarea id="source">
-
 
 {{ content | safe }}
 
