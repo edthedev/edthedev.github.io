@@ -15,14 +15,22 @@ Presented by Edward Delaporte, June 2021
 
 ---
 
-## Some Self-Reflection 
+## Success Stories
 
-+ This is an Identity Management Team
-+ This is a Quality Assurance Team
+Illinois COVID Response
+
++ Safer Illinois Mobile App
++ COVID Test Pipeline - Results in 6 hours.
+
 
 ???
 
-+ 
++ 10k daily COVID tests delivered.
++ Emergency mobile app produces in 2 months.
++ Investments paid off.
++ Recent investment in partnership with the Rokwire team.
++ Long term investments by security in the Illinois developer community.
++ Long term investments by IAM in the Illinois developer community.
 
 ---
 
@@ -30,7 +38,9 @@ Presented by Edward Delaporte, June 2021
 
 Skillsets desired:
 
++ Software Development Experience
 + People Skills
++ Generosity
 + Hacking
 + Continuous Deployment
 + Identity Management
@@ -39,7 +49,9 @@ Skillsets desired:
 
 ???
 
++ Must have done the work to advise other developers. - We don't currently have a junior level position.
 + Working with your team should be a privilege. Make people feel good about it.
++ Your team members need to prioritize their allies success over their own creations. This doesn't come naturally to all developers.
 + There's no substitute for breaking into something to get someone's attention.
 + Proactive solutions all revolve around CI/CD with git.
 + Refined solutions require experience with IAM, QA, and Static Code Analysis.
@@ -121,6 +133,19 @@ Teams must:
 + `git` is a crucial collaboration protocol supported by all modern collaboration tools.
 + You can have any code collaboration protocol you want, as long as you want git.
 + You really can have any provider - GitHub, GitLab, Jenkins, Azure DevOps, AWS CodeDeploy.
+
+---
+
+## Some Self-Reflection 
+
++ Developers whose main purpose is not development.
++ This is an Identity Management Team
++ This is a Quality Assurance Team
+
+???
+
++ Have a set of open products for the team to work on, stay sharp and share.
++ But prioritize helping other teams over building things. Hire for the ability to do so.
 
 ---
 
