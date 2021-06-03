@@ -1,21 +1,21 @@
 ---
 title: Slides by Edward Delaporte
-backgroundimg: static/img/rings.png
-slideimg: static/img/rings.png
+margin: /slides/img/margin.jpg
+background: /slides/img/capital_i.PNG
 ---
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{title}</title>
+    <title>{{ title }}</title>
     <meta charset="utf-8">
     <style>
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
 	  .remark-slide, .remark-slide-container {
-		  background-image: url("{backgroundimg}");
+		  background-image: url("{{ margin }}");
 	  }
 	  .remark-slide-content {
-      background-image: url("{slideimg}");
+      background-image: url("{{ background }}");
 	  }
     </style>
   </head>
