@@ -13,6 +13,16 @@ to make University Software Development Safer
 
 Presented by Edward Delaporte, June 2021
 
+???
+
+Overview:
++ COVID Success Stories
++ What to deliver through the SecDev program
++ What skillsets to hire to build a SecDev program
++ Our SecDev program Rules of Engagement
+
+TODO: Maybe sync the titles to these...
+
 ---
 
 ## Success Stories
