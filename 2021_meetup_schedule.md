@@ -3,9 +3,8 @@
 Ansible Illinois Meetup meets online currently. All attendees interested in topics around Enterprise (or hobby!) Automation and Infrastructure as Code are welcome!
 
 Future dates subject to change.
-Meetings are from 2 - 4 pm Central US time.
+Meetings are on the third Thursday of each month, from 2 - 4 pm Central US time.
 
-# Third Thursdays at 2 pm ...
 ## Thursday, June 17, 2021 (2 pm central)
 [Join the RSVP List](https://forms.gle/xdcasEHsouwLJuNJA)  
 Topic: [Ansible Workshop](https://ansible.github.io/workshops/exercises/ansible_rhel/) Intro Series
