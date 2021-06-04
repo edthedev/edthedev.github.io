@@ -15,12 +15,14 @@ Presented by Edward Delaporte, June 2021
 
 ???
 
+
 Overview:
 + COVID Success Stories
 + What to deliver through the SecDev program
 + What skillsets to hire to build a SecDev program
 + Our SecDev program Rules of Engagement
 
+TODO: Take a pass to ensure notes are speaking to outcomes in each case.
 TODO: Maybe sync the titles to these...
 
 ---
