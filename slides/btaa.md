@@ -175,6 +175,20 @@ Teams must:
 
 ---
 
+## Collaboration Opportunities
+
++ Community of Practice
++ Open Source Collaborations
+
+???
+
+Our open source efforts are focused around the 
+InCommon Trusted Access Platform
++ ncsa/bhr - black hole router
++ AWS CLI Login - Shibboleth integration for AWS command line
+
+---
+
 ## Questions & Answers
 
 ---
