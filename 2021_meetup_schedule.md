@@ -2,7 +2,7 @@
 
 Ansible Illinois Meetup meets online currently. All attendees interested in topics around Enterprise (or hobby!) Automation and Infrastructure as Code are welcome!
 
-Future dates subject to change, particularly around holidays, but effort is made to keep them consistent and to announce changes on LinkedIn in advance.
+Future dates are subject to change, particularly around holidays, but effort is made to keep them consistent and to announce changes on LinkedIn in advance.
 
 Meetings are on the third Thursday of each month, from 2 - 4 pm Central US time.
 
