@@ -166,23 +166,34 @@ Teams must:
 
 ## Some Self-Reflection 
 
-+ Developers whose main purpose is not development.
-+ This is an Identity Management Team
-+ This is a Quality Assurance Team
++ We are developers whose main purpose is not development.
++ This is an Identity Management effort.
++ This is a Quality Assurance effort.
++ Realize opportunities to collaborate with Accessibility.
 
 ???
 
-+ Have a set of open products for the team to work on, stay sharp and share.
-+ But prioritize helping other teams over building things. Hire for the ability to do so.
++ We have a set of products for the team to work on, to stay sharp and share recipes.
++ Our priority is being available to University of Illinois development teams.
++ Collaboration with IAMU and QA have been critical.
++ IAM solves a lot of problems before they grow bigger.
++ QA has some of our leaders who understand the shared purpose of reliability.
++ Accessibility has the same problems and interfaces many of the same ways. 
 
 ---
 
 ## Collaboration Opportunities
 
++ Job Aids we can share.
 + Community of Practice
-+ Open Source Collaborations
++ Open Source Collaborations.
+
+Email: delaport@illinois.edu
 
 ???
+
++ We are happy to share our Job aids for software development teams
++ Would love to establish a community of practice.
 
 Our open source efforts are focused around the 
 InCommon Trusted Access Platform
