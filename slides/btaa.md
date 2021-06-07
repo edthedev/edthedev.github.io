@@ -166,22 +166,34 @@ Teams must:
 
 ## Some Self-Reflection 
 
-+ We are developers whose main purpose is not development.
 + This is an Identity Management effort.
 + This is a Quality Assurance effort.
 + Realize opportunities to collaborate with Accessibility.
 
 ???
 
-+ We have a set of products for the team to work on, to stay sharp and share recipes.
-+ Our priority is being available to University of Illinois development teams.
 + Collaboration with IAMU and QA have been critical.
 + IAM solves a lot of problems before they grow bigger.
 + QA has some of our leaders who understand the shared purpose of reliability.
-+ Accessibility has the same problems and interfaces many of the same ways. 
++ Accessibility has similar challenges and interfaces many of the same ways. 
 
 ---
 
+## Some Self-Reflection 
+
++ This is an Identity Management effort.
++ This is a Quality Assurance effort.
++ Realize opportunities to collaborate with Accessibility.
++ We are developers whose main purpose is not development.
+
+???
+
+Embrace the discomfort of being developers who do more than develop software.
++ Imagine it as an extension of the principle: Aim for fewer lines of code with higher quality.
++ We do have a set of products for the team to work on, to stay sharp and share recipes.
++ Our priority is being available to University of Illinois development teams.
+
+---
 ## Collaboration Opportunities
 
 + Job Aids we can share.
