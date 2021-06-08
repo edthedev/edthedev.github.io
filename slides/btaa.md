@@ -25,6 +25,8 @@ Overview:
 TODO: Take a pass to ensure notes are speaking to outcomes in each case.
 TODO: Maybe sync the titles to these...
 
+NOTE: Clocked in at 23 minutes. A little long...There was some awkward wording in the notes...
+
 ---
 
 ## Success Stories
@@ -37,12 +39,17 @@ Illinois COVID Response
 
 ???
 
-+ 10k daily COVID tests delivered.
+What:
 + Emergency mobile app produces in 2 months.
-+ Investments paid off.
-+ Recent investment in partnership with the Rokwire team.
-+ Long term investments by security in the Illinois developer community.
-+ Long term investments by IAM in the Illinois developer community.
++ Ultimately delivered 10k daily COVID tests in Champaign-Urbana - the highest in the country.
++ Custom AWS data pipeline - delivering to the Safer Illinois mobile app
++ 6 hour turn-around for results.
+
+Lessons:
++ Illinois investments paid off.
+  + Partnership with the Rokwire team.
+  + Long term investments by the security team in the Illinois developer community.
+  + Long term investments by the Identity and Access Management team in the Illinois developer community.
 
 ---
 
@@ -164,6 +171,48 @@ Teams must:
 
 ---
 
+## Success Measurements
+
++ Fewer Vulnerabilities in the Wild
++ Development team adoption of best practices for Cybersecurity.
++ Development leads reaching out to us with their concerns.
+
+???
+
+Best practices include:
++ ChangeLogs, backlogs, CICD pipelines, ChatOps, Regression tests, test automation
+
+Dev Leads
++ I keep a check list of influential development leaders - whether they have reached out to us yet.
+
+---
+
+## Collaboration Opportunities
+
++ Community of Practice.
++ Open Source Collaborations.
++ Job Aids we can share.
+
+Email: delaport@illinois.edu
+
+???
+
++ We are happy to share our Job aids for software development teams
++ Would love to establish a community of practice.
+
+Our open source efforts are focused around the 
+InCommon Trusted Access Platform
++ ncsa/bhr - black hole router
++ AWS CLI Login - Shibboleth integration for AWS command line
+
+---
+
+## Questions & Answers
+
+---
+
+
+
 ## Some Self-Reflection 
 
 + This is an Identity Management effort.
@@ -192,29 +241,6 @@ Embrace the discomfort of being developers who do more than develop software.
 + Imagine it as an extension of the principle: Aim for fewer lines of code with higher quality.
 + We do have a set of products for the team to work on, to stay sharp and share recipes.
 + Our priority is being available to University of Illinois development teams.
-
----
-## Collaboration Opportunities
-
-+ Job Aids we can share.
-+ Community of Practice
-+ Open Source Collaborations.
-
-Email: delaport@illinois.edu
-
-???
-
-+ We are happy to share our Job aids for software development teams
-+ Would love to establish a community of practice.
-
-Our open source efforts are focused around the 
-InCommon Trusted Access Platform
-+ ncsa/bhr - black hole router
-+ AWS CLI Login - Shibboleth integration for AWS command line
-
----
-
-## Questions & Answers
 
 ---
 
