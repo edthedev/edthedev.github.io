@@ -15,15 +15,16 @@ Presented by Edward Delaporte, June 2021
 
 ???
 
+We call the team "SecDev" for short.
 
 Overview:
 + COVID Success Stories
-+ What to deliver through the SecDev program
-+ What skillsets to hire to build a SecDev program
++ What we strive to deliver.
++ The SecDev team composition / skill-set.
 + Our SecDev program Rules of Engagement
++ Collaboration opportunities.
 
 TODO: Take a pass to ensure notes are speaking to outcomes in each case.
-TODO: Maybe sync the titles to these...
 
 NOTE: Clocked in at 23 minutes. A little long...There was some awkward wording in the notes...
 
@@ -41,19 +42,21 @@ Illinois COVID Response
 
 What:
 + Emergency mobile app produces in 2 months.
-+ Ultimately delivered 10k daily COVID tests in Champaign-Urbana - the highest in the country.
-+ Custom AWS data pipeline - delivering to the Safer Illinois mobile app
-+ 6 hour turn-around for results.
++ Ultimately delivered 10k daily COVID tests in Champaign-Urbana - the highest of any city in the country.
++ Custom AWS data pipeline delivering private results to the user's Safer Illinois mobile app
++ Typical 6 hour turn-around for results.
 
 Lessons:
 + Illinois investments paid off.
-  + Partnership with the Rokwire team.
+  + Partnership with the Rokwire 
+    + Smart community framework and mobile app platform.
+    + Privacy First design (before COVID)
   + Long term investments by the security team in the Illinois developer community.
   + Long term investments by the Identity and Access Management team in the Illinois developer community.
 
 ---
 
-## Deliverables
+## We Strive to Deliver 
 
 + Guides that connect best practices to available tools to campus standards and policies.
 + Presentations
@@ -61,11 +64,69 @@ Lessons:
 
 ???
 
-+ Raising awareness of practices and tools and policies all at once.
+Be better guides.
++ Past: Here's a map of the wilderness, a compass, and a walking stick. Good luck.
++ Now: We can walk with you for the most common routes, and be a phone call away for the remaining unique research challenges.
+
+In each job aid, we try to raise awareness of:
++ Best practices and tools 
+  + Let's take care of the uninteresting 80% solution together.
++ Policies 
+  + You're doing world class research - we understand that. 
+  + Navigate the policy as you can, and reach out to us when you need help.
+
+How we engage:
+
 + Presentations - Talk about the guides and talk about lessons learned. Tell the story of the journey we're on together.
-+ Engagements - Join their stand-ups, join their working sessions, submit pull requests with code changes, share example exploits.
-+ Engagements - Never police. Help people understand the risks and make a wise practical choice.
-+ Engagements - Be a fun ally. This stuff is boring, dry and scary. It's not actually that hard to become the ally they really want to have in their corner.
++ Engagements 
+  + Join their stand-ups, join their working sessions, submit pull requests with code changes, share example exploits.
+  + We are never the police. Help people understand the risks and make a wise practical choice.
+
+Enjoy! 
++ We are helping developers find cool tools. 
++ This stuff is scary, but we can be a strong ally.
++ For the first year, we only even considered technologies that give both security and non-security benefits.
+
+---
+
+## Build a Team
+
+Skillsets desired:
+
++ Software Development Experience
+
+???
+
++ Each team member must have done development work to advise other developers. 
++ We don't currently have a junior level position.
+
+---
+
+## Build a Team
+
+Skillsets desired:
+
++ Software Development Experience
+
+???
+
+Interview question: How do you feel when you have to shelf your favorite project 
+
++ Working with your team should be a privilege. Make people feel good about it.
++ Your team members need to prioritize their allies success over their own creations. This doesn't come naturally to all developers.
+
+Hacking
++ Is this your private key? Okay. Let's fix it together.
+
++ How do you convince people they need help? There's no substitute for breaking into something to get someone's attention.
++ Proactive solutions all revolve around CI/CD with git.
++ Refined solutions require experience with IAM, QA, and Static Code Analysis.
+
+CICD
+
++ Introducing CICD brought time-to-remediation down from months to minutes.
++ This is the backbone of all the proactive tools.
+
 
 ---
 
@@ -83,14 +144,6 @@ Skillsets desired:
 + Coding for Compliance
 
 ???
-
-+ Must have done the work to advise other developers. - We don't currently have a junior level position.
-+ Working with your team should be a privilege. Make people feel good about it.
-+ Your team members need to prioritize their allies success over their own creations. This doesn't come naturally to all developers.
-+ There's no substitute for breaking into something to get someone's attention.
-+ Proactive solutions all revolve around CI/CD with git.
-+ Refined solutions require experience with IAM, QA, and Static Code Analysis.
-
 ---
 
 ## Rules of Engagement
@@ -107,6 +160,22 @@ Teams must:
 + Stand-ups are a skill that requires leadership support to allow team members to practice and get good.
 + Anyone can benefit from a daily stand-up.
 + But a team of people practiced in attending stand-ups gains exceptional value from adding a security team member.
+
+---
+
+## Rules of Engagement
+
+**Require Agile Practices before Engaging**
+
+Teams must:
++ Hold daily stand-ups.
+
+???
+
++ Most teams already have a daily stand-up.
++ Add it if not, and a member of my team will be there.
++ Members of my team will invite other subject matter experts in SecDev or Security Engineer or IAM - for the next stand-up.
++ Typically brings a team live relevant expertise within 24 hours.
 
 ---
 
@@ -141,6 +210,8 @@ Story
 + One team we worked with was not keeping a backlog. 
 + There was no way to decide what to work with them on.
 + We made keeping a backlog a requirement for our assistance.
++ Their team lead worked late into that evening to create the backlog - I know because I received notifications.
++ This allowed me to read along and figure out where my IAM expert, my pipeline expert, 
 + Their work velocity improved immediately.
 
 Which backlog?
@@ -148,8 +219,8 @@ Which backlog?
 + A shared Word Document will suffice on day one.
 + GitHub Issues is the "nobody ever got fired for buying IBM" of backlogs. 
 + The backlog tool you already have is the best one.
-+ A backlog is not a work queue. It's not a ticketing system.
-+ A backlog is a big pile of things we might someday do.
++ But take care not to treat the backlog as a work queue. 
++ A backlog item is not a commitment - it's a piece of work with value that we may or may not decide to do.
 
 ---
 
