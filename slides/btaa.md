@@ -35,16 +35,16 @@ NOTE: Clocked in at 23 minutes. A little long...There was some awkward wording i
 Illinois COVID Response
 
 + Safer Illinois Mobile App
-+ COVID Test Pipeline - Results in 6 hours.
++ COVID Test Pipeline - Typical results in 6 hours.
 
 
 ???
 
 What:
-+ Emergency mobile app produces in 2 months.
-+ Ultimately delivered 10k daily COVID tests in Champaign-Urbana - the highest of any city in the country.
 + Custom AWS data pipeline delivering private results to the user's Safer Illinois mobile app
-+ Typical 6 hour turn-around for results.
++ Data pipeline and mobile app produced in time for soft summer launch and full use in the fall.
++ Ultimately delivered 10k daily COVID tests in Champaign-Urbana - the highest of any city in the country.
++ Typical 6 hour turn-around for results - delivered securely and privately.
 
 Lessons:
 + Illinois investments paid off.
@@ -125,7 +125,6 @@ Team Skills:
 + Software Development Experience
 + People Skills / Generosity in particular
 + Hacking
-+ Continuous Deployment
 
 ???
 
@@ -135,6 +134,19 @@ Hacking
 + How do you convince people they need help? There's no substitute for breaking into something to get someone's attention.
 + Proactive solutions all revolve around CI/CD with git.
 + Refined solutions require experience with IAM, QA, and Static Code Analysis.
+
+---
+
+## Build a Team
+
+Team Skills:
+
++ Software Development Experience
++ People Skills / Generosity in particular
++ Hacking
++ Continuous Deployment
+
+???
 
 CICD
 
@@ -151,13 +163,33 @@ Team Skills:
 + People Skills / Generosity in particular
 + Hacking
 + Continuous Deployment
-+ Identity Management
-+ Quality Assurance
-+ Coding for Compliance
++ And...
 
 ???
 
-IAM, QA, Compliance
++ Our vision is to provide highly available expertise
++ In areas relevant to Cybersecurity outcomes.
++ So...
+
+---
+
+## Build a Team
+
+Team Skills:
+
++ Software Development Experience
++ People Skills / Generosity in particular
++ Hacking
++ Continuous Deployment
++ And...
+  + Identity Management
+  + Quality Assurance
+  + Cloud Security / Cloud Deployment
+  + Coding for Policy Compliance (FERPA, HIPA, PCI, etc.)
+
+???
+
++ Look for lifetime learners.
 
 ---
 
@@ -170,27 +202,17 @@ Teams must:
 
 ???
 
-+ The simplest solution to being highly available is to join their daily stand-up.
-+ Our biggest vulnerability preventions were caught during a daily stand-up discussion.
-+ Stand-ups are a skill that requires leadership support to allow team members to practice and get good.
-+ Anyone can benefit from a daily stand-up.
-+ But a team of people practiced in attending stand-ups gains exceptional value from adding a security team member.
+Big Idea
 
----
-
-## Rules of Engagement
-
-**Require Agile Practices before Engaging**
-
-Teams must:
-+ Hold daily stand-ups.
-
-???
-
++ The simplest path to being highly available is to join a daily stand-up.
 + Most teams already have a daily stand-up.
 + Add it if not, and a member of my team will be there.
 + Members of my team will invite other subject matter experts in SecDev or Security Engineer or IAM - for the next stand-up.
 + Typically brings a team live relevant expertise within 24 hours.
+
+Results
+
++ Our biggest vulnerability preventions were caught during daily stand-up discussions.
 
 ---
 
@@ -206,6 +228,8 @@ Teams must:
 
 + If your dev teams only change one thing - it should be committing to keeping a ChangeLog.
 + When the SecDevOps team stop complaining, the changelog has enough detail.
+
+Results
 + A sign of success is when ChangeLog notes are copied and pasted into formal Change Control.
 
 ---
@@ -226,16 +250,17 @@ Story
 + There was no way to decide what to work with them on.
 + We made keeping a backlog a requirement for our assistance.
 + Their team lead worked late into that evening to create the backlog - I know because I received notifications.
-+ This allowed me to read along and figure out where my IAM expert, my pipeline expert, 
+
+Results
++ Allowed me to read along and figure out where my IAM expert, my pipeline expert, my cloud expert could assist.
 + Their work velocity improved immediately.
 
 Which backlog?
 + Any backlog. 
 + A shared Word Document will suffice on day one.
-+ GitHub Issues is the "nobody ever got fired for buying IBM" of backlogs. 
-+ The backlog tool you already have is the best one.
-+ But take care not to treat the backlog as a work queue. 
-+ A backlog item is not a commitment - it's a piece of work with value that we may or may not decide to do.
++ Take care - A backlog item is a piece of work with value - but not a commitment. 
++ Lots of options: GitHub, Azure DevOps, JIRA, etc.
++ The best backlog tool is the best one you already have.
 
 ---
 
@@ -253,23 +278,36 @@ Teams must:
 
 + `git` is a crucial collaboration protocol supported by all modern collaboration tools.
 + You can have any code collaboration protocol you want, as long as you want git.
-+ You really can have any provider - GitHub, GitLab, Jenkins, Azure DevOps, AWS CodeDeploy.
++ Lots of options: GitHub, GitLab, Jenkins, Azure DevOps, AWS CodeDeploy. Everything supports git.
+
+Results:
++ Much faster mitigations. One source said 2800x faster for a full ChatOps setup.
++ Shared foundation for preventative DevOps practices. 
 
 ---
 
-## Success Measurements
+## Signs of Success 
 
-+ Fewer Vulnerabilities in the Wild
-+ Development team adoption of best practices for Cybersecurity.
-+ Development leads reaching out to us with their concerns.
++ Fewer Vulnerabilities
++ Stronger Quality, Reliability and Security culture across the developer community.
++ Costly incidents prevented.
 
 ???
 
-Best practices include:
-+ ChangeLogs, backlogs, CICD pipelines, ChatOps, Regression tests, test automation
+How to measure?
 
-Dev Leads
-+ I keep a check list of influential development leaders - whether they have reached out to us yet.
+Obvious - but slow - Measurements
++ Count of scan result vulnerabilities.
++ Count of incidents.
+
+Exciting Measurements
++ Count of developers who have attended an engagement or presentation.
++ Count of preventative quality measures deployed.
+  + ChangeLogs, backlogs, CICD pipelines, ChatOps, Regression tests, test automation
++ Count of influential development leaders who have reached out to Cybersecurity when it mattered.
+
+Bottom Line
++ Drastic reduction in real risk of costly incidents.
 
 ---
 
@@ -283,13 +321,25 @@ Email: delaport@illinois.edu
 
 ???
 
-+ We are happy to share our Job aids for software development teams
-+ Would love to establish a community of practice.
+Community of Practice
 
-Our open source efforts are focused around the 
-InCommon Trusted Access Platform
-+ ncsa/bhr - black hole router
-+ AWS CLI Login - Shibboleth integration for AWS command line
++ If you have one we're welcome at, or want to start one, let me know!
+
+What code do we write? 
++ Response and Prevention
+
+Incident Response automation: CSOC automation.
++ Collaborations with other Cybersecurity response teams - particularly NCSA.
++ Not all collaborations are open, but if you're hearing my voice we can share code with you. and other Cybersecurity teams)
+
+Incident Prevention automation: 
++ QA (regression testing automation)
++ IAM (aligned to the InCommon Trusted Access Platform
++ Midpoint Shibboleth Grouper Comanage.
+
+Job Aids
++ We are happy to share our Job aids for software development teams
++ Send me an email if you're interested.
 
 ---
 
