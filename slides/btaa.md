@@ -107,17 +107,14 @@ Team Skills:
 Team Skills:
 
 + Software Development Experience
-+ People Skills
-+ Generosity
++ People Skills / Generosity in particular
 
 ???
 
-Interview question: How do you feel when you have to shelf your favorite project 
-
-+ Working with your team should be a privilege. Make people feel good about it.
-+ Your team members need to prioritize their allies success over their own creations. This doesn't come naturally to all developers.
-
-
++ Cybersecurity developers need to prioritize their allies success over their own creations. 
++ This doesn't come naturally to all developers.
++ We included an interview question about a time the candidate responded to an emergency.
++ We look for signs of generosity with time and expertise.
 
 ---
 
@@ -126,8 +123,7 @@ Interview question: How do you feel when you have to shelf your favorite project
 Team Skills:
 
 + Software Development Experience
-+ People Skills
-+ Generosity
++ People Skills / Generosity in particular
 + Hacking
 + Continuous Deployment
 
@@ -152,8 +148,7 @@ CICD
 Team Skills:
 
 + Software Development Experience
-+ People Skills
-+ Generosity
++ People Skills / Generosity in particular
 + Hacking
 + Continuous Deployment
 + Identity Management
