@@ -91,7 +91,7 @@ Enjoy!
 
 ## Build a Team
 
-Skillsets desired:
+Team Skills:
 
 + Software Development Experience
 
@@ -104,9 +104,11 @@ Skillsets desired:
 
 ## Build a Team
 
-Skillsets desired:
+Team Skills:
 
 + Software Development Experience
++ People Skills
++ Generosity
 
 ???
 
@@ -114,6 +116,22 @@ Interview question: How do you feel when you have to shelf your favorite project
 
 + Working with your team should be a privilege. Make people feel good about it.
 + Your team members need to prioritize their allies success over their own creations. This doesn't come naturally to all developers.
+
+
+
+---
+
+## Build a Team
+
+Team Skills:
+
++ Software Development Experience
++ People Skills
++ Generosity
++ Hacking
++ Continuous Deployment
+
+???
 
 Hacking
 + Is this your private key? Okay. Let's fix it together.
@@ -127,12 +145,11 @@ CICD
 + Introducing CICD brought time-to-remediation down from months to minutes.
 + This is the backbone of all the proactive tools.
 
-
 ---
 
 ## Build a Team
 
-Skillsets desired:
+Team Skills:
 
 + Software Development Experience
 + People Skills
@@ -144,6 +161,9 @@ Skillsets desired:
 + Coding for Compliance
 
 ???
+
+IAM, QA, Compliance
+
 ---
 
 ## Rules of Engagement
