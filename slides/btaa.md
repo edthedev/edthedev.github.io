@@ -183,7 +183,7 @@ Team Skills:
   + Identity Management
   + Quality Assurance
   + Cloud Security / Cloud Deployment
-  + Coding for Policy Compliance (FERPA, HIPA, PCI, etc.)
+  + Coding for Policy Compliance (FERPA, HIPAA, PCI, etc.)
 
 ???
 
