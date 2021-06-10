@@ -130,10 +130,7 @@ Team Skills:
 
 Hacking
 + Is this your private key? Okay. Let's fix it together.
-
-+ How do you convince people they need help? There's no substitute for breaking into something to get someone's attention.
-+ Proactive solutions all revolve around CI/CD with git.
-+ Refined solutions require experience with IAM, QA, and Static Code Analysis.
+  + There's no substitute for breaking into something to get someone's attention.
 
 ---
 
@@ -152,6 +149,7 @@ CICD
 
 + Introducing CICD brought time-to-remediation down from months to minutes.
 + This is the backbone of all the proactive tools.
++ ...The best solutions require experience with IAM, QA, and Static Code Analysis.
 
 ---
 
@@ -204,11 +202,10 @@ Teams must:
 
 Big Idea
 
-+ The simplest path to being highly available is to join a daily stand-up.
++ Join daily stand-up to be highly available. 
 + Most teams already have a daily stand-up.
-+ Add it if not, and a member of my team will be there.
-+ Members of my team will invite other subject matter experts in SecDev or Security Engineer or IAM - for the next stand-up.
 + Typically brings a team live relevant expertise within 24 hours.
+  + Question at Tuesday stand-up. Subject matter expert invited for Wednesday stand-up.
 
 Results
 
