@@ -15,7 +15,17 @@ Try clicking the art pieces. Some of them interact.
 
 ## Latest Sketch
 
+[
+![June 11 Sketch Preview](/img/art/latest.PNG)
+](/art/live/latest)
+
 [Latest Sketch in Progress](/art/live/latest)
+
+Perhaps the only outwardly visible detail of this piece is that the canvas is much wider.
+
+Behind the scenes, I have begun re-working the existing shared code into small re-usable libraries.
+
+It also required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25).
 
 <!-- 
 -->
