@@ -22,6 +22,10 @@ var midline = maxim / 2;
 var season = "spring";
 var leaf_green;
 
+function setup_tree() {
+  leaf_green = color(0, random(150,200), random(0,100));
+}
+
 function trunk(x,y, wi, ta) {
 
   strokeWeight(10);
@@ -115,8 +119,7 @@ function draw_ground() {
 }
 
 function leaf_cluster(x, y) {
-  green = color(33, 150, 33);
-  fill(green);
+  fill(leaf_green);
   noStroke();
   for(i=0; i<random(1,6); i++) {
 

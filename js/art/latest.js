@@ -16,20 +16,24 @@ as long as you display this license and attribution.
 */
 
 
-var mindx = .1;
 
 function setup() {
   // maxim = .5 * window.innderWidth;
   maxim_x = 800;
   maxim_y = 400;
   midline = maxim_x / 2;
-  createCanvas(maxim_x, maxim_y);
+  myCanvas = createCanvas(maxim_x, maxim_y);
   fill(color(230,230,230));
-  background(maxim_x,maxim_y);
-  mindx = random(.1, 2);
 
   make_horizon(0, 0, maxim_x, maxim_y);
-  trunk();
+  setup_tree();
+
+  trunk(
+    random(0, maxim_x),
+    random(0, maxim_y),
+    maxim_x / 5,
+    maxim_y / 5,
+  );
 
 }
 
