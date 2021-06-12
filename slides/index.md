@@ -5,11 +5,12 @@ title: Presentations by Edward Delaporte
 
 # Presentations
 
-I give presentations on technical topics rather often. 
+I often give presentations on technical topics. 
 
-Recently I have begun collecting the slide decks here.
+In 2016, I began collecting the slide decks here.
 
-- [BTAA Presentation](/slides/btaa)
+- [Big Ten Academic Alliance - On the Illinois Cybersecurity Development Program - June 2021](/slides/btaa)
+- [Urbana IT Professionals Forum - Mobile Integration Testing for Safer Illinois - June 2021](/slides/ITPF2021Spring.MobileIntegrationTesting.pptx)
 - [CampIT Cloud Security - How CISOs/InfoSec Leaders Have Adjusted to the Cloud World (Panel discussion) - Dec 2020](http://www.campiteducation.com/upcoming-virtualevents/cloudsecurity2/)
 - [InCommon IAM Online Webinar - Safer Illinois App: Testing, Tracing, Access in the Face of COVID-19 - Nov 2020](http://incommon.org/wp-content/uploads/2020/11/IAM-Online-November-2020.pdf) 
 - [PowerShell Users Group 2020 July 8 - Pester with GitHub Actions](/slides/PUG2020Summer_Git.html)
