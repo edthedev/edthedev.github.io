@@ -28,17 +28,21 @@ function setup() {
   make_horizon(0, 0, maxim_x, maxim_y);
   setup_tree();
 
-  trunk(
-    random(0, maxim_x),
-    random(0, maxim_y),
-    maxim_x / 5,
-    maxim_y / 5,
-  );
+  draw_horizon(0, 0, maxim_x, maxim_y);
+
+  num_trees = choose([2, 3, 4, 5]);
+  for(tree_count=0; tree_count<num_trees; tree_count++) {
+    trunk(
+      random(0, maxim_x),
+      7/8*maxim_y,
+      3,
+      60
+    );
+  }
 
 }
 
 function draw() {
-  draw_horizon(0, 0, maxim_x, maxim_y);
 }
 
 function mouseClicked() {
