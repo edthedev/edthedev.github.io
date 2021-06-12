@@ -26,9 +26,11 @@ function setup() {
   fill(color(230,230,230));
 
   make_horizon(0, 0, maxim_x, maxim_y);
+  draw_horizon(0, 0, maxim_x, maxim_y);
+
   setup_tree();
 
-  draw_horizon(0, 0, maxim_x, maxim_y);
+  draw_ground(myCanvas);
 
   num_trees = choose([2, 3, 4, 5]);
   for(tree_count=0; tree_count<num_trees; tree_count++) {
