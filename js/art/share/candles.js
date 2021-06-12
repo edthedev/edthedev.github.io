@@ -18,6 +18,7 @@ as long as you display this license and attribution.
 + [x] soften edges with dribbly bits at top and bottom
 + [x] slowly dribble a bead of wax down once side.
 + [x] build the flame with triangles for more shape control
++ [ ] refactor this to create re-usable candles.
 
 */
 
