@@ -1,7 +1,7 @@
 
 /*
 
-"Candle" is a Live Art work created by Edward Delaporte.
+"Candles" is part of Live Art work created by Edward Delaporte.
 
 This script is Copyright Edward Delaporte 2021.
 
@@ -14,8 +14,6 @@ http://creativecommons.org/licenses/by-sa/4.0/
 You can share your own remix of this code 
 as long as you display this license and attribution.
 
-+ [x] add randomized wood grain to the window frame
-+ [x] randomize cloud colors
 + [x] add drips
 + [x] soften edges with dribbly bits at top and bottom
 + [x] slowly dribble a bead of wax down once side.
@@ -98,14 +96,6 @@ if(pulse % flame_beat == 0) {
 
     noStroke();
     fill(choose(oranges));
-    /* 
-    if(pulse % (2*flame_beat) == 0) {
-        fill(orange);
-    } else {
-        fill(orange2);
-    }
-    */
-    // ellipse(3.5*maxim/8, 4.4*maxim/8, maxim/16, 2*maxim/16);
 
     triangle(flame_x + dx, 
       flame_top + 1.5*flame_w, 
@@ -161,23 +151,6 @@ if(pulse % flame_beat == 0) {
 
 }
 
-function mouseClicked() {
-  setup();
-}
-
-function setup() {
-
-    noStroke();
-    createCanvas(maxim, maxim);
-    background(maxim,maxim);
-    leaf_green = color(33, 150, 33);
-    draw_background();
-    draw_frame();
-    draw_candle();
-    setup_flame();
-
-}
-
 function draw_candle() {
 
   candle_top = 5*maxim/8;
@@ -225,263 +198,6 @@ function draw_candle() {
 
 }
 
-function draw_frame() {
-
-    fill(color(200,200,200));
-    stroke(color(0,0,0));
-
-    wood_grain_colors = [
-        get_wood_brown(),
-        get_wood_brown(),
-        get_wood_brown(),
-        get_wood_brown(),
-        get_wood_brown()
-    ];
-
-    rect(0, 0, maxim/8, maxim); // left
-    draw_grain(0, 0, maxim/8, maxim); // left
-    rect(7*maxim/8, 0, maxim/8, maxim); // right
-    draw_grain(7*maxim/8, 0, maxim/8, maxim); // right
-    rect(0, 7*maxim/8, maxim, maxim/8); // bottom
-    draw_grain(0, 7*maxim/8, maxim, maxim/8); // bottom
-    rect(0, 0, maxim, maxim/8); // top
-    draw_grain(0, 0, maxim, maxim/8); // top
-}
-
-function get_wood_brown() {
-    basegc = random(50,90);
-    return color(
-        basegc + random(30,70), 
-        basegc + random(0,10), 
-        basegc + random(0,10)); //random brown
-}
-
-var wood_grain_colors;
-
-function draw_grain(grainx, grainy, grainw, graint) {
-    noStroke();
-
-    dx = 1;
-    dy = 1;
-    dt = 30;
-    dw = 3;
-    if(grainw > graint) { // set grain direction
-        temp = dw;
-        dw = dt;
-        dt = temp;
-    } 
-    // console.debug("Ix is " + bobx);
-    console.debug("Fw is " + grainw);
-
-    for(bobx=0; bobx < grainw; bobx+=dw-2) {
-        bobx += random(0,2);
-        for(boby=0; boby < graint; boby+=dt-2) {
-            boby += random(0,2);
-
-            grainc = choose(wood_grain_colors);
-            fill(grainc);
-
-            rect(grainx+bobx, grainy+boby, dw, dt);
-        }
-    }
-}
-
-
-// Background
-
-function draw_background() {
-
-  season = choose(
-    ["spring", "winter", "fall", "summer"]);
-
-  // sky
-  if(random(0,8) < 7) {
-    // sunset
-    sunsety = maxim/5;
-    make_horizon();
-    draw_horizon();
-  }
-  else {
-    // blue sky
-    fill(color(0, 100, 155));
-    rect(0, 0, maxim, maxim);
-    draw_clouds(); // always clouds in blue sky
-  }
-
-  // sun
-  noStroke();
-  fill(color(255,255,100));
-  circle(maxim/6, maxim/6, random(30, 90));
-
-  // clouds
-  if(random(0,10)>5) {
-    draw_clouds();
-  }
-
-  // ground
-  draw_ground();
-
-  // precipitation
-  if(random(0,10)>6) {
-    if(season.includes("winter")) {
-      draw_snow();
-    } else {
-      setup_rain();
-      dropcount = random(60, 120);
-      for(i=0; i<dropcount; i+=1) {
-        draw_rain();
-      }
-    }
-  }
-}
-
-function setup_rain() {
-  strokeWeight(1);
-  rain_dx = random(-6,0);
-  rain_dy = random(20, 30);
-}
-
-function draw_rain() {
-  var c = color(random(0,100),random(80,160), random(200,255));
-  stroke(c);
-  startx = random(0, maxim);
-  starty = random(0, maxim);
-  line(startx, starty, startx+rain_dx, starty+rain_dy);
-}
-
-var stripecount = 0;
-var stripecolors = [];
-
-function make_horizon() {
-
-  // var c = color(random(200,255),random(80,160), random(0,200));
-  var c = color(random(100,200),random(80,160), random(0,200));
-  fill(c);
-  rect(0, 0, maxim, maxim/2);
-
-  stripecount = random(4,7);
-  stripecolors = [];
-  var stripefade = 20;
-  var stripered = random(140, 200);
-  var stripegreen = random(20, 100);
-  var stripeblue = random(0, 200);
-  for(i=0;i<stripecount;i++){
-    c = color(stripered+i*stripefade,stripegreen+i*stripefade, stripeblue);
-    stripecolors.push(c);
-  }
-}
-
-function draw_horizon() {
-  var horiz_stripe_y;
-  for(i=0;i<stripecount;i++){
-    fill(stripecolors[i]);
-    horiz_stripe_y = i*(maxim/stripecount);
-    rect(0, horiz_stripe_y, maxim, maxim - horiz_stripe_y);
-  }
-}
-
-function get_cloud_color() {
-    basecc = 100;
-    return color(
-        basecc + random(0, 70),
-        basecc + 70,
-        200); // cloud color
-}
-
-var cloud_colors;
-
-function draw_clouds() {
-
-    cloud_colors = [
-        get_cloud_color(),
-        get_cloud_color(),
-        get_cloud_color()
-    ];
-
-  noStroke();
-  cloud_puff = random(8,27);
-  puff = 2*cloud_puff;
-
-  dropcount = random(3, 10);
-  for(i=0; i<dropcount; i+=1) {
-    
-    x = random(0, 4*maxim/5);
-    y = random(maxim/8, 3*maxim/5);
-
-    fill(choose(cloud_colors));
-    circle(x+cloud_puff, y-cloud_puff*random(0,1), puff);
-    fill(choose(cloud_colors));
-    circle(x+ 2*cloud_puff, y-cloud_puff*random(0,1), puff);
-    fill(choose(cloud_colors));
-    circle(x+ 3*cloud_puff, y-cloud_puff*random(0,1), puff);
-
-
-    fill(choose(cloud_colors));
-    circle(x, y, puff);
-    fill(choose(cloud_colors));
-    circle(x + cloud_puff, y, puff);
-    fill(choose(cloud_colors));
-    circle(x + 2 * cloud_puff, y, puff);
-    fill(choose(cloud_colors));
-    circle(x + 3 * cloud_puff, y, puff);
-    fill(choose(cloud_colors));
-    circle(x + 4 * cloud_puff, y, puff);
-  }
-}
-
-function draw_snow() {
-
-  stroke(color(255,255,255));
-  flake_size = 3;
-
-  dropcount = random(60, 120);
-  for(i=0; i<dropcount; i+=1) {
-    
-    startx = random(0, maxim);
-    starty = random(0, maxim);
-
-    line(startx-flake_size, starty-flake_size, 
-      startx+flake_size, starty+flake_size);
-    line(startx+flake_size, starty-flake_size, 
-      startx-flake_size, starty+flake_size);
-    line(startx, starty-flake_size-1, 
-      startx, starty+flake_size+1);
-    line(startx-flake_size-1, starty, 
-      startx+flake_size+1, starty);
-
-  }
-}
-
-function draw_ground() {
-  noStroke();
-  dx = 1; // spiked grass
-  fill(leaf_green); // summer
-  if(season.includes("fall)")) {
-    fill(color(20, 20, 30));
-    dx = 5; // smoother ground
-  }
-  if(season.includes("winter")) {
-    fill(color(255,255,255)); //white snow
-    dx = 3; // smoother ground
-  }
-
-  y = 6.5*maxim/8;
-  rect(0, y, maxim, maxim/5);
-
-  for(x=0;x<maxim;x+=dx){
-    if(season.includes("spring")) { // random green
-      fill(color(0, random(150,200), random(0,100)));
-    }
-    rect(x,y-random(0, 4),dx,maxim/5);
-  }
-}
-
-
-function choose(choices) {
-  var index = Math.floor(Math.random() * choices.length);
-  return choices[index];
-}
-
 function draw_dribble() {
     if(pulse % 100 == 0) {
         if(dribbley < dribbley_max) {
@@ -500,7 +216,7 @@ function draw_dribble() {
     circle(dribblex2, dribbley2, 6);
 }
 
-function draw() {
+function animate_candle() {
     pulse += 1;
     if(pulse> 1000) { pulse = 0; }
     draw_flame();

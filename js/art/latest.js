@@ -53,6 +53,7 @@ function setup() {
     balls.push([newb, dewit]);
   }
   setup_snowman();
+  draw_candle();
 }
 
 
