@@ -13,11 +13,11 @@ Every visitor experiences a new unique piece art.
 
 Try clicking the art pieces. Some of them interact.
 
-
-<!-- 
 ## Latest Sketch
 
 [Latest Sketch in Progress](/art/live/latest)
+
+<!-- 
 -->
 
 ## May 20 Sketch - Snowy Day
