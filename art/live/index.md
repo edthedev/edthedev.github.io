@@ -13,6 +13,7 @@ I created these using the [P5.js library][1].
 
 Try clicking the art. Some of them interact.
 
+<!-- 
 ## Latest Sketch
 
 [
@@ -20,15 +21,24 @@ Try clicking the art. Some of them interact.
 ](/art/live/latest)
 
 [Latest Sketch in Progress](/art/live/latest)
-
-Perhaps the only outwardly visible detail of this piece is that the canvas is much wider.
-
-Behind the scenes, I have begun re-working the existing shared code into small re-usable libraries.
-
-It also required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25).
-
-<!-- 
 -->
+
+## Woodlands
+
+[
+![June 12 Sketch Preview](/img/art/latest.PNG)
+](/art/live/trees)
+
+[Woodlands](/art/live/trees)
+
+The most obvious change in this piece of pixel art is that the tree growth is now visibly animated. 
+
+To achieve this, I created a trivial animation plan tracking algorithm. It stacks function calls into an array and plays them back slowly enough that the viewer can watch the algorithm work.
+
+Behind the scenes, I also began re-working the existing shared code into small re-usable libraries.
+
+This required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25).
+
 
 ## May 20 Sketch - Snowy Day
 
