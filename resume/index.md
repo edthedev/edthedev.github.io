@@ -29,7 +29,7 @@ I make computers better at meeting the needs of humans - through a deep understa
 
 ### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
 
-- Manages a four full time Cybersecurity developers (fully remote team). 
+- Manages 4 full time Cybersecurity developers (fully remote team). 
 - Supports overall Cybersecurity Objectives.
 - Created open lines of communication between development teams and Cybersecurity.
 - Provides SDLC process maturity feedback to campus research and development teams.
