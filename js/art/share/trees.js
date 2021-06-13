@@ -43,7 +43,12 @@ function trunk(x,y, wi, ta) {
   root = 1;
 
   fill(color(255,0,0));
+  // round the top
   circle(x + wi/2, y-ta-2*wi, wi/1.3);
+
+  // grass the bottom
+  draw_grass(x - 2*wi, y, x + 3*wi, maxim_y);
+  stroke(tree_color);
 
   for(i=1; i<5; i++) {
 

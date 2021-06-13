@@ -1,7 +1,5 @@
 
-function draw_ground(canv) {
-  maxim_x = canv.width;
-  maxim_y = canv.height;
+function draw_grass(xi,y,x_end, y_end) {
 
   noStroke();
   dx = 1; // spiked grass
@@ -15,13 +13,21 @@ function draw_ground(canv) {
     dx = 3; // smoother ground
   }
 
-  y = 4*maxim_y/5;
-  rect(0, y, maxim_x, maxim_y/5);
+  // pre-fill gaps
+  rect(xi, y, x_end-xi, y_end-y);
 
-  for(x=0;x<maxim_x;x+=dx){
+  for(x=xi;x<x_end;x+=dx){
     if(season.includes("spring")) { // random green
       fill(color(0, random(150,200), random(0,100)));
     }
-    rect(x,y-random(0, 4),dx,maxim_y/5);
+    rect(x,y-random(0, 4),dx,y_end);
   }
+}
+
+function draw_ground(canv) {
+  maxim_x = canv.width;
+  maxim_y = canv.height;
+
+  y = 4*maxim_y/5;
+  draw_grass(0,y,maxim_x, maxim_y);
 }
