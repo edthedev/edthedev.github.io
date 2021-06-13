@@ -77,9 +77,15 @@ function branch(x, y, le, we, wi, ta, pulse) {
     nle = le-1;
   } else {
     wi += random(-.4,.4) * le; // wider
-    ta += random(.05,.1) * le; // not as tall later
-    nle = le-le/random(1,4);
+    ta += random(.1,.12) * le; // not as tall later
+    nle = le-le/random(1,3);
   }
+
+  // Try to never have too smal dx.
+  if(abs(wi) < 2) {
+    wi = 5*wi;
+  }
+
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
@@ -140,7 +146,7 @@ function branch(x, y, le, we, wi, ta, pulse) {
 function leaf_cluster(x, y) {
   fill(leaf_green);
   noStroke();
-  for(i=0; i<random(1,6); i++) {
+  for(i=0; i<random(2,5); i++) {
 
     if(season.includes("fall")) {
       fill(color(

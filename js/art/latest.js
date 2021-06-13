@@ -15,6 +15,7 @@ as long as you display this license and attribution.
 
 
 + [ ] add grass/ground around base of each tree.
++ [ ] get rid of ultra short branches nearest to trunk
 
 */
 
@@ -25,7 +26,7 @@ function ani_plan(item) {
   if(ani_stack.length < ani_stack_max) {
     ani_stack.push(item);
   }
-  console.debug(ani_stack.length);
+  // console.debug(ani_stack.length);
 }
 
 function ani_clear() {
