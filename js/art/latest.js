@@ -40,6 +40,7 @@ function ani_do() {
 }
 
 function setup() {
+  let ani_stack = [];
   // maxim = .5 * window.innderWidth;
   maxim_x = 800;
   maxim_y = 400;
