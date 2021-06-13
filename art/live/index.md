@@ -26,7 +26,7 @@ Try clicking the art. Some of them interact.
 ## Woodlands
 
 [
-![June 12 Sketch Preview](/img/art/latest.PNG)
+![June 12 Sketch Preview](/img/art/trees_wide.PNG)
 ](/art/live/trees)
 
 [Woodlands](/art/live/trees)
