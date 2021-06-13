@@ -13,6 +13,8 @@ http://creativecommons.org/licenses/by-sa/4.0/
 You can share your own remix of this code 
 as long as you display this license and attribution.
 
++ [x] clean up tree edges.
+
 */
 
 var treepulse = 0;
@@ -39,11 +41,9 @@ function trunk(x,y, wi, ta) {
   we = 10;
 
   root = 1;
-  circle(x-3, y-ta, root);
-  circle(x+we, y-ta, root);
 
-  circle(x-3, y, root);
-  circle(x+we, y, root);
+  fill(color(255,0,0));
+  circle(x + wi/2, y-ta-2*wi, wi/1.3);
 
   for(i=1; i<5; i++) {
     branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
