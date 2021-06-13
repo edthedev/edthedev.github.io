@@ -5,7 +5,7 @@ title: Resume - Edward Delaporte
 
 # Edward C. Delaporte V						
 
-I make computers better at meeting the needs of humans.
+I make computers better at meeting the needs of humans - through a deep understanding of computers and strong empathy for humans. 
 
 ## Contact Info
 
@@ -18,9 +18,10 @@ I make computers better at meeting the needs of humans.
 
 - Bachelor's Degree In Computer Science from the College of Engineering at UIUC in 2006.
 - Writing software professionally since the year 2000.
-- Leading software teams since 2011.
+- Leading software development teams since 2011.
 - Has built a lot of websites for a lot of purposes with a lot of different technologies.
-- Has effective work habits and great interpersonal skills.
+- Applies effective work habits and great interpersonal skills.
+- Cybersecurity: Hacking, Hardening, Teaching, Mentorship
 - Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, Active Directory, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps.
 - Linux Tech:  Python, Perl, Java, PHP, Apache, NGinx, Django, SOAP, REST, JSON, LDAP, Linux shell, Syslog, SQL, WSGI, GitHub enterprise, AWS.
 
@@ -28,7 +29,7 @@ I make computers better at meeting the needs of humans.
 
 ### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
 
-- Hired a small group of future leaders with relevant development experience into Cybersecurity Dev.
+- Manages a four full time Cybersecurity developers (fully remote team). 
 - Supports overall Cybersecurity Objectives.
 - Created open lines of communication between development teams and Cybersecurity.
 - Provides SDLC process maturity feedback to campus research and development teams.
@@ -41,7 +42,7 @@ I make computers better at meeting the needs of humans.
 
 ### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
 
-- Managed remote DevOps team of 11 software engineers and automation engineers for Busey Bank and FirsTech Payment processor.
+- Managed remote DevOps team of 9 software developers and 2 automation engineers for Busey Bank and FirsTech Payment processor.
 - Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
@@ -55,7 +56,7 @@ I make computers better at meeting the needs of humans.
   
 ### January 2017 - August 2018: Programming Team Lead at Busey Bank, Champaign, IL
 
-- Managed three software developer direct reports.
+- Managed 3 full time software developer direct reports.
 - Collaborated with security, infrastructure, operations and sales teams to improve custom software product offerings.
 - Provided data analysis support as the organization grew from $3.7 billion in 2015 managed assets to $7.9 billion in 2017.
 
@@ -82,7 +83,7 @@ Lead Software Developer Responsibilities
 
 Interim Manager Responsibilities 
 
- - Managed five full time software developers.
+ - Managed 5 full time software developers.
  - Regularly met one one one with developers to provide feedback and guidance.
  - Proactively communicated context for upcoming organizational changes.
 
