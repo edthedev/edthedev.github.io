@@ -1,17 +1,17 @@
 ---
 layout: liveart.njk
-title: Live Art by Edward Delaporte
+title: Pixel Art by Edward Delaporte
 ---
 
-# Interactive Abstract Art
+# Interactive Pixel Art
+
+Every visitor experiences a unique new piece of pixel art.
 
 I created these using the [P5.js library][1].
 
-Every visitor experiences a new unique piece art.
-
 [1]: https://p5js.org/reference/
 
-Try clicking the art pieces. Some of them interact.
+Try clicking the art. Some of them interact.
 
 ## Latest Sketch
 
