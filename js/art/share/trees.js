@@ -67,7 +67,6 @@ function trunk(x,y, wi, ta) {
 
 function branch(x, y, le, we, wi, ta, pulse) {
 
-  console.debug(pulse);
   // abort early if we're about to waste energy.
   if(pulse == 8) {
     return;
@@ -88,9 +87,15 @@ function branch(x, y, le, we, wi, ta, pulse) {
     nle = le-le/random(1,3);
   }
 
+  // If growing aggressively wide
+  // favor getting less wide as we go.
+  if(wi > 7) {
+    dw -= 5;
+  }
   // Choose direction after size change.
   dw = dw * choose([-1, 1]);
   wi += dw;
+  console.debug(dw);
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
