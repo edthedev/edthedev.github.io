@@ -69,7 +69,12 @@ function branch(x, y, le, we, wi, ta, pulse) {
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
-    branch(x+wi, y-ta, nle, we*4/5, wi, ta, pulse);
+    ani_plan( 
+      item = 
+      function() { 
+        branch(x+wi, y-ta, nle, we*4/5, wi, ta, pulse) 
+      }
+    );
 
     // another branch?
     if(pulse < 3) {

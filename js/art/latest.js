@@ -18,7 +18,26 @@ as long as you display this license and attribution.
 
 */
 
+let ani_stack = [];
 
+function ani_plan(item) {
+  ani_stack.push(item);
+  console.debug(ani_stack);
+}
+
+function ani_do() {
+  anim = ani_stack.pop();
+  anim();
+
+  /*
+  ani_stack.forEach(
+    async function(anim) {
+      anim();
+    }
+    );
+  ani_stack = [];
+  */
+}
 
 function setup() {
   // maxim = .5 * window.innderWidth;
@@ -48,6 +67,7 @@ function setup() {
 }
 
 function draw() {
+  ani_do();
 }
 
 function mouseClicked() {
