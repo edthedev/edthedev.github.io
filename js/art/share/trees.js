@@ -67,25 +67,30 @@ function trunk(x,y, wi, ta) {
 
 function branch(x, y, le, we, wi, ta, pulse) {
 
+  console.debug(pulse);
+  // abort early if we're about to waste energy.
+  if(pulse == 8) {
+    return;
+  }
+
   pulse += 1;
 
 
   strokeWeight(we);
   if(pulse < 3) {
-    wi += random(-.2,.2) * le;
+    // Try to never have too smal dx.
+    dw = random(.1,.3) * le;
     ta += random(.1,.2) * le;
     nle = le-1;
   } else {
-    wi += random(-.4,.4) * le; // wider
+    dw = random(.2,.4) * le; // wider
     ta += random(.1,.12) * le; // not as tall later
     nle = le-le/random(1,3);
   }
 
-  // Try to never have too smal dx.
-  if(abs(wi) < 2) {
-    wi = 5*wi;
-  }
-
+  // Choose direction after size change.
+  dw = dw * choose([-1, 1]);
+  wi += dw;
 
   line(x, y, x+wi, y-ta);
   if(we > 2) {
@@ -121,7 +126,6 @@ function branch(x, y, le, we, wi, ta, pulse) {
             branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
           }
         );
-
 
       }
     }
