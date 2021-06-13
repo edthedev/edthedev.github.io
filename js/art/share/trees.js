@@ -46,8 +46,22 @@ function trunk(x,y, wi, ta) {
   circle(x + wi/2, y-ta-2*wi, wi/1.3);
 
   for(i=1; i<5; i++) {
-    branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
-    branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
+
+    ani_plan( 
+      item = 
+      function() { 
+        branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
+      }
+    );
+
+    ani_plan( 
+      item = 
+      function() { 
+        branch(x + i*wi/6,y-ta, le, we, 0, 0, 0);
+      }
+    );
+
+
   }
 }
 
@@ -80,13 +94,29 @@ function branch(x, y, le, we, wi, ta, pulse) {
     if(pulse < 3) {
       wi2 = wi + random(-.4,-.2) * le;
       if(random(0,40)>20){
-        branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+
+        ani_plan( 
+          item = 
+          function() { 
+            branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+          }
+        );
+
+
       }
     } else {
       wi2 = wi + random(-.9,-.3) * wi;
       ta2 = ta + random(-.9,.9) * ta;
       if(random(0,40)>5){ // much more likely
-        branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+
+        ani_plan( 
+          item = 
+          function() { 
+            branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+          }
+        );
+
+
       }
     }
   }
@@ -94,7 +124,14 @@ function branch(x, y, le, we, wi, ta, pulse) {
   if(pulse >4) { // no leaves early on
     // leaf behind branch...
     if(random(0,100)>10){
-      leaf_cluster(x+wi, y-ta);
+
+        ani_plan( 
+          item = 
+          function() { 
+            leaf_cluster(x+wi, y-ta);
+          }
+        );
+
     }
   }
 

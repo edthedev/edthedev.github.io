@@ -14,7 +14,7 @@ You can share your own remix of this code
 as long as you display this license and attribution.
 
 
-+ [x] add grass/ground around base of each tree.
++ [ ] add grass/ground around base of each tree.
 
 */
 
