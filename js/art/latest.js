@@ -19,28 +19,30 @@ as long as you display this license and attribution.
 */
 
 let ani_stack = [];
+let ani_stack_max = 30;
 
 function ani_plan(item) {
-  ani_stack.push(item);
-  console.debug(ani_stack);
+  if(ani_stack.length < ani_stack_max) {
+    ani_stack.push(item);
+  }
+  console.debug(ani_stack.length);
+}
+
+function ani_clear() {
+  while(ani_stack.length > 0) {
+    ani_stack.pop();
+  }
 }
 
 function ani_do() {
-  anim = ani_stack.pop();
-  anim();
-
-  /*
-  ani_stack.forEach(
-    async function(anim) {
-      anim();
-    }
-    );
-  ani_stack = [];
-  */
+  if(ani_stack.length > 0) {
+    anim = ani_stack.pop();
+    anim();
+  }
 }
 
 function setup() {
-  let ani_stack = [];
+  ani_clear();
   // maxim = .5 * window.innderWidth;
   maxim_x = 800;
   maxim_y = 400;
@@ -57,12 +59,19 @@ function setup() {
 
   num_trees = choose([2, 3, 4, 5]);
   for(tree_count=0; tree_count<num_trees; tree_count++) {
+    ani_plan(
+      item = 
+      function() { 
+
     trunk(
       random(0, maxim_x),
       7/8*maxim_y,
       3,
       60
     );
+
+      }
+    )
   }
 
 }
