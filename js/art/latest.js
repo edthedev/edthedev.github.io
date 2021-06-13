@@ -36,9 +36,12 @@ function ani_clear() {
 }
 
 function ani_do() {
-  if(ani_stack.length > 0) {
-    anim = ani_stack.pop();
-    anim();
+  ani_speed = 4;
+  for(ani_i = 0; ani_i < ani_speed; ani_i++) {
+    if(ani_stack.length > 0) {
+      anim = ani_stack.pop();
+      anim();
+    }
   }
 }
 
