@@ -33,6 +33,10 @@ var beat = 30;
 function draw_weave(weave) {
   fill(weave.color);
   circle(weave.x,weave.y, weave.size);
+  fill(weave.color2);
+  circle(weave.x + weave.size,
+    weave.y + weave.size, 
+    weave.size / 2);
   return weave;
 }
 
@@ -61,6 +65,7 @@ function setup() {
     newb.x = random(0,maxline);
     newb.y = i * 22; // Make sure they each start offset a bit
     newb.color = fresh_color();
+    newb.color2 = fresh_color();
 
     base_path = [1,1, 1,-1, -1,-1, -1, 1];
     seq1 = base_path.map( item => item * choose([1,2,3]));
