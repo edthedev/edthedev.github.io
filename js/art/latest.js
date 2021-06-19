@@ -54,6 +54,7 @@ function fresh_color() {
 function setup() {
 
   setup_canvas();
+  background('#222222');
 
   maxline = 400;
   balls = [];
