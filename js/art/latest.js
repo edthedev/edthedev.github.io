@@ -94,10 +94,12 @@ function shift_weave(item) {
 }
 
 function draw() {
+  if(pulse == 0) {
+    balls = balls.map( item => shift_weave(item) );
+  }
   pulse++;
   if(pulse > beat) {
     pulse = 0;
-    balls = balls.map( item => shift_weave(item) );
   }
   balls = balls.map( item => anim_weave(item) );
   balls = balls.map( item => draw_weave(item) );
