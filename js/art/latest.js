@@ -63,12 +63,13 @@ function setup() {
   for(i=0;i<item_count;i++){
     newb = Object.assign({}, weave_template);
     newb.x = random(0,maxline);
-    newb.y = i * 22; // Make sure they each start offset a bit
+    newb.y = 100 + i * 40; // Make sure they each start offset a bit
     newb.color = fresh_color();
     newb.color2 = fresh_color();
 
-    base_path = [1,1, 1,-1, -1,-1, -1, 1];
-    seq1 = base_path.map( item => item * choose([1,2,3]));
+    // base_path = [1,1, 1,-1, -1,-1, -1, 1];
+    base_path = [1,1,1,-1];
+    seq1 = base_path.map( item => item * choose([2,4,5]));
     seq2 = seq1.map( item => item * -1); // reverse?
     newb.sequence = newb.sequence.concat(seq1);
     newb.sequence = newb.sequence.concat(seq2);
