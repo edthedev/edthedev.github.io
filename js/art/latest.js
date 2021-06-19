@@ -22,7 +22,7 @@ var weave = {
   dx: 1,
   dy: 1,
   sequence: [],
-  size: 20,
+  size: 10,
   color1: null,
   color2: null
 };
@@ -106,5 +106,6 @@ function draw() {
 }
 
 function mouseClicked() {
+  pulse = 0;
   setup();
 }
