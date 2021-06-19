@@ -23,7 +23,8 @@ var weave = {
   dy: 1,
   sequence: [],
   size: 20,
-  color: null
+  color1: null,
+  color2: null
 };
 
 var pulse = 0;
@@ -62,7 +63,10 @@ function setup() {
     newb.color = fresh_color();
 
     base_path = [1,1, 1,-1, -1,-1, -1, 1];
-    newb.sequence = base_path.map( item => item * choose([1,2,3]));
+    seq1 = base_path.map( item => item * choose([1,2,3]));
+    seq2 = seq1.map( item => item * -1); // reverse?
+    newb.sequence = newb.sequence.concat(seq1);
+    newb.sequence = newb.sequence.concat(seq2);
 
     console.debug(newb);
     balls.push(newb);
