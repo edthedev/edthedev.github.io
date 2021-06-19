@@ -13,6 +13,7 @@ I created these using the [P5.js library][1].
 
 Try clicking the art. Some of them interact.
 
+<!-- 
 ## Latest Sketch
 
 [
@@ -20,8 +21,19 @@ Try clicking the art. Some of them interact.
 ](/art/live/latest)
 
 [Latest Sketch in Progress](/art/live/latest)
-<!-- 
 -->
+
+## Dots and Boxes
+
+[
+![June 18 Sketch Preview](/img/art/dots_and_boxes.PNG)
+](/art/live/dots_and_boxes)
+
+[June 18 - Dots and Boxes](/art/live/dots_and_boxes)
+
+This quick tribute to 80s Pop Art is also a demonstration that I am getting a bit more comfortable controling the animation sequence. 
+
+Most notably, for this piece I start and stop the animation exactly when I want to. 
 
 ## Woodlands
 
