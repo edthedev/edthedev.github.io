@@ -31,7 +31,7 @@ var pulse = 0;
 var beat = 15;
 
 function draw_weave(weave) {
-  stroke(color(0,0,0));
+  stroke(color(30,30,30));
   fill(weave.color);
   // circle(weave.x,weave.y, weave.size);
   rect(weave.x, weave.y, 
@@ -52,12 +52,14 @@ function anim_weave(weave) {
 }
 
 function fresh_color() {
-  // let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  // return color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
   var weave_colors = [
     color(115,255,210),
     color(52,140,90),
-    color(96,60,40),
+    color(196,160,140),
     color(241,180,20), // gold
+    color(120,160,160), // light blue
+    color(180,80,180), // pink
   ]
   return choose(weave_colors);
 }
@@ -65,7 +67,7 @@ function fresh_color() {
 function setup() {
 
   setup_canvas();
-  background('#444444');
+  background('#4444CC');
   starfield(800, 400, 2);
 
   maxline = 400;
