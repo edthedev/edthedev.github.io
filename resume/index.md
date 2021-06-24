@@ -119,15 +119,6 @@ Application Security Engineer Responsibilities
  - Wrote software to track performance of supercomputers at the National Center for Supercomputing Applications (NCSA).
  - Adhered to source code style best practices, including the Python PEP8 Standard and the Zend PHP Style guidelines.
 
-### Bachelors of Science Degree in Computer Science, from the College of Engineering, at the University of Illinois at Urbana-Champaign, May 2006
-
-*Interesting coursework:*
-
- - Wrote a binary program capable of detecting a specific manufacturing fault in a computer chip.
- - Wrote a research paper on the economics of the funding of the Mozilla Foundation.
- - Wrote several statistical gene analysis programs in Perl.
- - Designed and simulated a pipelined computer processor for MIPS assembler.
- - Classwork languages included: Java, Perl, C, C++, Visual Basic, ColdFusion, Mainframe RPG, MIPS Assembler.
 
 ### May 2005 - March 2006: Systems Administrator at Imaging Technology Group at Beckman Institute, U of I     Champaign,IL
 
@@ -138,6 +129,19 @@ Application Security Engineer Responsibilities
 
  - Created an elegant extensible project template in VB.Net which allowed us to create all our applications more quickly with better standard features.
  - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and JavaScript to build advanced web interfaces.
+
+## Education
+
+### Bachelors of Science Degree in Computer Science, from the College of Engineering, at the University of Illinois at Urbana-Champaign, May 2006
+
+*Interesting coursework:*
+
+ - Wrote a binary program capable of detecting a specific manufacturing fault in a computer chip.
+ - Wrote a research paper on the economics of the funding of the Mozilla Foundation.
+ - Wrote several statistical gene analysis programs in Perl.
+ - Designed and simulated a pipelined computer processor for MIPS assembler.
+ - Classwork languages included: Java, Perl, C, C++, Visual Basic, ColdFusion, Mainframe RPG, MIPS Assembler.
+
 
 ## Open Source Contributions				October 2012 - Present
 
