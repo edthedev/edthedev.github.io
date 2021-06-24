@@ -96,7 +96,8 @@ function setup() {
 
   for(i=0;i<item_count;i++){
     newb = Object.assign({}, weave_template);
-    newb.x = random(0,maxline);
+    x_space = maxline / item_count;
+    newb.x = i * x_space + x_space;
     newb.y = 100 + i * 40; // Make sure they each start offset a bit
     newb.color = fresh_color();
     newb.color2 = fresh_color();
