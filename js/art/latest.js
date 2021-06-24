@@ -31,6 +31,7 @@ var pulse = 0;
 var beat = 15;
 
 function draw_weave(weave) {
+  stroke(color(0,0,0));
   fill(weave.color);
   // circle(weave.x,weave.y, weave.size);
   rect(weave.x, weave.y, 
@@ -51,8 +52,14 @@ function anim_weave(weave) {
 }
 
 function fresh_color() {
-  let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
-  return c;
+  // let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  var weave_colors = [
+    color(115,255,210),
+    color(52,140,90),
+    color(96,60,40),
+    color(241,180,20), // gold
+  ]
+  return choose(weave_colors);
 }
 
 function setup() {
@@ -72,6 +79,16 @@ function setup() {
                 0,1, 
                 -1,1
               ]; // Hex
+  var curve_count = 2;
+  for(i=0; i<curve_count; i++) {
+    base_path = base_path.concat([1,0,
+      1,-1,
+      1,0,
+      0,1
+      -1,1
+    ]);
+  }
+  
   latest_path = base_path;
 
   weave_template = Object(weave);
@@ -83,12 +100,9 @@ function setup() {
     newb.color = fresh_color();
     newb.color2 = fresh_color();
 
-
-
-
     latest_path = latest_path.map( item => item * -1);
     seq1 = latest_path;
-    seq2 = seq1.map( item => item * -1); // reverse?
+    seq2 = seq1.map( item => item * -1); // reverse to close loop
     newb.sequence = newb.sequence.concat(seq1);
     newb.sequence = newb.sequence.concat(seq2);
 
