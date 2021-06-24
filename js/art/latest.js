@@ -66,6 +66,7 @@ function setup() {
 
   setup_canvas();
   background('#444444');
+  starfield(800, 400, 2);
 
   maxline = 400;
   balls = [];
