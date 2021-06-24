@@ -28,15 +28,19 @@ var weave = {
 };
 
 var pulse = 0;
-var beat = 30;
+var beat = 15;
 
 function draw_weave(weave) {
   fill(weave.color);
-  circle(weave.x,weave.y, weave.size);
+  // circle(weave.x,weave.y, weave.size);
+  rect(weave.x, weave.y, 
+    weave.size / 4, weave.size);
   fill(weave.color2);
-  circle(weave.x + weave.size,
-    weave.y + weave.size, 
-    weave.size / 2);
+  rect(weave.x + 2* weave.size,
+    weave.y + 2*weave.size, 
+    weave.size / 2,
+    weave.size / 3
+    );
   return weave;
 }
 
@@ -68,8 +72,16 @@ function setup() {
     newb.color = fresh_color();
     newb.color2 = fresh_color();
 
-    // base_path = [1,1, 1,-1, -1,-1, -1, 1];
-    base_path = [1,1,1,-1];
+    // base_path = [1,1,1,-1]; // squarish
+    base_path = [1,0,
+                0,1,
+                -1,0, 
+                0,1, 
+                -1,0
+              ]; // longer weave
+
+
+
     seq1 = base_path.map( item => item * choose([2,4,5]));
     seq2 = seq1.map( item => item * -1); // reverse?
     newb.sequence = newb.sequence.concat(seq1);
