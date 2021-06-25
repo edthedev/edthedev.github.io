@@ -31,11 +31,12 @@ var pulse = 0;
 var beat = 15;
 
 function draw_weave(weave) {
-  stroke(color(30,30,30));
+  stroke(color(100,100,200));
   fill(weave.color);
   // circle(weave.x,weave.y, weave.size);
   rect(weave.x, weave.y, 
     weave.size / 4, weave.size);
+  stroke(color(200,100,100));
   fill(weave.color2);
   rect(weave.x + 2* weave.size,
     weave.y + 2*weave.size, 
@@ -52,27 +53,29 @@ function anim_weave(weave) {
 }
 
 function fresh_color() {
-  // return color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  return color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  /*
   var weave_colors = [
     color(115,255,210),
-    color(52,140,90),
+    // color(52,140,90),
     color(196,160,140),
     color(241,180,20), // gold
     color(120,160,160), // light blue
     color(180,80,180), // pink
   ]
   return choose(weave_colors);
+  */
 }
 
 function setup() {
 
-  setup_canvas();
+  setup_canvas(400,400);
   background('#4444CC');
-  starfield(800, 400, 2);
+  starfield(400, 400, 2);
 
   maxline = 400;
   balls = [];
-  item_count = random(3,5);
+  item_count = random(1,1);
 
 
   // base_path = [1,1,1,-1]; // squarish
@@ -82,7 +85,7 @@ function setup() {
                 0,1, 
                 -1,1
               ]; // Hex
-  var curve_count = 2;
+  var curve_count = 4;
   for(i=0; i<curve_count; i++) {
     base_path = base_path.concat([1,0,
       1,-1,
@@ -98,9 +101,8 @@ function setup() {
 
   for(i=0;i<item_count;i++){
     newb = Object.assign({}, weave_template);
-    x_space = maxline / item_count;
-    newb.x = i * x_space + x_space;
-    newb.y = 100 + i * 40; // Make sure they each start offset a bit
+    newb.x = 200;
+    newb.y = 300 + i * 40; // Make sure they each start offset a bit
     newb.color = fresh_color();
     newb.color2 = fresh_color();
 
