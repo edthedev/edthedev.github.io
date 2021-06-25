@@ -28,10 +28,10 @@ var weave = {
 };
 
 var pulse = 0;
-var beat = 15;
+var beat = 25;
 
 function draw_weave(weave) {
-  stroke(color(100,100,200));
+  stroke(color(0,0,00));
   fill(weave.color);
   // circle(weave.x,weave.y, weave.size);
   rect(weave.x, weave.y, 
@@ -79,22 +79,24 @@ function setup() {
 
 
   // base_path = [1,1,1,-1]; // squarish
-  base_path = [1,-1,
-                1,0,
-                1,1, 
-                0,1, 
-                -1,1
-              ]; // Hex
+  base_path = [];
   fun_curves = [
-    [1,0,
-      1,-1,
-      1,0,
-      0,1
-      -1,1], // Hex
-    [-1,-1,
-      1,0,
-      1,1,
-      ], // Point
+   [1.2,-1,
+    1.2,0,
+    1.2,1, 
+    0,1, 
+    -1.2,1
+    ], // Hex
+   [1.2,-2,
+    1.2,0,
+    1.2,2, 
+    0,1, 
+    -1.2,1
+    ], // Steep Hex
+    [2,0,
+      1.2,1,
+      0,2
+      ] // Box
   ];
   var curve_count = 4;
   for(i=0; i<curve_count; i++) {
@@ -109,7 +111,7 @@ function setup() {
 
   for(i=0;i<item_count;i++){
     newb = Object.assign({}, weave_template);
-    newb.x = 200;
+    newb.x = 330;
     newb.y = 300 + i * 40; // Make sure they each start offset a bit
     newb.color = fresh_color();
     newb.color2 = fresh_color();
