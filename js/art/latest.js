@@ -85,14 +85,22 @@ function setup() {
                 0,1, 
                 -1,1
               ]; // Hex
-  var curve_count = 4;
-  for(i=0; i<curve_count; i++) {
-    base_path = base_path.concat([1,0,
+  fun_curves = [
+    [1,0,
       1,-1,
       1,0,
       0,1
-      -1,1
-    ]);
+      -1,1], // Hex
+    [-1,-1,
+      1,0,
+      1,1,
+      ], // Point
+  ];
+  var curve_count = 4;
+  for(i=0; i<curve_count; i++) {
+    base_path = base_path.concat(
+      choose(fun_curves)
+    );
   }
   
   latest_path = base_path;
