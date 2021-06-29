@@ -62,7 +62,7 @@ function zippy() {
     fill(fresh_color(5)); // darker fill color
     x = i;
     y = 400 - i
-    triangle(x, y, x+30, y-random(60), x-random(60), y+i+30);
+    triangle(x, y, x+30, y-random(80), x, y+i+30);
   }
 }
 
