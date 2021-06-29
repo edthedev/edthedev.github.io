@@ -13,6 +13,7 @@ I created these using the [P5.js library][1].
 
 Try clicking the art. Some of them interact.
 
+<!-- 
 ## Latest Sketch
 
 [
@@ -20,8 +21,15 @@ Try clicking the art. Some of them interact.
 ](/art/live/latest)
 
 [Latest Sketch in Progress](/art/live/latest)
-<!-- 
 -->
+
+## 80s Weave
+
+[
+![June 28 Sketch - 80s Weave](/img/art/80s_weave.PNG)
+](/art/live/80s)
+
+[June 28 Sketch - 80s Weave](/art/live/80s)
 
 ## Dots and Boxes
 
