@@ -15,7 +15,10 @@ Try clicking the art. Some of them interact.
 
 <!-- 
 -->
-## Latest Sketch
+
+## June 2021 Sketches
+
+### Latest Sketch
 
 [
 ![June 11 Sketch Preview](/img/art/latest.PNG)
@@ -23,7 +26,11 @@ Try clicking the art. Some of them interact.
 
 [Latest Sketch in Progress](/art/live/latest)
 
-## 80s Weave
+I added some triangles to the background to give this sketch some depth that the previous one was missing.
+
+I also reduced the complexity of the path choosing algorithm.
+
+### 80s Weave
 
 [
 ![June 28 Sketch - 80s Weave](/img/art/80s_weave.PNG)
@@ -31,7 +38,9 @@ Try clicking the art. Some of them interact.
 
 [June 28 Sketch - 80s Weave](/art/live/80s)
 
-## Dots and Boxes
+Using various angles other than 90 degres for the line paths was interesting - but it proved too busy for re-use in later sketches. Notice that the next sketch sticks to 90 degree angles.
+
+### Dots and Boxes
 
 [
 ![June 18 Sketch Preview](/img/art/dots_and_boxes.PNG)
@@ -43,7 +52,7 @@ This quick tribute to 80s Pop Art is also a demonstration that I am getting a bi
 
 Most notably, for this piece I start and stop the animation exactly when I want to. 
 
-## Woodlands
+### Woodlands
 
 [
 ![June 12 Sketch Preview](/img/art/trees_wide.PNG)
