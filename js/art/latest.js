@@ -31,12 +31,12 @@ var pulse = 0;
 var beat = 25;
 
 function draw_weave(weave) {
-  stroke(color(0,0,00));
+  stroke(color(0,0,0)); // black outline
   fill(weave.color);
   // circle(weave.x,weave.y, weave.size);
   rect(weave.x, weave.y, 
     weave.size / 4, weave.size);
-  stroke(color(200,100,100));
+  stroke(color(255,255,255)); // white outline
   fill(weave.color2);
   rect(weave.x + 2* weave.size,
     weave.y + 2*weave.size, 
@@ -59,7 +59,7 @@ function zippy() {
   noStroke();
   tri_size = 60;
   for(i=0; i<400; i++) {
-    fill(fresh_color(5)); // darker fill color
+    fill(fresh_color(3)); // darker fill color
     x = i;
     y = 400 - i
     triangle(x, y, x+30, y-random(80), x, y+i+30);
@@ -87,10 +87,19 @@ function setup() {
     [3,0,
       0,2,
       ], // wide box
+    [2,0,
+      0,2,
+      -1,0,
+      0,-1,
+      -1,0,
+      0,2,
+      2,0,
+      ], // spiral
     [0,2,
       1,0,
       0,-2
       ] // U
+
   ];
   var curve_count = 4;
   for(i=0; i<curve_count; i++) {
