@@ -71,7 +71,10 @@ function setup() {
 
   setup_canvas(400,400);
   background('#4444CC');
-  starfield(400, 400, 2);
+  setup_grain();
+  starfield(400,400, 2);
+  // draw_wood_frame(400);
+  draw_grain(0,200,400,401);
 
   maxline = 400;
   balls = [];
