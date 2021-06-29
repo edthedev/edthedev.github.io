@@ -14,7 +14,7 @@ Describe 'Site Content Tests' {
     It 'has an index file' {
       Test-Path -Path ./_site/index.html | Should -Be $true
     }
-    $index_content = Get-Content ./_site/index.html
+    # $index_content = Get-Content ./_site/index.html
 
     # Assert
     It 'has the correct page title' {
