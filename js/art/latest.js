@@ -81,22 +81,26 @@ function setup() {
   // base_path = [1,1,1,-1]; // squarish
   base_path = [];
   fun_curves = [
+    [2,0,
+      1.2,1,
+      0,2
+      ] // hex
    [1.2,-1,
     1.2,0,
     1.2,1, 
     0,1, 
     -1.2,1
-    ], // Hex
+    ], // oct
    [1.2,-2,
     1.2,0,
     1.2,2, 
     0,1, 
     -1.2,1
-    ], // Steep Hex
-    [2,0,
-      1.2,1,
-      0,2
-      ] // Box
+    ], // oct with triangle
+   [1,1,
+    1,0,
+    0,1
+    ] // heartbeat
   ];
   var curve_count = 4;
   for(i=0; i<curve_count; i++) {
