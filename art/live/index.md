@@ -60,7 +60,9 @@ Behind the scenes, I also began re-working the existing shared code into small r
 This required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25).
 
 
-## May 20 Sketch - Snowy Day
+## May 2021 Skethes 
+
+### May 20 - Snowy Day
 
 [
 ![May 20 Sketch Preview](/img/art/snowday.PNG)
@@ -74,7 +76,7 @@ from changing, and the sun from flickering across the sky.
 
 It was pretty adorable when the snowman's arms were flailing randomly, I have to admit.
 
-## May 11 Sketch - Candle
+### May 11 - Candle
 
 [
 ![May 11 Sketch Preview](/img/art/candle.PNG)
@@ -91,7 +93,7 @@ My recent meditation theme has been on slowing down.
 [May 11 Sketch - Candle](/art/live/candle)
 
 
-## May 6 Sketch - Tree
+### May 6 - Tree
 
 <a href="/art/live/tree">
 
@@ -106,7 +108,7 @@ This was an interesting technical challenge to create random branching rules tha
 [May 8 Sketch - Tree](/art/live/tree)
 
 
-## May 2 Sketch - Waves
+### May 2 - Waves
 
 <a href="/art/live/waves">
 
@@ -116,7 +118,6 @@ This was an interesting technical challenge to create random branching rules tha
 </a>
 
 This is the first sketch where I felt confident enough to try a non-abstract subject.
-
 
 [May 2 Sketch - Waves](/art/live/waves)
 
@@ -141,7 +142,9 @@ The final live art has very little in common with the original sketches due to m
 
 [April 18 Sketch](/art/live/sketch1)
 
-## Weave Patterns (December 2020)
+## December 2020 Sketches
+
+### Crossing Paths 
 
 <a href="/art/live/cross">
 
@@ -150,14 +153,16 @@ The final live art has very little in common with the original sketches due to m
 
 [Crossing Paths](/art/live/cross)
 
+### Bouncing in Boxes
 
 <a href="/art/live/boxes">
 
-![Balls in Boxes](/img/art/boxes.PNG)
+![Bouncing in Boxes](/img/art/boxes.PNG)
 </a>
 
-[Balls in Boxes](/art/live/boxes)
+[Bouncing in Boxes](/art/live/boxes)
 
+### Weave
 
 <a href="/art/live/weave">
 
@@ -167,6 +172,7 @@ The final live art has very little in common with the original sketches due to m
 
 [Stark Weave Pattern](/art/live/weave)
 
+### Strange Weave
 
 <a href="/art/live/weave_strange">
 
@@ -175,6 +181,8 @@ The final live art has very little in common with the original sketches due to m
 </a>
 
 [Strange Weave Pattern](/art/live/weave_strange)
+
+## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />The source code to this art is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may use and remix this code, as long as you give attribution to Edward Delaporte.
 
