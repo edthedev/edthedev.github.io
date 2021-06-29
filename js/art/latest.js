@@ -51,20 +51,19 @@ function anim_weave(weave) {
   weave.y += weave.dy;
   return weave;
 }
+function fresh_color(warmth=30) {
+  return color(random(0,10)*warmth,random(0,10)*warmth, random(0,10)*warmth);
+}
 
-function fresh_color() {
-  return color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
-  /*
-  var weave_colors = [
-    color(115,255,210),
-    // color(52,140,90),
-    color(196,160,140),
-    color(241,180,20), // gold
-    color(120,160,160), // light blue
-    color(180,80,180), // pink
-  ]
-  return choose(weave_colors);
-  */
+function zippy() {
+  noStroke();
+  tri_size = 60;
+  for(i=0; i<400; i++) {
+    fill(fresh_color(5)); // darker fill color
+    x = i;
+    y = 400 - i
+    triangle(x, y, x+30, y-random(60), x-random(60), y+i+30);
+  }
 }
 
 function setup() {
@@ -74,7 +73,8 @@ function setup() {
   setup_grain();
   starfield(400,400, 2);
   // draw_wood_frame(400);
-  draw_grain(0,200,400,401);
+  // draw_grain(0,200,400,401);
+  zippy();
 
   maxline = 400;
   balls = [];
@@ -84,26 +84,13 @@ function setup() {
   // base_path = [1,1,1,-1]; // squarish
   base_path = [];
   fun_curves = [
-    [2,0,
-      1.2,1,
-      0,2
-      ] // hex
-   [1,-1,
-    1,0,
-    1,1, 
-    0,1, 
-    -1,1
-    ], // oct
-   [1,-2,
-    1,0,
-    1,2, 
-    0,1, 
-    -1,1
-    ], // oct with triangle
-   [1,1,
-    1,0,
-    0,1
-    ] // heartbeat
+    [3,0,
+      0,2,
+      ], // wide box
+    [0,2,
+      1,0,
+      0,-2
+      ] // U
   ];
   var curve_count = 4;
   for(i=0; i<curve_count; i++) {
