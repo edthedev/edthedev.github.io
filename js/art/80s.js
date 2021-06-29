@@ -75,7 +75,7 @@ function setup() {
 
   maxline = 400;
   balls = [];
-  item_count = random(1,1);
+  item_count = 2;
 
 
   // base_path = [1,1,1,-1]; // squarish
@@ -113,10 +113,16 @@ function setup() {
 
   weave_template = Object(weave);
 
+  startx = [330, 70];
+  starty = [330, 70];
+
   for(i=0;i<item_count;i++){
     newb = Object.assign({}, weave_template);
-    newb.x = 330;
-    newb.y = 300 + i * 40; // Make sure they each start offset a bit
+
+    newb.x = startx[i];
+    newb.y = starty[i]; // Make sure they each start offset a bit
+
+
     newb.color = fresh_color();
     newb.color2 = fresh_color();
 
@@ -126,7 +132,6 @@ function setup() {
     newb.sequence = newb.sequence.concat(seq1);
     newb.sequence = newb.sequence.concat(seq2);
 
-    console.debug(newb);
     balls.push(newb);
   }
   noStroke();

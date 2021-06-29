@@ -14,6 +14,7 @@ I created these using the [P5.js library][1].
 Try clicking the art. Some of them interact.
 
 <!-- 
+-->
 ## Latest Sketch
 
 [
@@ -21,7 +22,6 @@ Try clicking the art. Some of them interact.
 ](/art/live/latest)
 
 [Latest Sketch in Progress](/art/live/latest)
--->
 
 ## 80s Weave
 
