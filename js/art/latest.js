@@ -81,13 +81,11 @@ function setup() {
   background('#4444CC');
   setup_grain();
   starfield(400,400, 2);
-  // draw_wood_frame(400);
-  // draw_grain(0,200,400,401);
   zippy();
 
   maxline = 400;
   balls = [];
-  item_count = 2;
+  item_count = 4;
 
 
   // base_path = [1,1,1,-1]; // squarish
@@ -119,11 +117,12 @@ function setup() {
   }
   
   latest_path = base_path;
+  // mirror_path = base_path.map( item => item * -1);
 
   weave_template = Object(weave);
 
-  startx = [330, 70];
-  starty = [330, 70];
+  startx = [330, 70, 330, 70];
+  starty = [330, 70, 130, 260];
 
   for(i=0;i<item_count;i++){
     newb = Object.assign({}, weave_template);
