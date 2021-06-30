@@ -18,19 +18,20 @@ Try clicking the art. Some of them interact.
 
 ## June 2021 Sketches
 
-### Latest Sketch
+### Square Weave - June 29
 
 [
-![June 11 Sketch Preview](/img/art/latest.PNG)
-](/art/live/latest)
+![Square Weave](/img/art/weave_square.PNG)
+](/art/live/weave_square/)
+[
+![Square Weave](/img/art/weave_square2.PNG)
+](/art/live/weave_square/)
 
-[Latest Sketch in Progress](/art/live/latest)
+[Square Weave](/art/live/weave_square)
 
-I added some triangles to the background to give this sketch some depth that the previous one was missing.
+A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it.
 
-I also reduced the complexity of the path choosing algorithm.
-
-### 80s Weave
+### 80s Weave - June 28
 
 [
 ![June 28 Sketch - 80s Weave](/img/art/80s_weave.PNG)
