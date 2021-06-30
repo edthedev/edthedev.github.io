@@ -93,7 +93,8 @@ function setup() {
   // base_path = [1,1,1,-1]; // squarish
   base_path = [];
   fun_curves = [
-    [3,0,
+    [2,0,
+     2,0,
       0,2,
       ], // wide box
     [2,0,
