@@ -32,17 +32,26 @@ var beat = 25;
 
 function draw_weave(weave) {
   stroke(color(0,0,0)); // black outline
-  fill(weave.color);
-  // circle(weave.x,weave.y, weave.size);
-  rect(weave.x, weave.y, 
-    weave.size / 4, weave.size);
-  stroke(color(255,255,255)); // white outline
   fill(weave.color2);
-  rect(weave.x + 2* weave.size,
-    weave.y + 2*weave.size, 
-    weave.size / 2,
-    weave.size / 3
+
+  edge_dx = .5 * weave.size;
+
+  // large background square
+  rect(weave.x - edge_dx,
+    weave.y - edge_dx,
+    weave.size + edge_dx,
+    weave.size + edge_dx
     );
+
+  stroke(color(255,255,255)); // white outline
+  fill(weave.color);
+
+  // cross wide
+  rect(weave.x - edge_dx, weave.y, 
+    weave.size + edge_dx, weave.size / 4);
+  // cross tall
+  rect(weave.x, weave.y - edge_dx, 
+    weave.size / 4, weave.size + edge_dx);
   return weave;
 }
 
