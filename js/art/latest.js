@@ -35,7 +35,7 @@ function draw_weave(weave) {
   fill(weave.color2);
 
   edge_dx = .5 * weave.size;
-  weave_pulse = 2 + abs(25-pulse) / 4;
+  weave_pulse = pulse / 4;
 
   // large background square
   rect(weave.x - edge_dx,
@@ -44,27 +44,31 @@ function draw_weave(weave) {
     weave.size + edge_dx
     );
 
-  // stroke(color(255,255,255)); // white outline
   fill(weave.color);
   
 
-  weave_type = "cross";
   if(weave_type == "cross") {
     // cross wide
     rect(weave.x - edge_dx, weave.y, 
-      weave.size + edge_dx, weave.size / weave_pulse);
+      weave.size + edge_dx, weave.size / 2);
     // cross tall
     rect(weave.x, weave.y - edge_dx, 
-      weave.size / weave_pulse, weave.size + edge_dx);
+      weave.size /2, weave.size + edge_dx);
   } 
   if(weave_type == "highlight") {
     rect(weave.x + edge_dx, weave.y - edge_dx, 
       weave.size - edge_dx, weave.size / 4);
   }
   if(weave_type == "hat") {
-    // stroke(color(255,255,255));
     rect(weave.x, weave.y - 2*edge_dx, 
       weave.size - edge_dx, weave.size / 2);
+  }
+  if(weave_type == "angle") {
+    // stroke(color(255,255,255));
+    triangle(weave.x, weave.y - edge_dx,
+      weave.x + weave.size, weave.y - edge_dx,
+      weave.x + weave.size, weave.y + weave.size 
+       );
   }
   return weave;
 }
@@ -90,7 +94,7 @@ function zippy() {
 }
 
 var weave_type = "";
-var weave_types = ["cross", "hat", "highlight"];
+var weave_types = ["cross", "hat", "highlight", "angle"];
 function setup() {
 
   setup_canvas(400,400);
