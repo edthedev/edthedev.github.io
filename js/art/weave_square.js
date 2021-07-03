@@ -35,7 +35,6 @@ function draw_weave(weave) {
   fill(weave.color2);
 
   edge_dx = .5 * weave.size;
-
   if(weave_type == "cross") {
 
     // large background square
@@ -114,6 +113,16 @@ function draw_weave(weave) {
     circle(weave.x + 4, 
       weave.y + weave.size, 2,2);
   }
+  if(weave_type == "laser") {
+    circle(weave.x, weave.y, 2);
+    circle(weave.x + weave.size, 
+      weave.y + weave.size, 2);
+    stroke(weave.color);
+    line(weave.x, weave.y, 
+      weave.x+weave.size,
+      weave.y+weave.size);
+
+  }
   return weave;
 }
 
@@ -139,7 +148,7 @@ function zippy() {
 
 var weave_type = "";
 var weave_types = ["cross", 
-  "hat", "highlight", 
+  "hat", "highlight", "laser",
   "angle", "dots", "offset_dots"];
 function setup() {
 
