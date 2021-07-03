@@ -153,7 +153,7 @@ function setup() {
   weave_type = choose(weave_types);
 
   base_path = [];
-  fun_curves = [
+  set1 = [
     [2,0,
      2,0,
       0,2,
@@ -170,8 +170,47 @@ function setup() {
       1,0,
       0,-2
       ] // U
-
   ];
+  wide_flat = [
+    [2,0,
+     2,0,
+     0,-1,
+     -2,0,
+     -2,0
+    ],
+    [2,0,
+     0,-1,
+    ]
+  ];
+  curls = [
+    [2,0,
+      0,2,
+      -1,0,
+      0,-1,
+      -1,0,
+      0,2,
+      2,0,
+      ], // spiral
+    [2,0,
+     0,-1,
+    ]
+  ];
+  col_set = [
+    [2,0,
+      0,1,
+      2,0,
+      0,-1,
+      ], // wide brick
+    [ 0,-2,
+      2, 0,
+      0, 2,
+      -2, 0
+    ] // box
+  ];
+
+  curve_sets = [set1, wide_flat, curls, col_set];
+  fun_curves = choose(curve_sets);
+  // fun_curves = col_set;
   var curve_count = 4;
   for(i=0; i<curve_count; i++) {
     base_path = base_path.concat(
