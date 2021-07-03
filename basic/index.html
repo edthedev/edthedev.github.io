@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/basic.css" /> 
+  <title>BASIC Programs by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+<a href="/">Edward.Delaporte.us</a>
+<a href="/basic">Programs in BASIC</a>
+<a href="/learn2code">Learn to Code</a>
+<a href="/resume">Resume</a>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+<p>Here's a BASIC program that lists the special printable characters available.</p>
+<pre><code class="language-basic">10 COUNT = 50
+20 LOW = 185
+2010 FOR CH = LO TO COUNT+LO
+2012 LET Y = 5
+2015 LET RE = CH - (INT(CH/Y)*Y)
+2016 IF RE=0 THEN PRINT &quot;&quot;
+2020 PRINT CH;
+2030 PRINT CHR$(CH);
+2040 NEXT CH
+9000 PRINT &quot;&quot;
+9010 PRINT &quot;GOODBYE&quot;
+</code></pre>
+<p>Here's the command I used to generate this GIF file:</p>
+<pre><code>	x16emu.exe -bas program.txt -gif out.gif
+</code></pre>
+<p><img src="/img/basic/list_characters.gif" alt="BASIC program - list characters"></p>
+
+</div>
+<div class="content" role="contentinfo">
+  <p>Copyright 2021 Edward Delaporte</p>
+</div>
+</html>

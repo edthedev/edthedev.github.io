@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/art.css" /> 
+  <title>Pixel Art by Edward Delaporte</title>
+  <script src="/js/p5.js"></script>
+  <script src="/js/art/cross.js"></script>
+
+</head> 
+<body>
+
+<nav class="ye_navbar" role="navigation"> 
+<a href="/">Edward.Delaporte.us</a>
+<a href="/art/live">Live Art</a>
+<a href="/resume">Resume</a>
+</nav>
+
+
+<div class="content" role="main"> <!-- No role="main" here because the script will add a main tag. -->
+<h1>Interactive Pixel Art</h1>
+<p>Every visitor experiences a unique new piece of pixel art.</p>
+<p>I created these using the <a href="https://p5js.org/reference/">P5.js library</a>.</p>
+<p>Try clicking the art. Some of them interact.</p>
+<!-- 
+-->
+<h2>June 2021 Sketches</h2>
+<h3>Square Weave - June 29</h3>
+<p><a href="/art/live/weave_square/">
+<img src="/img/art/weave_square.PNG" alt="Square Weave">
+</a>
+<a href="/art/live/weave_square/">
+<img src="/img/art/weave_square2.PNG" alt="Square Weave">
+</a></p>
+<p><a href="/art/live/weave_square">Square Weave</a></p>
+<p>A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it.</p>
+<h3>80s Weave - June 28</h3>
+<p><a href="/art/live/80s">
+<img src="/img/art/80s_weave.PNG" alt="June 28 Sketch - 80s Weave">
+</a></p>
+<p><a href="/art/live/80s">June 28 Sketch - 80s Weave</a></p>
+<p>Using various angles other than 90 degres for the line paths was interesting - but it proved too busy for re-use in later sketches. Notice that the next sketch sticks to 90 degree angles.</p>
+<h3>Dots and Boxes</h3>
+<p><a href="/art/live/dots_and_boxes">
+<img src="/img/art/dots_and_boxes.PNG" alt="June 18 Sketch Preview">
+</a></p>
+<p><a href="/art/live/dots_and_boxes">June 18 - Dots and Boxes</a></p>
+<p>This quick tribute to 80s Pop Art is also a demonstration that I am getting a bit more comfortable controling the animation sequence.</p>
+<p>Most notably, for this piece I start and stop the animation exactly when I want to.</p>
+<h3>Woodlands</h3>
+<p><a href="/art/live/trees">
+<img src="/img/art/trees_wide.PNG" alt="June 12 Sketch Preview">
+</a></p>
+<p><a href="/art/live/trees">Woodlands</a></p>
+<p>The most obvious change in this piece of pixel art is that the tree growth is now visibly animated.</p>
+<p>To achieve this, I created a trivial animation plan tracking algorithm. It stacks function calls into an array and plays them back slowly enough that the viewer can watch the algorithm work.</p>
+<p>Behind the scenes, I also began re-working the existing shared code into small re-usable libraries.</p>
+<p>This required an interesting change to the site generation template, which you can see <a href="https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25">here</a>.</p>
+<h2>May 2021 Skethes</h2>
+<h3>May 20 - Snowy Day</h3>
+<p><a href="/art/live/snowday">
+<img src="/img/art/snowday.PNG" alt="May 20 Sketch Preview">
+</a></p>
+<p>The random effects are managed quite differently in this piece,
+because the entire canvas has to be redrawn with every frame.</p>
+<p>So there's extra work in the code preventing the window frame color
+from changing, and the sun from flickering across the sky.</p>
+<p>It was pretty adorable when the snowman's arms were flailing randomly, I have to admit.</p>
+<h3>May 11 - Candle</h3>
+<p><a href="/art/live/candle">
+<img src="/img/art/candle.PNG" alt="May 11 Sketch Preview">
+<img src="/img/art/candle2.PNG" alt="May 11 Sketch Preview">
+<img src="/img/art/candle3.PNG" alt="May 11 Sketch Preview">
+</a></p>
+<p>My recent meditation theme has been on slowing down.</p>
+<ul>
+<li>The wood grain algorithm is a refinement on the grass algorithm in the tree sketch.</li>
+<li>The dribbling wax just makes me smile.</li>
+<li>The sky algorithm is subtly shifted to later evening, to justify the presence of the candle.</li>
+</ul>
+<p><a href="/art/live/candle">May 11 Sketch - Candle</a></p>
+<h3>May 6 - Tree</h3>
+<a href="/art/live/tree">
+<p><img src="/img/art/tree.PNG" alt="May 8 Sketch Preview">
+<img src="/img/art/tree2.PNG" alt="May 8 Sketch Preview">
+<img src="/img/art/tree5.PNG" alt="May 8 Sketch Preview">
+</a></p>
+<p>This was an interesting technical challenge to create random branching rules that feel natural.</p>
+<ul>
+<li>Most of the effort on the background was to give the tree a space to feel more alive.</li>
+</ul>
+<p><a href="/art/live/tree">May 8 Sketch - Tree</a></p>
+<h3>May 2 - Waves</h3>
+<a href="/art/live/waves">
+<p><img src="/img/art/waves.PNG" alt="May 2 Sketch Preview">
+<img src="/img/art/waves3.PNG" alt="May 2 Sketch Preview">
+<img src="/img/art/waves2.PNG" alt="May 2 Sketch Preview">
+</a></p>
+<p>This is the first sketch where I felt confident enough to try a non-abstract subject.</p>
+<p><a href="/art/live/waves">May 2 Sketch - Waves</a></p>
+<h2>April 2021 Sketches</h2>
+<p>The abstract pieces below are loosely based on actual sketches I have drawn.</p>
+<p>The final live art has very little in common with the original sketches due to my limited mastery of JavaScript as an art medium.</p>
+<a href="/art/live/deep">
+<p><img src="/img/art/deep.PNG" alt="April 25 Sketch Preview">
+</a></p>
+<p><a href="/art/live/deep">April 25 Sketch</a></p>
+<a href="/art/live/sketch1">
+<p><img src="/img/art/sketch1.PNG" alt="April 18 Sketch Preview">
+<img src="/img/art/sketch11.PNG" alt="April 18 Sketch Preview">
+</a></p>
+<p><a href="/art/live/sketch1">April 18 Sketch</a></p>
+<h2>December 2020 Sketches</h2>
+<h3>Crossing Paths</h3>
+<a href="/art/live/cross">
+<p><img src="/img/art/crossing.PNG" alt="Crossing Paths">
+</a></p>
+<p><a href="/art/live/cross">Crossing Paths</a></p>
+<h3>Bouncing in Boxes</h3>
+<a href="/art/live/boxes">
+<p><img src="/img/art/boxes.PNG" alt="Bouncing in Boxes">
+</a></p>
+<p><a href="/art/live/boxes">Bouncing in Boxes</a></p>
+<h3>Weave</h3>
+<a href="/art/live/weave">
+<p><img src="/img/art/weave2.PNG" alt="Weave Art Screenshot">
+<img src="/img/art/weave3.PNG" alt="Weave Art Screenshot">
+</a></p>
+<p><a href="/art/live/weave">Stark Weave Pattern</a></p>
+<h3>Strange Weave</h3>
+<a href="/art/live/weave_strange">
+<p><img src="/img/art/weave_strange2.PNG" alt="Strange Weave Screenshot">
+<img src="/img/art/weave_strange3.PNG" alt="Strange Weave Screenshot">
+</a></p>
+<p><a href="/art/live/weave_strange">Strange Weave Pattern</a></p>
+<h2>License</h2>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />The source code to this art is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may use and remix this code, as long as you give attribution to Edward Delaporte.</p>
+<p>The artwork, itself, is Copyright of Edward Delaporte, 2021.</p>
+
+<main role="application"> <!-- Script output will be written here. -->
+</main>
+
+</div>
+<div class="content" role="contentinfo">
+  <p>You can read the source code at <a href="https://github.com/edthedev/edthedev.github.io/blob/main/js/art/cross.js">/js/art/cross.js</a≥</p>
+  <p>Copyright 2021 Edward Delaporte</p>
+</div>
+</html>
