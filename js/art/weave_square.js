@@ -78,6 +78,33 @@ function draw_weave(weave) {
     rect(weave.x, weave.y - 2*edge_dx, 
       weave.size - edge_dx, weave.size / 2);
   }
+  if(weave_type == "usa") {
+
+    stripe_w = weave.size / 3;
+    flag_x = weave.x - edge_dx;
+    flag_y = weave.y - edge_dx;
+
+    fill(color(255,0,0)); // red
+    rect(flag_x,
+      flag_y,
+      weave.size,
+      weave.size,
+      );
+
+    fill(color(255,255,255)); // white
+    rect(flag_x + stripe_w,
+      flag_y + stripe_w,
+      weave.size - stripe_w,
+      weave.size - stripe_w,
+      );
+
+    fill(color(0,0,255)); // blue
+    rect(flag_x + 2*stripe_w,
+      flag_y + 2*stripe_w,
+      weave.size - 2*stripe_w,
+      weave.size - 2*stripe_w,
+      );
+  }
   if(weave_type == "angle") {
 
     triangle(weave.x, weave.y,
@@ -160,6 +187,11 @@ function setup() {
   balls = [];
   item_count = 4;
   weave_type = choose(weave_types);
+  var today_date = new Date();
+  if(today_date.getMonth() == 6 &&
+  today_date.getDate() < 7) {
+    weave_type = "usa";
+  }
 
   base_path = [];
   set1 = [
