@@ -11,7 +11,7 @@ In this space I share short technology guides and occassional art.
 
 <a href="/art/live">
 
-![May 8 Sketch Preview](/img/art/tree3.PNG)
+![Live Art Preview](/img/art/welcome1.PNG)
 ![May 2 Sketch Preview](/img/art/waves.PNG)
 
 </a>
