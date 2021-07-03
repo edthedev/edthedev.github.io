@@ -36,32 +36,83 @@ function draw_weave(weave) {
 
   edge_dx = .5 * weave.size;
 
-  // large background square
-  rect(weave.x - edge_dx,
-    weave.y - edge_dx,
-    weave.size + edge_dx,
-    weave.size + edge_dx
-    );
-
-  // stroke(color(255,255,255)); // white outline
-  fill(weave.color);
-
   if(weave_type == "cross") {
+
+    // large background square
+    rect(weave.x - edge_dx,
+      weave.y - edge_dx,
+      weave.size + edge_dx,
+      weave.size + edge_dx
+      );
+
+    fill(weave.color);
     // cross wide
     rect(weave.x - edge_dx, weave.y, 
-      weave.size + edge_dx, weave.size / 4);
+      weave.size + edge_dx, weave.size / 2);
     // cross tall
     rect(weave.x, weave.y - edge_dx, 
-      weave.size / 4, weave.size + edge_dx);
+      weave.size /2, weave.size + edge_dx);
   } 
   if(weave_type == "highlight") {
+
+    // large background square
+    rect(weave.x - edge_dx,
+      weave.y - edge_dx,
+      weave.size + edge_dx,
+      weave.size + edge_dx
+      );
+
+    fill(weave.color);
     rect(weave.x + edge_dx, weave.y - edge_dx, 
       weave.size - edge_dx, weave.size / 4);
   }
   if(weave_type == "hat") {
-    // stroke(color(255,255,255));
+
+    // large background square
+    rect(weave.x - edge_dx,
+      weave.y - edge_dx,
+      weave.size + edge_dx,
+      weave.size + edge_dx
+      );
+
+    fill(weave.color);
     rect(weave.x, weave.y - 2*edge_dx, 
       weave.size - edge_dx, weave.size / 2);
+  }
+  if(weave_type == "angle") {
+
+    triangle(weave.x, weave.y,
+      weave.x + weave.size,  
+      weave.y,
+      weave.x + weave.size,  
+      weave.y + weave.size 
+       );
+    fill(weave.color);
+    triangle(weave.x, weave.y,
+      weave.x,  
+      weave.y + weave.size,
+      weave.x + weave.size,  
+      weave.y + weave.size 
+       );
+
+  }
+  if(weave_type == "dots") {
+    circle(weave.x, weave.y, 2,2);
+    circle(weave.x + weave.size, 
+      weave.y + weave.size, 2,2);
+    fill(weave.color);
+    circle(weave.x + weave.size, weave.y, 2,2);
+    circle(weave.x, 
+      weave.y + weave.size, 2,2);
+  }
+  if(weave_type == "offset_dots") {
+    circle(weave.x, weave.y, 2,2);
+    circle(weave.x + weave.size, 
+      weave.y + weave.size, 2,2);
+    fill(weave.color);
+    circle(weave.x + weave.size + 4, weave.y, 2,2);
+    circle(weave.x + 4, 
+      weave.y + weave.size, 2,2);
   }
   return weave;
 }
@@ -87,7 +138,9 @@ function zippy() {
 }
 
 var weave_type = "";
-var weave_types = ["cross", "hat", "highlight"];
+var weave_types = ["cross", 
+  "hat", "highlight", 
+  "angle", "dots", "offset_dots"];
 function setup() {
 
   setup_canvas(400,400);
