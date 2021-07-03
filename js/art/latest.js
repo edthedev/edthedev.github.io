@@ -37,17 +37,19 @@ function draw_weave(weave) {
   edge_dx = .5 * weave.size;
   weave_pulse = pulse / 4;
 
-  // large background square
-  rect(weave.x - edge_dx,
-    weave.y - edge_dx,
-    weave.size + edge_dx,
-    weave.size + edge_dx
-    );
 
-  fill(weave.color);
   
 
   if(weave_type == "cross") {
+
+    // large background square
+    rect(weave.x - edge_dx,
+      weave.y - edge_dx,
+      weave.size + edge_dx,
+      weave.size + edge_dx
+      );
+
+    fill(weave.color);
     // cross wide
     rect(weave.x - edge_dx, weave.y, 
       weave.size + edge_dx, weave.size / 2);
@@ -56,19 +58,47 @@ function draw_weave(weave) {
       weave.size /2, weave.size + edge_dx);
   } 
   if(weave_type == "highlight") {
+
+    // large background square
+    rect(weave.x - edge_dx,
+      weave.y - edge_dx,
+      weave.size + edge_dx,
+      weave.size + edge_dx
+      );
+
+    fill(weave.color);
     rect(weave.x + edge_dx, weave.y - edge_dx, 
       weave.size - edge_dx, weave.size / 4);
   }
   if(weave_type == "hat") {
+
+    // large background square
+    rect(weave.x - edge_dx,
+      weave.y - edge_dx,
+      weave.size + edge_dx,
+      weave.size + edge_dx
+      );
+
+    fill(weave.color);
     rect(weave.x, weave.y - 2*edge_dx, 
       weave.size - edge_dx, weave.size / 2);
   }
   if(weave_type == "angle") {
-    // stroke(color(255,255,255));
-    triangle(weave.x, weave.y - edge_dx,
-      weave.x + weave.size, weave.y - edge_dx,
-      weave.x + weave.size, weave.y + weave.size 
+
+    triangle(weave.x, weave.y,
+      weave.x + weave.size,  
+      weave.y,
+      weave.x + weave.size,  
+      weave.y + weave.size 
        );
+    fill(weave.color);
+    triangle(weave.x, weave.y,
+      weave.x,  
+      weave.y + weave.size,
+      weave.x + weave.size,  
+      weave.y + weave.size 
+       );
+
   }
   return weave;
 }
