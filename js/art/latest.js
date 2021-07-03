@@ -35,6 +35,7 @@ function draw_weave(weave) {
   fill(weave.color2);
 
   edge_dx = .5 * weave.size;
+  weave_pulse = 2 + abs(25-pulse) / 4;
 
   // large background square
   rect(weave.x - edge_dx,
@@ -45,14 +46,16 @@ function draw_weave(weave) {
 
   // stroke(color(255,255,255)); // white outline
   fill(weave.color);
+  
 
+  weave_type = "cross";
   if(weave_type == "cross") {
     // cross wide
     rect(weave.x - edge_dx, weave.y, 
-      weave.size + edge_dx, weave.size / 4);
+      weave.size + edge_dx, weave.size / weave_pulse);
     // cross tall
     rect(weave.x, weave.y - edge_dx, 
-      weave.size / 4, weave.size + edge_dx);
+      weave.size / weave_pulse, weave.size + edge_dx);
   } 
   if(weave_type == "highlight") {
     rect(weave.x + edge_dx, weave.y - edge_dx, 
