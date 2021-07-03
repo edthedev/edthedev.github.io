@@ -92,8 +92,6 @@ function setup() {
 
   setup_canvas(400,400);
   background('#4444CC');
-  setup_grain();
-  starfield(400,400, 2);
   zippy();
 
   maxline = 400;
