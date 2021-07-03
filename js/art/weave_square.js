@@ -93,7 +93,7 @@ function draw_weave(weave) {
 
     fill(color(255,255,255)); // white
     rect(flag_x + stripe_w,
-      flag_y + stripe_w,
+      flag_y,
       weave.size - stripe_w,
       weave.size - stripe_w,
       );
