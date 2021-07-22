@@ -3,7 +3,7 @@ layout: basic.njk
 title: BASIC Programs by Edward Delaporte
 ---
 
-## Waves
+## Example Program - Waves
 
 This program is older than I am, but makes a great test of whether my website is ready to share the code inline.
 
@@ -11,7 +11,7 @@ This program is older than I am, but makes a great test of whether my website is
 {% include basic/waves.bas %}
 ```
 
-## Let's make a GIF file!
+## How to make a GIF file!
 
 If you have clone my website, 
 then you can generate this GIF with the following commands.
