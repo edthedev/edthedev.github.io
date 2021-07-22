@@ -3,6 +3,12 @@ layout: basic.njk
 title: BASIC Programs by Edward Delaporte
 ---
 
+## BASIC Programs
+
+Here are some BASIC programs.
+
++ [Waves](/basic/waves)
+
 Here's a BASIC program that lists the special printable characters available.
 
 ```basic
