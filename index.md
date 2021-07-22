@@ -9,6 +9,14 @@ Welcome to EdTheDev's Blog on programming, art and education.
 
 In this space I share short technology guides and occassional art. 
 
+## Professional Stuff
+
+Since I named the site after myself, it is only fair that I share [a bit about myself](/me).
+
+I suspect that most visits here are looking for one of [my slide decks](/slides).
+
+## My Art
+
 <a href="/art/live">
 
 ![Live Art Preview](/img/art/welcome1.PNG)
@@ -16,9 +24,16 @@ In this space I share short technology guides and occassional art.
 
 </a>
 
-- [Live Interactive Art](/art/live)
-- [About Myself](/me)
-- [My Slide Decks](/slides)
-- [Learn to Code](/learn2code)
-- [Make a Robot](/robots)
-- [My Tech Topic Cheat Sheets](https://github.com/edthedev/dotfiles/tree/master/cheatsheets)
+[I make art with code.](/art/live) Eeach visitor experiences a unique piece of art on each visit. 
+
+The source code for each piece is linked, and licenced so that you can copy and make it your own. 
+
+Please let me know if you enjoyed it.
+
+## On Coding
+
+I've been coding for a long time.
+
+- [Learn to Code](/learn2code) - I maintain a list of my favorite resources for learning to code.
+- [Coding in BASIC](/basic) - I still write BASIC code.
+- [Make a Robot](/robots) - You should make a robot.
