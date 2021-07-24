@@ -1,9 +1,19 @@
-list_characters.gif: 
-	x16emu.exe -bas ../../_includes/basic/specials.bas -gif list_characters.gif
+phony: gif
 
-latest.gif: 
-	x16emu.exe -bas ../../_includes/basic/latest.bas -gif latest.gif
+FILE = latest
+latest.gif: gif
 
-# make new FILE=colors
-new: 
+FILE = colors
+colors.gif: gif
+
+FILE = specials
+specials.gif: gif
+
+FILE = waves
+waves.gif: gif
+
+all: latest colors specials waves
+
+# make gif FILE=colors
+gif: 
 	x16emu.exe -bas ../../_includes/basic/$(FILE).bas -gif $(FILE).gif
