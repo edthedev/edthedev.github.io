@@ -5,8 +5,9 @@ title: Latest BASIC Program by Edward Delaporte
 
 ## Latest Program
 
-Who knows what it is, or what it is for?
+Whatever I am working on, at the moment.
 
+Who knows what it is, or what it is for?
 
 ```basic
 {% include basic/latest.bas %}
