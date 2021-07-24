@@ -11,7 +11,7 @@ Here's a BASIC program that lists the special printable characters available.
 {% include basic/specials.bas %}
 ```
 
-![BASIC program - list characters](/img/basic/list_characters.gif)
+![BASIC program - list characters](/img/basic/specials.PNG)
 
 ## Colors
 
