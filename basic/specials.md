@@ -21,7 +21,4 @@ And here's one that shows the color codes:
 {% include basic/colors.bas %}
 ```
 
-![BASIC program - list characters](/img/basic/colors.gif)
-
-
-
+![BASIC program output - show colors](/img/basic/colors.PNG)
