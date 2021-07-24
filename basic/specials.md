@@ -1,6 +1,6 @@
 ---
 layout: basic.njk
-title: BASIC Programs by Edward Delaporte
+title: BASIC Special Characters - Program by Edward Delaporte
 ---
 
 ## Print Special Characters

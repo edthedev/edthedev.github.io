@@ -1,6 +1,6 @@
 ---
 layout: basic.njk
-title: BASIC Programs by Edward Delaporte
+title: Capturing BASIC Program Output - by Edward Delaporte
 ---
 
 ## Example Program - Waves
