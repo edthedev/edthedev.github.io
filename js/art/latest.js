@@ -27,21 +27,21 @@ var item_template = {
 
 var items = [];
 var pulse = 0;
-var beat = 25;
+var beat = 100;
 var mini_pulse = 0;
 var mini_beat = 0;
 var vector_i = 0;
 
 var vector_options = [
 [
-  [40,1,1],
+  [30,0,1],
   [30,-1,1],
-  [20,-2,1],
+  [20,-1,1],
 ],
 [
-  [40,1,-1],
-  [30,1,-1],
-  [10,2,-1],
+  [20,0,1],
+  [30,-1,-1],
+  [10,1,-1],
 ],
 ];
 var vector_paths = choose(vector_options);
@@ -123,17 +123,18 @@ function setup() {
   maxline = 400;
 }
 
+function fresh_color_item(item) {
+  item.color1 = fresh_color();
+  item.color2 = fresh_color();
+  return item;
+}
+
 function draw() {
-  /* 
-  
-  if(pulse == 0) {
-    items = items.map( item => shift_item(item) );
-  }
-  */
   pulse++;
   if(pulse > beat) {
     pulse = 0;
     vector_paths = choose(vector_options);
+    items = items.map( item => fresh_color_item(item) );
   }
 
   mini_pulse += 1;
