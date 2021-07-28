@@ -19,8 +19,6 @@ as long as you display this license and attribution.
 var item_template = {
   x: 0,
   y: 0,
-  dx: 1,
-  dy: 1,
   sequence: [],
   size: 10,
   color1: null,
@@ -31,16 +29,34 @@ var items = [];
 var pulse = 0;
 var beat = 25;
 
+var vector_paths = [
+  [1,1,1],
+  [1,1,1],
+  [1,1,1],
+  [0,-1,1],
+  [0,-1,1],
+  [0,-1,1],
+  [0,-1,1],
+  [1,-2,1],
+];
+var vector_now = vector_paths[0];
+
 function draw_item(item) {
+  console.log(item);
   rect(item.x, item.y, 
-    item.size, 
-    item.size);
+    2, 
+    2);
+
+  rect(item.x + item.size, 
+    item.y - item.size,
+    2, 
+    2);
   return item;
 }
 
 function anim_item(weave) { 
-  weave.x += weave.dx;
-  weave.y += weave.dy;
+  weave.x += vector_now[1];
+  weave.y += vector_now[2];
   return weave;
 }
 function fresh_color(warmth=30) {
@@ -83,6 +99,9 @@ function draw() {
   if(pulse > beat) {
     pulse = 0;
   }
+  vector_i = pulse % vector_paths.length;
+  vector_now = vector_paths[vector_i];
+
   items = items.map( item => anim_item(item) );
   items = items.map( item => draw_item(item) );
 }
