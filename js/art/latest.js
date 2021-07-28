@@ -32,11 +32,20 @@ var mini_pulse = 0;
 var mini_beat = 0;
 var vector_i = 0;
 
-var vector_paths = [
-  [4,1,1],
-  [3,-1,1],
-  [2,-2,1],
+var vector_options = [
+[
+  [40,1,1],
+  [30,-1,1],
+  [20,-2,1],
+],
+[
+  [40,1,-1],
+  [30,1,-1],
+  [10,2,-1],
+],
 ];
+var vector_paths = choose(vector_options);
+
 var vector_now = vector_paths[0];
 
 function draw_item(item) {
@@ -51,9 +60,25 @@ function draw_item(item) {
   return item;
 }
 
+function bounce_weave(weave) {
+  if(weave.x < 0) {
+    vector_now[1] = 1;
+  }
+  if(weave.x > 400) {
+    vector_now[1] = -1;
+  }
+  if(weave.y < 0) {
+    vector_now[2] = 1;
+  }
+  if(weave.y > 400) {
+    vector_now[2] = -1;
+  }
+}
+
 function anim_item(weave) { 
   weave.x += vector_now[1];
   weave.y += vector_now[2];
+  bounce_weave(weave);
   return weave;
 }
 function fresh_color(warmth=30) {
@@ -95,6 +120,7 @@ function draw() {
   pulse++;
   if(pulse > beat) {
     pulse = 0;
+    vector_paths = choose(vector_options);
   }
 
   mini_pulse += 1;
@@ -105,8 +131,6 @@ function draw() {
       vector_i = 0;
     }
     vector_now = vector_paths[vector_i];
-    console.log(vector_i);
-    console.log(vector_now);
     mini_beat = vector_now[0];
   }
 
