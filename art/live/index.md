@@ -16,7 +16,19 @@ Try clicking the art. Some of them interact.
 <!-- 
 -->
 
+## Sliders - July 28 Sketch
+
+[
+![Sliders](/img/art/sliders.PNG)
+](/art/live/sliders/)
+[
+![Sliders](/img/art/sliders2.PNG)
+](/art/live/sliders/)
+
+[Slider - July 28](/art/live/sliders)
+
 ## June 2021 Sketches
+
 
 ### Square Weave - June 29
 
