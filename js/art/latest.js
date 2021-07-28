@@ -28,21 +28,18 @@ var item_template = {
 var items = [];
 var pulse = 0;
 var beat = 25;
+var mini_pulse = 0;
+var mini_beat = 0;
+var vector_i = 0;
 
 var vector_paths = [
-  [1,1,1],
-  [1,1,1],
-  [1,1,1],
-  [0,-1,1],
-  [0,-1,1],
-  [0,-1,1],
-  [0,-1,1],
-  [1,-2,1],
+  [4,1,1],
+  [3,-1,1],
+  [2,-2,1],
 ];
 var vector_now = vector_paths[0];
 
 function draw_item(item) {
-  console.log(item);
   rect(item.x, item.y, 
     2, 
     2);
@@ -99,8 +96,19 @@ function draw() {
   if(pulse > beat) {
     pulse = 0;
   }
-  vector_i = pulse % vector_paths.length;
-  vector_now = vector_paths[vector_i];
+
+  mini_pulse += 1;
+  if(mini_pulse >= mini_beat) {
+    mini_pulse = 0;
+    vector_i += 1;
+    if(vector_i >= vector_paths.length) {
+      vector_i = 0;
+    }
+    vector_now = vector_paths[vector_i];
+    console.log(vector_i);
+    console.log(vector_now);
+    mini_beat = vector_now[0];
+  }
 
   items = items.map( item => anim_item(item) );
   items = items.map( item => draw_item(item) );
