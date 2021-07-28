@@ -48,7 +48,8 @@ var vector_paths = choose(vector_options);
 
 var vector_now = vector_paths[0];
 
-function draw_item(item) {
+function draw_item(weave) {
+  /*
   rect(item.x, item.y, 
     2, 
     2);
@@ -57,7 +58,17 @@ function draw_item(item) {
     item.y - item.size,
     2, 
     2);
-  return item;
+  */
+    fill(weave.color2);
+    circle(weave.x, weave.y, 2);
+    circle(weave.x + weave.size, 
+      weave.y + weave.size, 2);
+    stroke(weave.color1);
+    line(weave.x, weave.y, 
+      weave.x+weave.size,
+      weave.y+weave.size);
+
+  return weave;
 }
 
 function bounce_weave(weave) {
@@ -102,6 +113,8 @@ function setup() {
   var newb = Object.assign({}, item_template);
   newb.x = 200; 
   newb.y = 0;
+  newb.color1 = fresh_color();
+  newb.color2 = fresh_color();
   items.push( 
    newb 
   );
