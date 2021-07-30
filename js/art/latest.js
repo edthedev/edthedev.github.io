@@ -143,7 +143,7 @@ function setup() {
   items.push( get_newb(80) );
   items.push( get_newb(160) );
   items.push( get_newb(240) );
-  items.push( get_newb(360) );
+  items.push( get_newb(340) );
 
   fill(fresh_color());
   maxline = 400;
