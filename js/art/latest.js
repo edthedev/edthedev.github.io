@@ -122,18 +122,26 @@ function zippy() {
     rect(x,0, stripe_w, 400);
   }
 }
+
+function get_newb(y=0) {
+  var newb = Object.assign({}, item_template);
+  newb.x = 0; 
+  newb.y = y;
+  newb.color1 = fresh_color();
+  newb.color2 = fresh_color();
+  return newb;
+}
+
 function setup() {
 
   setup_canvas(400,400);
   zippy();
-  var newb = Object.assign({}, item_template);
-  newb.x = 200; 
-  newb.y = 0;
-  newb.color1 = fresh_color();
-  newb.color2 = fresh_color();
-  items.push( 
-   newb 
-  );
+
+  items.push( get_newb(0) );
+  items.push( get_newb(80) );
+  items.push( get_newb(160) );
+  items.push( get_newb(240) );
+  items.push( get_newb(360) );
 
   fill(fresh_color());
   maxline = 400;
