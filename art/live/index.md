@@ -16,6 +16,14 @@ Try clicking the art. Some of them interact.
 <!-- 
 -->
 
+## 80s Carpet - July 29 Sketch
+
+[
+![80s Carpet](/img/art/80s_carpet1.PNG)
+](/art/live/80s_carpet/)
+
+[80s Carpet - July 29](/art/live/80s_carpet)
+
 ## Sliders - July 28 Sketch
 
 [
