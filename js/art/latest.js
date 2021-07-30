@@ -90,9 +90,11 @@ function draw_item(weave) {
 function bounce_weave(weave) {
   if(weave.x < 0) {
     vector_now[1] = 1;
+    weave = fresh_color_item(weave); 
   }
   if(weave.x > 400) {
     vector_now[1] = -1;
+    weave = fresh_color_item(weave); 
   }
   if(weave.y < 0) {
     vector_now[2] = 1;
@@ -158,7 +160,6 @@ function draw() {
   if(pulse > beat) {
     pulse = 0;
     vector_paths = choose(vector_options);
-    items = items.map( item => fresh_color_item(item) );
   }
 
   mini_pulse += 1;
