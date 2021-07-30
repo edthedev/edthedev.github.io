@@ -24,7 +24,7 @@ I suspect that most visits here are looking for one of [my slide decks](/slides)
 
 </a>
 
-[I make art with code.](/art/live) Eeach visitor experiences a unique piece of art on each visit. 
+[I make art with code.](/art/live) Each visitor experiences a unique piece of art on each visit. 
 
 The source code for each piece is linked, and licenced so that you can copy and make it your own. 
 
