@@ -43,6 +43,27 @@ I created these using the [P5.js library][1].
 
 Try clicking the art. Some of them interact.
 
+<!-- Loop through art works. -->
+{%- for item in pagination.items %}
+## {{ item.name }}
+
+[
+![{{item.name}}](/img/art/{{item.id}}.PNG)
+](/art/live/{{item.id}}/)
+[
+![{{item.name}}](/img/art/{{item.id}}2.PNG)
+](/art/live/{{item.id}}/)
+
+[{{item.name}}](/art/live/{{item.id}}/)
+
+{{item.desc}}
+
+{% else %}
+
+Nothing to see here.
+
+{% endfor -%}
+
 ## April 2021 Sketches
 
 The abstract pieces below are loosely based on actual sketches I have drawn.
@@ -104,26 +125,6 @@ The final live art has very little in common with the original sketches due to m
 
 [Strange Weave Pattern](/art/live/weave_strange)
 
-<!-- Loop through art works. -->
-{%- for item in pagination.items %}
-## {{ item.name }}
-
-[
-![{{item.name}}](/img/art/{{item.id}}.PNG)
-](/art/live/{{item.id}}/)
-[
-![{{item.name}}](/img/art/{{item.id}}2.PNG)
-](/art/live/{{item.id}}/)
-
-[{{item.name}}](/art/live/{{item.id}}/)
-
-{{item.desc}}
-
-{% else %}
-
-Nothing to see here.
-
-{% endfor -%}
 
 
 ## License
