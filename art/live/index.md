@@ -16,6 +16,15 @@ Try clicking the art. Some of them interact.
 <!-- 
 -->
 
+## Latest
+
+[
+![Latest](/img/art/latest.PNG)
+](/art/live/latest/)
+
+[Latest Sketch - Aug 5](/art/live/latest/)
+
+
 ## 80s Carpet - July 29 Sketch
 
 [
