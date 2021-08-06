@@ -10,6 +10,14 @@ items:
     - {id: "sliders", name: "Sliders - 2021 July 28"}
     - {id: "weave_square", name: "Square Weave - 2021 June 29", desc: "A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it."}
     - {id: "80s_weave", name: "80s Weave - 2021 June 28", desc: "Using various angles other than 90 degres for the line paths was interesting - but it proved too busy for re-use in later sketches. Notice that the next sketch sticks to 90 degree angles."}
+    - {id: "dots_and_boxes", name: "Dots and Boxes - 2021 June 18", desc: "This quick tribute to 80s Pop Art is also a demonstration that I am getting a bit more comfortable controling the animation sequence. Most notably, for this piece I start and stop the animation exactly when I want to."}
+    - {id: "woodlands", name: "Woodlands - 2021 June 12", desc: "The most obvious change in this piece of pixel art is that the tree growth is now visibly animated. 
+
+To achieve this, I created a trivial animation plan tracking algorithm. It stacks function calls into an array and plays them back slowly enough that the viewer can watch the algorithm work.
+
+Behind the scenes, I also began re-working the existing shared code into small re-usable libraries.
+
+This required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25)."}
 ---
 
 # Interactive Pixel Art
@@ -21,64 +29,6 @@ I created these using the [P5.js library][1].
 [1]: https://p5js.org/reference/
 
 Try clicking the art. Some of them interact.
-
-<!-- Loop through art works. -->
-{%- for item in pagination.items %}
-## {{ item.name }}
-
-[
-![{{item.name}}](/img/art/{{item.id}}.PNG)
-](/art/live/{{item.id}}/)
-[
-![{{item.name}}](/img/art/{{item.id}}2.PNG)
-](/art/live/{{item.id}}/)
-
-[{{item.name}}](/art/live/{{item.id}}/)
-
-{{item.desc}}
-
-{% else %}
-  <li>This would display if the 'item' collection were empty</li>
-{% endfor -%}
-</ol>
-
-### 80s Weave - June 28
-
-[
-![June 28 Sketch - 80s Weave](/img/art/80s_weave.PNG)
-](/art/live/80s)
-
-[June 28 Sketch - 80s Weave](/art/live/80s)
-
-Using various angles other than 90 degres for the line paths was interesting - but it proved too busy for re-use in later sketches. Notice that the next sketch sticks to 90 degree angles.
-
-### Dots and Boxes
-
-[
-![June 18 Sketch Preview](/img/art/dots_and_boxes.PNG)
-](/art/live/dots_and_boxes)
-
-[June 18 - Dots and Boxes](/art/live/dots_and_boxes)
-
-This quick tribute to 80s Pop Art is also a demonstration that I am getting a bit more comfortable controling the animation sequence. 
-
-Most notably, for this piece I start and stop the animation exactly when I want to. 
-
-### Woodlands
-
-[
-![June 12 Sketch Preview](/img/art/trees_wide.PNG)
-](/art/live/trees)
-
-[Woodlands](/art/live/trees)
-
-The most obvious change in this piece of pixel art is that the tree growth is now visibly animated. 
-
-To achieve this, I created a trivial animation plan tracking algorithm. It stacks function calls into an array and plays them back slowly enough that the viewer can watch the algorithm work.
-
-Behind the scenes, I also began re-working the existing shared code into small re-usable libraries.
-
-This required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25).
 
 
 ## May 2021 Skethes 
@@ -202,6 +152,28 @@ The final live art has very little in common with the original sketches due to m
 </a>
 
 [Strange Weave Pattern](/art/live/weave_strange)
+
+<!-- Loop through art works. -->
+{%- for item in pagination.items %}
+## {{ item.name }}
+
+[
+![{{item.name}}](/img/art/{{item.id}}.PNG)
+](/art/live/{{item.id}}/)
+[
+![{{item.name}}](/img/art/{{item.id}}2.PNG)
+](/art/live/{{item.id}}/)
+
+[{{item.name}}](/art/live/{{item.id}}/)
+
+{{item.desc}}
+
+{% else %}
+
+Nothing to see here.
+
+{% endfor -%}
+
 
 ## License
 
