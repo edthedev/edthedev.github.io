@@ -18,6 +18,7 @@ To achieve this, I created a trivial animation plan tracking algorithm. It stack
 Behind the scenes, I also began re-working the existing shared code into small re-usable libraries.
 
 This required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25)."}
+    - {id: "snowday", name: "Snow Day - 2021 May 20", desc: "The random effects are managed quite differently in this piece, because the entire canvas has to be redrawn with every frame. There's extra work in the code preventing the window frame color from changing, and the sun from flickering across the sky. It was pretty adorable when the snowman's arms were flailing randomly, I have to admit."}
 ---
 
 # Interactive Pixel Art
@@ -29,23 +30,6 @@ I created these using the [P5.js library][1].
 [1]: https://p5js.org/reference/
 
 Try clicking the art. Some of them interact.
-
-
-## May 2021 Skethes 
-
-### May 20 - Snowy Day
-
-[
-![May 20 Sketch Preview](/img/art/snowday.PNG)
-](/art/live/snowday)
-
-The random effects are managed quite differently in this piece,
-because the entire canvas has to be redrawn with every frame.
-
-So there's extra work in the code preventing the window frame color 
-from changing, and the sun from flickering across the sky.
-
-It was pretty adorable when the snowman's arms were flailing randomly, I have to admit.
 
 ### May 11 - Candle
 
