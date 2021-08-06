@@ -3,7 +3,7 @@ layout: liveart.njk
 title: Pixel Art by Edward Delaporte
 pagination:
     data: items
-    size: 9
+    size: 20
 items: 
     - {id: "latest", name: "Another Sketch - 2021 Aug 5"}
     - {id: "80s_carpet", name: "80s Carpet - 2021 July 29"}
@@ -19,6 +19,18 @@ Behind the scenes, I also began re-working the existing shared code into small r
 
 This required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25)."}
     - {id: "snowday", name: "Snow Day - 2021 May 20", desc: "The random effects are managed quite differently in this piece, because the entire canvas has to be redrawn with every frame. There's extra work in the code preventing the window frame color from changing, and the sun from flickering across the sky. It was pretty adorable when the snowman's arms were flailing randomly, I have to admit."}
+    - {id: "candle", name: "Candle - 2021 May 11", desc: "
+My recent meditation theme has been about slowing down.
+
++ The wood grain algorithm is a refinement on the grass algorithm in the tree sketch.
+
++ The dribbling wax just makes me smile.
+
++ The sky algorithm is subtly shifted to later evening, to justify the presence of the candle.
+
+"}
+    - {id: "tree", name: "Tree - 2021 May 6", desc: "This was an interesting technical challenge to create random branching rules that feel natural. Most of the effort on the background was to give the tree a space to feel more alive."}
+    - {id: "waves", name: "Waves - 2021 May 2", desc: "This is the first sketch where I felt confident enough to try a non-abstract subject."}
 ---
 
 # Interactive Pixel Art
@@ -30,51 +42,6 @@ I created these using the [P5.js library][1].
 [1]: https://p5js.org/reference/
 
 Try clicking the art. Some of them interact.
-
-### May 11 - Candle
-
-[
-![May 11 Sketch Preview](/img/art/candle.PNG)
-![May 11 Sketch Preview](/img/art/candle2.PNG)
-![May 11 Sketch Preview](/img/art/candle3.PNG)
-](/art/live/candle)
-
-My recent meditation theme has been on slowing down.
-
-+ The wood grain algorithm is a refinement on the grass algorithm in the tree sketch.
-+ The dribbling wax just makes me smile.
-+ The sky algorithm is subtly shifted to later evening, to justify the presence of the candle.
-
-[May 11 Sketch - Candle](/art/live/candle)
-
-
-### May 6 - Tree
-
-<a href="/art/live/tree">
-
-![May 8 Sketch Preview](/img/art/tree.PNG)
-![May 8 Sketch Preview](/img/art/tree2.PNG)
-![May 8 Sketch Preview](/img/art/tree5.PNG)
-</a>
-
-This was an interesting technical challenge to create random branching rules that feel natural.
-+ Most of the effort on the background was to give the tree a space to feel more alive.
-
-[May 8 Sketch - Tree](/art/live/tree)
-
-
-### May 2 - Waves
-
-<a href="/art/live/waves">
-
-![May 2 Sketch Preview](/img/art/waves.PNG)
-![May 2 Sketch Preview](/img/art/waves3.PNG)
-![May 2 Sketch Preview](/img/art/waves2.PNG)
-</a>
-
-This is the first sketch where I felt confident enough to try a non-abstract subject.
-
-[May 2 Sketch - Waves](/art/live/waves)
 
 ## April 2021 Sketches
 
