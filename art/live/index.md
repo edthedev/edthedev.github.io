@@ -1,6 +1,13 @@
 ---
 layout: liveart.njk
 title: Pixel Art by Edward Delaporte
+pagination:
+    data: items
+    size: 9
+items: 
+    - {id: "latest", name: "Latest Sketch - Aug 5"}
+    - {id: "80s_carpet", name: "80s Carpet - July 29"}
+    - {id: "sliders", name: "Sliders - July 28"}
 ---
 
 # Interactive Pixel Art
@@ -13,36 +20,21 @@ I created these using the [P5.js library][1].
 
 Try clicking the art. Some of them interact.
 
-<!-- 
--->
-
-## Latest
-
-[
-![Latest](/img/art/latest.PNG)
-](/art/live/latest/)
-
-[Latest Sketch - Aug 5](/art/live/latest/)
-
-
-## 80s Carpet - July 29 Sketch
+<!-- Loop through art works. -->
+{%- for item in pagination.items %}
+## {{ item.name }}
 
 [
-![80s Carpet](/img/art/80s_carpet1.PNG)
-](/art/live/80s_carpet/)
+![{{item.name}}](/img/art/{{item.id}}.PNG)
+![{{item.name}}](/img/art/{{item.id}}2.PNG)
+](/art/live/{{item.id}}/)
 
-[80s Carpet - July 29](/art/live/80s_carpet)
+[{{item.name}}](/art/live/{{item.id}}/)
 
-## Sliders - July 28 Sketch
-
-[
-![Sliders](/img/art/sliders.PNG)
-](/art/live/sliders/)
-[
-![Sliders](/img/art/sliders2.PNG)
-](/art/live/sliders/)
-
-[Slider - July 28](/art/live/sliders)
+{% else %}
+  <li>This would display if the 'item' collection were empty</li>
+{% endfor -%}
+</ol>
 
 ## June 2021 Sketches
 
