@@ -5,9 +5,11 @@ pagination:
     data: items
     size: 9
 items: 
-    - {id: "latest", name: "Latest Sketch - Aug 5"}
-    - {id: "80s_carpet", name: "80s Carpet - July 29"}
-    - {id: "sliders", name: "Sliders - July 28"}
+    - {id: "latest", name: "Another Sketch - 2021 Aug 5"}
+    - {id: "80s_carpet", name: "80s Carpet - 2021 July 29"}
+    - {id: "sliders", name: "Sliders - 2021 July 28"}
+    - {id: "weave_square", name: "Square Weave - 2021 June 29", desc: "A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it."}
+    - {id: "80s_weave", name: "80s Weave - 2021 June 28", desc: "Using various angles other than 90 degres for the line paths was interesting - but it proved too busy for re-use in later sketches. Notice that the next sketch sticks to 90 degree angles."}
 ---
 
 # Interactive Pixel Art
@@ -26,31 +28,19 @@ Try clicking the art. Some of them interact.
 
 [
 ![{{item.name}}](/img/art/{{item.id}}.PNG)
+](/art/live/{{item.id}}/)
+[
 ![{{item.name}}](/img/art/{{item.id}}2.PNG)
 ](/art/live/{{item.id}}/)
 
 [{{item.name}}](/art/live/{{item.id}}/)
 
+{{item.desc}}
+
 {% else %}
   <li>This would display if the 'item' collection were empty</li>
 {% endfor -%}
 </ol>
-
-## June 2021 Sketches
-
-
-### Square Weave - June 29
-
-[
-![Square Weave](/img/art/weave_square.PNG)
-](/art/live/weave_square/)
-[
-![Square Weave](/img/art/weave_square2.PNG)
-](/art/live/weave_square/)
-
-[Square Weave](/art/live/weave_square)
-
-A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it.
 
 ### 80s Weave - June 28
 
