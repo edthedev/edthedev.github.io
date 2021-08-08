@@ -6,8 +6,9 @@ pagination:
     size: 20
 items: 
     # - {id: "latest", name: "Another Sketch - In Progress"}
-    - {id: "glide", name: "Glide - 2021 Aug 7"}
-    - {id: "laserspace", name: "Laserspace - 2021 Aug 5"}
+    - {id: "glide", name: "Glide - 2021 Aug 7", 
+    desc: "I might be satisfied with how this algorithm behaves now."}
+    - {id: "laserspace", name: "Laserspace - 2021 Aug 5", desc: "Still running with the 80s carpet theme."}
     - {id: "80s_carpet", name: "80s Carpet - 2021 July 29"}
     - {id: "sliders", name: "Sliders - 2021 July 28"}
     - {id: "weave_square", name: "Square Weave - 2021 June 29", desc: "A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it."}
