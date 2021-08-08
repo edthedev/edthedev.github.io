@@ -33,46 +33,17 @@ var mini_beat = 0;
 var vector_i = 0;
 
 var vector_options = [
-[ // Hex top
-  [30,1,-1],
-  [30,1,0],
+[ // Zig
   [30,1,1],
- // Hex bottom
-  [30,-1,1],
-  [30,-1,0],
-  [30,-1,-1],
-],
-[ // 2
-  [30,-1,0],
   [30,0,1],
-  [30,1,0],
-  [30,0,-1],
-  [30,1,0],
+  [30,1,1],
 ],
-/*
-[ // Double bar?
-  [40,-1,0],
-  [10,0,1],
-  [40,1,0],
-  [5,0,-1],
-  [40,-1,0],
-],*/
 ];
 var vector_paths = choose(vector_options);
 
 var vector_now = vector_paths[0];
 
 function draw_item(weave) {
-  /*
-  rect(item.x, item.y, 
-    2, 
-    2);
-
-  rect(item.x + item.size, 
-    item.y - item.size,
-    2, 
-    2);
-  */
     fill(weave.color2);
     circle(weave.x, weave.y, 2);
     circle(weave.x + weave.size, 
@@ -123,10 +94,10 @@ function zippy() {
   }
 }
 
-function get_newb(y=0) {
+function get_newb(x=0) {
   var newb = Object.assign({}, item_template);
-  newb.x = 0; 
-  newb.y = y;
+  newb.x = x; 
+  newb.y = 200;
   newb.color1 = fresh_color();
   newb.color2 = fresh_color();
   return newb;
@@ -137,11 +108,8 @@ function setup() {
   setup_canvas(400,400);
   zippy();
 
-  items.push( get_newb(0) );
-  items.push( get_newb(80) );
-  items.push( get_newb(160) );
-  items.push( get_newb(240) );
-  items.push( get_newb(320) );
+  items.push( get_newb(100) );
+  items.push( get_newb(300) );
 
   fill(fresh_color());
   maxline = 400;
