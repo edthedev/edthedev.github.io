@@ -33,10 +33,12 @@ var mini_beat = 0;
 var vector_i = 0;
 
 var vector_options = [
-[ // Zig
-  [30,1,1],
-  [30,0,1],
-  [30,1,1],
+[ // Dash
+  [15,1,1],
+  [5,0,1],
+  [15,1,1],
+  [5,0,1],
+  [15,1,1],
 ],
 [ // Pulse
   [10,1,1],
@@ -109,13 +111,16 @@ function get_newb(x=0) {
   return newb;
 }
 
+var start_pos = [[100,300], [150, 350]];
+
 function setup() {
 
   setup_canvas(400,400);
   zippy();
+  var start_x = choose(start_pos);
 
-  items.push( get_newb(100) );
-  items.push( get_newb(300) );
+  items.push( get_newb(start_x[0]) );
+  items.push( get_newb(start_x[1]) );
 
   fill(fresh_color());
   maxline = 400;
