@@ -38,6 +38,12 @@ var vector_options = [
   [30,0,1],
   [30,1,1],
 ],
+[ // Pulse
+  [10,1,1],
+  [10,0,1],
+  [10,1,0],
+  [10,1,1],
+],
 ];
 var vector_paths = choose(vector_options);
 
