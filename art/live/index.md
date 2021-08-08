@@ -1,5 +1,5 @@
 ---
-layout: liveart.njk
+layout: gallery.njk
 title: Pixel Art by Edward Delaporte
 pagination:
     data: items

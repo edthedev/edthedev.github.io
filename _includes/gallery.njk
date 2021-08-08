@@ -1,6 +1,5 @@
 ---
-title: Edward Delaporte's Art
-script: /js/art/cross.js
+title: Gallery - Edward Delaporte's Art
 ---
 
 <!doctype html>
@@ -21,8 +20,6 @@ script: /js/art/cross.js
   <link rel="stylesheet" href="/css/edthedev.css" /> 
   <link rel="stylesheet" href="/css/art.css" /> 
   <title>{{ title }}</title>
-  <script src="/js/p5.js"></script>
-  <script src="{{script}}"></script>
 
 </head> 
 <body>
@@ -36,12 +33,10 @@ script: /js/art/cross.js
 
 <div class="content" role="main"> <!-- No role="main" here because the script will add a main tag. -->
 {{ content | safe }}
-<main role="application"> <!-- Script output will be written here. -->
 </main>
 
 </div>
 <div class="content" role="contentinfo">
-  <p>You can read the source code at <a href="https://github.com/edthedev/edthedev.github.io/blob/main{{script}}">{{script}}</a≥</p>
   <p>Copyright 2021 Edward Delaporte</p>
 </div>
 </html>
