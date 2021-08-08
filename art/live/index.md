@@ -5,7 +5,8 @@ pagination:
     data: items
     size: 20
 items: 
-    - {id: "latest", name: "Another Sketch - 2021 Aug 7"}
+    # - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "glide", name: "Glide - 2021 Aug 7"}
     - {id: "laserspace", name: "Laserspace - 2021 Aug 5"}
     - {id: "80s_carpet", name: "80s Carpet - 2021 July 29"}
     - {id: "sliders", name: "Sliders - 2021 July 28"}
