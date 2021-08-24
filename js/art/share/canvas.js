@@ -7,6 +7,7 @@ function setup_canvas(maxim_x=800, maxim_y=400) {
 }
 
 function zippy() {
+  /// Dark Striped Background
   noStroke();
   stripe_w = 60;
   for(i=0; i<400; i++) {
