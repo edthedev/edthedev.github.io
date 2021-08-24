@@ -7,6 +7,9 @@ gif:
 latest.gif: FILE=latest
 latest.gif: gif
 
+hearts.gif: FILE=hearts
+hearts.gif: gif
+
 colors.gif: FILE=colors
 colors.gif: gif
 
