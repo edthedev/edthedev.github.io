@@ -77,7 +77,7 @@ var pulse = 0;
 
 function draw() {
   pulse++;
-  if(pulse % 50 == 0) {
+  if(pulse % 35 == 0) {
     setup_grid();
   }
   draw_grid();
