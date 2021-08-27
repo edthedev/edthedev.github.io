@@ -54,19 +54,19 @@ function choose_valid_color(idx) {
   var color_idx = -1;
   // check square to left
   color_idx = get_color_idx(idx - 1);
-  acceptable.remove(acceptable.indexOf(color_idx));
+  removeItemOnce(acceptable, color_idx);
 
   // check square to right
   color_idx = get_color_idx(idx + 1); // TODO: Deal with row overflow
-  acceptable.remove(acceptable.indexOf(color_idx));
+  removeItemOnce(acceptable, color_idx);
 
   // check square above
   color_idx = get_color_idx(idx - grid_width); 
-  acceptable.remove(acceptable.indexOf(color_idx));
+  removeItemOnce(acceptable, color_idx);
 
   // check square below
   color_idx = get_color_idx(idx + grid_width); 
-  acceptable.remove(acceptable.indexOf(color_idx));
+  removeItemOnce(acceptable, color_idx);
 
   if(acceptable.length == 0) {
     acceptable == [0]; 
@@ -75,6 +75,14 @@ function choose_valid_color(idx) {
     // by always returning a value.
   }
   return choose(acceptable);
+}
+
+function removeItemOnce(arr, value) {
+  var index = arr.indexOf(value);
+  if (index > -1) {
+    arr.splice(index, 1);
+  }
+  return arr;
 }
 
 function get_color_idx(idx) {
