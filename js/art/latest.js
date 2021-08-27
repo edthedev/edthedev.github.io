@@ -52,8 +52,11 @@ function draw_grid() {
 
     var sq_color_idx = grid_memory[i].color_idx;
     var sq_color = get_color(sq_color_idx);
-    fill(sq_color);
+    fill(color(0,0,0));
     rect(x1,y1,x2,y2);
+    fill(sq_color);
+    var sqm = 20;
+    rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
   }
 
 }
@@ -66,11 +69,17 @@ var start_pos = [[100,300], [150, 350]];
 
 function setup() {
   setup_canvas(400,400);
+  grid_memory = [];
   zippy();
-  setup_grid();
 }
 
+var pulse = 0;
+
 function draw() {
+  pulse++;
+  if(pulse % 50 == 0) {
+    setup_grid();
+  }
   draw_grid();
 }
 
