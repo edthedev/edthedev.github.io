@@ -36,7 +36,7 @@ var square_template = {
 function setup_grid() {
   var newsq = new_square();
   newsq.idx = grid_memory.length;
-  newsq.color_idx = choose([0,1,2,3]); // TODO: Add tiling rules.
+  newsq.color_idx = choose([0,1,2,3]);
   grid_memory[newsq.idx] = newsq;
 }
 
@@ -57,7 +57,7 @@ function choose_valid_color(idx) {
   removeItemOnce(acceptable, color_idx);
 
   // check square to right
-  color_idx = get_color_idx(idx + 1); // TODO: Deal with row overflow
+  color_idx = get_color_idx(idx + 1); 
   removeItemOnce(acceptable, color_idx);
 
   // check square above
@@ -74,7 +74,9 @@ function choose_valid_color(idx) {
     // - such as right edge overflow
     // by always returning a value.
   }
-  return choose(acceptable);
+  var chosen = choose(acceptable);
+  // console.debug(chosen);
+  return chosen;
 }
 
 function removeItemOnce(arr, value) {
@@ -86,13 +88,19 @@ function removeItemOnce(arr, value) {
 }
 
 function get_color_idx(idx) {
-  if(grid_memory.length < idx) {
-    // out of bounds
+  /*
+  console.debug("IDX", idx);
+  console.debug("Length", grid_memory.length);
+  */
+  // out of bounds - high
+  if(grid_memory.length <= idx) {
     return -1;
   }
-  else {
-    return grid_memory[idx].color_idx;
+  // out of bounds - low
+  if(idx < 0) {
+    return -1;
   }
+  return grid_memory[idx].color_idx;
 }
 
 function draw_grid() {
@@ -129,10 +137,12 @@ function setup() {
 }
 
 var pulse = 0;
+var pulse_delay = 35;
+pulse_delay = 10;
 
 function draw() {
   pulse++;
-  if(pulse % 35 == 0) {
+  if(pulse % pulse_delay == 0) {
     if(grid_memory.length < grid_width*grid_width) {
       setup_grid();
     }
