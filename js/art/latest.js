@@ -20,11 +20,24 @@ var grid_width = 5;
 var sq_wide = 400 / grid_width;
 var sq_tall = 400 / grid_width;
 
-function get_color(idx=0){
-  return [color(255,0,0),
-    color(0,255,0),
-    color(0,0,255),
-    color(0,200,200)
+
+function get_start_color(idx=0){
+  // Four Color Tiling
+  return [color(48, 159, 219), // cyan
+    color(55, 222, 58), // green
+    color(186, 39, 149), // magenta
+    color(242, 92, 92) // light red
+  ][idx];
+}
+
+function get_tile_color(idx=0){
+  // Four Color Tiling
+  return [
+    color(255, 239, 61), // yellow
+    color(255, 59, 245), // pink
+    color(116, 207, 212), // bluish
+    color(176, 34, 242) // light purple
+    // Guess who helped pick colors?
   ][idx];
 }
 
@@ -114,7 +127,10 @@ function draw_grid() {
     y2 = y1 + sq_tall;
 
     var sq_color_idx = grid_memory[i].color_idx;
-    var sq_color = get_color(sq_color_idx);
+    var sq_color = get_tile_color(sq_color_idx);
+    if(grid_memory.length < grid_width*grid_width) {
+      sq_color = get_start_color(sq_color_idx);
+    }
     fill(color(0,0,0));
     rect(x1,y1,x2,y2);
     fill(sq_color);
