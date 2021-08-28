@@ -130,7 +130,7 @@ function draw_grid() {
     y2 = y1 + sq_tall;
     
     var sq_color_idx = grid_memory[i].color_idx;
-    var sqc2 = get_start_color(sq_color_idx-1);
+    var sqc2 = get_tile_color(sq_color_idx-1);
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
       sq_color = get_start_color(sq_color_idx);
