@@ -133,7 +133,7 @@ function draw_grid() {
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
       sq_color = get_start_color(sq_color_idx);
-      sqc2 = sq_color - 1;
+      sqc2 = get_start_color(sq_color_idx-1);
     }
     fill(sqc2);
     rect(x1,y1,x2,y2);
