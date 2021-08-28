@@ -128,7 +128,7 @@ function draw_grid() {
     x2 = x1 + sq_wide;
     y1 = sq_tall * iy;
     y2 = y1 + sq_tall;
-    car sqc2 = color(0,0,0);
+    var sqc2 = color(0,0,0);
     var sq_color_idx = grid_memory[i].color_idx;
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
