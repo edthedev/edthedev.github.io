@@ -133,7 +133,7 @@ function draw_grid() {
     }
     fill(color(0,0,0));
     rect(x1,y1,x2,y2);
-    fill(color(0,0,0)); // keep black borders for tile.
+    fill(sq_color);
     var sqm = 20;
     rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
   }
