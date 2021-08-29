@@ -36,12 +36,12 @@ function get_start_color(idx=0){
 function get_tile_color(idx=0){
   // Four Color Tiling
   return [
-    color(255, 239, 61), // yellow
+    color(55, 222, 58), // green
     color(176, 34, 242), // light purple
     color(255, 239, 61), // yellow
     color(255, 59, 245), // pink
     color(116, 207, 212), // bluish
-    color(176, 34, 242) // light purple
+    color(186, 39, 149) // magenta
     // Guess who helped pick colors?
   ][idx];
 }
@@ -71,19 +71,19 @@ function choose_valid_color(idx) {
   var acceptable = [1, 2, 3, 4];
   var color_idx = -1;
   // check square to left
-  color_idx = get_color_idx(idx - 1);
-  removeItemOnce(acceptable, color_idx);
+  color_idx = get_color_idx(idx - 1); 
+  removeItemOnce(acceptable, color_idx + 1); // Left margin is color idx +1
 
   // check square to right
-  color_idx = get_color_idx(idx + 1); 
+  color_idx = get_color_idx(idx + 1) + 1; 
   removeItemOnce(acceptable, color_idx);
 
   // check square above
   color_idx = get_color_idx(idx - grid_width); 
-  removeItemOnce(acceptable, color_idx);
+  removeItemOnce(acceptable, color_idx - 1); // top margin is color idx - 1
 
   // check square below
-  color_idx = get_color_idx(idx + grid_width); 
+  color_idx = get_color_idx(idx + grid_width) - 1; 
   removeItemOnce(acceptable, color_idx);
 
   if(acceptable.length == 0) {
@@ -132,14 +132,24 @@ function draw_grid() {
     y2 = y1 + sq_tall;
     
     var sq_color_idx = grid_memory[i].color_idx;
-    var sqc2 = get_tile_color(sq_color_idx-1);
+    var sqc2 = get_tile_color(sq_color_idx-1); // top
+    var sqc3 = get_tile_color(sq_color_idx+1); // left
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
       sq_color = get_start_color(sq_color_idx);
       sqc2 = color(0,0,0);
+      sqc3 = color(0,0,0);
     }
+
+    // Top margin
     fill(sqc2);
     rect(x1,y1,x2,y2);
+
+    // Left margin (leave top margin)
+    fill(sqc3);
+    rect(x1,y1+sqm,x2,y2);
+
+    // Main color
     fill(sq_color);
     var sqm = 20;
     rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
