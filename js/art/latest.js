@@ -24,8 +24,10 @@ var sq_tall = 400 / grid_width;
 function get_start_color(idx=0){
   // Four Color Tiling
   return [color(48, 159, 219), // cyan
+    color(255, 239, 61), // yellow
     color(55, 222, 58), // green
     color(186, 39, 149), // magenta
+    color(116, 207, 212), // bluish
     color(242, 92, 92) // light red
   ][idx];
 }
@@ -34,7 +36,9 @@ function get_tile_color(idx=0){
   // Four Color Tiling
   return [
     color(255, 239, 61), // yellow
+    color(255, 239, 61), // yellow
     color(255, 59, 245), // pink
+    color(116, 207, 212), // bluish
     color(116, 207, 212), // bluish
     color(176, 34, 242) // light purple
     // Guess who helped pick colors?
