@@ -6,6 +6,8 @@ pagination:
     size: 20
 items: 
     - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "tile", name: "Tile - 2021 Aug 27", 
+    desc: "Time to start tiling."}
     - {id: "glide", name: "Glide - 2021 Aug 7", 
     desc: "I might be satisfied with how this algorithm behaves now."}
     - {id: "laserspace", name: "Laserspace - 2021 Aug 5", desc: "Still running with the 80s carpet theme."}

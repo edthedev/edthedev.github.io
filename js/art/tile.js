@@ -153,7 +153,7 @@ function setup() {
 }
 
 var pulse = 0;
-var pulse_delay = 35;
+var pulse_delay = 45;
 pulse_delay = 10;
 
 function draw() {
