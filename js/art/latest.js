@@ -23,8 +23,9 @@ var sq_tall = 400 / grid_width;
 
 function get_start_color(idx=0){
   // Four Color Tiling
-  return [color(48, 159, 219), // cyan
-    color(255, 239, 61), // yellow
+  return [
+    color(242, 92, 92), // light red
+    color(48, 159, 219), // cyan
     color(55, 222, 58), // green
     color(186, 39, 149), // magenta
     color(116, 207, 212), // bluish
@@ -36,9 +37,9 @@ function get_tile_color(idx=0){
   // Four Color Tiling
   return [
     color(255, 239, 61), // yellow
+    color(176, 34, 242), // light purple
     color(255, 239, 61), // yellow
     color(255, 59, 245), // pink
-    color(116, 207, 212), // bluish
     color(116, 207, 212), // bluish
     color(176, 34, 242) // light purple
     // Guess who helped pick colors?
@@ -53,7 +54,7 @@ var square_template = {
 function setup_grid() {
   var newsq = new_square();
   newsq.idx = grid_memory.length;
-  newsq.color_idx = choose([0,1,2,3]);
+  newsq.color_idx = choose([1,2,3,4]);
   grid_memory[newsq.idx] = newsq;
 }
 
@@ -67,7 +68,7 @@ function tile_grid() {
 }
 
 function choose_valid_color(idx) {
-  var acceptable = [0, 1, 2, 3];
+  var acceptable = [1, 2, 3, 4];
   var color_idx = -1;
   // check square to left
   color_idx = get_color_idx(idx - 1);
@@ -129,13 +130,15 @@ function draw_grid() {
     x2 = x1 + sq_wide;
     y1 = sq_tall * iy;
     y2 = y1 + sq_tall;
-
+    
     var sq_color_idx = grid_memory[i].color_idx;
+    var sqc2 = get_tile_color(sq_color_idx-1);
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
       sq_color = get_start_color(sq_color_idx);
+      sqc2 = color(0,0,0);
     }
-    fill(color(0,0,0));
+    fill(sqc2);
     rect(x1,y1,x2,y2);
     fill(sq_color);
     var sqm = 20;
