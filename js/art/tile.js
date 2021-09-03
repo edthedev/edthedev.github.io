@@ -16,6 +16,7 @@ as long as you display this license and attribution.
 */
 
 var grid_memory = [];
+var updated_idxs = []; // which cells have switched to new colors...
 var grid_width = 5;
 var sq_wide = 400 / grid_width;
 var sq_tall = 400 / grid_width;
@@ -25,7 +26,7 @@ function get_start_color(idx=0){
   // Four Color Tiling
   return [color(48, 159, 219), // cyan
     color(55, 222, 58), // green
-    color(186, 39, 149), // magenta
+    color(255, 239, 61), // yellow
     color(242, 92, 92) // light red
   ][idx];
 }
@@ -33,7 +34,7 @@ function get_start_color(idx=0){
 function get_tile_color(idx=0){
   // Four Color Tiling
   return [
-    color(255, 239, 61), // yellow
+    color(0, 0, 0), // black
     color(255, 59, 245), // pink
     color(116, 207, 212), // bluish
     color(176, 34, 242) // light purple
@@ -60,6 +61,7 @@ function tile_grid() {
   newsq.idx = int(random(0, grid_width*grid_width));
   newsq.color_idx = choose_valid_color(newsq.idx);
   grid_memory[newsq.idx] = newsq;
+  updated_idxs.push(newsq.idx); // track which we have updated.
 }
 
 function choose_valid_color(idx) {
@@ -88,7 +90,6 @@ function choose_valid_color(idx) {
     // by always returning a value.
   }
   var chosen = choose(acceptable);
-  // console.debug(chosen);
   return chosen;
 }
 
@@ -101,10 +102,6 @@ function removeItemOnce(arr, value) {
 }
 
 function get_color_idx(idx) {
-  /*
-  console.debug("IDX", idx);
-  console.debug("Length", grid_memory.length);
-  */
   // out of bounds - high
   if(grid_memory.length <= idx) {
     return -1;
@@ -127,13 +124,16 @@ function draw_grid() {
     y2 = y1 + sq_tall;
 
     var sq_color_idx = grid_memory[i].color_idx;
-    var sq_color = get_tile_color(sq_color_idx);
-    if(grid_memory.length < grid_width*grid_width) {
-      sq_color = get_start_color(sq_color_idx);
+
+    var sq_color = get_start_color(sq_color_idx);
+    // switch to new color scheme after has been tiled once
+    if(updated_idxs.includes(sq_color_idx)) {
+      sq_color = get_tile_color(sq_color_idx);
     }
+
     fill(color(0,0,0));
     rect(x1,y1,x2,y2);
-    fill(color(0,0,0)); // keep black borders for tile.
+    fill(sq_color);
     var sqm = 20;
     rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
   }
@@ -149,6 +149,7 @@ var start_pos = [[100,300], [150, 350]];
 function setup() {
   setup_canvas(400,400);
   grid_memory = [];
+  updated_idxs = [];
   zippy();
 }
 
@@ -163,7 +164,10 @@ function draw() {
       setup_grid();
     }
     else {
-      tile_grid();
+      if(pulse % 5 == 0) {
+        // tile a bit slower
+        tile_grid();
+      }
     }
   }
   draw_grid();
