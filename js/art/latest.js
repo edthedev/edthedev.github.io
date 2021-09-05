@@ -208,6 +208,7 @@ function draw() {
       setup_grid();
     }
     else {
+      pulse_delay = 35;
       // Add 5 extra items for the lines.
       if(grid_memory.length <= grid_width*grid_width + 5) {
         setup_grid();
