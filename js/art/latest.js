@@ -161,13 +161,18 @@ function draw_line(idx){
   ix = (idx) % grid_width; //col
 
   // tall line
-  x_margin = 10; //thinner
+  x_margin = 40; //thinner
   y1 = 0;
   y2 = 400;
-  x1 = sq_wide * ix;
+  x1 = (sq_wide * ix) + x_margin;
+  xw = sq_wide - x_margin;
 
   fill(ln_color);
-  rect(x1 + x_margin,y1,sq_wide - x_margin,y2);
+  rect(x1,y1,xw,y2);
+
+  // fill(color(0,0,0));
+  // rect(x1 + x_margin + sq_wide,y1,x_margin,y2);
+
 }
 
 function draw_grid() {
@@ -194,7 +199,7 @@ function setup() {
 
 var pulse = 0;
 var pulse_delay = 35;
-pulse_delay = 5;
+pulse_delay = 10;
 
 function draw() {
   pulse++;
