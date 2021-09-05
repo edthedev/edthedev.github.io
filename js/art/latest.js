@@ -161,14 +161,13 @@ function draw_line(idx){
   ix = (idx) % grid_width; //col
 
   // tall line
-  x_margin = 0; //thinner
+  x_margin = 10; //thinner
   y1 = 0;
   y2 = 400;
   x1 = sq_wide * ix;
-  x2 = x1 + sq_wide;
 
   fill(ln_color);
-  rect(x1 + x_margin,y1,x2 - x_margin,y2);
+  rect(x1 + x_margin,y1,sq_wide - x_margin,y2);
 }
 
 function draw_grid() {
