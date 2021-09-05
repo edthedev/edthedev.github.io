@@ -62,7 +62,7 @@ function setup_grid() {
 function tile_grid() {
   var newsq = new_square();
   // Choose a random tile to recolor.
-  newsq.idx = int(random(0, grid_width*grid_width));
+  newsq.idx = int(random(0, grid_memory.length));
   newsq.color_idx = choose_valid_color(newsq.idx);
   grid_memory[newsq.idx] = newsq;
 }
@@ -136,9 +136,10 @@ function draw_rect(idx) {
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
       sq_color = get_start_color(sq_color_idx);
-      sqc2 = color(0,0,0);
-      sqc3 = color(0,0,0);
     }
+    // Always black margin, for now.
+    sqc2 = color(0,0,0);
+    sqc3 = color(0,0,0);
 
     // Top margin
     fill(sqc2);
@@ -157,17 +158,17 @@ function draw_rect(idx) {
 function draw_line(idx){
   color_idx = get_color_idx(idx);
   ln_color = get_start_color(color_idx);
-  ix = (idx - 25) / grid_width; //col
+  ix = (idx) % grid_width; //col
 
   // tall line
-  x_margin = 60; //thinner
-  x1 = sq_wide * ix + x_margin;
-  x2 = sq_wide - x_margin;
+  x_margin = 0; //thinner
   y1 = 0;
   y2 = 400;
+  x1 = sq_wide * ix;
+  x2 = x1 + sq_wide;
 
   fill(ln_color);
-  rect(x1,y1,x2,y2);
+  rect(x1 + x_margin,y1,x2 - x_margin,y2);
 }
 
 function draw_grid() {
@@ -194,7 +195,7 @@ function setup() {
 
 var pulse = 0;
 var pulse_delay = 35;
-pulse_delay = 10;
+pulse_delay = 5;
 
 function draw() {
   pulse++;
@@ -204,7 +205,7 @@ function draw() {
     }
     else {
       // Add 5 extra items for the lines.
-      if(grid_memory.length < grid_width*grid_width + 5) {
+      if(grid_memory.length <= grid_width*grid_width + 5) {
         setup_grid();
       }
       tile_grid();
