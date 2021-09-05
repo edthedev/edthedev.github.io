@@ -33,17 +33,22 @@ function get_start_color(idx=0){
   ][idx];
 }
 
+var dimmer_dx = 0;
 function get_tile_color(idx=0){
   // Four Color Tiling
-  return [
-    color(55, 222, 58), // green
-    color(176, 34, 242), // light purple
-    color(255, 239, 61), // yellow
-    color(255, 59, 245), // pink
-    color(116, 207, 212), // bluish
-    color(186, 39, 149) // magenta
+  result = [
+    [55, 222, 58], // green
+    [176, 34, 242], // light purple
+    [255, 239, 61], // yellow
+    [255, 59, 245], // pink
+    [116, 207, 212], // bluish
+    [186, 39, 149] // magenta
     // Guess who helped pick colors?
   ][idx];
+  result[0] -= dimmer_dx;
+  result[1] -= dimmer_dx;
+  result[2] -= dimmer_dx;
+  return color(result);
 }
 
 var square_template = {
@@ -209,6 +214,10 @@ function draw() {
     }
     else {
       pulse_delay = 35;
+      console.debug(dimmer_dx);
+      if(dimmer_dx < 200){
+        dimmer_dx+=1;
+      }
       // Add 5 extra items for the lines.
       if(grid_memory.length <= grid_width*grid_width + 5) {
         setup_grid();
