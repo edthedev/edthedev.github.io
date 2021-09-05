@@ -6,6 +6,8 @@ pagination:
     size: 20
 items: 
     - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "E", name: "E - 2021 Sep 5", 
+    desc: "Playing with an extended grid index."}
     - {id: "tile", name: "Tile - 2021 Aug 27", 
     desc: "Time to start tiling."}
     - {id: "glide", name: "Glide - 2021 Aug 7", 
