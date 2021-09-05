@@ -121,17 +121,16 @@ function get_color_idx(idx) {
   return grid_memory[idx].color_idx;
 }
 
-function draw_grid() {
-  for(var i=0; i<grid_memory.length; i++) {
-    iy = int(i / grid_width); // row
-    ix = i % grid_width; //col
+function draw_rect(idx) {
+    iy = int(idx / grid_width); // row
+    ix = idx % grid_width; //col
 
     x1 = sq_wide * ix;
     x2 = x1 + sq_wide;
     y1 = sq_tall * iy;
     y2 = y1 + sq_tall;
     
-    var sq_color_idx = grid_memory[i].color_idx;
+    var sq_color_idx = grid_memory[idx].color_idx;
     var sqc2 = get_tile_color(sq_color_idx-1); // top
     var sqc3 = get_tile_color(sq_color_idx+1); // left
     var sq_color = get_tile_color(sq_color_idx);
@@ -153,8 +152,32 @@ function draw_grid() {
     fill(sq_color);
     var sqm = 20;
     rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
-  }
+}
 
+function draw_line(idx){
+  color_idx = get_color_idx(idx);
+  ln_color = get_start_color(color_idx);
+  ix = (idx - 25) / grid_width; //col
+
+  // tall line
+  x_margin = 60; //thinner
+  x1 = sq_wide * ix + x_margin;
+  x2 = sq_wide - x_margin;
+  y1 = 0;
+  y2 = 400;
+
+  fill(ln_color);
+  rect(x1,y1,x2,y2);
+}
+
+function draw_grid() {
+  for(var i=0; i<grid_memory.length; i++) {
+    if(i<=25){
+      draw_rect(i);
+    } else {
+      draw_line(i);
+    }
+  }
 }
 
 function new_square() {
@@ -180,6 +203,10 @@ function draw() {
       setup_grid();
     }
     else {
+      // Add 5 extra items for the lines.
+      if(grid_memory.length < grid_width*grid_width + 5) {
+        setup_grid();
+      }
       tile_grid();
     }
   }
