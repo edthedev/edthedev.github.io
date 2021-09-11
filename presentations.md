@@ -1,4 +1,9 @@
-## Presentations
+---
+layout: layout.njk
+title: Presentations by Joanna Delaporte
+---
+
+# Presentations
 - [Deploy Files with Ansible - Copy and Template Modules: AnsibleCU February 2021](2021_AnsibleFiles.html)
 - [vRA 8 Integration with Ansible Tower: AnsibleFest 2020](2020_vRA_Tower.html)
 - [Ansible Technical Introduction: AnsibleCU August 2020](2020_AnsibleIntro.html)

@@ -1,0 +1,31 @@
+name: Eleventy Build
+
+on:
+  push:
+    branches:
+      - main 
+      
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v2
+
+        - name: Setup Node
+          uses: actions/setup-node@v1
+          with:
+            node-version: '10.x'
+
+        - run: npm ci
+
+        - name: Build static site
+          run: npx @11ty/eleventy
+
+        - name: Deploy
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_branch: gh-pages # default: gh-pages
+            publish_dir: ./_site # default is public
+            force_orphan: true # do not maintain history on gh-pages branch
+            cname: joanna.delaporte.us # restores the CNAME file to the output directory.
