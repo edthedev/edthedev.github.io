@@ -1,10 +1,14 @@
+---
+title: Joanna Delaporte's Site
+---
+
 <!doctype html>
 <html lang="en">
 
 <head> 
   
   <link rel="stylesheet" href="/css/jdelaporte.css" />
-  <title>Ansible Illinois</title>
+  <title>{{ title }}</title>
 
 <nav class="ye_navbar" role="navigation"> 
 <a href="/">Joanna.Delaporte.us</a>
@@ -17,9 +21,7 @@
 
 
 <div class="content" role="main">
-
-    This content has moved to <a href="/meetup">Ansible Illinois</a>
-
+{{ content | safe }}
 </div>
 <div class="content" role="contentinfo">
   <p>Copyright 2019-2021 Joanna Delaporte</p>
