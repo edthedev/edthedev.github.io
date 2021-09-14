@@ -38,7 +38,7 @@ My recent meditation theme has been about slowing down.
 "}
     - {id: "tree", name: "Tree - 2021 May 6", desc: "This was an interesting technical challenge to create random branching rules that feel natural. Most of the effort on the background was to give the tree a space to feel more alive."}
     - {id: "waves", name: "Waves - 2021 May 2", desc: "This is the first sketch where I felt confident enough to try a non-abstract subject."}
-    - {id: "deep", name: "Deep - 2021 April 25"}
+    - {id: "deep", name: "Deep Dive - 2021 April 25"}
     - {id: "sketch1", name: "Sketch - 2021 April 18", desc: "
 
 These abstract pieces are loosely based on actual sketches I have drawn.
