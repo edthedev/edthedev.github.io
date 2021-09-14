@@ -39,10 +39,14 @@ My recent meditation theme has been about slowing down.
     - {id: "tree", name: "Tree - 2021 May 6", desc: "This was an interesting technical challenge to create random branching rules that feel natural. Most of the effort on the background was to give the tree a space to feel more alive."}
     - {id: "waves", name: "Waves - 2021 May 2", desc: "This is the first sketch where I felt confident enough to try a non-abstract subject."}
     - {id: "deep", name: "Deep - 2021 April 25"}
-    - {id: "sketch1", name: "Sketch - 2021 April 18"}
-    - {id: "crossing", name: "Crossing - 2020 December"}
-    - {id: "boxes", name: "Boxes - 2020 December"}
-    - {id: "weave", name: "Weave - 2020 December"}
+    - {id: "sketch1", name: "Sketch - 2021 April 18", desc: "
+
+These abstract pieces are loosely based on actual sketches I have drawn.
+
+The final live art has very little in common with the original sketches due to my limited mastery of JavaScript as an art medium. "}
+    - {id: "crossing", name: "Crossing Paths - 2020 December"}
+    - {id: "boxes", name: "Bouncing in Boxes - 2020 December"}
+    - {id: "weave", name: "Stark Weave - 2020 December"}
     - {id: "weave_strange", name: "Strange Weave - 2020 December"}
 
 ---
@@ -77,68 +81,6 @@ Try clicking the art. Some of them interact.
 Nothing to see here.
 
 {% endfor -%}
-
-## April 2021 Sketches
-
-The abstract pieces below are loosely based on actual sketches I have drawn.
-
-The final live art has very little in common with the original sketches due to my limited mastery of JavaScript as an art medium. 
-
-<a href="/art/live/deep">
-
-![April 25 Sketch Preview](/img/art/deep.PNG)
-</a>
-
-[April 25 Sketch](/art/live/deep)
-
-<a href="/art/live/sketch1">
-
-![April 18 Sketch Preview](/img/art/sketch1.PNG)
-![April 18 Sketch Preview](/img/art/sketch11.PNG)
-</a>
-
-[April 18 Sketch](/art/live/sketch1)
-
-## December 2020 Sketches
-
-### Crossing Paths 
-
-<a href="/art/live/cross">
-
-![Crossing Paths](/img/art/crossing.PNG)
-</a>
-
-[Crossing Paths](/art/live/cross)
-
-### Bouncing in Boxes
-
-<a href="/art/live/boxes">
-
-![Bouncing in Boxes](/img/art/boxes.PNG)
-</a>
-
-[Bouncing in Boxes](/art/live/boxes)
-
-### Weave
-
-<a href="/art/live/weave">
-
-![Weave Art Screenshot](/img/art/weave2.PNG)
-![Weave Art Screenshot](/img/art/weave3.PNG)
-</a>
-
-[Stark Weave Pattern](/art/live/weave)
-
-### Strange Weave
-
-<a href="/art/live/weave_strange">
-
-![Strange Weave Screenshot](/img/art/weave_strange2.PNG)
-![Strange Weave Screenshot](/img/art/weave_strange3.PNG)
-</a>
-
-[Strange Weave Pattern](/art/live/weave_strange)
-
 
 
 ## License
