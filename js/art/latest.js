@@ -130,34 +130,24 @@ function draw_rect(idx) {
     iy = int(idx / grid_width); // row
     ix = idx % grid_width; //col
 
-    x1 = sq_wide * ix;
-    x2 = x1 + sq_wide;
-    y1 = sq_tall * iy;
-    y2 = y1 + sq_tall;
+    margin = 30;
+    xul = 0 + idx * margin;
+    xur = 400 - idx * margin;
+    xpoint = 200;
+
+    yul = 0;
+    yur = 0;
+    ypoint = 200 - idx*margin;
     
     var sq_color_idx = grid_memory[idx].color_idx;
-    var sqc2 = get_tile_color(sq_color_idx-1); // top
-    var sqc3 = get_tile_color(sq_color_idx+1); // left
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
       sq_color = get_start_color(sq_color_idx);
     }
-    // Always black margin, for now.
-    sqc2 = color(0,0,0);
-    sqc3 = color(0,0,0);
-
-    // Top margin
-    fill(sqc2);
-    rect(x1,y1,x2,y2);
-
-    // Left margin (leave top margin)
-    fill(sqc3);
-    rect(x1,y1+sqm,x2,y2);
 
     // Main color
     fill(sq_color);
-    var sqm = 20;
-    rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
+    triangle(xul, yul, xpoint, ypoint, xur, yur);
 }
 
 function draw_line(idx){
