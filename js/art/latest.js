@@ -186,10 +186,23 @@ function new_square() {
 
 var start_pos = [[100,300], [150, 350]];
 
+function setup_background_circles(){
+  xo = 200;
+  yo = 200;
+  for(var i=0; i<6; i++){
+    ccolor = fresh_color();
+    rad = i*20;
+    fill(ccolor);
+    circle(xo, yo, rad);
+  }
+}
+
+
 function setup() {
   setup_canvas(400,400);
   grid_memory = [];
   zippy();
+  setup_background_circles();
 }
 
 var pulse = 0;
