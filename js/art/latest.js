@@ -189,11 +189,11 @@ var start_pos = [[100,300], [150, 350]];
 function setup_background_circles(){
   xo = 200;
   yo = 200;
-  for(var i=0; i<6; i++){
+  for(var i=0; i<9; i++){
     ccolor = fresh_color();
-    rad = i*20;
+    diam = 400-i*20;
     fill(ccolor);
-    circle(xo, yo, rad);
+    circle(xo, yo, diam);
   }
 }
 
