@@ -152,7 +152,7 @@ function draw_top_triangle(idx) {
 function draw_bottom_triangle(idx) {
     idx = idx - 25;
 
-    margin = 30;
+    margin = 15;
     xul = 0 + idx * margin;
     xur = 400 - idx * margin;
     xpoint = 200;
