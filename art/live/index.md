@@ -6,17 +6,12 @@ pagination:
     size: 20
 items: 
     - {id: "latest", name: "Another Sketch - In Progress"}
-    - {id: "E", name: "E - 2021 Sep 5", 
-    desc: "Playing with an extended grid index."}
     - {id: "tile", name: "Tile - 2021 Aug 27", 
     desc: "Time to start tiling."}
     - {id: "glide", name: "Glide - 2021 Aug 7", 
     desc: "I might be satisfied with how this algorithm behaves now."}
-    - {id: "laserspace", name: "Laserspace - 2021 Aug 5", desc: "Still running with the 80s carpet theme."}
-    - {id: "80s_carpet", name: "80s Carpet - 2021 July 29"}
     - {id: "sliders", name: "Sliders - 2021 July 28"}
     - {id: "weave_square", name: "Square Weave - 2021 June 29", desc: "A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it."}
-    - {id: "80s_weave", name: "80s Weave - 2021 June 28", desc: "Using various angles other than 90 degres for the line paths was interesting - but it proved too busy for re-use in later sketches. Notice that the next sketch sticks to 90 degree angles."}
     - {id: "dots_and_boxes", name: "Dots and Boxes - 2021 June 18", desc: "This quick tribute to 80s Pop Art is also a demonstration that I am getting a bit more comfortable controling the animation sequence. Most notably, for this piece I start and stop the animation exactly when I want to."}
     - {id: "woodlands", name: "Woodlands - 2021 June 12", desc: "The most obvious change in this piece of pixel art is that the tree growth is now visibly animated. 
 
@@ -25,7 +20,6 @@ To achieve this, I created a trivial animation plan tracking algorithm. It stack
 Behind the scenes, I also began re-working the existing shared code into small re-usable libraries.
 
 This required an interesting change to the site generation template, which you can see [here](https://github.com/edthedev/edthedev.github.io/blob/1b31574972e0c08ca4591c911d2f8fa5a66de5cb/_includes/liveart.multi.script.njk#L25)."}
-    - {id: "snowday", name: "Snow Day - 2021 May 20", desc: "The random effects are managed quite differently in this piece, because the entire canvas has to be redrawn with every frame. There's extra work in the code preventing the window frame color from changing, and the sun from flickering across the sky. It was pretty adorable when the snowman's arms were flailing randomly, I have to admit."}
     - {id: "candle", name: "Candle - 2021 May 11", desc: "
 My recent meditation theme has been about slowing down.
 
@@ -36,18 +30,14 @@ My recent meditation theme has been about slowing down.
 + The sky algorithm is subtly shifted to later evening, to justify the presence of the candle.
 
 "}
-    - {id: "tree", name: "Tree - 2021 May 6", desc: "This was an interesting technical challenge to create random branching rules that feel natural. Most of the effort on the background was to give the tree a space to feel more alive."}
     - {id: "waves", name: "Waves - 2021 May 2", desc: "This is the first sketch where I felt confident enough to try a non-abstract subject."}
-    - {id: "deep", name: "Deep Dive - 2021 April 25"}
     - {id: "sketch1", name: "Sketch - 2021 April 18", desc: "
 
 These abstract pieces are loosely based on actual sketches I have drawn.
 
 The final live art has very little in common with the original sketches due to my limited mastery of JavaScript as an art medium. "}
     - {id: "crossing", name: "Crossing Paths - 2020 December"}
-    - {id: "boxes", name: "Bouncing in Boxes - 2020 December"}
     - {id: "weave", name: "Stark Weave - 2020 December"}
-    - {id: "weave_strange", name: "Strange Weave - 2020 December"}
 
 ---
 
@@ -82,6 +72,9 @@ Nothing to see here.
 
 {% endfor -%}
 
+## More Art
+
+There's more live interactive art [over here](/art/live/more)
 
 ## License
 
