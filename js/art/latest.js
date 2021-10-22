@@ -126,66 +126,59 @@ function get_color_idx(idx) {
   return grid_memory[idx].color_idx;
 }
 
-function draw_rect(idx) {
-    iy = int(idx / grid_width); // row
-    ix = idx % grid_width; //col
+function draw_top_triangle(idx) {
 
-    x1 = sq_wide * ix;
-    x2 = x1 + sq_wide;
-    y1 = sq_tall * iy;
-    y2 = y1 + sq_tall;
+    margin = 30;
+    xul = 0 + idx * margin;
+    xur = 400 - idx * margin;
+    xpoint = 200;
+
+    yul = 0;
+    yur = 0;
+    ypoint = 200 - idx*margin;
+    console.debug("idx: " + idx);
     
     var sq_color_idx = grid_memory[idx].color_idx;
-    var sqc2 = get_tile_color(sq_color_idx-1); // top
-    var sqc3 = get_tile_color(sq_color_idx+1); // left
     var sq_color = get_tile_color(sq_color_idx);
     if(grid_memory.length < grid_width*grid_width) {
       sq_color = get_start_color(sq_color_idx);
     }
-    // Always black margin, for now.
-    sqc2 = color(0,0,0);
-    sqc3 = color(0,0,0);
-
-    // Top margin
-    fill(sqc2);
-    rect(x1,y1,x2,y2);
-
-    // Left margin (leave top margin)
-    fill(sqc3);
-    rect(x1,y1+sqm,x2,y2);
 
     // Main color
     fill(sq_color);
-    var sqm = 20;
-    rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
+    triangle(xul, yul, xpoint, ypoint, xur, yur);
 }
 
-function draw_line(idx){
-  color_idx = get_color_idx(idx);
-  ln_color = get_start_color(color_idx);
-  ix = (idx) % grid_width; //col
+function draw_bottom_triangle(idx) {
+    idx = idx - 25;
 
-  // tall line
-  x_margin = 40; //thinner
-  y1 = 0;
-  y2 = 400;
-  x1 = (sq_wide * ix) + x_margin;
-  xw = sq_wide - x_margin;
+    margin = 15;
+    xul = 0 + idx * margin;
+    xur = 400 - idx * margin;
+    xpoint = 200;
 
-  fill(ln_color);
-  rect(x1,y1,xw,y2);
+    yul = 400;
+    yur = 400;
+    ypoint = 200 + idx*margin - margin;
+    
+    var sq_color_idx = grid_memory[idx].color_idx;
+    var sq_color = get_tile_color(sq_color_idx);
+    if(grid_memory.length < grid_width*grid_width) {
+      sq_color = get_start_color(sq_color_idx);
+    }
 
-  // fill(color(0,0,0));
-  // rect(x1 + x_margin + sq_wide,y1,x_margin,y2);
-
+    // Main color
+    fill(sq_color);
+    triangle(xul, yul, xpoint, ypoint, xur, yur);
 }
+
 
 function draw_grid() {
   for(var i=0; i<grid_memory.length; i++) {
     if(i<=25){
-      draw_rect(i);
+      draw_top_triangle(i);
     } else {
-      draw_line(i);
+      draw_bottom_triangle(i);
     }
   }
 }
@@ -196,10 +189,13 @@ function new_square() {
 
 var start_pos = [[100,300], [150, 350]];
 
+
 function setup() {
   setup_canvas(400,400);
   grid_memory = [];
   zippy();
+  starfield(400,400,4);
+  setup_background_circles(200, 300);
 }
 
 var pulse = 0;
@@ -214,7 +210,6 @@ function draw() {
     }
     else {
       pulse_delay = 35;
-      console.debug(dimmer_dx);
       if(dimmer_dx < 200){
         dimmer_dx+=1;
       }

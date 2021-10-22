@@ -25,3 +25,32 @@ function zippy() {
     rect(x,0, stripe_w, 400);
   }
 }
+
+function setup_background_circles(centerx, max_diam){
+  xo = centerx;
+  yo = centerx;
+  for(var i=0; i<9; i++){
+    ccolor = fresh_color();
+    diam = max_diam -i*20;
+    fill(ccolor);
+    circle(xo, yo, diam);
+  }
+}
+
+function starfield(max_x, max_y, star_size=4) {
+  // white stars
+  noStroke();
+  fill(color(255,255,255));
+  
+  // Randomly scatter stars.
+  starcount = random(20,60);
+  for(i=0;i<starcount;i++){
+    starx = random(0, max_x);
+    stary = random(0, max_y);
+    circle(starx, stary, star_size);
+    if(random(0,5)==1) {
+      circle(starx -4, stary -4, star_size);
+    }
+
+  }
+}
