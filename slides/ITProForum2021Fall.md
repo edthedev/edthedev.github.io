@@ -64,11 +64,80 @@ Things in CI/CD that reduce the accrual of technical debt:
 
 ---
 
+## Too busy dealing with "That System" to set up CI/CD.
+
+> "Making any change to **that system** is time consuming and dangerous."
+
+???
+
+*About That System*
++ We can't reliably test changes to it.
++ It is behind on patches.
++ You know, in your heart, that it relies on a production Perl script everyone has forgotten.
+
+CICD is how you deal with "That System".
++ CICD is a way to make changes auditable and reversible.
++ CICD gives us back time.
+
+---
+
+## Confusion costs time.
+
+> Set up mandatory change review.
+
+???
+
++ On a bad day, effective responders are those who understand what happened.
++ Mandatory change reviews cause more people to actually understand what changed.
+
+---
+
+## Rework costs time.
+
+> Learn regression testing.
+
+???
+
+Your CI/CD system should check lots of things before and after each production change.
+
+If you're verifying a product with a web or mobile interface, learn RobotFramework.
+
+If you're not sure where to start, Learn PowerShell.
++ PowerShell can do almost anything.
++ More importantly, PowerShell can verify almost anything.
++ Start using PowerShell to verify that past production change mistakes don't happen again.
++ It runs on every platform.
++ It is readable and widely supported.
++ Use the documentation standards.
 
 
 ---
-+ Continous Delivery - Occassional deployment.
-+ Dependabot (KB article here.)
+
+## Choose Products with Strong Available Support
+
+> You will use it.
+
+---
+
+## Ambiguitiy costs time
+
+> Set up request templates.
+
+???
+
++ Most ticketing systems allow templates. Use them.
+
+---
+
+## Exploits cost time.
+
+> Turn on GitHub Dependabot
+
+[Job Aid: Cybersecurity, GitHub Dependabot security alerts](https://answers.uillinois.edu/illinois/110071)
+
+---
+
+
 + Lint/Style tools
 + Automated rebuild with minor releases. Make it one command, or make it automated.
 + Mandatory code review - Tour of GitHub review requiremnts and branch protections here.
