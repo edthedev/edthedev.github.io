@@ -13,8 +13,9 @@ h1, h2, h3 {
 }
 
 .remark-slide-content {
-  vertical-align: middle;
+  /* vertical-align: middle; */
   padding-bottom: 5em; /* Slide content up a bit to allow for bottom banner. */
+  padding-top: 5em;
 }
 
 .remark-slide-content h1 {
@@ -25,21 +26,33 @@ h1, h2, h3 {
   font-size: 2em;
 }
 
+.remark-slide-content h3 {
+  font-size: 1.5em;
+  font-style: italic;
+  box-shadow: 3px 1px orange;
+  margin-bottom: 0.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  list-style-type: square;
+  ;
+}
+
 blockquote {
   font-style: italic;
   box-shadow: 3px 1px orange;
 }
 
-li {
-  font-style: italic;
-  box-shadow: 3px 1px orange;
-  list-style-type: none;
-  margin-bottom: 0.5em;
-  ;
+.remark-slide-content img{
+  max-width: 20em;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 img {
-  float:right;
   border-radius:22px;
 }
 img.left {
