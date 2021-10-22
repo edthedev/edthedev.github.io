@@ -24,8 +24,9 @@ slideimg: /slides/img/slidebg.jpg
 
 ---
 
-## Continuous Integration / Frequent Deployment
+## Continuous Integration / Continuous Delivery (CI/CD)
 
+![GitHub Release Screenshot](/slides/img/itpro2021fall/github_release.PNG)
 ### Delivery is not Deployment.
 
 + Do everything *except release* automatically.
@@ -33,7 +34,6 @@ slideimg: /slides/img/slidebg.jpg
 + Deploy frequently.
 + One outage can cost a team more time than it takes to setup CI/CD.
 
-![GitHub Release Screenshot](/slides/img/itpro2021fall/github_release.PNG)
 
 ???
 
@@ -48,11 +48,14 @@ slideimg: /slides/img/slidebg.jpg
 
 ---
 
-## Save Time
+## Enforce Change Review
 
-### Set up mandatory change review.
-+ On a bad day, effective responders are those who understand what happened.
-+ Mandatory change reviews cause more people to actually understand what changed.
+![GitHub Reviews Screenshot](/slides/img/itpro2021fall/github_reviewers.PNG)
+
+### Reviewers respond effectively to issues.
++ Those who understand what changed respond most effectively to issues.
++ Mandatory review causes more people to know what changed.
+
 
 ???
 
