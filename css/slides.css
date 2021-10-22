@@ -25,6 +25,19 @@ h1, h2, h3 {
   font-size: 2em;
 }
 
+blockquote {
+  font-style: italic;
+  box-shadow: 3px 1px orange;
+}
+
+li {
+  font-style: italic;
+  box-shadow: 3px 1px orange;
+  list-style-type: none;
+  margin-bottom: 0.5em;
+  ;
+}
+
 img {
   float:right;
   border-radius:22px;
