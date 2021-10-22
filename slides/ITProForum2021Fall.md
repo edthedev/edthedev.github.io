@@ -56,16 +56,44 @@ slideimg: /slides/img/slidebg.jpg
 + Those who understand what changed respond most effectively to issues.
 + Mandatory review causes more people to know what changed.
 
-
 ???
 
 ---
 
-## Rework costs time.
+## Adopt Regression Testing
 
-> Learn regression testing.
+```robot
+Start the Application
+    Capture Page Screenshot     
+    Click Element               accessibility_id=Get Started
+```
+
+### Don't repeat mistakes.
+
++ [RobotFramework](https://robotframework.org/) - Nearly English syntax.
++ [PowerShell Pester](https://github.com/pester/Pester) - Runs anywhere, talks to everything.
 
 ???
+
++ Robot is written in plain English.
++ PowerShell runs everywhere and can talk to everything, very readable.
+
+---
+
+## Enforce Style Guides 
+
+```sh
+MD009/no-trailing-spaces: Trailing spaces [Expected: 0 or 2; Actual: 1]
+MD012/no-multiple-blanks: Multiple consecutive blank lines [Expected: 1; Actual: 2]
+```
+
+### Quick Scripts Deserve Style
+
++ [Enforce Style checks with PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer)
++ [Flake8 for Python](https://flake8.pycqa.org/en/latest/)
++ [MarkdownLint for Markdown]()
+
+---
 
 Your CI/CD system should check lots of things before and after each production change.
 
