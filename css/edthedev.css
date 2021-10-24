@@ -5,7 +5,8 @@ Page Styles
 */
 body
 {
-	font-family: 'times new roman', times, serif;
+	/* font-family: 'times new roman', times, serif; */
+  font-family: monospace;
 	font-size:100%;
 	background-color: #EEE !important;
   margin: 0em;
@@ -23,6 +24,7 @@ canvas{
 }
 
 h1 {
+  font-family: ui-monospace;
 	font-size: 2em;
 	font-weight: 400;
 	letter-spacing: 3px;
@@ -31,9 +33,10 @@ h1 {
 
 h2 {
 	padding-left: 1em;
-	font-family: 'times new roman', times, serif !important;
+  font-family: monospace;
 	font-size:140%;
 	border-bottom-style:solid;
+  box-shadow: 0px 4px darkcyan;
 }
 
 h3, h4 {
