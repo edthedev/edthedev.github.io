@@ -12,7 +12,7 @@ This recipe worked for me on Raspbian on a Pi 4.
 Install the dependencies.
 Run these commands with `sudo`.
 ```
-apt install make cc65
+apt install make cc65 git
 apt install libsdl2-dev
 ```
 
