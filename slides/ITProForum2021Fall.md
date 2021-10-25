@@ -25,26 +25,53 @@ slideimg: /slides/img/slidebg.jpg
 
 ## Build a Regression Suite
 
-It starts as a checklist.
-+ Lists *critical* things to check after a change.
-+ Includes the hard-to-remember details.
-+ Long checklists justify RobotFramework, or a PowerShell pester suite.
+### Don't repeat mistakes.
+
+The Regression Suite
+
++ **starts as a checklist**.
++ lists *critical* things to check after a change.
++ includes the hard-to-remember details.
+
+Long checklists justify RobotFramework, or a PowerShell pester suite.
 
 ???
+
 Checklist
 + *critical*: What can't wait for tomorrow if it is broken?
 + Hard to remember: weird URLs, who to ask for help, what error code 7202 means.
-+ RobotFramework - Plain english automation framework. Does web, which is usually what you need.
-+ PowerShell pester - pester is a near English way to specify tests in PowerShell.
-+ PowerShell runs everywhere and talks to everything.
 
 QA: Error 7202 probably means the upgrade script is still pointed at the DEV database server.
 
 ---
 
-## Have a Pipeline
+## Build a Regression Suite
 
-Campus has good cheap options:
+### Automate Regression Tests
+
+```robot
+Start the Application
+    Capture Page Screenshot     
+    Click Element               accessibility_id=Get Started
+```
+
+
++ [RobotFramework](https://robotframework.org/) - Nearly English syntax.
++ [PowerShell Pester](https://github.com/pester/Pester) - Runs anywhere, talks to everything.
+
+???
+
++ RobotFramework is a plain english automation framework. Does web, which is usually what you need.
++ Pester is a nearly plain English way to specify tests in PowerShell.
++ PowerShell runs everywhere and can talk to everything, it's script, but very readable.
+
+Difference: Robot is for testing. PowerShell is for everything.
+
+---
+
+## Have an Automated Pipeline (CI/CD)
+
+### Campus has good cheap CI/CD options.
 
 + **GitHub seems to be where the campus community is converging.**
 + Jenkins is the most mature product in the space.
@@ -76,9 +103,10 @@ Tips: Azure DevOps can store your manual checklists for you, and has a planned p
 
 ---
 
-## Continuous Integration / Continuous Delivery (CI/CD)
+## Have an Automated Pipeline (CI/CD)
 
 ![GitHub Release Screenshot](/slides/img/itpro2021fall/github_release.PNG)
+
 ### Delivery is not Deployment.
 
 + Do everything *except release* automatically.
@@ -100,35 +128,20 @@ Tips: Azure DevOps can store your manual checklists for you, and has a planned p
 
 ---
 
-## Enforce Change Review
+## Have an Automated Pipeline (CI/CD)
 
 ![GitHub Reviews Screenshot](/slides/img/itpro2021fall/github_reviewers.PNG)
 
-### Reviewers respond effectively to issues.
+### Enforce Change Reviews
 + Those who understand what changed respond most effectively to issues.
 + Mandatory review causes more people to know what changed.
 
 ???
 
++ Reviewers respond effectively to issues.
++ 2 Reviewers + Author = 3 possible responders
+
 ---
-
-## Adopt Regression Testing
-
-```robot
-Start the Application
-    Capture Page Screenshot     
-    Click Element               accessibility_id=Get Started
-```
-
-### Don't repeat mistakes.
-
-+ [RobotFramework](https://robotframework.org/) - Nearly English syntax.
-+ [PowerShell Pester](https://github.com/pester/Pester) - Runs anywhere, talks to everything.
-
-???
-
-+ Robot is written in plain English.
-+ PowerShell runs everywhere and can talk to everything, very readable.
 
 ---
 
