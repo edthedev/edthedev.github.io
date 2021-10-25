@@ -143,6 +143,18 @@ Tips: Azure DevOps can store your manual checklists for you, and has a planned p
 
 ---
 
+## Set Up ChatOps
+
+>TODO
+
+---
+
+## Questions & Answers
+
+???
+
+Bonus slides follow.
+
 ---
 
 ## Enforce Style Guides 
