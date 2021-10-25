@@ -42,6 +42,40 @@ QA: Error 7202 probably means the upgrade script is still pointed at the DEV dat
 
 ---
 
+## Have a Pipeline
+
+Campus has good cheap options:
+
++ **GitHub seems to be where the campus community is converging.**
++ Jenkins is the most mature product in the space.
++ Azure DevOps has a solution.
++ AWS has a solution.
+
+These and more are in use on campus successfully.
+
+???
+
+About all:
++ You pay for clock cycles.
++ These options have strong compatibility libraries.
+
+Ed, I already have X? Should I start there? Yes.
+
++ GitHub is the strongest source control offering, so you are probably using it already. It is *not* hard to check source out from GitHub into another pipeline.
+
+
++ Does Jenkins talk to X? Yes. Yes it does.
++ Does Azure DevOps talk to X? Very probably. If you can live with Microsoft's reasonable defaults you will have a good time.
++ Does AWS talk to X? How is your Python scripting?
++ Does GitHub talk to X? How is your JavaScript scripting?
+
++ AWS Pipelines
++ Look no further, you have GitHub Enterprise.
+
+Tips: Azure DevOps can store your manual checklists for you, and has a planned path toward automation.
+
+---
+
 ## Continuous Integration / Continuous Delivery (CI/CD)
 
 ![GitHub Release Screenshot](/slides/img/itpro2021fall/github_release.PNG)
