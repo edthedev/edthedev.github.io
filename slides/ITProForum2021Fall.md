@@ -161,11 +161,13 @@ Tips: Azure DevOps can store your manual checklists for you, and has a planned p
 
 ## Set Up ChatOps
 
-### Add DevOps
+![GitHub ChatBot Screenshot](/slides/img/itpro2021fall/github_chatbot_pr.PNG)
 
-+ Automate information reaching your ChatOps rooms.
-+ Replace diverse interfaces and things to log into.
-+ Keep chatting.
+### Add DevOps to Chat
+
++ Automate information into ChatOps rooms.
++ Replace diverse interfaces with ChatBots.
++ Keep chatting with people.
 
 ???
 
