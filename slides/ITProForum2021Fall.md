@@ -17,6 +17,18 @@ slideimg: /slides/img/slidebg.jpg
 
 ## Invest Against Technical Debt
 
+### Invest in making maintenance into a routine.
+
++ Less scary.
++ Faster.
++ Free of surprises.
+
+---
+
+## Invest Against Technical Debt
+
+### Practical First Steps
+
 + Build a Regression Suite
 + Have a Pipeline (CI/CD)
 + Set up ChatOps
