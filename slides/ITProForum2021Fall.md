@@ -145,7 +145,40 @@ Tips: Azure DevOps can store your manual checklists for you, and has a planned p
 
 ## Set Up ChatOps
 
->TODO
+### Start with Chat
+
++ Make rooms where things typically happen.
++ Add 'update the chat room' to existing playbooks.
++ Put web links in chat.
+
+???
+
++ Start without bots.
++ Starting manual prevents investing in patterns that don't matter.
++ Learn to use 'deep links' in existing tools.
+
+---
+
+## Set Up ChatOps
+
+### Add DevOps
+
++ Automate information reaching your ChatOps rooms.
++ Replace diverse interfaces and things to log into.
++ Keep chatting.
+
+???
+
++ Valuable automated updates attracts stakeholders to the room.
++ Have fewer arguments about user interfaces.
++ Chat with collegues is the primary value. Keep the space safe for chat.
+
+
++ Start with letting automation share information into chat rooms teams already use.
++ [Why ChatOps?](https://blog.yellowant.com/6-reasons-why-chatops-make-workplace-better-875659187d0c)
++ Consider your [Journey to ChatOps](https://medium.com/ibm-garage/making-a-virtual-war-room-the-journey-to-chatops-eaaecd83873c)
++ [ChatOps is not just about bots.](https://www.bmc.com/blogs/chatops/)
++ Resources on [ChatOps](https://github.com/exAspArk/awesome-chatops)
 
 ---
 
