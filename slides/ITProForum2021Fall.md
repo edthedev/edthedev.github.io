@@ -207,6 +207,15 @@ MD012/no-multiple-blanks: Multiple consecutive blank lines [Expected: 1; Actual:
 
 ---
 
+## Turn on GitHub Dependabot
+
+[Job Aid: Cybersecurity, GitHub Dependabot security alerts](https://answers.uillinois.edu/illinois/110071)
+
+---
+
+
+???
+
 Your CI/CD system should check lots of things before and after each production change.
 
 If you're verifying a product with a web or mobile interface, learn RobotFramework.
@@ -218,7 +227,6 @@ If you're not sure where to start, Learn PowerShell.
 + It runs on every platform.
 + It is readable and widely supported.
 + Use the documentation standards.
-
 
 ## Too busy dealing with "That System" to set up CI/CD.
 
@@ -235,36 +243,6 @@ CICD is how you deal with "That System".
 + CICD is a way to make changes auditable and reversible.
 + CICD gives us back time.
 
-
----
-
-
-
----
-
-## Choose Products with Strong Available Support
-
-> You will use it.
-
----
-
-## Ambiguitiy costs time
-
-> Set up request templates.
-
-???
-
-+ Most ticketing systems allow templates. Use them.
-
----
-
-## Exploits cost time.
-
-> Turn on GitHub Dependabot
-
-[Job Aid: Cybersecurity, GitHub Dependabot security alerts](https://answers.uillinois.edu/illinois/110071)
-
----
 
 
 + Lint/Style tools
