@@ -17,10 +17,28 @@ slideimg: /slides/img/slidebg.jpg
 
 ## Invest Against Technical Debt
 
-+ CI/CD
-+ RobotFramework
-+ 
-+ ChatOps
++ Build a Regression Suite
++ Have a Pipeline (CI/CD)
++ Set up ChatOps
+
+---
+
+## Build a Regression Suite
+
+It starts as a checklist.
++ Lists *critical* things to check after a change.
++ Includes the hard-to-remember details.
++ Long checklists justify RobotFramework, or a PowerShell pester suite.
+
+???
+Checklist
++ *critical*: What can't wait for tomorrow if it is broken?
++ Hard to remember: weird URLs, who to ask for help, what error code 7202 means.
++ RobotFramework - Plain english automation framework. Does web, which is usually what you need.
++ PowerShell pester - pester is a near English way to specify tests in PowerShell.
++ PowerShell runs everywhere and talks to everything.
+
+QA: Error 7202 probably means the upgrade script is still pointed at the DEV database server.
 
 ---
 
