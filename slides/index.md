@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: slide_list.njk
 title: Presentations by Edward Delaporte
 ---
 
@@ -9,7 +9,7 @@ I often give presentations on technical topics.
 
 In 2016, I began collecting the slide decks here.
 
-- [Identifying, Paying, and Avoiding Technical Debt - October 2021](/slides/ITProForum2021Fall/)
+- [Identifying, Paying, and Avoiding Technical Debt - October 2021](/slides/2021.10.26ITPFTechnicalDebt.pptx)
 - [Big Ten Academic Alliance - On the Illinois Cybersecurity Development Program - June 2021](/slides/btaa)
 - [Urbana IT Professionals Forum - Mobile Integration Testing for Safer Illinois - June 2021](/slides/ITPF2021Spring.MobileIntegrationTesting.pptx)
 - [CampIT Cloud Security - How CISOs/InfoSec Leaders Have Adjusted to the Cloud World (Panel discussion) - Dec 2020](http://www.campiteducation.com/upcoming-virtualevents/cloudsecurity2/)
