@@ -67,7 +67,6 @@ Start the Application
     Click Element               accessibility_id=Get Started
 ```
 
-
 + [RobotFramework](https://robotframework.org/) - Nearly English syntax.
 + [PowerShell Pester](https://github.com/pester/Pester) - Runs anywhere, talks to everything.
 

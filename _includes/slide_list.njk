@@ -1,0 +1,39 @@
+---
+title: Edward Delaporte's Slide Decks 
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/slide_list.css" /> 
+  <title>{{ title }}</title>
+
+<nav class="ye_navbar" role="navigation"> 
+<a href="/">Edward.Delaporte.us</a>
+<a href="/slides">Presentations</a>
+<a href="/resume">Resume</a>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+{{ content | safe }}
+</div>
+<div class="content" role="contentinfo">
+  <p>Copyright 2021 Edward Delaporte</p>
+</div>
+</html>
