@@ -9,6 +9,7 @@ I often give presentations on technical topics.
 
 In 2016, I began collecting the slide decks here.
 
+- Panelist - CampIT API Gateway Panel Discussion - November 2021 (No Slides)
 - [Identifying, Paying, and Avoiding Technical Debt - October 2021](/slides/2021.10.26ITPFTechnicalDebt.pptx)
 - [Big Ten Academic Alliance - On the Illinois Cybersecurity Development Program - June 2021](/slides/btaa)
 - [Urbana IT Professionals Forum - Mobile Integration Testing for Safer Illinois - June 2021](/slides/ITPF2021Spring.MobileIntegrationTesting.pptx)
