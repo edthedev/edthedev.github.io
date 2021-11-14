@@ -21,28 +21,28 @@ pi pikachu pi pikachu                   # Multiply the top 2 elemens of the pi p
 pika pika pi pikachu                    # Push 2 onto the pi pikachu stack.
 pi pikachu pi pikachu                   # Multiply the top 2 elemens of the pi pikachu stack.
 pi pika                                 # Copy the top element of pi pikachu to pika pikachu
-pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII
+pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII (H)
 pika pi                                 # Copy the top element of pika pikachu to pi pikachu.
 pi pi pika pi pikachu                   # Push 3 onto the pi pikachu stack.
 pika pi pi pikachu                      # Push the result of subtract the top 2 elements of pi pikachu stack onto the pi pikachu stack.
 pi pika                                 # Copy the top element of pi pikachu to pika pikachu
-pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII
+pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII (E)
 pika pi                                 # Copy the top element of pika pikachu to pi pikachu.
-pi pi pika pika pi pi pika pi pikachu
-pi pika pi pikachu
-pi pika
-pikachu pikachu pi pikachu
-pika pi
-pikachu pikachu pi pikachu
-pika pi
-pi pi pika pi pikachu
-pi pika pi pikachu
-pi pika
-pikachu pikachu pi pikachu
-pika pi
+pi pi pika pika pi pi pika pi pikachu   # Push 7 onto the pi pikachu stack.
+pi pika pi pikachu                      # Add the top two elements of the pikachu stack. (gets us to L)
+pi pika                                 # Copy the top element of pi pikachu to pika pikachu
+pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII (L)
+pika pi                                 # Copy the top element of pika pikachu to pi pikachu. (Get our L back.)
+pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII (L)
+pika pi                                 # Copy the top element of pika pikachu to pi pikachu. (Get our L back.)
+pi pi pika pi pikachu                   # Push 3 onto the pi pikachu stack.
+pi pika pi pikachu                      # Add the top two elements of the pikachu stack. (gets us to O)
+pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII (O)
 ```
 
 > Ouput
 ```
 HELLO
 ```
+
+I leave ` WORLD` as an exercise for the reader, who is hopefully more fluent in `Pikachu` than I am.
