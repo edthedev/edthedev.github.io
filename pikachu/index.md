@@ -19,9 +19,9 @@ Presented below is a significantly shorter solution to `HELLO` that makes more u
 ```pikachu
 pi pi pika pi pi pika pi pikachu        # Push 6 on the pi pikachu stack.
 pi pi pika pi pi pika pi pikachu        # Push 6 onto the pi pikachu stack.
-pi pikachu pi pikachu                   # Multiply the top 2 elemens of the pi pikachu stack.
+pi pikachu pi pikachu                   # Multiply the top 2 elements of the pi pikachu stack.
 pika pika pi pikachu                    # Push 2 onto the pi pikachu stack.
-pi pikachu pi pikachu                   # Multiply the top 2 elemens of the pi pikachu stack.
+pi pikachu pi pikachu                   # Multiply the top 2 elements of the pi pikachu stack.
 pi pika                                 # Copy the top element of pi pikachu to pika pikachu
 pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII (H)
 pika pi                                 # Copy the top element of pika pikachu to pi pikachu.
