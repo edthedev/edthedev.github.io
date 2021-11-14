@@ -66,3 +66,6 @@ You can read the source code of [my live interactive art](/art/live) for some id
 - [Khan Academy](https://www.khanacademy.org/computing)
 - [Learn Git Branching](https://learngitbranching.js.org/)
 
+## Silly Topics
+
+ - Try out the [Pikachu Programming Language](/pikachu/)
