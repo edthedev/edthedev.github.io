@@ -101,3 +101,12 @@ img {
     max-width: 300px;
     box-shadow: 0.2em 0.2em #757575d2
 }
+
+/* Code Block Defaults */
+
+pre {
+    background-color: lightgray;
+}
+code {
+    background-color: lightgray;
+}

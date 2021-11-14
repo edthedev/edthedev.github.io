@@ -66,3 +66,9 @@ You can read the source code of [my live interactive art](/art/live) for some id
 - [Khan Academy](https://www.khanacademy.org/computing)
 - [Learn Git Branching](https://learngitbranching.js.org/)
 
+## Silly Topics
+
+These are just ways to code that happen to amuse me.
+
+ - [Pikachu Programming Language](/pikachu/)
+ - [X16 BASIC on Raspberry Pi](/basic/x16pi)
