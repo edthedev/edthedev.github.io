@@ -68,4 +68,7 @@ You can read the source code of [my live interactive art](/art/live) for some id
 
 ## Silly Topics
 
- - Try out the [Pikachu Programming Language](/pikachu/)
+These are just ways to code that happen to amuse me.
+
+ - [Pikachu Programming Language](/pikachu/)
+ - [X16 BASIC on Raspberry Pi](/basic/x16pi)
