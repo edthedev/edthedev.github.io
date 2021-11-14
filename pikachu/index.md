@@ -1,0 +1,48 @@
+---
+layout: basic.njk
+title: Pikachu Program - Hello
+---
+
+`HELLO WORLD` in the [Pikachu Language][4] can be [quite terrifying][2]. But it doesn't have to be. Presented below is a shorter solution that makes more use of the [varied commands available][4]. Attentive readers will recognize that this is also a solution to one of the puzzles in [Human Resource Machines][3].
+
+Note that this is distinct from [Pikalang][5], which is, I hesitate to say, more reasonable for humans, and turing robots, but perhaps less convenient for the [intendend audience][6].
+
+
+[2]: https://trove42.com/introducing-pikachu-programming-language/
+[3]: https://tomorrowcorporation.com/humanresourcemachine
+[4]: https://trove42.com/pikachu-syntax-rules/
+[5]: https://esolangs.org/wiki/Pikalang
+[6]: https://en.wikipedia.org/wiki/Pikachu
+
+```pikachu
+pi pi pika pi pi pika pi pikachu        # Push 6 on the pi pikachu stack.
+pi pi pika pi pi pika pi pikachu        # Push 6 onto the pi pikachu stack.
+pi pikachu pi pikachu                   # Multiply the top 2 elemens of the pi pikachu stack.
+pika pika pi pikachu                    # Push 2 onto the pi pikachu stack.
+pi pikachu pi pikachu                   # Multiply the top 2 elemens of the pi pikachu stack.
+pi pika                                 # Copy the top element of pi pikachu to pika pikachu
+pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII
+pika pi                                 # Copy the top element of pika pikachu to pi pikachu.
+pi pi pika pi pikachu                   # Push 3 onto the pi pikachu stack.
+pika pi pi pikachu                      # Push the result of subtract the top 2 elements of pi pikachu stack onto the pi pikachu stack.
+pi pika                                 # Copy the top element of pi pikachu to pika pikachu
+pikachu pikachu pi pikachu              # Pop top element of pi pikachu and write as ASCII
+pika pi                                 # Copy the top element of pika pikachu to pi pikachu.
+pi pi pika pika pi pi pika pi pikachu
+pi pika pi pikachu
+pi pika
+pikachu pikachu pi pikachu
+pika pi
+pikachu pikachu pi pikachu
+pika pi
+pi pi pika pi pikachu
+pi pika pi pikachu
+pi pika
+pikachu pikachu pi pikachu
+pika pi
+```
+
+> Ouput
+```
+HELLO
+```
