@@ -7,7 +7,7 @@ title: HELLO in the Pikachu Programming Language - By Edward Delaporte
 
 `HELLO WORLD` in the [Pikachu Language][4] can be [quite terrifying][2]. But it doesn't have to be. 
 
-Presented below is a significantly shorter solution to `HELLO` that makes more use of the [varied commands available][4]. Attentive readers may recognize that this closely related to an optimal solution to one of the puzzles in [Human Resource Machine][3].
+Presented below is a significantly shorter solution to `HELLO` that makes more use of the [varied commands available][4]. Attentive readers may recognize that this closely relates to an optimal solution to one of the puzzles in [Human Resource Machine][3].
 
 
 [2]: https://trove42.com/introducing-pikachu-programming-language/
