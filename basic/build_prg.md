@@ -7,6 +7,8 @@ title: Build and run a PRG file - Guide by Edward Delaporte
 
 
 To practice, I decide to attempt building the [X16 Commander Sprite demo][1].
+
+
 [1]: https://github.com/commanderx16/x16-demo/tree/master/cc65-sprite
 
 If you are following along, be sure to start with [setting up the X16 Emulator on Raspberry Pi](/basic/x16pi/)
