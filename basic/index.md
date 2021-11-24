@@ -15,6 +15,7 @@ And here is a setup guide:
 
 + [Install X16 Emulator on a Raspberry Pi](/basic/x16pi/) - 2021 Oct
 + [How to create animations with x16emu](/basic/howto) - 2021 May
++ [Build a PRG file and run it with X16 Emulator](/basic/build_prg.md)
 
 ## Resources
 
