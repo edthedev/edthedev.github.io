@@ -34,6 +34,7 @@ Please let me know if you enjoyed it.
 
 I've been coding for a long time.
 
+- [Some of my Code](/code)
 - [Learn to Code](/learn2code) - I maintain a list of my favorite resources for learning to code.
 - [Coding in BASIC](/basic) - I still write BASIC code.
 - [Make a Robot](/robots) - You should make a robot.
