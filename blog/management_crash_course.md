@@ -110,7 +110,10 @@ When this is working - pull requests and deployments should only ever include
 
 ## Offer Leaders Levers / Never Waste Bad News
 
-Categorize work for leadership into 3 types:
+Leadership needs to think in large broad strokes.
+Present information to them to help them make excellent decisions.
+
+When presenting to leadership, categorize all work into 3 types:
 
 + Operational
 + Enabler
