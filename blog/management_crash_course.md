@@ -48,9 +48,11 @@ Everything critical fits in two weeks. Nothing in technology takes less than two
 
 Set deadlines to ensure delivery. **Default to every two weeks.** Deliver crap rather than delivering nothing.
 
-If a team's work sucks just a little less with each delivery, stakeholders will stick with them until the delivery becomes excellent.
+> "All you have to do to succeed in software is to consistently suck less with every release."
 
-TODO: Add credit to author of Suck Less concept here, if possible.
+    - [Max Kanat-Alexander](https://www.codesimplicity.com/post/suck-less/)
+
+If a team's work sucks just a little less with each delivery, stakeholders will stick with them until the delivery becomes excellent.
 
 Make blocking decisions in less than two weeks, even when they are the wrong ones. Be honest but unremorseful when you learn you made the wrong decision. That was two weeks ago. You were a less experienced leader then.
 
