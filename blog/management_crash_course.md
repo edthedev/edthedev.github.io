@@ -123,6 +123,8 @@ Enabler work is a lever for leadership. In a crisis, leadership may move all res
 
 In times when the organization is not about to cease to exist, the "Enabler" resource dedication should never be below 20%, but should generally be guided by how successful the leaders want their organization to be 80%, 90%? Any team that cannot dedicate at least 20% to enabler work is unquestionably understaffed and is accruing techincal debt toward eventual extinction.
 
+### Strategic Work
+
 Strategic work is the part that is fun for the leader. This is actually a series of priorities that the leader can move in and out of the top positition (the only position that matters), to test their theories about what the organization needs next.
 
 Leaders will learn over time to not strongly differentiate between strategic priorities and the enabler work they are built on, and instead set exactly one top priority and make room for enabler work that supports it. But they must learn this by being enabled by managers who clearly label 'enabler', 'strategic' and 'operational' work for them. There are no shortcuts on this journey.
