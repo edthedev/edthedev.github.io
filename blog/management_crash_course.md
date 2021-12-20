@@ -10,9 +10,8 @@ Some of my lead developers go on to become architects, others go on to become di
 ## Critical Concepts
 
 + Make Slack / Single Team Priority / Brag to Enable Next Steps
-+ Deadlines / Decisions / Worry / Single Team Priority
++ Deadlines / Decisions
 + Offer Leaders Levers / Never Waste Bad News
-+ Track Victories / Brag to Enable the next Great Outcome
 + Have Exactly Two Solutions
   
 ## Make Slack
@@ -38,3 +37,40 @@ Tip number 2 is to keep track of the trust you have earned, and hold yourself ac
 
 Often this vigilant worthiness just takes the form of blunt honesty. I have many times told a colleague "What your team deserves from mine is X, but what we can deliver is Y. We will work to close this gap."
 
+## Dealines and Decisions
+
+Everything critical fits in two weeks. Nothing in technology takes less than two weeks. The smallest problem can explode to consume two weeks. The largest deliverable to can be boiled down to an ugly essence that can be delivered in two weeks.
+
+Set deadlines to ensure delivery. Default to every two weeks. Deliver crap rather than delivering nothing.
+
+If a team's work sucks just a little less with each delivery, stakeholders will stick with them until the delivery becomes excellent.
+
+TODO: Add credit to author of Suck Less concept here, if possible.
+
+Make blocking decisions in less than two weeks, even when they are the wrong ones. Be honest but unremorseful when you learn you made the wrong decision. That was two weeks ago. You were a less experienced leader then.
+
+Don't make non-blocking decisions at all, lest those decisions become blockers for your team.
+
+## Keep Two Solutions
+
+For any problem, your team should always be actively working with exactly two solutions per problem in production: The Legacy way, and the Preferred way.
+
+Have no tolerance for "the new new way" or any multiplication in the old way.
+
+If the team has more than one old way, push hard against introduction of an updated "Preferred" way until all but one "old way" has been cleaned up in production. Use this to motivate your technology adoption leaders to clean up old solutions.
+
+Your adoption leaders should grow to understand that they can adopt anything they like, as long as they put in the work to retire the "old way" at the same time as they work on the "new way".
+
+In more detail, this means: given Oldest, Old, and Newest solutions, the environment should look like this:
+
+Development: Mix of Oldest, Old and Newest Solutions.
+Test: Mix of Old an Newest Solutions.
+Production: Mix of Oldest, and Old solutions.
+
+All work on adopting the Newest solution should focus on anything using the Oldest solution, because the team knows that you won't greenlight activating the "Newest" for production use until everything using "Oldest" is migrated in test to either "Newest" or "Old".
+
+The specific terms I teach my teams and leadership are: "Preferred", "Legacy" and "Deprecated".
+
+Preferred - all new work is done here if possible.
+Legacy - any new work that we don't know how to do on our preferred solution still happens here.
+Deprecated - any time work on a deprecated solution is updated in any way, it will be transitioned to use the Preferred or Legacy solution.
