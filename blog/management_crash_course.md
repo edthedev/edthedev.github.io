@@ -46,7 +46,7 @@ Often this vigilant worthiness just takes the form of blunt honesty. I have many
 
 Everything critical fits in two weeks. Nothing in technology takes less than two weeks. The smallest problem can explode to consume two weeks. The largest deliverable to can be boiled down to an ugly essence that can be delivered in two weeks.
 
-Set deadlines to ensure delivery. Default to every two weeks. Deliver crap rather than delivering nothing.
+Set deadlines to ensure delivery. **Default to every two weeks.** Deliver crap rather than delivering nothing.
 
 If a team's work sucks just a little less with each delivery, stakeholders will stick with them until the delivery becomes excellent.
 
