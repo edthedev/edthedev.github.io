@@ -11,8 +11,8 @@ Some of my lead developers go on to become architects, others go on to become di
 
 + Make Slack / Single Team Priority / Brag to Enable Next Steps
 + Deadlines / Decisions
-+ Offer Leaders Levers / Never Waste Bad News
 + Have Exactly Two Solutions
++ Offer Leaders Levers / Never Waste Bad News
   
 ## Make Slack
 
@@ -74,3 +74,34 @@ The specific terms I teach my teams and leadership are: "Preferred", "Legacy" an
 Preferred - all new work is done here if possible.
 Legacy - any new work that we don't know how to do on our preferred solution still happens here.
 Deprecated - any time work on a deprecated solution is updated in any way, it will be transitioned to use the Preferred or Legacy solution.
+
+## Offer Leaders Levers / Never Waste Bad News
+
+Categorize work for leadership into 3 types:
+
++ Operational
++ Enabler
++ Strategic
+
+### Operational Work
+
+The core message for leadership is that this work is simply not optional. It must be fully staffed at all times or bad things will happen. Leaders can strategize to reduce operational workload, but must commit to fully staffing for it until that strategy proves successful.
+
+### Enabler Work
+
+Cleaning up technology debt and investing in exploring new innovations.
+
+A common mis-step is to only talk about technology debt cleanup, and causing all innovation to stop as soon as the leaders feel 'caught up'. Be sure to talk about "Enablers" and about continuous investment, because any team that is only 'caught up' will not stay 'caught up' for long.
+
+Enabler work is a lever for leadership. In a crisis, leadership may move all resources to supporting operations, leaving enablers on hold. They will lose their best people daily while doing so, but it may be the right thing for the organization to survive during a true crisis. The rest of the time, leadership should push the "Enabler" level as high as it will go, only briefly pulling it down to enforce organization-wide rest cycles, before pushing it back up to max, again.
+
+In times when the organization is not about to cease to exist, the "Enabler" resource dedication should never be below 20%, but should generally be guided by how successful the leaders want their organization to be 80%, 90%? Any team that cannot dedicate at least 20% to enabler work is unquestionably understaffed and is accruing techincal debt toward eventual extinction.
+
+Strategic work is the part that is fun for the leader. This is actually a series of priorities that the leader can move in and out of the top positition (the only position that matters), to test their theories about what the organization needs next.
+
+Leaders will learn over time to not strongly differentiate between strategic priorities and the enabler work they are built on, and instead set exactly one top priority and make room for enabler work that supports it. But they must learn this by being enabled by managers who clearly label 'enabler', 'strategic' and 'operational' work for them. There are no shortcuts on this journey.
+
+Most importantly, to enable your leadership - never waste bad news. This they are expected to take full responsibility for any bad news we owe it to them to ensure this news reaches them as quickly as possible.
+
+To particularly serve our leaders well, we should keep a backlog of pre-packaged 'enabler work' that can be acted on immediately after bad news. This lets the leader quickly announce a plan to do better in the future (suck less), and it gets a valuable set of enabler work off of the backlog and into action.
+
