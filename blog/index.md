@@ -3,11 +3,10 @@ layout: book.njk
 title: Coding is Stupid by Edward Delaporte
 ---
 
-# Coding is Stupid
-
 ## Index
 
 1. Introduction
+2. [Management Crash Course](/management_crash_course)
 
 ## Introduction
 
