@@ -27,7 +27,7 @@ Use 'pull' not push. To the greatest extent possible, let team members choose th
 
 For the team, choose one priority every day for the entire team. Only ever ask status questions related to today's priority. Never, under any circumstance, ask a question about something that is not the team's top priority today. Recruit and motivate people and the other work will still get done. When following this rule, there are some questions you will never ask. This is good because those questions were not important. Control your worry.
 
-It is not possible to follow the advice in this book while worrying. Controling worries is a topic for an entire separate book. I highly recommend Dale Carnegie's "How to Stop Worrying", which is an excellently researched well edited masterpiece on the topic.
+It is not possible to follow the advice in this book while worrying. Controling worries is a topic for an entire separate book. I recommend Dale Carnegie's masterpiece on the topic, ["How to Stop Worrying and Start Living"](https://en.wikipedia.org/wiki/How_to_Stop_Worrying_and_Start_Living).
 
 
 Diligently track team member victories, and never miss a chance to brag about them. Use one plain text file per year (for the whole team) with clean Markdown formatting. Have a real disaster recovery plan for this text file. Plan offsite backup and restore, and test it on this file. This `victories.md` file is critical to making time and space for your team to do great things.
