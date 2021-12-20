@@ -13,8 +13,13 @@ Some of my lead developers go on to become architects, others go on to become di
 + Deadlines / Decisions
 + Have Exactly Two Solutions
 + Offer Leaders Levers / Never Waste Bad News
+
+TODO: Agile cycle.
+TODO: Connect these to retention.
   
 ## Make Slack
+
+TODO: Link to the book 'Slack' as authority on the subject of slack.
 
 > Make Slack / Have a Single Team Priority / Brag to Enable Next Steps
 
@@ -129,7 +134,7 @@ Strategic work is the part that is fun for the leader. This is actually a series
 
 Leaders will learn over time to not strongly differentiate between strategic priorities and the enabler work they are built on, and instead set exactly one top priority and make room for enabler work that supports it. But they must learn this by being enabled by managers who clearly label 'enabler', 'strategic' and 'operational' work for them. There are no shortcuts on this journey.
 
-Most importantly, to enable your leadership - never waste bad news. This they are expected to take full responsibility for any bad news we owe it to them to ensure this news reaches them as quickly as possible.
+Most importantly, to enable your leadership - never waste bad news. Because they are expected to take full responsibility for any bad news, we owe it to them to ensure bad news reaches them as quickly as possible.
 
 To particularly serve our leaders well, we should keep a backlog of pre-packaged 'enabler work' that can be acted on immediately after bad news. This lets the leader quickly announce a plan to do better in the future (suck less), and it gets a valuable set of enabler work off of the backlog and into action.
 
