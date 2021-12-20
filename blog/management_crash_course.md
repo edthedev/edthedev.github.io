@@ -113,6 +113,8 @@ When this is working - pull requests and deployments should only ever include
 Leadership needs to think in large broad strokes.
 Present information to them to help them make excellent decisions.
 
+Slack is how a manager makes space within a team. Presenting information to leaders is how a manager makes space around the team.
+
 When presenting to leadership, categorize all work into 3 types:
 
 + Operational
