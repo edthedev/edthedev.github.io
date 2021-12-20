@@ -16,6 +16,9 @@ apt install make cc65 git
 apt install libsdl2-dev
 ```
 
+Update: I ran into [this issue](https://github.com/commanderx16/x16-demo/issues/53), and so I removed 
+`cc64` via `apt` and installed version 2.19 from source instead. I posted more details on that issue.
+
 ### Build the software.
 
 This recipe creates the `x16emu` executable at `~/x16/x16-emulator/x16emu`.

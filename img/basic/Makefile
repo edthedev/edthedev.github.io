@@ -2,7 +2,7 @@ phony: gif
 
 # make gif FILE=colors
 gif: 
-	x16emu.exe -bas ../../_includes/basic/$(FILE).bas -gif $(FILE).gif
+	x16emu -bas ../../_includes/basic/$(FILE).bas -gif $(FILE).gif
 
 latest.gif: FILE=latest
 latest.gif: gif
