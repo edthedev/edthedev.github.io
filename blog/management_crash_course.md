@@ -81,7 +81,7 @@ anything to do with.
 
 When `New Preferred` arrives, the leader should shift their stance on
 `Old Preferred` and `Old Legacy`. The old `Preferred` is now `Legacy` and the
-old `Legacy` is now completely unacceptable (`Deprecated`.)
+old `Legacy` is now completely unacceptable (`Deprecated`).
 
 When a champion wants to convert everything to `New Preferred`, allow and
 encourage them, but with one critical piece of guidance: solutions in the old `Preferred` (now `Legacy`) technology are not to be altered until all
