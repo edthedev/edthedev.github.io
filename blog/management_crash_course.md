@@ -51,29 +51,55 @@ Make blocking decisions in less than two weeks, even when they are the wrong one
 
 Don't make non-blocking decisions at all, lest those decisions become blockers for your team.
 
-## Keep Two Solutions
+## Bless Two Solutions to Every Problem
 
-For any problem, your team should always be actively working with exactly two solutions per problem in production: The Legacy way, and the Preferred way.
+For any problem, the team should have exactly two blessed solutions per
+problem: production: `Legacy` and `Preferred`. There is no limit to the allowed
+number of `Deprecated` solutions; but any new work on a `Deprecated` solution
+must result in the new work being accomplished in one of two ways: with either
+ the `Legacy` or the `Preferred` solution.
 
-Have no tolerance for "the new new way" or any multiplication in the old way.
+### Terminology
 
-If the team has more than one old way, push hard against introduction of an updated "Preferred" way until all but one "old way" has been cleaned up in production. Use this to motivate your technology adoption leaders to clean up old solutions.
++ Preferred - all new work is done here if possible.
++ Legacy - any new work that we don't know how to do on our preferred solution
+  still happens here.
++ Deprecated - any time work on a deprecated solution is updated in any way, it
+  must be transitioned to use the Preferred or Legacy solution.
 
-Your adoption leaders should grow to understand that they can adopt anything they like, as long as they put in the work to retire the "old way" at the same time as they work on the "new way".
+### Manage Transition Through Principles
 
-In more detail, this means: given Oldest, Old, and Newest solutions, the environment should look like this:
+When `Preferred` starts to become another kind of `Legacy`, while
+ `New Preferred` starts to emerge, a leader's job is to step in.
 
-Development: Mix of Oldest, Old and Newest Solutions.
-Test: Mix of Old an Newest Solutions.
-Production: Mix of Oldest, and Old solutions.
+Some leaders misunderstand this principle, and try to stop `New Preferred`.
+Those leaders learn the hard way that `New Preferred` cannot be stopped.
 
-All work on adopting the Newest solution should focus on anything using the Oldest solution, because the team knows that you won't greenlight activating the "Newest" for production use until everything using "Oldest" is migrated in test to either "Newest" or "Old".
+Instead, a leader can champion `New Preferred` as simply `Preferred`, while
+taking an important stand on the `Legacy` issue that no one else wants to have
+anything to do with.
 
-The specific terms I teach my teams and leadership are: "Preferred", "Legacy" and "Deprecated".
+When `New Preferred` arrives, the leader should shift their stance on
+`Old Preferred` and `Old Legacy`. The old `Preferred` is now `Legacy` and the
+old `Legacy` is now completely unacceptable (`Deprecated`.)
 
-Preferred - all new work is done here if possible.
-Legacy - any new work that we don't know how to do on our preferred solution still happens here.
-Deprecated - any time work on a deprecated solution is updated in any way, it will be transitioned to use the Preferred or Legacy solution.
+When a champion wants to convert everything to `New Preferred`, allow and
+encourage them, but with one critical piece of guidance: solutions in the old `Preferred` (now `Legacy`) technology are not to be altered until all
+`Old Legacy`/`Deprecated` solutions have been converted first. They are welcome
+to champion a new system, but they must start with cleaning up the worst
+problem areas first.
+
+Your adoption leaders should grow to understand that they can adopt anything
+they like, as long as they put in the work to retire the "old way" at the same
+time as they work on the "new way".
+
+When this is working - pull requests and deployments should only ever include
+ updates to `Legacy` and `Preferred` solutions. When a `Deprecated` solution
+ needs changed, it must be fully updated to use only the `Legacy` and/or
+ `Preferred` solutions. As soon as the first solution on a new `Preferred`
+ solution is approved for production use, all terms are shifted and all
+ future changes must use only the newly named `Legacy` and `Preferred`
+ solutions.
 
 ## Offer Leaders Levers / Never Waste Bad News
 
