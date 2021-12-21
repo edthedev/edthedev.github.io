@@ -117,9 +117,9 @@ Slack is how a manager makes space within a team. Presenting information to lead
 
 When presenting to leadership, categorize all work into 3 types:
 
-+ Operational
-+ Enabler
-+ Strategic
++ `Operational` - This label tells a leader that their approach to this work should be to just make sure it happens.
++ `Strategic` - Tells the leader this was their own idea.
++ `Enabler` - This label tells leaders this is where they can invest to get surprising value in the future.
 
 ### Operational Work
 
