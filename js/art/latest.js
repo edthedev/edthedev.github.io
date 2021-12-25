@@ -30,11 +30,21 @@ var terms = [
   'LOAD "*", 8, 1',
   '10 PRINT "HELLO"',
   'INPUT A$',
-  '900 END',
+  'END',
   'CLR',
   'GOSUB 2000',
   '20 GOTO 10',
   'REM ART BY ED',
+  'LET X = 1 : LET Y = 1',
+  'X = X + Y',
+  'IF (Y>MAX) GOSUB NEXT',
+  'RETURN',
+  'LET R = X - INT(X/Y)*Y',
+  'IF X>10 THEN Y = 1',
+  'PRINT CHR$(211)',
+  'PRINT CHR$(151)',
+  'FOR CH = LO TO COUNT+LO',
+  'NEXT CH',
 ];
 
 var layout = [];
@@ -110,6 +120,7 @@ function setup() {
   textSize(30);
   textAlign(CENTER, CENTER);
 
+  pulse = 0;
   setup_layout();
   
   background('#6953F5');
@@ -117,13 +128,12 @@ function setup() {
 }
 
 var pulse = 0;
-var pulse_delay = 35;
-pulse_delay = 10;
+var pulse_delay = 5;
 
 function draw() {
   pulse++;
   if(pulse % pulse_delay == 0) {
-    update_grid(pulse / 10);
+    update_grid(pulse / pulse_delay);
   }
 }
 
