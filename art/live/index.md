@@ -5,7 +5,9 @@ pagination:
     data: items
     size: 20
 items: 
-    - {id: "latest", name: "Another Sketch - In Progress"}
+    # - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "basic", name: "BASIC - 2021 Dec 24", 
+    desc: "Typesetting art often ignores the classics."}
     - {id: "tile", name: "Tile - 2021 Aug 27", 
     desc: "Time to start tiling."}
     - {id: "glide", name: "Glide - 2021 Aug 7", 
