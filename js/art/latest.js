@@ -27,7 +27,7 @@ var sq_wide = 400 / grid_width;
 var sq_tall = 400 / grid_width;
 
 function draw_letter(letter, position) {
-  fill('#ffffff');
+  fill('#B19EFF');
   var x=(position % grid_width);
   var y=int(position/grid_width);
   console.debug("X: ", x);
@@ -68,8 +68,8 @@ function setup() {
   textAlign(CENTER, CENTER);
   
   grid_memory = [];
-  background(51);
-  starfield(400,400,4);
+  background('#6953F5');
+  // starfield(400,400,4);
 }
 
 var pulse = 0;
