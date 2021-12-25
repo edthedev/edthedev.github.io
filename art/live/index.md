@@ -8,6 +8,8 @@ items:
     # - {id: "latest", name: "Another Sketch - In Progress"}
     - {id: "basic", name: "BASIC - 2021 Dec 24", 
     desc: "Typesetting art often ignores the classics."}
+    - {id: "triangles", name: "Triangles - 2021 Sep 26", 
+    desc: "In love with 80's Science Fiction"}
     - {id: "tile", name: "Tile - 2021 Aug 27", 
     desc: "Time to start tiling."}
     - {id: "glide", name: "Glide - 2021 Aug 7", 
