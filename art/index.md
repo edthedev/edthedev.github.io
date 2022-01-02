@@ -1,6 +1,10 @@
-# Contents
+---
+layout: layout.njk
+title: Art by Edward Delaporte
+---
+
+## Contents
   - [Live Art](live)
-  - [Notebook Abstract](#abstract)
   - [Notecard Abstract](#abstract)
   - [JavaScript Art](#js)
 
@@ -38,7 +42,7 @@ Photos of notecards.
 
 
 
-# Notebook Abstract Art
+## Notebook Abstract Art
 
 <a name="notebook" ></a>
 
@@ -46,7 +50,7 @@ Photos of notecards.
  - ![Art](/img/gallery/IMG_20100926_174116.jpg "Art")
 
 
-# Notecard Abstracts
+## Notecard Abstracts
 I draw on notecards sometimes.
 
 <a name="abstract"></a>
@@ -56,7 +60,8 @@ I draw on notecards sometimes.
  - ![Art](/img/gallery/abstract.10.09.2005.jpg "Art")
 
 
-# JavaScript Generated Abstract Art
+## JavaScript Generated Abstract Art
+
 I generated these images using [Aza Raskin's](http://www.azarask.in/blog/) JavaScript art tool [Algorithm Ink](http://azarask.in/projects/algorithm-ink).
 
 <a name="js" ></a>
@@ -109,10 +114,7 @@ Purple
  - ![Art](/img/gallery/peaship.jpg "Art")
 -->
 
-</xmp>
 
-<script src="static/jquery/dist/jquery.js"></script>
-<script src="static/strapdown/strapdown.js"></script>
 <style>
 
 img {

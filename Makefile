@@ -8,6 +8,9 @@ open: serve
 setup:
 	npm install @11ty/eleventy --save-dev	
 	npm install @11ty/eleventy-navigation --save-dev	
+	npm install --save-dev markdown-it-anchor slugify
+	# Did not work. npm install @orchidjs/eleventy-plugin-ids --save-dev
+
 
 serve:
 	npx @11ty/eleventy --serve
