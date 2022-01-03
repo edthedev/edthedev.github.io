@@ -15,7 +15,8 @@ Since I named the site after myself, it is only fair that I share [a bit about m
 
 I suspect that most visits here are looking for one of [my slide decks](/slides).
 
-## My Art
+## Code Generated Art
+
 
 <a href="/art/live">
 
@@ -30,6 +31,7 @@ The source code for each piece is linked, and licenced so that you can copy and 
 
 Please let me know if you enjoyed it.
 
+
 ## On Coding
 
 I've been coding for a long time.
@@ -38,3 +40,16 @@ I've been coding for a long time.
 - [Learn to Code](/learn2code) - I maintain a list of my favorite resources for learning to code.
 - [Coding in BASIC](/basic) - I still write BASIC code.
 - [Make a Robot](/robots) - You should make a robot.
+
+
+## Other Art
+
+<a href="/art">
+
+![Notecard Art](/img/art/notecard_gallery.jpg "Notecard Art")
+
+</a>
+
+I also sketch with marker and colored pencil, mostly on 3x5 cards.
+
+

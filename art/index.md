@@ -4,63 +4,39 @@ title: Art by Edward Delaporte
 ---
 
 ## Contents
-  - [Live Art](live)
-  - [Notecard Abstract](#abstract)
-  - [JavaScript Art](#js)
+  - [Notecard Abstract Art](#notecard-abstract-art)
+  - [Latest JavaScript Art](/art/line)
+  - [Old JavaScript Art](#old-javascript-art)
+  - [Old Art Notebooks](#old-art-notebooks)
 
 
 
-<!--
-  - [Sidewalk Chalk](#chalk)
- - ![Art](/img/gallery/abstract.10.11.color.jpg "Art")
-  -->
+## Notecard Abstract Art
 
-
-<!-- 
-
-Photos of notecards.
- - ![Art](/img/gallery/2013-12-19_17-53-25_344.jpg "Art")
- - ![Art](/img/gallery/2013-12-19_17-53-59_792.jpg "Art")
- - ![Art](/img/gallery/2013-12-19_17-55-36_679.jpg "Art")
+I enjoying converting a 3x5 inch notecard into a quick bit of abstract art.
 
  - ![Art](/img/gallery/2013-12-19_17-53-43_277.jpg "Art")
 
  - ![Art](/img/gallery/IMG_20140104_132855401.jpg "Art")
- - ![Art](/img/gallery/IMG_20140104_143651407.jpg "Art")
- - ![Art](/img/gallery/IMG_20140104_145749.jpg "Art")
- - ![Art](/img/gallery/IMG_20140104_145756.jpg "Art")
+ - ![Art](/img/gallery/2013-12-19_17-53-25_344.jpg "Art")
+ - ![Art](/img/gallery/2013-12-19_17-53-59_792.jpg "Art")
+ - ![Art](/img/gallery/2013-12-19_17-55-36_679.jpg "Art")
  - ![Art](/img/gallery/IMG_20140119_172249078.jpg "Art")
  - ![Art](/img/gallery/IMG_20140119_200821320.jpg "Art")
- - ![Art](/img/gallery/IMG_20140119_203310490.jpg "Art")
 
-# iPad Abstract Art
-
-<a name="ipad" ></a>
-
-
--->
-
-
-
-## Notebook Abstract Art
-
-<a name="notebook" ></a>
-
- - ![Art](/img/gallery/IMG_20100926_174047.jpg "Art")
- - ![Art](/img/gallery/IMG_20100926_174116.jpg "Art")
-
-
-## Notecard Abstracts
-I draw on notecards sometimes.
-
-<a name="abstract"></a>
+These also started as 3x5 cards.
 
  - ![Art](/img/gallery/abstract.10.18.jpg "Art") ![Art](/img/gallery/abstract.10.19.jpg "Art")
  - ![Art](/img/gallery/abstract.10.16up.JPG "Art")
  - ![Art](/img/gallery/abstract.10.09.2005.jpg "Art")
 
+<!-- 
 
-## JavaScript Generated Abstract Art
+Photos of notecards.
+
+
+
+## Old JavaScript Art
 
 I generated these images using [Aza Raskin's](http://www.azarask.in/blog/) JavaScript art tool [Algorithm Ink](http://azarask.in/projects/algorithm-ink).
 
@@ -113,6 +89,24 @@ Purple
  - ![Art](/img/gallery/joanisbackground1.JPG "Art")
  - ![Art](/img/gallery/peaship.jpg "Art")
 -->
+
+## Snowy and Snowball
+
+My daughter named these two Snowy and Snowball.
+
+ - ![Art](/img/gallery/IMG_20140104_143651407.jpg "Art")
+
+
+## Fan Art 
+
+Fan Art of the series "Copper".
+ - ![Copper Fan Art](/img/gallery/IMG_20140119_203310490.jpg "Art")
+
+## Old Art Notebooks
+
+ - ![Art](/img/gallery/IMG_20100926_174047.jpg "Art")
+ - ![Art](/img/gallery/IMG_20100926_174116.jpg "Art")
+ - ![Art](/img/gallery/abstract.10.11.color.jpg "Art")
 
 
 <style>
