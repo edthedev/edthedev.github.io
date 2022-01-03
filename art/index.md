@@ -4,10 +4,12 @@ title: Art by Edward Delaporte
 ---
 
 ## Contents
+  - [Latest JavaScript Art](/art/live)
   - [Notecard Abstract Art](#notecard-abstract-art)
-  - [Latest JavaScript Art](/art/line)
   - [Old JavaScript Art](#old-javascript-art)
+  - [Sidewalk Chalk](#sidewalk-chalk)
   - [Old Art Notebooks](#old-art-notebooks)
+  - [Fan Art](#fan-art)
 
 
 
@@ -16,6 +18,7 @@ title: Art by Edward Delaporte
 I enjoying converting a 3x5 inch notecard into a quick bit of abstract art.
 
  - ![Art](/img/gallery/2013-12-19_17-53-43_277.jpg "Art")
+ - ![Art](/img/gallery/joanisbackground1.JPG "Art")
 
  - ![Art](/img/gallery/IMG_20140104_132855401.jpg "Art")
  - ![Art](/img/gallery/2013-12-19_17-53-25_344.jpg "Art")
@@ -30,29 +33,22 @@ These also started as 3x5 cards.
  - ![Art](/img/gallery/abstract.10.16up.JPG "Art")
  - ![Art](/img/gallery/abstract.10.09.2005.jpg "Art")
 
-<!-- 
-
-Photos of notecards.
-
-
-
 ## Old JavaScript Art
 
 I generated these images using [Aza Raskin's](http://www.azarask.in/blog/) JavaScript art tool [Algorithm Ink](http://azarask.in/projects/algorithm-ink).
-
-<a name="js" ></a>
 
  - ![Art](/img/gallery/1330185980701.jpg "Art")
  - ![Art](/img/gallery/1330185531212.jpg "Art")
  - ![Art](/img/gallery/1330092232228.jpg "Art")
 
-<!-- 
+
+<!--
+Bunch more...
+
  - ![Art](/img/gallery/1330185508744.jpg "Art")
  - ![Art](/img/gallery/1330186765575.jpg "Art")
  - ![Art](/img/gallery/1330182981623.jpg "Art")
  - ![Art](/img/gallery/1330185796373.jpg "Art")
-
-Purple
  - ![Art](/img/gallery/1330186785740.jpg "Art")
  - ![Art](/img/gallery/1330187047851.jpg "Art")
  - ![Art](/img/gallery/1330187509322.jpg "Art")
@@ -60,42 +56,38 @@ Purple
 -->
 
 
+## Sidewalk Chalk
 
-<!-- 
-# Sidewalk Chalk
-
-<a name="chalk"></a>
 
  - ![Art](/img/gallery/2012-06-17_17-06-23_960.jpg "Art")
  - ![Art](/img/gallery/2012-06-17_17-06-33_414.jpg "Art")
--->
 
-
-<!-- 
-
+<!--
 # Unsorted Stuff
-![Jumping Fish](/img/gallery/2013-12-01_17-13-39_288.jpg "Art")
 
 # Quick Stuff
- - ![Art](/img/gallery/2012-02-17_15-54-24.jpg "Art")
- - ![Art](/img/gallery/2012-02-17_22-26-22.jpg "Art")
 
 -->
 <!--
 
 # Unsorted stuff
- - ![Art](/img/gallery/Sketch1759422.jpg "Art")
- - ![Art](/img/gallery/abstract_ipad "Art")
- - ![Art](/img/gallery/joanisbackground1.JPG "Art")
- - ![Art](/img/gallery/peaship.jpg "Art")
 -->
 
-## Snowy and Snowball
+## Cartoons
 
 My daughter named these two Snowy and Snowball.
 
  - ![Art](/img/gallery/IMG_20140104_143651407.jpg "Art")
+ - ![Jumping Fish](/img/gallery/2013-12-01_17-13-39_288.jpg "Jumping Fish")
+ - ![Art](/img/gallery/peaship.jpg "Peas on the Seas")
 
+
+
+## Digital Art
+
+ - ![Art](/img/gallery/2012-02-17_15-54-24.jpg "Art")
+ - ![Art](/img/gallery/2012-02-17_22-26-22.jpg "Art")
+ - ![Art](/img/gallery/Sketch1759422.jpg "Art")
 
 ## Fan Art 
 
@@ -129,5 +121,3 @@ ul {
 }
 
 </style>
-</body>
-</html>
