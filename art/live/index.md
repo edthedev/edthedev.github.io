@@ -1,6 +1,10 @@
 ---
 layout: gallery.njk
 title: Pixel Art by Edward Delaporte
+eleventyNavigation:
+  key: Live
+  title: Live Art
+  order: 3
 pagination:
     data: items
     size: 20

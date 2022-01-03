@@ -1,6 +1,10 @@
 ---
 layout: frontpage.njk
 title: Welcome - Edward Delaporte's Website
+eleventyNavigation:
+  key: root
+  title: Edward.Delaporte.us
+  order: 0
 ---
 
 # Edward Delaporte's Blog

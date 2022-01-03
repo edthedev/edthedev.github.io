@@ -25,9 +25,7 @@ title: Gallery - Edward Delaporte's Art
 <body>
 
 <nav class="ye_navbar" role="navigation"> 
-<a href="/">Edward.Delaporte.us</a>
-<a href="/art/live">Live Art</a>
-<a href="/resume">Resume</a>
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 </nav>
 
 
@@ -37,6 +35,6 @@ title: Gallery - Edward Delaporte's Art
 
 </div>
 <div class="content" role="contentinfo">
-  <p>Copyright 2021 Edward Delaporte</p>
+  <p>Copyright 2020-2022 Edward Delaporte</p>
 </div>
 </html>

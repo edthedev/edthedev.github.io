@@ -1,6 +1,9 @@
 ---
 layout: layout.njk
 title: Art by Edward Delaporte
+eleventyNavigation:
+  key: Art
+  order: 2
 ---
 
 ## Contents

@@ -1,3 +1,4 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = eleventyConfig => {
 
   // Static content
@@ -18,7 +19,10 @@ module.exports = eleventyConfig => {
   eleventyConfig.setUseGitIgnore(false);
 
 
-  // Nav Anchors
+  // Navigation
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+  // In page Nav Anchors
 
   // npm install --save-dev markdown-it-anchor slugify
 // Import prior to `module.exports` within `.eleventy.js`

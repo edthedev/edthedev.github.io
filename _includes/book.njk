@@ -21,9 +21,7 @@ title: Coding is Stupid - by Edward Delaporte
   <title>{{ title }}</title>
 
 <nav class="ye_navbar" role="navigation"> 
-<a href="/">Edward.Delaporte.us</a>
-<a href="/slides">Presentations</a>
-<a href="/resume">Resume</a>
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 </nav>
 
 </head> 
@@ -32,7 +30,7 @@ title: Coding is Stupid - by Edward Delaporte
 <div class="content" role="main">
 {{ content | safe }}
 <div class="content" role="contentinfo">
-  <p>Copyright 2021 Edward Delaporte</p>
+  <p>Copyright 2020-2022 Edward Delaporte</p>
 </div>
 </div>
 </html>

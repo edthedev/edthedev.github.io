@@ -1,6 +1,9 @@
 ---
 layout: layout.njk
 title: Resume - Edward Delaporte
+eleventyNavigation:
+  key: Resume
+  order: 99
 ---
 
 # Edward C. Delaporte V						

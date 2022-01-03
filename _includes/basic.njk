@@ -22,10 +22,12 @@ title: BASIC Programs by Edward Delaporte
   <title>{{ title }}</title>
 
 <nav class="ye_navbar" role="navigation"> 
-<a href="/">Edward.Delaporte.us</a>
-<a href="/basic">Programs in BASIC</a>
-<a href="/learn2code">Learn to Code</a>
-<a href="/resume">Resume</a>
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+<ul>
+  <li> <a href="/basic">Programs in BASIC</a>
+  </li>
+  <li> <a href="/learn2code">Learn to Code</a>
+  </li>
 </nav>
 
 </head> 
@@ -37,6 +39,6 @@ title: BASIC Programs by Edward Delaporte
 <hr/>
 <div class="content" role="contentinfo">
   <p><a href="/basic/howto">How to create these GIF files.</a></p>
-  <p>Copyright 2021 Edward Delaporte</p>
+  <p>Copyright 2020-2022 Edward Delaporte</p>
 </div>
 </html>

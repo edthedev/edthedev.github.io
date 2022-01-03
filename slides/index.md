@@ -1,6 +1,10 @@
 ---
-layout: slide_list.njk
+layout: layout.njk
 title: Presentations by Edward Delaporte
+eleventyNavigation:
+  key: Slides
+  title: Presentations
+  order: 2
 ---
 
 # Presentations
