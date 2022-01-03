@@ -4,7 +4,7 @@ title: Presentations by Edward Delaporte
 eleventyNavigation:
   key: Slides
   title: Presentations
-  order: 2
+  order: 10
 ---
 
 # Presentations

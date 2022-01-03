@@ -3,8 +3,10 @@ layout: layout.njk
 title: Art by Edward Delaporte
 eleventyNavigation:
   key: Art
-  order: 2
+  order: 30
 ---
+
+# Art
 
 ## Contents
   - [Latest JavaScript Art](/art/live)
