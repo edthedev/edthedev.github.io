@@ -71,11 +71,15 @@ function mouseClicked() {
 }
 
 var grid_w = 40;
-var grid_size = 80;
+var row_count = choose([2,3,5,7]);
+var grid_size = 40 * row_count;
 
 function setup() {
   setup_canvas(400,400);
   zippy();
+  var row_count = choose([2,3,5,7]);
+  var grid_size = 40 * row_count;
+
   var grid = get_new_grid(grid_size);
 }
 
