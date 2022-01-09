@@ -1,7 +1,7 @@
 ---
 layout: liveart.multi.script.njk
-title: Latest Sketch - Art by Edward Delaporte
-script: ['/js/art/share/canvas.js', '/js/art/share/random.js', '/js/art/latest.js']
+title: BASIC - Art by Edward Delaporte
+script: ['/js/art/share/canvas.js', '/js/art/share/random.js', '/js/art/basic.js']
 ---
 
-Latest Sketch. So fresh it lacks a name.
+A quick tribute to the Commodore 64, in the form of a word cloud.
