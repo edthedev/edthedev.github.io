@@ -15,71 +15,24 @@ as long as you display this license and attribution.
 
 */
 
-var terms = [
-  'LOADING', 
-  'READY.', 
-  'RUN',
-  '****',
-  '64 BASIC V2',
-  'SEARCHING FOR $',
-  'LIST',
-  '664 BLOCKS FREE.',
-  '64K RAM',
-  '38911 BASIC',
-  'BYTES FREE',
-  'LOAD "*", 8, 1',
-  '10 PRINT "HELLO"',
-  'INPUT A$',
-  'END',
-  'CLR',
-  'GOSUB 2000',
-  '20 GOTO 10',
-  'REM ART BY ED',
-  'LET X = 1 : LET Y = 1',
-  'X = X + Y',
-  'IF (Y>MAX) GOSUB NEXT',
-  'RETURN',
-  'LET R = X - INT(X/Y)*Y',
-  'IF X>10 THEN Y = 1',
-  'PRINT CHR$(211)',
-  'PRINT CHR$(151)',
-  'FOR CH = LO TO COUNT+LO',
-  'NEXT CH',
-];
+function get_start_color(idx=0){
+  // Four Color Tiling
+  return [color(48, 159, 219), // cyan
+    color(55, 222, 58), // green
+    color(255, 239, 61), // yellow
+    color(242, 92, 92) // light red
+  ][idx];
+}
+
 
 var layout = [];
-/*
-var layout = [
-  [1,1,'LOADING'],
-  [1,2,'READY.'],
-  [1,3,'RUN'],
-];
-*/
 
-var grid_width = 32;
-var grid_size = grid_width * 40;
 var grid_y_start = 13;
 var grid_x_start = 40;
 var grid_x_increment = 15;
 var grid_y_increment = 40;
-var sq_wide = 400 / grid_width;
-var sq_tall = 400 / grid_width;
-
-function draw_letter(term, x, y) {
-  fill('#B19EFF');
-  text(term, x * grid_x_increment + grid_x_start, 
-    y * grid_y_increment + grid_y_start);
-}
 
 function setup_layout() {
-  for(var i=0; i<grid_size; i++) {
-    var [x,y] = get_xy(i);
-    var next_term = choose(terms);
-    var new_row = [x, y, next_term];
-    layout.push(new_row);
-    i+= next_term.length;
-    i+= 5;
-  }
 }
 
 function get_xy(position) {
@@ -113,30 +66,36 @@ function preload() {
   font = loadFont('/css/Basic-Regular.ttf');
 }
 
+function mouseClicked() {
+  setup();
+}
+
+var grid_w = 40;
+var grid_size = 80;
+
 function setup() {
   setup_canvas(400,400);
-  // Set text characteristics
-  textFont(font);
-  textSize(30);
-  textAlign(CENTER, CENTER);
-
-  pulse = 0;
-  setup_layout();
-  
-  background('#6953F5');
-  // starfield(400,400,4);
+  zippy();
+  var grid = get_new_grid(grid_size);
 }
 
 var pulse = 0;
-var pulse_delay = 5;
+var pulse_delay = 45;
+pulse_delay = 10;
 
 function draw() {
+  /*
   pulse++;
   if(pulse % pulse_delay == 0) {
-    update_grid(pulse / pulse_delay);
-  }
-}
-
-function mouseClicked() {
-  setup();
+    if(grid_memory.length < grid_width*grid_width) {
+      setup_grid();
+    }
+    else {
+      if(pulse % 5 == 0) {
+        // tile a bit slower
+        tile_grid();
+      }
+    }
+  }*/
+  draw_grid(grid, grid_w, 400, 400);
 }
