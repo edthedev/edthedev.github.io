@@ -14,14 +14,14 @@ function get_new_grid(grid_size) {
   return grid;
 }
 
-function get_color(index, sequence) {
-  if(sequence == 1) {
-    return color(150,150,255);
-  }
-  return color(0,0,0);
-}
 
-function draw_grid(grid_map, grid_w, canvas_w, canvas_h) {
+function draw_grid(
+  grid_map, 
+  grid_w, 
+  canvas_w, 
+  canvas_h,
+  get_color,
+  draw_tile) {
   tile_w = int(canvas_w / grid_w);
   row_count = int(grid_map.length / grid_w);
   tile_h = int(canvas_h / row_count );
@@ -39,12 +39,8 @@ function draw_grid(grid_map, grid_w, canvas_w, canvas_h) {
     var sq_color1 = get_color(i, 1);
     var sq_color2 = get_color(i, 2);
 
-    fill(sq_color1);
-    rect(x1,y1,x2,y2);
+    draw_tile(x1,y1,x2,y2, sq_color1, sq_color2, i);
 
-    fill(sq_color2);
-    var sqm = 2;
-    rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
   }
 
 }

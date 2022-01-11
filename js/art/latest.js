@@ -24,6 +24,38 @@ function get_start_color(idx=0){
   ][idx];
 }
 
+function draw_tile(x1, y1, x2, y2,
+  sq_color1, sq_color2, index) {
+    var variant = index % 2;
+
+    fill(sq_color1);
+    rect(x1,y1,x2,y2);
+    if(variant == 1) {
+      fill(sq_color2);
+      triangle(x1, y1, x2,y2, x1, y2);
+    }
+    if(variant == 2) {
+      var sqm = 2;
+      rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
+    }
+
+}
+
+function get_color(index, sequence) {
+  return [
+    color(200,0,0),
+    color(0,200,0),
+    color(0,0,200),
+    color(0,0,0),
+    color(255,255,255),
+  ][sequence];
+  /*
+  if(sequence == 1) {
+    return color(150,150,255);
+  }
+  return color(255,255,0);
+  */
+}
 
 var layout = [];
 
@@ -101,5 +133,7 @@ function draw() {
       }
     }
   }*/
-  draw_grid(grid, grid_w, 400, 400);
+  draw_grid(grid, grid_w, 400, 400, 
+    get_color,
+    draw_tile);
 }
