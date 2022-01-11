@@ -102,15 +102,17 @@ function mouseClicked() {
   setup();
 }
 
-var grid_w = 40;
-var row_count = choose([2,3,5,7]);
-var grid_size = 40 * row_count;
+var grid_w = choose([20, 30, 40]);
+var row_count = 0;
+var grid_size = grid_w * row_count;
+var seed = 0;
 
 function setup() {
   setup_canvas(400,400);
+  seed = Math.random() * 1000;
   zippy();
-  var row_count = choose([2,3,5,7]);
-  var grid_size = 40 * row_count;
+  row_count = choose([5,7, 13, 17]);
+  var grid_size = grid_w * row_count;
 
   var grid = get_new_grid(grid_size);
 }
@@ -135,5 +137,6 @@ function draw() {
   }*/
   draw_grid(grid, grid_w, 400, 400, 
     get_color,
-    draw_tile);
+    draw_tile,
+    seed);
 }

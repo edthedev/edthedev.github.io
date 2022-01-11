@@ -21,7 +21,9 @@ function draw_grid(
   canvas_w, 
   canvas_h,
   get_color,
-  draw_tile) {
+  draw_tile,
+  seed
+  ) {
   tile_w = int(canvas_w / grid_w);
   row_count = int(grid_map.length / grid_w);
   tile_h = int(canvas_h / row_count );
@@ -36,8 +38,10 @@ function draw_grid(
     y1 = tile_h * iy;
     y2 = y1 + tile_h;
 
-    var sq_color1 = get_color(i, 1);
-    var sq_color2 = get_color(i, 2);
+    color_choice = choose([0,1,2], seed);
+    var sq_color1 = get_color(i, color_choice);
+    color_choice += choose([1,2], seed);
+    var sq_color2 = get_color(i, color_choice);
 
     draw_tile(x1,y1,x2,y2, sq_color1, sq_color2, i);
 
