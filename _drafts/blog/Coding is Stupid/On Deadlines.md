@@ -30,4 +30,4 @@ A lot of time owed to Adam Savage.  Throw away your copy owed to Mike Kramer.
 
 Mike reserved the right to ask difficult questions about the new master plan to keep it on course.
 
-
+Random additional thought: Ignore other people's fake deadlines. Find real meaningful ones and focus on them.
