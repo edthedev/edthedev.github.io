@@ -42,20 +42,20 @@ function tile_deep_square(x1, y1, x2, y2,
 
 function tile_stripes(x1, y1, x2, y2,
   sq_color1, sq_color2, index) {
-    var tile_margin = 2;
+    var tile_margin = 20;
 
-    // Horizantal stripe
-    fill(sq_color2);
-    rect(x1+tile_margin,
-      y1,
-      x2-tile_margin,
-      y2);
     // Vertical stripe
     fill(sq_color1);
     rect(x1,
       y1+tile_margin,
       x2,
       y2-tile_margin);
+    // Horizantal stripe
+    fill(sq_color2);
+    rect(x1+tile_margin,
+      y1,
+      x2-tile_margin,
+      y2);
 }
 
 function tile_test(x1, y1, x2, y2,
@@ -79,8 +79,11 @@ function tile_test(x1, y1, x2, y2,
 }
 
 
-// var draw_tile = choose([tile_deep_square, tile_stripes]);
-var draw_tile = choose([tile_test]);
+var tile_functions = [
+  tile_deep_square
+  ,tile_stripes
+  ,tile_test
+];
 
 function get_color(index, sequence) {
   return [
@@ -112,10 +115,12 @@ function mouseClicked() {
   setup();
 }
 
-var grid_w = choose([20, 30, 40]);
-var row_count = 0;
+//var grid_w = choose([20, 30, 40]);
+var grid_w = 4;
+var row_count = 2;
 var grid_size = grid_w * row_count;
 var seed = 0;
+var draw_tile;
 
 function setup() {
   setup_canvas(400,400);
@@ -123,6 +128,7 @@ function setup() {
   zippy();
   row_count = choose([5,7, 13, 17]);
   var grid_size = grid_w * row_count;
+  draw_tile = choose(tile_functions);
 
   var grid = get_new_grid(grid_size);
 }
