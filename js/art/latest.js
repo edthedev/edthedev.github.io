@@ -90,18 +90,12 @@ function get_color(index, sequence) {
     color(0,0,0),
     color(255,255,255),
   ][sequence];
-  /*
-  if(sequence == 1) {
-    return color(150,150,255);
-  }
-  return color(255,255,0);
-  */
 }
 
 var layout = [];
 
-var grid_y_start = 13;
-var grid_x_start = 40;
+var grid_y_start = 0;
+var grid_x_start = 0;
 var grid_x_increment = 15;
 var grid_y_increment = 40;
 
@@ -113,31 +107,6 @@ function get_xy(position) {
   var y=int(position/grid_width);
   return [x,y];
 }
-
-/*
-function update_grid(pulse) {
-  var position = pulse % grid_size;
-  var [x,y] = get_xy(position);
-  for(let i=0; i<layout.length; i++) {
-    var item = layout[i];
-    console.debug("item", item);
-    if(x==item[0] && 
-      y==item[1]
-      ) {
-        draw_letter(item[2], x,y);
-      }
-  }
-}
-*/
-
-
-/*
-function preload() {
-  // Ensure the .ttf or .otf font stored in the assets directory
-  // is loaded before setup() and draw() are called
-  font = loadFont('/css/Basic-Regular.ttf');
-}
-*/
 
 function mouseClicked() {
   setup();
