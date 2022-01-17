@@ -24,7 +24,7 @@ function get_start_color(idx=0){
   ][idx];
 }
 
-function draw_tile(x1, y1, x2, y2,
+function tile_deep_square(x1, y1, x2, y2,
   sq_color1, sq_color2, index) {
     var variant = index % 2;
 
@@ -38,8 +38,49 @@ function draw_tile(x1, y1, x2, y2,
       var sqm = 2;
       rect(x1+sqm,y1+sqm,x2-sqm,y2-sqm);
     }
-
 }
+
+function tile_stripes(x1, y1, x2, y2,
+  sq_color1, sq_color2, index) {
+    var tile_margin = 2;
+
+    // Horizantal stripe
+    fill(sq_color2);
+    rect(x1+tile_margin,
+      y1,
+      x2-tile_margin,
+      y2);
+    // Vertical stripe
+    fill(sq_color1);
+    rect(x1,
+      y1+tile_margin,
+      x2,
+      y2-tile_margin);
+}
+
+function tile_test(x1, y1, x2, y2,
+  sq_color1, sq_color2, index) {
+    var tile_margin = 2;
+
+
+    // Outer square
+    fill(sq_color1);
+    rect(x1,
+      y1,
+      x2,
+      y2);
+
+    // Inner square
+    fill(sq_color2);
+    rect(x1+tile_margin,
+      y1+tile_margin,
+      x2-tile_margin,
+      y2-tile_margin);
+}
+
+
+// var draw_tile = choose([tile_deep_square, tile_stripes]);
+var draw_tile = choose([tile_test]);
 
 function get_color(index, sequence) {
   return [
@@ -73,13 +114,10 @@ function get_xy(position) {
   return [x,y];
 }
 
+/*
 function update_grid(pulse) {
   var position = pulse % grid_size;
   var [x,y] = get_xy(position);
-  /*
-  console.debug("X: ", x);
-  console.debug("Y: ", y);
-  */
   for(let i=0; i<layout.length; i++) {
     var item = layout[i];
     console.debug("item", item);
@@ -90,13 +128,16 @@ function update_grid(pulse) {
       }
   }
 }
+*/
 
 
+/*
 function preload() {
   // Ensure the .ttf or .otf font stored in the assets directory
   // is loaded before setup() and draw() are called
   font = loadFont('/css/Basic-Regular.ttf');
 }
+*/
 
 function mouseClicked() {
   setup();
