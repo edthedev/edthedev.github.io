@@ -5,7 +5,41 @@ title: Management Crash Course by Edward Delaporte
 
 ## Article Context
 
-Some of my lead developers go on to become architects, others go on to become directors. In either case, skills managing people are an important part of the equation.
+Some lead developers go on to become architects, others go on to become
+directors. In either case, skills managing people are an important part of the
+equation.
+
+
+## Authors
+
++ Dale Carnegie - Dale's studies on how to worry effectively are indispensible to someone whose job involves worrying.
++ Robert Cialdini - There is always a client for your work. If you aren't selling to that client, someone is selling your work to them for you. Robert's writings can help you understand how to make your sales advocate more successful on your behalf.
++ Benjamin Graham - Almost all organizations are affected by the stock market. Benjamin's work can help you understand that effect, even just to know how and when to ignore that effect.
++ Eliyahu Goldratt - Called 'sensei' by the agile classic "The Phoenix Project".
++ Robert Greene - Robert's writings on Mastery and mentorship are crucial to guide your mentorship process.
++ Scott Berkin - on some level you're reading this because you like making things happen.
++ Peter Druker - The Effective Executive
++ Vicki Robin - Managers ask people to exchange their hours of life for money. Managers who deeply understand this trade-off get more from their staff when it matters, and ask less of them when it doesn't.
++ Malcolm Gladwell - 10,000 hours.
++ Author of 'Titan'?
+
+## Videos
+
++ Eliyahu Goldratt - on Ford, etc. establish flow, prevent over-production - https://www.youtube.com/watch?v=k0mUzkTclHQ
++ Malcolm Gladwell on mentoring people to reach mastery, and the 10,000 hours it takes - https://www.youtube.com/watch?v=XS5EsTc_-2Q
++ Malcolm Gladwell on Hot Ones - just here because I love 'Hot Ones' https://www.youtube.com/watch?v=ZAG_WxMm_8E&list=TLPQMjAwMTIwMjKm1dtuIkwSEQ&index=2
+  + Reduced number of kanbans, reduced number of items per container.
+  + Figure out which disruptions to fix.
++ Peter Drucker's 5 Questions Animated - https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2
+
+<!--
+
+Skip for now:
+
++ Robert Greene - "Mastery" is a great book, but I haven't found a great video.
+
+-->
+
 
 ## Critical Concepts
 
@@ -144,4 +178,3 @@ Leaders will learn over time to not strongly differentiate between strategic pri
 Most importantly, to enable your leadership - never waste bad news. Because they are expected to take full responsibility for any bad news, we owe it to them to ensure bad news reaches them as quickly as possible.
 
 To particularly serve our leaders well, we should keep a backlog of pre-packaged 'enabler work' that can be acted on immediately after bad news. This lets the leader quickly announce a plan to do better in the future (suck less), and it gets a valuable set of enabler work off of the backlog and into action.
-
