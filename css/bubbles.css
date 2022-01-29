@@ -1,0 +1,111 @@
+
+/* (A) SAME DIMENSIONS FOR OUTER CONTAINER & SLIDES */
+.vwrap, .vslide {
+  box-sizing: border-box;
+  width: 100%;
+  height: 9em;
+}
+ 
+/* (B) OUTER CONTAINER */
+.vwrap {
+  overflow: hidden; /* HIDE SCROLLBARS */
+}
+ 
+/* (C) MIDDLE CONTAINER */
+.vmove {
+  position: relative;
+  bottom: 0%;
+}
+ 
+/* (D) SLIDES */
+.vslide { padding: 1em; }
+
+/* (E) SLIDE ANIMATION */
+@keyframes slidev {
+  /* (E0) THE IDEA - USE KEYFRAMES TO SHIFT SLIDES *
+  0% { bottom: 0; }
+  33% { bottom: 100%; }
+  66% { bottom: 200%; }
+  100% { right: 0; }
+ 
+  /* (E1) BUT THE ABOVE WILL SHIFT NON-STOP */
+  /* SO WE ADD PAUSES BETWEEN EACH SLIDE */
+  0% { bottom: 0; }
+  30% { bottom: 0; }
+  33% { bottom: 100%; }
+  63% { bottom: 100%; }
+  66% { bottom: 200%; }
+  97% { bottom: 200%; }
+  100% { right: 0; }
+}
+.vmove { animation: slidev linear 60s infinite; }
+.vmove:hover { animation-play-state: paused; }
+
+
+.bubble{
+  /*
+  margin-left: 5em;
+  height: 5em;
+  width: 5em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: center;
+  */
+  display: block;
+  margin-top: 0em;
+  width: 7em;
+  height: 7em;
+  line-height: 7em;
+  border-radius: 50%;
+  color: #fff !important;
+  text-align: center;
+  background: #000;
+}
+
+.bubble.a {
+  color: #fff;
+}
+
+a:visited .bubble {
+  color: #fff;
+}
+
+
+.res-circle {
+  /* (A) PERCENTAGE WIDTH & BORDER RADIUS */
+  width: 20%;
+  border-radius: 50%;
+
+  /* (B) BACKGROUND COLOR */ 
+  background: #bcd6ff;
+ 
+  /* (C) NECESSARY TO POSITION TEXT BLOCK */
+  line-height: 0;
+  position: relative;
+}
+ 
+/* (D) MATCH HEIGHT */
+.res-circle::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+ 
+/* (E) TEXT BLOCK */
+.circle-txt {
+  /* (E1) CENTER TEXT IN CIRCLE */
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+ 
+  /* (E2) THE FONT - NOT REALLY IMPORTANT */
+  font-family: arial, sans-serif;
+  font-weight: bold;
+}
+
+div.three_col {
+  column-count: 3;
+}

@@ -18,8 +18,11 @@ title: Welcome - Edward Delaporte's Website
 </script>
 <!-- End Google -->
   
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bubbles.js"></script>
   <link rel="stylesheet" href="/css/edthedev.css" /> 
   <link rel="stylesheet" href="/css/frontpage.css" /> 
+  <link rel="stylesheet" href="/css/bubbles.css" /> 
 
   <title>{{ title }}</title>
 
@@ -31,11 +34,43 @@ title: Welcome - Edward Delaporte's Website
 </head> 
 <body>
 
+<h1>
+  Edward Delaporte's Blog
+</h1>
+
+
+
 <div class="content" role="main">
+
+<!-- Highlights -->
+<div class="vwrap"><div class="vmove">
+  <div id=feature1 class="vslide three_col">
+    <span class=bubble id=bubble1>Stable</span>
+    <span class=bubble id=bubble2>Stable</span>
+    <span class=bubble id=bubble3>Stable</span>
+  </div>
+  <div id=feature2 class="vslide three_col">
+    <span class=bubble id=bubble4>Dynamic</span>
+    <span class=bubble id=bubble5>Elegant</span>
+    <span class=bubble id=bubble6>Contrary</span>
+  </div>
+  <div id=feature3 class="vslide three_col">
+    <span class=bubble id=bubble7>Dynamic</span>
+    <span class=bubble id=bubble8>Elegant</span>
+    <span class=bubble id=bubble0>Contrary</span>
+  </div>
+</div></div>
+<!-- Highlights -->
+
 {{ content | safe }}
 </div>
+
 <div class="content" role="contentinfo">
   <hr/>
   <p>Copyright 2020-2022 Edward Delaporte</p>
 </div>
+
+<script> 
+  window.onload = randomize_bubbles;
+</script>
 </html>

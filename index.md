@@ -7,12 +7,6 @@ eleventyNavigation:
   order: 0
 ---
 
-# Edward Delaporte's Blog
-
-Welcome to EdTheDev's Blog on programming, art and education.
-
-In this space I share short technology guides and occassional art. 
-
 ## Professional Stuff
 
 Since I named the site after myself, it is only fair that I share [a bit about myself](/me).
