@@ -12,11 +12,7 @@ body
   margin: 0em;
 }
 
-.content {
-  align-content: center;
-	margin: 1em;
-  max-width: 34rem;
-}
+
 
 canvas{
     padding-top: 3em;
@@ -114,9 +110,16 @@ pre {
 code {
     background-color: lightgray;
 }
-@media only screen and (max-width: 600px) {
-content {
-  max-width: 90%;
+
+.content {
+  align-content: center;
+	margin: 1em;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+.content {
+  max-width: 34rem;
 }
 }
 
