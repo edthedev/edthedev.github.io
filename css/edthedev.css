@@ -12,11 +12,7 @@ body
   margin: 0em;
 }
 
-.content {
-  align-content: center;
-	margin: 1em;
-  max-width: 34rem;
-}
+
 
 canvas{
     padding-top: 3em;
@@ -114,3 +110,16 @@ pre {
 code {
     background-color: lightgray;
 }
+
+.content {
+  align-content: center;
+	margin: 1em;
+  max-width: 100%;
+}
+
+@media (min-width: 600px) {
+.content {
+  max-width: 34rem;
+}
+}
+
