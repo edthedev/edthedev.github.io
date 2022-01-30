@@ -43,16 +43,7 @@
 
 
 .bubble{
-  /*
-  margin-left: 5em;
-  height: 5em;
-  width: 5em;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  text-align: center;
-  vertical-align: center;
-  */
+  /* Bubble */
   display: block;
   margin-top: 0em;
   width: 7em;
@@ -62,6 +53,9 @@
   color: #fff !important;
   text-align: center;
   background: #000;
+  /* Decoration */
+  background: rgb(120,0,255);
+background: linear-gradient(144deg, rgba(120,0,255,1) 0%, rgba(21,161,255,1) 14%, rgba(13,0,0,1) 100%);
 }
 
 .bubble.a {
