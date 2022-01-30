@@ -114,12 +114,5 @@ code {
 .content {
   align-content: center;
 	margin: 1em;
-  max-width: 100%;
+  max-width: 95%;
 }
-
-@media (min-width: 600px) {
-.content {
-  max-width: 34rem;
-}
-}
-
