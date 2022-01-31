@@ -7,9 +7,9 @@ body
 {
 	/* font-family: 'times new roman', times, serif; */
   font-family: monospace;
-	font-size:100%;
+	font-size:5vw;
 	background-color: #EEE !important;
-  margin: 0em;
+        margin: 0em;
 }
 
 
