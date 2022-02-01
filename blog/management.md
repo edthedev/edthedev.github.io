@@ -18,26 +18,27 @@ equation.
   + Figure out which disruptions to fix.
 + [Peter Drucker's 5 Questions Animated](https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2)
 
-<!--
-
-Skip for now:
-
-+ Vicki Robin on retirement - https://www.youtube.com/watch?v=Vfc1YMfDFY4 - Long term purpose.
-+ Robert Greene - "Mastery" is a great book, but I haven't found a great video.
-
 ## Authors
+
+Other author's to consider:
 
 + Dale Carnegie - Dale's studies on how to worry effectively are indispensible to someone whose job involves worrying.
 + Robert Cialdini - There is always a client for your work. If you aren't selling to that client, someone is selling your work to them for you. Robert's writings can help you understand how to make your sales advocate more successful on your behalf.
-+ Benjamin Graham - Almost all organizations are affected by the stock market. Benjamin's work can help you understand that effect, even just to know how and when to ignore that effect.
 + Eliyahu Goldratt - Called 'sensei' by the agile classic "The Phoenix Project".
 + Robert Greene - Robert's writings on Mastery and mentorship are crucial to guide your mentorship process.
 + Scott Berkin - on some level you're reading this because you like making things happen.
 + Peter Druker - The Effective Executive
 + Vicki Robin - Managers ask people to exchange their hours of life for money. Managers who deeply understand this trade-off get more from their staff when it matters, and ask less of them when it doesn't.
 + Malcolm Gladwell - 10,000 hours.
-+ Author of 'Titan'?
++ Ron Chernow - 'Titan' is relevant to an understanding of how large organizations can function.
 
+<!--
+
+Skip for now:
+
++ Benjamin Graham - Almost all organizations are affected by the stock market. Benjamin's work can help you understand that effect, even just to know how and when to ignore that effect.
++ Vicki Robin on retirement - https://www.youtube.com/watch?v=Vfc1YMfDFY4 - Long term purpose.
++ Robert Greene - "Mastery" is a great book, but I haven't found a great video.
 
 -->
 
