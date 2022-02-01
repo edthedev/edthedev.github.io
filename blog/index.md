@@ -6,7 +6,7 @@ title: Coding is Stupid by Edward Delaporte
 ## Index
 
 1. Introduction
-2. [Management Crash Course](/management_crash_course)
+2. [Management Crash Course](/management)
 
 ## Introduction
 
