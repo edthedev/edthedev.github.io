@@ -9,6 +9,21 @@ Some lead developers go on to become architects, others go on to become
 directors. In either case, skills managing people are an important part of the
 equation.
 
+## Videos
+
++ Malcolm Gladwell on mentoring people to reach mastery, and the 10,000 hours it takes - https://www.youtube.com/watch?v=XS5EsTc_-2Q
++ Malcolm Gladwell on Hot Ones - just here because I love 'Hot Ones' https://www.youtube.com/watch?v=ZAG_WxMm_8E&list=TLPQMjAwMTIwMjKm1dtuIkwSEQ&index=2
++ Eliyahu Goldratt - on Ford, etc. establish flow, prevent over-production - https://www.youtube.com/watch?v=k0mUzkTclHQ
+  + Reduced number of kanbans, reduced number of items per container.
+  + Figure out which disruptions to fix.
++ Peter Drucker's 5 Questions Animated - https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2
+
+<!--
+
+Skip for now:
+
++ Vicki Robin on retirement - https://www.youtube.com/watch?v=Vfc1YMfDFY4 - Long term purpose.
++ Robert Greene - "Mastery" is a great book, but I haven't found a great video.
 
 ## Authors
 
@@ -23,20 +38,6 @@ equation.
 + Malcolm Gladwell - 10,000 hours.
 + Author of 'Titan'?
 
-## Videos
-
-+ Eliyahu Goldratt - on Ford, etc. establish flow, prevent over-production - https://www.youtube.com/watch?v=k0mUzkTclHQ
-+ Malcolm Gladwell on mentoring people to reach mastery, and the 10,000 hours it takes - https://www.youtube.com/watch?v=XS5EsTc_-2Q
-+ Malcolm Gladwell on Hot Ones - just here because I love 'Hot Ones' https://www.youtube.com/watch?v=ZAG_WxMm_8E&list=TLPQMjAwMTIwMjKm1dtuIkwSEQ&index=2
-  + Reduced number of kanbans, reduced number of items per container.
-  + Figure out which disruptions to fix.
-+ Peter Drucker's 5 Questions Animated - https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2
-
-<!--
-
-Skip for now:
-
-+ Robert Greene - "Mastery" is a great book, but I haven't found a great video.
 
 -->
 
