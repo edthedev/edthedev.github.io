@@ -11,12 +11,12 @@ equation.
 
 ## Videos
 
-+ Malcolm Gladwell on mentoring people to reach mastery, and the 10,000 hours it takes - https://www.youtube.com/watch?v=XS5EsTc_-2Q
-+ Malcolm Gladwell on Hot Ones - just here because I love 'Hot Ones' https://www.youtube.com/watch?v=ZAG_WxMm_8E&list=TLPQMjAwMTIwMjKm1dtuIkwSEQ&index=2
-+ Eliyahu Goldratt - on Ford, etc. establish flow, prevent over-production - https://www.youtube.com/watch?v=k0mUzkTclHQ
++ [Malcolm Gladwell on mentoring people to reach mastery, and the 10,000 hours it takes](https://www.youtube.com/watch?v=XS5EsTc_-2Q)
++ [Malcolm Gladwell on Hot Ones - just here because I love 'Hot Ones'](https://www.youtube.com/watch?v=ZAG_WxMm_8E&list=TLPQMjAwMTIwMjKm1dtuIkwSEQ&index=2)
++ [Eliyahu Goldratt - on Ford, etc. establish flow, prevent over-production](https://www.youtube.com/watch?v=k0mUzkTclHQ)
   + Reduced number of kanbans, reduced number of items per container.
   + Figure out which disruptions to fix.
-+ Peter Drucker's 5 Questions Animated - https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2
++ [Peter Drucker's 5 Questions Animated](https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2)
 
 <!--
 
