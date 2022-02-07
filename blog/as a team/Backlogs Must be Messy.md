@@ -18,3 +18,9 @@ There's lots of actions we would take if we had time and resources. The backlog
  should contain those actions. The backlog starts to fail if it contains
  actions that we cannot actually act on when we have spare cycles.
 
+Everything in the backlog should be a goal, not a plan.
+Plan's don't surivive a healthy day of work. Goals do.
+
+A nightmare scenario is an implementation plan written by a committee.
+We do need input from diverse voices in the organization. Do form the committee.
+But ask the committee to set the vision and to choose a top priority goal in that vision, then move on. When the top priority goal is done, re-convene the committee.

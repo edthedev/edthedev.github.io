@@ -10,4 +10,6 @@ If an email chain is of strategic importance, I respond thoughtfully at 10 am. (
 
 If an email required a response for some operational reason, I flag it and respond to every flagged email in a big batch at 2pm, but only on days when I don't have a meeting at 2pm.
 
-When someone asks me "if I saw that email yet" I have a carefully considered pre-planned reply.
+When someone asks me "if I saw that email yet" I use this carefully considered pre-planned reply.
+
+"No, I have not. What's up?"
