@@ -34,9 +34,8 @@ fewer vulnerabilities.](/img/book/cve_trend.PNG)
 
 >A strong programmer mentorship culture will produce fewer vulnerabilities. 
 
-
 [1]:
     https://www.cvedetails.com/cvss-score-charts.php?fromform=1&vendor_id=&product_id=&startdate=1999-05-03&enddate=2021-05-03
 
-Let's try to maximize the effects of that what mentorship we have. If that
-resonates with you, you may enjoy these articles.
+We should try to maximize the effects of what mentorship we have. If that
+resonates with you, you may get value from these articles.

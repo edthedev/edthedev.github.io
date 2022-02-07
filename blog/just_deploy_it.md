@@ -8,7 +8,7 @@ Deployment isn't simple. It isn't cheap. It is worth paying for.
 
 Deliver garbage, rather than nothing at all. Celebrate delivering garbage. Be willing to build a team brand around delivering better shit until The turd is so shiny you can see your reflection in it.
 
-All worthwhile work can shrink to fit the deadline without skimping on lunch hour.
+All worthwhile work can shrink to fit the deadline without skipping lunch. 
 
 There will always be another crisis.
 
