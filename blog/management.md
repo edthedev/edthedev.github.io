@@ -12,12 +12,14 @@ equation.
 ## Videos
 
 + [Malcolm Gladwell on mentoring people to reach mastery, and the 10,000 hours it takes](https://www.youtube.com/watch?v=XS5EsTc_-2Q)
++ [Simon Sinek on Why good leaders make you feel safe](https://www.youtube.com/watch?v=lmyZMtPVodo)
 + [Malcolm Gladwell on Hot Ones - just here because I love 'Hot Ones'](https://www.youtube.com/watch?v=ZAG_WxMm_8E&list=TLPQMjAwMTIwMjKm1dtuIkwSEQ&index=2)
 + [Eliyahu Goldratt - on Ford, etc. establish flow, prevent over-production](https://www.youtube.com/watch?v=k0mUzkTclHQ)
   + Reduced number of kanbans, reduced number of items per container.
   + Figure out which disruptions to fix.
 + [Peter Drucker's 5 Questions Animated](https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2)
 + [Dr. Henry Cloud on How To Set Boundaries](https://www.youtube.com/watch?v=zjcPkKHZRCg)
++ [John C. Maxwell on Four essential characteristics of a Mentor](https://www.youtube.com/watch?v=RcvPaCLnDNg)
 
 ## Leader's Book List
 
@@ -28,8 +30,6 @@ equation.
 + [Influence: The Psychology of Persuasion by Robert B. Cialdini](https://isbnsearch.org/isbn/9780061241895)
   > Learning how sales works improves pay outcomes.
 + [Boundaries by Henry Cloud and John Townsendn](https://isbnsearch.org/isbn/9780310351801)
-  > Teams accomplish more when healthy boundaries are established.
-+ [When I Say No, I Feel Guilty by Manuel J. Smith](https://isbnsearch.org/isbn/9780970299604)
   > Teams accomplish more when healthy boundaries are established.
 
 ## Authors
@@ -49,11 +49,11 @@ Other author's to consider:
 
 Skip for now:
 
-+ Robert Greene - Robert's writings on Mastery and mentorship are crucial to guide your mentorship process.
-  + TODO: Find another author on mentorship
 + Benjamin Graham - Almost all organizations are affected by the stock market. Benjamin's work can help you understand that effect, even just to know how and when to ignore that effect.
 + Vicki Robin on retirement - https://www.youtube.com/watch?v=Vfc1YMfDFY4 - Long term purpose.
 + Robert Greene - "Mastery" is a great book, but I haven't found a great video.
++ [When I Say No, I Feel Guilty by Manuel J. Smith](https://isbnsearch.org/isbn/9780970299604)
+  > Teams accomplish more when healthy boundaries are established.
 
 -->
 
