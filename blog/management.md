@@ -31,6 +31,7 @@ equation.
   > Learning how sales works improves pay outcomes.
 + [Boundaries by Henry Cloud and John Townsendn](https://isbnsearch.org/isbn/9780310351801)
   > Teams accomplish more when healthy boundaries are established.
++ [Find Your Why by Simon Sinek](https://isbnsearch.org/isbn/9780143111726)
 
 ## Authors
 
