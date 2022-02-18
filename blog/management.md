@@ -28,6 +28,8 @@ equation.
   > Learning how sales works improves pay outcomes.
 + [Boundaries by Henry Cloud and John Townsendn](https://isbnsearch.org/isbn/9780310351801)
   > Teams accomplish more when healthy boundaries are established.
++ [When I Say No, I Feel Guilty by Manuel J. Smith](https://isbnsearch.org/isbn/9780970299604)
+  > Teams accomplish more when healthy boundaries are established.
 
 ## Authors
 
