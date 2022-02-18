@@ -17,6 +17,7 @@ equation.
   + Reduced number of kanbans, reduced number of items per container.
   + Figure out which disruptions to fix.
 + [Peter Drucker's 5 Questions Animated](https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2)
++ [Dr. Henry Cloud on How To Set Boundaries](https://www.youtube.com/watch?v=zjcPkKHZRCg)
 
 ## Leader's Book List
 
