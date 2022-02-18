@@ -18,6 +18,17 @@ equation.
   + Figure out which disruptions to fix.
 + [Peter Drucker's 5 Questions Animated](https://www.youtube.com/watch?v=I9eDntumN5o&list=RDLVaSD32BRIIMg&index=2)
 
+## Leader's Book List
+
++ [It's Your Ship by Captain D. Michael Abrashoff](https://isbnsearch.org/isbn/9781455523023)
+  > Leaders must delegate to be effective.
++ [How to Stop Worrying and Start Living by Dale Carnegie](https://isbnsearch.org/isbn/9780671035976)
+  > Worrying effectively is an indispensible skill for leaders.
++ [Influence: The Psychology of Persuasion by Robert B. Cialdini](https://isbnsearch.org/isbn/9780061241895)
+  > Learning how sales works improves pay outcomes.
++ [Boundaries by Henry Cloud and John Townsendn](https://isbnsearch.org/isbn/9780310351801)
+  > Teams accomplish more when healthy boundaries are established.
+
 ## Authors
 
 Other author's to consider:
