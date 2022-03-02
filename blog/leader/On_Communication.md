@@ -12,8 +12,12 @@ Principles:
 - Take care whenever you cannot read each audience member's face for feedback.
 - Slow down.
 
-Why do I have these principles? I developed some pretty thick skin, which can cause me to hurt others.
-These rules help me cause less harm as I rampage along passionately through ideas I want to share.
+Why do I have these principles?
+
+During my professional life, I have developed thick skin.
+I have found this thick-skin can lead me to carelessness toward others.
+
+These rules help me cause less harm as I rampage along passionately describing ideas I want to share.
 
 ## On Creating Safe Spaces for communication
 
