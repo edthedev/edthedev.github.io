@@ -7,7 +7,7 @@ title: Coding is Stupid by Edward Delaporte
 
 1. Introduction
 2. [Management Crash Course](/blog/management)
-3. [Thoughts on Team Leadership](/blog/as_a_team_leader/)
+3. [As a Team Leader](/blog/leader/)
 
 ## Introduction
 
