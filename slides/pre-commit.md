@@ -45,11 +45,68 @@ repos:
 
 ---
 
-## Per-Developer Setup
+## Create Baseline File
 
-[Install pre-commit](https://pre-commit.com/#install) then run this command
+Initial secrets audit:
+[Install detect-secrets](https://github.com/Yelp/detect-secrets#installation)
+
+```bash
+$ detect-secrets scan > .secrets.baseline
+$ detect-secrets audit .secrets.baseline
+```
+
+Add the baseline to the repostiory:
+
+```bash
+$ git add .secrets.baseline .pre-commit-config.yaml 
+$ git commit
+```
+
+---
+
+## Developer Setup
+
+Each developer should complete these steps.
+
+[Install pre-commit](https://pre-commit.com/#install) then run these commands
  from the repository root:
 
-`$ pre-commit install`
+```bash
+$ git pull
+$ pre-commit install
+```
+
+---
+
+## References
+
++ [Preventing and Detecting Secret Leaks in GitHub
+](https://answers.uillinois.edu/illinois/112664)
+
+---
+
+## Discussion
+
+---
+
+## Install Detect-Secrets on Windows
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install detect-secrets
+```
+
+---
+
+## Windows command examples
+
+```powershell
+(.venv) $ detect-secrets scan > .secrets.baseline
+(.venv) $ cat .\.secrets.baseline
+(.venv) $ detect-secrets audit .secrets.baseline
+Nothing to audit!
+```
 
 </pre>
