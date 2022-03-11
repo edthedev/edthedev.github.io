@@ -13,6 +13,7 @@ I often give presentations on technical topics.
 
 In 2016, I began collecting the slide decks here.
 
+- [Git Tips and Tricks - March 2022](/slides/pre-commit)
 - Panelist - CampIT API Gateway Panel Discussion - November 2021 (No Slides)
 - [Identifying, Paying, and Avoiding Technical Debt - October 2021](/slides/2021.10.26ITPFTechnicalDebt.pptx)
 - [Big Ten Academic Alliance - On the Illinois Cybersecurity Development Program - June 2021](/slides/btaa)
