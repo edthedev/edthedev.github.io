@@ -8,10 +8,8 @@ slideimg: /slides/img/slidebg.jpg
 
 # Secret Detection with pre-commit
 
-Enhancing the Cybersecurity Program 
-to make University Software Development Safer
-
-Presented by Edward Delaporte, March 2022
+Part of Git Tips and Tricks Caffeiene break
+presented by Jon Gorman, Alex Dryden, Edward Delaporte, March 2022
 
 ???
 
@@ -58,7 +56,7 @@ $ detect-secrets audit .secrets.baseline
 Add the baseline to the repostiory:
 
 ```bash
-$ git add .secrets.baseline .pre-commit-config.yaml 
+$ git add .secrets.baseline .pre-commit-config.yaml
 $ git commit
 ```
 
