@@ -21,10 +21,40 @@ equation.
 + [Dr. Henry Cloud on How To Set Boundaries](https://www.youtube.com/watch?v=zjcPkKHZRCg)
 + [John C. Maxwell on Four essential characteristics of a Mentor](https://www.youtube.com/watch?v=RcvPaCLnDNg)
 
+## Articles
+
++ [Tom DeMarco on Slack](https://www.computerworld.com/article/2582593/preaching-slack.html)
+
+
+## Quotes
+
+> "All projects that finish late have one thing in common - they started late.",
+> Tom DeMarco
+
+> "The real reason for tight scheduling is the product doesn't have great value.
+> If it has marginal value, we're only willing to spend so much time on it.",
+> Tom DeMarco
+
+> "In a romantic relationship, you should never bid a fixed-price contract.
+> You've got a relationship that's bound to end up with someone feeling bad.
+> If you want the relationship to last, you commit to sharing the risk.",
+> Tom DeMarco
+
+> "Estimating is a wonderful thing - something you need to be able to do, even
+> very early.", Tom DeMarco
+
+> "Chronic overtime is not a sign of a great company.", Tom DeMarco
+
+> "There's a big shift happening in software development - the prosperer are not
+> the people who have the best skills or who work the hardest but who have the
+> most diligently assembled sets of components that they can then use on a
+> limited set of kinds of projects.", Tom DeMarco
+
 ## Leader's Book List
 
 + [It's Your Ship by Captain D. Michael Abrashoff](https://isbnsearch.org/isbn/9781455523023)
   > Leaders must delegate to be effective.
++ [Slack: Getting Past Burnout, Busywork, and the Myth of Total Efficiency by Tom DeMarco](https://isbnsearch.org/isbn/9780767907699)
 + [How to Stop Worrying and Start Living by Dale Carnegie](https://isbnsearch.org/isbn/9780671035976)
   > Worrying effectively is an indispensible skill for leaders.
 + [Influence: The Psychology of Persuasion by Robert B. Cialdini](https://isbnsearch.org/isbn/9780061241895)
