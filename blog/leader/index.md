@@ -8,6 +8,7 @@ title: Coding is Stupid by Edward Delaporte
 Regardless of title, if you're thinking hard about your work, your customers, and your teams, then you are a leader.
 
 - [On Communication](/blog/leader/On_Communication/)
+- [On Change](/blog/leader/On_Change/)
 
 <!-- 
 More books to read - list by CG:
