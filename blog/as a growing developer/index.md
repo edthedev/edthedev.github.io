@@ -16,3 +16,7 @@ You earn the right up take on much bigger and much harder problems.
 ## Quotes
 
 > "I totally get the fear of giving up your special sauce, but there’s really no point in keeping it a secret.", Limor Fried, Founder of Adafruit
+
+## Futher Developer Topics
+
++ [On Pipelines](/pipelines.md)
