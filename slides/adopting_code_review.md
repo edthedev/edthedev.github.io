@@ -55,20 +55,20 @@ Discuss and agree to team-wide expectations.
 
 ## Create a Great Pull Request
 
-- Submit pull requests often. Try to keep each pull request to 20 lines of new
-  non-boilerplate code or less.
-- Link relevant GitHub issues to the pull request.
-- We typically use Github [commit keywords][26] to link issues. This adds the
- issue history to our Git log.
+- Submit small pull requests often.
 - Request lots of reviewers: No one sees a pull request until reviewers are
   assigned.
-- Feel free to request reviewers from other teams.
-- Add the GitHub Teams reminder bot to all repositories.
-- You are encouraged to remind colleagues of your open pull request.
+- Use Github [commit keywords][26] to link issues.
+- Add the GitHub Microsoft Teams reminder bot to all repositories.
 - Always mention any ready-for-review unreviewed code during your daily
   stand-up.
 - Some feedback merits opening a new issue, to keep the current pull request
  simple.
+
+???
+
+- No one ever got stuck on a pull request that was too small.
+- GitHub commit keywords benefit both the PR and the git log.
 
 ---
 
