@@ -8,7 +8,6 @@ slideimg: /slides/img/slidebg.jpg
 
 ## Adopting Code Review
 
-Overview:
 - Benefits of Code Review
 - Committing to Code Review
 - Processes that Enhance Code Review
@@ -108,5 +107,19 @@ LGTM:
 - We do want to avoid a culture of LGTM.
 - Thoughtful discussions are better.
 - Treat LGTM as a process smell, but not a crisis.
+
+---
+
+## FAQ
+
+Who reviews what at what criticality or seniority level?
+> The impact of routine prioritized review vastly outweighs the impact of these decisions.
+> Let anyone review anything and trust that lots of reviews are happening.
+
+If the team spends twice as much time reviewing code as writing code, will all of our timelines triple?
+> Leadership does need to be aware of and commit to supporting this up-front cost.
+> Expect the timeline for the immediate next effort on a product that just implemented code review to triple, and then watch timelines quickly reduce to much shorter than before, for that product.
+> Teams can avoid paying all of this cost upfront by only implementing code review on one code base at a time.
+
 
 </pre>
