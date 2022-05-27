@@ -8,40 +8,45 @@ eleventyNavigation:
 
 # Edward C. Delaporte V						
 
-I make computers better at meeting the needs of humans - through a deep understanding of computers and strong empathy for humans. 
+I make computers better at meeting the needs of humans - through a deep understanding of computers and strong empathy for humans.
 
 ## Contact Info
 
 - Email: edward@delaporte.us
-- Website: http://edward.delaporte.us					
+- Website: https://edward.delaporte.us
 - GitHub: [EdTheDev](http://github.com/edthedev)
 - Resume: [Resume as PDF](https://edward.delaporte.us/pdf/Resume.Edward.Delaporte.pdf)
 
 ## Highlights
 
 - Bachelor's Degree In Computer Science from the College of Engineering at UIUC in 2006.
-- Writing software professionally since the year 2000.
+- Writing software professionally since the year 2000, and unprofessionally since 1988.
+- Working in Cybersecurity since 2006.
 - Leading software development teams since 2011.
-- Has built a lot of websites for a lot of purposes with a lot of different technologies.
+- Has built a lot of websites and integrations for a lot of purposes with a lot of different technologies.
 - Applies effective work habits and great interpersonal skills.
 - Cybersecurity: Hacking, Hardening, Teaching, Mentorship
-- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, Active Directory, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps.
-- Linux Tech:  Python, Perl, Java, PHP, Apache, NGinx, Django, SOAP, REST, JSON, LDAP, Linux shell, Syslog, SQL, WSGI, GitHub enterprise, AWS.
+- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, Active Directory, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps, Windows Subsystem for Linux
+- Linux Tech:  Python, WSGI, Apache, NGinx, Django, REST, JSON, LDAP, Linux shell, Syslog, SQL, GitHub enterprise, AWS, Docker, Podman, Vi
 
 ## Career
 
 ### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
 
-- Manages 4 full time Cybersecurity developers (fully remote team). 
+- Mentors developers, security engineers, and researchers across campus on vulnerability remediation.
+- Creates open lines of communication between campus researcher developers and Cybersecurity.
+- Manages 4 full time Cybersecurity developers (fully remote team).
+- Mentors key team leads on their path to becoming managers or architects.
+- Led creation of [shared resources][44] for preventing secret disclosure, Cybersecurity code review, and automated regression testing.
+- Created key resources for Open Source procedures, including a decision tree, product end-of-life language, and vulnerability disclosure.
 - Supports overall Cybersecurity Objectives.
-- Created open lines of communication between development teams and Cybersecurity.
-- Provides SDLC process maturity feedback to campus research and development teams.
-- Drafted a Software Development Lifecycle Road Map (SDLC) full of resources free to University staff.
-- Built a shared tool chain for automated regression testing to prevent re-introduction of security problems by any team whose process satisfies a reasonable level of the security SDLC.
-- Mentors developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
-- Mentors DevOps teams across campus in Secure Software Development Lifecycle (SDLC) practices.
-+ Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020
-- Assisted and mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
+- Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020.
+- Mentored the development teams behind the highest volume community.
+- CO- Co-author of the IT Council NGI Report to campus leadership.
+- Member of the GitHub Enterprise Commitee, and founding member of the GitHub Enterprise Community Interest Group. Maintainer of the GitHub Enterprise Campus Community Portal.
+- Member of the Technology Services Architecture Virtual Team.VID testing response in the United States in 2020.
+
+[44]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
 ### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
 
@@ -139,24 +144,27 @@ Application Security Engineer Responsibilities
 
 *Interesting coursework:*
 
- - Wrote a binary program capable of detecting a specific manufacturing fault in a computer chip.
- - Wrote a research paper on the economics of the funding of the Mozilla Foundation.
- - Wrote several statistical gene analysis programs in Perl.
- - Designed and simulated a pipelined computer processor for MIPS assembler.
- - Classwork languages included: Java, Perl, C, C++, Visual Basic, ColdFusion, Mainframe RPG, MIPS Assembler.
+- Wrote a binary program capable of detecting a specific manufacturing fault in a computer chip.
+- Wrote a research paper on the economics of the funding of the Mozilla Foundation.
+- Wrote several statistical gene analysis programs in Perl.
+- Designed and simulated a pipelined computer processor for MIPS assembler.
+- Classwork languages included: Java, Perl, C, C++, Visual Basic, ColdFusion, Mainframe RPG, MIPS Assembler.
 
+## Open Source Contributions, October 2012 - Present
 
-## Open Source Contributions				October 2012 - Present
+- [GitHub Arctic Code Vault Contributor][155] - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
+- [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
+- [Splunk SOAR][157] integrations for higher education use cases.
+- [McAirpos](https://github.com/edthedev/McAirpos) for playing [MakeCode Aracde](https://arcade.makecode.com/) creations on [RecalBox](https://www.recalbox.com/) to inspire more kids to learn to code.
+- Various simple command line utilities.
+- And [more...](https://github.com/edthedev/)
 
- - GitHub Arctic Code Vault Contributor 2020 - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
- - Collaborator on [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
- - Core contributor to the OWASP Ten Privacy Risks Projects 2015 - Present
- - Created a popular Python client for the InCommon SSL API: GitHub.com/edthedev/incommon_ssl
- - Created and maintained several Vim editor plugins, such as GitHub.com/edthedev/text-helper.vim
- - Has commits accepted to popular projects including AngularJs, Ansible, and Kivy.
+[155]: https://archiveprogram.github.com/
+[157]: https://www.splunk.com/en_us/data-insider/what-is-soar.html
 
 ## Professional Training - Highlights
 
+- 'Kurbenetes Security' course on A Cloud Guru.
 - SANS SEC 510: Public Cloud Security: AWS, Azure, and GCP, May 2021
 - CampIT Enterprise Risk / Security Management, March 2021
 - AnsibleFest 2020
@@ -169,24 +177,20 @@ Application Security Engineer Responsibilities
 - ISACA Securing Web Applications, Insider Threats, Introduction to the MITRE ATT&CK Framework, January 2020
 - Microsoft Azure Workshop: n-Tier Server Provisioning and Deployment Pipelines with Docker, 2019
 - Completed Evolve: Two year internal leadership training program at Busey 2018, 2019
-- Completed Citigal OWASP Top Ten Training in 2017, 2018, 2019
-- Completed Defensive Programming for C# - Citigal 2017
-- Attended DevUp St Louis 2017, PowerShell Summit 2017
-- Completed U of I Information Technology Services Manager Development (MgrDev) 
-- Completed U of I Information Technology Leadership Workshop (ITLW)
-- Completed [SANS](https://www.sans.org/) On-site Secure Software Development Training
-- Attended [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
-- Completed [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
+- Citigal OWASP Top Ten Training in 2017, 2018, 2019
+- Defensive Programming for C# - Citigal 2017
+- DevUp St Louis 2017, PowerShell Summit 2017
+- U of I Information Technology Services Manager Development (MgrDev)
+- U of I Information Technology Leadership Workshop (ITLW)
+- [SANS](https://www.sans.org/) On-site Secure Software Development Training
+- [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
+- [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
 
 ## Community Involvement
 
 - Rotary Club of Champaign - Website Committee Chair since 2020
 - Webmaster - Rotary Club of Champaign since 2018
-- Hosts a free "Learn Programming In Scratch!" class for elementary students at local public libraries since 2017
+- Hosts a free "Learn Programming!" class for elementary students at local public libraries since 2017
 - OWASP Top Ten Privacy Project - Core contributor since 2015
-- Presented at University of Illinois WebCon, 2021
-- Presented to Internet2 on Cybersecurity in Safer Illinois - University of Illinois COVID response, 2020
-- Presented Putting the Sec in SecDevOps - Urbana IT Professionals Forum - Spring 2020
-- Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
-- Presented at University of Illinois Webmaster's Conference 2016
 - Handled hosting, DNS and administration of various not-for-profit websites since 2007
+- [Recurring presenter](https://edward.delaporte.us/slides) at Urbana IT Professionals Forum, University of Illinois Webmasters Conference, Chicago Camp IT Conferences

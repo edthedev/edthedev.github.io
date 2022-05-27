@@ -21,7 +21,7 @@ In 2016, I began collecting the slide decks here.
 - [Big Ten Academic Alliance - On the Illinois Cybersecurity Development Program - June 2021](/slides/btaa)
 - [Urbana IT Professionals Forum - Mobile Integration Testing for Safer Illinois - June 2021](/slides/ITPF2021Spring.MobileIntegrationTesting.pptx)
 - [CampIT Cloud Security - How CISOs/InfoSec Leaders Have Adjusted to the Cloud World (Panel discussion) - Dec 2020](http://www.campiteducation.com/upcoming-virtualevents/cloudsecurity2/)
-- [InCommon IAM Online Webinar - Safer Illinois App: Testing, Tracing, Access in the Face of COVID-19 - Nov 2020](http://incommon.org/wp-content/uploads/2020/11/IAM-Online-November-2020.pdf) 
+- [InCommon IAM Online Webinar - Safer Illinois App: Testing, Tracing, Access in the Face of COVID-19 - Nov 2020](http://incommon.org/wp-content/uploads/2020/11/IAM-Online-November-2020.pdf)
 - [PowerShell Users Group 2020 July 8 - Pester with GitHub Actions](/slides/PUG2020Summer_Git.html)
 - [IT Pro Forum 2020 Spring - Putting the Security in SecDevOps](/slides/ITProForum2020Spring.html)
 - [Cybersecurity Operations 2020 Spring](/slides/SecOps2020Spring.html)
@@ -33,3 +33,11 @@ In 2016, I began collecting the slide decks here.
 - [WebCon 2016 Tech Demo: Fish Bowl](fishbowl.html) - View source to watch the Document Object Modeal (DOM) change in real time.
 - [IT Caffeine Break - Automated Web Testing](AutomatedWebTesting2017.html)
 - [IT Pro Forum 2016 - Boring Push-Ups with Ansible](/slides/ITProForum2016.html)
+
+<!-- 
+- Presented at University of Illinois WebCon, 2021
+- Presented to Internet2 on Cybersecurity in Safer Illinois - University of Illinois COVID response, 2020
+- Presented Putting the Sec in SecDevOps - Urbana IT Professionals Forum - Spring 2020
+- Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
+- Presented at University of Illinois Webmaster's Conference 2016
+-->
