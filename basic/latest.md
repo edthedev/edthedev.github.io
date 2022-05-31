@@ -10,7 +10,7 @@ Whatever I am working on, at the moment.
 Who knows what it is, or what it is for?
 
 ```basic
-{% include basic/latest.bas %}
+{% include 'basic/latest.bas' %}
 ```
 
 ![BASIC program](/img/basic/latest.gif)

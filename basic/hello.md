@@ -4,14 +4,15 @@ title: HELLO! - BASIC Program by Edward Delaporte
 script: hello
 ---
 
-## HELLO!
+## HELLO
 
 I enjoy ASCII art.
 Bitwise shifts are cool.
 
 [hello.bas][1]
+
 ```basic
-{% include basic/hello.bas %}
+{% include 'basic/hello.bas' %}
 ```
 
 ![Animation of BASIC program - HELLO](/img/basic/hello.gif)

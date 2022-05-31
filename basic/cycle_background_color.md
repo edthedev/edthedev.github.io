@@ -10,7 +10,7 @@ This is where we start to get into differences between the C64 and X16 Commander
 > WARNING: Strobe effect. I take my time in the animation below, but if you hit enter quickly, your program will effectively be a stobing series of lights.
 
 ```basic
-{% include basic/bg_cycle.bas %}
+{% include 'basic/bg_cycle.bas' %}
 ```
 
 ![BASIC program animation](/img/basic/bg_cycle.gif)

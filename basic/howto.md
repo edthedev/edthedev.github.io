@@ -8,7 +8,7 @@ title: Capturing BASIC Program Output - by Edward Delaporte
 This program is older than I am, but makes a great test of whether my website is ready to share the code inline.
 
 ```basic
-{% include basic/waves.bas %}
+{% include 'basic/waves.bas' %}
 ```
 
 ## How to make a GIF file!
