@@ -7,7 +7,7 @@ title: Arcade by Edward Delaporte
 
 ## My Approach
 
-![cabinet upgraded with 8 additional front buttons](img/upgraded.jpg)
+![cabinet upgraded with 8 additional front buttons](/img/arcade/upgraded.jpg)
 
 The vision for TMNTcade is to bring a shoulder-to-shoulder play experience to a selected set of games I own on other platforms - and to take apart an arcade machine and see how it ticks.
 
@@ -32,11 +32,11 @@ The original "start" buttons per player are not close of the other controls, so 
 - [Voice Controlled Outlet][5] - because the original on/off button no longer works.
 - [JST Connector Kit][4] for wiring up the additional buttons on J panel, since I had to run longer wires to reach that part of the cabinet. The kits would also have been helpful for the C panel buttons, but I managed to carefully re-use parts instead.
 
-![power supply and raspberry pi](img/power_pi.jpg)
+![power supply and raspberry pi](/img/arcade/power_pi.jpg)
 
 This USB chip allowed the existing cabinet controls to be connected to the [Raspbery Pi][1] as USB controllers. Rewiring these controls was the most time-consuming part of the project. I used four of these - one for each player (Leo, Mikey, Don and Raph).
 
-![USB Controller](img/usb_1.jpg)
+![USB Controller](/img/arcade/usb_1.jpg)
 
 [1]: https://smile.amazon.com/CanaKit-Raspberry-Premium-Supply-Listed/dp/B01C6EQNNK
 [2]: https://smile.amazon.com/gp/product/B007TUSXEY
@@ -53,21 +53,21 @@ The heart of this build is a Raspberry Pi, but pretty much any game system that 
 
 ## Wiring the Controls
 
-![the back of the TMNT contol board - panel c](img/buttons.jpg)
+![the back of the TMNT contol board - panel c](/img/arcade/buttons.jpg)
 
 + For the buttons, I used a pliers and moved the existing JST connectors to my [USB Connectors](https://smile.amazon.com/gp/aw/d/B01FZ797OC?psc=1&ref=ppx_pop_mob_b_asin_title). In some places there was some epoxy. I dealt with it by pulling harder with the pliers. I very nearly stripped one of the wires, but it worked out.
 
 
-![this 4 wire connector had to be turned into a pair of two wire connectors](img/rewired.jpg)
+![this 4 wire connector had to be turned into a pair of two wire connectors](/img/arcade/rewired.jpg)
 
 + For the joysticks I had to [learn how to disconnect and reconnect a JDT connector](https://youtu.be/kRvDgiX4Sk4). The joystick wires were in sets of 4, and my USB board needed sets of 2. I didn't have to pick anywhere special to put them - I just put them on the next open slot - following the usual advice to **keep every control set wired in the same order**.
 
 
-![hole I cut larger to allow controller USB A to B wires through](img/hole.jpg)
+![hole I cut larger to allow controller USB A to B wires through](/img/arcade/hole.jpg)
 
 + To allow all the USB controllers wires to connect into the controls box, I used a rotary cutting tool to cut the existing plastic opening larger.
 
-![controller USB A to B wires going through the cut out](img/controller_wires.jpg)
+![controller USB A to B wires going through the cut out](/img/arcade/controller_wires.jpg)
 
 ## Wiring the Screen
 
@@ -81,7 +81,7 @@ But my real intent is to drill holes in the front panel and add two more buttons
 
 ## Second Configuration - Supports 3 button games
 
-![j panel drilled for additional buttons](img/jpanel.jpg)
+![j panel drilled for additional buttons](/img/arcade/jpanel.jpg)
 
 By adding 8 buttons to the panel "J" on the front of the cabinet, the will free-up the 4 "start" buttons on the top of the cabinet for use during gameplay.
 
@@ -93,7 +93,7 @@ As of this writing, I do not have sound. The Raspberry Pi outputs the sound into
 
 ### Power
 
-![12 volt power supply](img/power.jpg)
+![12 volt power supply](/img/arcade/power.jpg)
 
 Some people wire the external on/off and sound controls deep into the heart of the their Raspberry Pi, but as of this writing I have not bothered. To solve turning the system on and off, I purchased a voice control ready wall outlet switch. So I just tell my voice control gadget to turn the arcade on and off as needed.
 
