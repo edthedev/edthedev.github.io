@@ -99,11 +99,12 @@ Some people wire the external on/off and sound controls deep into the heart of t
 
 ## Issues after first build
 
-+ FIXED: On/off is at surge protector. Plan is to add a voice controlled outlet.
++ FIXED: On/off is at surge protector. For a couple years I controlled the power with a voice controlled outlet.
++ FIXED: I finally followed this [power switch guide by Kongs R Us](https://www.youtube.com/watch?v=OvsatU5g15w&t=608s) to wire up the power switch on the TMNT control panel.
 + FIXED: Only Leo and Donny are recognized. Plan to debug this after I have a full set of buttons. This problem went away after a reboot.
 + FIXEd: It deserves a fan and ventilation. I plan to replace the Pi model 3 with a model 4 that will come with heat sinks and a fan. - I upgraded to a Pi model 4 that came with a fan, and I have left the back off for now.
 + FIXED: Should upgrade it to a Pi4.
-+ No sound. I plan to buy an amplifier. There are some good YouTube videos about this.
++ FIXED: For sound, I ended up buying a cheap pair of PC speakers and plugging them directly into the Raspberry Pi audio out.
 + Arcade games like TMNT aren't playable without both a Coin and a Start button per player. Plan to order longer button wires and add 8 new coin and start buttons to the angled lower front panel. This keeps me from having to drill through the plastic controls case, and I will look the look better.
 + It deserves lights. I'm planning to run a simple light strip along the back of the cabinet.
 + Doesn't have enough buttons to do things like save/load or manage favorites. - I am contemplating removing the On/Off and Sound controls, and adding a small custom made button box that sits on top in the same space, and adds buttons for L/R shoulders to manage save states. I could run the wires through the On/Off button space without drilling any new holes. I might not bother as this is a Raspberry Pi specific need, and if my other plan to upgrade to a Steam Box happens first, there will be no need.
