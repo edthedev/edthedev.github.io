@@ -15,7 +15,6 @@ I suspect that most visits here are looking for one of [my slide decks](/slides)
 
 ## Code Generated Art
 
-
 <a href="/art/live">
 
 ![Live Art Preview](/img/art/latest.PNG)
@@ -38,6 +37,7 @@ I've been coding for a long time.
 - [Learn to Code](/learn2code) - I maintain a list of my favorite resources for learning to code.
 - [Coding in BASIC](/basic) - I still write BASIC code.
 - [Make a Robot](/robots) - You should make a robot.
+- [Make an Arcade Machine](/arcade) - I made an aracde machine.
 
 
 ## Other Art

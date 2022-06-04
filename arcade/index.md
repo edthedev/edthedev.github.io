@@ -1,5 +1,9 @@
+---
+layout: layout.njk
+title: Arcade by Edward Delaporte
+---
 
-# TMNT RetroPi Conversion
+# Teenage Mutant Ninja Turtles
 
 ## My Approach
 
