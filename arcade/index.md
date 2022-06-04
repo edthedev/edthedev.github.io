@@ -25,12 +25,12 @@ The original "start" buttons per player are not close of the other controls, so 
 - [Raspberry Pi Model 3][1] (Replaced almost immediately with a Model 4)
 - HDMI Cable
 - [Video Encoder Chip][7]
-- [Sound Amplifier][2]
-- 3.5mm to RCA adapter
 - 3x [12 V power adapter][3] (purchased two additional, and reused the one that came with the cabinet)
 - Surge protector
-- [Voice Controlled Outlet][5] - because the original on/off button no longer works.
 - [JST Connector Kit][4] for wiring up the additional buttons on J panel, since I had to run longer wires to reach that part of the cabinet. The kits would also have been helpful for the C panel buttons, but I managed to carefully re-use parts instead.
+- ~~[Sound Amplifier][2]~~
+- ~~3.5mm to RCA adapter~~
+- ~~[Voice Controlled Outlet][5] - because the original on/off button no longer works.~~ Update: See link to Kongs R Us solution below.
 
 ![power supply and raspberry pi](/img/arcade/power_pi.jpg)
 
