@@ -7,10 +7,14 @@ title: Infrastructure as Code by Edward Delaporte
 
 Yes.
 
+## Setup Ansible
 
-```
+Here's how I set up Ansible on Ubuntu.
+
+```shell
 python -m venv ansible_venv
 source ansible_venv/bin/activate
+pip3 install ansible
 ansible-galaxy collection install community.aws
 pip3 install boto3
 ```
@@ -19,26 +23,34 @@ pip3 install boto3
 
 I created `setup.s3site.yml`:
 
-{% include 'ansible/setup.s3site.yml' %}}
+```yaml
+{% include 'ansible/setup.s3site.yml' %}
+```
 
 This play requires crafting an IAM access policy to allow serving the S3 bucket publicly:
 
-{% include 'ansible/www.public_s3.j2' %}}
+```json
+{% include 'ansible/www.public_s3.j2' %}
+```
 
 > Note: `www.public_s3.j2` is a Jinja2 template, which takes `s3bucket` as a variable from our playbook. We will specify this variable on the command line so that the play can be re-used for future buckets.
 
 Which I run with this command:
 
-{% include 'ansible/setup.edthe.dev.sh' %}}
+```shell
+{% include 'ansible/setup.edthe.dev.sh' %}
+```
 
 Then I did a bunch of non-repetivite stuff manually in  the AWS Web Console:
 
 - Point my domain registrar NameSevers for `edthe.dev` to the name servers listed in my Route53 hosted zone for `edthe.dev`.
 
-    > ns-number.awsdns-number.com.
-    > ns-number.awsdns-number.org.
-    > ns-number.awsdns-number.co.uk.
-    > ns-number.awsdns-number.net.
+```
+    ns-number.awsdns-number.com.
+    ns-number.awsdns-number.org.
+    ns-number.awsdns-number.co.uk.
+    ns-number.awsdns-number.net.
+```
 
 - Request an SSL Certificate in `AWS Certificate Manager` that covers `edthe.dev` and `www.edthe.dev`.
 - Do the [DNS Domain Ownership verification dance](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html).
@@ -50,13 +62,17 @@ Then I did a bunch of non-repetivite stuff manually in  the AWS Web Console:
 - Assign each CloudFront instance the SSL Certificate.
 - Add A and AAAA records for `www.edthe.dev` pointing to the `www.edthe.dev` CloudFront distribution.
 
-    > www.edthe.dev	A	Simple	-	1stbunchofletters.cloudfront.net.
-    > www.edthe.dev	AAAAA	Simple	-	1stbunchofletters.cloudfront.net.
+```dns
+    www.edthe.dev	A	Simple	-	1stbunchofletters.cloudfront.net.
+    www.edthe.dev	AAAAA	Simple	-	1stbunchofletters.cloudfront.net.
+```
 
 - Add A and AAAA records for `edthe.dev` pointing to the `edthe.dev` CloudFront distribution.
 
-    > edthe.dev	A	Simple	-	2ndbunchofletters.cloudfront.net.
-    > edthe.dev	A	Simple	-	2ndbunchofletters.cloudfront.net.
+```dns
+    edthe.dev	A	Simple	-	2ndbunchofletters.cloudfront.net.
+    edthe.dev	A	Simple	-	2ndbunchofletters.cloudfront.net.
+```
 
 Now my site exists, but I still need [a way to modify my AWS S3 Bucket contents](/code/iam/).
 

@@ -12,11 +12,15 @@ title: IAM for an S3 Bucket by Edward Delaporte
 
 I created the basic IAM group I need with `setup.iam.s3site.yml`:
 
-{% include 'ansible/setup.iam.s3site.yml' %}}
+```yaml
+{% include 'ansible/setup.iam.s3site.yml' %}
+```
 
 This Ansible playbook applies the policy in `iam_edit_s3.j2`:
 
-{% include 'ansible/iam_edit_s3.j2' %}}
+```json
+{% include 'ansible/iam_edit_s3.j2' %}
+```
 
 Note that, as usual, this playbook must be run with the `s3bucket` variable set.
 
@@ -28,11 +32,15 @@ ansible-playbook -e "s3bucket=edthe.dev" setup.iam.s3site.yml
 
 I also find that any user who needs to edit an S3 bucket is going to want to use a piece of editing software, which should typically use an access key. Rather than assign an access key, I grant permissions to users to manage their own in `setup.iam.accesskeys.yml`:
 
-{% include 'ansible/setup.iam.accesskeys.yml' %}}
+```yaml
+{% include 'ansible/setup.iam.accesskeys.yml' %}
+```
 
 This playbook applies the policy in `iam.allow.accesskeys.json`.
 
-{% include 'ansible/iam.allow.accesskeys.json' %}}
+```json
+{% include 'ansible/iam.allow.accesskeys.json' %}
+```
 
 ```shell
 ansible-playbook setup.iam.accesskeys.yml
