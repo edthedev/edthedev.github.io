@@ -5,7 +5,7 @@ title: IAM for an S3 Bucket by Edward Delaporte
 
 > Disclaimer: This is for a weekend project, not an enterprise organization. 
 > You'll see use of `*` here in IAM policies.
-> As Chief Executive Officer of my bullshit weekend project, I have been briefed the Chief Information Officer of this bullshit weekend project (also me) and I (as CEO) have accepted the associated risks. 
+> As Chief Executive Officer of my bullshit weekend project, I have been briefed by our Chief Information Officer of this bullshit weekend project (also me) and I (as CEO) have accepted the associated risks. 
 > I (as CIO) do not approve, but I remain committed to support bullshit weekend project in any way I can, until our Chief Technology Officer (also me) is able to assign someone (let's face it - me) to build thoughtful people-centric security IAM policies for bullshit weekend project.
 
 ## Allow Editing S3 Buckets
