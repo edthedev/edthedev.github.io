@@ -14,8 +14,12 @@ Being married to a top DevOps practitioner, I decided I had better delegate abil
 
 Here's the Ansible Playbook:
 
-{% include 'ansible/setup.iam.dns.yml' %}}
+```yaml
+{% include 'ansible/setup.iam.dns.yml' %}
+```
 
 And here's the AWS Policy File Jinja2 template:
 
-{% include 'ansible/iam.dns.j2' %}}
+```
+{% include 'ansible/iam.dns.j2' %}
+```
