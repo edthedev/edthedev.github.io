@@ -9,12 +9,12 @@
         {
             "Effect": "Allow",
             "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
-            "Resource": ["arn:aws:s3:::www.{{s3bucket}}"]
+            "Resource": ["arn:aws:s3:::www.{% raw %}{{s3bucket}}{% endraw %}"]
         },
         {
             "Effect": "Allow",
             "Action": "s3:*Object",
-            "Resource": ["arn:aws:s3:::www.{{s3bucket}}/*"]
+            "Resource": ["arn:aws:s3:::www.{% raw %}{{s3bucket}}{% endraw %}/*"]
         }
     ]
 }

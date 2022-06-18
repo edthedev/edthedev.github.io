@@ -7,20 +7,20 @@
   tasks:
   - name: create IAM policy file
     template:
-      dest: '/tmp/iam_edit_s3_{{ s3bucket }}.json'
+      dest: '/tmp/iam_edit_s3_{% raw %}{{ s3bucket }}{% endraw %}.json'
       src: ../files/iam_edit_s3.j2
   - name: create IAM group
     community.aws.iam_group:
-      name: 'edit_{{ s3bucket }}'
+      name: 'edit_{% raw %}{{ s3bucket }}{% endraw %}'
       state: present
       purge_policies: yes # We are about to add the only desired policy
   - name: apply policy
     community.aws.iam_policy:
-      iam_name: 'edit_{{ s3bucket }}'
+      iam_name: 'edit_{% raw %}{{ s3bucket }}{% endraw %}'
       iam_type: group
-      policy_name: 'policy-edit-{{ s3bucket }}'
+      policy_name: 'policy-edit-{% raw %}{{ s3bucket }}{% endraw %}'
       state: present
-      policy_document: '/tmp/iam_edit_s3_{{ s3bucket }}.json'
+      policy_document: '/tmp/iam_edit_s3_{% raw %}{{ s3bucket }}{% endraw %}.json'
   - name: group allowed to manage own access keys
     community.aws.iam_group:
       name: 'self_manage_acces_keys'
