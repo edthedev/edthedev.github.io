@@ -24,13 +24,13 @@ pip3 install boto3
 I created `setup.s3site.yml`:
 
 ```yaml
-{% include 'ansible/setup.s3site.yml' %}}
+{% include 'ansible/setup.s3site.yml' %}
 ```
 
 This play requires crafting an IAM access policy to allow serving the S3 bucket publicly:
 
 ```json
-{% include 'ansible/www.public_s3.j2' %}}
+{% include 'ansible/www.public_s3.j2' %}
 ```
 
 > Note: `www.public_s3.j2` is a Jinja2 template, which takes `s3bucket` as a variable from our playbook. We will specify this variable on the command line so that the play can be re-used for future buckets.
@@ -38,7 +38,7 @@ This play requires crafting an IAM access policy to allow serving the S3 bucket 
 Which I run with this command:
 
 ```shell
-{% include 'ansible/setup.edthe.dev.sh' %}}
+{% include 'ansible/setup.edthe.dev.sh' %}
 ```
 
 Then I did a bunch of non-repetivite stuff manually in  the AWS Web Console:
