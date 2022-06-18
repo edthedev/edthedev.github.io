@@ -1,0 +1,60 @@
+---
+- name: Set up static site buckets on AWS as static s3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    homepi: /home/pi
+
+  tasks:
+  - name: Create S3 bucket
+    amazon.aws.s3_bucket:
+      name: 'www.{{s3bucket}}'
+      state: present
+      versioning: yes
+  - name: Setup S3 Bucket as website
+    community.aws.s3_website:
+      name: 'www.{{s3bucket}}'
+      state: present
+      suffix: index.html
+      error_key: errors/404.html
+  - name: Add pages
+    community.aws.s3_sync:
+      bucket: 'www.{{s3bucket}}'
+      file_root: '../files/{{s3bucket}}'
+    tags:
+      - debug
+  - name: create ACL file
+    template:
+      dest: /tmp/www.{{s3bucket}}.acl.json
+      src: ../files/www.public_s3.j2
+  - name: Clear access controls www.
+    shell:
+      aws s3api put-bucket-policy --bucket 'www.{{s3bucket}}' --policy 'file:///tmp/www.{{s3bucket}}.acl.json'
+  - name: Create empty apex redirect bucket
+    amazon.aws.s3_bucket:
+      name: '{{s3bucket}}'
+      state: present
+      versioning: no
+  - name: Setup redirect from apex
+    community.aws.s3_website:
+      name: '{{s3bucket}}'
+      redirect_all_requests: 'www.{{s3bucket}}'
+      state: present
+  - name: create apex ACL file
+    template:
+      dest: /tmp/{{s3bucket}}.acl.json
+      src: ../files/public_s3.j2
+  - name: Clear access controls apex
+    shell:
+      aws s3api put-bucket-policy --bucket '{{s3bucket}}' --policy 'file:///tmp/{{s3bucket}}.acl.json'
+  - name: Create logs bucket
+    amazon.aws.s3_bucket:
+      name: 'logs.{{s3bucket}}'
+      state: present
+      versioning: no
+  - name: setup logging
+    community.aws.s3_logging:
+      name: '{{s3bucket}}'
+      state: present
+      target_bucket: 'logs.{{s3bucket}}'
