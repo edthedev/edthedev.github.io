@@ -1,0 +1,35 @@
+---
+- name: Set up IAM user groups
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: create IAM policy file
+    template:
+      dest: '/tmp/iam_edit_s3_{% raw %}{{ s3bucket }}{% endraw %}.json'
+      src: ../files/iam_edit_s3.j2
+  - name: create IAM group
+    community.aws.iam_group:
+      name: 'edit_{% raw %}{{ s3bucket }}{% endraw %}'
+      state: present
+      purge_policies: yes # We are about to add the only desired policy
+  - name: apply policy
+    community.aws.iam_policy:
+      iam_name: 'edit_{% raw %}{{ s3bucket }}{% endraw %}'
+      iam_type: group
+      policy_name: 'policy-edit-{% raw %}{{ s3bucket }}{% endraw %}'
+      state: present
+      policy_document: '/tmp/iam_edit_s3_{% raw %}{{ s3bucket }}{% endraw %}.json'
+  - name: group allowed to manage own access keys
+    community.aws.iam_group:
+      name: 'self_manage_acces_keys'
+      state: present
+      purge_policies: yes # We are about to add the only desired policy
+  - name: apply policy
+    community.aws.iam_policy:
+      iam_name: 'self_manage_acces_keys'
+      iam_type: group
+      policy_name: 'policy-manage-access-keys'
+      state: present
+      policy_document: '../files/iam.allow.accesskeys.json'

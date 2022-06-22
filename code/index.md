@@ -41,6 +41,7 @@ Just to make my life easier. Don't expect mature open source projects, these are
 + [ReactJS JavaScript and Python Goal Tracker](https://github.com/edthedev/MyGoal.space)
 + [JavaScript Chart.js Graphs for Kiva Lending Data](https://github.com/edthedev/kiva_graphs)
 + [Web Test Automation with RobotFramework](https://github.com/edthedev/Learn_RobotFramework_IllinoisPTR)
++ [Infrastructure as Code for Ansible to Manage AWS](/code/infra)
 
 I also do a decent amount of coding that simply amuses me.
 These aren't even good ideas, but I wanted them so I wrote them.
