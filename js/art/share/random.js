@@ -30,7 +30,7 @@ function get_random_from_seed(seed, max_r=1) {
 }
 
 var color_shift = 0;
-function fresh_color(warmth=.9, seed) {
+function fresh_color(warmth=.7, seed) {
   if(!seed) {
     seed = get_url_seed();
     color_shift+=1;
@@ -39,8 +39,6 @@ function fresh_color(warmth=.9, seed) {
   r1 = get_random_from_seed(seed, 255);
   r2 = get_random_from_seed(seed*r1, 255);
   r3 = get_random_from_seed(seed*r2, 255);
-  console.log('r1: ' + r1);
-  console.log('r2: ' + r2);
   return color(r1*warmth,r2*warmth,r3*warmth);
 }
 
@@ -52,7 +50,6 @@ function choose(choices, seed) {
   if(!seed) {
     seed = get_url_seed();
   }
-  rand = get_random_from_seed(seed, 1);
-  index = Math.floor(rand * choices.length);
+  index = get_random_from_seed(seed, choices.length);
   return choices[index];
 }
