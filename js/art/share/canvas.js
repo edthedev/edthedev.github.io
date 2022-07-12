@@ -6,14 +6,6 @@ function setup_canvas(maxim_x=800, maxim_y=400) {
 
 }
 
-
-/*
-Used by Zippy
-*/
-function fresh_color(warmth=30) {
-  return color(random(0,10)*warmth,random(0,10)*warmth, random(0,10)*warmth);
-}
-
 function zippy() {
   /// Dark Striped Background
   noStroke();

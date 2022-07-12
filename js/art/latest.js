@@ -158,10 +158,6 @@ function anim_weave(weave) {
   weave.y += weave.dy;
   return weave;
 }
-function fresh_color(warmth=30) {
-  return color(random(0,10)*warmth,random(0,10)*warmth, random(0,10)*warmth);
-}
-
 function zippy() {
   noStroke();
   stripe_w = 60;
