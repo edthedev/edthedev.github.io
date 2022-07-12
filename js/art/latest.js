@@ -314,5 +314,4 @@ function draw() {
 function mouseClicked() {
   pulse = 0;
   setup();
-  do_social();
 }
