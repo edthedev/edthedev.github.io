@@ -5,10 +5,8 @@ Reusable random functions
 */
 
 function new_random() {
-  var searchParams = new URLSearchParams(window.location.search);
   seed = get_random_seed();
-  searchParams.set("r", seed);
-  window.location.search = searchParams.toString();
+  window.location.search = "?r=" + seed;
 }
 
 function get_url_seed() {

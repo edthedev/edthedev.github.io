@@ -309,5 +309,6 @@ function draw() {
 
 function mouseClicked() {
   pulse = 0;
+  new_random();
   setup();
 }
