@@ -177,7 +177,7 @@ function setup() {
 
   setup_canvas(400,400);
   background('#4444CC');
-  zippy();
+  starfield(400,400);
 
   maxline = 400;
   balls = [];
