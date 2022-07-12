@@ -21,4 +21,8 @@ tunnel port 80
 exploits use bugs
 software is hard to do right
 error on line 1
+
+pointer exception
+managed memory is hard
+no-op sleds ride free
 ```
