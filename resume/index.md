@@ -125,17 +125,14 @@ Application Security Engineer Responsibilities
 ### March 2006 - March 2007: Software Developer at Silicon Graphics Inc.    Champaign, IL
 
  - Wrote software to track performance of supercomputers at the National Center for Supercomputing Applications (NCSA).
- - Adhered to source code style best practices, including the Python PEP8 Standard and the Zend PHP Style guidelines.
-
 
 ### May 2005 - March 2006: Systems Administrator at Imaging Technology Group at Beckman Institute, U of I     Champaign,IL
 
- - Configured backup, recovery, and software installation systems.
- - Solved diverse software and hardware configuration issues.
+ - Solved diverse software and hardware configuration challenges.
 
 ### May 2000 - Dec 2005: Software Developer at Ablesoft Solutions Inc. Oregon, IL
 
- - Created an elegant extensible project template in VB.Net which allowed us to create all our applications more quickly with better standard features.
+ - Created an elegant extensible project template which allowed us to create applications more quickly with better standard features.
  - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and JavaScript to build advanced web interfaces.
 
 ## Education
