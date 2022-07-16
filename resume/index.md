@@ -41,14 +41,14 @@ I make computers better at meeting the needs of humans - through a deep understa
 - Created key resources for Open Source procedures, including a decision tree, product end-of-life language, and vulnerability disclosure.
 - Supports overall Cybersecurity Objectives.
 - Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020.
-- Mentored the development teams behind the highest volume community.
-- CO- Co-author of the IT Council NGI Report to campus leadership.
+- Mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
+- Co-author of the IT Council Next Generation Infrastructure Report to campus leadership.
 - Member of the GitHub Enterprise Commitee, and founding member of the GitHub Enterprise Community Interest Group. Maintainer of the GitHub Enterprise Campus Community Portal.
-- Member of the Technology Services Architecture Virtual Team.VID testing response in the United States in 2020.
+- Member of the Technology Services Architecture Virtual Team.
 
 [44]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
-### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
+### August 2018 - November 2019: Assistant Vice President - Software Development at Busey Bank, Champaign, IL
 
 - Managed remote DevOps team of 9 software developers and 2 automation engineers for Busey Bank and FirsTech Payment processor.
 - Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
