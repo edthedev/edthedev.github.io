@@ -164,7 +164,7 @@ Application Security Engineer Responsibilities
 
 ## Professional Training - Highlights
 
-- 'Kurbenetes Security' course on A Cloud Guru.
+- 'Kurbenetes Security' course on A Cloud Guru - May 2022
 - SANS SEC 510: Public Cloud Security: AWS, Azure, and GCP, May 2021
 - CampIT Enterprise Risk / Security Management, March 2021
 - AnsibleFest 2020
@@ -177,6 +177,7 @@ Application Security Engineer Responsibilities
 - ISACA Securing Web Applications, Insider Threats, Introduction to the MITRE ATT&CK Framework, January 2020
 - Microsoft Azure Workshop: n-Tier Server Provisioning and Deployment Pipelines with Docker, 2019
 - Completed Evolve: Two year internal leadership training program at Busey 2018, 2019
+- Managing People to Perform - Oliver Group Inc, 2018
 - Citigal OWASP Top Ten Training in 2017, 2018, 2019
 - Defensive Programming for C# - Citigal 2017
 - DevUp St Louis 2017, PowerShell Summit 2017
