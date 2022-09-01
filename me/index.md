@@ -5,13 +5,35 @@ title: About Edward Delaporte
 
 ## Conference Bio
 
- ![Picture of Edward Delaporte](/img/EdwardDelaporte.jpg "Picture of Edward Delaporte")
+ ![Picture of Edward Delaporte](/img/EdwardDelaporte_juggling.jpg "Picture of Edward Delaporte")
 
 Edward Delaporte has been writing web software professionally since the year 2000; and he still enjoys working with "the technology of the future".
 
-Edward has written software with a plethora of different tools. His current favorites include Python, PowerShell, Go and Commodore BASIC.
+Edward has written software with a plethora of different tools. His current favorites include Python, PowerShell, Go and Commodore BASIC.  Edward consults on software development lifecycle security and makes art with code.
 
-Ask Edward how to make your DevOps pipeline more secure.
+At previous conferences, Edward has presented on Git, Ansible, React, and more, connecting the dots between usability, accessibility, security, and development lifecycles.
+
+Ask Edward how code pipelines can ‘make our worst workday a much better day.’
+
+## Mentor Bio
+
+Edward has been managing IT professionals since 2011, and has led teams ranging in size from 2 to 11 people. Edward's proudest moments are when he gets to listen to his former mentees teach others, and learn from them at the same time.
+
+3 key points:
+
+- Edward helps his mentees see beyond their assumptions to recognize their strengths and the career possibilities.
+
+- Bravery starts with compassion for oneself
+- Continuous investment in self, then in community
+- There is always an arquilian battlecruiser poised to destroy the Earth.
+
+Edward specializes in getting mentees 'unstuck' so they can continue their professional growth journey.
+
+
+Other known sightings:
+Drinking tea
+Juggling fire (no, really)
+Presenting on Mjolnir, Stormbreaker, and configuration management
 
 ## My Community Values
 
