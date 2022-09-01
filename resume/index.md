@@ -41,14 +41,14 @@ I make computers better at meeting the needs of humans - through a deep understa
 - Created key resources for Open Source procedures, including a decision tree, product end-of-life language, and vulnerability disclosure.
 - Supports overall Cybersecurity Objectives.
 - Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020.
-- Mentored the development teams behind the highest volume community.
-- CO- Co-author of the IT Council NGI Report to campus leadership.
+- Mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
+- Co-author of the IT Council Next Generation Infrastructure Report to campus leadership.
 - Member of the GitHub Enterprise Commitee, and founding member of the GitHub Enterprise Community Interest Group. Maintainer of the GitHub Enterprise Campus Community Portal.
-- Member of the Technology Services Architecture Virtual Team.VID testing response in the United States in 2020.
+- Member of the Technology Services Architecture Virtual Team.
 
 [44]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
-### August 2018 - November 2019: Assistant Vice President - Manager of Software Development at Busey Bank, Champaign, IL
+### August 2018 - November 2019: Assistant Vice President - Software Development at Busey Bank, Champaign, IL
 
 - Managed remote DevOps team of 9 software developers and 2 automation engineers for Busey Bank and FirsTech Payment processor.
 - Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
@@ -125,17 +125,14 @@ Application Security Engineer Responsibilities
 ### March 2006 - March 2007: Software Developer at Silicon Graphics Inc.    Champaign, IL
 
  - Wrote software to track performance of supercomputers at the National Center for Supercomputing Applications (NCSA).
- - Adhered to source code style best practices, including the Python PEP8 Standard and the Zend PHP Style guidelines.
-
 
 ### May 2005 - March 2006: Systems Administrator at Imaging Technology Group at Beckman Institute, U of I     Champaign,IL
 
- - Configured backup, recovery, and software installation systems.
- - Solved diverse software and hardware configuration issues.
+ - Solved diverse software and hardware configuration challenges.
 
 ### May 2000 - Dec 2005: Software Developer at Ablesoft Solutions Inc. Oregon, IL
 
- - Created an elegant extensible project template in VB.Net which allowed us to create all our applications more quickly with better standard features.
+ - Created an elegant extensible project template which allowed us to create applications more quickly with better standard features.
  - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and JavaScript to build advanced web interfaces.
 
 ## Education
@@ -164,7 +161,7 @@ Application Security Engineer Responsibilities
 
 ## Professional Training - Highlights
 
-- 'Kurbenetes Security' course on A Cloud Guru.
+- 'Kurbenetes Security' course on A Cloud Guru - May 2022
 - SANS SEC 510: Public Cloud Security: AWS, Azure, and GCP, May 2021
 - CampIT Enterprise Risk / Security Management, March 2021
 - AnsibleFest 2020
@@ -177,6 +174,7 @@ Application Security Engineer Responsibilities
 - ISACA Securing Web Applications, Insider Threats, Introduction to the MITRE ATT&CK Framework, January 2020
 - Microsoft Azure Workshop: n-Tier Server Provisioning and Deployment Pipelines with Docker, 2019
 - Completed Evolve: Two year internal leadership training program at Busey 2018, 2019
+- Managing People to Perform - Oliver Group Inc, 2018
 - Citigal OWASP Top Ten Training in 2017, 2018, 2019
 - Defensive Programming for C# - Citigal 2017
 - DevUp St Louis 2017, PowerShell Summit 2017
