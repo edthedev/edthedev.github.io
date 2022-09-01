@@ -13,6 +13,7 @@ I often give presentations on technical topics.
 
 In 2016, I began collecting the slide decks here.
 
+- [Web Application Scanning - August 2022](/slides/WebApplicationScanning2022.pptx)
 - [Ensemble Programming - May 2022](/slides/ensemble)
 - [Adopting Code Review - April 2022](/slides/adopting_code_review)
 - [Git Tips and Tricks with pre-commit - March 2022](/slides/pre-commit)
