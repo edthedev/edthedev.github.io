@@ -17,23 +17,7 @@ Ask Edward how code pipelines can â€˜make our worst workday a much better day.â€
 
 ## Mentor Bio
 
-Edward has been managing IT professionals since 2011, and has led teams ranging in size from 2 to 11 people. Edward's proudest moments are when he gets to listen to his former mentees teach others, and learn from them at the same time.
-
-3 key points:
-
-- Edward helps his mentees see beyond their assumptions to recognize their strengths and the career possibilities.
-
-- Bravery starts with compassion for oneself
-- Continuous investment in self, then in community
-- There is always an arquilian battlecruiser poised to destroy the Earth.
-
-Edward specializes in getting mentees 'unstuck' so they can continue their professional growth journey.
-
-
-Other known sightings:
-Drinking tea
-Juggling fire (no, really)
-Presenting on Mjolnir, Stormbreaker, and configuration management
+Edward has been managing IT professionals since 2011, and has led teams ranging in size from 2 to 11 people. Edward helps his mentees see beyond their assumptions to recognize their strengths and career possibilities. Edward's proudest moments are when he gets to listen to his former mentees teach others, and learn from them at the same time. You may enjoy asking Edward what juggling fire taught him about information technology.
 
 ## My Community Values
 
