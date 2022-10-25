@@ -18,6 +18,7 @@ eleventyNavigation:
 
 ## 2022 Quick Sketch
 
+- ![paint test](/art/sketch2.png)
 - ![80s paint](/art/80spaint.png)
 - ![a flower or something](/art/flower.png)
 
