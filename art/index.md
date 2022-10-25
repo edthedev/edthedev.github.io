@@ -18,7 +18,7 @@ eleventyNavigation:
 
 ## 2022 Quick Sketch
 
-- ![a flower or something](flower.png)
+- ![a flower or something](/art/flower.png)
 
 ## Notecard Abstract Art
 
