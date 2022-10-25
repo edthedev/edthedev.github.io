@@ -18,7 +18,9 @@ eleventyNavigation:
 
 ## 2022 Quick Sketch
 
+- ![80s paint](/art/80spaint.png)
 - ![a flower or something](/art/flower.png)
+
 
 ## Notecard Abstract Art
 
