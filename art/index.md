@@ -16,7 +16,9 @@ eleventyNavigation:
   - [Old Art Notebooks](#old-art-notebooks)
   - [Fan Art](#fan-art)
 
+## 2022 Quick Sketch
 
+- ![a flower or something](flower.png)
 
 ## Notecard Abstract Art
 
