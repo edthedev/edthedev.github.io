@@ -35,7 +35,8 @@ Edward has been managing IT professionals since 2011, and has led teams ranging 
 
 ## My Social Media
 
-- Twitter: [EdTheDev](https://twitter.com/edthedev)
+- Mastodon: <a href=https://mastodon.sdf.org/@Edthedev rel=me>Edthedev@mastodon.sdf.org</a>)
+- Twitter: <a href=https://twitter.com/edthedev rel=me>@EdTheDev</a>)
 - LinkedIn: [Edward Delaporte V](https://www.linkedin.com/in/edwarddelaportev)
 
 ## My Art
