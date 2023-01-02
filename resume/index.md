@@ -162,12 +162,7 @@ Application Security Engineer Responsibilities
 - 'Kurbenetes Security' course on A Cloud Guru - May 2022
 - SANS SEC 510: Public Cloud Security: AWS, Azure, and GCP, May 2021
 - CampIT Enterprise Risk / Security Management, March 2021
-- AnsibleFest 2020
-- PrivacyCon 2020
-- DockerCon 2020
-- MS Build 2020
-- Microsoft Azure Fundamentals Workshop, 2020
-- Ansible Tower Workshop, 2020
+- So many online conferences in 2020: AnsibleFest, PrivacyCon, DockerCon, MS Build, Microsoft Azure Fundamentals Workshop, Ansible Tower Workshop
 - CampIT Risk Conference, February 2020
 - ISACA Securing Web Applications, Insider Threats, Introduction to the MITRE ATT&CK Framework, January 2020
 - Microsoft Azure Workshop: n-Tier Server Provisioning and Deployment Pipelines with Docker, 2019
@@ -176,11 +171,11 @@ Application Security Engineer Responsibilities
 - Citigal OWASP Top Ten Training in 2017, 2018, 2019
 - Defensive Programming for C# - Citigal 2017
 - DevUp St Louis 2017, PowerShell Summit 2017
-- U of I Information Technology Services Manager Development (MgrDev)
-- U of I Information Technology Leadership Workshop (ITLW)
-- [SANS](https://www.sans.org/) On-site Secure Software Development Training
+- [U of I Information Technology Manager Development (MgrDev) class of 2014](https://publish.illinois.edu/managerdev/graduates/)
 - [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
+- [U of I Information Technology Leadership Workshop (ITLW) class of 2011](https://publish.illinois.edu/itleaders/graduates/)
 - [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
+- [SANS](https://www.sans.org/) On-site Secure Software Development Training
 
 ## Community Involvement
 
