@@ -37,7 +37,7 @@ I apply my deep understanding of computers and strong empathy for humans to make
 - Creates open lines of communication between campus researcher developers and Cybersecurity.
 - Created key resources for Open Source procedures, including a decision tree, product end-of-life language, and vulnerability disclosure.
 - Established collaboration patterns supporting shared open source tools with the National Center for Supercomputing Applications (NCSA), Splunk, Energy Sciences Network (EsNet), and RokMetro.
-- Manages 4 full time Cybersecurity developers (fully remote team).
+- Manages 4 full time Cybersecurity developers (fully remote team) and student interns.
 - Mentors key team leads on their path to becoming managers or architects.
 - Led creation of [shared resources][44] for preventing secret disclosure, Cybersecurity code review, and automated regression testing.
 - Co-chair of the Next Generation Infrastructure Strategic Automation Working Group 2020-2022.
