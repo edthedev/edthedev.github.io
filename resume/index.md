@@ -8,7 +8,7 @@ eleventyNavigation:
 
 # Edward C. Delaporte V						
 
-I make computers better at meeting the needs of humans - through a deep understanding of computers and strong empathy for humans.
+I apply my deep understanding of computers and strong empathy for humans to make computers better at meeting the needs of humans.
 
 ## Contact Info
 
@@ -21,7 +21,7 @@ I make computers better at meeting the needs of humans - through a deep understa
 
 - Bachelor's Degree In Computer Science from the College of Engineering at UIUC in 2006.
 - Writing software professionally since the year 2000, and unprofessionally since 1988.
-- Working in Cybersecurity since 2006.
+- Specialized in Cybersecurity since 2006.
 - Leading software development teams since 2011.
 - Has built a lot of websites and integrations for a lot of purposes with a lot of different technologies.
 - Applies effective work habits and great interpersonal skills.
@@ -35,16 +35,16 @@ I make computers better at meeting the needs of humans - through a deep understa
 
 - Mentors developers, security engineers, and researchers across campus on vulnerability remediation.
 - Creates open lines of communication between campus researcher developers and Cybersecurity.
+- Created key resources for Open Source procedures, including a decision tree, product end-of-life language, and vulnerability disclosure.
+- Established collaboration patterns supporting shared open source tools with the National Center for Supercomputing Applications (NCSA), Splunk, Energy Sciences Network (EsNet), and RokMetro.
 - Manages 4 full time Cybersecurity developers (fully remote team).
 - Mentors key team leads on their path to becoming managers or architects.
 - Led creation of [shared resources][44] for preventing secret disclosure, Cybersecurity code review, and automated regression testing.
-- Created key resources for Open Source procedures, including a decision tree, product end-of-life language, and vulnerability disclosure.
-- Supports overall Cybersecurity Objectives.
-- Co-chair of the Next Generation Infrastructure Strategic Automation Working Group since 2020.
+- Co-chair of the Next Generation Infrastructure Strategic Automation Working Group 2020-2022.
 - Mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
-- Co-author of the IT Council Next Generation Infrastructure Report to campus leadership.
 - Member of the GitHub Enterprise Commitee, and founding member of the GitHub Enterprise Community Interest Group. Maintainer of the GitHub Enterprise Campus Community Portal.
 - Member of the Technology Services Architecture Virtual Team.
+- Supports overall Identity, Privacy and Cybersecurity Objectives.
 
 [44]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
@@ -70,11 +70,9 @@ I make computers better at meeting the needs of humans - through a deep understa
 
 ### July 2015  - January 2017: Senior IT Programmer at Busey Bank, Champaign, IL
 
- - Built financial transaction websites using Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials and React.js.
  - Guides projects through the software development life-cycle, including requirements, implementation, delivery, testing and maintenance.
+ - Built financial transaction websites using Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials and React.js.
  - Recognized as a key contributor in the integration of Pulaski Bank infrastructure.
- - Built and launched [MyPropertyPay.com](https://secure.mypropertypay.com).
- - Builds infrastructure tools with PowerShell.
  - Presents technology training at local conferences as part of the First Busey commitment to building our community.
 
 ### November  2011 - July 2015: Lead Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
