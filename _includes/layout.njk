@@ -1,0 +1,40 @@
+---
+title: Edward Delaporte's Website
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script src="/js/skipto.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>{{ title }}</title>
+
+<nav class="ye_navbar" role="navigation"> 
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+{{ content | safe }}
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=I%20shared%20https://edward.delaporte
+.us/">
+Share on Mastodon</a>
+  <p>Copyright 2020-2023 Edward Delaporte</p>
+</div>
+</html>

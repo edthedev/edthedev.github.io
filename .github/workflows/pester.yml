@@ -1,0 +1,38 @@
+name: Pester Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+
+    steps:
+    - uses: actions/checkout@v2
+
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+
+    - run: npm ci
+
+
+    - name: Build static site
+      run: npx @11ty/eleventy
+    
+    - name: Install dependencies PowerShell 7
+      run: Install-Module -Name 'Pester' -Force -SkipPublisherCheck
+      shell: pwsh
+    - name: Run tests PowerShell 7
+      run: Invoke-Pester -Path '.\tests\' -CI
+      shell: pwsh

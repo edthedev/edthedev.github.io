@@ -1,0 +1,58 @@
+---
+title: Coding is Stupid - by Edward Delaporte
+pagination:
+    data: items
+    size: 20
+items: 
+    - {id: "/book/", name: "Introduction", 
+    desc: ""}
+    - {id: "/book/pages/safety", name: "Create Safety Nets", 
+    desc: ""}
+    - {id: "/book/pages/trouble", name: "Let Trouble Find You", 
+    desc: ""}
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<!-- <script src="/js/skipto.min.js"></script> -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/book.css" /> 
+  <title>{{ title }}</title>
+
+
+
+</head> 
+<body>
+
+<!-- List book pages. -->
+<nav class="book_nav" role="navigation">
+{%- for item in pagination.items %}
+
+<li> {{ loop.index }} <a href="{{item.id}}"> {{ item.name }}</a></li>
+
+{% endfor -%}
+</nav>
+
+<div class="content" role="main">
+
+{{ content | safe }}
+<hr>
+<div class="footer" role="contentinfo">
+  <p><a href="/">Return to Edward.Delaporte.us</a></p>
+  <p>Copyright 2020-2023 Edward Delaporte</p>
+</div>
+</div>
+</html>

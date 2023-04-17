@@ -1,0 +1,45 @@
+---
+title: BASIC Programs by Edward Delaporte
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script src="/js/skipto.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/basic.css" /> 
+  <title>{{ title }}</title>
+
+<nav class="ye_navbar" role="navigation"> 
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+<ul>
+  <li> <a href="/basic">Programs in BASIC</a>
+  </li>
+  <li> <a href="/learn2code">Learn to Code</a>
+  </li>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+{{ content | safe }}
+</div>
+<hr/>
+<div class="content" role="contentinfo">
+  <p><a href="/basic/howto">How to create these GIF files.</a></p>
+  <p>Copyright 2020-2023 Edward Delaporte</p>
+</div>
+</html>

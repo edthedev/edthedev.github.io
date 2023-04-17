@@ -1,0 +1,18 @@
+/* 
+
+Page Styles
+
+*/
+img {
+    max-width: 34rem;
+    box-shadow: 0.2em 0.2em #757575d2
+}
+
+pre {
+    background-color: #064b99;
+    color: #75b4fb;
+}
+code {
+    background-color: #064b99;
+    color: #75b4fb;
+}

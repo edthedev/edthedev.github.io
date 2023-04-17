@@ -1,0 +1,38 @@
+---
+title: Slides by Edward Delaporte
+margin: /slides/img/margin.jpg
+background: /slides/img/capital_i.PNG
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/slides.css" /> 
+    <style>
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("{{ margin }}");
+	  }
+	  .remark-slide-content {
+      background-image: url("{{ background }}");
+	  }
+    </style>
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <!-- No navigation bar inside of a slide deck. -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  </head>
+  <body>
+<textarea id="source">
+
+{{ content | safe }}
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="/js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

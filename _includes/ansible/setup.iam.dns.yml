@@ -1,0 +1,25 @@
+---
+- name: Set up IAM user groups
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    policy_name: edit_dns
+
+  tasks:
+  - name: create IAM policy file
+    template:
+      dest: '/tmp/{{policy_name}}.json'
+      src: ../files/iam.dns.j2
+  - name: create IAM group
+    community.aws.iam_group:
+      name: '{{ policy_name }}'
+      state: present
+      purge_policies: yes # We are about to add the only desired policy
+  - name: apply policy
+    community.aws.iam_policy:
+      iam_name: '{{ policy_name }}'
+      iam_type: group
+      policy_name: '{{ policy_name }}'
+      state: present
+      policy_document: '/tmp/{{policy_name}}.json'

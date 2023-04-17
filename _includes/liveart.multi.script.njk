@@ -1,0 +1,55 @@
+---
+title: Edward Delaporte's Art
+script: /js/art/cross.js
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script src="/js/skipto.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/art.css" /> 
+  <title>{{ title }}</title>
+  <script src="/js/p5.js"></script>
+  {% for source in script %}
+    <script src="{{source}}"></script>
+  {% endfor %}
+
+</head> 
+<body>
+
+<nav class="ye_navbar" role="navigation"> 
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+</nav>
+
+
+<div class="content" role="main"> <!-- No role="main" here because the script will add a main tag. -->
+{{ content | safe }}
+<main role="application"> <!-- Script output will be written here. -->
+</main>
+
+</div>
+<div class="content" role="contentinfo">
+  <p>You can read the source code at 
+  {% for source in script %}
+      <li>
+        <a href="https://github.com/edthedev/edthedev.github.io/blob/main{{source}}">
+        {{source}}</a>
+      </li>
+  {% endfor %}
+  </p>
+  <p>Copyright 2020-2023 Edward Delaporte</p>
+</div>
+</html>

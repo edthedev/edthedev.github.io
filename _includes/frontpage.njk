@@ -1,0 +1,75 @@
+---
+title: Welcome - Edward Delaporte's Website
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3SDE9WK2R2"></script>
+<script src="/js/skipto.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3SDE9WK2R2');
+</script>
+<!-- End Google -->
+  
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bubbles.js"></script>
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/frontpage.css" /> 
+  <link rel="stylesheet" href="/css/bubbles.css" /> 
+
+  <title>{{ title }}</title>
+
+<nav class="ye_navbar" role="navigation"> 
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+</nav>
+
+
+</head> 
+<body>
+
+
+
+
+<div class="content" role="main">
+
+<h1> Edward Delaporte's Site</h1>
+<!-- Highlights -->
+<div class="vwrap"><div class="vmove">
+  <div id=feature1 class="vslide three_col">
+    <span class=bubble id=bubble1>Stable</span>
+    <span class=bubble id=bubble2>Stable</span>
+    <span class=bubble id=bubble3>Stable</span>
+  </div>
+  <div id=feature2 class="vslide three_col">
+    <span class=bubble id=bubble4>Dynamic</span>
+    <span class=bubble id=bubble5>Elegant</span>
+    <span class=bubble id=bubble6>Contrary</span>
+  </div>
+  <div id=feature3 class="vslide three_col">
+    <span class=bubble id=bubble7>Dynamic</span>
+    <span class=bubble id=bubble8>Elegant</span>
+    <span class=bubble id=bubble0>Contrary</span>
+  </div>
+</div></div>
+<!-- Highlights -->
+
+{{ content | safe }}
+</div>
+
+<div class="content" role="contentinfo">
+  <hr/>
+  <p>Copyright 2020-2023 Edward Delaporte</p>
+</div>
+
+<script> 
+  window.onload = randomize_bubbles;
+</script>
+</html>

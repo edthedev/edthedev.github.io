@@ -1,0 +1,19 @@
+---
+- name: Set up IAM user groups
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: group allowed to manage own access keys
+    community.aws.iam_group:
+      name: 'self_manage_acces_keys'
+      state: present
+      purge_policies: yes # We are about to add the only desired policy
+  - name: apply policy
+    community.aws.iam_policy:
+      iam_name: 'self_manage_acces_keys'
+      iam_type: group
+      policy_name: 'policy-manage-access-keys'
+      state: present
+      policy_document: '../files/iam.allow.accesskeys.json'

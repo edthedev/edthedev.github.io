@@ -1,0 +1,29 @@
+p {
+    margin: .5em;
+}
+
+nav {
+    padding: 2em;
+    flex: 20%;
+    max-width: 20%;
+}
+
+.book_nav:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.footer {
+    float:left;
+    clear:both;
+}
+
+li {
+    width: 100%;
+}
+
+body {
+    display:flex;
+}
