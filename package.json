@@ -7,7 +7,7 @@
   "author": "Edward Delaporte",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@orchidjs/eleventy-plugin-ids": "^0.1.1",
     "markdown-it": "^13.0.1",
