@@ -15,14 +15,14 @@ Here's why that could never happen.
 - ✓ Thor is a viking from space who swings his hammer so fast that it picks up frost giants with the wind force.
 - ✓ Namor is an Atlantean who always wears a speedo and is almost always angry.
 
-Besides their core premise, Thor and Namor have silly friends and other silly aspects:
+Besides their core premise, the core Avengers also have silly friends and other silly aspects:
 
 - ✓ Thor flies by throwing his hammer and not letting go.
 - ✓ Namor flies by flapping tiny wings on his ankles.
 - ✓ If Thor lets go of his magic hammer for too long, he loses his fantastic powers.
-- All of Thor's Friends are too silly for the movies, but especially Beta Ray Bill - who is an alien with a horse head who is worthy of the power of Thor.
 - x Namor is a founding member of the Avengers.
-- The man in a speedo with tiny flappy ankle wings is primarily defined by his righteous but damanging anger over humanity's abuses of the planet's ecologicaly. This becomes his defining characteristics, in spite of his flying around on tiny flappy ankle wings.
+- ✓ The man in a speedo with tiny flappy ankle wings is primarily defined by his righteous but damanging anger over humanity's abuses of the planet's ecologicaly. This becomes his defining characteristics, in spite of his flying around on tiny flappy ankle wings.
+- ✓ Captain Ameria was frozen for decades to allow him to have an origin in the 1940s but be an Avenger today. But he's fine. It was just cold.
 
 ## The Other Avengers
 
@@ -47,6 +47,7 @@ And these characters have their own silly aspects:
 
 - ✓ Rocket Racoon
 - ✓ Howard the Duck (how is he the first Marvel movie?!)
+- ✓ Spider-Ham - a normal spider was bit by a radioactive pig.
 - ✓ Cosmo, the space dog. He and Rocket don't get along.
 - Squirrell Girl
 - Beta Ray Bill - Thor, but with a horse's head. (His face made a cameo, but I'm not checking this off until we see him lift the hammer and prove he is worthy.)
@@ -76,6 +77,13 @@ And these characters have their own silly aspects:
 - ✓ Iron First - Like Shang Chi, but only uses one limb to attack.
 - Mister X - shows up without a shirt and starts flawlessly defeating every hand-to-hand fighter in the world. Does so in cool 90s shades. Does not take any of the fights seriously.
 - ✓ The Vulture - What if The Falcon were a bad guy. Wouldn't that be scary? - I maintain after the fact that this shouldn't work - even after it clearly did. Marvel cheated by casting Michael Keaton.)
+- Mr. Mxyplixl (DC)
+- ✓ The Songmeister (DC)
+- ✓ The Red Tornado is an android that spins fast to create whirlwinds.
+- Bat Mite (DC)
+- Ambush Bug (DC)
+- Scott Free the Miracle Man (DC)
+- Impulse (DC) was raised at super speed in vitrual reality and must adapt to not being online 24/7.
 
 ## Silly Moments
 
@@ -87,6 +95,7 @@ These characters come with their own silly moments.
 - ✓ Luke Cage's "Power Man" costume.
 - Task Master truly understands their place in the pantheon of comic villainy - and does the job, gets paid, and moves on before the heroes mop up.
 - Task Master is a pretty good mentor whether for a hero or a villain.
+- Captain Marvel cannot say his own name for copyright reasons. (DC)
 
 ## Organzations
 
