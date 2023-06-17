@@ -167,3 +167,6 @@ Here be spoilers for the comics - and maybe for the movies.
 - Spider-Man's clone who wants Peter's life back
 
 - Spider-Man's other clone who is really depressed
+- Spider-Man's other other clone who isn't taking being a clone seriously.
+- Spider-Man (Miles Morales) three clones.
+
