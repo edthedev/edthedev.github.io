@@ -74,7 +74,8 @@ And these characters have their own silly aspects:
 - ✓ Spider Man 2099 is the most 90s thing to happen in the 90s, but is from 2099.
 - ✓ Shang Chi - whose powers are being great at Kung Fu.
 - ✓ Iron First - Like Shang Chi, but only uses one limb to attack.
-- Mister X - shows up and starts flawlessly defeating every hand-to-hand fighter in the world. Does so in cool 90s shades.
+- Mister X - shows up without a shirt and starts flawlessly defeating every hand-to-hand fighter in the world. Does so in cool 90s shades. Does not take any of the fights seriously.
+- ✓ The Vulture - What if The Falcon were a bad guy. Wouldn't that be scary? - I maintain after the fact that this shouldn't work - even after it clearly did. Marvel cheated by casting Michael Keaton.)
 
 ## Silly Moments
 
