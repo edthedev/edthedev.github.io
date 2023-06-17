@@ -51,6 +51,8 @@ And these characters have their own silly aspects:
 - ✓ Cosmo, the space dog. He and Rocket don't get along.
 - Squirrell Girl
 - Beta Ray Bill - Thor, but with a horse's head. (His face made a cameo, but I'm not checking this off until we see him lift the hammer and prove he is worthy.)
+- ✓ Doctor Strange - egotistical surgeon turned wizard
+- ✓ The Dread Dormamu - cosmic interdimensional villain with a face made of burning striped carpet
 - ✓ Frog Thor
 - Cat Thor - the star of Squirrell Girl's roommates fan fiction.
 - ✓ Daredevil the blind lawyers swings around the city at night fighting crime.
@@ -87,7 +89,8 @@ And these characters have their own silly aspects:
 - Sasquatch
 - Puck
 - Multiple Man
-
+- Beak
+- Doyle Dormamu - Illegitimate son of Dread Dormamu
 
 ## Silly Moments
 
