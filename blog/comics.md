@@ -84,6 +84,10 @@ And these characters have their own silly aspects:
 - Ambush Bug (DC)
 - Scott Free the Miracle Man (DC)
 - Impulse (DC) was raised at super speed in vitrual reality and must adapt to not being online 24/7.
+- Sasquatch
+- Puck
+- Multiple Man
+
 
 ## Silly Moments
 
@@ -105,6 +109,10 @@ These characters come with their own silly moments.
 - ✓ Sentient Worlds Observation and Response Department
 - Advanced Idea Mechanics (Hinted at in WestView but unconfirmed.)
 - The Council of Reeds
+- The West Coast Avengers
+- The Great Lakes Avengers
+- Alpha Flight - The Canadian Avengers
+
 
 ## Stuff
 
