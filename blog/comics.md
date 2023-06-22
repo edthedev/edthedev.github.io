@@ -1,28 +1,40 @@
 ---
 layout: layout.njk
-title: Too Dumb for Comic Book Movies
+title: Too Silly for Comic Book Movies
 ---
+
+## Too Silly for the Big Screen
+
+Some characters and concepts are simply too silly to portray with comic book accuracy on a theater screen during a blockbuster movie.
+Honorary mention will be given (frequently in the case of DC) for silly characters and concepts that made it into television or streaming broadcast; but those characters and concepts remain too silly for the movies, according to the rules of this list.
 
 ## The Founding Avengers
 
-Marvel kicked this whole mess off by doing a fantastic job portraying Iron Man, one of their foudning Avengers, on the silver screen, in a near-perfect rendition. This should not work because Iron Man is an incredibly fun character, but kind of a lousy person - and there's literally no Iron Man story that doesn't somehow rely on his pretty significant character flaws.
+Marvel kicked this whole mess off by doing a fantastic job portraying Iron Man, one of their founding Avengers, on the silver screen, in a near-perfect rendition.
 
-They did Hulk and Captain America around the same time.
-That leaves two more Avengers begging to get feature films: Thor and Namor. 
+This should not work because Iron Man is an incredibly fun character, but kind of a lousy person - and there's no comic book Iron Man story I am aware of that doesn't somehow rely on his pretty significant character flaws. Iron Man is not too silly for the movies. 
 
-Here's why that could never happen.
+They did excellent movies for The Hulk and Captain America around the same time. Die-hard comic fans may be aware that at this moment in around 2008, most of the original cast of the Avengers comic now had dedicated movies.  
+
+Captain America gets the first checkmark on this list. It's so silly, they saved it for an after-credits scene:
+
+- ✓ Captain Ameria was frozen for decades to allow him to have an origin in the 1940s but be an Avenger today. But he's fine. It was just cold.
+
+With Captain America, Hulk and Iron Man at the movies, this left two more founding Avengers characters begging to get feature films: Thor and Namor.
+
+This introduced this problem, and created the need for this list.  Thor and Namor are too silly for the big screen.
+Thor and Namor are too silly to hide their silliness after the end credits.
 
 - ✓ Thor is a viking from space who swings his hammer so fast that it picks up frost giants with the wind force.
-- ✓ Namor is an Atlantean who always wears a speedo and is almost always angry.
+- ✓ Namor is an Atlantean who always wears a speedo, is almost always angry, and flies through the sky on tiny wings attached to his ankles.
 
-Besides their core premise, the core Avengers also have silly friends and other silly aspects:
+Besides their core premise, these core Avengers have silly friends and silly aspects that help define them:
 
 - ✓ Thor flies by throwing his hammer and not letting go.
 - ✓ Namor flies by flapping tiny wings on his ankles.
 - ✓ If Thor lets go of his magic hammer for too long, he loses his fantastic powers.
+- ✓ Thor is a founding member of the Avengers.
 - x Namor is a founding member of the Avengers.
-- ✓ The man in a speedo with tiny flappy ankle wings is primarily defined by his righteous but damanging anger over humanity's abuses of the planet's ecologicaly. This becomes his defining characteristics, in spite of his flying around on tiny flappy ankle wings.
-- ✓ Captain Ameria was frozen for decades to allow him to have an origin in the 1940s but be an Avenger today. But he's fine. It was just cold.
 
 ## The Other Avengers
 
