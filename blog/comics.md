@@ -8,6 +8,17 @@ title: Too Silly for Comic Book Movies
 Some characters and concepts are simply too silly to portray with comic book accuracy on a theater screen during a blockbuster movie.
 Honorary mention will be given (frequently in the case of DC) for silly characters and concepts that made it into television or streaming broadcast; but those characters and concepts remain too silly for the movies, according to the rules of this list.
 
+## Key
+
+Various entries below are marked by their status as of the last update to this list.
+The humor in this list was originally supposed to be - here's the 7 silly things they didn't include for every one they did.
+It has evolved over time into 'Wow. They did all that at the movies. Okay. Wow.'
+
+- ✓ Oh my goodness, they actually did this - on the big screen, in theaters!
+- → Partial credit for a live action television or streaming appearance.
+- x Assumed confirmed as too silly. Not only have they not done this, the moment this would have happened in the current movies has passed by.
+- x✓ The moment passed, and they did it later anyway.
+
 ## The Founding Avengers
 
 Marvel kicked this whole mess off by doing a fantastic job portraying Iron Man, one of their founding Avengers, on the silver screen, in a near-perfect rendition.
@@ -41,8 +52,8 @@ Besides their core premise, these core Avengers have silly friends and silly asp
 So...the Avengers formula calls, critically, for lots more characters that you also cannot do in the movies.
 
 - ✓ The Ant Man
-- ✓ The Falcon - his intense military training allows him to - put on some wings and flap about to defeat the bad guys.
-- ✓ Quicksilver is a mutant with super speed powers so powerful that he typically handles half of the foes in every battle he participates in. It makes a great comic book cover, but is probably untouchable for the movies.
+- ✓ The Falcon - whose intense military training allows him to - put on some wings and flap about to defeat bad guys.
+- ✓ Quicksilver is a mutant with super speed powers so powerful that he typically handles half of the foes in every battle he participates in. Quicksilver doing half of all the heroics makes a great comic book cover, but is probably untouchable for the movies.
 - ✓ Hawkeye has a bow and arrow, which he is quite skilled with. That's it. That's his whole deal.
 - Sentinel is an iconic Superman like character whose only weakness is his muderous split persona that kills exactly as many people as he saves in his Sentinel persona.
 - Wonder Man is bascially Johny Cage from Mortal Kombat but with vaguely defined super powers.
@@ -50,26 +61,28 @@ So...the Avengers formula calls, critically, for lots more characters that you a
 And these characters have their own silly aspects:
 
 - ✓ After a significant delay, Ant Man notices that 'Giant Man' seems like a much better way to handle super hero fights.
-- ✓ The Falcon - our flappy bird hero - is the one guy that Captain America looks up to. Joking aside, I cannot empahsize enough how foundational this is to telling a good Captain America story, and how screwed Marvel is that they have to include flappy bird man in the movies if they want to get their most iconic character right. (Unbelievably, Anthony Mackie's portrayal is both perfect and makes the wings cool. They were not this cool in the comic.)
+- ✓ After realizing 'Giant Man' is the more practical approach to fighting crime, 'Ant Man' goes back to being 'Ant Man'.
+- ✓ The Falcon - our flappy bird hero - is the one guy that Captain America looks up to. Joking aside, I cannot empahsize enough how foundational this relationship is to telling a good Captain America story. I cannot express how screwed Marvel is that they have to include flappy bird man in the movies if they want to strongly portray their most iconic character, Captian America. (Unbelievably, Anthony Mackie's portrayal is both perfect and somehow makes the wings cool. They were not this cool in the comic.)
 - Hawkeye - the man whose powers are a bow and arrow - leads the Avengers on various occassions.
 - x Hawkeye - the man whose powers are a bow and arrow - and Quicksilver - the man who is too powerful to make good movies about - sometimes argue about who should lead the Avengers.
 
 
 ## More Silly Characters
 
+- [Fancy Dan](https://villains.fandom.com/wiki/Fancy_Dan) who threatens Spider-Man with his sharp fashion sense and peak human dance moves.
+- ✓ Spider-Ham - a normal spider was bit by a radioactive pig.
 - ✓ Rocket Racoon
 - ✓ Howard the Duck (how is he the first Marvel movie?!)
-- ✓ Spider-Ham - a normal spider was bit by a radioactive pig.
 - ✓ Cosmo, the space dog. He and Rocket don't get along.
-- Squirrell Girl
+- ✓ Daredevil - a blind lawyer who swings around the city at night fighting crime.
+- Squirrell Girl - her powers are roughly those of a Squirrell.
 - Beta Ray Bill - Thor, but with a horse's head. (His face made a cameo, but I'm not checking this off until we see him lift the hammer and prove he is worthy.)
 - ✓ Frog Thor
 - Cat Thor - the star of Squirrell Girl's roommates fan fiction.
-- ✓ Daredevil the blind lawyers swings around the city at night fighting crime.
-- ✓ Luke Cage is the Power Man. His powers are stregth and invincibility. His weaknesses are everyone around him.
-- Diamondback - She throws diamonds. The diamonds she throws can hurt Luke Cage.
-- ✓ The Swordsman - His powers are charm and a sword. He's a bad-guy, but he's not a bad guy. 
-- ✓ The Porcupine - His powers are a suit covered in quills. He's scared to take it off. It's gross and sad.
+- → Luke Cage is the Power Man. His powers are stregth and nearly total invincibility. His weaknesses are everyone around him. His story is fantatsic, but his powers and costume are dumb.
+- Diamondback - She throws diamonds. The diamonds she throws, with her hands, can hurt Luke Cage.
+- → The Swordsman - His powers are charm and a sword. He's a bad-guy, but he's not a bad guy. 
+- → The Porcupine - His powers are a suit covered in quills. He's scared to take it off. It's gross and sad.
 - ✓ The Spot - with powers of poking holes in reality to punch Spider-Man through.
 - The Wall - with powers of - bascially just being a brick wall.
 - ✓ Paper Bag Man - because Spider-Man doesn't bring his costume grocery shopping and crime never rests.
@@ -83,18 +96,18 @@ And these characters have their own silly aspects:
 - ✓ Task Master - A cheesy villain in skull mask copies the worst Avenger's abilities - bow and arrow, shield throwing, kicking and punching. Beloved fan favorite, believe it or not.
 - ✓ Deadpool is brain-damaged and his brain-damage expresses itself by making him aware (through the 4th wall) that he is a character in media. While he is aware that this is an aspect of his brain damage and tries to ignore it, he is also always correct about the media format. 
 - Jeffrey the Land Shark
-- Stilt Man has (evil, I guess) robo-stilts.
-- ✓ Spider Man 2099 is the most 90s thing to happen in the 90s, but is from 2099.
+- Stilt Man - who has (evil, I guess) robo-stilts.
+- ✓ Spider Man 2099 is the most 90s thing to happen in the 1990s, but is from 2099.
 - ✓ Shang Chi - whose powers are being great at Kung Fu.
 - ✓ Iron First - Like Shang Chi, but only uses one limb to attack.
 - Mister X - shows up without a shirt and starts flawlessly defeating every hand-to-hand fighter in the world. Does so in cool 90s shades. Does not take any of the fights seriously.
 - ✓ The Vulture - What if The Falcon were a bad guy. Wouldn't that be scary? - I maintain after the fact that this shouldn't work - even after it clearly did. Marvel cheated by casting Michael Keaton.)
 - Mr. Mxyplixl (DC)
-- ✓ The Songmeister (DC)
-- ✓ The Red Tornado is an android that spins fast to create whirlwinds.
+- → The Songmeister (DC)
+- → The Red Tornado is an android that spins fast to create whirlwinds.
 - Bat Mite (DC)
 - Ambush Bug (DC)
-- Scott Free the Miracle Man (DC)
+- Scott Free the Miracle Man (DC) - whose super powers are mainly escape artistry.
 - Impulse (DC) was raised at super speed in vitrual reality and must adapt to not being online 24/7.
 
 ## Silly Moments
@@ -104,16 +117,33 @@ These characters come with their own silly moments.
 - Thor telling Cat Thor - "I see that your head is slowly growing every moment."
 - Cat Thor is one of Loki's personal self-images in his own pysche.
 - Luke Cage has to fight a guy for the right to call himself "Power Man".
-- ✓ Luke Cage's "Power Man" costume.
+- → Luke Cage's "Power Man" costume.
 - Task Master truly understands their place in the pantheon of comic villainy - and does the job, gets paid, and moves on before the heroes mop up.
 - Task Master is a pretty good mentor whether for a hero or a villain.
-- Captain Marvel cannot say his own name for copyright reasons. (DC)
+- ✓ Captain Marvel cannot say his own name for unmentioned copyright reasons. (DC)
+- Squirrell Girl defeats Doctor Doom in her first appearance.
+- x Squirrell Girl and Iron Man are social media pen-pals.
+- x Squirrell Girl occassionally 'borrows' Iron Man's armor, in spite of his many security upgrades meant to prevent her specifically from breaking in.
+- Squirrell Girl defeats Thanos single-handedly.
+- Thanos' defeat at the hands of Squirrell Girl is unsurprisingly not prevented by his use of his 'Thanos Copter'.
+- Squirrell Girl saves earth from Galactus, but not single-handedly. She has help from her sidekick Tippy-Toe - a small squirrell who wears a pretty bow.
+
+## Superman
+
+Superman gets his own section. He has had some fantasticly silly moments on the big screen, but if all of his 'too silly' exploits were listed here, [Superman's list of silliness would dwarf all other characters combined](https://tvtropes.org/pmwiki/pmwiki.php/Main/Superdickery).
+
+Okay, maybe I'll just include a few favorites here:
+
+- Superman's best friend, [Jimmy Olsen, is turtle boy](https://www.google.com/search?q=jimmy+olsen+turtle+boy). He's three stories tall, and looks a bit green and scaly, like a turtle.
+- Superman is [rescued by the Newsboy Legion in their Wondrous Whiz Wagon](https://www.google.com/search?q=superman+newsboy+whiz+wagon) several separate times.
+- To clarfiy that this was no fluke, the new Superboy is [rescued by the Newsboy Legion](https://www.google.com/search?q=superboy+newsboys) in his first appearance.
+- [Superman gets turned into two separate color-coded copies of himself made up of lightning](https://en.wikipedia.org/wiki/Superman_Red/Superman_Blue). 
 
 ## Organzations
 
 - ✓ The Strategic Homeland Intervention, Enforcement and Logistics Division
-- ✓ Bad guy finds out that non-agent S.H.I.E.L.D. staff still take S.H.I.E.L.D. field training. (Maria Hill vs Loki, Phil Coulson, in general.)
 - Bad guy finds out that a non-agent S.H.I.E.L.D. accountant does not make a good hostage.
+- ✓ Bad guy finds out that non-agent S.H.I.E.L.D. staff still take S.H.I.E.L.D. field training. (Maria Hill vs Loki, Phil Coulson, in general.)
 - ✓ Sentient Worlds Observation and Response Department
 - Advanced Idea Mechanics (Hinted at in WestView but unconfirmed.)
 - The Council of Reeds
