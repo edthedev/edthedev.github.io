@@ -77,6 +77,8 @@ And these characters have their own silly aspects:
 - ✓ Daredevil - a blind lawyer who swings around the city at night fighting crime.
 - Squirrell Girl - her powers are roughly those of a Squirrell.
 - Beta Ray Bill - Thor, but with a horse's head. (His face made a cameo, but I'm not checking this off until we see him lift the hammer and prove he is worthy.)
+- ✓ Doctor Strange - egotistical surgeon turned wizard
+- ✓ The Dread Dormamu - cosmic interdimensional villain with a face made of burning striped carpet
 - ✓ Frog Thor
 - Cat Thor - the star of Squirrell Girl's roommates fan fiction.
 - → Luke Cage is the Power Man. His powers are stregth and nearly total invincibility. His weaknesses are everyone around him. His story is fantatsic, but his powers and costume are dumb.
@@ -109,6 +111,13 @@ And these characters have their own silly aspects:
 - Ambush Bug (DC)
 - Scott Free the Miracle Man (DC) - whose super powers are mainly escape artistry.
 - Impulse (DC) was raised at super speed in vitrual reality and must adapt to not being online 24/7.
+- Sasquatch
+- Puck
+- Multiple Man
+- Beak
+- Doyle Dormamu - Illegitimate son of Dread Dormamu
+- ✓ M.O.D.O.K. Mechanized Organism Designed Only for Killing (Modofk?) - a giant head with timy arms and a jet engine for a butt.
+- Hydra Villain Dr. Zola - A teletubby like cyborg villain with a small camera for a head. Plenty of setup on Zola but he hasn't appeared with his teletubby body yet.
 
 ## Silly Moments
 
@@ -147,6 +156,11 @@ Okay, maybe I'll just include a few favorites here:
 - ✓ Sentient Worlds Observation and Response Department
 - Advanced Idea Mechanics (Hinted at in WestView but unconfirmed.)
 - The Council of Reeds
+- The West Coast Avengers
+- The Great Lakes Avengers
+- Alpha Flight - The Canadian Avengers
+- The Metal Men - Alloy themed shapeshifting metal androids who just want to be a real boy (like Pinnochio). Some of them are very soft metals making them bad at super-hero stuff.
+- 
 
 ## Stuff
 
@@ -154,6 +168,7 @@ Okay, maybe I'll just include a few favorites here:
 - Thanos rides in the 'Thanos Copter' during his battle with Squirrell Girl
 - The Comics Stone
 - The Ego Stone
+- Citizen V's flying V Wing
 
 ## Twists - Possible Spoilers
 
@@ -189,6 +204,11 @@ Here be spoilers for the comics - and maybe for the movies.
 - The Punisher Ghost Rider becomes a herald of Galactus
 - The Punisher Ghost Rider Herald of Galactus time travels back in time to kidnap Thanos and raise him better.
 - The Punisher Ghost Rider Herald of Galactus time travels back in time to kidnap Thanos and raise him better results in the exact Thanos we already had - what a shock.
+- Doctor Octopus dates Peter Parker's Aunt May for awhile.
+- Doctor Octopus does a Freaky Friday with Peter Parker, becoming "The Superior Spider Man". He's much better at being Spider-Man than Peter was.
+- Spider-Man's clone who wants Peter's life back
 
-
+- Spider-Man's other clone who is really depressed
+- Spider-Man's other other clone who isn't taking being a clone seriously.
+- Spider-Man (Miles Morales) three clones.
 
