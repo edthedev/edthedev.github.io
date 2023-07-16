@@ -16,8 +16,9 @@ It has evolved over time into 'Wow. They did all that at the movies. Okay. Wow.'
 
 - ✓ Oh my goodness, they actually did this - on the big screen, in theaters!
 - → Partial credit for a live action television or streaming appearance.
+- ⮎ Partial credit for a cameo or brief reference on the big screen.
 - x Assumed confirmed as too silly. Not only have they not done this, the moment this would have happened in the current movies has passed by.
-- x✓ The moment passed, and they did it later anyway.
+- x✓ The expected moment in the story passed, but they found a way to include this silliness later anyway.
 
 ## The Founding Avengers
 
@@ -66,10 +67,39 @@ And these characters have their own silly aspects:
 - Hawkeye - the man whose powers are a bow and arrow - leads the Avengers on various occassions.
 - x Hawkeye - the man whose powers are a bow and arrow - and Quicksilver - the man who is too powerful to make good movies about - sometimes argue about who should lead the Avengers.
 
-
-## More Silly Characters
+## Silly Villains
 
 - [Fancy Dan](https://villains.fandom.com/wiki/Fancy_Dan) who threatens Spider-Man with his sharp fashion sense and peak human dance moves.
+- ✓ The Dread Dormamu - cosmic interdimensional villain with a face made of burning striped carpet
+- Cat Thor - the star of Squirrell Girl's roommates fan fiction, and Loki's occassional alter-ego.
+- Diamondback - She throws diamonds. The diamonds she throws, with her hands, can hurt Luke Cage.
+- → The Porcupine - His powers are a suit covered in quills. He's scared to take it off. It's gross and sad.
+- → The Swordsman - His powers are charm and a sword. He's a bad-guy, but he's not a bad guy. 
+- ✓ The Spot - with powers of poking holes in reality to punch Spider-Man through.
+- The Wall - with powers of - bascially just being a brick wall.
+- The Fixer - stereotype evil scients minion army producing side-kick.
+- Hydra Bob - He joined Hydra for the dental plan, and stayed because the 'captured by heroes' insurance pays pretty good.
+- Spider-Killer - a robot commissioned by news reporter J.Jonah Jameson to kill Spider-Man.
+- Sin Eater - Villain with a magic shotgun shoots people - cleansing them of all their sins.
+- ✓ Task Master - A cheesy villain in skull mask copies the worst Avenger's abilities - bow and arrow, shield throwing, kicking and punching. Beloved fan favorite, believe it or not.
+- Stilt Man - who has (evil, I guess) robo-stilts.
+- Mister X - shows up without a shirt and starts flawlessly defeating every hand-to-hand fighter in the world. Does so in cool 90s shades. Does not take any of the fights seriously.
+- ✓ The Vulture - What if The Falcon were a bad guy. Wouldn't that be scary? - I maintain after the fact that this shouldn't work - even after it clearly did. Marvel cheated by casting Michael Keaton.)
+- Mr. Myxlplyx
+- → The Songmeister
+- ⮎→ The Red Tornado is an android that spins it's body parts very fast to create whirlwinds. Double partial credit awarded here for a reference in the Black Adam movie, and a live action appearance in the Supergirl TV show.
+- ⮎ Bat Mite
+- ✓ M.O.D.O.K. Mechanized Organism Designed Only for Killing (Modofk?) - a giant head with timy arms and a jet engine for a butt.
+- ⮎ Hydra Villain Dr. Zola - A teletubby like cyborg villain with a small camera for a head. Plenty of setup on Zola but he hasn't appeared with his teletubby body as of 2023. Partial credit for his future camera head appearing in one of his labs.
+- The Beyonder
+- ✓ Tazerface - The inclusion of Tazerface counts as a 'triple word score' for the Guardians of the Galaxy franchise.
+- ✓ The Klaw
+- Hammer Head - A prohibition era mobster who puts his head down like a bull to charge at people and crush them with his incredibly flat, incredibly hard, incredibly square hair.
+- Fing Fang Foom is a two story tall dragon who spends most of his time doing low-paid henchman work.
+
+
+## More Silly Heroes
+
 - ✓ Spider-Ham - a normal spider was bit by a radioactive pig.
 - ✓ Rocket Racoon
 - ✓ Howard the Duck (how is he the first Marvel movie?!)
@@ -78,36 +108,17 @@ And these characters have their own silly aspects:
 - Squirrell Girl - her powers are roughly those of a Squirrell.
 - Beta Ray Bill - Thor, but with a horse's head. (His face made a cameo, but I'm not checking this off until we see him lift the hammer and prove he is worthy.)
 - ✓ Doctor Strange - egotistical surgeon turned wizard
-- ✓ The Dread Dormamu - cosmic interdimensional villain with a face made of burning striped carpet
 - ✓ Frog Thor
-- Cat Thor - the star of Squirrell Girl's roommates fan fiction.
 - → Luke Cage is the Power Man. His powers are stregth and nearly total invincibility. His weaknesses are everyone around him. His story is fantatsic, but his powers and costume are dumb.
-- Diamondback - She throws diamonds. The diamonds she throws, with her hands, can hurt Luke Cage.
-- → The Swordsman - His powers are charm and a sword. He's a bad-guy, but he's not a bad guy. 
-- → The Porcupine - His powers are a suit covered in quills. He's scared to take it off. It's gross and sad.
-- ✓ The Spot - with powers of poking holes in reality to punch Spider-Man through.
-- The Wall - with powers of - bascially just being a brick wall.
 - ✓ Paper Bag Man - because Spider-Man doesn't bring his costume grocery shopping and crime never rests.
 - Agent Venom: Space Cop
 - Citizen V
 - Mach V - successor to Mach IV - successor to Mach III - successor to Mach II - successor to Mach I.
-- The Fixer - stereotype evil scients minion army producing side-kick.
-- Hydra Bob - He joined Hydra for the dental plan, and stayed because the 'captured by heroes' insurance pays pretty good.
-- Spider-Killer - robot commissioned by J.Jonah Jameson to kill Spider-Man.
-- Sin Eater - Villain with a magic shotgun shoots people - cleansing them of all their sins.
-- ✓ Task Master - A cheesy villain in skull mask copies the worst Avenger's abilities - bow and arrow, shield throwing, kicking and punching. Beloved fan favorite, believe it or not.
 - ✓ Deadpool is brain-damaged and his brain-damage expresses itself by making him aware (through the 4th wall) that he is a character in media. While he is aware that this is an aspect of his brain damage and tries to ignore it, he is also always correct about the media format. 
 - Jeffrey the Land Shark
-- Stilt Man - who has (evil, I guess) robo-stilts.
 - ✓ Spider Man 2099 is the most 90s thing to happen in the 1990s, but is from 2099.
 - ✓ Shang Chi - whose powers are being great at Kung Fu.
 - ✓ Iron First - Like Shang Chi, but only uses one limb to attack.
-- Mister X - shows up without a shirt and starts flawlessly defeating every hand-to-hand fighter in the world. Does so in cool 90s shades. Does not take any of the fights seriously.
-- ✓ The Vulture - What if The Falcon were a bad guy. Wouldn't that be scary? - I maintain after the fact that this shouldn't work - even after it clearly did. Marvel cheated by casting Michael Keaton.)
-- Mr. Mxyplixl (DC)
-- → The Songmeister (DC)
-- → The Red Tornado is an android that spins fast to create whirlwinds.
-- Bat Mite (DC)
 - Ambush Bug (DC)
 - Scott Free the Miracle Man (DC) - whose super powers are mainly escape artistry.
 - Impulse (DC) was raised at super speed in vitrual reality and must adapt to not being online 24/7.
@@ -116,26 +127,57 @@ And these characters have their own silly aspects:
 - Multiple Man
 - Beak
 - Doyle Dormamu - Illegitimate son of Dread Dormamu
-- ✓ M.O.D.O.K. Mechanized Organism Designed Only for Killing (Modofk?) - a giant head with timy arms and a jet engine for a butt.
-- Hydra Villain Dr. Zola - A teletubby like cyborg villain with a small camera for a head. Plenty of setup on Zola but he hasn't appeared with his teletubby body yet.
+- Koi Boy
+- Chipmunk Hunk
+- Gorilla Man
+- → Blackbolt
+- → Medusa
+- Moon Boy and Devil Dinosaur
+- Moon Girl and Devil Dinosaur
+- ⮎ StarHawk / Aleta (name changed but costume and connection to Charlie 27, Nikki and Martinex)
+- ⮎ Charlie 27 is a giant soldier who grew up on Jupiter.
+- ⮎ Martinex is a living computer with heat and cold powers because he was built with a killer gaming PC cooling system.
+- Sting Ray - Would it be cool if someone with access to Tony Stark's Iron Man suit blueprints built his own inferior suit that only works well underwater?
+- H.E.R.B.I.E. is a long-suffering robot maid built by Reed Richards to help him avoid parenting Franklin Richards - whose mutant powers occassionally change the nature of reality.
+- → Old Lace is a velociraptor left as a gift to a young girl from her paranoid and over-protective parents.
 
 ## Silly Moments
 
 These characters come with their own silly moments.
 
+- x Iron Man's various magnet-centric super powers.
+- x Iron Man's skate shoes
 - Thor telling Cat Thor - "I see that your head is slowly growing every moment."
 - Cat Thor is one of Loki's personal self-images in his own pysche.
 - Luke Cage has to fight a guy for the right to call himself "Power Man".
-- → Luke Cage's "Power Man" costume.
+- → Luke Cage's very 1970s "Power Man" costume.
 - Task Master truly understands their place in the pantheon of comic villainy - and does the job, gets paid, and moves on before the heroes mop up.
-- Task Master is a pretty good mentor whether for a hero or a villain.
 - ✓ Captain Marvel cannot say his own name for unmentioned copyright reasons. (DC)
 - Squirrell Girl defeats Doctor Doom in her first appearance.
 - x Squirrell Girl and Iron Man are social media pen-pals.
 - x Squirrell Girl occassionally 'borrows' Iron Man's armor, in spite of his many security upgrades meant to prevent her specifically from breaking in.
 - Squirrell Girl defeats Thanos single-handedly.
 - Thanos' defeat at the hands of Squirrell Girl is unsurprisingly not prevented by his use of his 'Thanos Copter'.
-- Squirrell Girl saves earth from Galactus, but not single-handedly. She has help from her sidekick Tippy-Toe - a small squirrell who wears a pretty bow.
+- Squirrell Girl saves earth from Galactus, but not single-handedly. She has substantial help from her sidekick Tippy-Toe - a small squirrell who wears a pretty bow.
+- → The area on the Moon that has breathable air.
+- Ned Leeds, awkward adorable friend of Peter Parker, becomes the magical supervillain The Hobgoblin.
+- StarHawk is 'The One Who Knows'. It is unclear if his inability to use his time bending future sight for real good is due to some critical future moment in time, or, more probabily, his astonishing social awkwardness.
+- ⮎x In the comics, Tazerface does - indeed - shoot tazers from his face. Partial credit for Rocket clarifying whether this was the case in the movie.
+- The Klaw convinces The Beyonder that Captain America is an invincible boogey-man.
+- x Tony Stark gets in a fight with Sting Ray over Sting Ray's (inferior) use of Stark Tech in his (vastly inferior) super suit.
+- The Vision builds an almost emotionless android family for himself to help him connect with his own missing emotions.
+- The Vision builds a green android dog for his family to help them blend into their neighborhood. 
+- The Cosmic Ghost Rider (formerly the Punisher) travels back in time to kidnap baby Thanos and raise him right.
+- ✓ In some universes, Nick Fury - the greatest spy to ever live - increases his bad-assness by looking like Samuel Jackson. It's worth noting that comic-book Nick Fury was borrowing Samuel Jackson's likeness many years before the movie version did.
+- ✓ Nick Fury leads a secret spy agency from a flying aircraft carrier. I still cannot believe they included this.
+- ⮎ Nick Fury has a flying car.
+- Nick Fury leads an army of spies and secret agents in flying cars in an all-out sky-filling attack on an equally secret bad guy base.
+- Deadpool reminds us that Nick Fury's super-power is having super-spy depth perception with only one working eye.
+
+## Silly Plot Arcs
+
+- Task Master - the poster child for lazy one-note supervillainy, is a pretty good professional mentor.
+- After Ragnarok, all police officers are Thor.
 
 ## Superman
 
@@ -147,6 +189,18 @@ Okay, maybe I'll just include a few favorites here:
 - Superman is [rescued by the Newsboy Legion in their Wondrous Whiz Wagon](https://www.google.com/search?q=superman+newsboy+whiz+wagon) several separate times.
 - To clarfiy that this was no fluke, the new Superboy is [rescued by the Newsboy Legion](https://www.google.com/search?q=superboy+newsboys) in his first appearance.
 - [Superman gets turned into two separate color-coded copies of himself made up of lightning](https://en.wikipedia.org/wiki/Superman_Red/Superman_Blue). 
+- Superman dies, and is replaced by his spritiual successor, a clone, a Kryptonian war machine, and a reanimation of his dead body. This could honestly make a fantastic movie - but it also meets the 'Thor' levels of wackiness this list was founded on.
+
+## Deadpool
+
+Deadpool is going to need his own section.
+Deadpool, thanks to his brain damage, is an unreliable narrator. That means he can say things that the editors won't allow any trusted source of information to say.
+
+For example, Deadpool can repeatedly point out that Squirrell Girl is, by any reasonable assessment of her win/loss record, the most fearsome character in the Marvel comics universe.
+
+- A dead villain's henchman with a healing factor wants to be the very best, like no one ever was.
+- Top tier assassins for hire, and Deadpool, get into a prolonged murderous contest so that one of them can blackmail the other into fixing his hobo friend's brain damage.
+
 
 ## Organzations
 
