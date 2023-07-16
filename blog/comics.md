@@ -153,26 +153,17 @@ These characters come with their own silly moments.
 - → Luke Cage's very 1970s "Power Man" costume.
 - Task Master truly understands their place in the pantheon of comic villainy - and does the job, gets paid, and moves on before the heroes mop up.
 - ✓ Captain Marvel cannot say his own name for unmentioned copyright reasons. (DC)
-- Squirrell Girl defeats Doctor Doom in her first appearance.
 - x Squirrell Girl and Iron Man are social media pen-pals.
 - x Squirrell Girl occassionally 'borrows' Iron Man's armor, in spite of his many security upgrades meant to prevent her specifically from breaking in.
-- Squirrell Girl defeats Thanos single-handedly.
-- Thanos' defeat at the hands of Squirrell Girl is unsurprisingly not prevented by his use of his 'Thanos Copter'.
-- Squirrell Girl saves earth from Galactus, but not single-handedly. She has substantial help from her sidekick Tippy-Toe - a small squirrell who wears a pretty bow.
 - → The area on the Moon that has breathable air.
-- Ned Leeds, awkward adorable friend of Peter Parker, becomes the magical supervillain The Hobgoblin.
 - StarHawk is 'The One Who Knows'. It is unclear if his inability to use his time bending future sight for real good is due to some critical future moment in time, or, more probabily, his astonishing social awkwardness.
 - ⮎x In the comics, Tazerface does - indeed - shoot tazers from his face. Partial credit for Rocket clarifying whether this was the case in the movie.
-- The Klaw convinces The Beyonder that Captain America is an invincible boogey-man.
 - x Tony Stark gets in a fight with Sting Ray over Sting Ray's (inferior) use of Stark Tech in his (vastly inferior) super suit.
 - The Vision builds an almost emotionless android family for himself to help him connect with his own missing emotions.
 - The Vision builds a green android dog for his family to help them blend into their neighborhood. 
-- The Cosmic Ghost Rider (formerly the Punisher) travels back in time to kidnap baby Thanos and raise him right.
-- ✓ In some universes, Nick Fury - the greatest spy to ever live - increases his bad-assness by looking like Samuel Jackson. It's worth noting that comic-book Nick Fury was borrowing Samuel Jackson's likeness many years before the movie version did.
-- ✓ Nick Fury leads a secret spy agency from a flying aircraft carrier. I still cannot believe they included this.
-- ⮎ Nick Fury has a flying car.
-- Nick Fury leads an army of spies and secret agents in flying cars in an all-out sky-filling attack on an equally secret bad guy base.
 - Deadpool reminds us that Nick Fury's super-power is having super-spy depth perception with only one working eye.
+- Doctor Octopus dates Peter Parker's Aunt May for awhile.
+- ✓ In some universes, Nick Fury - the greatest spy to ever live - increases his bad-assness by looking like Samuel Jackson. It's worth noting that comic-book Nick Fury was borrowing Samuel Jackson's likeness many years before the movie version did.
 
 ## Silly Plot Arcs
 
@@ -197,9 +188,6 @@ Deadpool is going to need his own section.
 Deadpool, thanks to his brain damage, is an unreliable narrator. That means he can say things that the editors won't allow any trusted source of information to say.
 
 For example, Deadpool can repeatedly point out that Squirrell Girl is, by any reasonable assessment of her win/loss record, the most fearsome character in the Marvel comics universe.
-
-- A dead villain's henchman with a healing factor wants to be the very best, like no one ever was.
-- Top tier assassins for hire, and Deadpool, get into a prolonged murderous contest so that one of them can blackmail the other into fixing his hobo friend's brain damage.
 
 
 ## Organzations
@@ -253,16 +241,26 @@ Here be spoilers for the comics - and maybe for the movies.
 - Our version of Reed Richard's homeschool with a some mole people, an evil super scientist's clone and a robot dragon.
 - Our version of Reed Richards has to fight for custody in court over the evil super scientists clone.
 - Our version of Reed Richards - the one who cannot even gather the infinity stones - was doing the important work all along raising his family, because his kids are way more powerful and critical to the timeline than the (infinity stone gathering)k Council of Reeds ever was.
-- Task Master's secret handler is his forgotten wife and a current former S.H.E.I.L.D. agent.
+- Top tier assassins for hire, and Deadpool, get into a prolonged murderous contest so that one of them can blackmail the other into fixing a hobo's brain damage.
+- A dead villain's henchman with a healing factor wants to be the very best, like no one ever was.
+- Task Master's secret handler is his forgotten wife and a current S.H.E.I.L.D. agent.
 - The Punisher becomes the Ghost Rider
 - The Punisher Ghost Rider becomes a herald of Galactus
 - The Punisher Ghost Rider Herald of Galactus time travels back in time to kidnap Thanos and raise him better.
 - The Punisher Ghost Rider Herald of Galactus time travels back in time to kidnap Thanos and raise him better results in the exact Thanos we already had - what a shock.
-- Doctor Octopus dates Peter Parker's Aunt May for awhile.
 - Doctor Octopus does a Freaky Friday with Peter Parker, becoming "The Superior Spider Man". He's much better at being Spider-Man than Peter was.
 - Spider-Man's clone who wants Peter's life back
 
 - Spider-Man's other clone who is really depressed
 - Spider-Man's other other clone who isn't taking being a clone seriously.
 - Spider-Man (Miles Morales) three clones.
+
+- ✓ Nick Fury leads a secret spy agency from a flying aircraft carrier. I still cannot believe they included this.
+- ⮎ Nick Fury has a flying car.
+- Nick Fury leads an army of spies and secret agents in flying cars in an all-out sky-filling attack on an equally secret bad guy base.
+- The Klaw convinces The Beyonder that Captain America is an invincible boogey-man.
+- Squirrell Girl defeats Doctor Doom in her first appearance.
+- Squirrell Girl defeats Thanos single-handedly.
+- Thanos' defeat at the hands of Squirrell Girl is unsurprisingly not prevented by his use of his 'Thanos Copter'.
+- Squirrell Girl saves earth from Galactus, but not single-handedly. She has substantial help from her sidekick Tippy-Toe - a small squirrell who wears a pretty bow.
 
