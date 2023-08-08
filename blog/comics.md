@@ -140,11 +140,13 @@ And these characters have their own silly aspects:
 - Sting Ray - Would it be cool if someone with access to Tony Stark's Iron Man suit blueprints built his own inferior suit that only works well underwater?
 - H.E.R.B.I.E. is a long-suffering robot maid built by Reed Richards to help him avoid parenting Franklin Richards - whose mutant powers occassionally change the nature of reality.
 - → Old Lace is a velociraptor left as a gift to a young girl from her paranoid and over-protective parents.
+- → Hour Man stands out from other heroes because he only has his mediocre powers for an hour at a time.
 
 ## Silly Moments
 
 These characters come with their own silly moments.
 
+- ✓ Ability to lift Thor's hammer creates an alliance at a critical moment, despite Odin not being a character refernce most people would blindly accept.
 - x Iron Man's various magnet-centric super powers.
 - x Iron Man's skate shoes
 - Thor telling Cat Thor - "I see that your head is slowly growing every moment."
@@ -164,6 +166,10 @@ These characters come with their own silly moments.
 - Deadpool reminds us that Nick Fury's super-power is having super-spy depth perception with only one working eye.
 - Doctor Octopus dates Peter Parker's Aunt May for awhile.
 - ✓ In some universes, Nick Fury - the greatest spy to ever live - increases his bad-assness by looking like Samuel Jackson. It's worth noting that comic-book Nick Fury was borrowing Samuel Jackson's likeness many years before the movie version did.
+- Hour Man travels through time on his old time sailing ship.
+- Deadpool kills the Marvel Universe
+- Squirrell Girl beats up the Marvel Universe
+- Both Doctor Hank McCoy and Doctor "Bones" McCoy both answer to Captain Kirk's call for assistance when the X-Men visit the Enterprise
 
 ## Silly Plot Arcs
 
