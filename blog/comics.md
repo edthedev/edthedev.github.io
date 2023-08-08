@@ -17,25 +17,28 @@ It has evolved over time into 'Wow. They did all that at the movies. Okay. Wow.'
 - ✓ Oh my goodness, they actually did this - on the big screen, in theaters!
 - → Partial credit for a live action television or streaming appearance.
 - ⮎ Partial credit for a cameo or brief reference on the big screen.
-- x Assumed confirmed as too silly. Not only have they not done this, the moment this would have happened in the current movies has passed by.
-- x✓ The expected moment in the story passed, but they found a way to include this silliness later anyway.
+- x Confirmed as too silly. Not only have they not done this yet, but the expected moment for this has passed by.
+- x✓ Persistently silly. The expected moment passed, but they found a way to include this silliness later anyway.
 
 ## The Founding Avengers
 
-Marvel kicked this whole mess off by doing a fantastic job portraying Iron Man, one of their founding Avengers, on the silver screen, in a near-perfect rendition.
+Marvel kicked this whole game of too-silly-for-the-silver screen by doing a fantastic job portraying Iron Man, one of their founding Avengers, on the silver screen, in a near-perfect rendition.
 
-This should not work because Iron Man is an incredibly fun character, but kind of a lousy person - and there's no comic book Iron Man story I am aware of that doesn't somehow rely on his pretty significant character flaws. Iron Man is not too silly for the movies. 
+Iron Man (2008) should not have worked, because Iron Man is an incredibly fun character, but kind of a lousy person. There's no comic book Iron Man story I am aware of that doesn't somehow rely on his pretty significant character flaws. But Iron Man is not too silly for the movies, his friends are.
 
-They did excellent movies for The Hulk and Captain America around the same time. Die-hard comic fans may be aware that at this moment in around 2008, most of the original cast of the Avengers comic now had dedicated movies.  
+They did excellent movies for The Hulk and Captain America around the same time. Die-hard comic fans became aware in around 2009, that now the key members of the comic book 'The Avengers' now had dedicated movies.  
 
-Captain America gets the first checkmark on this list. It's so silly, they saved it for an after-credits scene:
+Captain America gets the first checkmark on this list. His silly bit is so silly, they saved it for an after-credits scene:
 
 - ✓ Captain Ameria was frozen for decades to allow him to have an origin in the 1940s but be an Avenger today. But he's fine. It was just cold.
 
-With Captain America, Hulk and Iron Man at the movies, this left two more founding Avengers characters begging to get feature films: Thor and Namor.
+With Captain America, Hulk and Iron Man at the movies, two founding Avengers characters were now begging to get feature films: Thor and Namor.
 
-This introduced this problem, and created the need for this list.  Thor and Namor are too silly for the big screen.
-Thor and Namor are too silly to hide their silliness after the end credits.
+And this is the heart of the problem - and the need for this list.
+
+> Thor and Namor are too silly for the big screen.
+
+The silliness around Thor and Namor canoot be hidden after the end credits.
 
 - ✓ Thor is a viking from space who swings his hammer so fast that it picks up frost giants with the wind force.
 - ✓ Namor is an Atlantean who always wears a speedo, is almost always angry, and flies through the sky on tiny wings attached to his ankles.
@@ -47,6 +50,24 @@ Besides their core premise, these core Avengers have silly friends and silly asp
 - ✓ If Thor lets go of his magic hammer for too long, he loses his fantastic powers.
 - ✓ Thor is a founding member of the Avengers.
 - x Namor is a founding member of the Avengers.
+
+## More on Thor
+
+It's not just Thor who is too silly for the big screen. So is about half of everyone he routinely interacts with.
+
+- ✓ Thor's father, Odin, routinely falls into 'The Odinsleep' at convenient times to drive stories. 
+- ✓ Despite 'The Odinsleep' happening often enough to have a name, everyone treats it like Odin is probably going to die this time. He does not.
+- ✓ Only those worthy of the power of Thor can lift Thor's hammer. Because magic.
+- ✓ Unworthiness somtimes prevents Thor from lifting Thor's hammer.
+- x Thor's friend Volstagg will only ally himself with those who prove themselves worthy - by picking up Volstagg.
+- ✓ Ability to lift Thor's hammer creates an alliance at a critical moment, despite Odin not being a character refernce most people would blindly accept.
+- x Ability to lift Volstagg creates an alliance at a critial moment.
+- ✓ Allies worthy of Thor's power occassionally take over for Thor, simply by lifting his hammer.
+- ⮎ Thor, a space viking with a great deal of cultural confusion about Earth customs, maintains a secret identity as a human surgeon name Dr. Donald Blake. This works fine because magic.
+- x Thor and Dr. Donald Blake are different people, magically sharing a body, and basically doing 'The Odd Couple' to eventually forge a friendship despite their cultural differences.
+- ⮎ Thor's friend Beta Ray Bill is a valiant alien warrior with the head of a horse. People are polite enough not to mention his horse head.
+- Thor's friend Hercules is just the original Hercules of myth. Unlike Thor, Hercules is not a space viking he's just that same guy from legend arrived in the present day via a bit of time-travel. The origin of Hercules powers is, as far as anyone knows, exactly that from mythology.
+
 
 ## The Other Avengers
 
@@ -146,7 +167,6 @@ And these characters have their own silly aspects:
 
 These characters come with their own silly moments.
 
-- ✓ Ability to lift Thor's hammer creates an alliance at a critical moment, despite Odin not being a character refernce most people would blindly accept.
 - x Iron Man's various magnet-centric super powers.
 - x Iron Man's skate shoes
 - Thor telling Cat Thor - "I see that your head is slowly growing every moment."
