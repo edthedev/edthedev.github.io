@@ -1,5 +1,5 @@
 ---
-layout: blog.njk
+layout: book.njk
 title: Edward's Keyboard Shortcuts
 ---
 
