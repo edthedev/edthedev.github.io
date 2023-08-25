@@ -117,13 +117,15 @@ function fruit_bunch(branch) {
   //draw
   strokeWeight(1);
   fill(color(255,0,0));
-  circle(branch.x, branch.y, branch.length*.5);
 
-  //next
-  // branch.x = branch.x-1;
-  // branch.size = branch.size*.9;
+  dx = random(-.5,.5)*branch.length;
+  dy = random(.5,1.1)*branch.length;
+
+  line(branch.x, branch.y, branch.x+dx, branch.y+dy);
+  circle(branch.x+dx, branch.y+dy, branch.length*.5);
+
+
   /* if(branch.size > 1) {
-    fruit_bunch(branch);
   }*/
 }
 
