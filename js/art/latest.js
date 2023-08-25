@@ -83,35 +83,46 @@ function theTree_trunk(theTree) {
 
 /* Branches */
 
-var branch = {
+var alphaBranch = {
   x: 0,
   y: 0,
   degrees: 0,
   length: 0,
+  age: 0,
 };
 
 
 function start_branches(theTree){
   // fruit_bunch(theTree);
 
-  new_branch = structuredClone(branch);
-  new_branch.x = theTree.x + theTree.size/2;
-  new_branch.y = theTree.y + theTree.size/2;
-  new_branch.length = theTree.size*1.5;
-  theTree_branch(new_branch);
+  
+  alphaBranch.x = theTree.x + theTree.size/2;
+  alphaBranch.y = theTree.y + theTree.size/2;
+  alphaBranch.length = theTree.size*1.5;
+
+  for(i=0;i<random(2,5);i++){
+    new_branch = structuredClone(alphaBranch);
+    new_branch.degrees = random(180, 360);
+    theTree_branch(new_branch);
+  }
 }
 
 function fruit_bunch(branch) {
   //draw
+  strokeWeight(1);
   fill(color(255,0,0));
-  circle(branch.x, branch.y, branch.size);
+  circle(branch.x, branch.y, branch.length*.5);
 
   //next
-  branch.x = branch.x-1;
-  branch.size = branch.size*.9;
+  // branch.x = branch.x-1;
+  // branch.size = branch.size*.9;
   /* if(branch.size > 1) {
     fruit_bunch(branch);
   }*/
+}
+
+function toRadians (angle) {
+  return angle * (Math.PI / 180);
 }
 
 function theTree_branch(branch) {
@@ -119,23 +130,31 @@ function theTree_branch(branch) {
   // draw
   fill(color(0,0,0));
   strokeWeight(branch.length*.1);
-  endx = branch.x + branch.length*Math.cos(branch.degrees);
-  endy = branch.y + branch.length*Math.sin(branch.degrees),
+  angleRad = toRadians(branch.degrees);
+  endx = branch.x + branch.length*Math.cos(angleRad);
+  endy = branch.y + branch.length*Math.sin(angleRad),
   line(branch.x, branch.y, endx, endy);
-
+    
   // next
-  branch.degrees = branch.degrees + random(-15, 15);
-  branch.length= branch.length-2;
-  branch.x = endx;
-  branch.y = endy;
   if(branch.length > 1) {
+    branch.age = branch.age +1;
+    branch.degrees = branch.degrees + random(-15+branch.age, 15-branch.age);
+    branch.length= branch.length-2;
+    branch.x = endx;
+    branch.y = endy;
+
+    // chance of extra branch
+    if(random(1, 100)<40){
+      new_branch = structuredClone(branch);
+      new_branch.degrees = new_branch.degrees + random(-20, 20);
+      theTree_branch(new_branch);
+    }
+
+    // chance of fruit
+    if(random(1, 100)<15){
+      fruit_bunch(branch); 
+    }
     theTree_branch(branch);
-  }
-  // extra branch
-  if(2 > random(1, 5)){
-    new_branch = structuredClone(branch);
-    new_branch.degrees = new_branch.degrees + random(-30, 30);
-    theTree_branch(new_branch);
   }
 
 }
