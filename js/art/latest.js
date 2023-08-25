@@ -146,7 +146,7 @@ function theTree_branch(branch) {
   // next
   if(branch.length > 1) {
     branch.age = branch.age +1;
-    branch.degrees = branch.degrees + random(-15+branch.age, 15-branch.age);
+    branch.degrees = branch.degrees + random(-25+branch.age, 25-branch.age);
     branch.length= branch.length-3;
     branch.x = endx;
     branch.y = endy;
