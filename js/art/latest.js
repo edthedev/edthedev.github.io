@@ -34,6 +34,7 @@ function setup() {
   background(maxim,maxim);
   balls = [];
   ballcount = random(1,3);
+  ballcount = 1;
 
 
   theball = Object(sprite);
@@ -43,6 +44,8 @@ function setup() {
     minline = random(0, maxim/2);
     newb.x = random(0,maxline);
     newb.y = random(maxim/2, maxim);
+    newb.x = maxim/2;
+    newb.y = maxim/3*2;
     balls.push(newb);
   }
 }
@@ -63,6 +66,17 @@ function mouseClicked() {
   // spinny(mouseX, mouseY, 20)
 }
 
+function branch(x, y, deltax, deltay){
+  rect(x, y, deltax, deltay);
+  if(abs(deltax) > 1){
+    upity = random(-3, 5);
+    if(upity < 0) {
+      branch(x+deltax, y+deltay*upity, deltax*.9, -deltay*.95);
+    }
+    branch(x+deltax, y+deltay*upity, deltax*.9, deltay*.95);
+  }
+}
+
 function tree(x, y, size, ang=1) {
   delta = size * .1
 
@@ -79,14 +93,18 @@ function tree(x, y, size, ang=1) {
 
 
   // trunk
-  if(size>4) {
-    fill(color(0,0,0))
-    square(x, y, size)
-    deltax = random(0,delta*2)
-    newx = x - (ang * deltax)
-    newy = y - size * .5
-    deltay = random(0,delta)
-    newang = random([-1,1]) 
-    tree(newx,newy,size-deltay, newang)
+  if(size>15) {
+    fill(color(0,0,0));
+    circle(x, y, size);
+    deltax = random(0,delta*2);
+    newx = x - (ang * deltax);
+    newy = y - size * .5;
+    deltay = random(0,delta*2.5);
+    newang = random([-1,1]);
+    tree(newx,newy,size-deltay, newang);
+  }
+  else {
+    branch(newx, newy, size*newang, -size/3);
+    branch(newx, newy, -size*newang, -size/3);
   }
 }
