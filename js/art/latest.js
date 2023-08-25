@@ -53,15 +53,16 @@ function setup() {
 
 function draw() {
   balls = balls.map( item => theTree_trunk(item) );
+  balls.pop();
 }
 
 
 
 function theTree_trunk(theTree) {
-  if(theTree.size>15) {
-    fill(color(0,0,0));
-    square(theTree.x, theTree.y, theTree.size);
+  fill(color(0,0,0));
+  square(theTree.x, theTree.y, theTree.size);
 
+  if(theTree.size>15) {
     // update for next
     dx = theTree.size*.15;
     dy = theTree.size*.7;
@@ -85,8 +86,7 @@ function theTree_trunk(theTree) {
 var branch = {
   x: 0,
   y: 0,
-  degrees: 90,
-  size: 20,
+  degrees: 0,
   length: 0,
 };
 
@@ -95,10 +95,9 @@ function start_branches(theTree){
   // fruit_bunch(theTree);
 
   new_branch = structuredClone(branch);
-  new_branch.x = theTree.x;
-  new_branch.y = theTree.y;
-  new_branch.degrees=90;
-  new_branch.size = theTree.size*2;
+  new_branch.x = theTree.x + theTree.size/2;
+  new_branch.y = theTree.y + theTree.size/2;
+  new_branch.length = theTree.size*1.5;
   theTree_branch(new_branch);
 }
 
@@ -117,20 +116,28 @@ function fruit_bunch(branch) {
 
 function theTree_branch(branch) {
 
+  // draw
   fill(color(0,0,0));
-  strokeWeight(branch.size*.1);
-  line(branch.x, 
-    branch.y, 
-    branch.x + branch.size*Math.cos(branch.degrees),
-    branch.y + branch.size*Math.sin(branch.degrees),
-    )
+  strokeWeight(branch.length*.1);
+  endx = branch.x + branch.length*Math.cos(branch.degrees);
+  endy = branch.y + branch.length*Math.sin(branch.degrees),
+  line(branch.x, branch.y, endx, endy);
 
-  branch.size = branch.size -1;
-  branch.x = branch.x + 20;
-  branch.y = branch.y -1;
-  if(branch.size > 1) {
+  // next
+  branch.degrees = branch.degrees + random(-15, 15);
+  branch.length= branch.length-2;
+  branch.x = endx;
+  branch.y = endy;
+  if(branch.length > 1) {
     theTree_branch(branch);
   }
+  // extra branch
+  if(2 > random(1, 5)){
+    new_branch = structuredClone(branch);
+    new_branch.degrees = new_branch.degrees + random(-30, 30);
+    theTree_branch(new_branch);
+  }
+
 }
 
 
