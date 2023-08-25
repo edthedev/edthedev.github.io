@@ -15,16 +15,19 @@ as long as you display this license and attribution.
 
 */
 
-
-
-var sprite = {
+var segment = {
   x: 0,
   y: 0,
-  dx: 1,
-  dy: 1,
-  rulefun: dewit,
-  size: 20
+  dirx: 1,
+  diry: 1,
+  size: 20,
+  segments: 0,
 };
+
+
+function draw() {
+  balls = balls.map( item => tree_trunk(item) );
+}
 
 function setup() {
   // maxim = .5 * window.innderWidth;
@@ -37,7 +40,7 @@ function setup() {
   ballcount = 1;
 
 
-  theball = Object(sprite);
+  theball = Object(segment);
   for(i=0;i<ballcount;i++){
     newb = Object.assign({}, theball);
     maxline = random(maxim/2, maxim);
@@ -46,23 +49,40 @@ function setup() {
     newb.y = random(maxim/2, maxim);
     newb.x = maxim/2;
     newb.y = maxim/3*2;
+    newb.size = 30;
     balls.push(newb);
   }
 }
 
+function tree_trunk(tree) {
+  if(tree.size>15) {
+    fill(color(0,0,0));
+    square(tree.x, tree.y, tree.size);
 
-function do_tree(one) {
-  tree(one.x, one.y, 40);
+    // update for next
+    dx = tree.size*.15;
+    dy = tree.size*.7;
+    tree.y = tree.y - dy;
+    tree.x = tree.x + random(-dx, dx);
+    tree.size = tree.size*.95;
+
+    // next
+    tree_trunk(tree);
+  }
+  else {
+    tree_branch(tree);
+  }
 }
 
-function draw() {
-  balls = balls.map( item => do_tree(item) );
-  tree(maxim/2, maxim/3, 4, 0);
+function tree_branch(tree){
+  circle(tree.x, tree.y, tree.size);
 }
+
+
+
 
 function mouseClicked() {
   // background(220);
-  tree(mouseX, mouseY, 20)
   // spinny(mouseX, mouseY, 20)
 }
 
@@ -77,34 +97,18 @@ function branch(x, y, deltax, deltay){
   }
 }
 
-function tree(x, y, size, ang=1) {
-  delta = size * .1
 
-  // branches
-  /*
-  if(size % 4 == 0){
-    deltax = random(delta,delta*2)
-    newang = random([-1,1]) 
-    newx = x - deltax
-
-    tree(newx,y,size-1, newang)
-  }
-  */
-
-
-  // trunk
-  if(size>15) {
-    fill(color(0,0,0));
-    circle(x, y, size);
-    deltax = random(0,delta*2);
-    newx = x - (ang * deltax);
-    newy = y - size * .5;
-    deltay = random(0,delta*2.5);
-    newang = random([-1,1]);
-    tree(newx,newy,size-deltay, newang);
-  }
-  else {
-    branch(newx, newy, size*newang, -size/3);
-    branch(newx, newy, -size*newang, -size/3);
+function crazy_branch(x, y, deltax, deltay){
+  rect(x, y, deltax, deltay);
+  if(abs(deltax) > 1){
+    upity = random(-3, 5);
+    if(upity < 0) {
+      crazy_branch(x+deltax, y+deltay*upity, deltax*.9, -deltay*.95);
+    }
+    crazy_branch(x+deltax, y+deltay*upity, deltax*.9, deltay*.95);
   }
 }
+
+newb = Object.assign({}, theball);
+
+
