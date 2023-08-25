@@ -24,11 +24,7 @@ var segment = {
   segments: 0,
 };
 
-
-
-function draw() {
-  balls = balls.map( item => theTree_trunk(item) );
-}
+balls = [];
 
 function setup() {
   // maxim = .5 * window.innderWidth;
@@ -55,6 +51,12 @@ function setup() {
   }
 }
 
+function draw() {
+  balls = balls.map( item => theTree_trunk(item) );
+}
+
+
+
 function theTree_trunk(theTree) {
   if(theTree.size>15) {
     fill(color(0,0,0));
@@ -73,6 +75,8 @@ function theTree_trunk(theTree) {
   else {
     start_branches(theTree);
   }
+
+  return theTree;
 }
 
 
