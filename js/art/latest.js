@@ -25,19 +25,9 @@ var segment = {
 };
 
 
-var branch = {
-  x: 0,
-  y: 0,
-  dirx: 1,
-  diry: 1,
-  size: 20,
-  length: 0,
-};
-
-
 
 function draw() {
-  balls = balls.map( item => tree_trunk(item) );
+  balls = balls.map( item => theTree_trunk(item) );
 }
 
 function setup() {
@@ -65,36 +55,47 @@ function setup() {
   }
 }
 
-function tree_trunk(tree) {
-  if(tree.size>15) {
+function theTree_trunk(theTree) {
+  if(theTree.size>15) {
     fill(color(0,0,0));
-    square(tree.x, tree.y, tree.size);
+    square(theTree.x, theTree.y, theTree.size);
 
     // update for next
-    dx = tree.size*.15;
-    dy = tree.size*.7;
-    tree.y = tree.y - dy;
-    tree.x = tree.x + random(-dx, dx);
-    tree.size = tree.size*.95;
+    dx = theTree.size*.15;
+    dy = theTree.size*.7;
+    theTree.y = theTree.y - dy;
+    theTree.x = theTree.x + random(-dx, dx);
+    theTree.size = theTree.size*.95;
 
     // next
-    tree_trunk(tree);
+    theTree_trunk(theTree);
   }
   else {
-    start_branches(tree);
+    start_branches(theTree);
   }
 }
 
-function start_branches(tree){
-  fruit_bunch(tree);
-  branch_like=Object(branch);
-  new_branch = object.Assign({}, branch_like);
-  new_branch.x = tree.x;
-  new_branch.y = tree.y;
-  new_branch.dx = -1;
-  new_branch.dy = -1;
-  new_branch.size = tree.size;
-  // tree_branch(new_branch);
+
+/* Branches */
+
+var branch = {
+  x: 0,
+  y: 0,
+  degrees: 90,
+  size: 20,
+  length: 0,
+};
+
+
+function start_branches(theTree){
+  // fruit_bunch(theTree);
+
+  new_branch = structuredClone(branch);
+  new_branch.x = theTree.x;
+  new_branch.y = theTree.y;
+  new_branch.degrees=90;
+  new_branch.size = theTree.size*2;
+  theTree_branch(new_branch);
 }
 
 function fruit_bunch(branch) {
@@ -105,14 +106,28 @@ function fruit_bunch(branch) {
   //next
   branch.x = branch.x-1;
   branch.size = branch.size*.9;
-  if(branch.size > 1) {
+  /* if(branch.size > 1) {
     fruit_bunch(branch);
-  }
+  }*/
 }
 
-function tree_branch(branch) {
+function theTree_branch(branch) {
   fruit_bunch(branch);
+
   fill(color(0,0,0));
+  strokeWeight(branch.size);
+  line(branch.x, 
+    branch.y, 
+    branch.x + 20,
+    branch.y +20,
+    )
+
+  branch.size = branch.size -1;
+  branch.x = branch.x + 20;
+  branch.y = branch.y -1;
+  if(branch.size > 1) {
+    theTree_branch(branch);
+  }
 }
 
 
@@ -143,7 +158,5 @@ function crazy_branch(x, y, deltax, deltay){
     crazy_branch(x+deltax, y+deltay*upity, deltax*.9, deltay*.95);
   }
 }
-
-newb = Object.assign({}, theball);
 
 
