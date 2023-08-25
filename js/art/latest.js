@@ -116,14 +116,13 @@ function fruit_bunch(branch) {
 }
 
 function theTree_branch(branch) {
-  fruit_bunch(branch);
 
   fill(color(0,0,0));
-  strokeWeight(branch.size);
+  strokeWeight(branch.size*.1);
   line(branch.x, 
     branch.y, 
-    branch.x + 20,
-    branch.y +20,
+    branch.x + branch.size*Math.cos(branch.degrees),
+    branch.y + branch.size*Math.sin(branch.degrees),
     )
 
   branch.size = branch.size -1;
