@@ -100,9 +100,15 @@ function start_branches(theTree){
   alphaBranch.y = theTree.y + theTree.size/2;
   alphaBranch.length = theTree.size*2.5;
 
-  for(i=0;i<random(2,5);i++){
+  root_branch_count = random(3,7);
+  max_degrees = 370;
+  branch_degrees = 170;
+
+  for(i=0;i<root_branch_count;i++){
     new_branch = structuredClone(alphaBranch);
-    new_branch.degrees = random(180, 360);
+    add_degrees = random(10, (max_degrees-branch_degrees)/(root_branch_count - i));
+    branch_degrees = branch_degrees + add_degrees;
+    new_branch.degrees = branch_degrees;
     theTree_branch(new_branch);
   }
 }
