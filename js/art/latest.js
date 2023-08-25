@@ -25,6 +25,17 @@ var segment = {
 };
 
 
+var branch = {
+  x: 0,
+  y: 0,
+  dirx: 1,
+  diry: 1,
+  size: 20,
+  length: 0,
+};
+
+
+
 function draw() {
   balls = balls.map( item => tree_trunk(item) );
 }
@@ -70,15 +81,39 @@ function tree_trunk(tree) {
     tree_trunk(tree);
   }
   else {
-    tree_branch(tree);
+    start_branches(tree);
   }
 }
 
-function tree_branch(tree){
-  circle(tree.x, tree.y, tree.size);
+function start_branches(tree){
+  fruit_bunch(tree);
+  branch_like=Object(branch);
+  new_branch = object.Assign({}, branch_like);
+  new_branch.x = tree.x;
+  new_branch.y = tree.y;
+  new_branch.dx = -1;
+  new_branch.dy = -1;
+  new_branch.size = tree.size;
+  // tree_branch(new_branch);
 }
 
+function fruit_bunch(branch) {
+  //draw
+  fill(color(255,0,0));
+  circle(branch.x, branch.y, branch.size);
 
+  //next
+  branch.x = branch.x-1;
+  branch.size = branch.size*.9;
+  if(branch.size > 1) {
+    fruit_bunch(branch);
+  }
+}
+
+function tree_branch(branch) {
+  fruit_bunch(branch);
+  fill(color(0,0,0));
+}
 
 
 function mouseClicked() {
