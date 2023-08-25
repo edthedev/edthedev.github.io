@@ -46,7 +46,7 @@ function setup() {
     newb.y = random(maxim/2, maxim);
     newb.x = maxim/2;
     newb.y = maxim/3*2;
-    newb.size = 30;
+    newb.size = 25;
     balls.push(newb);
   }
 }
@@ -98,7 +98,7 @@ function start_branches(theTree){
   
   alphaBranch.x = theTree.x + theTree.size/2;
   alphaBranch.y = theTree.y + theTree.size/2;
-  alphaBranch.length = theTree.size*1.5;
+  alphaBranch.length = theTree.size*2.5;
 
   for(i=0;i<random(2,5);i++){
     new_branch = structuredClone(alphaBranch);
@@ -129,7 +129,7 @@ function theTree_branch(branch) {
 
   // draw
   fill(color(0,0,0));
-  strokeWeight(branch.length*.1);
+  strokeWeight(branch.length*.2);
   angleRad = toRadians(branch.degrees);
   endx = branch.x + branch.length*Math.cos(angleRad);
   endy = branch.y + branch.length*Math.sin(angleRad),
@@ -139,7 +139,7 @@ function theTree_branch(branch) {
   if(branch.length > 1) {
     branch.age = branch.age +1;
     branch.degrees = branch.degrees + random(-15+branch.age, 15-branch.age);
-    branch.length= branch.length-2;
+    branch.length= branch.length-3;
     branch.x = endx;
     branch.y = endy;
 
