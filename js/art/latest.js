@@ -28,25 +28,28 @@ balls = [];
 
 function setup() {
   // maxim = .5 * window.innderWidth;
-  maxim = 600;
-  midline = maxim / 2;
-  createCanvas(maxim, maxim);
-  background(maxim,maxim);
+  maxim_x = 600;
+  maxim_y = 400;
+  midline = maxim_y / 2;
+  myCanvas = createCanvas(maxim_x, maxim_y);
+  background(maxim_x,maxim_y);
   balls = [];
-  ballcount = random(1,3);
-  ballcount = 1;
+  ballcount = random(1,4);
+  // ballcount = 1;
+
+  make_horizon(0, 0, maxim_x, maxim_y);
+  draw_horizon(0, 0, maxim_x, maxim_y);
+  setup_season();
+  draw_ground(myCanvas, maxim_y /2);
 
 
   theball = Object(segment);
+  maxim = maxim_x;
   for(i=0;i<ballcount;i++){
     newb = Object.assign({}, theball);
-    maxline = random(maxim/2, maxim);
-    minline = random(0, maxim/2);
-    newb.x = random(0,maxline);
-    newb.y = random(maxim/2, maxim);
-    newb.x = maxim/2;
-    newb.y = maxim/3*2;
-    newb.size = 25;
+    newb.y = random(maxim_y/2, maxim_y);
+    newb.x = random(maxim_x/3, maxim_x/3*2);
+    newb.size = random(15, 25);
     balls.push(newb);
   }
 }

@@ -1,7 +1,7 @@
 ---
 layout: liveart.multi.script.njk
-title: Social Experiment - 2022 June 19 - Art by Edward Delaporte
-script: ['/js/art/share/canvas.js', '/js/art/share/random.js', '/js/art/latest.js']
+title: Grove - 2023 September 3
+script: ['/js/art/share/canvas.js', '/js/art/share/random.js', '/js/art/share/ground.js', '/js/art/share/horizon.js', '/js/art/latest.js']
 ---
 
 ## Grove
