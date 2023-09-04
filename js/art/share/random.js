@@ -4,6 +4,11 @@ Reusable random functions
 
 */
 
+function random_plus_minus(low, high){
+  var plus_minus = Math.random() < 0.5 ? -1 : 1;
+  return random(low, high) * plus_minus;
+}
+
 function new_random() {
   seed = get_random_seed();
   window.location.search = "?r=" + seed;
