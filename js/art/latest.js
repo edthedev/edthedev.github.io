@@ -156,12 +156,20 @@ function theTree_branch(branch) {
     return;
   }
 
-  // chance of extra branch
-  if(branch.energy > 10) { 
-    if(random(0,100) < 80) {
+  if(branch.age < 3) {
+    if(random(0,100) < 110) {
       // branch.energy = branch.energy * .7;
       new_branch = structuredClone(branch);
-      new_branch.degrees = new_branch.degrees + random(-20, 20);
+      new_branch.degrees += random_plus_minus(20, 45);
+      new_branch.length = branch.length * random(.2, 1);
+      theTree_branch(new_branch);
+    }
+  }
+  else {
+    if(random(0,100) < 100) {
+      // branch.energy = branch.energy * .7;
+      new_branch = structuredClone(branch);
+      new_branch.degrees += random_plus_minus(20, 30);
       new_branch.length = branch.length * random(.2, 1);
       theTree_branch(new_branch);
     }
