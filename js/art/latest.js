@@ -67,7 +67,7 @@ function theTree_trunk(theTree) {
     dx = theTree.size*.15;
     dy = theTree.size*.7;
     theTree.y = theTree.y - dy;
-    theTree.x = theTree.x + random(-dx, dx);
+    theTree.x = theTree.x + random_plus_minus(0, dx);
     theTree.size = theTree.size*.95;
 
     // next
