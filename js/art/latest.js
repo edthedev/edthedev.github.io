@@ -100,7 +100,7 @@ function start_branches(theTree){
   alphaBranch.x = theTree.x + theTree.size/2;
   alphaBranch.y = theTree.y + theTree.size/2;
   alphaBranch.length = theTree.size*1.8;
-  alphaBranch.energy = 60;
+  alphaBranch.energy = 80;
 
   root_branch_count = random(5,9);
   max_degrees = 370;
@@ -140,22 +140,16 @@ function theTree_branch(branch) {
     branch.length = branch.length /2;
   }
   */
-
-  // draw
+  
   fill(color(0,0,0));
   stroke(0,0,0);
   strokeWeight(branch.length*.2);
-  angleRad = toRadians(branch.degrees);
-  endx = branch.x + branch.length*Math.cos(angleRad);
-  endy = branch.y + branch.length*Math.sin(angleRad),
-  line(branch.x, branch.y, endx, endy);
+  branch = draw_branch_bit(branch);
 
   // next
   branch.age = branch.age +1;
   branch.degrees = branch.degrees + random(-25+branch.age, 25-branch.age);
   branch.length= branch.length-3;
-  branch.x = endx;
-  branch.y = endy;
 
   // no infinite branches
   if(branch.length <= 1) {
@@ -164,11 +158,13 @@ function theTree_branch(branch) {
 
   // chance of extra branch
   if(branch.energy > 10) { 
-    branch.energy = branch.energy * .5;
-    new_branch = structuredClone(branch);
-    new_branch.degrees = new_branch.degrees + random(-20, 20);
-    new_branch.length = branch.length * random(.2, 1);
-    theTree_branch(new_branch);
+    if(random(0,100) < 80) {
+      // branch.energy = branch.energy * .7;
+      new_branch = structuredClone(branch);
+      new_branch.degrees = new_branch.degrees + random(-20, 20);
+      new_branch.length = branch.length * random(.2, 1);
+      theTree_branch(new_branch);
+    }
   }
 
   // chance of fruit
@@ -177,21 +173,45 @@ function theTree_branch(branch) {
   }
 
   // leaves
-  if(branch.age > 4) {
-    leaf_bunch(branch);
+  if(branch.age > 3) {
+    twig(branch);
   }
 
   theTree_branch(branch);
 }
 
-function leaf_bunch(branch) {
+function draw_branch_bit(branch) {
   // draw
-  stroke(40,random(200, 255),40);
-  strokeWeight(branch.length/2);
-  angleRad = toRadians(branch.degrees + random(-45, 45));
+  angleRad = toRadians(branch.degrees);
   endx = branch.x + branch.length*Math.cos(angleRad);
   endy = branch.y + branch.length*Math.sin(angleRad),
   line(branch.x, branch.y, endx, endy);
+  new_branch = structuredClone(branch);
+  new_branch.x = endx;
+  new_branch.y = endy;
+  return new_branch;
+}
+
+
+function twig(branch) { 
+  branch.angle += random(-30,30);
+  branch = draw_branch_bit(branch);
+  leaf_bunch(branch);
+}
+
+function leaf(branch, angle) {
+  branch.angle += angle;
+  draw_branch_bit(branch);
+}
+
+function leaf_bunch(branch) {
+  // draw
+  // green
+  stroke(40,random(200, 255),40);
+  strokeWeight(2);
+
+  leaf(branch, random(-45,-80));
+  leaf(branch, random(45,80));
 }
 
 function fruit_bunch(branch) {
