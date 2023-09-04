@@ -100,9 +100,9 @@ function start_branches(theTree){
   alphaBranch.y = theTree.y + theTree.size/2;
   alphaBranch.length = theTree.size*2.5;
 
-  root_branch_count = random(3,7);
+  root_branch_count = random(5,9);
   max_degrees = 370;
-  branch_degrees = 170;
+  branch_degrees = 200;
 
   for(i=0;i<root_branch_count;i++){
     new_branch = structuredClone(alphaBranch);
@@ -114,6 +114,11 @@ function start_branches(theTree){
 }
 
 function fruit_bunch(branch) {
+  // no fruit too soon
+  if(branch.age < 3) {
+    return;
+  }
+
   //draw
   strokeWeight(1);
   fill(color(255,0,0));
@@ -135,6 +140,16 @@ function toRadians (angle) {
 
 function theTree_branch(branch) {
 
+  // Keep the degrees in reason
+  if(branch.degrees > 360) {
+    branch.degrees -= 360;
+  }
+
+  // don't point downward for long 
+  if(branch.degress > 260 && branch.degrees < 330) {
+    branch.degrees-=90;
+  }
+
   // draw
   fill(color(0,0,0));
   strokeWeight(branch.length*.2);
@@ -152,14 +167,14 @@ function theTree_branch(branch) {
     branch.y = endy;
 
     // chance of extra branch
-    if(random(1, 100)<40){
+    if(random(1, 100)<(100-branch.age*4)){
       new_branch = structuredClone(branch);
       new_branch.degrees = new_branch.degrees + random(-20, 20);
       theTree_branch(new_branch);
     }
 
     // chance of fruit
-    if(random(1, 100)<15){
+    if(random(1, 100)<15+branch.age){
       fruit_bunch(branch); 
     }
     theTree_branch(branch);
@@ -184,6 +199,9 @@ function branch(x, y, deltax, deltay){
   }
 }
 
+
+// TODO: Twigs
+// TODO: Leaves
 
 function crazy_branch(x, y, deltax, deltay){
   rect(x, y, deltax, deltay);
