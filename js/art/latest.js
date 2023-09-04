@@ -89,6 +89,7 @@ var alphaBranch = {
   degrees: 0,
   length: 0,
   age: 0,
+  energy: 0,
 };
 
 
@@ -98,7 +99,8 @@ function start_branches(theTree){
   
   alphaBranch.x = theTree.x + theTree.size/2;
   alphaBranch.y = theTree.y + theTree.size/2;
-  alphaBranch.length = theTree.size*2.5;
+  alphaBranch.length = theTree.size*1.8;
+  alphaBranch.energy = 40;
 
   root_branch_count = random(5,9);
   max_degrees = 370;
@@ -113,9 +115,71 @@ function start_branches(theTree){
   }
 }
 
+function toRadians (angle) {
+  return angle * (Math.PI / 180);
+}
+
+
+function theTree_branch(branch) {
+
+  // Keep the degrees in reason
+  if(branch.degrees > 360) {
+    branch.degrees -= 360;
+  }
+
+  // don't point downward for long 
+  if(branch.degress > 260 && branch.degrees < 330) {
+    branch.degrees-=90;
+  }
+
+  // grow
+  branch.energy += 10;
+
+  /*
+  if(branch.age < 3) {
+    branch.length = branch.length /2;
+  }
+  */
+
+  // draw
+  fill(color(0,0,0));
+  strokeWeight(branch.length*.2);
+  angleRad = toRadians(branch.degrees);
+  endx = branch.x + branch.length*Math.cos(angleRad);
+  endy = branch.y + branch.length*Math.sin(angleRad),
+  line(branch.x, branch.y, endx, endy);
+
+  // next
+  branch.age = branch.age +1;
+  branch.degrees = branch.degrees + random(-25+branch.age, 25-branch.age);
+  branch.length= branch.length-3;
+  branch.x = endx;
+  branch.y = endy;
+
+  // no infinite branches
+  if(branch.length <= 1) {
+    return;
+  }
+
+  // chance of extra branch
+  if(random(1,100)<80 && branch.energy > 10) { 
+    branch.energy -= 20;
+    new_branch = structuredClone(branch);
+    new_branch.degrees = new_branch.degrees + random(-20, 20);
+    theTree_branch(new_branch);
+  }
+
+  // chance of fruit
+  if(random(1, 100)<15+branch.age){
+    fruit_bunch(branch); 
+  }
+  theTree_branch(branch);
+}
+
+
 function fruit_bunch(branch) {
   // no fruit too soon
-  if(branch.age < 3) {
+  if(branch.energy < 5) {
     return;
   }
 
@@ -134,69 +198,11 @@ function fruit_bunch(branch) {
   }*/
 }
 
-function toRadians (angle) {
-  return angle * (Math.PI / 180);
-}
-
-function theTree_branch(branch) {
-
-  // Keep the degrees in reason
-  if(branch.degrees > 360) {
-    branch.degrees -= 360;
-  }
-
-  // don't point downward for long 
-  if(branch.degress > 260 && branch.degrees < 330) {
-    branch.degrees-=90;
-  }
-
-  // draw
-  fill(color(0,0,0));
-  strokeWeight(branch.length*.2);
-  angleRad = toRadians(branch.degrees);
-  endx = branch.x + branch.length*Math.cos(angleRad);
-  endy = branch.y + branch.length*Math.sin(angleRad),
-  line(branch.x, branch.y, endx, endy);
-    
-  // next
-  if(branch.length > 1) {
-    branch.age = branch.age +1;
-    branch.degrees = branch.degrees + random(-25+branch.age, 25-branch.age);
-    branch.length= branch.length-3;
-    branch.x = endx;
-    branch.y = endy;
-
-    // chance of extra branch
-    if(random(1, 100)<(100-branch.age*4)){
-      new_branch = structuredClone(branch);
-      new_branch.degrees = new_branch.degrees + random(-20, 20);
-      theTree_branch(new_branch);
-    }
-
-    // chance of fruit
-    if(random(1, 100)<15+branch.age){
-      fruit_bunch(branch); 
-    }
-    theTree_branch(branch);
-  }
-
-}
 
 
 function mouseClicked() {
   // background(220);
   // spinny(mouseX, mouseY, 20)
-}
-
-function branch(x, y, deltax, deltay){
-  rect(x, y, deltax, deltay);
-  if(abs(deltax) > 1){
-    upity = random(-3, 5);
-    if(upity < 0) {
-      branch(x+deltax, y+deltay*upity, deltax*.9, -deltay*.95);
-    }
-    branch(x+deltax, y+deltay*upity, deltax*.9, deltay*.95);
-  }
 }
 
 
