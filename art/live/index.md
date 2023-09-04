@@ -6,6 +6,8 @@ pagination:
     size: 20
 items: 
     # - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "fruit_trees", name: "Fruit Trees - 2023 September 3", 
+    desc: "I continue to find an interesting challenge in drawing trees."}
     - {id: "basic", name: "BASIC - 2021 Dec 24", 
     desc: "Typesetting art often ignores the classics."}
     - {id: "triangles", name: "Triangles - 2021 Sep 26", 
