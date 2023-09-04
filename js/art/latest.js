@@ -143,6 +143,7 @@ function theTree_branch(branch) {
 
   // draw
   fill(color(0,0,0));
+  stroke(0,0,0);
   strokeWeight(branch.length*.2);
   angleRad = toRadians(branch.degrees);
   endx = branch.x + branch.length*Math.cos(angleRad);
@@ -171,16 +172,34 @@ function theTree_branch(branch) {
 
   // chance of fruit
   if(random(1, 100)<15+branch.age){
-    fruit_bunch(branch); 
+    branch.energy = fruit_bunch(branch); 
   }
+
+  // leaves
+  if(branch.age > 4) {
+    leaf_bunch(branch);
+  }
+
   theTree_branch(branch);
 }
 
+function leaf_bunch(branch) {
+  // draw
+  stroke(0,255,0);
+  strokeWeight(branch.length/2);
+  angleRad = toRadians(branch.degrees + random(-45, 45));
+  endx = branch.x + branch.length*Math.cos(angleRad);
+  endy = branch.y + branch.length*Math.sin(angleRad),
+  line(branch.x, branch.y, endx, endy);
+}
 
 function fruit_bunch(branch) {
   // no fruit too soon
+  if(branch.age < 3) {
+    return branch.energy;
+  }
   if(branch.energy < 5) {
-    return;
+    return branch.energy;
   }
 
   //draw
@@ -193,9 +212,7 @@ function fruit_bunch(branch) {
   line(branch.x, branch.y, branch.x+dx, branch.y+dy);
   circle(branch.x+dx, branch.y+dy, branch.length*.5);
 
-
-  /* if(branch.size > 1) {
-  }*/
+  return branch.energy - 20;
 }
 
 
