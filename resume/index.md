@@ -179,8 +179,8 @@ Application Security Engineer Responsibilities
 
 ## Community Involvement
 
-- Rotary Club of Champaign - Website Committee Chair since 2020
-- Webmaster - Rotary Club of Champaign since 2018
+- Website Committee Chair - Rotary Club of Champaign, 2020 - 2022
+- Webmaster - Rotary Club of Champaign, 2018-2022
 - Hosts a free "Learn Programming!" class for elementary students at local public libraries since 2017
 - OWASP Top Ten Privacy Project - Core contributor since 2015
 - Handled hosting, DNS and administration of various not-for-profit websites since 2007
