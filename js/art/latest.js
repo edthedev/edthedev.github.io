@@ -100,7 +100,7 @@ function start_branches(theTree){
   alphaBranch.x = theTree.x + theTree.size/2;
   alphaBranch.y = theTree.y + theTree.size/2;
   alphaBranch.length = theTree.size*1.8;
-  alphaBranch.energy = 40;
+  alphaBranch.energy = 60;
 
   root_branch_count = random(5,9);
   max_degrees = 370;
@@ -163,10 +163,11 @@ function theTree_branch(branch) {
   }
 
   // chance of extra branch
-  if(random(1,100)<80 && branch.energy > 10) { 
-    branch.energy -= 20;
+  if(branch.energy > 10) { 
+    branch.energy = branch.energy * .5;
     new_branch = structuredClone(branch);
     new_branch.degrees = new_branch.degrees + random(-20, 20);
+    new_branch.length = branch.length * random(.2, 1);
     theTree_branch(new_branch);
   }
 
@@ -185,7 +186,7 @@ function theTree_branch(branch) {
 
 function leaf_bunch(branch) {
   // draw
-  stroke(0,255,0);
+  stroke(40,random(200, 255),40);
   strokeWeight(branch.length/2);
   angleRad = toRadians(branch.degrees + random(-45, 45));
   endx = branch.x + branch.length*Math.cos(angleRad);
