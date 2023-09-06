@@ -1,6 +1,6 @@
 ---
-layout: book.njk
-title: Coding is Stupid by Edward Delaporte
+layout: blog.njk
+title: Team Values
 ---
 
 ## Principles of Agility in Cybersecurity
