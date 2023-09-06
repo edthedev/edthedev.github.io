@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: blog.njk
 title: Too Silly for Comic Book Movies
 ---
 

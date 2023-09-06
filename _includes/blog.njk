@@ -4,11 +4,9 @@ pagination:
     data: items
     size: 20
 items: 
-    - {id: "/", name: "Homepage", desc: ""}
-    - {id: "/blog/", name: "Blog", desc: ""}
     - {id: "/blog/management", name: "For Managers", }
     - {id: "/blog/team", name: "Team Values", }
-    - {id: "/blog/comics", name: "Comic Books", }
+    - {id: "/blog/comics", name: "Comic Book Movies", }
     - {id: "/blog/web2", name: "Web 2.0", date: "2023 September"}
 ---
 
@@ -28,6 +26,16 @@ items:
   </span>
 </nav>
 
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
 </head> 
 <body>
 
@@ -35,7 +43,8 @@ items:
   <h1> {{ title }} </h1>
 
   <!-- List book pages. -->
-  <nav class="book_nav" role="navigation">
+  <nav class="more_nav" role="navigation">
+  <h2>Blog Topics</h2>
   {%- for item in pagination.items %}
 
   <li> <a href="{{item.id}}"> {{ item.name }} </a></li>
