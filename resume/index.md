@@ -1,17 +1,19 @@
 ---
-layout: layout.njk
+layout: resume.njk
 title: Resume - Edward C. Delaporte V
 eleventyNavigation:
   key: Resume
   order: 99
 ---
 
+# Edward C. Delaporte's Resume
+
 I apply my deep understanding of computers and strong empathy for humans to make computers better at meeting the needs of humans.
 
 ## Contact Info
 
-- Email: edward@delaporte.us
-- Website: https://edward.delaporte.us
+- Email: [edward@delaporte.us](mailto:edward@delaporte.us)
+- Website: [https://edward.delaporte.us](https://edward.delaporte.us)
 - GitHub: [EdTheDev](http://github.com/edthedev)
 - Resume: [Resume as PDF](https://edward.delaporte.us/pdf/Resume.Edward.Delaporte.pdf)
 

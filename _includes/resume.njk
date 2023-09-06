@@ -1,0 +1,27 @@
+---
+title: Edward Delaporte's Website
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>{{ title }}</title>
+
+<nav class="ye_navbar" role="navigation"> 
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+{{ content | safe }}
+</div>
+  <p>Copyright 2020-2023 Edward Delaporte</p>
+</div>
+</html>
