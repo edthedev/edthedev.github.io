@@ -13,7 +13,9 @@ title: Edward Delaporte's Website
   <title>{{ title }}</title>
 
 <nav class="ye_navbar" role="navigation"> 
-{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  <span class="ye_navbar">
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  </span>
 </nav>
 
 </head> 
