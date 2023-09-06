@@ -52,14 +52,16 @@ Navigation Style
 
 /* The navigation bar */
 
-.ye_navbar div {
+.ye_navbar nav{
   width: 100%; /* Full width */
   line-height: 3em;
 }
 
 .ye_navbar span {
+  width: 100%; /* Full width */
   position: fixed; /* Set the navbar to fixed position */
   line-height: 1em;
+  padding: 0;
 }
 
 .ye_navbar li {

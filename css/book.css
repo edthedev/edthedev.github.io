@@ -2,7 +2,7 @@ p {
     margin: .5em;
 }
 
-nav {
+.book_nav nav {
     padding: 2em;
     flex: 20%;
     max-width: 20%;
@@ -24,7 +24,7 @@ nav {
     clear:both;
 }
 
-li {
+.book_nav li {
     width: 100%;
     list-style-type: none;
 }
