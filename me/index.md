@@ -11,7 +11,7 @@ Edward Delaporte has been writing web software professionally since the year 200
 
 Edward has written software with a plethora of different tools. His current favorites include Python, PowerShell, Go and Commodore BASIC.  Edward consults on software development lifecycle security and makes art with code.
 
-At previous conferences, Edward has presented on Git, Ansible, React, and more, connecting the dots between usability, accessibility, security, and development lifecycles.
+At previous conferences, Edward has [presented on Git, Ansible, React, and more](/slides), connecting the dots between usability, accessibility, security, and development lifecycles.
 
 Ask Edward how code pipelines can ‘make our worst workday a much better day.’
 

@@ -82,6 +82,15 @@ Nothing to see here.
 
 There's more live interactive art [over here](/art/live/more)
 
+## Older JavaScript Art
+
+Before I started using P5.js, I generated these images using [Aza Raskin's](http://www.azarask.in/blog/) JavaScript art tool [Algorithm Ink](http://azarask.in/projects/algorithm-ink).
+
+ ![Art](/img/gallery/1330185980701.jpg "Art")
+ ![Art](/img/gallery/1330185531212.jpg "Art")
+ ![Art](/img/gallery/1330092232228.jpg "Art")
+
+
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />The source code to this art is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. You may use and remix this code, as long as you give attribution to Edward Delaporte.
