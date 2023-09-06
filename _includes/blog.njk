@@ -23,6 +23,12 @@ items:
   <link rel="stylesheet" href="/css/book.css" /> 
   <title>{{ title }}</title>
 
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  </span>
+</nav>
+
 </head> 
 <body>
 
