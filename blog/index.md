@@ -1,9 +1,8 @@
 ---
 layout: blog.njk
-title: Coding is Stupid by Edward Delaporte
+title: Blog - Edward.Delaporte.us
 ---
-
 
 ## My Blog
 
-Please find here some random thoughts on topics.
+Please find here some random thoughts on topics that interest me.

@@ -9,6 +9,7 @@ items:
     - {id: "/blog/management", name: "For Managers", }
     - {id: "/blog/team", name: "Team Values", }
     - {id: "/blog/comics", name: "Comic Books", }
+    - {id: "/blog/web2", name: "Web 2.0", date: "2023-09-06"}
 ---
 
 <!doctype html>
@@ -32,8 +33,6 @@ items:
   <link rel="stylesheet" href="/css/book.css" /> 
   <title>{{ title }}</title>
 
-
-
 </head> 
 <body>
 
@@ -41,7 +40,7 @@ items:
 <nav class="book_nav" role="navigation">
 {%- for item in pagination.items %}
 
-<li> <a href="{{item.id}}"> {{ item.name }}</a></li>
+<li> <a href="{{item.id}}"> {{ item.name }} {{ item.date }} </a></li>
 
 {% endfor -%}
 </nav>
