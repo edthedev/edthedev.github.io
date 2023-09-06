@@ -1,12 +1,10 @@
 ---
 layout: layout.njk
-title: Resume - Edward Delaporte
+title: Resume - Edward C. Delaporte V
 eleventyNavigation:
   key: Resume
   order: 99
 ---
-
-# Edward C. Delaporte V						
 
 I apply my deep understanding of computers and strong empathy for humans to make computers better at meeting the needs of humans.
 

@@ -6,8 +6,6 @@ eleventyNavigation:
   order: 30
 ---
 
-# Art by Edward Delaporte
-
 ## JavaScript Art
 
 <a href="/art/live">

@@ -1,13 +1,11 @@
 ---
 layout: layout.njk
-title: Presentations by Edward Delaporte
+title: Presentations
 eleventyNavigation:
   key: Slides
   title: Presentations
   order: 10
 ---
-
-# Presentations
 
 I often give presentations on technical topics.
 

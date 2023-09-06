@@ -1,12 +1,10 @@
 ---
 layout: layout.njk
-title: Code by Edward Delaporte
+title: Code
 eleventyNavigation:
   key: Code
   order: 20
 ---
-
-# Code
 
 [I have written a lot of code.](/me/code)
 

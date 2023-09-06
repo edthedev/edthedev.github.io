@@ -124,6 +124,7 @@ code {
 .content {
   align-content: center;
 	margin: 1em;
+  margin-top: 3.5em; /* Do not drift under top bar. */
   max-width: 95%;
 }
 

@@ -1,5 +1,5 @@
 ---
-layout: book.njk
+layout: blog.njk
 title: Management Crash Course by Edward Delaporte
 ---
 
