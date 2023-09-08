@@ -4,11 +4,19 @@ function get_random_img(path) {
   return random_choice(images);
 }
 
-alert('test');
-
-function updateMix() {
-  $("imgTop").src = get_random_img('/data/mix_top.json');
-  $("imgBottom").src = get_random_img('/data/mix_bottom.json');
+async function get_image_list(path) {
+  const resp = await fetch(path);
+  const result = await resp.json();
+  return result;
 }
 
-document.getElementById("imgTop").addEventListener("load", updateMix);
+async function updateMix() {
+  top_imgs = await get_image_list('/data/mix_top.json');
+  bottom_imgs = await get_image_list('/data/mix_bottom.json');
+  document.getElementById("imgTop").src = "/img/mix/top/" + choose(top_imgs);
+  document.getElementById("imgBottom").src = "/img/mix/bottom/" + choose(bottom_imgs);
+}
+
+
+/* document.getElementById("#imgTop").addEventListener("load", do_stuff);
+*/
