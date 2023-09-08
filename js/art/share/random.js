@@ -21,7 +21,7 @@ function get_url_seed() {
   return seed;
 }
 
-function get_random_seed() {
+function get_random_seed(seed=200) {
 
   rand = Math.random();
   rand = Math.sin(seed) * 10000;
