@@ -12,7 +12,7 @@ async function get_image_list(path) {
 
 async function updateMix() {
   if(get_url_seed() == null) {
-    new_random();
+    new_random(Date.now());
   }
   top_imgs = await get_image_list('/data/mix_top.json');
   bottom_imgs = await get_image_list('/data/mix_bottom.json');

@@ -10,8 +10,8 @@ function random_plus_minus(low, high){
   return random(low, high) * plus_minus;
 }
 
-function new_random() {
-  seed = get_random_seed();
+function new_random(seed=null) {
+  seed = get_random_seed(seed);
   window.location.search = "?r=" + seed;
 }
 
