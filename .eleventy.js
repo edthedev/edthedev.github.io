@@ -9,6 +9,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("art/live");
   eleventyConfig.addPassthroughCopy("pdf");
   eleventyConfig.addPassthroughCopy(".well-known");
+  eleventyConfig.addPassthroughCopy("data");
 
   eleventyConfig.setTemplateFormats([
     "md",

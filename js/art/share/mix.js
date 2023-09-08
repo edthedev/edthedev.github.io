@@ -7,8 +7,8 @@ function get_random_img(path) {
 alert('test');
 
 function updateMix() {
-  $("imgTop").src = get_random_img('/img/mix/top');
-  $("imgBottom").src = get_random_img('/img/mix/bottom');
+  $("imgTop").src = get_random_img('/data/mix_top.json');
+  $("imgBottom").src = get_random_img('/data/mix_bottom.json');
 }
 
 document.getElementById("imgTop").addEventListener("load", updateMix);
