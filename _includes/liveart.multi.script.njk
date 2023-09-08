@@ -27,6 +27,7 @@ script: /js/art/cross.js
 
 
 <div class="content" role="main"> <!-- No role="main" here because the script will add a main tag. -->
+<h1> {{ title }} </h1>
 {{ content | safe }}
 <main role="application"> <!-- Script output will be written here. -->
 </main>
