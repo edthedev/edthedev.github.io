@@ -1,9 +1,3 @@
-function get_random_img(path) {
-  alert(path);
-  images = $.get(path);
-  return random_choice(images);
-}
-
 async function get_image_list(path) {
   const resp = await fetch(path);
   const result = await resp.json();

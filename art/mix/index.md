@@ -1,7 +1,7 @@
 ---
 layout: liveart.multi.script.njk
 title: Mix and Match Sketches by Edward Delaporte
-script: ['/js/jquery.min.js', '/js/art/share/random.js', '/js/art/share/mix.js']
+script: ['/js/art/share/random.js', '/js/art/mix.js']
 ---
 
 <script defer>
