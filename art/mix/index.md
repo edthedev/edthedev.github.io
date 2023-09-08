@@ -8,7 +8,8 @@ script: ['/js/art/share/random.js', '/js/art/mix.js']
   updateMix();
 </script>
 
-<button onClick="random_me()">Randomize</button>
+<button 
+  style="width: 5em; height: 3em;" onClick="random_me()">Randomize</button>
 
 | | | 
 |-|-|
