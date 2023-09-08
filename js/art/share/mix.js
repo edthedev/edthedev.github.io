@@ -10,8 +10,14 @@ async function get_image_list(path) {
   return result;
 }
 
-const topImgIds = ["imgTop", "imgTop2"];
-const bottomImgIds = ["imgBottom", "imgBottom2"];
+const topImgIds = [
+  "imgTop11", "imgTop21", "imgTop31",
+  "imgTop12", "imgTop22", "imgTop32"
+];
+const bottomImgIds = [
+  "imgBottom11", "imgBottom21", "imgBottom31",
+  "imgBottom12", "imgBottom22", "imgBottom32"
+];
 
 async function updateMix() {
   if(get_url_seed() == null) {

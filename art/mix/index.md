@@ -12,5 +12,9 @@ script: ['/js/jquery.min.js', '/js/art/share/random.js', '/js/art/share/mix.js']
 
 | | | 
 |-|-|
-| <img src="/img/mix/top/a.jpg" id=imgTop /> | <img src="/img/mix/top/a.jpg" id=imgTop2 /> | |
-| <img src="/img/mix/top/a.jpg" id=imgBottom /> | <img src="/img/mix/top/a.jpg" id=imgBottom2 />  |
+| <img id=imgTop11 /> | <img id=imgTop12 /> | |
+| <img id=imgBottom11 /> | <img id=imgBottom12 />  |
+| <img id=imgTop21 /> | <img id=imgTop22 /> | |
+| <img id=imgBottom21 /> | <img id=imgBottom22 />  |
+| <img id=imgTop31 /> | <img id=imgTop32 /> | |
+| <img id=imgBottom31 /> | <img id=imgBottom32 />  |
