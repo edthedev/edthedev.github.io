@@ -1,0 +1,2 @@
+Get-ChildItem img/mix/top | ForEach-Object { $_.PsChildName } | ConvertTo-Json > _data/mix_top.json
+Get-ChildItem img/mix/bottom | ForEach-Object { $_.PsChildName } | ConvertTo-Json > _data/mix_bottom.json
