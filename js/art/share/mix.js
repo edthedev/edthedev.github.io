@@ -10,16 +10,29 @@ async function get_image_list(path) {
   return result;
 }
 
+const topImgIds = ["imgTop", "imgTop2"];
+const bottomImgIds = ["imgBottom", "imgBottom2"];
+
 async function updateMix() {
   if(get_url_seed() == null) {
     new_random(Date.now());
   }
+  seed = get_url_seed();
   top_imgs = await get_image_list('/data/mix_top.json');
   bottom_imgs = await get_image_list('/data/mix_bottom.json');
-  document.getElementById("imgTop").src = "/img/mix/top/" + choose(top_imgs);
-  document.getElementById("imgBottom").src = "/img/mix/bottom/" + choose(bottom_imgs);
+
+  topImgIds.map( function update(id) {
+    seed = get_random_seed(seed);
+    document.getElementById(id).src = "/img/mix/top/" + choose(top_imgs, seed);
+  });
+  bottomImgIds.map( function update(id) {
+    seed = get_random_seed(seed);
+    document.getElementById(id).src = "/img/mix/bottom/" + choose(bottom_imgs, seed);
+  });
+
 }
 
-
-/* document.getElementById("#imgTop").addEventListener("load", do_stuff);
-*/
+/* Easy randomizer */
+function random_me() {
+    new_random(Date.now());
+}
