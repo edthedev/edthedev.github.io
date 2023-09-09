@@ -11,6 +11,13 @@ jobs:
     steps:
         - uses: actions/checkout@v2
 
+        - name: script yo?
+          shell: bash
+          run: cat ./update_mix_json.ps1
+
+        - name: inventory mix and match  
+          shell: pwsh
+          run: ./update_mix_json.ps1
 
         - name: Setup Node
           uses: actions/setup-node@v2
@@ -19,9 +26,6 @@ jobs:
         - run: npm ci
 
 
-        - name: inventory mix and match  
-          shell: pwsh
-          run: update_mix_json.ps1
 
         - name: Build static site
           run: npx @11ty/eleventy
