@@ -13,6 +13,8 @@ const bottomImgIds = [
   "imgBottom12", "imgBottom22", "imgBottom32"
 ];
 
+
+
 async function updateMix() {
   if(get_url_seed() == null) {
     new_random(Date.now());
@@ -20,14 +22,19 @@ async function updateMix() {
   seed = get_url_seed();
   top_imgs = await get_image_list('/data/mix_top.json');
   bottom_imgs = await get_image_list('/data/mix_bottom.json');
+  alt_text = await get_image_list('/data/mix_alt.json');
 
   topImgIds.map( function update(id) {
     seed = get_random_seed(seed);
-    document.getElementById(id).src = "/img/mix/top/" + choose(top_imgs, seed);
+    next_img = choose(top_imgs, seed);
+    document.getElementById(id).src = "/img/mix/top/" + next_img;
+    document.getElementById(id).alt = alt_text[next_img];
   });
   bottomImgIds.map( function update(id) {
     seed = get_random_seed(seed);
-    document.getElementById(id).src = "/img/mix/bottom/" + choose(bottom_imgs, seed);
+    next_img = choose(bottom_imgs, seed);
+    document.getElementById(id).src = "/img/mix/bottom/" + next_img;
+    document.getElementById(id).alt = alt_text[next_img];
   });
 
 }
