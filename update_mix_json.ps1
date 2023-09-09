@@ -6,9 +6,9 @@ $names = Get-ChildItem img/mix/top | ForEach-Object { $_.PsChildName }
 $all_alt = Get-Content ./data/mix_alt.json | ConvertFrom-Json -AsHashTable
 
 $names | Sort-Object | ForEach {
-        Write-Host $_
-    if(-Not $all_alt.keys -contains $_ ) {
-        $all_alt[$_] = "TODO: Add alt text"
+    if(-Not($all_alt.keys -Contains $_)) {
+        Write-Host "Add $_"
+        $all_alt[$_] = ""
     }
 }
 
