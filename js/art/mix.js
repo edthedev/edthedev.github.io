@@ -47,7 +47,14 @@ async function updateMix() {
   });
 
   // Write an alt-text summary
-  all_alt_text = all_alt["imgTop11"] + " on " + all_alt["imgBottom11"];
+  all_alt_text = "Six marker and colored pencil sketches on 12 index note cards:\n" +
+    "\n" + all_alt["imgTop11"] + " on " + all_alt["imgBottom11"] + "." +
+    "\n" + all_alt["imgTop12"] + " on " + all_alt["imgBottom12"] + "." +
+    "\n" + all_alt["imgTop21"] + " on " + all_alt["imgBottom21"] + "." +
+    "\n" + all_alt["imgTop22"] + " on " + all_alt["imgBottom22"] + "." +
+    "\n" + all_alt["imgTop31"] + " on " + all_alt["imgBottom31"] + "." +
+    "\n" + all_alt["imgTop32"] + " on " + all_alt["imgBottom32"] + ".";
+  document.getElementById("altTextSummary").textContent = all_alt_text;
 }
 
 /* Easy randomizer */

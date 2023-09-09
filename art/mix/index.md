@@ -20,4 +20,5 @@ script: ['/js/art/share/random.js', '/js/art/mix.js']
 | <img id=imgTop31 /> | <img id=imgTop32 /> | |
 | <img id=imgBottom31 /> | <img id=imgBottom32 />  |
 
-<p id=altTextSummary></p>
+<p>Suggested ALT text if sharing a screenshot:</p>
+<pre id=altTextSummary></pre>
