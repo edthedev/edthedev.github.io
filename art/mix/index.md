@@ -9,7 +9,7 @@ script: ['/js/art/share/random.js', '/js/art/mix.js']
 </script>
 
 <button 
-  style="width: 5em; height: 3em;" onClick="random_me()">Randomize</button>
+  style="width: 20em; height: 9em;" onClick="random_me()">Randomize</button>
 
 | | | 
 |-|-|

@@ -27,12 +27,14 @@ async function updateMix() {
   bottom_imgs = await get_image_list('/data/mix_bottom.json');
   alt_text = await get_image_list('/data/mix_alt.json');
 
+  all_alt = {};
   // Set the top images
   topImgIds.map( function update(id) {
     seed = get_random_seed(seed);
     next_img = choose(top_imgs, seed);
     document.getElementById(id).src = "/img/mix/top/" + next_img;
     document.getElementById(id).alt = alt_text[next_img];
+    all_alt[id] = alt_text[next_img];
   });
 
   // Set the bottom images
@@ -41,10 +43,11 @@ async function updateMix() {
     next_img = choose(bottom_imgs, seed);
     document.getElementById(id).src = "/img/mix/bottom/" + next_img;
     document.getElementById(id).alt = alt_text[next_img];
+    all_alt[id] = alt_text[next_img];
   });
 
   // Write an alt-text summary
-
+  all_alt_text = all_alt["imgTop11"] + " on " + all_alt["imgBottom11"];
 }
 
 /* Easy randomizer */
