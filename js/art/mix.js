@@ -16,26 +16,34 @@ const bottomImgIds = [
 
 
 async function updateMix() {
+  // Setup randomization
   if(get_url_seed() == null) {
     new_random(Date.now());
   }
   seed = get_url_seed();
+
+  // Get available images and ALT text
   top_imgs = await get_image_list('/data/mix_top.json');
   bottom_imgs = await get_image_list('/data/mix_bottom.json');
   alt_text = await get_image_list('/data/mix_alt.json');
 
+  // Set the top images
   topImgIds.map( function update(id) {
     seed = get_random_seed(seed);
     next_img = choose(top_imgs, seed);
     document.getElementById(id).src = "/img/mix/top/" + next_img;
     document.getElementById(id).alt = alt_text[next_img];
   });
+
+  // Set the bottom images
   bottomImgIds.map( function update(id) {
     seed = get_random_seed(seed);
     next_img = choose(bottom_imgs, seed);
     document.getElementById(id).src = "/img/mix/bottom/" + next_img;
     document.getElementById(id).alt = alt_text[next_img];
   });
+
+  // Write an alt-text summary
 
 }
 

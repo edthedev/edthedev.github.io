@@ -19,3 +19,5 @@ script: ['/js/art/share/random.js', '/js/art/mix.js']
 | <img id=imgBottom21 /> | <img id=imgBottom22 />  |
 | <img id=imgTop31 /> | <img id=imgTop32 /> | |
 | <img id=imgBottom31 /> | <img id=imgBottom32 />  |
+
+<p id=altTextSummary></p>
