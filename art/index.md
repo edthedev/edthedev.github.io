@@ -21,7 +21,20 @@ The source code for each piece is linked, and licenced so that you can copy and 
 
 Please let me know if you enjoyed it.
 
-## Notecard Art
+
+## Mix and Match Notecards
+
+I often split my sketches across two note-cards, to create an ever-growing max-and-match card set for my children.
+
+<a href="/art/mix">
+
+![Mix and Match Card Art](/img/art/mix_latest.PNG "Mix and Match Card Art")
+
+</a>
+
+I have uploaded a [random selection of my mix-and-match cards](/art/mix) for your enjoyment.
+
+## More Notecard Art
 
 I also sketch in marker and colored pencil - mostly on Notecards.
 
