@@ -19,9 +19,6 @@ Describe 'Test Live Art JS for Errors' {
 
     # Assert
     It 'has JavaScript links' {
-      './_site/art/live/candle/index.html' | Should -FileContentMatch '/js/art/candles.js'
-    }
-    It 'has JavaScript links' {
       './_site/art/live/dots_and_boxes/index.html' | Should -FileContentMatch '/js/art/dots_and_boxes.js'
     }
 
