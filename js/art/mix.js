@@ -55,6 +55,12 @@ async function updateMix() {
     "\n" + all_alt["imgTop31"] + " on " + all_alt["imgBottom31"] + "." +
     "\n" + all_alt["imgTop32"] + " on " + all_alt["imgBottom32"] + ".";
   document.getElementById("altTextSummary").textContent = all_alt_text;
+
+  share_prefix = "\n\nMix and match notecards by Edward Delaporte\n\n";
+  share_text = window.location + encodeURIComponent(share_prefix + all_alt_text);
+  share_link_href="https://edward.delaporte.us/slides/share.html#text=" + share_text;
+  document.getElementById("share_link").href = share_link_href;
+
 }
 
 /* Easy randomizer */
