@@ -24,7 +24,7 @@ Please let me know if you enjoyed it.
 
 ## Mix and Match Notecards
 
-I often split my sketches across two note-cards, to create an ever-growing max-and-match card set for my children.
+I often split my sketches across two note-cards, to create an ever-growing mix-and-match card set for my children.
 
 <a href="/art/mix">
 
