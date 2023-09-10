@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Code
+title: Code by Edward Delaporte
 eleventyNavigation:
   key: Code
   order: 20
