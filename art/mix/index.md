@@ -1,6 +1,6 @@
 ---
 layout: liveart.multi.script.njk
-title: Mix and Match Sketches by Edward Delaporte
+title: Mix and Match Sketches by Edward Delaporte (and family)
 script: ['/js/art/share/random.js', '/js/art/mix.js']
 ---
 
