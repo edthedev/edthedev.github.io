@@ -8,7 +8,7 @@ on:
 
 jobs:
   tests_e2e:
-    name: Run end-to-end tests
+    name: Accessibility tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,4 +18,11 @@ jobs:
       - name: Install playwright browsers
         run: npx playwright install --with-deps
       - name: Run tests
-        run: npx playwright test
+        run: npx playwright test > accessibility-report.n
+      - name: Store playwright report
+        uses: actions/upload-artifact@v3
+        with:
+          name: accessibility-report
+          path: pw-report/*.html
+
+      
