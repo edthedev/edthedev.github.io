@@ -60,3 +60,9 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+
+    - name: Store report
+      uses: actions/upload-artifact@v3
+      with:
+        name: code-quality
+        path: _temp/codeql_databases/javascript.zip
