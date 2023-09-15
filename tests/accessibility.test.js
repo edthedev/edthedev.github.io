@@ -24,5 +24,5 @@ test('accessibility', async ({ page }) => {
     // do something with the error
   }
 
-  await browser.close();
+  // await browser.close();
 });
