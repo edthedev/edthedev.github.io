@@ -9,7 +9,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-navigation": "^0.3.2",
+    "@axe-core/playwright": "^4.7.3",
     "@orchidjs/eleventy-plugin-ids": "^0.1.1",
+    "@playwright/test": "^1.38.0",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.4.1",
     "slugify": "^1.6.5"
