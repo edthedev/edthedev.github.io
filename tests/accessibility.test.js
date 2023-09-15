@@ -10,7 +10,7 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle("Welcome - Edward Delaporte's Website");
 });
 
-test('accessibility', async ({ page }) => {
+test('accessibility', async ({ page }, testInfo) => {
 /* (async () => { */
   // const browser = await playwright.chromium.launch({ headless: true });
   // const context = await browser.newContext();
@@ -20,6 +20,11 @@ test('accessibility', async ({ page }) => {
   try {
     const results = await new AxeBuilder({ page }).analyze();
     console.log(results);
+    await testInfo.attach('accessibility-scan-results', {
+      body: JSON.stringify(results, null, 2),
+      contentType: 'application/json'
+    });
+    expect(results.violations).toEqual([]);
   } catch (e) {
     // do something with the error
   }
