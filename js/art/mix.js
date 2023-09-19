@@ -35,6 +35,7 @@ async function updateMix() {
     document.getElementById(id).src = "/img/mix/top/" + next_img;
     document.getElementById(id).alt = alt_text[next_img];
     all_alt[id] = alt_text[next_img];
+    top_imgs = remove_item(top_imgs, next_img);  // No repeats
   });
 
   // Set the bottom images
@@ -44,6 +45,7 @@ async function updateMix() {
     document.getElementById(id).src = "/img/mix/bottom/" + next_img;
     document.getElementById(id).alt = alt_text[next_img];
     all_alt[id] = alt_text[next_img];
+    bottom_imgs = remove_item(bottom_imgs, next_img);  // No repeats
   });
 
   // Write an alt-text summary

@@ -48,6 +48,13 @@ function fresh_color(warmth=.7, seed) {
   return color(r1*warmth,r2*warmth,r3*warmth);
 }
 
+function remove_item(choices, item) {
+  index = choices.indexOf(item);
+  if (index > -1) { 
+    choices.splice(index, 1); 
+  }
+  return choices;
+}
 
 function choose(choices, seed) {
   // Support repeatable result.
