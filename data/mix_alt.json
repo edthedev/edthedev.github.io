@@ -19,7 +19,7 @@
   "robot.classic.jpg": "a classic scifi robot body",
   "uni.wheel.jpg": "a cart riding on single wheel",
   "chicken.jpg": "a chicken body",
-  "yoyo.juggler.jpg": "a person with a ponytail doing yoyo and juggling tricks",
+  "yoyo.juggler.jpg": "A person with a ponytail doing yoyo and juggling tricks",
   "teddy.rider.jpg": "A teddy bear riding",
   "two.swans.jpg": "Two swans",
   "unicycle.racer.jpg": "a streamlined carbon fiber racing unicycle",
@@ -42,7 +42,7 @@
   "quadro.squid.jpg": "a squid body with only four tentacles",
   "big.smile.jpg": "A big smile",
   "pale.figure.carries.jpg": "the shoulders of a pale figure",
-  "reading.eye.jpg": "An alien with one eyeball",
+  "reading.eye.jpg": "An alien with one eyeball reading a book",
   "wood.wizard.jpg": "a tree trunk wearing a wizard hat and a blank expression",
   "lantern.roots.jpg": "a twisting tree root body holding a lantern",
   "bunny.pilot.jpg": "A bunny piloting a machine",
@@ -56,5 +56,8 @@
   "purple.monster.jpg": "A purple monster with many eyes",
   "two.ducks.feet.jpg": "the bodies and feet of two ducks",
   "xmas.future.jpg": "the body of the ghost of Christmas future pointing ominously",
+  "grasshopper.jpg":"A grasshopper driving a robot head",
+  "metal.head.jpg":"A menacing metal robot head",
+  "shark.head.jpg":"A shark head with open jaws",
   "minecraft.jpg": "a blocky video game sprite body"
 }
