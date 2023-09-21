@@ -8,7 +8,7 @@ $all_alt = Get-Content ./data/mix_alt.json | ConvertFrom-Json -AsHashTable
 $names = Get-ChildItem img/mix/top | ForEach-Object { $_.PsChildName }
 $names | Sort-Object | ForEach {
     if(-Not($all_alt.keys -Contains $_)) {
-        Write-Host '"' + $_ + '":"A "'
+        Write-Host '"$_":"A "'
         $all_alt[$_] = ""
     }
 }
@@ -17,7 +17,7 @@ $names | Sort-Object | ForEach {
 $names = Get-ChildItem img/mix/bottom | ForEach-Object { $_.PsChildName }
 $names | Sort-Object | ForEach {
     if(-Not($all_alt.keys -Contains $_)) {
-        Write-Host '"' + $_ + '":"A "'
+        Write-Host '"$_":"A "'
         $all_alt[$_] = ""
     }
 }
