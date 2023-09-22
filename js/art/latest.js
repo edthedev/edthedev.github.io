@@ -20,16 +20,25 @@ as long as you display this license and attribution.
 balls = [];
 
 function start_fractal() {
-  line_bit = new_line_segment();
+  line_bit = new_line_segment(color(0,0,0));
+  line_bit.length = 60;
+  line_bit.degrees = 45; 
   do_fractal(line_bit);
 }
 
 function do_fractal(bit) {
-  next = raw_line_segment(bit);
+  next = draw_line_segment(bit);
   next.length -= (next.length/2);
   next.weight = (next.weight/2);
-  next.degress += 20;
-  do_fractal(next);
+  next.degrees = next.degrees + 45;
+
+  next2 = structuredClone(next);
+  next2.degrees = next.degrees + 45;
+
+  if(next.length > 1) {
+    do_fractal(next);
+    do_fractal(next2);
+  }
 }
 
 function setup() {
@@ -38,15 +47,15 @@ function setup() {
   maxim_y = 400;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
-  background(maxim_x,maxim_y);
+  //background(maxim_x,maxim_y);
   balls = [];
   ballcount = random(1,4);
   // ballcount = 1;
 
-  make_horizon(0, 0, maxim_x, maxim_y);
-  draw_horizon(0, 0, maxim_x, maxim_y);
-  setup_season();
-  draw_ground(myCanvas, maxim_y /2);
+  //make_horizon(0, 0, maxim_x, maxim_y);
+  // draw_horizon(0, 0, maxim_x, maxim_y);
+  // setup_season();
+  // draw_ground(myCanvas, maxim_y /2);
 }
 
 function draw() {
