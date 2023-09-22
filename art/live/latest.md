@@ -1,8 +1,7 @@
 ---
 layout: liveart.multi.script.njk
-title: Grove - 2023 September 3
-script: ['/js/art/share/canvas.js', '/js/art/share/random.js', '/js/art/share/ground.js', '/js/art/share/horizon.js', '/js/art/latest.js']
+title: Latest - 2023 September 22
+script: ['/js/art/share/canvas.js', '/js/art/share/random.js', '/js/art/share/ground.js', '/js/art/share/horizon.js', '/js/art/share/draw_kit.js', '/js/art/latest.js']
 ---
 
-## Grove
 
