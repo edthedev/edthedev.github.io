@@ -21,15 +21,19 @@ balls = [];
 
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
-  line_bit.length = 60;
+  line_bit.length = 200;
   line_bit.degrees = 45; 
+  line_bit.x = 200;
+  do_fractal(line_bit);
+  line_bit.y = line_bit.y + 30;
+  line_bit.x = line_bit.x + 2;
   do_fractal(line_bit);
 }
 
 function do_fractal(bit) {
   next = draw_line_segment(bit);
-  next.length -= (next.length/2);
-  next.weight = (next.weight/2);
+  next.length = next.length*.67;
+  next.weight = next.weight*.67;
   next.degrees = next.degrees + 45;
 
   next2 = structuredClone(next);
