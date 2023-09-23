@@ -5,6 +5,8 @@ pagination:
     data: items
     size: 20
 items: 
+    - {id: "kites", name: "Kites - 2023 Sept 22", 
+    desc: "A happy fractal accident."}
     - {id: "basic", name: "BASIC - 2021 Dec 24", 
     desc: "Typesetting art often ignores the classics."}
     - {id: "laserspace", name: "Laserspace - 2021 Aug 5", desc: "Still running with the 80s carpet theme."}
