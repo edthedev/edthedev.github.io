@@ -20,18 +20,18 @@ var tree_split = random_plus_minus(30,90);
 
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
-  line_bit.y = 400;
+  line_bit.y = 300 + random_plus_minus(0, 75);
   line_bit.length = 60;
   line_bit.x = 300;
   line_bit.degrees = 270; 
   do_fractal(line_bit);
 
-  line_bit.y += random_plus_minus(20, 40);
+  line_bit.y = 300 + random_plus_minus(0, 75);
   line_bit.x += random_plus_minus(60, 120);
   tree_split = tree_split + random_plus_minus(5,30);
   do_fractal(line_bit);
 
-  line_bit.y = 400 + random_plus_minus(20, 40);
+  line_bit.y = 300 + random_plus_minus(0, 75);
   line_bit.x += random_plus_minus(60, 240);
   tree_split = tree_split + random_plus_minus(5,30);
   do_fractal(line_bit);
