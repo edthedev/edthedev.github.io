@@ -55,6 +55,7 @@ async function do_fractal(bit) {
 
 function setup() {
   // maxim = .5 * window.innderWidth;
+  rando_url();
   maxim_x = 600;
   maxim_y = 400;
   midline = maxim_y / 2;
