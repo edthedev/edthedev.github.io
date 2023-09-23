@@ -10,6 +10,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("pdf");
   eleventyConfig.addPassthroughCopy(".well-known");
   eleventyConfig.addPassthroughCopy("data");
+  eleventyConfig.addPassthroughCopy({ "img/favicon": "/" });
 
   eleventyConfig.setTemplateFormats([
     "md",
