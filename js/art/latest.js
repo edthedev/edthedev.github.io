@@ -15,9 +15,6 @@ as long as you display this license and attribution.
 
 */
 
-
-
-balls = [];
 var color_seq = [];
 
 function start_fractal() {
@@ -76,7 +73,7 @@ function setup() {
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
 
-  background(0, 100, 200);
+  background(0, 60+random(120), 85+random(120));
   start_fractal();
   console.log("setup done");
 }
