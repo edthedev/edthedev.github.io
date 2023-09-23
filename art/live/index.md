@@ -12,15 +12,10 @@ items:
     desc: "How hard can it be to write a fractal in JavaScript?"}
     - {id: "fruit_trees", name: "Fruit Trees - 2023 September 3", 
     desc: "I continue to find an interesting challenge in drawing trees."}
-    - {id: "triangles", name: "Triangles - 2021 Sep 26", 
-    desc: "In love with 80's Science Fiction"}
-    - {id: "E", name: "E - 2021 Sep 5", 
-    desc: "Playing with an extended grid index."}
     - {id: "tile", name: "Tile - 2021 Aug 27", 
     desc: "Time to start tiling."}
     - {id: "glide", name: "Glide - 2021 Aug 7", 
     desc: "I might be satisfied with how this algorithm behaves now."}
-    - {id: "sliders", name: "Sliders - 2021 July 28"}
     - {id: "weave_square", name: "Square Weave - 2021 June 29", desc: "A less complex path algorithm, simpler background and squares within squares brings this close to where I first envisioned it."}
     - {id: "dots_and_boxes", name: "Dots and Boxes - 2021 June 18", desc: "This quick tribute to 80s Pop Art is also a demonstration that I am getting a bit more comfortable controling the animation sequence. Most notably, for this piece I start and stop the animation exactly when I want to."}
     - {id: "woodlands", name: "Woodlands - 2021 June 12", desc: "The most obvious change in this piece of pixel art is that the tree growth is now visibly animated. 
@@ -40,6 +35,7 @@ My recent meditation theme has been about slowing down.
 + The sky algorithm is subtly shifted to later evening, to justify the presence of the candle.
 
 "}
+    - {id: "tree", name: "Tree - 2021 May 6", desc: "This was an interesting technical challenge to create random branching rules that feel natural. Most of the effort on the background was to give the tree a space to feel more alive."}
     - {id: "waves", name: "Waves - 2021 May 2", desc: "This is the first sketch where I felt confident enough to try a non-abstract subject."}
     - {id: "sketch1", name: "Sketch - 2021 April 18", desc: "
 
