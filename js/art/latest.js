@@ -22,12 +22,9 @@ balls = [];
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
   line_bit.length = 200;
-  line_bit.degrees = 45; 
+  line_bit.degrees = 60; 
   line_bit.x = 200;
   do_fractal(line_bit);
-  line_bit.y = line_bit.y + 30;
-  line_bit.x = line_bit.x + 2;
-  // do_fractal(line_bit);
 }
 
 async function do_fractal(bit) {
@@ -38,13 +35,10 @@ async function do_fractal(bit) {
 
   if(next_bit.length > 1) {
 
+    await do_fractal(next_bit);
     const bit2 = structuredClone(next_bit);
     bit2.degrees = add_degrees(bit.degrees, 90);
-    console.log("second-" + bit2.degrees + "-" + bit2.length);
     await do_fractal(bit2);
-
-    console.log("first " + next_bit.degrees);
-    await do_fractal(next_bit);
 
   }
 }

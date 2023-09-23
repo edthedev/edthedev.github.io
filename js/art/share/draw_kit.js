@@ -24,7 +24,6 @@ var line_segment = {
 function draw_line_segment(line_seg) {
   // fill(segment.color);
   seg = structuredClone(line_seg);
-  console.log("hist: " + seg.history);
   seg.history+=1;
   stroke(seg.color.red, seg.color.green, seg.color.blue);
   strokeWeight(seg.weight);
