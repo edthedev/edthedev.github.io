@@ -13,7 +13,8 @@ function rando_url(){
 function random_plus_minus(low, high){
   // Return a random number with a random sign
   var plus_minus = Math.random() < 0.5 ? -1 : 1;
-  return random(low, high) * plus_minus;
+  var sel_val = low + Math.random()*(high-low);
+  return sel_val * plus_minus;
 }
 
 function new_random(seed=null) {
