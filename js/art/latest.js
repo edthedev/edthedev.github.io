@@ -92,7 +92,7 @@ function draw_line_with_shadow(line_seg, color_seq) {
   ///stroke(sha_c.red, sha_c.green, sha_c.blue);
   noStroke();
   fill(sha_c);
-  swe = seg.weight*8;
+  swe = seg.weight*4;
   quad(
     seg.x,seg.y, 
     endx,endy,
