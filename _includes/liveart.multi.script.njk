@@ -35,12 +35,14 @@ script: /js/art/cross.js
 </div>
 <div class="content" role="contentinfo">
   <p>You can read the source code at 
+  <ul>
   {% for source in script %}
-      <li>
+      <li class="link_to_code">
         <a href="https://github.com/edthedev/edthedev.github.io/blob/main{{source}}">
         {{source}}</a>
       </li>
   {% endfor %}
+  </ul>
 </div>
 
 {% include "_footer.njk" %}
