@@ -10,10 +10,10 @@ items:
     desc: "How hard can it be to write a fractal in JavaScript?"}
     - {id: "fruit_trees", name: "Fruit Trees - 2023 September 3", 
     desc: "I continue to find an interesting challenge in drawing trees."}
-    - {id: "basic", name: "BASIC - 2021 Dec 24", 
-    desc: "Typesetting art often ignores the classics."}
     - {id: "triangles", name: "Triangles - 2021 Sep 26", 
     desc: "In love with 80's Science Fiction"}
+    - {id: "E", name: "E - 2021 Sep 5", 
+    desc: "Playing with an extended grid index."}
     - {id: "tile", name: "Tile - 2021 Aug 27", 
     desc: "Time to start tiling."}
     - {id: "glide", name: "Glide - 2021 Aug 7", 

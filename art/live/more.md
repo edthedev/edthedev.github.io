@@ -5,8 +5,8 @@ pagination:
     data: items
     size: 20
 items: 
-    - {id: "E", name: "E - 2021 Sep 5", 
-    desc: "Playing with an extended grid index."}
+    - {id: "basic", name: "BASIC - 2021 Dec 24", 
+    desc: "Typesetting art often ignores the classics."}
     - {id: "laserspace", name: "Laserspace - 2021 Aug 5", desc: "Still running with the 80s carpet theme."}
     - {id: "80s_carpet", name: "80s Carpet - 2021 July 29"}
     - {id: "sliders", name: "Sliders - 2021 July 28"}
