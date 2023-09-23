@@ -85,6 +85,5 @@ function draw() {
 }
 
 function mouseClicked() {
-  // background(220);
-  // spinny(mouseX, mouseY, 20)
+  new_random(get_url_seed());
 }
