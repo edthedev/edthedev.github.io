@@ -27,21 +27,25 @@ function start_fractal() {
   do_fractal(line_bit);
   line_bit.y = line_bit.y + 30;
   line_bit.x = line_bit.x + 2;
-  do_fractal(line_bit);
+  // do_fractal(line_bit);
 }
 
-function do_fractal(bit) {
-  next = draw_line_segment(bit);
-  next.length = next.length*.67;
-  next.weight = next.weight*.67;
-  next.degrees = next.degrees + 45;
+async function do_fractal(bit) {
+  const next_bit = structuredClone(draw_line_segment(bit));
+  next_bit.length = next_bit.length*.67;
+  next_bit.weight = next_bit.weight*.67;
+  next_bit.degrees = add_degrees(bit.degrees, 45);
 
-  next2 = structuredClone(next);
-  next2.degrees = next.degrees + 45;
+  if(next_bit.length > 1) {
 
-  if(next.length > 1) {
-    do_fractal(next);
-    do_fractal(next2);
+    const bit2 = structuredClone(next_bit);
+    bit2.degrees = add_degrees(bit.degrees, 90);
+    console.log("second-" + bit2.degrees + "-" + bit2.length);
+    await do_fractal(bit2);
+
+    console.log("first " + next_bit.degrees);
+    await do_fractal(next_bit);
+
   }
 }
 
@@ -60,10 +64,11 @@ function setup() {
   // draw_horizon(0, 0, maxim_x, maxim_y);
   // setup_season();
   // draw_ground(myCanvas, maxim_y /2);
+  start_fractal();
+  console.log("setup done");
 }
 
 function draw() {
-  start_fractal();
 }
 
 function mouseClicked() {
