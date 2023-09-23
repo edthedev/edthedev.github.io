@@ -84,3 +84,44 @@ function draw() {
 function mouseClicked() {
   new_random(get_url_seed());
 }
+
+function draw_line_with_kite_shadow(line_seg, color_seq) {
+
+  // prep
+  seg = structuredClone(line_seg);
+  angleRad = toRadians(seg.degrees);
+  endx = seg.x + seg.length*Math.cos(angleRad);
+  endy = seg.y + seg.length*Math.sin(angleRad);
+
+  if(line_seg.history > 0) { // skip first line
+
+  // draw shadow
+  shadow_idx = (seg.history % color_seq.length);
+  sha_c = color_seq[shadow_idx];
+  stroke(sha_c.red, sha_c.green, sha_c.blue);
+  fill(sha_c);
+  swe = seg.weight*16;
+  quad(
+    seg.x,seg.y, 
+    seg.x+swe,seg.y+swe, 
+    endx,endy,
+    endx+swe,endy+swe
+    );
+
+  // draw line
+  stroke(seg.color.red, seg.color.green, seg.color.blue);
+  strokeWeight(seg.weight);
+  line(seg.x, seg.y, endx, endy);
+
+  } else {
+    endx = seg.x;
+    endy = seg.y;
+  }
+
+  // house keeping
+  seg.history+=1;
+  next_seg = structuredClone(seg);
+  next_seg.x = endx;
+  next_seg.y = endy;
+  return next_seg;
+}
