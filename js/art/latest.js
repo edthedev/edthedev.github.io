@@ -28,11 +28,14 @@ function start_fractal() {
   line_bit.degrees = random(30, 80); 
   // roty = random(15, 170);
 
+  warmit = .8;
   color_seq = [
-    fresh_color(),
-    fresh_color(),
-    fresh_color(),
-    fresh_color(),
+    fresher_color(warmit),
+    fresher_color(warmit),
+    fresher_color(warmit),
+    fresher_color(warmit),
+    fresher_color(warmit),
+    fresher_color(warmit),
   ];
   do_fractal(line_bit);
   // line_bit.degrees += roty; 
@@ -67,20 +70,13 @@ async function do_fractal(bit) {
 
 function setup() {
   // maxim = .5 * window.innderWidth;
+  rando_url();
   maxim_x = 600;
   maxim_y = 400;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
 
-  background(41);
-  balls = [];
-  ballcount = random(1,4);
-  // ballcount = 1;
-
-  //make_horizon(0, 0, maxim_x, maxim_y);
-  // draw_horizon(0, 0, maxim_x, maxim_y);
-  // setup_season();
-  // draw_ground(myCanvas, maxim_y /2);
+  background(0, 100, 200);
   start_fractal();
   console.log("setup done");
 }

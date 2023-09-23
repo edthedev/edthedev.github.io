@@ -4,6 +4,12 @@ Reusable random functions
 
 */
 
+function rando_url(){
+  if(get_url_seed() == null) {
+    new_random(Date.now());
+  }
+}
+
 function random_plus_minus(low, high){
   // Return a random number with a random sign
   var plus_minus = Math.random() < 0.5 ? -1 : 1;
@@ -47,6 +53,24 @@ function fresh_color(warmth=.7, seed) {
   r3 = get_random_from_seed(seed*r2, 255);
   return color(r1*warmth,r2*warmth,r3*warmth);
 }
+
+
+function fresher_color(warmth=.7, seed) {
+  if(!seed) {
+    seed = get_url_seed();
+    color_shift+=1;
+    seed = seed^color_shift;
+  }
+  r1 = get_random_from_seed(seed^color_shift, 255);
+  color_shift+=random();
+  r2 = get_random_from_seed(seed^color_shift, 255);
+  color_shift+=random();
+  r3 = get_random_from_seed(seed^color_shift, 255);
+  color_shift+=random();
+  return color(r1*warmth,r2*warmth,r3*warmth);
+}
+
+
 
 function remove_item(choices, item) {
   index = choices.indexOf(item);
