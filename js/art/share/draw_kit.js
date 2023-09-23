@@ -37,13 +37,15 @@ function draw_line_segment(line_seg) {
 }
 
 
-function draw_line_with_shadow(line_seg, color_seq) {
+function draw_line_with_kite_shadow(line_seg, color_seq) {
 
   // prep
   seg = structuredClone(line_seg);
   angleRad = toRadians(seg.degrees);
   endx = seg.x + seg.length*Math.cos(angleRad);
-  endy = seg.y + seg.length*Math.sin(angleRad),
+  endy = seg.y + seg.length*Math.sin(angleRad);
+
+  if(line_seg.history > 0) { // skip first line
 
   // draw shadow
   shadow_idx = (seg.history % color_seq.length);
@@ -62,6 +64,11 @@ function draw_line_with_shadow(line_seg, color_seq) {
   stroke(seg.color.red, seg.color.green, seg.color.blue);
   strokeWeight(seg.weight);
   line(seg.x, seg.y, endx, endy);
+
+  } else {
+    endx = seg.x;
+    endy = seg.y;
+  }
 
   // house keeping
   seg.history+=1;

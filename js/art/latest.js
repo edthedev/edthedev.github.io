@@ -22,13 +22,11 @@ var color_seq = [];
 
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
-  line_bit.y = 150;
-  line_bit.length = 200;
-  // line_bit.length = 80;
-  line_bit.x = 0;
-  // line_bit.x = 300;
-  line_bit.degrees = 0; 
-  roty = random(15, 170);
+  line_bit.length = 300;
+  line_bit.x = 200;
+  line_bit.y = 0;
+  line_bit.degrees = random(30, 80); 
+  // roty = random(15, 170);
 
   color_seq = [
     fresh_color(),
@@ -37,7 +35,7 @@ function start_fractal() {
     fresh_color(),
   ];
   do_fractal(line_bit);
-  line_bit.degrees += roty; 
+  // line_bit.degrees += roty; 
   /*
   do_fractal(line_bit);
   line_bit.degrees += roty; 
@@ -51,7 +49,8 @@ function start_fractal() {
 
 async function do_fractal(bit) {
   const next_bit = structuredClone(
-    draw_line_with_shadow(bit, color_seq));
+    draw_line_with_kite_shadow(bit, color_seq));
+
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;
   next_bit.degrees = add_degrees(bit.degrees, 45);
@@ -72,7 +71,8 @@ function setup() {
   maxim_y = 400;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
-  //background(maxim_x,maxim_y);
+
+  background(41);
   balls = [];
   ballcount = random(1,4);
   // ballcount = 1;
