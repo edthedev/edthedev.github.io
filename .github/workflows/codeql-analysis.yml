@@ -65,4 +65,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: code-quality
-        path: _temp/codeql_databases/javascript.zip
+        path: /home/runner/work/_temp/codeql_databases/javascript.zip
