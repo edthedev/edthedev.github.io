@@ -20,9 +20,9 @@ var tree_split = random_plus_minus(30,90);
 
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
-  line_bit.y = 150;
+  line_bit.y = 400;
   line_bit.length = 60;
-  line_bit.x = 500;
+  line_bit.x = 300;
   line_bit.degrees = 270; 
   do_fractal(line_bit);
 
@@ -68,6 +68,10 @@ function setup() {
   maxim_y = 400;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
+  make_horizon(0,0,600,400);
+  draw_horizon(0,0,600,400);
+  setup_season();
+  draw_ground(myCanvas, maxim_y /2);
   start_fractal();
   console.log("setup done");
 }

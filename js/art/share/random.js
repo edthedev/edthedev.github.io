@@ -28,6 +28,13 @@ function get_url_seed() {
   return seed;
 }
 
+function get_random_between(low, high, seed) {
+  if(!seed) {
+    seed = get_url_seed();
+  }
+  return low + get_random_from_seed(seed, high);
+}
+
 function get_random_seed(seed=200) {
 
   rand = Math.random();

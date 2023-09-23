@@ -3,7 +3,7 @@ var leaf_green;
 
 function setup_season() {
   season = choose(["spring", "winter", "summer", "fall"]);
-  leaf_green = color(0, random(150,200), random(0,100));
+  leaf_green = color(0, get_random_between(150,200), get_random_between(0,100));
 }
 
 function draw_grass(xi,y,x_end, y_end) {
@@ -26,7 +26,7 @@ function draw_grass(xi,y,x_end, y_end) {
 
   for(x=xi;x<x_end;x+=dx){
     if(season.includes("spring")) { // random green
-      fill(color(0, random(150,200), random(0,100)));
+      fill(color(0, get_random_between(150,200), get_random_between(0,100)));
     }
     rect(x,y-random(0, 4),dx,y_end);
   }
