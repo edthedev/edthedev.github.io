@@ -61,11 +61,11 @@ function fresher_color(warmth=.7, seed) {
     color_shift+=1;
     seed = seed^color_shift;
   }
-  r1 = get_random_from_seed(seed^color_shift, 255);
+  r1 = 85 + get_random_from_seed(seed^color_shift, 170);
   color_shift+=random();
-  r2 = get_random_from_seed(seed^color_shift, 255);
+  r2 = 85 + get_random_from_seed(seed^color_shift, 170);
   color_shift+=random();
-  r3 = get_random_from_seed(seed^color_shift, 255);
+  r3 = 85 + get_random_from_seed(seed^color_shift, 170);
   color_shift+=random();
   return color(r1*warmth,r2*warmth,r3*warmth);
 }
