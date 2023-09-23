@@ -31,19 +31,10 @@ function start_fractal() {
   tree_split = tree_split + random_plus_minus(5,30);
   do_fractal(line_bit);
 
-  line_bit.y += random_plus_minus(20, 40);
-  line_bit.x += random_plus_minus(60, 120);
+  line_bit.y = 400 + random_plus_minus(20, 40);
+  line_bit.x += random_plus_minus(60, 240);
   tree_split = tree_split + random_plus_minus(5,30);
   do_fractal(line_bit);
-
-  /*
-  line_bit.degrees += roty; 
-  do_fractal(line_bit);
-  line_bit.degrees += roty; 
-  do_fractal(line_bit);
-  line_bit.degrees += roty; 
-  do_fractal(line_bit);
-  */
 }
 
 async function do_fractal(bit) {
@@ -80,6 +71,5 @@ function draw() {
 }
 
 function mouseClicked() {
-  // background(220);
-  // spinny(mouseX, mouseY, 20)
+  new_random(get_url_seed());
 }
