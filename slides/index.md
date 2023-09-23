@@ -1,9 +1,9 @@
 ---
 layout: layout.njk
-title: Presentations
+title: Slides 
 eleventyNavigation:
   key: Slides
-  title: Presentations
+  title: Slides
   order: 10
 ---
 
