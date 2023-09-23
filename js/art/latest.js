@@ -23,8 +23,10 @@ var color_seq = [];
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
   line_bit.y = 150;
-  line_bit.length = 80;
-  line_bit.x = 300;
+  line_bit.length = 200;
+  // line_bit.length = 80;
+  line_bit.x = 0;
+  // line_bit.x = 300;
   line_bit.degrees = 0; 
   roty = random(15, 170);
 
@@ -36,6 +38,7 @@ function start_fractal() {
   ];
   do_fractal(line_bit);
   line_bit.degrees += roty; 
+  /*
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
@@ -43,6 +46,7 @@ function start_fractal() {
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
+  */
 }
 
 async function do_fractal(bit) {
