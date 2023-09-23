@@ -67,9 +67,13 @@ function setup() {
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
 
+  /*
   background(0, 
     120+random_plus_minus(30,60), 
     150+random_plus_minus(30,60));
+  */
+  make_horizon(0,0,600,400);
+  draw_horizon(0,0,600,400);
   start_fractal();
   console.log("setup done");
 }
