@@ -6,6 +6,8 @@ pagination:
     size: 20
 items: 
     # - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "fractal1", name: "First Fractal  - 2023 September 22", 
+    desc: "How hard can it be to write a fractal in JavaScript?"}
     - {id: "fruit_trees", name: "Fruit Trees - 2023 September 3", 
     desc: "I continue to find an interesting challenge in drawing trees."}
     - {id: "basic", name: "BASIC - 2021 Dec 24", 
