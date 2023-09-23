@@ -18,6 +18,7 @@ as long as you display this license and attribution.
 
 
 balls = [];
+var color_seq = [];
 
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
@@ -26,6 +27,13 @@ function start_fractal() {
   line_bit.x = 300;
   line_bit.degrees = 0; 
   roty = random(15, 170);
+
+  color_seq = [
+    fresh_color(),
+    fresh_color(),
+    fresh_color(),
+    fresh_color(),
+  ];
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
@@ -38,7 +46,8 @@ function start_fractal() {
 }
 
 async function do_fractal(bit) {
-  const next_bit = structuredClone(draw_line_segment(bit));
+  const next_bit = structuredClone(
+    draw_line_with_shadow(bit, color_seq));
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;
   next_bit.degrees = add_degrees(bit.degrees, 45);
