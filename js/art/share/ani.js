@@ -3,6 +3,17 @@ let ani_stack = [];
 let ani_stack_max = 30;
 
 // Called to add a planned animation.
+// item should be a function that adds calls for it's future steps via ani_setup
+/*
+Example:
+        ani_plan( 
+          item = 
+          function() { 
+            branch(x+wi, y-ta, nle, we*4/5, wi2, ta, pulse);
+          }
+        );
+
+*/
 function ani_setup(item) {
   if(ani_stack.length < ani_stack_max) {
     ani_stack.push(item);
@@ -27,4 +38,3 @@ function ani_draw() {
     }
   }
 }
-

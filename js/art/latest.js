@@ -57,16 +57,21 @@ async function do_fractal(bit) {
 
   if(next_bit.length > 1) {
 
-    await do_fractal(next_bit);
-    const bit2 = structuredClone(next_bit);
-    bit2.degrees = add_degrees(bit.degrees, second_angle);
-    await do_fractal(bit2);
+    ani_plan( 
+        item = function() { 
+          do_fractal(next_bit);
+          const bit2 = structuredClone(next_bit);
+          bit2.degrees = add_degrees(bit.degrees, second_angle);
+          do_fractal(bit2);
+        }
+    );
 
   }
 }
 
 function setup() {
   rando_url();
+  ani_clear();
   maxim_x = 600;
   maxim_y = 500;
   midline = maxim_y / 2;
@@ -75,9 +80,11 @@ function setup() {
   console.log("setup done");
 }
 
-function draw() {
-}
-
 function mouseClicked() {
   new_random(get_url_seed());
+}
+
+
+function draw() {
+  ani_draw();
 }
