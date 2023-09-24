@@ -11,8 +11,8 @@ I often give presentations on technical topics.
 
 In 2016, I began collecting the slide decks here.
 
-- 'Nuts and Bolts' talk on Robot Framework
-- 'Nuts and Bolts' (Identity and Privacy and Cybersecurity talk series) talk on Hoppscotch.io
+- ['Nuts and Bolts'][46] talk on Robot Framework
+- ['Nuts and Bolts'][46] (Identity and Privacy and Cybersecurity talk series) talk on Hoppscotch.io
 - [IT Pro Forum 2022 Fall - Cybersecurity Year in Review](https://www.itproforum.illinois.edu/archives/fall_2022_conference)
 - [Web Application Scanning - August 2022](/slides/WebApplicationScanning2022.pptx)
 - [Ensemble Programming - May 2022](/slides/ensemble)
@@ -43,3 +43,5 @@ In 2016, I began collecting the slide decks here.
 - Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
 - Presented at University of Illinois Webmaster's Conference 2016
 -->
+
+[46]: https://cybersecurity.illinois.edu/nuts-and-bolts-talks/
