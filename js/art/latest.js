@@ -37,11 +37,20 @@ function start_fractal() {
   do_fractal(line_bit);
 }
 
-var first_angle = 50;
-var second_angle = -85;
+var first_angle = 60;
+var second_angle = -120;
 
 async function do_fractal(bit) {
   const next_bit = structuredClone(draw_line_segment(bit));
+
+  // extra line
+  /*
+  bit.length = bit.length * .67;
+  bit.x += bit.weight * 5;
+  bit.y += bit.weight * 5;
+  draw_line_segment(bit);
+  */
+
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;
   next_bit.degrees = add_degrees(bit.degrees, first_angle);
