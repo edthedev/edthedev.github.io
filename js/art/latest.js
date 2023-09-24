@@ -16,53 +16,52 @@ as long as you display this license and attribution.
 */
 
 
-var tree_split = random_plus_minus(30,90);
+
+balls = [];
 
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
-  line_bit.y = 300 + random_plus_minus(0, 75);
-  line_bit.x = 200 + random_plus_minus(0,100);
-  line_bit.length = 60;
-  line_bit.degrees = 270; 
+  line_bit.y = 250;
+  line_bit.length = 80;
+  line_bit.x = 300;
+  line_bit.degrees = 0; 
+  roty = random(15, 170);
   do_fractal(line_bit);
-
-  line_bit.y = 300 + random_plus_minus(0, 75);
-  line_bit.x = 300 + random_plus_minus(0,100);
-  tree_split = tree_split + random_plus_minus(5,30);
+  line_bit.degrees += roty; 
   do_fractal(line_bit);
-
-  line_bit.y = 300 + random_plus_minus(0, 75);
-  line_bit.x = 500 + random_plus_minus(0,50);
-  tree_split = tree_split + random_plus_minus(5,30);
+  line_bit.degrees += roty; 
+  do_fractal(line_bit);
+  line_bit.degrees += roty; 
+  do_fractal(line_bit);
+  line_bit.degrees += roty; 
   do_fractal(line_bit);
 }
+
+var first_angle = 50;
+var second_angle = -85;
 
 async function do_fractal(bit) {
   const next_bit = structuredClone(draw_line_segment(bit));
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;
-  next_bit.degrees = add_degrees(bit.degrees, tree_split);
+  next_bit.degrees = add_degrees(bit.degrees, first_angle);
 
   if(next_bit.length > 1) {
 
     await do_fractal(next_bit);
     const bit2 = structuredClone(next_bit);
-    bit2.degrees = add_degrees(bit.degrees, -33);
+    bit2.degrees = add_degrees(bit.degrees, second_angle);
     await do_fractal(bit2);
 
   }
 }
 
 function setup() {
-  // maxim = .5 * window.innderWidth;
+  rando_url();
   maxim_x = 600;
-  maxim_y = 400;
+  maxim_y = 500;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
-  make_horizon(0,0,600,400);
-  draw_horizon(0,0,600,400);
-  setup_season();
-  draw_ground(myCanvas, maxim_y /2);
   start_fractal();
   console.log("setup done");
 }
