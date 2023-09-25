@@ -23,7 +23,6 @@ balls = [];
 
 function start_fractal(color_seq) {
   line_bit = new_line_segment(color_seq);
-  console.log("color?" + line_bit.color);
   line_bit.y = 250;
   line_bit.length = 80;
   line_bit.x = 300;
@@ -87,10 +86,9 @@ function setup() {
   ani_clear();
 
   color_seq = [
-    color(0,0,0),
-    color(255,160,0),
-    color(0,160,255),
-    color(0,255,160),
+    color(0,60,60),
+    color(0,120,90),
+    color(0,get_random_between(200, 255),160),
   ];
 
   second_angle = random_plus_minus(30, 140);
