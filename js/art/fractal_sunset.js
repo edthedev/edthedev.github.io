@@ -18,7 +18,8 @@ as long as you display this license and attribution.
 var color_seq = [];
 
 function start_fractal() {
-  line_bit = new_line_segment(color(0,0,0));
+  stroke(0,0,0);
+  line_bit = new_line_segment([color(0,0,0)]);
   line_bit.length = 100;
   line_bit.x = 300;
   line_bit.y = 200;
