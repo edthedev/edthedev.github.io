@@ -18,8 +18,8 @@ as long as you display this license and attribution.
 
 var tree_split = random_plus_minus(30,90);
 
-function start_fractal() {
-  line_bit = new_line_segment(color(0,0,0));
+function start_fractal(tree_color) {
+  line_bit = new_line_segment([tree_color]);
   line_bit.y = 300 + random_plus_minus(0, 75);
   line_bit.x = 200 + random_plus_minus(0,75);
   line_bit.length = 90;
@@ -64,7 +64,8 @@ function setup() {
   draw_horizon(0,0,600,400);
   setup_season();
   draw_ground(myCanvas, maxim_y /2);
-  start_fractal();
+  stroke(color(0,0,0));
+  start_fractal(color(0,0,0));
   console.log("setup done");
 }
 

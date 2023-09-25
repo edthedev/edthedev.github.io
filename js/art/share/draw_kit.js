@@ -19,12 +19,14 @@ var line_segment = {
   degrees: 0,
   length: 20,
   history: 0,
+  color: null,
+  color_seq: [],
 };
 
 function draw_line_segment(line_seg) {
   seg = structuredClone(line_seg);
   seg.history+=1;
-  stroke(seg.color.red, seg.color.green, seg.color.blue);
+  // stroke(seg.color.red, seg.color.green, seg.color.blue);
   strokeWeight(seg.weight);
   angleRad = toRadians(seg.degrees);
   endx = seg.x + seg.length*Math.cos(angleRad);
@@ -79,8 +81,9 @@ function draw_line_with_kite_shadow(line_seg, color_seq) {
 }
 
 
-function new_line_segment(color) {
+function new_line_segment(color_seq) {
   seg = structuredClone(line_segment);
-  seg.color = color;
+  seg.color_seq = color_seq;
+  seg.color = seg.color_seq[0];
   return seg;
 }
