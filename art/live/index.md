@@ -6,6 +6,7 @@ pagination:
     size: 20
 items: 
     # - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "fractal_leaves", name: "Fractal Leaves - 2023 September 24", desc: "Animating fractals is fun."}
     - {id: "fractal_triangles", name: "Fractal Triangles - 2023 September 24", desc: "Triangles are cool."}
     - {id: "fractal_trees", name: "Fractal Trees at Sunset - 2023 September 23", desc: "Trees again. This time with mostly unrandomized fractals."}
     - {id: "fractal_sunset", name: "A Fractal at Sunset - 2023 September 22", 
