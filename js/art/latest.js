@@ -31,14 +31,16 @@ function start_fractal() {
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
+  /*
   line_bit.degrees += roty; 
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
+  */
 }
 
 var first_angle = 60;
-var second_angle = -120;
+var second_angle = random_plus_minus(30, 140);
 
 async function do_fractal(bit) {
   const next_bit = structuredClone(draw_line_segment(bit));
@@ -55,14 +57,17 @@ async function do_fractal(bit) {
   next_bit.weight = next_bit.weight*.67;
   next_bit.degrees = add_degrees(bit.degrees, first_angle);
 
-  if(next_bit.length > 1) {
+  if(next_bit.length > 4) {
 
-    ani_plan( 
+    ani_setup( 
         item = function() { 
           do_fractal(next_bit);
           const bit2 = structuredClone(next_bit);
           bit2.degrees = add_degrees(bit.degrees, second_angle);
           do_fractal(bit2);
+          const bit3 = structuredClone(next_bit);
+          bit3.degrees = add_degrees(bit.degrees, second_angle*2);
+          do_fractal(bit3);
         }
     );
 
@@ -72,6 +77,7 @@ async function do_fractal(bit) {
 function setup() {
   rando_url();
   ani_clear();
+  second_angle = random_plus_minus(30, 140);
   maxim_x = 600;
   maxim_y = 500;
   midline = maxim_y / 2;
