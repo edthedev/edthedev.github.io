@@ -23,15 +23,17 @@ var line_segment = {
   color_seq: [],
 };
 
-function draw_line_segment(line_seg) {
+function draw_line_segment(line_seg, hide=0) {
   seg = structuredClone(line_seg);
   seg.history+=1;
   // stroke(seg.color.red, seg.color.green, seg.color.blue);
   strokeWeight(seg.weight);
   angleRad = toRadians(seg.degrees);
   endx = seg.x + seg.length*Math.cos(angleRad);
-  endy = seg.y + seg.length*Math.sin(angleRad),
-  line(seg.x, seg.y, endx, endy);
+  endy = seg.y + seg.length*Math.sin(angleRad);
+  if(hide==0) {
+    line(seg.x, seg.y, endx, endy);
+  }
   next_seg = structuredClone(seg);
   next_seg.x = endx;
   next_seg.y = endy;
