@@ -22,23 +22,22 @@ function start_fractal(color_seq) {
   line_bit.y = 250;
   line_bit.length = 90;
   line_bit.x = 300;
-  line_bit.degrees = 90; 
-  // diffx = random(15, 50);
-  // diffy = random(15, 50)
-  // line_bit.x += diffx;
-  // line_bit.y += diffy;
+  line_bit.degrees = 0; 
+  roty = 52;
   do_fractal(line_bit);
-  /*
-  line_bit.x += diffx;
-  line_bit.y += diffy;
+  line_bit.degrees+=roty;
   do_fractal(line_bit);
-  */
-  // do_fractal(line_bit);
+  line_bit.degrees+=roty;
+  do_fractal(line_bit);
+  line_bit.degrees+=roty;
+  do_fractal(line_bit);
+  line_bit.degrees+=roty;
+  do_fractal(line_bit);
 }
 
-var first_angle = random_plus_minus(30, 60);
+var first_angle = get_random_between(30, 120);
 console.log("1:" + first_angle);
-var second_angle = first_angle + get_random_between(45, 90);
+var second_angle = get_random_between(45, 60);
 console.log("2:" + second_angle);
 
 async function do_fractal(bit) {
@@ -60,6 +59,9 @@ async function do_fractal(bit) {
     hide=1;
   }
   const next_bit = structuredClone(draw_line_segment(bit, hide));
+  for(i=3; i<5; i+=bit.weight*2){
+    draw_line_cross(bit, i, i, hide);
+  }
 
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;

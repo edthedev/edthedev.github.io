@@ -40,6 +40,26 @@ function draw_line_segment(line_seg, hide=0) {
   return next_seg;
 }
 
+function draw_line_cross(line_seg, dx, dy, hide=0) {
+  seg = structuredClone(line_seg);
+  seg.history+=1;
+  strokeWeight(seg.weight);
+  angleRad = toRadians(seg.degrees + 90);
+  endx = seg.x + .5*seg.length*Math.cos(angleRad);
+  endy = seg.y + .5*seg.length*Math.sin(angleRad);
+  startx = seg.x - .5*seg.length*Math.cos(angleRad);
+  starty = seg.y - .5*seg.length*Math.sin(angleRad);
+  if(hide==0) line(startx+dx, starty+dy, 
+    endx+dx, endy+dy);
+  /*
+  next_seg = structuredClone(seg);
+  next_seg.x = endx;
+  next_seg.y = endy;
+  return next_seg;
+  */
+}
+
+
 
 function draw_line_with_kite_shadow(line_seg, color_seq) {
 
