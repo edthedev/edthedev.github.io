@@ -42,7 +42,7 @@
   - name: create apex ACL file
     template:
       dest: /tmp/{{s3bucket}}.acl.json
-      src: files/www.public_s3.j2
+      src: files/public_s3.j2
   - name: Clear access controls apex
     shell:
       aws s3api put-bucket-policy --bucket '{{s3bucket}}' --policy 'file:///tmp/{{s3bucket}}.acl.json'
