@@ -2,15 +2,16 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 module.exports = eleventyConfig => {
 
   // Static content
-  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("css");  // Static files
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("slides");
-  eleventyConfig.addPassthroughCopy("art/live");
-  eleventyConfig.addPassthroughCopy("pdf");
-  eleventyConfig.addPassthroughCopy(".well-known");
-  eleventyConfig.addPassthroughCopy("data");
-  eleventyConfig.addPassthroughCopy({ "img/favicon": "/" });
+  eleventyConfig.addPassthroughCopy("slides");  // My slide decks
+  eleventyConfig.addPassthroughCopy("art/live");  // JavaScript
+  eleventyConfig.addPassthroughCopy("pdf");   // My Resume as a PDF file
+  eleventyConfig.addPassthroughCopy(".well-known");  // security.txt
+  eleventyConfig.addPassthroughCopy("data"); //  .json files
+  eleventyConfig.addPassthroughCopy("examples"); //  example files
+  eleventyConfig.addPassthroughCopy({ "img/favicon": "/" });  // Please Firefox, I provided the file, okay? Stop warning me.
 
   eleventyConfig.setTemplateFormats([
     "md",
