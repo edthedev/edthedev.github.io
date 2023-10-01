@@ -89,3 +89,5 @@ ansible-playbook -e "s3bucket=edthe.dev" s3site_4_create_iam_group.yml
 ```yaml
 {% include 'examples/ansible/s3site_4_create_iam_groups.yml' %}
 ```
+
+See also [more S3 notesl](/blog/s3/more_s3_notes).
