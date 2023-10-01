@@ -20,6 +20,6 @@ Here's the Ansible Playbook:
 
 And here's the AWS Policy File Jinja2 template:
 
-```
+```json
 {% include 'ansible/iam.dns.j2' %}
 ```
