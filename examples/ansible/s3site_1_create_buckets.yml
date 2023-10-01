@@ -37,17 +37,3 @@
       name: 'logs.{{s3bucket}}'
       state: present
       versioning: no
-  - name: setup logging
-    community.aws.s3_logging:
-      name: '{{s3bucket}}'
-      state: present
-      target_bucket: 'logs.{{s3bucket}}'
-      target_prefix: 'logs/'
-  - name: log cleanup 
-    community.aws.s3_lifecycle:
-      name: 'log.s{{s3bucket}}'
-      transition_days: 7
-      expiration_days: 90
-      prefix: logs/
-      status: enabled
-      state: present
