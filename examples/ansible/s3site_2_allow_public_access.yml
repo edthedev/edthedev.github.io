@@ -1,0 +1,21 @@
+---
+- name: Set up static site buckets on AWS as static s3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: create www. ACL file
+    template:
+      dest: /tmp/www.{{s3bucket}}.acl.json
+      src: files/www.public_s3.j2
+  - name: Clear www. access controls
+    shell:
+      aws s3api put-bucket-policy --bucket 'www.{{s3bucket}}' --policy 'file:///tmp/www.{{s3bucket}}.acl.json'
+  - name: create apex ACL file
+    template:
+      dest: /tmp/{{s3bucket}}.acl.json
+      src: files/public_s3.j2
+  - name: Clear apex access controls
+    shell:
+      aws s3api put-bucket-policy --bucket '{{s3bucket}}' --policy 'file:///tmp/{{s3bucket}}.acl.json'
