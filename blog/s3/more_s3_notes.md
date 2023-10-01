@@ -49,6 +49,6 @@ Then I did a bunch of non-repetivite stuff manually in  the AWS Web Console:
     edthe.dev	A	Simple	-	2ndbunchofletters.cloudfront.net.
 ```
 
-Now my site exists, but I still need [a way to modify my AWS S3 Bucket contents](/code/iam/).
+Now my site exists, but I still need [a way to modify my AWS S3 Bucket contents](/blog/s3/).
 
 When it was time to set this up a second time for the domain I share with my spouse, I decided it would be wise to [delegate access to manage AWS Route 53 DNS](/code/iam.dns/) to my spouse.
