@@ -15,11 +15,11 @@
       name: 'www.{{s3bucket}}'
       state: present
       suffix: index.html
-      error_key: errors/404.html
+      error_key: 404.html
   - name: Add pages
     community.aws.s3_sync:
       bucket: 'www.{{s3bucket}}'
-      file_root: 'files/{{s3bucket}}'
+      file_root: 'files/www'
     tags:
       - debug
   - name: Create empty apex redirect bucket

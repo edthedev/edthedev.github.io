@@ -46,7 +46,11 @@ This command will enable public access to the `www.` and apex S3 buckets.
 ansible-playbook -e "s3bucket=edthe.dev" s3site_2_allow_public_access.yml
 ```
 
+### Verify public access
+
 You can verify this worked by visiting the URL you under `Bucket website hosting` in the `www.` bucket.Find in under `Properties -> Static website hosting`.
+
+If you get a `404 Not Found`, double check that you provided an `index.html` file, and a `errors/404.html` file.
 
 ## Logging
 
