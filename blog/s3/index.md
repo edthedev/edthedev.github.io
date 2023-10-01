@@ -90,4 +90,6 @@ ansible-playbook -e "s3bucket=edthe.dev" s3site_4_create_iam_group.yml
 {% include 'examples/ansible/s3site_4_create_iam_group.yml' %}
 ```
 
-See also [more S3 notesl](/blog/s3/more_s3_notes).
+## Setup DNS
+
+Next up, [setup DNS for a static website on S3](/blog/s3/dns/).
