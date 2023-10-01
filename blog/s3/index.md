@@ -54,3 +54,13 @@ If you get a `404 Not Found`, double check that you provided an `index.html` fil
 
 ## Logging
 
+Now we use the AWS console again to enable controlling the logs bucket with Ansible. 
+
+In `logs.` find `Edit Object Ownership` and set it to `ACLs Enabled`.
+This is probably some kind of legacy thing, but this whole process is already a pain, and we are not building an enterprise here.
+
+Now run the next playbook:
+
+```bash
+ansible-playbook -e "s3bucket=edthe.dev" s3site_3_add_logging.yml
+```
