@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: Create a MicroSite on AWS S3 - Edward.Delaporte.us
+title: Create a MicroSite on AWS S3
 eleventyNavigation:
   key: Blog 
   order: 80
