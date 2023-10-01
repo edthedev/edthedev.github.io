@@ -19,7 +19,8 @@ This is going to create `www.`, `logs.` and apex domain S3 buckets.
 > Do I have to have the `www.`? Yes.
 
 ```bash
-ansible-playbook -e "s3bucket=edthe.dev" s3site_1_create_buckets.yml
+SITE=edthe.dev
+ansible-playbook -e "s3bucket=$SITE" s3site_1_create_buckets.yml
 ```
 
 ```yaml
@@ -35,7 +36,7 @@ Now go do a manual change, because security teams say we cannot have nice things
 Once that is done, this command (which will otherwise fail in the next playbook) should succeed.
 
 ```bash
-aws s3api put-bucket-policy --bucket 'www.edthe.dev' --policy 'file:///tmp/www.edthe.dev.acl.json'
+aws s3api put-bucket-policy --bucket "www.$SITE" --policy 'file:///tmp/www.edthe.dev.acl.json'
 ```
 
 ## Enable public access 
@@ -43,7 +44,7 @@ aws s3api put-bucket-policy --bucket 'www.edthe.dev' --policy 'file:///tmp/www.e
 This command will enable public access to the `www.` and apex S3 buckets.
 
 ```bash
-ansible-playbook -e "s3bucket=edthe.dev" s3site_2_allow_public_access.yml
+ansible-playbook -e "s3bucket=$SITE" s3site_2_allow_public_access.yml
 ```
 
 ```yaml
@@ -66,7 +67,7 @@ This is probably some kind of legacy thing, but this whole process is already a 
 Now run the next playbook:
 
 ```bash
-ansible-playbook -e "s3bucket=edthe.dev" s3site_3_add_logging.yml
+ansible-playbook -e "s3bucket=$SITE" s3site_3_add_logging.yml
 ```
 
 ```yaml
@@ -83,7 +84,7 @@ It will also grant members of the IAM group the ability to generate their own ac
 You will add your existing IAM user to this group manually as a final step.
 
 ```bash
-ansible-playbook -e "s3bucket=edthe.dev" s3site_4_create_iam_group.yml
+ansible-playbook -e "s3bucket=$SITE" s3site_4_create_iam_group.yml
 ```
 
 ```yaml
