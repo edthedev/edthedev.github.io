@@ -64,3 +64,15 @@ Now run the next playbook:
 ```bash
 ansible-playbook -e "s3bucket=edthe.dev" s3site_3_add_logging.yml
 ```
+
+## Allow your IAM users to update the S3 bucket
+
+This step will create an IAM group that grants access to modify the contents of your new shiny `www.` S3 bucket. 
+
+It will also grant members of the IAM group the ability to generate their own access keys, which they need if they are going to use a program like VSCode to maintain the files in the S3 bucket.
+
+You will add your existing IAM user to this group manually as a final step.
+
+```bash
+ansible-playbook -e "s3bucket=edthe.dev" s3site_4_create_iam_group.yml
+```

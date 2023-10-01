@@ -8,7 +8,7 @@
   - name: create IAM policy file
     template:
       dest: '/tmp/iam_edit_s3_{{ s3bucket }}.json'
-      src: ../files/iam_edit_s3.j2
+      src: files/iam_edit_s3.j2
   - name: create IAM group
     community.aws.iam_group:
       name: 'edit_{{ s3bucket }}'
@@ -21,7 +21,7 @@
       policy_name: 'policy-edit-{{ s3bucket }}'
       state: present
       policy_document: '/tmp/iam_edit_s3_{{ s3bucket }}.json'
-  - name: group allowed to manage own access keys
+  - name: allow this group to manage own access keys
     community.aws.iam_group:
       name: 'self_manage_acces_keys'
       state: present
@@ -32,4 +32,4 @@
       iam_type: group
       policy_name: 'policy-manage-access-keys'
       state: present
-      policy_document: '../files/iam.allow.accesskeys.json'
+      policy_document: 'files/iam.allow.accesskeys.json'
