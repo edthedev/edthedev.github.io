@@ -1,9 +1,6 @@
 ---
 layout: blog.njk
 title: Create a MicroSite on AWS S3
-eleventyNavigation:
-  key: Blog 
-  order: 80
 ---
 
 How to setup a micro-site on AWS S3 with custom DNS.
@@ -33,11 +30,11 @@ Now go do a manual change, because security teams say we cannot have nice things
 
 > In the new `www.` bucket, and the apex domain bucket, find and uncheck 'Block *all* public access'.
 
-Once that is done, this command (which will otherwise fail in the next playbook) should succeed.
+> Once that is done, this command (which will otherwise fail in the next playbook) should succeed.
 
-```bash
-aws s3api put-bucket-policy --bucket "www.$SITE" --policy 'file:///tmp/www.edthe.dev.acl.json'
-```
+  ```bash
+  aws s3api put-bucket-policy --bucket "www.$SITE" --policy "file:///tmp/www.$SITE.acl.json"
+  ```
 
 ## Enable public access 
 
