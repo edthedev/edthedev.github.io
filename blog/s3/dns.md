@@ -1,9 +1,7 @@
 ---
 layout: blog.njk
 title: DNS for a static website on AWS S3
-eleventyNavigation:
-  key: Blog 
-  order: 80
+tags: ['blog', 'rss']
 ---
 
 ## Setup S3 Buckets

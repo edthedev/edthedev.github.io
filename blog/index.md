@@ -1,5 +1,5 @@
 ---
-layout: blog.njk
+layout: blog_index.njk
 title: Blog - Edward.Delaporte.us
 eleventyNavigation:
   key: Blog 

@@ -44,6 +44,19 @@ h2 {
   <h1> {{ title }} </h1>
 
   {{ content | safe }}
+
+  <!-- List blog pages. -->
+  <nav class="more_nav" role="navigation">
+  <h2>Blog Topics</h2>
+  {%- for item in pagination.items %}
+
+  <li> <a href="{{item.id}}"> {{ item.name }} </a></li>
+
+  {% endfor -%}
+  <li><a href="/feed.xml">RSS Feed</a></li>
+  </nav>
+
+
 </div>
 {% include "_footer.njk" %}
 </html>

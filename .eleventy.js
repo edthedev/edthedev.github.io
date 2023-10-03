@@ -1,4 +1,5 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = eleventyConfig => {
 
   // Static content
@@ -25,6 +26,10 @@ module.exports = eleventyConfig => {
 
   // Navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  // RSS
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
+  eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822);
 
   // In page Nav Anchors
 
