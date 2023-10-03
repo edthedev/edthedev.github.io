@@ -7,7 +7,9 @@
   tasks:
   - name: Create S3 bucket
     amazon.aws.s3_bucket:
-      name: 'www.{{s3bucket}}'
+  # {% raw %}
+      name: 'www.{% raw %}{{s3bucket}}{% endraw %}'
+  # {% endraw %}
       state: present
       versioning: yes
   - name: Setup S3 Bucket as website
