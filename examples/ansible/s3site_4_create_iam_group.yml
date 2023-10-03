@@ -1,3 +1,4 @@
+# {% raw %}
 ---
 - name: Set up IAM user groups
   hosts: localhost
@@ -33,3 +34,4 @@
       policy_name: 'policy-manage-access-keys'
       state: present
       policy_document: 'files/iam.allow.accesskeys.json'
+# {% endraw %}

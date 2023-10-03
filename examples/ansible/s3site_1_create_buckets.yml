@@ -1,3 +1,4 @@
+# {% raw %}
 ---
 - name: Set up static site buckets on AWS as static s3 bucket
   hosts: localhost
@@ -7,9 +8,7 @@
   tasks:
   - name: Create S3 bucket
     amazon.aws.s3_bucket:
-  # {% raw %}
-      name: 'www.{% raw %}{{s3bucket}}{% endraw %}'
-  # {% endraw %}
+      name: 'www.{{s3bucket}}'
       state: present
       versioning: yes
   - name: Setup S3 Bucket as website
@@ -39,3 +38,4 @@
       name: 'logs.{{s3bucket}}'
       state: present
       versioning: no
+  # {% endraw %}

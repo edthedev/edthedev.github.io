@@ -1,3 +1,4 @@
+# {% raw %}
 ---
 - name: Set up static site buckets on AWS as static s3 bucket
   hosts: localhost
@@ -19,3 +20,4 @@
   - name: Clear apex access controls
     shell:
       aws s3api put-bucket-policy --bucket '{{s3bucket}}' --policy 'file:///tmp/{{s3bucket}}.acl.json'
+  # {% endraw %}
