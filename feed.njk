@@ -3,13 +3,12 @@
   "permalink": "feed.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "Microsites on AWS S3",
+    "title": "Edward Delaporte's Blog",
     "subtitle": "",
     "language": "en",
     "url": "https://edward.delaporte.us",
     "author": {
-      "name": "Edward Delaporte",
-      "email": ""
+      "name": "Edward Delaporte"
     }
   }
 }
@@ -24,7 +23,6 @@
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
   </author>
   {%- for post in collections.blog | reverse %}
   {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
