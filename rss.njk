@@ -3,13 +3,12 @@
   "permalink": "rss.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "My Blog about Boats",
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "title": "My Blog",
+    "subtitle": "",
     "language": "en",
-    "url": "https://example.com/",
+    "url": "https://edward.delporte.us/",
     "author": {
-      "name": "Boaty McBoatFace",
-      "email": "me@example.com"
+      "name": "Edward Delaporte"
     }
   }
 }
@@ -19,7 +18,6 @@
   <channel>
     <title>{{ metadata.title }}</title>
     <link>{{ metadata.url }}</link>
-    <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
     <description>{{ metadata.subtitle }}</description>
     <language>{{ metadata.language }}</language>
     {%- for post in collections.rss | reverse %}
@@ -27,9 +25,8 @@
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      <description>{{ post.data.title | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-      <dc:creator>{{ metadata.author.name }}</dc:creator>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
     {%- endfor %}
