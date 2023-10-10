@@ -1,17 +1,13 @@
 /* 
-Check these with the color contrast checker:
-https://www.accessibilitychecker.org/color-contrast-checker/
+
+Page Styles
+
 */
 
-:root {
-  /* Backgrounds */
-  --main-bg-color: #181818;
-  --code-bg-color: #222222;
-
-  /* Foregrounds */
-  --main-text-color: #bbbbbb;
-  --link-text-color: #22A7F0;
-  --visited-link-color: #7462E0;
+@media print{
+  nav {
+    display: none;
+  }
 }
 
 body
@@ -19,19 +15,9 @@ body
 	/* font-family: 'times new roman', times, serif; */
   font-family: monospace;
 	font-size:2vw;
-  color: var(--main-text-color);
-	background-color: var(--main-bg-color) !important;
-  margin: 0em;
+	background-color: #EEE !important;
+        margin: 0em;
 }
-
-a {
-  color: var(--link-text-color);
-}
-a:visited {
-  color: var(--visited-link-color);
-}
-
-
 
 canvas{
     padding-top: 3em;
@@ -135,10 +121,10 @@ img {
 /* Code Block Defaults */
 
 pre {
-    background-color: var(--code-bg-color);
+    background-color: lightgray;
 }
 code {
-    background-color: var(--code-bg-color);
+    background-color: lightgray;
 }
 
 .content {
