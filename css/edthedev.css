@@ -14,14 +14,32 @@ given 002255 - row two is my favorite
 | Code | dark grey #757990 | Black |
 | Code | light grey a7aaba | Black |
 
+
+
 */
+
+:root {
+  --main-bg-color: #01084e;
+  --main-text-color: white;
+  --link-text-color: #22A7F0;
+  --visited-link-color: #7462E0;
+}
+
 body
 {
 	/* font-family: 'times new roman', times, serif; */
   font-family: monospace;
 	font-size:2vw;
-	background-color: #EEE !important;
-        margin: 0em;
+  color: var(--main-text-color);
+	background-color: var(--main-bg-color) !important;
+  margin: 0em;
+}
+
+a {
+  color: var(--link-text-color);
+}
+a:visited {
+  color: var(--visited-link-color);
 }
 
 
