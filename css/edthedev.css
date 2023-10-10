@@ -1,26 +1,15 @@
 /* 
-
-Page Styles
-
-#002255
-
-https://venngage.com/tools/accessible-color-palette-generator
-given 002255 - row two is my favorite
-
-| Purpose | Background | Foreground |
-|-|-|-|
-| Nav Background | darker blue - 091532 | White |
-| Page Background | dark blue - #071b43 | White |
-| Code | dark grey #757990 | Black |
-| Code | light grey a7aaba | Black |
-
-
-
+Check these with the color contrast checker:
+https://www.accessibilitychecker.org/color-contrast-checker/
 */
 
 :root {
-  --main-bg-color: #01084e;
-  --main-text-color: white;
+  /* Backgrounds */
+  --main-bg-color: #181818;
+  --code-bg-color: #222222;
+
+  /* Foregrounds */
+  --main-text-color: #bbbbbb;
   --link-text-color: #22A7F0;
   --visited-link-color: #7462E0;
 }
@@ -146,10 +135,10 @@ img {
 /* Code Block Defaults */
 
 pre {
-    background-color: lightgray;
+    background-color: var(--code-bg-color);
 }
 code {
-    background-color: lightgray;
+    background-color: var(--code-bg-color);
 }
 
 .content {
