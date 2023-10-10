@@ -8,7 +8,7 @@ tags: ['blog', 'rss']
 
 First I had to [setup static website s3 buckets](/blog/s3/).
 
-Anywhere you see `edthe.dev` and `www.edthe.dev`, substitute your own domain name i.e. `yourdomainname.com` and `www.yourdomainname.com`.
+Anywhere you see `edthe.dev` and `www.edthe.dev`, substitute your own apex domain name (i.e. `yourdomainname.com`) and your `www.` subdomain (i.e. `www.yourdomainname.com`).
 
 ## Serve a static website from an S3 Bucket
 
@@ -34,7 +34,16 @@ Do a bunch of non-repetivite stuff manually in  the AWS Web Console:
     > Tip: Do not remove the certificate ownership DNS records. I have heard it is helpful to still have when the SSL Certificate needs renewed.
 
 1. Create 2 CloudFront instances, one for `edthe.dev` and one for `www.edthe.dev`.
-1. Be sure to assign each CloudFront instance the appropriate `alternate domain` i.e. `www.edthe.dev`.
+
+    - Select `edthe.dev` or `www.edthe.dev` for the `Origin Domain`. You will do this twice, once for each of your apex domain, and your `www.` sub-domain.
+    - Leave any option not mentioned here with the default values.
+    - Under `Viewer Protocol Policy`, select `Redirect HTTP to HTTPS`.
+    - Under `Web Application Firewall (WAF)` choose `Do not enable security protections`. A static website is immune to the attacks that a WAF protects against.
+    - Be sure to assign each CloudFront instance the appropriate `alternate domain name (CNAME)` i.e. `www.edthe.dev`.
+    > Tip: `alternate domain` is incredibly hard to find, but critical. Scroll back and forth up the page until you find it.
+    - Under `Custom SSL Cetificate - optional`, choose the SSL Certificate you requested earlier. It should be the only option in the list.
+    > Tip: If your SSL Certificate is not yet available, double check the steps above, and then just take a 20 minute coffee break.
+
 1. Assign each CloudFront instance the SSL Certificate.
 1. Add A and AAAA records for `www.edthe.dev` pointing to the `www.edthe.dev` CloudFront distribution.
 
