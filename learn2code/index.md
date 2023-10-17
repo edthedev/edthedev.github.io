@@ -50,6 +50,7 @@ Let me know if you enjoy [my humble Scratch creations](https://scratch.mit.edu/u
 
 - [Learn Python with "Think Python" by Allan Downey](http://greenteapress.com/wp/think-python-2e/)
 - [Free eBooks on PowerShell](https://leanpub.com/u/devopscollective)
+- Code.org maintains a [list of learn to code resources for adults](https://code.org/beyond/extended-learning)
 
 ### p5.js
 
