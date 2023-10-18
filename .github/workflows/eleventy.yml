@@ -11,11 +11,6 @@ jobs:
     steps:
         - uses: actions/checkout@v2
 
-
-        - name: copy in dotfiles examples
-          shell: pwsh
-          run: ./copy_example_dotfiles.ps1
-
         - name: update inventory mix and match  
           shell: pwsh
           run: ./update_mix_json.ps1
