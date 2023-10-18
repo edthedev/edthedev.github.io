@@ -25,6 +25,11 @@ jobs:
 
 
     - run: npm ci
+    - name: clone dotfiles for examples
+      uses: actions/checkout@v2
+      with:
+        repository: edthedev/dotfiles
+        path: ./dotfiles
 
 
     - name: Build static site

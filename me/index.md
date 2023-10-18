@@ -35,7 +35,8 @@ Edward has been managing IT professionals since 2011, and has led teams ranging 
 
 ## My Social Media
 
-- Mastodon: <a href=https://mastodon.sdf.org/@Edthedev rel=me>EdTheDev@edward.delaporte.us</a>
+- Personal Mastodon: <a href=https://mastodon.sdf.org/@Edthedev rel=me>ed@edward.delaporte.us</a> (hosted by SDG.org)
+- InfoSec Mastodon: <a href=https://infosec.exchange/@EdTheDev rel=me>infosec.exchange/@EdTheDev</a>
 - LinkedIn: [Edward Delaporte V](https://www.linkedin.com/in/edwarddelaportev)
 
 ## My Art
