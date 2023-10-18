@@ -11,11 +11,12 @@ jobs:
     steps:
         - uses: actions/checkout@v2
 
-        - name: script yo?
-          shell: bash
-          run: cat ./update_mix_json.ps1
 
-        - name: inventory mix and match  
+        - name: copy in dotfiles examples
+          shell: pwsh
+          run: ./copy_example_dotfiles.ps1
+
+        - name: update inventory mix and match  
           shell: pwsh
           run: ./update_mix_json.ps1
 
@@ -24,12 +25,14 @@ jobs:
           with:
             node-version: '12.x'
         - run: npm ci
-
-
-
         - name: Build static site
           run: npx @11ty/eleventy
 
+        - name: clone dotfiles for examples
+          uses: actions/checkout@v2
+          with:
+            repository: edthedev\dotfiles
+            path: ./_site/examples/dotfiles
 
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v3
