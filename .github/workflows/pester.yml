@@ -1,4 +1,4 @@
-name: Pester Tests
+name: Site content smoke tests
 
 on:
   push:
