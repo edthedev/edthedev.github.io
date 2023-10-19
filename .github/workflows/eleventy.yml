@@ -23,7 +23,7 @@ jobs:
         - name: clone dotfiles for examples
           uses: actions/checkout@v2
           with:
-            repository: edthedev\dotfiles
+            repository: edthedev/dotfiles
             path: ./edthedev.github.io/dotfiles
         - name: Build static site
           run: npx @11ty/eleventy
