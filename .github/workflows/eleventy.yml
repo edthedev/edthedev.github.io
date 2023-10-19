@@ -27,7 +27,7 @@ jobs:
           uses: actions/checkout@v2
           with:
             repository: edthedev\dotfiles
-            path: ./_site/examples/dotfiles
+            path: ./edthedev.github.io/dotfiles
 
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v3
