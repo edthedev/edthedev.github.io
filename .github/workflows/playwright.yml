@@ -1,4 +1,4 @@
-name: Playwright integration tests
+name: Accessibility checks
 
 on:
   push:
