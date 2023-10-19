@@ -9,21 +9,23 @@ I began programming in 1988. I became a professional programmer in the year 2000
 
 I currently write most of my software in:
 
-- Python is my 'go-to' all-around language. Everyone should have a favororite language, and it should be Python. [There's a reason it is ranked so high in the Stack Overflow 2020 Top Languages](https://insights.stackoverflow.com/survey/2020#most-popular-technologies)
+- Python is my 'go-to' all-around language. Everyone should have a favorite language, and it should be Python. [There's a reason it is ranked so high in the Stack Overflow 2020 Top Languages](https://insights.stackoverflow.com/survey/2020#most-popular-technologies)
 - I also write plenty of shell scripts. There's no better scripting solution in 2023 than PowerShell. I still write plenty of Bash, too.
 - GoLang is my 'go-to' for utilities that follow the Unix philosophy of doing one thing well.
-- C is still often the most practical option on [interesting hardward](/robots)
+- C is still often the most practical option on [interesting hardware](/robots)
 - Scratch - [I teach kids to code!](http://edward.delaporte.us/learn2code/)
-- SQL - Everybody needs to work with data. Data is great.
 - Commodore Basic 2.0 - I find it relaxing. Don't judge me.
+- JavaScript - I [make are with JavaScript](/art/live).
 
 Over the years, I've also attained fluency in:
 
 - JavaScript, jQuery, and React.js
 - Bash, ZShell and KShell
 - CSharp with .Net
+- Django and Flask
 - Java
 - Node.js
+- pandas
 - Perl
 - PHP
 - Power BI
@@ -36,6 +38,8 @@ And I have also written software in:
 - AppleScript
 - Batch Script
 - BFs
+- Borland C
+- Commodore BASIC
 - Haskell
 - Ruby on Rails
 - IBM Tivoli Directory Integrator
@@ -53,3 +57,5 @@ And I have also written software in:
 - VBScript / Visual Basic for Applications (VBA)
 - VimScript
 - Visual Basic (3, 4, 5, 6, and .Net)
+
+I may have forgotten a few.
