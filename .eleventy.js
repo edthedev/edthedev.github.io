@@ -12,6 +12,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy(".well-known");  // security.txt
   eleventyConfig.addPassthroughCopy("data"); //  .json files
   eleventyConfig.addPassthroughCopy("examples"); //  example files
+  eleventyConfig.addPassthroughCopy("dotfiles"); //  my dotfiles repository
   eleventyConfig.addPassthroughCopy({ "img/favicon": "/" });  // Please Firefox, I provided the file, okay? Stop warning me.
 
   eleventyConfig.setTemplateFormats([
