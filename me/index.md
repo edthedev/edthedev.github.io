@@ -17,13 +17,17 @@ Ask Edward how code pipelines can â€˜make our worst workday a much better day.â€
 
 ## Mentor Bio
 
-Edward has been managing IT professionals since 2011, and has led teams ranging in size from 2 to 11 people. Edward helps his mentees see beyond their assumptions to recognize their strengths and career possibilities. Edward's proudest moments are when he gets to listen to his former mentees teach others, and learn from them at the same time. You may enjoy asking Edward what juggling fire taught him about information technology.
+Edward has been managing IT professionals since 2011, and has led teams ranging in size from 2 to 11 people. Edward helps his mentees see beyond their assumptions to recognize their strengths and career possibilities. 
+
+Edward's proudest moments are when he gets to listen to his former mentees teach others, and learn from them at the same time. 
+
+You may enjoy asking Edward what juggling fire taught him about information technology.
 
 ## My Community Values
 
 - I have been a contributing member of the OWASP Top Ten Privacy Risks Project Team since 2014.
 - I created and have run free Public Library "Learn to Code" classes for elementary aged children since 2017.
-- I have served as volunteer webmaster for the Champaign Rotary Club since 2018.
+- I have served as volunteer webmaster for the Champaign Rotary Club 2018-2022.
 - I have served as a volunteer judge for the annual Engineering Open House RoboBrawl contest from 2015-2019.
 
 ## Badges
@@ -39,10 +43,8 @@ Edward has been managing IT professionals since 2011, and has led teams ranging 
 - InfoSec Mastodon: <a href=https://infosec.exchange/@EdTheDev rel=me>infosec.exchange/@EdTheDev</a>
 - LinkedIn: [Edward Delaporte V](https://www.linkedin.com/in/edwarddelaportev)
 
-## My Art
+## More about me on my website 
 
-- [Live Art](/art/live)
-
-## My Resume
-
-- [Resume](/resume)
+- [My Art](/art/)
+- [My Code](/code)
+- [My Resume](/resume)
