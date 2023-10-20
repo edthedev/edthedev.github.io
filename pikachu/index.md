@@ -1,9 +1,8 @@
 ---
 layout: layout.njk
 title: HELLO in the Pikachu Programming Language - By Edward Delaporte
+tags: ['blog','rss','code']
 ---
-
-# My Experience with Pikachu
 
 `HELLO WORLD` in the [Pikachu Language][4] can be [quite terrifying][2]. But it doesn't have to be. 
 
