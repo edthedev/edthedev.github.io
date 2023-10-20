@@ -47,7 +47,7 @@ And I have also written software in:
 - Micro:Bit JavaScript
 - Objective C
 - OCaml
-- [/pikachu](Pikachu)
+- [Pikachu](/pikachu)
 - Pebble native C
 - Pebble JavaScript framework
 - R Studio
