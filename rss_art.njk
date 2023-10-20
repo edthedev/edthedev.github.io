@@ -25,7 +25,9 @@
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ absolutePostUrl }}</link>
-      <description>{{ post.data.title | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+      <description>{{ post.data.title | htmlToAbsoluteUrls(absolutePostUrl) }}
+<img alt='{{ post.data.alt }}' src='{{ post.data.stub }}.PNG'/>
+</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid>{{ absolutePostUrl }}</guid>
     </item>
