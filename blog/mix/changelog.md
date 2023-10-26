@@ -4,14 +4,18 @@ title: Mix and Match Changelog - Edward.Delaporte.us
 tags: []
 ---
 
+## Context
+
+This page tracks updates to my [Mix and Match JavaScript](/art/mix).
+
 ## 2023 October 
 
-- Added five more top cards and four more bottom cards
+- Added five more top cards and four more bottom cards. Over 1,000 combinations are now possible.
 
 ## 2023 September
 
 - Update so that cards no longer repeat within the same page
-- Added 11 more cards. Over 8,000 combinations are now possible.
+- Added 11 more cards. Over 800 combinations are now possible.
 - Removed analytics JavaScript
 
 ## 2023 August
