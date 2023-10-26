@@ -18,4 +18,12 @@ tags: []
 
 - Added more cards. The total possible combinations is now over 500.
 - Added 'Share on Mastodon' social media link
-- 
+- Added unique shareable links that will regenerate the same mix, until new cards are added
+- Added suggested ALT text when sharing a screenshot
+- Added ALT text to each image
+- Created JavaScript mix and matcher page
+
+# 2023 July
+
+- Created various mix-and-match ready sketches
+
