@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
-title: Mix and Match Changelog - Edward.Delaporte.us
-tags: []
+title: Updates to my Mix and Match script
+tags: ['art']
 ---
 
 ## Context
