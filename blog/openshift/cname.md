@@ -14,7 +14,7 @@ Whatever my reasons, I would rather visit `console.mydomain.com`, and so we were
 
 ## Add a CNAME record
 
-1. Lookup the default router URL
+Lookup the default router URL
 
   1. In OpenShift, go to `Networking` -> `Routes`
 
@@ -26,7 +26,7 @@ Whatever my reasons, I would rather visit `console.mydomain.com`, and so we were
 
   5. Keep this tab open, you will refer back to it later.
 
-2. Add the `CNAME` record
+Add a `CNAME` record pointing to the default router URL
 
   6. Visit your DNS provider
 
@@ -36,7 +36,9 @@ Whatever my reasons, I would rather visit `console.mydomain.com`, and so we were
 
   9. Confirm that visiting `console.mydomain.com` gives you the (for the moment) expected `503 - Service Not Available` error.
 
-## Add the new domain name as a route in OpenShift
+## Add the OpenShift route
+
+Add the new domain name as a route in OpenShift
 
 1. In OpenShift, go to `Networking` -> `Routes`
 
@@ -44,17 +46,19 @@ Whatever my reasons, I would rather visit `console.mydomain.com`, and so we were
 
 3. Add a route.
 
-  > Name: Anything
-  > Hostname: <the URL at your domain that you used in your CNAME record> i.e. `console.mydomain.com`
+  Set the name to anything, and set the URL to the domain that you used in the CNAME record.
+
+    Name: anything
+    Hostname: console.mydomain.com
 
   Copy the rest of the settings from the route named `console`. Probably looks something like this:
 
-  > Path: /
-  > Service: console
-  > Target port: <choose the only option>
-  > Security: Check `secure route`
-  > TLS termination: Re-encrypt
-  > Insecure traffic: Redirect
+    Path: /
+    Service: console
+    Target port: <choose the only option>
+    Security: Check `secure route`
+    TLS termination: Re-encrypt
+    Insecure traffic: Redirect
 
 4. Confirm that visiting `console.mydomain.com` takes you to your openshift console.
 
