@@ -43,19 +43,21 @@ My dream is to someday own a fully open and repairable equivalent computer, like
 
 ### Installed the extra-special surface linux kernel
 
+I followed the instructions at the [Linux Surface Go Kernel][kernel] GitHub repo.
+It looks like this when done.
 
-9. Confirm
+[kernel]: https://github.com/linux-surface/linux-surface
 
-	```bash
-	$ uname -a
-        Linux mycomputer 6.6.1-surface-1 ...etc...
-	```
+```bash
+$ uname -a
+	Linux mycomputer 6.6.1-surface-1 ...etc...
+```
 
 ### The Wireless Fix
 
 I followed this [terrific guide on Reddit to Wifi on Surface Go][WifiGo]. It was written for Ubuntu 18.10, but it worked for me on Ubuntu 20.04 LTS.
 
-I used a cheap USB wifi adapter in order to find and read that guide, of course. Ubuntu has great support for no-name USB wifie dongles.
+I used a cheap USB wifi adapter in order to find and read that guide, of course. Ubuntu has great support for no-name USB wifi dongles.
 
 [WifiGo]: https://www.reddit.com/r/SurfaceLinux/comments/9t53gq/wifi_fixed_on_surface_go_ubuntu_1810/
 
