@@ -6,7 +6,19 @@ tags: ['blog']
 
 ## Overview
 
-Ubuntu! - Because Steam!
+I chose Ubuntu because I want to play Steam games.
+
+I have really wanted to install Linux on the Surface Go from the day I bought it, but I did not feel confident that the drivers and work-arounds would be available, until today.
+
+I bought the Surface Go for the delightful hardware design, not for the operating system that ships with it. I find Windows 10 to be perfectly tolerable. I used Windows 10 on my Surface Go for about six years.
+
+My biggest motive for staying with Windows was Steam games, and my biggest motive for swithing is - Steam games.
+
+Over the years I have owned a Surface Go, my Windows install has gotten slower, while my Steam game library compatibility with Linux has gotten stronger. 
+
+I recently realized I was not choosing to play any games at all, and I was frustrated by lag during text editing and web browsing. So it was time to make the switch!
+
+My notes follow. This is meant to be an overview, not a perfect guide. There are better step-by-step guides out there already. Read this if you're trying to get a sense of how much work the change will be, and how it went for me.
 
 ## Preparation
 
@@ -45,15 +57,14 @@ I used a cheap USB wifi adapter in order to find and read that guide, of course.
 
 ### Add some repositories
 
+I added some repositories for `SurfaceLinux` and `VSCodium`.
+
 ```sh
-deb [signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main
-deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main
 deb [arch=amd64] https://pkg.surfacelinux.com/debian release main
 deb [signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main
 ```
 
-
 ## Initial Reactions
 
-It's so fast! Windows 10 was snappy when I first bought it, but had gotten slow with time and usage.
 
+It's so fast! Windows 10 was snappy when I first bought it, but had gotten slow with time and usage.
