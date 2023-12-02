@@ -33,9 +33,13 @@ My notes follow. This is meant to be an overview, not a perfect guide. There are
 
 ## Installation
 
-I booted to the PenDrive Linux, chose Ubuntu, and `Install Ubuntu`.
+I booted to the PenDrive Linux, chose Ubuntu, and `Install Ubuntu`. I selected `Minimal Install`, because I am *very* familiar with available Linux applications, and I am quite picky about which ones I will add later.
 
 ## Fixes
+
+I knew before I started that this was going to take some work to get working just right, because the Surface Go is a unique piece of hardware. The unique hardware is why I bought it! 
+
+My dream is to someday own a fully open and repairable equivalent computer, like an idealized future verson of the `Framwork` laptop. But the efficient and economical thing to do today is to upgrade what I already have.
 
 ### Installed the extra-special surface linux kernel
 
