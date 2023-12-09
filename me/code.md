@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
 title: Languages I Code In - Edward Delaporte
+tags: ['blog']
 ---
 
 ## I've written a lot of code
