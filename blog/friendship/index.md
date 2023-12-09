@@ -30,18 +30,18 @@ Instructions that follow will be for Centos9, because I happen to be playing wit
 
 3. Create a program.
 
-	```basic
-	{% include 'examples/fimpp/fizzbuzz.fimpp' %}
-	```
+```
+{% include 'examples/fimpp/fizzbuzz.fimpp' %}
+```
 
-4. Poke around inside the container to realize that I have SELinux `helping` me.
+6. Poke around inside the container to realize that I have SELinux `helping` me.
 
 
 	```sh
 	podman run -v `pwd`:/letters --entrypoint=bash -it avian2/fimpp
 	```
 
-5. Run the program with `fimpp` inside the `podman` container
+7. Run the program with `fimpp` inside the `podman` container
 
 
 	```sh
