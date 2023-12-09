@@ -31,7 +31,7 @@ Instructions that follow will be for Centos9, because I happen to be playing wit
 3. Create a program.
 
 ```
-{% include 'examples/fimpp/fizzbuzz.fimpp' %}
+{% include 'examples/fimpp/zig.fimpp' %}
 ```
 
 6. Poke around inside the container to realize that I have SELinux `helping` me.
@@ -45,5 +45,5 @@ Instructions that follow will be for Centos9, because I happen to be playing wit
 
 
 	```sh
-	podman run -v `pwd`:/letters:z avian2/fimpp /letters/fizzbuzz.fimp
+	podman run -v `pwd`:/letters:z avian2/fimpp /letters/zig.fimp
 	```
