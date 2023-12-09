@@ -39,7 +39,19 @@ localhost/website              latest      65b259905584  25 seconds ago  1.19 GB
 3. Run it!
 
 ```sh
-podman run --rm -v .:/app -p 8080:8080 localhost/website --serve
+podman run --rm -v .:/app -p 8080:8080 localhost/website
 ```
 
+4. Debug it!
+
+```sh
+podman run --rm -v .:/app -p 8080:8080 -it --entrypoint bash localhost/website
+```
+
+5. Audit and update packages.
+
+```sh
+podman run --rm -v .:/app -p 8080:8080 -it --entrypoint bash localhost/website
+npm audit fix
+```
 

@@ -13,6 +13,6 @@ WORKDIR /app
 COPY package.json /app
 COPY package-lock.json /app
 
-RUN npm install
+RUN cd /app;npm install
 
-ENTRYPOINT ["eleventy"]
+ENTRYPOINT ["npx", "eleventy", "--serve"]
