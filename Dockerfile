@@ -4,7 +4,7 @@ FROM node:21.4 as builder
 
 FROM builder
 
-MAINTAINER Edward Delaporte "edthedev@gmailc.om"
+MAINTAINER Edward Delaporte 
 
 RUN npm add --location=global npm @11ty/eleventy
 WORKDIR /app

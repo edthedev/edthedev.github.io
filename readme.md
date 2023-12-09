@@ -19,3 +19,27 @@ Working locally:
 On deploying:
 https://www.linkedin.com/pulse/eleventy-github-pages-lea-tortay/
 https://snook.ca/archives/servers/deploying-11ty-to-gh-pages
+
+## Running under Podman
+
+1. Build the image
+
+```sh
+podman build -t website .
+```
+
+2. Got an image built?
+
+```sh
+$ podman image list        
+REPOSITORY                     TAG         IMAGE ID      CREATED         SIZE
+localhost/website              latest      65b259905584  25 seconds ago  1.19 GB
+```
+
+3. Run it!
+
+```sh
+podman run --rm -v .:/app -p 8080:8080 localhost/website --serve
+```
+
+
