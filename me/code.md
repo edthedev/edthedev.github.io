@@ -37,15 +37,16 @@ And I have also written software in:
 - Android Java
 - AppleScript
 - Batch Script
+- Binary (self-test programs for a simple microchip)
 - BFs
 - Borland C
-- Commodore BASIC
+- [Commodore BASIC & X16 BASIC](/basic)
 - [Friendship is Magic++](/blog/friendship)
 - Haskell
-- Ruby on Rails
 - IBM Tivoli Directory Integrator
 - Micro:Bit Block Code
 - Micro:Bit JavaScript
+- MIPS Assembler
 - Objective C
 - OCaml
 - [Pikachu](/pikachu)
@@ -54,6 +55,7 @@ And I have also written software in:
 - R Studio
 - React Native
 - RPG
+- Ruby on Rails
 - TypeScript
 - VBScript / Visual Basic for Applications (VBA)
 - VimScript
