@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: HELLO in the Pikachu Programming Language - By Edward Delaporte
+title: HELLO in the Pikachu Programming Language
 tags: ['blog','rss','code']
 ---
 

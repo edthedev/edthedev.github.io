@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: Linux on my Surface Go - Edward.Delaporte.us
+title: Linux on my Surface Go
 tags: ['blog']
 ---
 

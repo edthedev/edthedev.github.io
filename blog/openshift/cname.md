@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: Add custom URL for the OpenShift console - Edward.Delaporte.us
+title: Add custom URL for the OpenShift console
 tags: blog
 ---
 

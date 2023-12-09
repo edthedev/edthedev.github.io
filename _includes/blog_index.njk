@@ -48,11 +48,10 @@ h2 {
   <!-- List blog pages. -->
   <nav class="more_nav" role="navigation">
   <h2>Blog Topics</h2>
-  {%- for item in pagination.items %}
-
-  <li> <a href="{{item.id}}"> {{ item.name }} </a></li>
-
+  {%- for post in collections.blog | reverse %}
+  <li> <a href="{{post.url}}"> {{ post.data.title }} </a></li>
   {% endfor -%}
+
   <li><a href="/rss.xml">RSS Feed</a>
   <a href="/feed.json">JSON Feed</a></li>
   <!-- https://www.11ty.dev/docs/plugins/rss/ -->

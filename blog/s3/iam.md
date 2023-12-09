@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: IAM for an S3 Bucket by Edward Delaporte
+title: IAM for an S3 Bucket
 tags: blog
 ---
 

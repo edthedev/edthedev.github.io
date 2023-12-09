@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Languages I Code In - Edward Delaporte
+title: Languages I Code In
 tags: ['blog']
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: My notes on OpenShift - Edward.Delaporte.us
+title: My notes on OpenShift
 ---
 
 - [I made a CNAME for my console](/openshift/cname)
