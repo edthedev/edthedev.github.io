@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: Friendship Is Magic - Edward.Delaporte.us
+title: Friendship Is Magic
 tags: ['blog']
 ---
 
