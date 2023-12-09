@@ -14,5 +14,6 @@ COPY package.json /app
 COPY package-lock.json /app
 
 RUN cd /app;npm install
+RUN cd /app;git clone https://github.com/edthedev/dotfiles
 
 ENTRYPOINT ["npx", "eleventy", "--serve"]
