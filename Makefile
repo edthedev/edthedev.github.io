@@ -18,6 +18,9 @@ serve:
 	# npx @11ty/eleventy --serve
 	podman run --rm -v .:/app -p 8080:8080 localhost/website
 
+stop:
+	podman kill --all
+
 clean:
 	rm C:\src\site -r -fo
 
