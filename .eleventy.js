@@ -1,5 +1,6 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const fs = require('node:fs');
 module.exports = eleventyConfig => {
 
   // Static content
@@ -31,8 +32,11 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
   eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822);
-  eleventyConfig.addLiquidFilter("displayJS", function(value) {
-    return 'Chickens {% raw %}' + value.replace('<', '&lt') + '{% endraw %}';
+  eleventyConfig.addFilter("displayJS", function(value) {
+    content = fs.readFileSync(value, 'utf8');
+    content = 'BWAHAHHAHA!' + content;
+    content = content.replace(/</g, '&lt');
+    return content;
   });
 
   // In page Nav Anchors

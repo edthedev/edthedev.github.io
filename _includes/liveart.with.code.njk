@@ -39,7 +39,7 @@ script: /js/art/cross.js
     <p>Code file <a href='/{{ source }}'>{{ source }}</a>:</p>
 
 <pre>
-{% include source | displayJS %}
+{{ source | displayJS }}
 </pre>
   {% endfor %}
 </div>
