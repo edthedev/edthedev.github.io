@@ -46,9 +46,9 @@ My speaker notes.
 {% endraw %}
 ```
 
-> Tip: Because the sides spend part of their life as `HTML`, I am able to style however I want using my mad `CSS`` skills.
+> Tip: Because the sides spend part of their life as `HTML`, I am able to style however I want using my mad `CSS` skills.
 
-Because I'm doing an extra bit of `JavaScript`, I must exempt the `/slides` folder from being processed by `Eleventy.js`:
+Because I'm doing an extra bit of `JavaScript`, I must exempt the `/slides` folder from being processed by `Eleventy.js` in `.eleventy.js`:
 
 ```javascript
   eleventyConfig.addPassthroughCopy("slides");  // My slide decks
