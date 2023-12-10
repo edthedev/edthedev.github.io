@@ -31,6 +31,9 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
   eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822);
+  eleventyConfig.addLiquidFilter("displayJS", function(value) {
+    return 'Chickens {% raw %}' + value.replace('<', '&lt') + '{% endraw %}';
+  });
 
   // In page Nav Anchors
 
