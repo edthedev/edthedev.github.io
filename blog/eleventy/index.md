@@ -1,6 +1,7 @@
 ---
 layout: blog.njk
 title: On EleventyJS
+tags: ['blog', 'meta']
 ---
 
 ## Context
@@ -34,6 +35,23 @@ I let `Eleventy` know that's what needs to happen by a line in `.eleventy.js`:
 ```javascript
   eleventyConfig.addPassthroughCopy(".well-known");  // security.txt
 ```
+
+### Art with JavaScript
+
+[I make art with code](/art/live), using the [P5.js][p5] JavaScript framework.
+
+[p5]: https://p5js.org/
+
+To support this, and some other nonense, I need to serve JavaScript, CSS and image files unmodified:
+
+```javascript
+  eleventyConfig.addPassthroughCopy("css");  // Static files
+  eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("img");
+```
+
+> This bit may go away in the near future, as I have added enough static art that I need to add a separate CDN (Content Delivery Network) soon.
+
 ### Clever Bits in JavaScript (plugins)
 
 There's some bits of the site that I don't want to type over and over again. Most notably - the site navigation and RSS feeds. Thankfully, `Eleventy` has plugins for that:
