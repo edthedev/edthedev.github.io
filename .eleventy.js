@@ -34,8 +34,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822);
   eleventyConfig.addFilter("displayJS", function(value) {
     content = fs.readFileSync(value, 'utf8');
-    content = 'BWAHAHHAHA!' + content;
     content = content.replace(/</g, '&lt');
+    content = content.replace(/>/g, '&gt');
     return content;
   });
 
