@@ -33,6 +33,7 @@ Here are some resources I have created to help others learn to code.
 I do a decent amount of programming in my free time 
 Just to make my life easier. Don't expect mature open source projects, these are quick utilities.
 
++ [This website](/meta)
 + [CLI Chart tool in Go Language](https://github.com/edthedev/chart)
 + [JavaScript Workout tracker for the Pebble Smart Watch](https://github.com/edthedev/LiftPebble)
 + [ReactJS JavaScript and Python Goal Tracker](https://github.com/edthedev/MyGoal.space)
