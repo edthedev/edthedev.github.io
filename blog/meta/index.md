@@ -63,5 +63,4 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 ## More
 
-- [Plugins](/blog/eleventy/plugins)
-- [Dockerfile](/blog/eleventy/dockerfile)
+- [Dockerfile](/blog/meta/dockerfile)
