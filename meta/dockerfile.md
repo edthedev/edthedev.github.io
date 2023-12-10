@@ -7,12 +7,15 @@ tags: ['blog', 'meta']
 ## Context
 
 I like to use 'Long Term Support (LTS)' releases.
-These never include new enough versions of `NodeJS` to build my website.
-`Podman` to the rescue.
+These never include new enough versions of `NodeJS` 
+to build my website.
+`podman` to the rescue.
 
 ## Here is a quick Dockerfile
 
-{% include '/examples/eleventy/Dockerfile' %}
+```docker
+{% include 'examples/dockerfile.example' %}
+```
 
 ## And here are some commands 
 

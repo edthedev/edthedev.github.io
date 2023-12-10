@@ -11,10 +11,12 @@ setup:
 	npm install --save-dev markdown-it-anchor slugify
 	# Did not work. npm install @orchidjs/eleventy-plugin-ids --save-dev
 
+rebuild:
+	podman build -t website .
 
 serve:
 	# npx @11ty/eleventy --serve
-	podman run --rm -v .:/app -p 8080:8080 localhost/website ^C
+	podman run --rm -v .:/app -p 8080:8080 localhost/website
 
 clean:
 	rm C:\src\site -r -fo

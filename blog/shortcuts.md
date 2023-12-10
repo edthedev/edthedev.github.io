@@ -4,4 +4,6 @@ title: Edward's Keyboard Shortcuts
 tags: ['blog', 'rss']
 ---
 
-{% include 'dotfiles/doc/shortcuts.md' %}
+[My shortcuts](https://github.com/edthedev/blob/main/dotfiles/doc/shortcuts.md)
+
+<!-- include 'dotfiles/doc/shortcuts.md' -->
