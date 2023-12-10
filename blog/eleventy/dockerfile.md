@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: A Dockerfile for EleventyJS
-tags: ['blog']
+tags: ['blog', 'meta']
 ---
 
 ## Context
