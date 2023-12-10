@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: On EleventyJS
+title: How this Site is Built
 tags: ['blog', 'meta']
 ---
 
