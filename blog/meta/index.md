@@ -63,4 +63,5 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 ## More
 
-- [Dockerfile](/blog/meta/dockerfile)
+- [Slide Decks](/blog/meta/slides)
+- [Building locally with a Dockerfile](/blog/meta/dockerfile)
