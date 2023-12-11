@@ -17,7 +17,7 @@ as long as you display this license and attribution.
 
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
-  line_bit.y = 250;
+  line_bit.y = 200;
   line_bit.length = 70;
   line_bit.x = 300;
   line_bit.degrees = 0; 
@@ -36,7 +36,7 @@ function start_fractal() {
 }
 
 async function do_fractal(bit) {
-  stroke(0,random(0,255),random(100, 255));
+  stroke(random(150, 255),random(150,255),random(150, 255));
   const next_bit = structuredClone(draw_line_segment(bit));
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;
@@ -56,16 +56,14 @@ function tile_background(maxim_x, maxim_y) {
 
   line_shade = 70;
   stroke(line_shade, line_shade, line_shade);
-  fill(200,100,100);
+  fill(150,50,50);
   background(maxim_x,maxim_y);
-  square_pool = 100;
   xp = 0;
   yp = 0;
   min_tile_size = maxim_y;
   while(yp<maxim_y) {
-    tile_size = random(15,100);
+    tile_size = random(40,100);
     console.log("size" + tile_size);
-    square_pool -= tile_size;
     if(tile_size < min_tile_size)
     {
       min_tile_size = tile_size;
