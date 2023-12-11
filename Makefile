@@ -14,6 +14,12 @@ setup:
 shell:
 	podman run --rm -v .:/app -p 8080:8080 -it --entrypoint bash localhost/website
 
+audit:
+	podman run --rm -v .:/app -p 8080:8080 --entrypoint npm localhost/website audit
+
+audit_fix:
+	podman run --rm -v .:/app -p 8080:8080 --entrypoint npm localhost/website audit fix
+
 rebuild:
 	podman build -t website .
 
