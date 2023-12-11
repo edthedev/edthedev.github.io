@@ -15,29 +15,28 @@ as long as you display this license and attribution.
 
 */
 
-
-
-balls = [];
-
 function start_fractal() {
   line_bit = new_line_segment(color(0,0,0));
-  line_bit.y = 150;
-  line_bit.length = 80;
+  line_bit.y = 250;
+  line_bit.length = 70;
   line_bit.x = 300;
   line_bit.degrees = 0; 
-  roty = random(15, 170);
+  roty = random(40, 170);
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
+  /* 
   line_bit.degrees += roty; 
   do_fractal(line_bit);
   line_bit.degrees += roty; 
   do_fractal(line_bit);
+  */
 }
 
 async function do_fractal(bit) {
+  stroke(0,random(0,255),random(100, 255));
   const next_bit = structuredClone(draw_line_segment(bit));
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;
@@ -54,7 +53,10 @@ async function do_fractal(bit) {
 }
 
 function tile_background(maxim_x, maxim_y) {
-  fill(255,255,255);
+
+  line_shade = 70;
+  stroke(line_shade, line_shade, line_shade);
+  fill(200,100,100);
   background(maxim_x,maxim_y);
   square_pool = 100;
   xp = 0;
