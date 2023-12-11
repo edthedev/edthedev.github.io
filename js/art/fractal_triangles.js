@@ -71,6 +71,9 @@ function setup() {
   maxim_y = 500;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
+  circle(maxim_x/2, maxim_y/2, maxim_y*.8);
+  fill(55,55,55);
+  // circle(maxim_x/2, maxim_y/2, maxim_y*.7);
   start_fractal();
   console.log("setup done");
 }
