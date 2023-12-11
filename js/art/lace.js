@@ -104,6 +104,11 @@ function setup() {
   maxim_y = 500;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
+  myCanvas = createCanvas(maxim_x, maxim_y);
+  fill(240,240,240);
+  circle(maxim_x/2, maxim_y/2, maxim_y*.8);
+  fill(255,255,255);
+  circle(maxim_x/2, maxim_y/2, maxim_y*.7);
   start_fractal(color_seq);
   console.log("setup done");
 }
