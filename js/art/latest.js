@@ -57,22 +57,24 @@ function tile_background(maxim_x, maxim_y) {
   fill(255,255,255);
   background(maxim_x,maxim_y);
   square_pool = 100;
-  xpos = 0;
-  ypos = 0;
+  xp = 0;
+  yp = 0;
   min_tile_size = maxim_y;
-  while(ypos<maxim_y) {
-    tile_size = get_random_between(5, 30);
+  while(yp<maxim_y) {
+    tile_size = random(15,100);
+    console.log("size" + tile_size);
     square_pool -= tile_size;
     if(tile_size < min_tile_size)
     {
-      min_tile_size = tile_size
+      min_tile_size = tile_size;
+      console.log("min tile is now " + min_tile_size);
     }
 
-    square(xpos, ypos, xpos+tile_size, ypos+tile_size);
-    xpos += tile_size;
-    if(xpos>maxim_x) {
-      xpos=0;
-      ypos+=min_tile_size;
+    rect(xp, yp, xp+tile_size, yp+tile_size);
+    xp += tile_size;
+    if(xp>maxim_x) {
+      xp=0;
+      yp+=min_tile_size;
       min_tile_size = maxim_y;
     }
   }
@@ -85,9 +87,6 @@ function setup() {
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
   tile_background(maxim_x, maxim_y);
-  balls = [];
-  ballcount = random(1,4);
-  // ballcount = 1;
 
   //make_horizon(0, 0, maxim_x, maxim_y);
   // draw_horizon(0, 0, maxim_x, maxim_y);
