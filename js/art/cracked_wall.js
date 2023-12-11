@@ -2,7 +2,7 @@
 
 This is a Live Art work created by Edward Delaporte.
 
-This script is Copyright Edward Delaporte 2021.
+This script is Copyright Edward Delaporte 2023.
 
 This script and the art it creates are licensed under 
 a Creative Commons Attribution-ShareAlike 4.0 
@@ -49,34 +49,6 @@ async function do_fractal(bit) {
     bit2.degrees = add_degrees(bit.degrees, -90);
     await do_fractal(bit2);
 
-  }
-}
-
-function tile_background(maxim_x, maxim_y) {
-
-  line_shade = 70;
-  stroke(line_shade, line_shade, line_shade);
-  fill(150,50,50);
-  background(maxim_x,maxim_y);
-  xp = 0;
-  yp = 0;
-  min_tile_size = maxim_y;
-  while(yp<maxim_y) {
-    tile_size = random(40,100);
-    console.log("size" + tile_size);
-    if(tile_size < min_tile_size)
-    {
-      min_tile_size = tile_size;
-      console.log("min tile is now " + min_tile_size);
-    }
-
-    rect(xp, yp, xp+tile_size, yp+tile_size);
-    xp += tile_size;
-    if(xp>maxim_x) {
-      xp=0;
-      yp+=min_tile_size;
-      min_tile_size = maxim_y;
-    }
   }
 }
 
