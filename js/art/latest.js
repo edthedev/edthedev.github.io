@@ -15,104 +15,92 @@ as long as you display this license and attribution.
 
 */
 
-var color_seq = [];
 
-function start_fractal(color_seq) {
-  line_bit = new_line_segment(color_seq);
-  line_bit.y = 250;
-  line_bit.length = 90;
+
+balls = [];
+
+function start_fractal() {
+  line_bit = new_line_segment(color(0,0,0));
+  line_bit.y = 150;
+  line_bit.length = 80;
   line_bit.x = 300;
   line_bit.degrees = 0; 
-  roty = 52;
+  roty = random(15, 170);
   do_fractal(line_bit);
-  line_bit.degrees+=roty;
+  line_bit.degrees += roty; 
   do_fractal(line_bit);
-  line_bit.degrees+=roty;
+  line_bit.degrees += roty; 
   do_fractal(line_bit);
-  line_bit.degrees+=roty;
+  line_bit.degrees += roty; 
   do_fractal(line_bit);
-  line_bit.degrees+=roty;
+  line_bit.degrees += roty; 
   do_fractal(line_bit);
 }
 
-var first_angle = get_random_between(30, 120);
-console.log("1:" + first_angle);
-var second_angle = get_random_between(45, 60);
-console.log("2:" + second_angle);
-
 async function do_fractal(bit) {
-  if(bit.history == 3) {
-    bit.color = bit.color_seq[1];
-  }
-  if(bit.history == 6) {
-    bit.color = bit.color_seq[2];
-  }
-  if(bit.history == 9) {
-    bit.color = bit.color_seq[3];
-  }
-   stroke(bit.color.levels[0],
-          bit.color.levels[1],
-          bit.color.levels[2]);
-
-  hide=0;
-  if(bit.history<3) {
-    hide=1;
-  }
-  const next_bit = structuredClone(draw_line_segment(bit, hide));
-  for(i=3; i<5; i+=bit.weight*2){
-    draw_line_cross(bit, i, i, hide);
-  }
-
+  const next_bit = structuredClone(draw_line_segment(bit));
   next_bit.length = next_bit.length*.67;
   next_bit.weight = next_bit.weight*.67;
-  next_bit.degrees = add_degrees(bit.degrees, first_angle);
+  next_bit.degrees = add_degrees(bit.degrees, 45);
 
-  if(next_bit.length > 4) {
+  if(next_bit.length > 1) {
 
-    ani_setup( 
-        item = function() { 
-          do_fractal(next_bit);
-          const bit2 = structuredClone(next_bit);
-          bit2.degrees = add_degrees(bit.degrees, second_angle);
-          do_fractal(bit2);
-          /*
-          if(second_angle < 60) {
-            const bit3 = structuredClone(next_bit);
-            bit3.degrees = add_degrees(bit.degrees, second_angle*2);
-            do_fractal(bit3);
-          }
-          */
-        }
-    );
+    await do_fractal(next_bit);
+    const bit2 = structuredClone(next_bit);
+    bit2.degrees = add_degrees(bit.degrees, -90);
+    await do_fractal(bit2);
 
+  }
+}
+
+function tile_background(maxim_x, maxim_y) {
+  fill(255,255,255);
+  background(maxim_x,maxim_y);
+  square_pool = 100;
+  xpos = 0;
+  ypos = 0;
+  min_tile_size = maxim_y;
+  while(ypos<maxim_y) {
+    tile_size = get_random_between(5, 30);
+    square_pool -= tile_size;
+    if(tile_size < min_tile_size)
+    {
+      min_tile_size = tile_size
+    }
+
+    square(xpos, ypos, xpos+tile_size, ypos+tile_size);
+    xpos += tile_size;
+    if(xpos>maxim_x) {
+      xpos=0;
+      ypos+=min_tile_size;
+      min_tile_size = maxim_y;
+    }
   }
 }
 
 function setup() {
-  rando_url();
-  ani_clear();
-
-  color_seq = [
-    color(0,60,60),
-    color(7,44,63),
-    color(24,101,142),
-    color(11,156,234),
-  ];
-
-  second_angle = random_plus_minus(30, 140);
+  // maxim = .5 * window.innderWidth;
   maxim_x = 600;
-  maxim_y = 500;
+  maxim_y = 400;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
-  start_fractal(color_seq);
+  tile_background(maxim_x, maxim_y);
+  balls = [];
+  ballcount = random(1,4);
+  // ballcount = 1;
+
+  //make_horizon(0, 0, maxim_x, maxim_y);
+  // draw_horizon(0, 0, maxim_x, maxim_y);
+  // setup_season();
+  // draw_ground(myCanvas, maxim_y /2);
+  start_fractal();
   console.log("setup done");
 }
 
-function mouseClicked() {
-  new_random(get_url_seed());
+function draw() {
 }
 
-
-function draw() {
-  ani_draw();
+function mouseClicked() {
+  // background(220);
+  // spinny(mouseX, mouseY, 20)
 }
