@@ -34,9 +34,10 @@ script: /js/art/cross.js
 
 </div>
 <div class="content" role="contentinfo">
-  <p>Source code follows:</p>
+<p>Edward Delaporte created this art using the <a href="https://p5js.org/">P5.js</a> JavaScript library, and the following additional code:
+</p>
   {% for source in script %}
-    <p>Code file <a href='/{{ source }}'>{{ source }}</a>:</p>
+    <h2><a href='/{{ source }}'>{{ source }}</a>:</h2>
 
 <pre>
 {{ source | displayJS }}
