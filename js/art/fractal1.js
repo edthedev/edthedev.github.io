@@ -59,7 +59,7 @@ function setup() {
   maxim_y = 400;
   midline = maxim_y / 2;
   myCanvas = createCanvas(maxim_x, maxim_y);
-  //background(maxim_x,maxim_y);
+  background(maxim_x,maxim_y);
   balls = [];
   ballcount = random(1,4);
   // ballcount = 1;
