@@ -12,7 +12,7 @@ setup:
 	# Did not work. npm install @orchidjs/eleventy-plugin-ids --save-dev
 
 shell:
-	podman run --rm -v .:/app -p 8080:8080 --entrypoint bash localhost/website
+	podman run --rm -v .:/app -p 8080:8080 -it --entrypoint bash localhost/website
 
 rebuild:
 	podman build -t website .
