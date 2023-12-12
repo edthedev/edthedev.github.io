@@ -2,7 +2,7 @@
 
 This is a Live Art work created by Edward Delaporte.
 
-This script is Copyright Edward Delaporte 2021.
+This script is Copyright Edward Delaporte 2023.
 
 This script and the art it creates are licensed under 
 a Creative Commons Attribution-ShareAlike 4.0 
