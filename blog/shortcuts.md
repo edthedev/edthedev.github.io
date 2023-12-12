@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Edward's Keyboard Shortcuts
-tags: ['blog', 'rss']
+tags: []
 ---
 
 [My shortcuts](https://github.com/edthedev/blob/main/dotfiles/doc/shortcuts.md)
