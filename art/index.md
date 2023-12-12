@@ -10,8 +10,8 @@ eleventyNavigation:
 
 <a href="/art/live">
 
-![Live Art Preview](/img/art/latest.PNG)
-![Live Art Preivew 2](/img/art/latest2.PNG)
+![Live Art Preview](/img/art/latest.png)
+![Live Art Preivew 2](/img/art/latest2.png)
 
 </a>
 

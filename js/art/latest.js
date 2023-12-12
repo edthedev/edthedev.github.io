@@ -53,8 +53,9 @@ function fresh_color() {
 
 function setup() {
 
-  setup_canvas();
+  setup_canvas(800, 400);
   background('#222222');
+  starfield(800,400);
 
   maxline = 400;
   balls = [];
@@ -69,10 +70,12 @@ function setup() {
     newb.color2 = fresh_color();
 
     // base_path = [1,1, 1,-1, -1,-1, -1, 1]; // figure 8
-    base_path = [1,-1,.9,.9,1,-1,.8,.8,1,-1,1,1,.5,-.5,1,1,.5,-.5,-.2,-.2];
+    rise1 = random(.5,.9);
+    base_path = [1,-1,rise1,rise1,1,-1,.8,.8,
+      1,-1,1,1,.5,-.5,1,1,.5,-.5,random(.2,.9),random(.2,.9)];
 
     // base_path = [1,1,1,-1];
-    seq1 = base_path.map( item => item * choose([2,4,5]));
+    seq1 = base_path.map( item => item * choose([2,3,4]));
     seq2 = seq1.map( item => item * -1); // reverse?
     newb.sequence = newb.sequence.concat(seq1);
     newb.sequence = newb.sequence.concat(seq2);
