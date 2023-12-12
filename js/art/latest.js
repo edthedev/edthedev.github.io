@@ -68,8 +68,10 @@ function setup() {
     newb.color = fresh_color();
     newb.color2 = fresh_color();
 
-    // base_path = [1,1, 1,-1, -1,-1, -1, 1];
-    base_path = [1,1,1,-1];
+    // base_path = [1,1, 1,-1, -1,-1, -1, 1]; // figure 8
+    base_path = [1,-1,.9,.9,1,-1,.8,.8,1,-1,1,1,.5,-.5,1,1,.5,-.5,-.2,-.2];
+
+    // base_path = [1,1,1,-1];
     seq1 = base_path.map( item => item * choose([2,4,5]));
     seq2 = seq1.map( item => item * -1); // reverse?
     newb.sequence = newb.sequence.concat(seq1);
