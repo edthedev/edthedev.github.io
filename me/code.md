@@ -15,6 +15,7 @@ I currently write most of my software in:
 - GoLang is my 'go-to' for [utilities that follow the Unix philosophy](https://github.com/edthedev/agenda) of doing one thing well.
 - C is still often the most practical option on [interesting hardware](/robots)
 - Scratch - [I teach kids to code!](http://edward.delaporte.us/learn2code/)
+- [Pyxel](/meta/pyxel) - I've been looking for the best next step for beginners that have mastered `Scratch`, and I think it may be `Pyxel.`
 - [Commodore Basic 2.0](/basic) - I find it relaxing. Don't judge me.
 - JavaScript - I make [art with JavaScript](/art/live).
 
