@@ -6,6 +6,7 @@ pagination:
     size: 20
 items: 
     # - {id: "latest", name: "Another Sketch - In Progress"}
+    - {id: "rise_and_fall", name: "Rise and Fall - 2023 December 11", desc: ""}
     - {id: "cracked_wall", name: "A Crack in the Wall - 2023 December 10", desc: ""}
     - {id: "lace", name: "Lace - 2023 September 27", desc: ""}
     - {id: "fractal_leaves", name: "Fractal Leaves - 2023 September 24", desc: "Animating fractals is fun."}
