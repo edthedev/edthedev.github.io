@@ -1,10 +1,8 @@
 ---
 layout: liveart.with.code.njk
-title: Another Fractal - 2023 December 10
-script: ['js/art/share/canvas.js', 'js/art/share/random.js', 'js/art/share/draw_kit.js', 'js/art/latest.js']
+title: A Crack in the Wall - 2023 December 11
+script: [ 'js/art/latest.js', 'js/art/share/setup_canvas.js', 'js/art/share/choose.js']
 tags: ['art']
-stub: 'latest'
+stub: 'cracked_wall'
 alt: ''
 ---
-
-

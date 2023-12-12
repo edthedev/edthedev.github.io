@@ -15,91 +15,97 @@ as long as you display this license and attribution.
 
 */
 
-function start_fractal() {
-  line_bit = new_line_segment(color(0,0,0));
-  line_bit.y = 200;
-  line_bit.length = 70;
-  line_bit.x = 300;
-  line_bit.degrees = 0; 
-  roty = random(40, 170);
-  do_fractal(line_bit);
-  line_bit.degrees += roty; 
-  do_fractal(line_bit);
-  line_bit.degrees += roty; 
-  do_fractal(line_bit);
-  /* 
-  line_bit.degrees += roty; 
-  do_fractal(line_bit);
-  line_bit.degrees += roty; 
-  do_fractal(line_bit);
-  */
+
+var weave = {
+  x: 0,
+  y: 0,
+  dx: 1,
+  dy: 1,
+  sequence: [],
+  size: 10,
+  color1: null,
+  color2: null
+};
+
+var pulse = 0;
+var beat = 30;
+
+function draw_weave(weave) {
+  fill(weave.color);
+  circle(weave.x,weave.y, weave.size);
+  fill(weave.color2);
+  circle(weave.x + weave.size,
+    weave.y + weave.size, 
+    weave.size / 2);
+  return weave;
 }
 
-async function do_fractal(bit) {
-  stroke(random(150, 255),random(150,255),random(150, 255));
-  const next_bit = structuredClone(draw_line_segment(bit));
-  next_bit.length = next_bit.length*.67;
-  next_bit.weight = next_bit.weight*.67;
-  next_bit.degrees = add_degrees(bit.degrees, 45);
-
-  if(next_bit.length > 1) {
-
-    await do_fractal(next_bit);
-    const bit2 = structuredClone(next_bit);
-    bit2.degrees = add_degrees(bit.degrees, -90);
-    await do_fractal(bit2);
-
-  }
+function anim_weave(weave) { 
+  weave.x += weave.dx;
+  weave.y += weave.dy;
+  return weave;
 }
 
-function tile_background(maxim_x, maxim_y) {
-
-  line_shade = 70;
-  stroke(line_shade, line_shade, line_shade);
-  fill(150,50,50);
-  background(maxim_x,maxim_y);
-  xp = 0;
-  yp = 0;
-  min_tile_size = maxim_y;
-  while(yp<maxim_y) {
-    tile_size = random(40,100);
-    console.log("size" + tile_size);
-    if(tile_size < min_tile_size)
-    {
-      min_tile_size = tile_size;
-      console.log("min tile is now " + min_tile_size);
-    }
-
-    rect(xp, yp, xp+tile_size, yp+tile_size);
-    xp += tile_size;
-    if(xp>maxim_x) {
-      xp=0;
-      yp+=min_tile_size;
-      min_tile_size = maxim_y;
-    }
-  }
+function fresh_color() {
+  let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  return c;
 }
 
 function setup() {
-  // maxim = .5 * window.innderWidth;
-  maxim_x = 600;
-  maxim_y = 400;
-  midline = maxim_y / 2;
-  myCanvas = createCanvas(maxim_x, maxim_y);
-  tile_background(maxim_x, maxim_y);
 
-  //make_horizon(0, 0, maxim_x, maxim_y);
-  // draw_horizon(0, 0, maxim_x, maxim_y);
-  // setup_season();
-  // draw_ground(myCanvas, maxim_y /2);
-  start_fractal();
-  console.log("setup done");
+  setup_canvas();
+  background('#222222');
+
+  maxline = 400;
+  balls = [];
+  item_count = random(3,5);
+
+  weave_template = Object(weave);
+  for(i=0;i<item_count;i++){
+    newb = Object.assign({}, weave_template);
+    newb.x = random(0,maxline);
+    newb.y = 100 + i * 40; // Make sure they each start offset a bit
+    newb.color = fresh_color();
+    newb.color2 = fresh_color();
+
+    // base_path = [1,1, 1,-1, -1,-1, -1, 1];
+    base_path = [1,1,1,-1];
+    seq1 = base_path.map( item => item * choose([2,4,5]));
+    seq2 = seq1.map( item => item * -1); // reverse?
+    newb.sequence = newb.sequence.concat(seq1);
+    newb.sequence = newb.sequence.concat(seq2);
+
+    console.debug(newb);
+    balls.push(newb);
+  }
+  noStroke();
+
+}
+
+function shift_weave(item) {
+  if(item.sequence.length > 0) {
+    item.dx = item.sequence.shift();
+    item.dy = item.sequence.shift();
+  } else {
+    item.dx = 0;
+    item.dy = 0;
+  }
+  return item;
 }
 
 function draw() {
+  if(pulse == 0) {
+    balls = balls.map( item => shift_weave(item) );
+  }
+  pulse++;
+  if(pulse > beat) {
+    pulse = 0;
+  }
+  balls = balls.map( item => anim_weave(item) );
+  balls = balls.map( item => draw_weave(item) );
 }
 
 function mouseClicked() {
-  // background(220);
-  // spinny(mouseX, mouseY, 20)
+  pulse = 0;
+  setup();
 }
