@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: Setup Pyxel
+title: Setup Pyxel On Ubuntu
 tags: ['blog', 'meta', 'pyxel']
 date: 2023-12-10
 ---
@@ -8,6 +8,8 @@ date: 2023-12-10
 ## Context
 
 Let's play with [Pyxel](https://github.com/kitao/pyxel) a new retro game engine called `Pyxel`, built with `Python`.
+
+> Warning: If you're using a Windows or Mac computer, use the [Pyxel Install Instructions](https://github.com/kitao/pyxel#how-to-install), instead.
 
 ## Setup
 
