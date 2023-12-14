@@ -1,6 +1,8 @@
 ---
 layout: blog.njk
 title: Team Values
+tags: blog
+date: 2023-09-01
 ---
 
 ## Principles of Agility in Cybersecurity

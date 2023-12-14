@@ -1,6 +1,8 @@
 ---
 layout: blog.njk
-title: Management Crash Course by Edward Delaporte
+title: Resources for Managers
+tags: blog
+date: 2022-09-01
 ---
 
 ## Article Context

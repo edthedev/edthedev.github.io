@@ -1,6 +1,8 @@
 ---
 layout: blog.njk
 title: Too Silly for Comic Book Movies
+tags: ['blog']
+date: 2023-09-01
 ---
 
 ## Too Silly for the Big Screen

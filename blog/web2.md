@@ -1,7 +1,9 @@
 ---
 layout: liveart.multi.script.njk
-title: Web 2.0 - Edward.Delaporte.us
+title: On Web 2.0
 script: ['/js/bubbles.js', '/js/jquery.min.js']
+tags: blog
+date: 2023-09-01
 ---
 
 ## Web 2.0
