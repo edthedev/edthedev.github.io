@@ -31,12 +31,12 @@ class App:
 
     def draw(self):
         pyxel.cls(6)
-        pyxel.text(x=40, y=50, s="Press Q to quit.", col=0)
+        pyxel.text(x=50, y=30, s="Press Q to quit.", col=0)
         pyxel.text(x=50, y=50, s="Bug is at: " + str(self.bug_x), col=0)
         pyxel.blt(x=self.bug_x, y=self.bug_y, # draw at bug X,Y
             img=0, # From image bank 0
             u=0, v=0, w=16, h=16, # Choose pixels 0,0 through 16,16
-            col=0 # Treat color 0 as transparent
+            colkey=0 # Treat color 0 as transparent
             )
 
 App()
