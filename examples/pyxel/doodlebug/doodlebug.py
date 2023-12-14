@@ -29,6 +29,10 @@ class App:
 
     def draw(self):
         pyxel.cls(0)
+        self.bug_x = 50
+        self.bug_y = 50
+        pyxel.text(x=50, y=50, 
+        s="Bug is at: " + str(self.bug_x), col=1)
         pyxel.blt(x=self.bug_x, y=self.bug_y, # draw at bug X,Y
             img=0, # From image bank 0
             u=0, v=0, w=8, h=8 # Choose pixels 0,0 through 16,16
