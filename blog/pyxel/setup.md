@@ -1,7 +1,8 @@
 ---
 layout: blog.njk
-title: Pyxel
-tags: ['blog', 'meta']
+title: Setup Pyxel
+tags: ['blog', 'meta', 'pyxel']
+date: 2023-12-10
 ---
 
 ## Context

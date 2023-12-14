@@ -1,0 +1,48 @@
+---
+title: Learn Pyxel
+---
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>{{ title }}</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> {{ title }} </h1>
+
+  {{ content | safe }}
+
+  <!-- List blog pages. -->
+  <nav class="more_nav" role="navigation">
+  <h2>Learn Pyxel</h2>
+  {%- for post in collections.pyxel %}
+  <li> <a href="{{post.url}}"> {{ post.data.title }} </a></li>
+  {% endfor -%}
+
+</div>
+{% include "_footer.njk" %}
+</html>
