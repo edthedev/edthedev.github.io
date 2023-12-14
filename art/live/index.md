@@ -1,6 +1,7 @@
 ---
 layout: gallery.njk
-title: Pixel Art by Edward Delaporte
+title: JavaScript Art
+tags: topic_index
 pagination:
     data: items
     size: 20

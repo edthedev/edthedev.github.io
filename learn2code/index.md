@@ -1,6 +1,8 @@
 ---
 layout: layout.njk
 title: Learn 2 Code - Edward Delaporte's Guide
+tags: topic_index
+date: 2023-01-01
 ---
 
 # Learn to Code

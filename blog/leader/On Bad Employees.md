@@ -1,8 +1,8 @@
 # On Bad Employees
 
-Spoiler: They are actually finishing their degree, or they have a kid going through a rough time, or a relative they care deeply for it's dying slowly.
+Spoiler: They are actually finishing their degree, or they have a kid going through a rough time, or a relative they care deeply for is dying slowly.
 
-These things are temporary. Pay them in extra loyalty during there's times (typically a year or two) and you will have a loyal colleague for decades.
+These things are temporary. Treat them with extra loyalty during these times - sadly often only a year or two - and you will have a loyal colleague for decades.
 
 The odds are that today you simply can't hire the people I can hire because you missed the chance to invest in them when I invested in them.
 

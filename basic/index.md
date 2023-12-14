@@ -1,6 +1,8 @@
 ---
 layout: basic.njk
-title: BASIC Programs by Edward Delaporte
+title: BASIC Programs
+tags: topic_index
+date: 2021-05-17
 ---
 
 ## BASIC Programs

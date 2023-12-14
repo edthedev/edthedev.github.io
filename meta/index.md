@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: How this Site is Built
-tags: ['blog', 'meta']
+tags: ['blog', 'meta', 'topic_index']
 ---
 
 ## Context

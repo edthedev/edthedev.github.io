@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
 title: Art by Edward Delaporte
+tags: topic_index
 eleventyNavigation:
   key: Art
   order: 30
