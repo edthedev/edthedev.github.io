@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Setup Pyxel On Ubuntu
-tags: ['blog', 'meta', 'pyxel']
+tags: ['blog', 'pyxel']
 date: 2023-12-10
 ---
 

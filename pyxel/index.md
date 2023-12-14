@@ -1,7 +1,6 @@
 ---
 layout: pyxel_index.njk
 title: Learn Pyxel
-tags: ['blog']
 date: 2023-12-11
 ---
 

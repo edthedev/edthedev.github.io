@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
-title: Lesson 01 - Doodle Bug
-tags: ['blog', 'meta', 'pyxel']
+title: Pyxel Lesson 01 - Doodle Bug
+tags: ['blog', 'pyxel']
 date: 2023-12-13
 ---
 
