@@ -31,14 +31,10 @@ class App:
 
     def draw(self):
         pyxel.cls(0)
-        # self.bug_x = 20
-        # self.bug_y = 20
-        pyxel.text(x=50, y=50, 
-            s="Bug is at: " + str(self.bug_x), col=7)
-        pyxel.rect(x=self.bug_x, y=self.bug_y,
-            w=16, h=16, col=7)
+        pyxel.text(x=40, y=50, s="Press Q to quit.")
+        pyxel.text(x=50, y=50, s="Bug is at: " + str(self.bug_x), col=7)
         pyxel.blt(x=self.bug_x, y=self.bug_y, # draw at bug X,Y
-            img=1, # From image bank 0
+            img=0, # From image bank 0
             u=0, v=0, w=16, h=16 # Choose pixels 0,0 through 16,16
             )
 
