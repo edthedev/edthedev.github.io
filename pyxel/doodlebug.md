@@ -7,7 +7,7 @@ date: 2023-12-13
 
 ## About Doodle Bug
 
-Doodle Bug is an example program to learn Pyxel.
+Doodle Bug is an example program to learn [Python](https://docs.python.org/3/), using [Pyxel](https://github.com/kitao/pyxel).
 
 ![an animation of doodle bug](/img/pyxel/doodlebug.gif)
 
