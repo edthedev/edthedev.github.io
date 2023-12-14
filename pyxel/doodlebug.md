@@ -47,6 +47,8 @@ Open a text editor, and copy the following code into it. Save it as `doodlebug.p
 pxyel run doodlebug.py
 ```
 
+You can also [click here to try Doodlebug](/examples/pyxel/doodlebug.html).
+
 ## Step 4: Remix!
 
 Open `doodlebug.py` in your text editor, and change some numbers, save the file, and run the program again so see what changed.
