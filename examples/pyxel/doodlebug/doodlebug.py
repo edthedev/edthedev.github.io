@@ -44,8 +44,8 @@ class App:
 
         p = Pixel(self.bug_x, self.bug_y, self.color)
         self.pixels.append(p)
-        if(len(self.pixels)>200):
-            self.pixels.pop()
+        if(len(self.pixels)>500):
+            self.pixels.pop(0)  # Remove oldest pixel after 2000
 
     def draw(self):
         pyxel.cls(6)
