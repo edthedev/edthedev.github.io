@@ -22,7 +22,7 @@ After you [Install Pyxel](https://github.com/kitao/pyxel#how-to-install), you ca
 Start up the `Pyxel` editor:
 
 ```sh
-pyxel edit redlight.pyxres
+pyxel edit redlight
 ```
 
 Now draw a runner in left window.
