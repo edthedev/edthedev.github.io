@@ -31,6 +31,12 @@ class App:
         if pyxel.btn(pyxel.KEY_RIGHT) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_RIGHT):
             self.runner_x = min(self.runner_x + 2, pyxel.width - 16)
 
+        if pyxel.btn(pyxel.KEY_UP) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_UP):
+            self.runner_y = max(self.runner_y - 2, 0)
+        if pyxel.btn(pyxel.KEY_DOWN) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_DOWN):
+            self.runner_y = min(self.runner_y + 2, pyxel.width - 16)
+
+
     def draw(self):
         pyxel.cls(6)  # Clear the screen to a light grey
         pyxel.blt(0, 88, 0, 0, 88, 160, 32)
