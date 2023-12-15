@@ -19,19 +19,20 @@ class App:
 
         self.runner_x = 0
         self.runner_y = 75
+        self.runner_dy = 0
 
         pyxel.run(self.update, self.draw)
 
     def update(self):
-        self.update_player()
+        self.update_runner()
 
-    def update_player(self):
+    def update_runner(self):
         if pyxel.btn(pyxel.KEY_LEFT) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_LEFT):
-            self.player_x = max(self.player_x - 2, 0)
+            self.runner_x = max(self.runner_x - 2, 0)
         if pyxel.btn(pyxel.KEY_RIGHT) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_RIGHT):
-            self.player_x = min(self.player_x + 2, pyxel.width - 16)
-        self.player_y += self.player_dy
-        self.player_dy = min(self.player_dy + 1, 8)
+            self.runner_x = min(self.runner_x + 2, pyxel.width - 16)
+        self.runner_y += self.runner_dy
+        self.runner_dy = min(self.runner_dy + 1, 8)
 
     def draw(self):
         pyxel.cls(6)  # Clear the screen to a light grey
