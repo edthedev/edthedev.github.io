@@ -1,6 +1,8 @@
 ---
 layout: blog.njk
 title: Markdown Tips by Edward Delaporte
+tags: ['blog']
+date: 2024-02-12
 ---
 
 ## Generating Documents
