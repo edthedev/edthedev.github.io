@@ -5,6 +5,7 @@ script: ['/js/art/share/canvas.js', '/js/art/share/random.js', '/js/art/80s_carp
 tags: ['art']
 stub: '80s_carpet'
 alt: 'Randomly generated pixel art of bright colored zigzagging stripes on a dark background'
+date: 2021-07-28
 ---
 
 # 1980s Carpet
