@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Pyxel Lesson 01 - Red Light, Green Light
-tags: ['blog', 'pyxel']
+tags: ['pyxel']
 date: 2023-12-14
 ---
 
