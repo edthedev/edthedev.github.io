@@ -15,14 +15,14 @@ The more familiar a person is with [Ansible][8], the less sense the previous sen
 
 I'm sure you have questions. So do I.
 
-> Why?! Just why?
+### Question 1: Why?! Just why?
 
 I've had [scripts to quickly setup my laptop][20] for a long time. 
 I want the same reliability when I get a new phone.
 
 [20]: https://github.com/edthedev/dotfiles
 
-> And why GrapheneOS?
+### Question 2: And why GrapheneOS?
 
 - [GrapheneOS][27] is a privacy centric build of Android. The 'street cred' I get as a Cybersecurity professional is worth the effort.
 - I also wanted to see just how locked or open my phone hardware is. After all, [If you can't fix it, you don't own it.](https://hackaday.com/2015/09/15/the-rise-of-the-fix-it-culture/)
@@ -30,10 +30,10 @@ I want the same reliability when I get a new phone.
 
 [27]: https://grapheneos.org/
 
-> Ansible is meant for large scale server orchestratiion, but you used it to manage your phone?
+### Question 3: Ansible is meant for large scale server orchestratiion, but you used it to manage your phone?
 
 Only sort of. Barely. It hardly counts.
 
-> Do you owe the Ansible team some kind of apology?
+### Question 4: Do you owe the Ansible team some kind of apology?
 
-Probably.
+I probably do.
