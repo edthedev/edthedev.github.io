@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://edward.delaporte.us">
+  <title>Edward Delaporte&#39;s Blog</title>
+  <subtitle></subtitle>
+  <link href="https://edward.delaporte.us/atom.xml" rel="self"/>
+  <link href="https://edward.delaporte.us"/>
+  <updated>2024-03-06T17:37:09Z</updated>
+  <id>https://edward.delaporte.us</id>
+  <author>
+    <name>Edward Delaporte</name>
+  </author>
+  <entry>
+    <title>HELLO in the Pikachu Programming Language</title>
+    <link href="https://edward.delaporte.us/pikachu/"/>
+    <updated>2024-03-06T17:37:09Z</updated>
+    <id>https://edward.delaporte.us/pikachu/</id>
+    <content xml:lang="en" type="html">HELLO in the Pikachu Programming Language</content>
+  </entry>
+  <entry>
+    <title>Create a MicroSite on AWS S3</title>
+    <link href="https://edward.delaporte.us/blog/s3/"/>
+    <updated>2024-03-06T17:37:09Z</updated>
+    <id>https://edward.delaporte.us/blog/s3/</id>
+    <content xml:lang="en" type="html">Create a MicroSite on AWS S3</content>
+  </entry>
+  <entry>
+    <title>DNS for a static website on AWS S3</title>
+    <link href="https://edward.delaporte.us/blog/s3/dns/"/>
+    <updated>2024-03-06T17:37:09Z</updated>
+    <id>https://edward.delaporte.us/blog/s3/dns/</id>
+    <content xml:lang="en" type="html">DNS for a static website on AWS S3</content>
+  </entry>
+  <entry>
+    <title>Misuing Ansible to Improve my phone OS</title>
+    <link href="https://edward.delaporte.us/blog/grapheneos/"/>
+    <updated>2024-03-06T17:37:09Z</updated>
+    <id>https://edward.delaporte.us/blog/grapheneos/</id>
+    <content xml:lang="en" type="html">Misuing Ansible to Improve my phone OS</content>
+  </entry>
+  <entry>
+    <title>Lace - 2023 September 27</title>
+    <link href="https://edward.delaporte.us/art/live/lace/"/>
+    <updated>2024-03-06T17:37:09Z</updated>
+    <id>https://edward.delaporte.us/art/live/lace/</id>
+    <content xml:lang="en" type="html">Lace - 2023 September 27</content>
+  </entry>
+</feed>

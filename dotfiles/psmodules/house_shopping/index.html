@@ -1,0 +1,32 @@
+<div class="heading-wrapper h2">
+<h2 id="use">Use</h2>
+<a class="anchor" href="#use" aria-labelledby="use"><span hidden>#</span></a></div>
+<p>Call <code>Add-Addresses</code> to copy records from <code>Addresses.csv</code> to <code>Address_Ddetails.csv</code>.</p>
+<p>Call <code>Add-AddressLocations</code> to fetch latitude and longitude for all addresses in <code>Address_Details.csv</code>.</p>
+<div class="heading-wrapper h2">
+<h2 id="reference">Reference</h2>
+<a class="anchor" href="#reference" aria-labelledby="reference"><span hidden>#</span></a></div>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/powershell/module/az.maps/?view=azps-10.4.1&amp;viewFallbackFrom=azps-10.0.0">Azure Maps</a></li>
+<li>https://learn.microsoft.com/en-us/azure/azure-maps/how-to-search-for-address</li>
+</ul>
+<p>https://geekeefy.wordpress.com/2016/05/17/powershell-module-for-google-map/</p>
+<div class="heading-wrapper h2">
+<h2 id="setup">Setup</h2>
+<a class="anchor" href="#setup" aria-labelledby="setup"><span hidden>#</span></a></div>
+<p>Make sure that PowerShell 7 or higher is installed:</p>
+<pre><code class="language-powershell">if($PSVersionTable.PSVersion.Major &lt; 7) {
+    winget install --id Microsoft.Powershell --source winget
+}
+
+Then inside PowerShell 7, install the Az module:
+
+```powershell
+Install-Module -Name Az -Repository PSGallery -Force
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="subscription-key">Subscription Key</h3>
+<a class="anchor" href="#subscription-key" aria-labelledby="subscription-key"><span hidden>#</span></a></div>
+<p>Set your subscription key:</p>
+<pre><code class="language-powershell">$env:AzMapsSubKey=&quot;&lt;your key here&gt;&quot;
+</code></pre>

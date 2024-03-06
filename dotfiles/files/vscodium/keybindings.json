@@ -1,0 +1,53 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "shift+alt+1",
+        "command": "journal.note"
+    },
+    {
+        "key": "shift+alt+2",
+        "command": "journal.today"
+    },
+    {
+        "key": "alt+right",
+        "command": "journal.tomorrow"
+    },
+    {
+        "key": "alt+left",
+        "command": "journal.yesterday"
+    },
+    {
+        "key": "shift+alt+5",
+        "command": "remoteTargets.focus"
+    },
+    {
+        "key": "shift+alt+6",
+        "command": "vscode-journal-view-explorer.focus"
+    },
+    {
+        "key": "shift+alt+3",
+        "command": "workbench.view.search.focus"
+    },
+    {
+        "key": "shift+alt+6",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "shift+alt+4",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+alt+5",
+        "command": "workbench.action.toggleMaximizedPanel"
+    }
+]

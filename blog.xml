@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://edward.delaporte.us/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EdTheDev&#39;s Blog</title>
+    <link>https://edward.delaporte.us/</link>
+    <description></description>
+    <language>en</language>
+    <item>
+      <title>HELLO in the Pikachu Programming Language</title>
+      <link>https://edward.delaporte.us/pikachu/</link>
+      <description>HELLO in the Pikachu Programming Language
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/pikachu/</guid>
+    </item>
+    <item>
+      <title>On Slide Decks with JavaScript</title>
+      <link>https://edward.delaporte.us/meta/slides/</link>
+      <description>On Slide Decks with JavaScript
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/meta/slides/</guid>
+    </item>
+    <item>
+      <title>How this Site is Built</title>
+      <link>https://edward.delaporte.us/meta/</link>
+      <description>How this Site is Built
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/meta/</guid>
+    </item>
+    <item>
+      <title>A Dockerfile for EleventyJS</title>
+      <link>https://edward.delaporte.us/meta/dockerfile/</link>
+      <description>A Dockerfile for EleventyJS
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/meta/dockerfile/</guid>
+    </item>
+    <item>
+      <title>Languages I Code In</title>
+      <link>https://edward.delaporte.us/me/code/</link>
+      <description>Languages I Code In
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/me/code/</guid>
+    </item>
+    <item>
+      <title>Linux on my Surface Go</title>
+      <link>https://edward.delaporte.us/blog/surfacego/</link>
+      <description>Linux on my Surface Go
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/surfacego/</guid>
+    </item>
+    <item>
+      <title>Create a MicroSite on AWS S3</title>
+      <link>https://edward.delaporte.us/blog/s3/</link>
+      <description>Create a MicroSite on AWS S3
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/s3/</guid>
+    </item>
+    <item>
+      <title>IAM for an S3 Bucket</title>
+      <link>https://edward.delaporte.us/blog/s3/iam/</link>
+      <description>IAM for an S3 Bucket
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/s3/iam/</guid>
+    </item>
+    <item>
+      <title>DNS for a static website on AWS S3</title>
+      <link>https://edward.delaporte.us/blog/s3/dns/</link>
+      <description>DNS for a static website on AWS S3
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/s3/dns/</guid>
+    </item>
+    <item>
+      <title>Add custom URL for the OpenShift console</title>
+      <link>https://edward.delaporte.us/blog/openshift/cname/</link>
+      <description>Add custom URL for the OpenShift console
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/openshift/cname/</guid>
+    </item>
+    <item>
+      <title>Misuing Ansible to Improve my phone OS</title>
+      <link>https://edward.delaporte.us/blog/grapheneos/</link>
+      <description>Misuing Ansible to Improve my phone OS
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/grapheneos/</guid>
+    </item>
+    <item>
+      <title>Friendship Is Magic</title>
+      <link>https://edward.delaporte.us/blog/friendship/</link>
+      <description>Friendship Is Magic
+</description>
+      <pubDate>Wed, 06 Mar 2024 17:37:09 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/friendship/</guid>
+    </item>
+    <item>
+      <title>Markdown Tips by Edward Delaporte</title>
+      <link>https://edward.delaporte.us/blog/markdown/</link>
+      <description>Markdown Tips by Edward Delaporte
+</description>
+      <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/markdown/</guid>
+    </item>
+    <item>
+      <title>Pyxel Lesson 01 - Doodle Bug</title>
+      <link>https://edward.delaporte.us/pyxel/doodlebug/</link>
+      <description>Pyxel Lesson 01 - Doodle Bug
+</description>
+      <pubDate>Wed, 13 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://edward.delaporte.us/pyxel/doodlebug/</guid>
+    </item>
+    <item>
+      <title>Setup Pyxel On Ubuntu</title>
+      <link>https://edward.delaporte.us/pyxel/setup/</link>
+      <description>Setup Pyxel On Ubuntu
+</description>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://edward.delaporte.us/pyxel/setup/</guid>
+    </item>
+    <item>
+      <title>On Web 2.0</title>
+      <link>https://edward.delaporte.us/blog/web2/</link>
+      <description>On Web 2.0
+</description>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/web2/</guid>
+    </item>
+    <item>
+      <title>Team Values</title>
+      <link>https://edward.delaporte.us/blog/team/values/</link>
+      <description>Team Values
+</description>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/team/values/</guid>
+    </item>
+    <item>
+      <title>Too Silly for Comic Book Movies</title>
+      <link>https://edward.delaporte.us/blog/comics/</link>
+      <description>Too Silly for Comic Book Movies
+</description>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/comics/</guid>
+    </item>
+    <item>
+      <title>Resources for Managers</title>
+      <link>https://edward.delaporte.us/blog/management/</link>
+      <description>Resources for Managers
+</description>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://edward.delaporte.us/blog/management/</guid>
+    </item>
+  </channel>
+</rss>
