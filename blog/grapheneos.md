@@ -1,12 +1,20 @@
 ---
 layout: blog.njk
-title: Misuing Ansible to Void my Phone Warranty
+title: Misuing Ansible to Improve my phone OS
 tags: ['blog', 'rss']
 ---
 
 I wrote an [Ansible role for GrapheneOS][7] to configure `localhost` in preparation for installing `GrapheneOS` on a USB connected smartphone.
 
 The more familiar a person is with [Ansible][8], the less sense the previous sentence probably makes.
+
+## Warranty
+
+A quick correction: [Installing GrapheneOS on a compatible phone does not, in itself, void the warranty.](https://discuss.grapheneos.org/d/10169-full-chat-transcript-about-warranty-with-custom-oses)
+
+Regardless please don't use my recipe above. Use the [official GrapheneOs installers](https://grapheneos.org/install/). 
+
+I share my recipe only as a reference for what is possible for advanced Ansible users with very unusual needs.
 
 [7]: https://github.com/edthedev/ansible-grapheneos
 [8]: https://www.ansible.com/
