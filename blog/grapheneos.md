@@ -26,7 +26,7 @@ I want the same reliability when I get a new phone.
 
 - [GrapheneOS][27] is a privacy centric build of Android. The 'street cred' I get as a Cybersecurity professional is worth the effort.
 - I also wanted to see just how locked or open my phone hardware is. After all, [If you can't fix it, you don't own it.](https://hackaday.com/2015/09/15/the-rise-of-the-fix-it-culture/)
-- I also enjoy the experience on GrapheneOS much more than stock Android. Being open source, GrapheneOs open comes with [a lot less crapware](https://craphound.com/tag/enshittification/).
+- I also enjoy the experience on GrapheneOS much more than stock Android. Being open source, GrapheneOs comes with [a lot less crapware](https://craphound.com/tag/enshittification/).
 
 [27]: https://grapheneos.org/
 
