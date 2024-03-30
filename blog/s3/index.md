@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Create a MicroSite on AWS S3
-tags: ['blog', 'rss']
+tags: ['blog', 'rss', 'topic_index']
 ---
 
 How to setup a micro-site on AWS S3 with custom DNS.
