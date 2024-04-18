@@ -75,3 +75,4 @@ These are just ways to code that happen to amuse me.
 
  - [Pikachu Programming Language](/pikachu/)
  - [X16 BASIC on Raspberry Pi](/basic/x16pi)
+ - [Friendship is Magic](/blog/friendship/)
