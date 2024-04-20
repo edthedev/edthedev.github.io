@@ -2,6 +2,7 @@
 layout: blog.njk
 title: Backup MineTest Worlds with Synology
 tags: ['blog', 'rss']
+date: 2024-03-01
 ---
 
 ## About 

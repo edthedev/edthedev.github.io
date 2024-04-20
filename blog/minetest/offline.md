@@ -2,6 +2,7 @@
 layout: blog.njk
 title: Play MineTest locally with Ubuntu
 tags: ['blog', 'rss']
+date: 2024-03-01
 ---
 
 ## About
