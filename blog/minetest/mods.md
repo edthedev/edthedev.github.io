@@ -64,6 +64,8 @@ The following mods are ones that I consider **essential** for enjoying `MineGame
 - Veteran players with player damage disabled still have their work cut out keeping their sheep alive.
 - Essential because `MineTest` really shines when mods that add tons of variety, like this one, are enabled.
 
+> Most mobs are aggressively trying to murder your pet sheep.
+
 `Movement Essentials` solves several practial movement challenges in one mod.
 - Activate a `mese crystal` to teleport to your bed/spawn
 - Throw a `mese shard` to teleport a short distance
@@ -105,9 +107,10 @@ While I don't consider these mods **essential**, I encourage installing many mod
 `Beautiful Flowers` adds so many kinds of flowers.
 - Adds so many different flowers to the game world.
 - When running `MineCraft: Java Edition` I had to remove my flowers mod, due to server resource costs. I have not had any resource issues with adding many mods like this one, on `MineTest`.
-- Enjoy some guilt-free flowers.
 - `Beautiful Flowers` does add a page or two of flowers to the recipe book search. There are so many flowers.
 - I almost marked this as essential, because it highlights for new players why they should bother trying `MineTest` if they already play `MineCraft`.
+
+> **Enjoy some guilt-free flowers.**
 
 `Bees` adds bees, honey and crafting recipes for beekeeping.
 
