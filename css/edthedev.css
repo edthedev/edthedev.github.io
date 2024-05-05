@@ -152,6 +152,12 @@ code {
   max-width: 95%;
 }
 
+/* Make quotes stand out a bit more */
+blockquote {
+  border-style: outset;
+  padding: 1em;
+}
+
 .skip-to button {
 padding: 0 0 0 0;
 }
