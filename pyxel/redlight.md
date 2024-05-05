@@ -61,8 +61,6 @@ Open a text editor, and copy the following code into it. Save it as `redlight.py
 pxyel run redlight.py
 ```
 
-You can also [click here to try redlight](/examples/pyxel/redlight.html).
-
 ## Step 4: Remix!
 
 Open `redlight.py` in your text editor, and change some numbers, save the file, and run the program again so see what changed.
