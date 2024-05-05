@@ -76,6 +76,10 @@ My modest `MineTest` server runs smoothly with half a dozen connected players **
 
 `i3` rebuilds the inventory panel (`press I`) to add support for many other mods.
 
+`Signs Lib` causes signt text to display directly on each sign, rather than a separate floating display.
+- Signs are great for labeling things.
+- Essential because new players expect sign text to appear directly on signs.
+
 `SkinsDB` adds more options for setting player appearance.
 - I haven't given a lot of thought to player appearance. 
 - On my small server, this allows us all to not look identical.
@@ -182,6 +186,12 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - Teleporters are expensive, but can connect to each-other from anywhere.
 - Doctor Who fans may wish to dye their teleporters blue.
 
+`Ultralight Trike` adds a motor propelled glider.
+- Flying is fun.
+- Controls may be unintuitive to new players.
+- Requires `Biofuel`, which many other great mods also require.
+- One of the few all-in-one travel solutions, since it does not require finding a cliff, building a tall tower, or rocket boots (`More boots`), the way most glider mods do (`Hang Glider`, `Realistic Hang Glider`, `Movement Essentials (Umbrella)`)
+
 `Wilhelmines Animal World` adds so many animals.
 
 `Wilhelmines Living Jungle` adds a jungle biome.
@@ -250,6 +260,7 @@ These are mods that I recommend, but am not currently using.
 - Be kind, don't park your blimp crashed into another players wall. They cannot move or destroy it.
 - This was quite fun.
 - I removed this mod because we found more practical ways to explore together. Most notably `Legboat` and `Realistic Hang Gliders`.
+
 
 ## A Mod List Snapshot
 
