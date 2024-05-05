@@ -161,7 +161,9 @@ While I don't consider these mods **essential**, I encourage installing many mod
 
 `Pie` adds recipes for pie.
 - I don't even run with a stamina mob, and I still want to make pie.
-- With `LWScratch` you can teach a robot to make pie. **Everyone wants a robot that makes pie.**
+- With `LWScratch` you can teach a robot to make pie. 
+
+> **Everyone wants a robot that makes pie.**
 
 `Pipeworks` adds pipes for moving liquids and tubes for moving items and item stacks.
 - Add a `vacuum tube` to suck up dropped items, like `saplings`.
