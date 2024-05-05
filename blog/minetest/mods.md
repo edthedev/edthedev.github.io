@@ -5,6 +5,94 @@ tags: ['blog', 'rss']
 date: 2024-05-05
 ---
 
+## Essentials
+
+`Mobs Animal` adds animals.
+
+`Mob Horse` adds a horse that you can tame and ride.
+
+`Movement Essentials` solves several practial movement challenges in one mod.
+- Activate a `mese crystal` to teleport to your bed/spawn
+- Throw a `mese shard` to teleport a short distance
+- Umbrella caused bugs for us. My players avoid using the Umbrella. It may be a conflict with `Realistic Hang Gliders`. If I figure out the issue, I'll submit a pull request.
+
+`More Trees` adds more trees.
+
+`i3` rebuilds the inventory panel (`press I`) to add support for many other mods.
+
+
+## Favorites
+
+`Anvil` allows repairing items that wear out, such as tools and clothing.
+- This is not an essential mod, because `MineGame` wear is tuned quite well with the resource spawn.
+- Players can still maintain having excellent tier items without this mod.
+- If one of your other mods tunes the resource spawn rate, you might find this mod essential.
+- Items enchanted with `X Enchanting` can still be repaired.
+- The iron hammer wears out over time, but can be repaired with another iron hammer.
+- Ability to repair iron hammers can be turned off, if you want to have an unavoidable cost to doing repairs. I leave it on, because iron is so available, anyway.
+
+`Headanim` lets other players see which way you are looking.
+
+`Item Frames and Pedestals` allows you to mount itmes on your walls, or on a stone pillar.
+- Compliments to `Storage Drawers` since it stores items that `Storage Drawers` cannot, such as tools.
+- A good option for labeling your chests in  a sorting machine built with `Pipeworks`.
+
+`LWScratch` adds robots you can craft and program in a graphical language similar to [Scratch](https://scratch.mit.edu/).
+- Make a robot do boring repetitive parts of your builds.
+- Grab a copy of the [LWScratch Docs](https://github.com/loosewheel/lwscratch/tree/master/docs) to help get started.
+- See my [MineTest Robots Guide](/blog/minetest/robots) for more help getting started.
+
+`More Boots` adds boots for jumping high and running fast.
+- The fast boots caused us server lag when used for exploring new areas.
+- We use the fast boots only to run within explored areas.
+- Jumping boots are a great way to start a trip using `Realistic Hang Gliders`.
+- Pairs well with `Anvil` to repair your expensive boots.
+- The fastest and highest boots are very fast and very high. Inconveniently so, for both.  I believe this is by design, because it's fun.
+- For best experience, use 2nd to highest tier of each boot.
+
+`Ore Deposits` causes additional ore to spawn on cleared stone floors.
+- Makes ore resources renewable.
+- Prevents a stylish quary build from running out of useful ore.
+- Solves the classic 'I generated this world before I knew I wanted this interesting new ore' problem.
+- Makes a lot of ore spawn.
+- Will clutter every cleared stone floor in your builds with fresh ore. I install polished `stone block` floors to get a similar look without ore spawn.
+
+`Pie` adds recipes for pie.
+- I don't even run with a stamina mob, and I still want to make pie.
+- With `LWScratch` you can teach a robot to make pie. **Everyone wants a robot that makes pie.**
+
+`Realistic Hang Glider` provides a cheap practical MineTest equivalent to MineCraft Elytra.
+- Inexpensive recipe (3 wool, 3 sticks)
+- Includes rockets for extra boost.
+- Fun way to visit friends, do tricks, and get a birds eye view of your builds
+
+`Storage Drawers` provides storage that automatically displays the single stacked item in each drawer.
+- Pragmatic storage solution
+- Partial block items will not display correctly.
+- Cannot store items that can wear out, such as most tools.
+- Cannot connect to vacuum tube sorter machine built in `Pipeworks`. So I use reguar chests and `Item Frames` for my sorting machines.
+- Adds a delightful ambiance to your workshop
+
+`TavelNet` allows building a network of teleporters, and a practical elevator recipe
+- Essential, because the depth in MineTest is 10,000 blocks, and many essential ores seem to only spawn down around 3,000. 
+- 3,000 blocks is a lot is when you're digging straight down with a pickaxe, violating the first rule. 
+- 3,000 blocks is even more when you're climbing a ladder to check on your sheep farm.
+- Elevators are cheap, but finicky to setup. They must be directly vertical of eachother to connect.
+- Teleporters are expensive, but can connect to each-other from anywhere.
+- Doctor Who fans may wish to dye their teleporters blue.
+
+`X Enchanting` adds a table that can add enchantments to tools, by spending `mese crystals` (redstone).
+- Add classic enchantments such as `fortune`, `unbreaking` and `efficiency`.
+- Pair with `Anvil` to allow repairing your favorite enchanted pickaxe.
+- The crafting recipe requires `obsidian` with can be really hard to obtain in MineGame.
+
+
+## A Mod List Snapshot
+
+The below is presented raw, for your possible further exploration.
+
+Yes, I'm a Cybersecurity guy giving you an inventory of software on a system I host. It's a toy. I'm trying to help you have fun with your own toys. Be civil.
+
 ```sh
 Issued command: /help mods
 /mods: List mods installed on the server
