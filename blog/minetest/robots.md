@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: Play MineTest locally with Ubuntu
+title: Play with Robots in MineTest
 tags: ['blog', 'rss']
 date: 2024-04-19
 ---
