@@ -5,7 +5,23 @@ tags: ['blog', 'rss']
 date: 2024-05-05
 ---
 
+## About
+
+The best reason to play `MineGame` on the `MineTest` engine is the diversity of `mods` (game modifications) available. 
+
+Seasoned `MineCraft: Java Edition` server admins will have learned that the practical limit of supported mods on moderated resources multiplayer server may be around one dozen.
+
+But `MineTest` was built from the ground-up with modding in mind. 
+
+My modest `MineTest` server runs smoothly with half a dozen connected players **while running around 80 plugins**.
+
 ## Essentials
+
+`Cleaner` replaces any unrecognized objects from uninstalled mods with a simple red block.
+- Essential because you can remove mods that are not working, without worrying too much about unrecognized blocks left behind.
+- I believe this is preventing server crashes.
+- Unrecognized blocks can be picked up and trashed.
+- Gives a server admin freedom to remove mods that are not right for that server.
 
 `Farming Redo` adds so many crops.
 - Essential because it makes seeds from all kinds of crops spawn randomly when a player digs in grass
@@ -40,6 +56,8 @@ date: 2024-05-05
 
 ## Favorites
 
+While I don't consider these mods **essential**, I encourage installing many mods as the server admin has interest in. `MineTest` can handle it.
+
 `Anvil` allows repairing items that wear out, such as tools and clothing.
 - This is **not** an essential mod, because `MineGame` wear is tuned quite well with the resource spawn.
 - Players can still maintain having excellent tier items without this mod.
@@ -47,6 +65,10 @@ date: 2024-05-05
 - Items enchanted with `X Enchanting` can still be repaired.
 - The iron hammer wears out over time, but can be repaired with another iron hammer.
 - Ability to repair iron hammers can be turned off, if you want to have an unavoidable cost to doing repairs. I leave it on, because iron is so available, anyway.
+
+`Beautiful Flowers` adds so many kinds of flowers.
+- No mod better highlights the best 
+- I almost marked this as essential, because one of the best reasons to play MineTest, rather than MineCraft, is the diversity of mods.
 
 `Bows` adds bows and arrows.
 - Not essential to me, because I have terrible aim.
@@ -123,6 +145,12 @@ date: 2024-05-05
 - Teleporters are expensive, but can connect to each-other from anywhere.
 - Doctor Who fans may wish to dye their teleporters blue.
 
+`Wilhelmines Animal World` adds so many animals.
+
+`X Bows` adds bows and arrows.
+- Not essential, to me, because my aim is terrible.
+- Somehow I am running both this and `Bows`. I should look into that.
+
 `X Enchanting` adds a table that can add enchantments to tools, by spending `mese crystals` (redstone).
 - Add classic enchantments such as `fortune`, `unbreaking` and `efficiency`.
 - Pair with `Anvil` to allow repairing your favorite enchanted pickaxe.
@@ -130,6 +158,8 @@ date: 2024-05-05
 
 
 ## Honorable Mentions
+
+These are mods that I recommend, but am not currently using.
 
 `Doctor Who Tardis` adds a working Tardis, Cybermen and Daleks
 - The working Tardis is seriously cool.
@@ -149,6 +179,10 @@ date: 2024-05-05
 - For lower powered or higher player count servers, I would recommend this instead of `Realistic Hang Glider`
 - Pairs well with `More Boots` to get rocket boots to get a jumping start. 
 - I give my players discounted or free rocket boots to help them avoid litering the wilderness with dirt pillars.
+
+`Stairs Redo` adds recipes for stairs in so many more materials
+- I removed this mod because the recipe inventory is already 28 pages long on our server, and this mod adds even more pages. (Paging is a preferred way to look for recipes on Steamdeck, due to the virual keyboard being harder to access.)
+- Great for adding colors and textures to builds 
 
 ## A Mod List Snapshot
 
