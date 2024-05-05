@@ -17,6 +17,12 @@ My modest `MineTest` server runs smoothly with half a dozen connected players **
 
 ## Essentials
 
+`MineGame` is the default game for playing in `MineTest`. `MineGame` is minimalist, by design, so that server administrators can create customize their game world by choosing `mods`. 
+
+Without `mods`, `MineGame` does not even include any trees.
+
+The following mods are ones that I consider **essential** for enjoying `MineGame` on the `MineTest` engine. `MineGame` is perfectly playable without these, but will lack some gameplay element that I consider critical.
+
 `Charcoal` allows burning wood blocks to create an alternate coal-like item.
 - Allows crafting torches before the players have established their first deep mine.
 - Essential because light sources can be hard to come by, early game.
