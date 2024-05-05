@@ -17,6 +17,11 @@ My modest `MineTest` server runs smoothly with half a dozen connected players **
 
 ## Essentials
 
+`Charcoal` allows burning wood blocks to create an alternate coal-like item.
+- Allows crafting torches before the players have established their first deep mine.
+- Essential because light sources can be hard to come by, early game.
+- Essential because requiring a deep mine to generate light of any kind is a significant immersion break in the early game.
+
 `Cleaner` replaces any unrecognized objects from uninstalled mods with a simple red block.
 - Essential because you can remove mods that are not working, without worrying too much about unrecognized blocks left behind.
 - I believe this is preventing server crashes.
@@ -44,15 +49,36 @@ My modest `MineTest` server runs smoothly with half a dozen connected players **
 
 `Mob Horse` adds a horse that you can tame and ride.
 
+`Mobs Monster` adds more monsters
+- Gives players tons of interesting monsters to fight.
+- Most mobs are aggressively trying to murder your pet sheep (and all other living things).
+- The `MineGame` mob AI is much meaner than you might expect.
+- Build protections, or lose your sheep / horses / moose / chickens / ostriches / ...
+- I like to uncheck `Enable Damage` to allow invincible new players to learn the game without huddling underground at night in terror. Mechanics for vereran players are hardly affected, since great armor is cheap for players who know where to find diamond and mese. 
+- Veteran players with player damage disabled still have their work cut out keeping their sheep alive.
+- Essential because `MineTest` really shines when mods that add tons of variety, like this one, are enabled.
+
 `Movement Essentials` solves several practial movement challenges in one mod.
 - Activate a `mese crystal` to teleport to your bed/spawn
 - Throw a `mese shard` to teleport a short distance
 - Umbrella caused bugs for us. My players avoid using the Umbrella. It may be a conflict with `Realistic Hang Gliders`. If I figure out the issue, I'll submit a pull request.
 
-`More Trees` adds more trees.
+`More Blocks` adds more blocks.
+- Essential because more is better.
+
+`More Ores` adds more ores.
+- Essential because more is better.
+
+`More Trees!` adds more trees.
+- Essential because more is better.
+- `MineGame` is intentionally minimalist and does not include any trees without a mod.
+- These trees are great. You want them.
 
 `i3` rebuilds the inventory panel (`press I`) to add support for many other mods.
 
+`SkinsDB` adds more options for setting player appearance.
+- I haven't given a lot of thought to player appearance. 
+- On my small server, this allows us all to not look identical.
 
 ## Favorites
 
@@ -72,6 +98,8 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - Enjoy some guilt-free flowsers.
 - It does add a page or two of flowers to the recipe book search.
 - I almost marked this as essential, because it highlights for new players why they should bother trying `MineTest` if they already play `MineCraft`.
+
+`Bees` adds bees, honey and crafting recipes for beekeeping.
 
 `Bows` adds bows and arrows.
 - Not essential to me, because I have terrible aim.
@@ -156,6 +184,8 @@ While I don't consider these mods **essential**, I encourage installing many mod
 
 `Wilhelmines Animal World` adds so many animals.
 
+`Wilhelmines Living Jungle` adds a jungle biome.
+
 `X Bows` adds bows and arrows.
 - Not essential, to me, because my aim is terrible.
 - Somehow I am running both this and `Bows`. I should look into that.
@@ -169,6 +199,11 @@ While I don't consider these mods **essential**, I encourage installing many mod
 ## Honorable Mentions
 
 These are mods that I recommend, but am not currently using.
+
+`Cottonseed Oil Fertilizer` adds an alternative to bonemeal for growing crops faster.
+- A nice option for peaceful servers that do not have skeletons to kill for `bonemeal`.
+- I removed this mod after adding skeletons.
+- I might try tuning the effect of the cottonseed oil fertiziler at some point to make it more potent.
 
 `Doctor Who Tardis` adds a working Tardis, Cybermen and Daleks
 - The working Tardis is seriously cool.
@@ -189,9 +224,32 @@ These are mods that I recommend, but am not currently using.
 - Pairs well with `More Boots` to get rocket boots to get a jumping start. 
 - I give my players discounted or free rocket boots to help them avoid litering the wilderness with dirt pillars.
 
+`Mapgen with Rivers` replaces the default map generation with beautiful hills and rivers.
+- Quite lovely.
+- Causes huge elevation jumps when added to an existing map.
+- Removed because no other biomes seemed to generate when I was using it.
+
+`Mobs NPC` adds non-player characters to interact with.
+- I use this mod, but haven't played with the mechanics enough to have much to say.
+- I like it.
+
+`OneBlock` allows playing the classic `One Block` game mode.
+- I do not believe this is compatible with any other map generation (for obvious reasons).
+- I've hosted this type of game before, and look forward to trying this one for a weekend special map game run.
+
 `Stairs Redo` adds recipes for stairs in so many more materials
 - I removed this mod because the recipe inventory is already 28 pages long on our server, and this mod adds even more pages. (Paging is a preferred way to look for recipes on Steamdeck, due to the virual keyboard being harder to access.)
 - Great for adding colors and textures to builds 
+
+`Wilhelmes People` add non-player characters to interact with.
+- I use this mod, but haven't played with the mechanics enough to have much to say.
+- I like it.
+
+`Steampunk Blimp` adds a blimp that multiple players can ride around together
+- Pretty epic.
+- Be kind, don't park your blimp crashed into another players wall. They cannot move or destroy it.
+- This was quite fun.
+- I removed this mod because we found more practical ways to explore together. Most notably `Legboat` and `Realistic Hang Gliders`.
 
 ## A Mod List Snapshot
 
@@ -225,3 +283,7 @@ walls, weather, wielded_light, wieldview, wool, x_bows, x_enchanting, xpanes
 
 - [ ] Add a way to allow cats to be tamed on our server
 - [ ] Find a fishing mod that I love, or contribute to one until I love it
+- [ ] Investigate mods for player appearance and provide some guidance to favorites
+- [ ] Investigate more door mods and provide additional guidance
+- [ ] Tune my own server NPC mods, and provide guidance on which other admins might choose.
+- [ ] Run a `OneBlock` game weekend and add recommendations. Possibly a dedicated mods page.
