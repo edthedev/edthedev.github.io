@@ -7,6 +7,10 @@ date: 2024-05-05
 
 ## Essentials
 
+`Farming Redo` adds so many crops.
+- Essential because it makes seeds from all kinds of crops spawn randomly when a player digs in grass
+- 
+
 `Legboat` adds a BabaYaga style boat with legs.
 - Cheap (four sticks and a boat)
 - Practical. Allows traversing difficult terrain much more easily.
@@ -37,23 +41,21 @@ date: 2024-05-05
 ## Favorites
 
 `Anvil` allows repairing items that wear out, such as tools and clothing.
-- This is not an essential mod, because `MineGame` wear is tuned quite well with the resource spawn.
+- This is **not** an essential mod, because `MineGame` wear is tuned quite well with the resource spawn.
 - Players can still maintain having excellent tier items without this mod.
 - If one of your other mods tunes the resource spawn rate, you might find this mod essential.
 - Items enchanted with `X Enchanting` can still be repaired.
 - The iron hammer wears out over time, but can be repaired with another iron hammer.
 - Ability to repair iron hammers can be turned off, if you want to have an unavoidable cost to doing repairs. I leave it on, because iron is so available, anyway.
 
-`Doctor Who Tardis` adds a working Tardis, Cybermen and Daleks
-- The working Tardis is seriously cool.
-- Great way to find a missing biome you need, without using the in-game terminal
-- Cybermen will murder all of your animals, burn through the sides of your buildings and mercilessly grief your structurs. 
-- Do not go away from keyboard.
-- Be prepared.
-- Be vigilant.
-- I uninstalled this mod, and plan to re-install it after I create a fork with no Cybermen or Daleks. 
+`Bows` adds bows and arrows.
+- Not essential to me, because I have terrible aim.
 
-> "The Cybermen were never allowed to play Rassilon's Game. They were too good." - The Second Doctor, The Five Doctors
+`Bonemeal` adds bonemeal that makes crops grow faster.
+- Cook a `bone` to create `bonemeal`
+- I get my bones from roving night time skeleton mobs, added by `Mobs Skeletons`.
+- Beware that skeletons will attack your sheep farm with direct malicious intent, and can shoot their arrows around 20 blocks
+
 
 `Headanim` lets other players see which way you are looking.
 
@@ -127,6 +129,27 @@ date: 2024-05-05
 - The crafting recipe requires `obsidian` with can be really hard to obtain in MineGame.
 
 
+## Honorable Mentions
+
+`Doctor Who Tardis` adds a working Tardis, Cybermen and Daleks
+- The working Tardis is seriously cool.
+- Great way to find a missing biome you need, without using the in-game terminal
+- Cybermen will murder all of your animals, burn through the sides of your buildings and mercilessly grief your structurs. 
+- Do not go away from keyboard.
+- Be prepared.
+- Be vigilant.
+- I uninstalled this mod, and plan to re-install it after I create a fork with no Cybermen or Daleks. 
+
+> "The Cybermen were never allowed to play Rassilon's Game. They were too good." - The Second Doctor, The Five Doctors
+
+
+`Hang Glider` adds a cheap hang glider
+- Cheap. Same recipe as `Realistic Hang Glider`. (3 wool, 3 sticks)
+- Honorable mention because I use `Realistic Hang Glider` instead, because the rockets amuse me.
+- For lower powered or higher player count servers, I would recommend this instead of `Realistic Hang Glider`
+- Pairs well with `More Boots` to get rocket boots to get a jumping start. 
+- I give my players discounted or free rocket boots to help them avoid litering the wilderness with dirt pillars.
+
 ## A Mod List Snapshot
 
 The below is presented raw, for your possible further exploration.
@@ -154,3 +177,8 @@ my_old_doors, my_saloon_doors, my_sliding_doors, obsidianstuff, ore_deposits, pe
 sethome, sfinv, shields, shipwrecks, skinsdb, spawn, spectator_mode, speed_boots, stairs, steampunk_blimp, tnt, travelnet, vessels,
 walls, weather, wielded_light, wieldview, wool, x_bows, x_enchanting, xpanes
 ```
+
+## TODO
+
+- [ ] Add a way to allow cats to be tamed on our server
+- [ ] Find a fishing mod that I love, or contribute to one until I love it
