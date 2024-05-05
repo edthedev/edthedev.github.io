@@ -2,6 +2,7 @@
 layout: layout.njk
 title: HELLO in the Pikachu Programming Language
 tags: ['blog','rss','code']
+date: 2023-12-01
 ---
 
 `HELLO WORLD` in the [Pikachu Language][4] can be [quite terrifying][2]. But it doesn't have to be. 

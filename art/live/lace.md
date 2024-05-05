@@ -5,6 +5,7 @@ script: ['js/art/share/canvas.js', 'js/art/share/random.js', 'js/art/share/ani.j
 tags: ['js', 'art', 'rss']
 stub: 'lace'
 alt: 'abstract fractal art that looks a bit like a lace doily' 
+date: 2023-09-07
 ---
 
 

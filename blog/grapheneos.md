@@ -2,6 +2,7 @@
 layout: blog.njk
 title: Misuing Ansible to Improve my phone OS
 tags: ['blog', 'rss']
+date: 2024-03-06
 ---
 
 I wrote an [Ansible role for GrapheneOS][7] to configure `localhost` in preparation for installing `GrapheneOS` on a USB connected smartphone.

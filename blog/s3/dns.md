@@ -2,6 +2,7 @@
 layout: blog.njk
 title: DNS for a static website on AWS S3
 tags: ['blog', 'rss']
+date: 2023-12-01
 ---
 
 ## Setup S3 Buckets
