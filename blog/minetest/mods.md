@@ -130,7 +130,7 @@ While I don't consider these mods **essential**, I encourage installing many mod
 `Kart Car` adds a go cart to MineGame.
 - Requires perfectly flat ground.
 - If you're looking for pragmatic ways to get around, consider `Legboat`, `Movement Essentials`, `Realistic Hangglider` instead.
-- Demands a mod that adds sloped blocks to build with.
+- Pairs very nicely with a mod that adds sloped blocks to build with.
 - If you want to build a cool race track and race around on it, this is the mod!
 
 `LWScratch` adds robots you can craft and program in a graphical language similar to [Scratch](https://scratch.mit.edu/).
