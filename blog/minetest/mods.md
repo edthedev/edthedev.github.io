@@ -124,6 +124,7 @@ While I don't consider these mods **essential**, I encourage installing many mod
 
 `Item Frames and Pedestals` allows you to mount itmes on your walls, or on a stone pillar.
 - Compliments to `Storage Drawers` since it stores items that `Storage Drawers` cannot, such as tools.
+- Allows invisible item frames without using a command prompt.
 - A good option for labeling your chests in  a sorting machine built with `Pipeworks`.
 
 `Kart Car` adds a go cart to MineGame.
