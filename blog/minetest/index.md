@@ -1,9 +1,7 @@
 ---
 layout: blog.njk
-title: Running a MineTest game
-tags: ['blog', 'rss', 'topic_index']
 title: 'Play MineTest!'
-tags: topic_index
+tags: ['blog', 'rss', 'topic_index']
 date: 2024-04-19
 ---
 
