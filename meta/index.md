@@ -2,6 +2,7 @@
 layout: blog.njk
 title: How this Site is Built
 tags: ['blog', 'meta', 'topic_index']
+date: 2023-12-09
 ---
 
 ## Context

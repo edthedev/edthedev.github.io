@@ -2,6 +2,7 @@
 layout: blog.njk
 title: On Slide Decks with JavaScript
 tags: ['blog', 'meta']
+date: 2023-12-09
 ---
 
 ## Context

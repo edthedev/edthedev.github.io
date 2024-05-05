@@ -2,6 +2,7 @@
 layout: blog.njk
 title: A Dockerfile for EleventyJS
 tags: ['blog', 'meta']
+date: 2023-12-09
 ---
 
 ## Context

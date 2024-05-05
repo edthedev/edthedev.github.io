@@ -2,6 +2,7 @@
 layout: blog.njk
 title: Linux on my Surface Go
 tags: ['blog']
+date: 2023-12-15
 ---
 
 ## Overview
