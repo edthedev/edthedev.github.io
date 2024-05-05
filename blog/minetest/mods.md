@@ -36,7 +36,6 @@ The following mods are ones that I consider **essential** for enjoying `MineGame
 
 `Farming Redo` adds so many crops.
 - Essential because it makes seeds from all kinds of crops spawn randomly when a player digs in grass
-- 
 
 `Legboat` adds a BabaYaga style boat with legs.
 - Cheap (four sticks and a boat)
@@ -48,8 +47,9 @@ The following mods are ones that I consider **essential** for enjoying `MineGame
 - Unlike `Movement Essentials`, the resource costs (a bunch of wood) for this solution can be obtained almost anywhere.
 
 `Mesecons` add `mese` an ore that serves a role like redstone in Minecraft.
-- Essential because `Movement Essentials` requires it.
-- Also required by every redstone-like mod.
+- `mese` is the preferred macguffin when adding technology to the world of `MineGame`. Compare it to `redstone` in `MineCraft`.
+- Essential, to me, because `Movement Essentials` requires it.
+- Also required by most technology enhancing `MineGame` mods.
 
 `Mobs Animal` adds animals.
 
