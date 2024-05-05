@@ -1,14 +1,18 @@
 ## Learn to Code
 
-### Minecraft Puzzles
+### MIT Scratch
 
-[Minecraft on Code.org](https://studio.code.org/s/hero/stage/1/puzzle/1) is my favorite guided learn-to-code series.
+[MIT Scratch](https://scratch.mit.edu/projects/editor/?tutorial=home) is the original block based code learning environment.
 
-It has a Minecraft theme, stars YouTube celebrities, and has a plot. Along the way, kids get to control Steve while programming a robot ally to solve puzzles.
+I think it's still the most feature complete. The ability to add animations, backgrounds and custom recorded sounds makes this a stronger creative toy than a lot of others.
+
+Scratch also has a built in video tutorial series that explores a bunch of great computer science concepts.
+
+Let me know if you enjoy [my humble Scratch creations](https://scratch.mit.edu/users/edthedev/).
 
 ### MakeCode Arcade & Meowbit
 
-Kids need shelter, food, love, and a hand-held that they can write their own games for.
+> Kids need shelter, food, love, and a hand-held video game player that they can write their own games for.
 
 [MeowBit](https://www.amazon.com/Kittenbot-Card-Sized-Computer-Microsoft-Compatible/dp/B07QNTSSYP) is a hand-held video game that a kid can write code for using a snap-block language.
 
@@ -20,18 +24,31 @@ And a better game than mine:
 
 + [Tony Albatross - Pro Dolphin](https://arcade.makecode.com/26346-72733-28413-39259)
 
+### Robots in MineTest
 
-### MIT Scratch
+If I told you there was a free clone of `MineCraft` that allowed players to build and program robots, would you even finish reading this page?
 
-[MIT Scratch](https://scratch.mit.edu/projects/editor/?tutorial=home) is the original block based code learning environment.
+Everyone should get to play with [Robots in MineTest](/blog/minetest/robots).
 
-I think it's still the most feature complete. The ability to add animations, backgrounds and custom recorded sounds makes this a stronger creative toy than a lot of others.
+### Create Retro Python Games using Pyxel
 
-Scratch also has a built in video tutorial series that explores a bunch of great computer science concepts.
+[Pyxel]() is a retro game platform that supports coding in Python. Unlike other Python game libraries, Pyxel provides a curated experience for new game developers.
 
-Let me know if you enjoy [my humble Scratch creations](https://scratch.mit.edu/users/edthedev/).
+I have created a few [Pyxel Tutorials](/pyxel).
 
-### Robots!!! with BBC Micro:Bit
+### Minecraft Puzzles
+
+For a cool guided learning experience, consider [Minecraft on Code.org](https://studio.code.org/s/hero/stage/1/puzzle/1) - a fantastic guided learn-to-code series.
+
+It has a Minecraft theme, stars YouTube celebrities, and has a plot. Along the way, kids get to control Steve while programming a robot ally to solve puzzles.
+
+Note that this is a two-dimensional game. For a full 3D experience, try out [MineTest with Robots](/blog/minetest/robots).
+
+### Code.org
+
+[Code.org](https://code.org) also has a lot more than just Minecraft puzzles.
+
+### Real Robots!!! with BBC Micro:Bit
 
 For about $60.00 (one MicroBit and one CuteBot), your kid can have a robot trucking around the room, following code they wrote. Consider getting an extra MicroBit to act as a remote control via Bluetooth.
 
@@ -40,12 +57,6 @@ For about $60.00 (one MicroBit and one CuteBot), your kid can have a robot truck
 It comes with bunch of LEDs, a couple of buttons, a bluetooth radio, and a connector for an always growing set of add-on boards.
 
 [CuteBot](https://www.elecfreaks.com/learn-en/microbitKit/smart_cutebot/cutebot_car.html) is currently my favorite affordable robot frame. 
-
-
-
-### Code.org
-
-[Code.org](https://code.org) also has a lot more than just Minecraft puzzles.
 
 ### Intermediate Topics
 
