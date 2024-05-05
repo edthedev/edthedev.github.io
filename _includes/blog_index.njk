@@ -38,12 +38,12 @@ h2 {
 
   <!-- List blog pages. -->
   <nav class="more_nav" role="navigation">
-  <h2>Blog Topics</h2>
+  <h2>Recent Blog Articles</h2>
   {%- for post in collections.blog | reverse %}
   <li> <a href="{{post.url}}"> {{ post.data.title }} </a></li>
   {% endfor -%}
 
-  <h2>Blog Categories</h2>
+  <h2>Blog Topics</h2>
   {%- for post in collections.topic_index | reverse %}
   <li> <a href="{{post.url}}"> {{ post.data.title }} </a></li>
   {% endfor -%}
