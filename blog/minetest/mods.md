@@ -67,8 +67,11 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - Ability to repair iron hammers can be turned off, if you want to have an unavoidable cost to doing repairs. I leave it on, because iron is so available, anyway.
 
 `Beautiful Flowers` adds so many kinds of flowers.
-- No mod better highlights the best 
-- I almost marked this as essential, because one of the best reasons to play MineTest, rather than MineCraft, is the diversity of mods.
+- Adds so many different flowers to the game world.
+- When running `MineCraft: Java Edition` I had to remove my flowers mod, due to server resource costs. I have not had any resource issues with adding many mods like this one, on `MineTest`.
+- Enjoy some guilt-free flowsers.
+- It does add a page or two of flowers to the recipe book search.
+- I almost marked this as essential, because it highlights for new players why they should bother trying `MineTest` if they already play `MineCraft`.
 
 `Bows` adds bows and arrows.
 - Not essential to me, because I have terrible aim.
