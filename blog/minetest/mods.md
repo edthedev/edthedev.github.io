@@ -7,6 +7,19 @@ date: 2024-05-05
 
 ## Essentials
 
+`Legboat` adds a BabaYaga style boat with legs.
+- Cheap (four sticks and a boat)
+- Practical. Allows traversing difficult terrain much more easily.
+- Stylish. Looks like a wooden boat with long wooden legs.
+- Adds the normal `boat` mod as a dependency, which I also consider essential.
+- This is listed as essential because most people will overlook it otherwise. It takes a difficult part of exploring - getting home afterward, and makes it fun, without onerous costs.
+- One could probably get by with only either this or `Movement Essentials`, but I prefer to have both.
+- Unlike `Movement Essentials`, the resource costs (a bunch of wood) for this solution can be obtained almost anywhere.
+
+`Mesecons` add `mese` an ore that serves a role like redstone in Minecraft.
+- Essential because `Movement Essentials` requires it.
+- Also required by every redstone-like mod.
+
 `Mobs Animal` adds animals.
 
 `Mob Horse` adds a horse that you can tame and ride.
@@ -31,11 +44,25 @@ date: 2024-05-05
 - The iron hammer wears out over time, but can be repaired with another iron hammer.
 - Ability to repair iron hammers can be turned off, if you want to have an unavoidable cost to doing repairs. I leave it on, because iron is so available, anyway.
 
+`Doctor Who Tardis` adds a working Tardis, Cybermen and Daleks
+- The working Tardis is seriously cool.
+- Great way to find a missing biome you need, without using the in-game terminal
+- Cyberment will murder all of your animals, burn through the sides of your buildings and mercilessly grief your structurs. Do not go away from keyboard.
+- I uninstalled this mod, and plan to re-install it after I create a fork with no Cybermen or Daleks. 
+
+> "The Cybermen were never allowed to play Rassilon's Game. They were too good." - The Second Doctor, The Five Doctors
+
 `Headanim` lets other players see which way you are looking.
 
 `Item Frames and Pedestals` allows you to mount itmes on your walls, or on a stone pillar.
 - Compliments to `Storage Drawers` since it stores items that `Storage Drawers` cannot, such as tools.
 - A good option for labeling your chests in  a sorting machine built with `Pipeworks`.
+
+`Kart Car` adds a go cart to MineGame.
+- Requires perfectly flat ground.
+- If you're looking for pragmatic ways to get around, consider `Legboat`, `Movement Essentials`, `Realistic Hangglider` instead.
+- Demands a mod that adds sloped blocks to build with.
+- If you want to build a cool race track and race around on it, this is the mod!
 
 `LWScratch` adds robots you can craft and program in a graphical language similar to [Scratch](https://scratch.mit.edu/).
 - Make a robot do boring repetitive parts of your builds.
@@ -61,10 +88,20 @@ date: 2024-05-05
 - I don't even run with a stamina mob, and I still want to make pie.
 - With `LWScratch` you can teach a robot to make pie. **Everyone wants a robot that makes pie.**
 
+`Pipeworks` adds pipes for moving liquids and tubes for moving items and item stacks.
+- Add a `vacuum tube` to suck up dropped items, like `saplings`.
+- Use `sorting tubes` to sort items into labeled chests.
+- Fill rooms with fast tubes full of items being sorted into rows of carefully organized chests.
+- I guess it does water too. I haven't done much with that.
+
 `Realistic Hang Glider` provides a cheap practical MineTest equivalent to MineCraft Elytra.
 - Inexpensive recipe (3 wool, 3 sticks)
 - Includes rockets for extra boost.
 - Fun way to visit friends, do tricks, and get a birds eye view of your builds
+
+`Regrow` allows orchards by causing fruit trees to regrow their fruit.
+- Without this mod, fruit only spawn when a tree first spawns.
+- Pairs nicely with the `Pie` mod.
 
 `Storage Drawers` provides storage that automatically displays the single stacked item in each drawer.
 - Pragmatic storage solution
