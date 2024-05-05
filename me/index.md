@@ -39,7 +39,7 @@ You may enjoy asking Edward what juggling fire taught him about information tech
 
 ## My Social Media
 
-- Personal Mastodon: <a href=https://mastodon.sdf.org/@Edthedev rel=me>ed@edward.delaporte.us</a> (hosted by SDG.org)
+- Personal Mastodon: <a href=https://mastodon.sdf.org/@Edthedev rel=me>ed@edward.delaporte.us</a> (hosted by SDF.org)
 - <a rel="me" href="https://mastodon.art/@edthedev">My Art on Mastodon</a>
 - InfoSec Mastodon: <a href=https://infosec.exchange/@EdTheDev rel=me>infosec.exchange/@EdTheDev</a>
 - LinkedIn: [Edward Delaporte V](https://www.linkedin.com/in/edwarddelaportev)
