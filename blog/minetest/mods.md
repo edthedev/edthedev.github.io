@@ -107,6 +107,12 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - The fastest and highest boots are very fast and very high. Inconveniently so, for both.  I believe this is by design, because it's fun.
 - For best experience, use 2nd to highest tier of each boot.
 
+`MyDoors` adds lots of new types of doors.
+- Add secret doors that look like bookshelves, stone walls, and more!
+- Many admins will want one or more door mods, because `MineGame` includes only one plain-looking craftable door, by design.
+- Crafting recipes for most doors are comparatively expensive, due to requiring very specific stained woods.
+- For some players, ability to add secret doors is going to be their number one reason to try `MineTest`.
+
 `Ore Deposits` causes additional ore to spawn on cleared stone floors.
 - Makes ore resources renewable.
 - Prevents a stylish quary build from running out of useful ore.
