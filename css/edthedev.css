@@ -147,6 +147,8 @@ code {
   align-content: center;
 	margin: 1em;
   margin-top: 3.5em; /* Do not drift under top bar. */
+  margin-left: 4em;
+  margin-right: 4em;
   max-width: 95%;
 }
 
