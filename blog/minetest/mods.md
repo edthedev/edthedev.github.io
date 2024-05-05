@@ -47,7 +47,10 @@ date: 2024-05-05
 `Doctor Who Tardis` adds a working Tardis, Cybermen and Daleks
 - The working Tardis is seriously cool.
 - Great way to find a missing biome you need, without using the in-game terminal
-- Cyberment will murder all of your animals, burn through the sides of your buildings and mercilessly grief your structurs. Do not go away from keyboard.
+- Cybermen will murder all of your animals, burn through the sides of your buildings and mercilessly grief your structurs. 
+- Do not go away from keyboard.
+- Be prepared.
+- Be vigilant.
 - I uninstalled this mod, and plan to re-install it after I create a fork with no Cybermen or Daleks. 
 
 > "The Cybermen were never allowed to play Rassilon's Game. They were too good." - The Second Doctor, The Five Doctors
