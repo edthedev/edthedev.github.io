@@ -1,3 +1,10 @@
+---
+layout: blog.njk
+title: A Nice Set of MineTest Mods
+tags: ['blog', 'rss']
+date: 2024-05-05
+---
+
 ```sh
 Issued command: /help mods
 /mods: List mods installed on the server
