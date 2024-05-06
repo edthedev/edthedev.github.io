@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
-title: Code by Edward Delaporte
+title: I Wrote Some Code
+tags: ['blog', 'topic_index']
 eleventyNavigation:
   key: Code
   order: 20
@@ -20,11 +21,9 @@ so retro code will always have a place in my heart.
 
 My weekend coding for fun includes:
 
-+ [JavaScript Art](/art/live)
-+ [CLI Utilities in GoLang](https://github.com/search?q=user%3Aedthedev+language%3Ago&type=repositories)
 + [C64 / X16 BASIC](/basic)
 + [Retro Games in Python](https://github.com/edthedev/educade)
-+ Silliness such as [Pikachu](/pikachu) and [Friendship is Magic](/blog/friendship)
++ [JavaScript Art](/art/live)
 
 I cannot pay back the debts I owe to those who helped me grow as a programmer, but I can pay it foward by helping others.
 
@@ -32,21 +31,24 @@ Here are some resources I have created to help others learn to code.
 
 + [Learn to Code](/learn2code)
 + [Tutorials for the Scratch Beginner Programming Lanaguage](https://github.com/edthedev/scratch_lessons)
++ [Tutorials for Making Pyxel Games with Python](/pyxel)
++ [Resources for Hosting MineTest](/blog/minetest)
 
 I do a decent amount of programming in my free time 
 Just to make my life easier. Don't expect mature open source projects, these are quick utilities.
 
 + [This website](/meta)
-+ [CLI Chart tool in Go Language](https://github.com/edthedev/chart)
++ [CLI Utilities in GoLang](https://github.com/search?q=user%3Aedthedev+language%3Ago&type=repositories)
 + [JavaScript Workout tracker for the Pebble Smart Watch](https://github.com/edthedev/LiftPebble)
 + [ReactJS JavaScript and Python Goal Tracker](https://github.com/edthedev/MyGoal.space)
 + [JavaScript Chart.js Graphs for Kiva Lending Data](https://github.com/edthedev/kiva_graphs)
 + [Web Test Automation with RobotFramework](https://github.com/edthedev/Learn_RobotFramework_IllinoisPTR)
-+ [Infrastructure as Code for Ansible to Manage AWS](/code/infra)
++ [Infrastructure as Code for Ansible to Manage AWS](/blog/s3)
 
 I also do a decent amount of coding that simply amuses me.
 These aren't even good ideas, but I wanted them so I wrote them.
 
++ Example code in silly languages such as [Pikachu](/pikachu) and [Friendship is Magic](/blog/friendship)
 + [Arduino C Code Bicycle Speedomoter](https://github.com/edthedev/arduino-bike-speed)
 + [Arduino C Code to make a Big Red Button press the Enter Key](https://github.com/edthedev/bigredbutton)
 + [JavaScript Binary Watch face for the Pebble Smart Watch](https://github.com/edthedev/BinaryClock)
