@@ -20,8 +20,11 @@ so retro code will always have a place in my heart.
 
 My weekend coding for fun includes:
 
++ [JavaScript Art](/art/live)
++ [CLI Utilities in GoLang](https://github.com/search?q=user%3Aedthedev+language%3Ago&type=repositories)
 + [C64 / X16 BASIC](/basic)
-+ [Retro Games in Python](https://github.com/edthedev/tmntcade)
++ [Retro Games in Python](https://github.com/edthedev/educade)
++ Silliness such as [Pikachu](/pikachu) and [Friendship is Magic](/blog/friendship)
 
 I cannot pay back the debts I owe to those who helped me grow as a programmer, but I can pay it foward by helping others.
 
