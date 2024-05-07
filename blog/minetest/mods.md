@@ -37,7 +37,7 @@ The following mods are ones that I consider **essential** for enjoying `MineGame
 `Farming Redo` adds so many crops.
 - Essential because it makes seeds from all kinds of crops spawn randomly when a player digs in grass
 
-`Legboat` adds a BabaYaga style boat with legs.
+`Legboat` adds a vehicle that climbs around on spider-like wooden legs.
 - Cheap (four sticks and a boat)
 - Practical. Allows traversing difficult terrain much more easily.
 - Stylish. Looks like a wooden boat with long wooden legs.
