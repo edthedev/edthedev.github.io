@@ -12,11 +12,7 @@ title: Blog Articles by Edward Delaporte
   <link rel="stylesheet" href="/css/edthedev.css" /> 
   <title>{{ title }}</title>
 
-<nav class="ye_navbar" role="navigation"> 
-  <span class="ye_navbar">
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-  </span>
-</nav>
+{% include "_nav.njk" %}
 
 <style>
 
