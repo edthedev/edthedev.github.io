@@ -184,9 +184,9 @@ padding: 0 0 0 0;
 	display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 200em) {
   /* For desktop: */
 .desktop_only {
-	display: inline !important;
+	display: block !important;
 }
 }
