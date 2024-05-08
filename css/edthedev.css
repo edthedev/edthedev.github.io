@@ -179,3 +179,14 @@ padding: 0 0 0 0;
 	list-style-type: none;
 	margin: 0;
 }
+
+.desktop_only {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+.desktop_only {
+	display: inline !important;
+}
+}
