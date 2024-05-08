@@ -92,6 +92,9 @@ The following mods are ones that I consider **essential** for enjoying `MineGame
 - I haven't given a lot of thought to player appearance. 
 - On my small server, this allows us all to not look identical.
 
+`Wielded Light` causes any held light source to emit light while still in hand.
+- Essential because it allows walking through a caves carrying a single torch.
+
 ## Favorites
 
 While I don't consider these mods **essential**, I encourage installing many mods as the server admin has interest in. `MineTest` can handle it.
