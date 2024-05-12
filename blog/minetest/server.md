@@ -40,10 +40,21 @@ Step 4: Various Network Stuff
 
 ## Troubleshooting
 
-On Debian, to see what Ports are in use:
+Unless otherwise specified, these commands assume a `Debian` server, and are typed into a command line console on the `Debian` server.
+
+What is the server IP addresss for players on my home network? 
 
 ```sh
-lsof -i -n -P
+ip addr | 192.168
+```
+
+> `ip addr` tells you a bunch of information about your network connection.
+> `192.168.X.Y` is what the local IP address, within your home network, typically looks like.
+
+To see what Ports are in use:
+
+```sh
+lsof -i -n -P | grep 30000
 ```
 
 > We typically expect port 30000 to be in use, by MineTest
