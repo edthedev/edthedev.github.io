@@ -38,3 +38,12 @@ Step 4: Various Network Stuff
 
 - [Allowing External Players to Connect](https://wiki.minetest.net/Setting_up_a_server#Allowing_external_players_to_connect)
 
+## Troubleshooting
+
+On Debian, to see what Ports are in use:
+
+```sh
+lsof -i -n -P
+```
+
+> We typically expect port 30000 to be in use, by MineTest
