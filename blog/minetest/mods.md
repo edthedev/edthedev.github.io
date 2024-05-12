@@ -92,6 +92,14 @@ The following mods are ones that I consider **essential** for enjoying `MineGame
 - I haven't given a lot of thought to player appearance. 
 - On my small server, this allows us all to not look identical.
 
+`TavelNet` allows building a network of teleporters, and a practical elevator recipe
+- Essential, because the depth in MineTest is 10,000 blocks, and many essential ores seem to only spawn down around 3,000. 
+- 3,000 blocks is a lot is when you're digging straight down with a pickaxe, violating the first rule. 
+- 3,000 blocks is even more when you're climbing a ladder to check on your sheep farm.
+- Elevators are cheap, but finicky to setup. They must be directly vertical of eachother to connect.
+- Teleporters are expensive, but can connect to each-other from anywhere.
+- Doctor Who fans may wish to dye their teleporters blue.
+
 `Wielded Light` causes any held light source to emit light while still in hand.
 - Essential because it allows walking through a caves carrying a single torch.
 
@@ -193,18 +201,11 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - Cannot connect to vacuum tube sorter machine built in `Pipeworks`. So I use reguar chests and `Item Frames` for my sorting machines.
 - Adds a delightful ambiance to your workshop
 
-`TavelNet` allows building a network of teleporters, and a practical elevator recipe
-- Essential, because the depth in MineTest is 10,000 blocks, and many essential ores seem to only spawn down around 3,000. 
-- 3,000 blocks is a lot is when you're digging straight down with a pickaxe, violating the first rule. 
-- 3,000 blocks is even more when you're climbing a ladder to check on your sheep farm.
-- Elevators are cheap, but finicky to setup. They must be directly vertical of eachother to connect.
-- Teleporters are expensive, but can connect to each-other from anywhere.
-- Doctor Who fans may wish to dye their teleporters blue.
 
 `Ultralight Trike` adds a motor propelled glider.
 - Flying is fun.
 - Controls may be unintuitive to new players.
-- Requires `Biofuel`, which many other great mods also require.
+- Requires `Biofuel`, which some other great mods also require.
 - One of the few all-in-one travel solutions, since it does not require finding a cliff, building a tall tower, or rocket boots (`More boots`), the way most glider mods do (`Hang Glider`, `Realistic Hang Glider`, `Movement Essentials (Umbrella)`)
 
 `Wilhelmines Animal World` adds so many animals.
@@ -275,35 +276,6 @@ These are mods that I recommend, but am not currently using.
 - Be kind, don't park your blimp crashed into another players wall. They cannot move or destroy it.
 - This was quite fun.
 - I removed this mod because we found more practical ways to explore together. Most notably `Legboat` and `Realistic Hang Gliders`.
-
-
-## A Mod List Snapshot
-
-The below is presented raw, for your possible further exploration.
-
-Yes, I'm a Cybersecurity guy giving you an inventory of software on a system I host. It's a toy. I'm trying to help you have fun with your own toys. Be civil.
-
-```sh
-Issued command: /help mods
-/mods: List mods installed on the server
-Issued command: /mods
-3d_armor, 3d_armor_ip, 3d_armor_sfinv, 3d_armor_stand, 3d_armor_ui, airutils, animalworld, anvil, armor_admin, armor_bronze,
-armor_cactus, armor_crystal, armor_diamond, armor_gold, armor_mithril, armor_nether, armor_steel, armor_wood, basic_materials,
-beautiflowers, beds, bees, binoculars, biofuel, boats, bonemeal, bones, bows, bucket, butterflies, carts, charcoal, cleaner,
-cottonseed_oil, creative, decorations_sea, default, doors, drawers, dungeon_loot, dye, ebiomes, edit_skin, env_sounds, farming,
-findbiome, fire, fireflies, flowers, game_commands, give_initial_stuff, glider, headanim, i3, itemframes, kartcar, keys, legboat,
-lootchests, lootchests_default, lwscratch, magic_materials, map, mesecons, mesecons_alias, mesecons_blinkyplant, mesecons_button,
-mesecons_carts, mesecons_commandblock, mesecons_delayer, mesecons_detector, mesecons_doors, mesecons_extrawires, mesecons_fpga,
-mesecons_gamecompat, mesecons_gates, mesecons_hydroturbine, mesecons_insulated, mesecons_lamp, mesecons_lightstone,
-mesecons_luacontroller, mesecons_materials, mesecons_microcontroller, mesecons_movestones, mesecons_mvps, mesecons_noteblock,
-mesecons_pistons, mesecons_powerplant, mesecons_pressureplates, mesecons_random, mesecons_receiver, mesecons_solarpanel,
-mesecons_stickyblocks, mesecons_switch, mesecons_torch, mesecons_walllever, mesecons_wires, mob_horse, mobkit, mobs, mobs_animal,
-mobs_monster, mobs_npc, mobs_skeletons, moreblocks, moreores, moretrees, movement_essentials, mtg_craftguide, my_castle_doors,
-my_cottage_doors, my_default_doors, my_door_wood, my_fancy_doors, my_future_doors, my_garage_door, my_hidden_doors, my_misc_doors,
-my_old_doors, my_saloon_doors, my_sliding_doors, obsidianstuff, ore_deposits, people, pie, pipeworks, player_api, regrow, screwdriver,
-sethome, sfinv, shields, shipwrecks, skinsdb, spawn, spectator_mode, speed_boots, stairs, steampunk_blimp, tnt, travelnet, vessels,
-walls, weather, wielded_light, wieldview, wool, x_bows, x_enchanting, xpanes
-```
 
 ## TODO
 
