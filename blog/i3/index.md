@@ -14,3 +14,5 @@ date: 2024-05-11
 - For a status bar, I like `polybar`
 - For multiple monitor setup `xrandr` is very helpful.
 - Configs are in `.config/i3`
+- Reload your `i3` config with `mod+shift+c`
+- Restart `i3` in place with `mod+shift+r` (helpful for testing startup programs)
