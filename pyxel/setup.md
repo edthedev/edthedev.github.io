@@ -16,14 +16,17 @@ Let's play with [Pyxel](https://github.com/kitao/pyxel) a new retro game engine 
 1. Install dependencies
 
     ```sh
-    sudo apt install libsdl2-dev python3-pip -y
+    sudo apt install libsdl2-dev python3-pip pipx -y
     ```
 
 2. Install Pyxel
 
     ```sh
-    sudo pip3 install -U pyxel
+    pipx install pyxel
+    pipx ensurepath
     ```
+
+> Tip: Verify this worked with `which pyxel`
 
 3. Get some examples
 
