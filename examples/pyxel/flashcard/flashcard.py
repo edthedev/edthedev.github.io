@@ -22,7 +22,7 @@ class App:
     def __init__(self):
         pyxel.init(200, 150, title="Flash Cards")
         pyxel.mouse(True)
-        pyxel.load('flashcard.pyxres')
+        # pyxel.load('flashcard.pyxres')
 
         self.questions = QUESTIONS.split("\n") 
         self.current = 1
