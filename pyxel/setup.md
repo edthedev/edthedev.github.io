@@ -28,67 +28,12 @@ Let's play with [Pyxel](https://github.com/kitao/pyxel) a new retro game engine 
 
 > Tip: Verify this worked with `which pyxel`
 
-3. Get some examples
+3. Install `codium`
+
+    Pyxel does not come with an editor.
+    To follow [/pyxel/hello/] exactly, you'll want to install `codium`. Otherwise, just replace `codium` in any example with your preferred text editor.
 
     ```sh
-    mkdir -p ~/src
-    cd ~/src
-    pyxel copy_examples
+    sudo apt install codium
+    which codium
     ```
-
-## Play!
-
-4. Run a program!
-
-    ```sh
-    cd ~/src/pyxel_examples
-    pyxel run ./01_hello_pyxel.py 
-    ```
-
-5. Make a sprite!
-
-    ```sh
-    cd ~/src/pyxel_examples
-    pyxel edit ./01_hello_pyxel.py 
-    ```
-
-    > Be sure to put it in the upper left corner, (0,0)
-
-5. Edit a program
-
-    ```sh
-    cd ~/src/pyxel_examples
-    codium .
-    ```
-
-    Let's replace the logo with what we just drew.
-
-    ```python
-    # pyxel.images[0].load(0, 0, "assets/pyxel_logo_38x16.png")
-    pyxel.load("./01_hello_pyxel.py.pyxres")
-    ```
-
-    > Tip: Notice how this was loading a bitmap into 0,0
-    > which we drew our new drawing into in the previous step.
-
-6. Run in again!
-
-    ```sh
-    pyxel run ./01_hello_pyxel.py 
-    ```
-
-4. Create a file for the website
-
-    ```sh
-    $ mkdir hello
-    $ mv ./01_hello_pyxel.py ./hello/         
-    $ mv ./01_hello_pyxel.py.pyxres ./hello/         
-    $ pyxel package hello ./hello/01_hello_pyxel.py
-    added 'hello/.pyxapp_startup_script'
-    added 'hello/01_hello_pyxel.py'
-    pyxel app2html hello
-    ```
-
-    Now open `hello.html` in a browser....[Like this](/examples/pyxel/hello.html)
-
-    > Tip: It will show the `Pyxel` logo for several moments while it loads.
