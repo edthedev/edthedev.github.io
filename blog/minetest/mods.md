@@ -133,6 +133,11 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - I get my bones from roving night time skeleton mobs, added by `Mobs Skeletons`.
 - Beware that skeletons will attack your sheep farm with direct malicious intent, and can shoot their arrows around 20 blocks
 
+`Ethereal NG` by TenPlus1
+- I added it mainly for the fishing rod
+- Also adds many interesting biomes, trees, foods and tools 
+
+
 `Fire Extinguisher` adds automated fire suppression and cleanup
 - Place a fire extinguisher near fire to release fire suppressant foam.
 - Place and activate a foam cleanup block to release a rapidly spreading cleaner foam that removes fire suppressant foam. 
@@ -199,6 +204,10 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - Without this mod, fruit only spawn when a tree first spawns.
 - Pairs nicely with the `Pie` mod.
 
+`Simple Woodcutter` causes striking the bottom block of a tree to mine any connected tree blocks.
+- Reduces random floating bits of tree top.
+- Saves time when tree farming.
+
 `Storage Drawers` provides storage that automatically displays the single stacked item in each drawer.
 - Pragmatic storage solution
 - Partial block items will not display correctly.
@@ -216,6 +225,8 @@ While I don't consider these mods **essential**, I encourage installing many mod
 `Wilhelmines Animal World` adds so many animals.
 
 `Wilhelmines Living Jungle` adds a jungle biome.
+
+`Worm Farm` add a craftable worm farm for generating fishing bait
 
 `X Bows` adds bows and arrows.
 - Not essential, to me, because my aim is terrible.
