@@ -42,7 +42,7 @@ Step 4: Various Network Stuff
 
 Unless otherwise specified, these commands assume a `Debian` server, and are typed into a command line console on the `Debian` server.
 
-What is the server IP addresss for players on my home network? 
+1. What is the server IP addresss for players on my home network? 
 
 ```sh
 ip addr | 192.168
@@ -51,6 +51,8 @@ ip addr | 192.168
 > `ip addr` tells you a bunch of information about your network connection.
 > `192.168.X.Y` is what the local IP address, within your home network, typically looks like.
 
+2. Have I got that port right?
+
 To see what Ports are in use:
 
 ```sh
@@ -58,3 +60,11 @@ lsof -i -n -P | grep 30000
 ```
 
 > We typically expect port 30000 to be in use, by MineTest
+
+3. What IP address should my remote friends connet to?
+
+>Tip: This assumes that the linked networking configurations above have all been completed.
+
+```sh
+curl ifconfig.me
+```
