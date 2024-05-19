@@ -133,6 +133,11 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - I get my bones from roving night time skeleton mobs, added by `Mobs Skeletons`.
 - Beware that skeletons will attack your sheep farm with direct malicious intent, and can shoot their arrows around 20 blocks
 
+`Fire Extinguisher` adds automated fire suppression and cleanup
+- Place a fire extinguisher near fire to release fire suppressant foam.
+- Place and activate a foam cleanup block to release a rapidly spreading cleaner foam that removes fire suppressant foam. 
+- Not currently on ContentDB.
+- Download the zip file from https://forum.minetest.net/viewtopic.php?t=23524 and unzip into the `mods` folder you find by clicking `About` and then clicking `Open User Data Directory`
 
 `Headanim` lets other players see which way you are looking.
 
