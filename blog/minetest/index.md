@@ -1,6 +1,6 @@
 ---
 layout: blog.njk
-title: 'Play MineTest!'
+title: 'Getting Started with MineTest'
 tags: ['blog', 'rss', 'topic_index']
 date: 2024-04-19
 ---
@@ -16,7 +16,7 @@ Except where otherwise noted, my server is typically Ununtu and usual client is 
 [2]: https://www.minetest.net/
 [3]: https://content.minetest.net/packages/Minetest/minetest_game/
 
-## Articles
+## Articles on Getting Started
 
 These are my notes on my setup. As always, this is ostensibly for your benefit. 
 
