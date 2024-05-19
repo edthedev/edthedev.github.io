@@ -254,7 +254,20 @@ These are mods that I recommend, but am not currently using.
 - Do not go away from keyboard.
 - Be prepared.
 - Be vigilant.
-- I uninstalled this mod, and plan to re-install it after I create a fork with no Cybermen or Daleks. 
+- Or you could just disable Cybermen and Daleks
+
+> Tip: Cybermen and Daleks can be disabled by modifying `mintest.conf`:
+
+```ini
+drwho_tardis.enable_daleks = false
+drwho_tardis.enable_cybermen = false
+```
+
+You can verify this took by issuing this command from the in-game terminal:
+
+```sh
+/set drwho_tardis.enable_cybermen
+```
 
 > "The Cybermen were never allowed to play Rassilon's Game. They were too good." - The Second Doctor, The Five Doctors
 
