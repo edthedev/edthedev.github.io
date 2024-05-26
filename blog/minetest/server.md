@@ -68,3 +68,11 @@ lsof -i -n -P | grep 30000
 ```sh
 curl ifconfig.me
 ```
+
+> Tip: If your PC has both Wifi and a wire connection, the networking bits may be simpler to accomplish with WiFi disabled.
+>
+> ```sh
+> nmcli radio wifi off
+> nmcli radio wifi on
+> ```
+
