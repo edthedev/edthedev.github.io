@@ -28,7 +28,7 @@ ln -s ./minetest/ .minetest
 Alternately, if installed via `flatpak`:
 
 ```sh
-MINETEST_HOME=$HOME/.var/app/net.minetest.Minetest
+MINETEST_HOME=$HOME/.var/app/net.minetest.Minetest/.minetest
 mv $MINETEST_HOME $HOME/minetest
 ln -s $HOME/minetest $MINETEST_HOME
 ```
@@ -36,7 +36,9 @@ ln -s $HOME/minetest $MINETEST_HOME
 Then confirm with:
 ```sh
 $ ls $MINETEST_HOME
-cache  config  data  minetest
+cache  client  config  data  debug.txt  minetest.conf  mods  worlds
+$ ls -al ~/.var/app/net.minetest.Minetest/.minetest
+lrwxrwxrwx 1 foo foo 21 May 29 22:15 /home/foo/.var/app/net.minetest.Minetest/.minetest -> /home/foo/minetest
 ```
 
 Now in the Synology client, setup a 'Backup Task' of `~/minetest/worlds`.
