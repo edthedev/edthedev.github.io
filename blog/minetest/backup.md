@@ -25,6 +25,20 @@ mv ./.minetest/ minetest
 ln -s ./minetest/ .minetest   
 ```
 
+Alternately, if installed via `flatpak`:
+
+```sh
+MINETEST_HOME=$HOME/.var/app/net.minetest.Minetest
+mv $MINETEST_HOME $HOME/minetest
+ln -s $HOME/minetest $MINETEST_HOME
+```
+
+Then confirm with:
+```sh
+$ ls $MINETEST_HOME
+cache  config  data  minetest
+```
+
 Now in the Synology client, setup a 'Backup Task' of `~/minetest/worlds`.
 
 - Be sure to use a scheduled task, not continuous backup. You do not want the system struggling to update the Synology while playing.
