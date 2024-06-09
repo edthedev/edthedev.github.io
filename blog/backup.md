@@ -11,7 +11,7 @@ Mount the Samba Share
 
 ```sh
 sudo apt install cifs-utils psmisc
-sudo mount -t cifs -o username=$NAS_USER,password=$NAS_PASSWORD //192.168.68.140/home/ /mnt/nas/home
+sudo mount -t cifs -o username=$NAS_USER,password=$NAS_PASSWORD //$NAS_IP/home/ /mnt/nas/home
 ```
 
 Install `checkback`:
