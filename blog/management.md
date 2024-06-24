@@ -62,7 +62,7 @@ equation.
   > Worrying effectively is an indispensible skill for leaders.
 + [Influence: The Psychology of Persuasion by Robert B. Cialdini](https://isbnsearch.org/isbn/9780061241895)
   > Learning how sales works improves pay outcomes.
-+ [Boundaries by Henry Cloud and John Townsendn](https://isbnsearch.org/isbn/9780310351801)
++ [When I Say No, I Feel Guilty](https://isbnsearch.org/isbn/9780553263909) by Manuel J. Smith
   > Teams accomplish more when healthy boundaries are established.
 + [Find Your Why by Simon Sinek](https://isbnsearch.org/isbn/9780143111726)
 
