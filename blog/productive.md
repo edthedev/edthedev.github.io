@@ -19,7 +19,7 @@ As I have worked diligently to enable work that matters, I have discovered that 
 
 It is not my job to encourage my team to *do more*.
 
-It is my job to encourage my team to *focus on work that matters*.
+> It is my job to encourage my team to *focus on work that matters*.
 
 I love juggling, so we're going to talk about juggling. I don't have a better transition here. Hopefully it will make sense in a minute.
 
@@ -39,5 +39,7 @@ When things are calm, it's also my job to count throws. I do this exclusively to
 
 I also do a lot of coaching, but coaching is work I can delegate to my team leads.
 
-My job, as manager, accountable for productivity, is to *stop useless work from proceeding at the expense of work that matters*.
+I'm summary, my job, as manager, accountable for teams productivity, is:
+
+> *Stop useless work from proceeding at the expense of work that matters*.
 
