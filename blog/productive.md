@@ -1,4 +1,3 @@
-
 ---
 layout: blog.njk
 title: Managing a Productive Team
