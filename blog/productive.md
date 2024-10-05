@@ -15,17 +15,17 @@ But I have learned to ask myself, *instead*:
 
 When I accepted that the second question matters, my approach to task management flipped on its head.
 
-As I have worked diligemtly to enable work that matters, I have discovered that *less is more*.
+As I have worked diligently to enable work that matters, I have discovered that *less is more*.
 
 It is not my job to encourage my team to *do more*.
 
 It is my job to encourage my team to *focus on work that matters*.
 
-I love juggling, so we're going to talk about juggling.
+I love juggling, so we're going to talk about juggling. I don't have a better transition here. Hopefully it will make sense in a minute.
 
-When juggling in a group, there are more successful throws if the count of objects in motion stays *below* what the team can currently handle. Stretching the metaphor, it also matters that only correct expected matching objects are being thrown. Flaming torches are only acceptable when the team has trained extensively to juggle flaming torches and is expecting flaming torches to be thrown at them.
+When juggling in a group, there are more successful throws if the count of objects in motion stays *below* what the team can currently handle. Stretching the metaphor, it also matters that only correct expected matching objects are being thrown. Flaming torches are only acceptable when the team has *trained extensively* to juggle flaming torches and *is expecting* flaming torches to be thrown at them.
 
-So my job as manager is not to *encourage more throws*, or *scold people who fail to catch*.
+So my job as manager is not to *encourage more throws*, or to *scold people who fail to catch*.
 
 My job is to *prevent throws that are valueless or  disruptive*.
 
@@ -33,9 +33,9 @@ My job is to *prevent throws that are valueless or  disruptive*.
 
 And it is my job to do this over and over and over, as needed.
 
-When things are more calm, it's also my job to count throws. I do this exclusively to brag to leadership. I brag to leadership exclusively to earn credibility. 
+When things are calm, it's also my job to count throws. I do this exclusively to brag to leadership. I brag to leadership exclusively to earn credibility. 
 
- > I use earned credibility - to prevent leadership from throwing unexpected chainsaws into the mix!
+ > I use earned credibility - to prevent leadership from throwing unexpected chainsaws into the mix.
 
 I also do a lot of coaching, but coaching is work I can delegate to my team leads.
 
