@@ -1,6 +1,7 @@
 ---
 layout: blog.njk
 title: Add custom URL for the OpenShift console
+date: 2024-10-01
 tags: blog
 ---
 

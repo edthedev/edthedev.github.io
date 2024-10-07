@@ -1,6 +1,7 @@
 ---
 layout: blog.njk
 title: Friendship Is Magic
+date: 2024-10-01
 tags: ['blog']
 ---
 

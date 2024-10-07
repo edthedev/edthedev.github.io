@@ -1,7 +1,8 @@
 ---
 layout: layout.njk
 title: IAM for an S3 Bucket
-tags: blog
+date: 2024-10-01
+tags: ['blog']
 ---
 
 > Disclaimer: This is for a weekend project, not an enterprise organization. 

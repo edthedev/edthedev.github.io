@@ -1,6 +1,7 @@
 ---
 layout: layout.njk
 title: I Wrote Some Code
+date: 2024-10-01
 tags: ['blog', 'topic_index']
 eleventyNavigation:
   key: Code
