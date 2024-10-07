@@ -1,6 +1,7 @@
 ---
 layout: blog.njk
 title: Updates to my Mix and Match script
+date: 2023-10-01
 tags: ['art']
 ---
 
