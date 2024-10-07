@@ -1,0 +1,11 @@
+airflow initdb
+webapp:
+  environment:
+    - AIRFLOW_HOME = /opt/data
+  image: examples/web
+  ports:
+    - "8000:8000"
+  volumes:
+    - type: bind
+      source: ./data
+      target: /opt/data

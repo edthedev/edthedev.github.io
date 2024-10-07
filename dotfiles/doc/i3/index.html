@@ -1,0 +1,33 @@
+<div class="heading-wrapper h1">
+<h1 id="setting-up-i3-on-raspbian">Setting up I3 on Raspbian</h1>
+<a class="anchor" href="#setting-up-i3-on-raspbian" aria-labelledby="setting-up-i3-on-raspbian"><span hidden>#</span></a></div>
+<p>Start with Raspbian Lite.</p>
+<div class="heading-wrapper h2">
+<h2 id="install-basic-surival-packages">Install basic surival packages.</h2>
+<a class="anchor" href="#install-basic-surival-packages" aria-labelledby="install-basic-surival-packages"><span hidden>#</span></a></div>
+<pre><code class="language-bash">sudo apt-get install lightdm i3 tilix
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="boot-into-i3">Boot into i3</h2>
+<a class="anchor" href="#boot-into-i3" aria-labelledby="boot-into-i3"><span hidden>#</span></a></div>
+<pre><code class="language-bash">sudo raspi-config
+</code></pre>
+<ul>
+<li>System?</li>
+<li>Boot Options</li>
+<li>Desktop / CLI</li>
+<li>Choose boot to user.</li>
+<li>Reboot</li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="configuring-i3wm">Configuring i3wm</h2>
+<a class="anchor" href="#configuring-i3wm" aria-labelledby="configuring-i3wm"><span hidden>#</span></a></div>
+<pre><code>vim ~/.config/i3/config
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="notes">Notes</h2>
+<a class="anchor" href="#notes" aria-labelledby="notes"><span hidden>#</span></a></div>
+<ul>
+<li>lightdm - allows booting directly to desktop</li>
+<li>tilix is literally any terminal other than the blinding default. It has a dark mode theme.</li>
+</ul>

@@ -1,0 +1,68 @@
+<div class="heading-wrapper h2">
+<h2 id="remote-access">Remote Access</h2>
+<a class="anchor" href="#remote-access" aria-labelledby="remote-access"><span hidden>#</span></a></div>
+<p>Under Preferences</p>
+<ul>
+<li>Change Password</li>
+<li>Under Interfaces - Enable SSH and VNC</li>
+</ul>
+<p>On a Windows computer:</p>
+<pre><code class="language-powershell">choco install vnc-viewer
+</code></pre>
+<p>VNC remote host will be <code>raspberrypi.local</code>.
+User is <code>pi</code>. Password is whatever you set in the step above.</p>
+<div class="heading-wrapper h2">
+<h2 id="overclock">Overclock</h2>
+<a class="anchor" href="#overclock" aria-labelledby="overclock"><span hidden>#</span></a></div>
+<p>Watch your speed with one of these commands:</p>
+<pre><code class="language-bash">cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
+vcgencmd measure_clock arm
+watch -n 1 vcgencmd measure_clock arm
+</code></pre>
+<p>To edit the overclock setting:</p>
+<pre><code class="language-bash">sudo vi /boot/config.txt
+</code></pre>
+<pre><code class="language-ini"># uncomment to overclock the arm. 700 MHz is the default.
+over_voltage=6
+arm_freq=2000
+</code></pre>
+<p>Reboot to apply changes.</p>
+<pre><code class="language-bash">sudo reboot
+</code></pre>
+<p><a href="https://haydenjames.io/raspberry-pi-3-overclock/">Explanation of availabe over-clock settings</a></p>
+<div class="heading-wrapper h2">
+<h2 id="set-up-for-tv-use">Set up for TV Use</h2>
+<a class="anchor" href="#set-up-for-tv-use" aria-labelledby="set-up-for-tv-use"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="change-scale">Change Scale</h3>
+<a class="anchor" href="#change-scale" aria-labelledby="change-scale"><span hidden>#</span></a></div>
+<ul>
+<li>Right-Click</li>
+<li>Desktop Preferences</li>
+<li>System</li>
+<li>Font: 22+</li>
+<li>Mouse Cursor: Large</li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="set-up-for-tv-remote-control">Set up for TV Remote Control</h2>
+<a class="anchor" href="#set-up-for-tv-remote-control" aria-labelledby="set-up-for-tv-remote-control"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="todo-install-xmbc-kodi">TODO: Install XMBC / Kodi</h3>
+<a class="anchor" href="#todo-install-xmbc-kodi" aria-labelledby="todo-install-xmbc-kodi"><span hidden>#</span></a></div>
+<p>Once called XBox Media Center.</p>
+<p>Maybe install Kodi or <a href="https://osmc.tv/download/">OSMC</a></p>
+<p>Simplest is to image the whole install...
+https://www.raspberrypi.org/documentation/usage/kodi/README.md</p>
+<pre><code class="language-powershell">sudo apt install kodi
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="todo-commands-from-tv-remote-into-pi">TODO: Commands from TV remote into Pi</h3>
+<a class="anchor" href="#todo-commands-from-tv-remote-into-pi" aria-labelledby="todo-commands-from-tv-remote-into-pi"><span hidden>#</span></a></div>
+<p>HDMI can send TV remote commands to the Pi via <a href="https://github.com/Pulse-Eight">CEC</a>.</p>
+<p>List connected devices:</p>
+<pre><code class="language-powershell">cec-client -l
+</code></pre>
+<p>List available commands</p>
+<pre><code class="language-powershell">echo h | cec-client -s -d 1
+</code></pre>
+<p><a href="https://ownyourbits.com/2017/02/02/control-your-raspberry-pi-with-your-tv-remote/">Reference</a></p>
