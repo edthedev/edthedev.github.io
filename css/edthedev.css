@@ -21,7 +21,7 @@ body
 	font-size:2vw;
   color: var(--main-text-color);
 	background-color: var(--main-bg-color) !important;
-  margin: 0em;
+  margin: 2em;
 }
 
 a {
