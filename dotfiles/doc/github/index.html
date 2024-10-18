@@ -1,0 +1,67 @@
+<div class="heading-wrapper h2">
+<h2 id="setup-github-key">Setup GitHub Key</h2>
+<a class="anchor" href="#setup-github-key" aria-labelledby="setup-github-key"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Add new key to GitHub</p>
+<pre><code class="language-sh">cat ~/.ssh/id_rsa.pub
+</code></pre>
+<p>Visit <a href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
+</li>
+<li>
+<p>Switch <code>dotfiles</code> to use SSH key access</p>
+<p>Edit <code>.git/config</code>:</p>
+<pre><code class="language-ini">url = git@github.com:edthedev/dotfiles.git
+</code></pre>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="setup-github-cli">Setup GitHub CLI</h2>
+<a class="anchor" href="#setup-github-cli" aria-labelledby="setup-github-cli"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Install</p>
+<pre><code class="language-powershell">winget install --id GitHub.cli
+</code></pre>
+</li>
+<li>
+<p>Authorize</p>
+<pre><code class="language-powershell">gh auth login
+</code></pre>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="setup-powershell-for-github">Setup PowerShell for GitHub</h2>
+<a class="anchor" href="#setup-powershell-for-github" aria-labelledby="setup-powershell-for-github"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Install PowerShell for GitHub</p>
+<pre><code class="language-powershell">Install-Module -Name PowerShellForGitHub -Scope CurrentUser
+Set-GitHubConfiguration -DisableTelemetry
+
+</code></pre>
+</li>
+<li>
+<p>Authorize PowerShell for GitHub</p>
+</li>
+</ol>
+<p>Generate a classic token at <a href="https://github.com/settings/tokens?type=beta">https://github.com/settings/tokens?type=beta</a>
+Select all the permissions that start with <code>read</code>, skip the ones I clearly don't care about. If you're not me, and reading this...use your judgement, and good luck.</p>
+<p>Now run:</p>
+<pre><code class="language-powershell">set-githubauthentication
+</code></pre>
+<p>and paste the token into password, and set the username to 'Slartibarfast'.</p>
+<ol start="3">
+<li>
+<p>Clone my multi-repo helper scripts</p>
+<pre><code class="language-powershell">cd ~/src
+git clone git@github.com:uillinois-community/powershell-scripts.git
+</code></pre>
+</li>
+<li>
+<p>Review the available commands</p>
+<pre><code class="language-powershell">get-command -module MarkDownGitHub
+get-command -module AgileGitHub
+</code></pre>
+</li>
+</ol>
