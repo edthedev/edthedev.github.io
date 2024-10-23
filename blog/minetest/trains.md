@@ -2,7 +2,7 @@
 layout: blog.njk
 title: A Train Set in Luanti
 tags: ['blog', 'rss']
-date: 2024-10-17
+date: 2024-10-21
 ---
 
 ## Trains!
@@ -19,6 +19,12 @@ Start a new game world with these settings:
 - Game Engine: `MineGame`
 - Mods: Search for `Trains` and install (and enable) anything with `Advanced Trains` in the name or description.
 - Game Mode: `Creative`
+
+## Recommended Mods
+
+- The `Advanced Trains` modpack - Adds tracks.
+- `AdvTrains Freight Train` - A good starter train.
+- `Simple Woodcutter` - Helps with clearing trees out of the way of tracks.
 
 ## Build Your First Train
 
