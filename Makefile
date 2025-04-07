@@ -1,6 +1,6 @@
 .PHONY: serve open clean
 
-OUTDIR=C:\src\site
+OUTDIR=$(HOME)/site
 
 open: serve
 	open http://localhost:3001
@@ -31,7 +31,7 @@ stop:
 	podman kill --all
 
 clean:
-	rm C:\src\site -r -fo
+	rm $(OUTDIR) -r -fo
 
 deploy_keys:
 	ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages 
