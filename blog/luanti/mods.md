@@ -182,7 +182,12 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - Pairs nicely with the `Pie` mod.
 
 `Remove Unknowns` adds a server admin command to clean-up leftover blocks from retired mods.
-- `/ru 75` clears replaces unknown blocks with air blocks for a radius of 75 around the (server admin) player that issues the command.
+
+Example use:
+
+    - Set radius: `/ru 20`
+    - Right click an unknown block to see an error with the full name, i.e. `fireextinguisher:fireretardant`
+    - Clear all matching blocks within the radius: `/ru fireextinguisher:fireretardant`
 
 `Simple Woodcutter` causes striking the bottom block of a tree to mine any connected tree blocks.
 - Reduces random floating bits of tree top.
