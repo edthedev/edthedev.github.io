@@ -28,11 +28,6 @@ The following mods are ones that I consider **essential** for enjoying `MineGame
 - Essential because light sources can be hard to come by, early game.
 - Essential because requiring a deep mine to generate light of any kind is a significant immersion break in the early game.
 
-`Cleaner` replaces any unrecognized objects from uninstalled mods with a simple red block.
-- Essential because you can remove mods that are not working, without worrying too much about unrecognized blocks left behind.
-- Unrecognized blocks can be picked up and trashed.
-- Gives a server admin freedom to remove mods that are not right for that server.
-- Prevents a lot of error messages on start-up, after removing a mod.
 
 `Farming Redo` adds so many crops.
 - Essential because it makes seeds from all kinds of crops spawn randomly when a player digs in grass
@@ -134,11 +129,6 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - I added it mainly for the fishing rod
 - Also adds many interesting biomes, trees, foods and tools 
 
-`Fire Extinguisher` adds automated fire suppression and cleanup
-- Place a fire extinguisher near fire to release fire suppressant foam.
-- Place and activate a foam cleanup block to release a rapidly spreading cleaner foam that removes fire suppressant foam. 
-- Not currently on ContentDB.
-- Download the zip file from https://forum.minetest.net/viewtopic.php?t=23524 and unzip into the `mods` folder you find by clicking `About` and then clicking `Open User Data Directory`
 
 `Headanim` lets other players see which way you are looking.
 
@@ -191,6 +181,9 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - Without this mod, fruit only spawn when a tree first spawns.
 - Pairs nicely with the `Pie` mod.
 
+`Remove Unknowns` adds a server admin command to clean-up leftover blocks from retired mods.
+- `/ru 75` clears replaces unknown blocks with air blocks for a radius of 75 around the (server admin) player that issues the command.
+
 `Simple Woodcutter` causes striking the bottom block of a tree to mine any connected tree blocks.
 - Reduces random floating bits of tree top.
 - Saves time when tree farming.
@@ -218,10 +211,16 @@ While I don't consider these mods **essential**, I encourage installing many mod
 
 ## Honorable Mentions
 
-These are mods that I recommend, but am not currently using.
+These are mods that I have enjoyed, but am not currently using.
 
 `Bees` adds bees, honey and crafting recipes for beekeeping.
 - I have not figured out how to raise bees.
+
+`Cleaner` replaces any unrecognized objects from uninstalled mods with a simple red block.
+- Essential because you can remove mods that are not working, without worrying too much about unrecognized blocks left behind.
+- Unrecognized blocks can be picked up and trashed.
+- Gives a server admin freedom to remove mods that are not right for that server.
+- Prevents a lot of error messages on start-up, after removing a mod.
 
 `Cottonseed Oil Fertilizer` adds an alternative to bonemeal for growing crops faster.
 - A nice option for peaceful servers that do not have skeletons to kill for `bonemeal`.
@@ -251,6 +250,12 @@ You can verify this took by issuing this command from the in-game terminal:
 ```
 
 > "The Cybermen were never allowed to play Rassilon's Game. They were too good." - The Second Doctor, The Five Doctors
+
+`Fire Extinguisher` adds automated fire suppression and cleanup
+- Place a fire extinguisher near fire to release fire suppressant foam.
+- Place and activate a foam cleanup block to release a rapidly spreading cleaner foam that removes fire suppressant foam. 
+- I would call this essential, but it is not currently on ContentDB.
+- Download the zip file from https://forum.minetest.net/viewtopic.php?t=23524 and unzip into the `mods` folder you find by clicking `About` and then clicking `Open User Data Directory`
 
 `Hang Glider` adds a cheap hang glider
 - Cheap. Same recipe as `Realistic Hang Glider`. (3 wool, 3 sticks)
