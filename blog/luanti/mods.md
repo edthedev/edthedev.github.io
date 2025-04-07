@@ -129,6 +129,9 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - I added it mainly for the fishing rod
 - Also adds many interesting biomes, trees, foods and tools 
 
+`GGraphiti` allows spray painting blocks.
+- Refill spray cans with dyes.
+- Dig blocks to clean off graphiti.
 
 `Headanim` lets other players see which way you are looking.
 
@@ -142,6 +145,8 @@ While I don't consider these mods **essential**, I encourage installing many mod
 - If you're looking for pragmatic ways to get around, consider `Legboat`, `Movement Essentials`, `Realistic Hangglider` instead.
 - Pairs very nicely with a mod that adds sloped blocks to build with.
 - If you want to build a cool race track and race around on it, this is the mod!
+
+`Living Villages` adds villagers with jobs.
 
 `LWScratch` adds robots you can craft and program in a graphical language similar to [Scratch](https://scratch.mit.edu/).
 - Make a robot do boring repetitive parts of your builds.
