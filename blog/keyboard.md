@@ -1,7 +1,7 @@
 ---
 layout: blog.njk
 title: Building a Keyboard
-tags: ['blog']
+tags: []
 date: 2024-12-26
 ---
 
