@@ -2,7 +2,7 @@
 layout: blog.njk
 title: Learn Cybersecurity with OWASP Juice Shop
 tags: ['blog', 'rss', 'learning']
-date: 2024-04-10
+date: 2025-04-10
 ---
 
 The OWASP Juice Shop is currently my favorite Cybersecurity learning tool. It's an intentionally vulnerable website that acts like a puzzle box - you use common vulnerabilities to break into it, and the more you learn the more layers become available to break into. It has some built in tutorials, and more hints can be found across variuos blogs. Also feel free to reach out to me - I'm working though it right now myself to improve my own skills.
@@ -15,13 +15,13 @@ For advanced usage, I recommend running a local copy of Juice Shop using `Podman
 
 > Tip: Anywhere the command `podman` appears below, `docker` will work as well.
 
-Once to install the files for Juice Shop:
+First, run this once to install the files for Juice Shop:
 
 ```sh
 podman pull bkimminich/juice-shop
 ```
 
-Each time you want to run the Juice Shop:
+Then, each time you want to run the Juice Shop, run:
 
 ```sh
 podman run -d -p 3000:3000 bkimminich/juice-shop
