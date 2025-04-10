@@ -1,0 +1,18 @@
+<div class="heading-wrapper h2">
+<h2 id="wifi-fix-from-reddit">Wifi fix from Reddit</h2>
+<a class="anchor" href="#wifi-fix-from-reddit" aria-labelledby="wifi-fix-from-reddit"><span hidden>#</span></a></div>
+<p>https://www.reddit.com/r/SurfaceLinux/comments/9t53gq/wifi_fixed_on_surface_go_ubuntu_1810/</p>
+<p>I wanted to share this since it seems like a common problem on the Surface Go and there isn't a step-by-step guide out there to fix it. A lot of thanks goes out to the community, especially u/jamesdutc for his post Surface Go: First Impressions. I also recommend anyone new to the Terminal to visit Linuxconfig.org - a resource that helped me greatly.</p>
+<p>How I got WiFi Working</p>
+<p>Step 1) Download the board.bin file from here: http://www.killernetworking.com/support/K1535_Debian/board.bin - I saved the file to Downloads -</p>
+<p>Step 2) Open the Terminal</p>
+<p>Step 3) Remove the current board.bin file from directory hw2.1:</p>
+<p>sudo rm /lib/firmware/ath10k/QCA6174/hw2.1/board.bin</p>
+<p>Step 4) Copy the board.bin file from Downloads to hw2.1*</p>
+<p>sudo cp ~/Downloads/board.bin /lib/firmware/ath10k/QCA6174/hw2.1</p>
+<p>Step 5) Remove the current board.bin file from directory hw3.0</p>
+<p>sudo rm /lib/firmware/ath10k/QCA6174/hw3.0/board.bin</p>
+<p>Step 6) Copy the board.bin file from Downloads to hw3.0*</p>
+<p>sudo cp ~/Downloads/board.bin /lib/firmware/ath10k/QCA6174/hw3.0</p>
+<p>Step 7) Restart</p>
+<p>And that's it! After going through this process my WiFi now works. Hopefully, others out there who are like me and unfamiliar with the Terminal will find this helpful.</p>
