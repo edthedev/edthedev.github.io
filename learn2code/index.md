@@ -15,6 +15,10 @@ Scratch also has a built in video tutorial series that explores a bunch of great
 
 Let me know if you enjoy [my humble Scratch creations](https://scratch.mit.edu/users/edthedev/).
 
+## Turtle Programs
+
+Before we had `Scratch`, we had `turtle`. I learned `turtle` on a Commodore 64. But a working Commodore 64 can be hard to get, today. Thankfully,[Python includes an implementation of `turtle`](/blog/turtle).
+
 ## MakeCode Arcade & Meowbit
 
 > Kids need shelter, food, love, and a hand-held video game player that they can write their own games for.
