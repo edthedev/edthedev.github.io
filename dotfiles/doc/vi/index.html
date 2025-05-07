@@ -1,0 +1,7 @@
+<div class="heading-wrapper h2">
+<h2 id="clean-microsoft-cruft-from-a-list-of-emails">Clean Microsoft Cruft from a list of emails</h2>
+<a class="anchor" href="#clean-microsoft-cruft-from-a-list-of-emails" aria-labelledby="clean-microsoft-cruft-from-a-list-of-emails"><span hidden>#</span></a></div>
+<p>Clean a copied list of Microsoft Email Addresses for re-use:</p>
+<p>If they're all on one line:</p>
+<pre><code class="language-regex">:s/[^&lt;]+&lt;([^&gt;]+)&gt;;/\1;/g
+</code></pre>

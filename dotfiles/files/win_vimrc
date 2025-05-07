@@ -1,0 +1,2 @@
+Write-Host "Sourcing c:\src\dotfiles\vimrc"
+so c:/src/dotfiles/vimrc
