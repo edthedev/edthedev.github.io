@@ -2,8 +2,15 @@
 layout: layout.njk
 title: Learn 2 Code - Edward Delaporte's Guide
 tags: topic_index
-date: 2024-05-05
+date: 2025-05-05
 ---
+
+## How to Learn to Code
+
+I often get asked how I would recommend learning to program computers, today. I have so many answers, I had to write them all down. I update this page roughly annually.
+
+The majority of the resources listed below are completely free - except the ones that require purchasing dedicated hardware.
+
 
 ## MIT Scratch
 
@@ -33,11 +40,11 @@ And a better game than mine:
 
 + [Tony Albatross - Pro Dolphin](https://arcade.makecode.com/26346-72733-28413-39259)
 
-## Robots in MineTest
+## Robots in Luanti
 
-If I told you there was a free clone of `MineCraft` that allowed players to build and program robots, would you even finish reading this page?
+If I told you there was a free clone of `MineCraft` that allowed players to build and program robots, would you even finish reading this page? I might not.
 
-Everyone should get to play with [Robots in MineTest](/blog/minetest/robots).
+Everyone should get to play with [Robots in Luanti](/blog/luanti/robots).
 
 ## Create Retro Python Games using Pyxel
 
@@ -51,7 +58,7 @@ For a cool guided learning experience, consider [Minecraft on Code.org](https://
 
 It has a Minecraft theme, stars YouTube celebrities, and has a plot. Along the way, kids get to control Steve while programming a robot ally to solve puzzles.
 
-Note that this is a two-dimensional game. For a full 3D experience, try out [MineTest with Robots](/blog/minetest/robots).
+Note that this is a two-dimensional game. For a full 3D MineCraft experience with programmable robots, try out [Luanti with Robots](/blog/luanti/robots).
 
 ## Code.org
 
@@ -59,13 +66,13 @@ Note that this is a two-dimensional game. For a full 3D experience, try out [Min
 
 ## Real Robots!!! with BBC Micro:Bit
 
-For about $60.00 (one MicroBit and one CuteBot), your kid can have a robot trucking around the room, following code they wrote. Consider getting an extra MicroBit to act as a remote control via Bluetooth.
+For about $60.00 (one MicroBit and one CuteBot), your kid can have a robot wandering around the room, following code they wrote. Consider getting an extra MicroBit to act as a remote control via Bluetooth.
 
-[BBC Micro:Bit](https://makecode.microbit.org/) is currently the most afordable hardware I have found that can run block code.
+The [BBC Micro:Bit](https://makecode.microbit.org/) is currently the most afordable hardware I have found that can run block code.
 
 It comes with bunch of LEDs, a couple of buttons, a bluetooth radio, and a connector for an always growing set of add-on boards.
 
-[CuteBot](https://www.elecfreaks.com/learn-en/microbitKit/smart_cutebot/cutebot_car.html) is currently my favorite affordable robot frame. 
+[CuteBot](https://www.elecfreaks.com/learn-en/microbitKit/smart_cutebot/cutebot_car.html) is currently my favorite affordable robot frame. Mine came with a nice booklet of example programs.
 
 ## p5.js
 
