@@ -2,7 +2,7 @@
 layout: blog.njk
 title: Robot Turtle with Python
 tags: ['blog', 'rss']
-date: 2025-05-05
+date: 2025-05-11
 ---
 
 ## Robot Turtles
@@ -47,25 +47,45 @@ To display the Turtle window, type your first command:
 forward(100)
 ```
 
-> Tip: A new separate window should appear with an arrow pointing to the right. The tip of the arrow is your turle. The line coming out of the arrow is the 100 points of travel the turtle just completed.
+> Tip: A new separate window should appear with an arrow pointing to the right.
 
-Some interesting commands to explore:
+The tip of the arrow is your turle. The line coming out of the arrow is the 100 pixels of travel the turtle just completed.
 
-- `penup()` - lift the pen to allow moving without drawing
-- `pendown()` - lower the pen to resume drawing
+Now a list of interesting commands to explore.
+
+Move the turtle:
+
+- `forward(100)` move the turtle forward 100 pixels
 - `right(45) / left(90)` rotate left or right the number of degrees specified
 - `xcor() / ycor()` - show the current x or y coordinate
 - `heading()` - get the current heading (in degrees)
 - `goto(0,0)` - go directly to the x and y cordinates given
-- `color('green') - change the turtle (and ink) to the given color
-- `write('hello world') - write the given text next to the turtle
-- `setx(100) / sety(100)` - jump to the given x / y coordiante
-- `stamp()` - "stamp" the turtle's current appearance into the canvas
-- `clearscreen()` - empty the canvas of all drawings
+
+> Tip: All commands whould end in `()` - and some take arguments - a number or string of text between the `()`.
+
+Control the drawn line:
+
+- `penup()` - lift the pen to allow moving without drawing
+- `pendown()` - lower the pen to resume drawing
 - `pensize(10)` - change the pen line thickness to the given number of pixels
+- `color('green')` - change the turtle (and ink) to the given color
+
+Text output:
+
+- `write('hello world') - write the given text next to the turtle
+- `setx(100) / sety(100)` - jump to the given x / y coordinate 
+
+Stamps:
+
+- `shape("circle")` - change the turle's shape
+- `stamp()` - "stamp" the turtle's current appearance into the canvas
+
+Clean up:
+
 - `hideturtle()` - hide the turtle
 - `showturtle()` - show the turtle
+- `clearscreen()` - empty the canvas of all drawings
 - `undo()` - undo the previous command
 
-> Tip: All commands whould end in `()` - and some take arguments - text between the `()`.
+
 
