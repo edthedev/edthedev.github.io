@@ -18,10 +18,10 @@ body
 {
 	/* font-family: 'times new roman', times, serif; */
   font-family: monospace;
-	font-size:2vmax;
+	font-size:1.5vmax;
   color: var(--main-text-color);
 	background-color: var(--main-bg-color) !important;
-  margin: 2em;
+  margin: 4vmax;
 }
 
 a {
