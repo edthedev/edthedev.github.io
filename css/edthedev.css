@@ -21,7 +21,7 @@ body
 	font-size:1.8vmax;
   color: var(--main-text-color);
 	background-color: var(--main-bg-color) !important;
-  margin: 2vmax;
+  margin: 1vmax;
 }
 
 a {
@@ -91,7 +91,7 @@ Navigation Style
 	list-style-type: none;
 	margin: 0;
 	padding: .5em;
-	padding-right: 2em;
+	padding-right: 2vmax;
 	float:left;
 }
 
@@ -115,7 +115,7 @@ Navigation Style
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: .5em .5em;
+  padding: .5vmax .5vmax;
   text-decoration: none;
 }
 
