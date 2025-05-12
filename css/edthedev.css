@@ -18,10 +18,10 @@ body
 {
 	/* font-family: 'times new roman', times, serif; */
   font-family: monospace;
-	font-size:1.5vmax;
+	font-size:1.8vmax;
   color: var(--main-text-color);
 	background-color: var(--main-bg-color) !important;
-  margin: 4vmax;
+  margin: 2vmax;
 }
 
 a {
@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-	padding-left: 1em;
+	padding-left: 1vmax;
   font-family: monospace;
 	font-size:2.5vmax;
   /* border-bottom-style:solid;
@@ -149,17 +149,17 @@ code {
 
 .content {
   align-content: center;
-	margin: 1em;
-  margin-top: 3.5em; /* Do not drift under top bar. */
-  margin-left: 4em;
-  margin-right: 4em;
+	margin: 1vmax;
+  margin-top: 3.5vmax; /* Do not drift under top bar. */
+  margin-left: 4vmax;
+  margin-right: 4vmax;
   max-width: 95%;
 }
 
 /* Make quotes stand out a bit more */
 blockquote {
   border-style: outset;
-  padding: 1em;
+  padding: 1vmax;
 }
 
 .skip-to button {
@@ -167,14 +167,14 @@ padding: 0 0 0 0;
 }
 
 .skip-to {
-  font-size: .5em;
+  font-size: .5vmax;
 }
 
 .more_nav {
 	list-style-type: none;
 	margin: 0;
-	padding: .5em;
-	padding-right: 2em;
+	padding: .5vmax;
+	padding-right: 2vmax;
 }
 
 .link_to_code {
