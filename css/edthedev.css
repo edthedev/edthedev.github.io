@@ -151,8 +151,8 @@ code {
   align-content: center;
 	margin: 1vmax;
   margin-top: 3.5vmax; /* Do not drift under top bar. */
-  margin-left: 4vmax;
-  margin-right: 4vmax;
+  margin-left: 1vmax;
+  margin-right: 1vmax;
   max-width: 95%;
 }
 
