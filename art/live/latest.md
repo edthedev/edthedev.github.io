@@ -5,4 +5,5 @@ script: [ 'js/art/latest.js', 'js/art/share/setup_canvas.js', 'js/art/share/star
 tags: ['art']
 stub: 'latest'
 alt: ''
+date: 2023-12-11
 ---
