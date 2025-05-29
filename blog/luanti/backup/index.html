@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Backup MineTest Worlds with Synology - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Backup MineTest Worlds with Synology </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about">About</h2>
+<a class="anchor" href="#about" aria-labelledby="about"><span hidden>#</span></a></div>
+<p>It wasn't obvious how to backup my local <code>MineTest</code> world files using my Synology Network Attached Storage (NAS), so here's the recipe that worked for me.</p>
+<p>Note that my host machine is Linux. You may need to modify this recipe for Windows or Mac.</p>
+<div class="heading-wrapper h2">
+<h2 id="the-challenge">The Challenge</h2>
+<a class="anchor" href="#the-challenge" aria-labelledby="the-challenge"><span hidden>#</span></a></div>
+<blockquote>
+<p>Synology Client will not Sync Hidden Folders
+and <code>.minetest</code> is hidden.</p>
+</blockquote>
+<div class="heading-wrapper h2">
+<h2 id="the-solution">The Solution</h2>
+<a class="anchor" href="#the-solution" aria-labelledby="the-solution"><span hidden>#</span></a></div>
+<p>While MineTest is <em>not running</em>, move the world files:</p>
+<pre><code class="language-sh">mv ./.minetest/ minetest                        
+ln -s ./minetest/ .minetest   
+</code></pre>
+<p>Alternately, if installed via <code>flatpak</code>:</p>
+<pre><code class="language-sh">MINETEST_HOME=$HOME/.var/app/net.minetest.Minetest/.minetest
+mv $MINETEST_HOME $HOME/minetest
+ln -s $HOME/minetest $MINETEST_HOME
+</code></pre>
+<p>Then confirm with:</p>
+<pre><code class="language-sh">$ ls $MINETEST_HOME
+cache  client  config  data  debug.txt  minetest.conf  mods  worlds
+$ ls -al ~/.var/app/net.minetest.Minetest/.minetest
+lrwxrwxrwx 1 foo foo 21 May 29 22:15 /home/foo/.var/app/net.minetest.Minetest/.minetest -&gt; /home/foo/minetest
+</code></pre>
+<p>Now in the Synology client, setup a 'Backup Task' of <code>~/minetest/worlds</code>.</p>
+<ul>
+<li>Be sure to use a scheduled task, not continuous backup. You do not want the system struggling to update the Synology while playing.</li>
+</ul>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Backup MineTest Worlds with Synology%20-%20https://edward.delaporte.us/blog/luanti/backup/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

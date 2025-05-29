@@ -1,0 +1,128 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Linux on my Surface Go - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Linux on my Surface Go </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="overview">Overview</h2>
+<a class="anchor" href="#overview" aria-labelledby="overview"><span hidden>#</span></a></div>
+<p>I chose Ubuntu because I want to play Steam games.</p>
+<p>I have really wanted to install Linux on the Surface Go from the day I bought it, but I did not feel confident that the drivers and work-arounds would be available, until today.</p>
+<p>I bought the Surface Go for the delightful hardware design, not for the operating system that ships with it. I find Windows 10 to be perfectly tolerable. I used Windows 10 on my Surface Go for about six years.</p>
+<p>My biggest motive for staying with Windows was Steam games, and my biggest motive for swithing is - Steam games.</p>
+<p>Over the years I have owned a Surface Go, my Windows install has gotten slower, while my Steam game library compatibility with Linux has gotten stronger.</p>
+<p>I recently realized I was not choosing to play any games at all, and I was frustrated by lag during text editing and web browsing. So it was time to make the switch!</p>
+<p>My notes follow. This is meant to be an overview, not a perfect guide. There are better step-by-step guides out there already. Read this if you're trying to get a sense of how much work the change will be, and how it went for me.</p>
+<div class="heading-wrapper h2">
+<h2 id="preparation">Preparation</h2>
+<a class="anchor" href="#preparation" aria-labelledby="preparation"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>I used Pendrive Linux to create a bootable USB stick with Ubuntu 20.04.</p>
+</li>
+<li>
+<p>I looked up my BitLocker Encryption key in my personal Microsoft account.</p>
+</li>
+<li>
+<p>I disabled BitLocker encryption in Windows, because I didn't want to type in my BitLocker key after every reboot.</p>
+</li>
+<li>
+<p>I did a bunch of bios/UEFI dancing (hold Volume-Down during boot) to (temporarily) disable secure boot, and to bump USB up in the boot order.</p>
+</li>
+<li>
+<p>I backed up my OEM Windows 10 key, in case I want to restore Windows.</p>
+<blockquote>
+<p>Tip: Don't be like me, apply the latest firmware updates through Windows before you start.
+I may end up re-installing Windows in dual boot, just to apply some firmware updates.</p>
+</blockquote>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="installation">Installation</h2>
+<a class="anchor" href="#installation" aria-labelledby="installation"><span hidden>#</span></a></div>
+<p>I booted to the PenDrive Linux, chose Ubuntu, and <code>Install Ubuntu</code>. I selected <code>Minimal Install</code>, because I am <em>very</em> familiar with available Linux applications, and I am quite picky about which ones I will add later.</p>
+<div class="heading-wrapper h2">
+<h2 id="fixes">Fixes</h2>
+<a class="anchor" href="#fixes" aria-labelledby="fixes"><span hidden>#</span></a></div>
+<p>I knew before I started that this was going to take some work to get working just right, because the Surface Go is a unique piece of hardware. The unique hardware is why I bought it!</p>
+<p>My dream is to someday own a fully open and repairable equivalent computer, like an idealized future verson of the <code>Framwork</code> laptop. But the efficient and economical thing to do today is to upgrade what I already have.</p>
+<div class="heading-wrapper h3">
+<h3 id="installed-the-extra-special-surface-linux-kernel">Installed the extra-special surface linux kernel</h3>
+<a class="anchor" href="#installed-the-extra-special-surface-linux-kernel" aria-labelledby="installed-the-extra-special-surface-linux-kernel"><span hidden>#</span></a></div>
+<p>I followed the instructions at the <a href="https://github.com/linux-surface/linux-surface">Linux Surface Go Kernel</a> GitHub repo.
+It looks like this when done.</p>
+<pre><code class="language-bash">$ uname -a
+	Linux mycomputer 6.6.1-surface-1 ...etc...
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="the-wireless-fix">The Wireless Fix</h3>
+<a class="anchor" href="#the-wireless-fix" aria-labelledby="the-wireless-fix"><span hidden>#</span></a></div>
+<p>I followed this <a href="https://www.reddit.com/r/SurfaceLinux/comments/9t53gq/wifi_fixed_on_surface_go_ubuntu_1810/">terrific guide on Reddit to Wifi on Surface Go</a>. It was written for Ubuntu 18.10, but it worked for me on Ubuntu 20.04 LTS.</p>
+<p>I used a cheap USB wifi adapter in order to find and read that guide, of course. Ubuntu has great support for no-name USB wifi dongles.</p>
+<div class="heading-wrapper h3">
+<h3 id="add-some-repositories">Add some repositories</h3>
+<a class="anchor" href="#add-some-repositories" aria-labelledby="add-some-repositories"><span hidden>#</span></a></div>
+<p>I added some repositories for <code>SurfaceLinux</code> and <code>VSCodium</code>.</p>
+<pre><code class="language-sh">deb [arch=amd64] https://pkg.surfacelinux.com/debian release main
+deb [signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/debs vscodium main
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="initial-reactions">Initial Reactions</h2>
+<a class="anchor" href="#initial-reactions" aria-labelledby="initial-reactions"><span hidden>#</span></a></div>
+<p>It's so fast! Windows 10 was snappy when I first bought it, but had gotten slow with time and usage.</p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Linux on my Surface Go%20-%20https://edward.delaporte.us/blog/surfacego/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

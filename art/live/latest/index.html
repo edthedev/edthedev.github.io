@@ -1,0 +1,257 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/art.css" /> 
+  <title>A Crack in the Wall - 2023 December 11</title>
+  <script src="/js/p5.js"></script>
+  
+    <script src="/js/art/latest.js"></script>
+  
+    <script src="/js/art/share/setup_canvas.js"></script>
+  
+    <script src="/js/art/share/starfield.js"></script>
+  
+    <script src="/js/art/share/choose.js"></script>
+  
+
+</head> 
+<body>
+
+<nav class="ye_navbar" role="navigation"> 
+<ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+</nav>
+
+
+<div class="content" role="main"> <!-- No role="main" here because the script will add a main tag. -->
+<h1> A Crack in the Wall - 2023 December 11 </h1>
+
+<main role="application"> <!-- Script output will be written here. -->
+</main>
+
+</div>
+<div class="content" role="contentinfo">
+<p>Edward Delaporte created this art using the <a href="https://p5js.org/">P5.js</a> JavaScript library, and the following additional code:
+</p>
+  
+    <h2><a href='/js/art/latest.js'>js/art/latest.js</a>:</h2>
+
+<pre>
+/*
+
+This is a Live Art work created by Edward Delaporte.
+
+This script is Copyright Edward Delaporte 2021.
+
+This script and the art it creates are licensed under 
+a Creative Commons Attribution-ShareAlike 4.0 
+International License.
+
+http://creativecommons.org/licenses/by-sa/4.0/
+
+You can share your own remix of this code 
+as long as you display this license and attribution.
+
+*/
+
+
+var weave = {
+  x: 0,
+  y: 0,
+  dx: 1,
+  dy: 1,
+  sequence: [],
+  size: 10,
+  color1: null,
+  color2: null
+};
+
+var pulse = 0;
+var beat = 30;
+
+function draw_weave(weave) {
+  fill(weave.color);
+  circle(weave.x,weave.y, weave.size);
+  fill(weave.color2);
+  circle(weave.x + weave.size,
+    weave.y + weave.size, 
+    weave.size / 2);
+  return weave;
+}
+
+function anim_weave(weave) { 
+  weave.x += weave.dx;
+  weave.y += weave.dy;
+  return weave;
+}
+
+function fresh_color() {
+  let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  return c;
+}
+
+function setup() {
+
+  setup_canvas(800, 400);
+  background(&#39;#222222&#39;);
+  starfield(800,400);
+
+  maxline = 400;
+  balls = [];
+  item_count = random(3,5);
+
+  weave_template = Object(weave);
+  for(i=0;i&amp;ltitem_count;i++){
+    newb = Object.assign({}, weave_template);
+    newb.x = random(0,maxline);
+    newb.y = 100 + i * 40; // Make sure they each start offset a bit
+    newb.color = fresh_color();
+    newb.color2 = fresh_color();
+
+    // base_path = [1,1, 1,-1, -1,-1, -1, 1]; // figure 8
+    rise1 = random(.5,.9);
+    base_path = [1,-1,rise1,rise1,1,-1,.8,.8,
+      1,-1,1,1,.5,-.5,1,1,.5,-.5,random(.2,.9),random(.2,.9)];
+
+    // base_path = [1,1,1,-1];
+    seq1 = base_path.map( item =&amp;gt item * choose([2,3,4]));
+    seq2 = seq1.map( item =&amp;gt item * -1); // reverse?
+    newb.sequence = newb.sequence.concat(seq1);
+    newb.sequence = newb.sequence.concat(seq2);
+
+    console.debug(newb);
+    balls.push(newb);
+  }
+  noStroke();
+
+}
+
+function shift_weave(item) {
+  if(item.sequence.length &amp;gt 0) {
+    item.dx = item.sequence.shift();
+    item.dy = item.sequence.shift();
+  } else {
+    item.dx = 0;
+    item.dy = 0;
+  }
+  return item;
+}
+
+function draw() {
+  if(pulse == 0) {
+    balls = balls.map( item =&amp;gt shift_weave(item) );
+  }
+  pulse++;
+  if(pulse &amp;gt beat) {
+    pulse = 0;
+  }
+  balls = balls.map( item =&amp;gt anim_weave(item) );
+  balls = balls.map( item =&amp;gt draw_weave(item) );
+}
+
+function mouseClicked() {
+  pulse = 0;
+  setup();
+}
+
+</pre>
+  
+    <h2><a href='/js/art/share/setup_canvas.js'>js/art/share/setup_canvas.js</a>:</h2>
+
+<pre>
+function setup_canvas(maxim_x=800, maxim_y=400) {
+  midline = maxim_x / 2;
+  myCanvas = createCanvas(maxim_x, maxim_y);
+}
+
+</pre>
+  
+    <h2><a href='/js/art/share/starfield.js'>js/art/share/starfield.js</a>:</h2>
+
+<pre>
+
+function starfield(max_x, max_y, star_size=4) {
+  // white stars
+  noStroke();
+  fill(color(255,255,255));
+  
+  // Randomly scatter stars.
+  starcount = random(20,60);
+  for(i=0;i&amp;ltstarcount;i++){
+    starx = random(0, max_x);
+    stary = random(0, max_y);
+    circle(starx, stary, star_size);
+    if(random(0,5)==1) {
+      circle(starx -4, stary -4, star_size);
+    }
+
+  }
+}
+</pre>
+  
+    <h2><a href='/js/art/share/choose.js'>js/art/share/choose.js</a>:</h2>
+
+<pre>
+/* 
+
+Reusable random functions
+
+*/
+
+function get_url_seed() {
+  const params = new URLSearchParams(location.search);
+  seed = params.get(&#39;r&#39;);
+  return seed;
+}
+
+function get_random_from_seed(seed, max_r=1) {
+    rand = Math.sin(seed) * 10000;
+    rand = rand - Math.floor(rand); // Get remainder
+    return Math.floor(rand * max_r);
+}
+
+function choose(choices, seed) {
+  // Support repeatable result.
+  // so that every frame of animation re-uses the 
+  // same choice as last.
+  if(!seed) {
+    seed = get_url_seed();
+  }
+  index = get_random_from_seed(seed, choices.length);
+  return choices[index];
+}
+</pre>
+  
+</div>
+
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=A Crack in the Wall - 2023 December 11%20-%20https://edward.delaporte.us/art/live/latest/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

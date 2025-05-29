@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Friendship Is Magic - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Friendship Is Magic </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="overview">Overview</h2>
+<a class="anchor" href="#overview" aria-labelledby="overview"><span hidden>#</span></a></div>
+<p>I am <a href="/me/code">fluent in an absurd number of programming languages</a>.
+I love programming languages - even terrible ones like <a href="/pikachu">Pikachu</a>.</p>
+<p>But no language has tempted me as much as <a href="https://github.com/avian2/fimpp">Friendship is Magic++</a>.</p>
+<div class="heading-wrapper h2">
+<h2 id="setup">Setup</h2>
+<a class="anchor" href="#setup" aria-labelledby="setup"><span hidden>#</span></a></div>
+<p>Fimp++ is great fun, but I'm not going to corrupt an operating system's packages with it permanently.
+So this is a job for <code>podman</code>.
+Instructions that follow will be for Centos9, because I happen to be playing with <code>OpenShift</code> right now.</p>
+<ol>
+<li>
+<p>Install Podman</p>
+<pre><code class="language-sh">sudo yum install epel-release -y
+sudo yum install podman -y
+</code></pre>
+</li>
+<li>
+<p>Pull the <code>Friendship is Magic</code> Docker image</p>
+<p><code>podman pull avian2/fimpp</code></p>
+</li>
+<li>
+<p>Create a program.</p>
+</li>
+</ol>
+<pre><code># 
+Dear Princess Celestia: Hello World.
+
+Today I learned about zigzags:
+
+Did you know Spike likes &quot;/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\&quot;?
+Did you know Rainbow Dash likes &quot;///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\&quot;?
+
+I did this 9 times:
+
+I quickly said Spike.
+I quickly said Rainbow Dash.
+I said Spike.
+I quickly said Rainbow Dash.
+I quickly said Spike.
+I said Spike.
+
+That's what I did.
+
+Your faithful student, Twilight Sparkle.
+# 
+
+</code></pre>
+<ol start="6">
+<li>
+<p>Poke around inside the container to realize that I have SELinux <code>helping</code> me.</p>
+<pre><code class="language-sh">podman run -v `pwd`:/letters --entrypoint=bash -it avian2/fimpp
+</code></pre>
+</li>
+<li>
+<p>Run the program with <code>fimpp</code> inside the <code>podman</code> container</p>
+<pre><code class="language-sh">$ podman run -v `pwd`:/letters:z avian2/fimpp /letters/zig.fimp
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+///////\\//\/\\\\/\/\/\/\///\\/\/\/\/\/\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\/\\//\/\\\/\///\/\////\/\/\/\/\/\/\///\\
+</code></pre>
+</li>
+</ol>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Friendship Is Magic%20-%20https://edward.delaporte.us/blog/friendship/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>
