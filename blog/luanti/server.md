@@ -1,29 +1,30 @@
 ---
 layout: blog.njk
-title: Running a MineTest Server
+title: Running a Luanti Server
 tags: ['blog', 'rss']
-date: 2024-05-05
+date: 2025-07-04
 ---
 
 ## About
 
-MineTest is fun with friends. I have found hosting a dedicated MineTest server to be substantially simpler than MineCraft Java Edition. 
+Luanti is fun with friends. I have found hosting a dedicated Luanti server to be substantially simpler than MineCraft Java Edition.
 
-The first class support for mods in the MineTest game engine really shines here - in all the steps not included in these instructions.
+The first class support for mods in the Luanti game engine really shines here - in all the steps not included in these instructions.
 
 ## Steps
 
-Step 1: Install MineTest
+Step 1: Install Luanti
 
-```sh
-sudo apt install minetest
+```
+flatpak install net.minetest.Minetest
+flatpak list | grep Luanti
 ```
 
 Step 2: Interactively setup MineGame
 
-- Run MineTest
+- Run Luanti
 - Add the `minegame` game
-- Install some [MineTest Mods](/blog/minetest/mods/).
+- Install some [Luanti Mods](/blog/minetest/mods/).
 - Generate a world
 
 Step  3: Run as a headless server
@@ -31,7 +32,7 @@ Step  3: Run as a headless server
 To run as a server:
 
 ```sh
-minetest --server --gameid minetest --worldname SurfaceWorld --terminal
+/usr/bin/flatpak run net.minetest.Minetest --server --gameid minetest --worldname SurfaceWorld --terminal
 ```
 
 Step 4: Various Network Stuff
@@ -45,7 +46,7 @@ Unless otherwise specified, these commands assume a `Debian` server, and are typ
 1. What is the server IP addresss for players on my home network? 
 
 ```sh
-ip addr | 192.168
+ip addr | grep 192.168
 ```
 
 > `ip addr` tells you a bunch of information about your network connection.
@@ -59,7 +60,7 @@ To see what Ports are in use:
 lsof -i -n -P | grep 30000
 ```
 
-> We typically expect port 30000 to be in use, by MineTest
+> We typically expect port 30000 to be in use, by Luanti
 
 3. What IP address should my remote friends connet to?
 
