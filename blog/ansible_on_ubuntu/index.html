@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Setup Ansible on Ubuntu</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Setup Ansible on Ubuntu </h1>
+<div class="heading-wrapper h2">
+<h2 id="setup-ansible">Setup Ansible</h2>
+<a class="anchor" href="#setup-ansible" aria-labelledby="setup-ansible"><span hidden>#</span></a></div>
+<p>Here's how I set up Ansible on Ubuntu.</p>
+<pre><code class="language-shell">python -m venv ansible_venv
+source ansible_venv/bin/activate
+pip3 install ansible
+ansible-galaxy collection install community.aws
+pip3 install boto3
+</code></pre>
+
+</div>
+
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Setup Ansible on Ubuntu%20-%20https://edward.delaporte.us/blog/ansible_on_ubuntu/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

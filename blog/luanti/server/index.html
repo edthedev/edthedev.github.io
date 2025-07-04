@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Running a Luanti Server - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Running a Luanti Server </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about">About</h2>
+<a class="anchor" href="#about" aria-labelledby="about"><span hidden>#</span></a></div>
+<p>Luanti is fun with friends. I have found hosting a dedicated Luanti server to be substantially simpler than MineCraft Java Edition.</p>
+<p>The first class support for mods in the Luanti game engine really shines here - in all the steps not included in these instructions.</p>
+<div class="heading-wrapper h2">
+<h2 id="steps">Steps</h2>
+<a class="anchor" href="#steps" aria-labelledby="steps"><span hidden>#</span></a></div>
+<p>Step 1: Install Luanti</p>
+<pre><code>flatpak install net.minetest.Minetest
+flatpak list | grep Luanti
+</code></pre>
+<p>Step 2: Interactively setup MineGame</p>
+<ul>
+<li>Run Luanti</li>
+<li>Add the <code>minegame</code> game</li>
+<li>Install some <a href="/blog/minetest/mods/">Luanti Mods</a>.</li>
+<li>Generate a world</li>
+</ul>
+<p>Step  3: Run as a headless server</p>
+<p>To run as a server:</p>
+<pre><code class="language-sh">/usr/bin/flatpak run net.minetest.Minetest --server --gameid minetest --worldname SurfaceWorld --terminal
+</code></pre>
+<p>Step 4: Various Network Stuff</p>
+<ul>
+<li><a href="https://wiki.minetest.net/Setting_up_a_server#Allowing_external_players_to_connect">Allowing External Players to Connect</a></li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="troubleshooting">Troubleshooting</h2>
+<a class="anchor" href="#troubleshooting" aria-labelledby="troubleshooting"><span hidden>#</span></a></div>
+<p>Unless otherwise specified, these commands assume a <code>Debian</code> server, and are typed into a command line console on the <code>Debian</code> server.</p>
+<ol>
+<li>What is the server IP addresss for players on my home network?</li>
+</ol>
+<pre><code class="language-sh">ip addr | grep 192.168
+</code></pre>
+<blockquote>
+<p><code>ip addr</code> tells you a bunch of information about your network connection.
+<code>192.168.X.Y</code> is what the local IP address, within your home network, typically looks like.</p>
+</blockquote>
+<ol start="2">
+<li>Have I got that port right?</li>
+</ol>
+<p>To see what Ports are in use:</p>
+<pre><code class="language-sh">lsof -i -n -P | grep 30000
+</code></pre>
+<blockquote>
+<p>We typically expect port 30000 to be in use, by Luanti</p>
+</blockquote>
+<ol start="3">
+<li>What IP address should my remote friends connet to?</li>
+</ol>
+<blockquote>
+<p>Tip: This assumes that the linked networking configurations above have all been completed.</p>
+</blockquote>
+<pre><code class="language-sh">curl ifconfig.me
+</code></pre>
+<blockquote>
+<p>Tip: If your PC has both Wifi and a wire connection, the networking bits may be simpler to accomplish with WiFi disabled.</p>
+<pre><code class="language-sh">nmcli radio wifi off
+nmcli radio wifi on
+</code></pre>
+</blockquote>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Running a Luanti Server%20-%20https://edward.delaporte.us/blog/luanti/server/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

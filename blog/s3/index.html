@@ -1,0 +1,249 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Create a MicroSite on AWS S3 - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Create a MicroSite on AWS S3 </h1>
+
+  <p>How to setup a micro-site on AWS S3 with custom DNS.</p>
+<div class="heading-wrapper h2">
+<h2 id="create-the-needed-s3-buckets">Create the needed S3 Buckets</h2>
+<a class="anchor" href="#create-the-needed-s3-buckets" aria-labelledby="create-the-needed-s3-buckets"><span hidden>#</span></a></div>
+<p>This is going to create <code>www.</code>, <code>logs.</code> and apex domain S3 buckets.</p>
+<ul>
+<li>The <code>www.</code> bucket holds your site content.</li>
+<li>The <code>logs.</code> bucket holds access logs for your site.</li>
+<li>The apex domain bucket just serves a redirect to <code>www.</code></li>
+</ul>
+<blockquote>
+<p>Do I have to have the <code>www.</code>? Yes.</p>
+</blockquote>
+<pre><code class="language-bash">SITE=edthe.dev
+ansible-playbook -e &quot;s3bucket=$SITE&quot; s3site_1_create_buckets.yml
+</code></pre>
+<pre><code class="language-yaml"># 
+---
+- name: Set up static site buckets on AWS as static s3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: Create S3 bucket
+    amazon.aws.s3_bucket:
+      name: 'www.{{s3bucket}}'
+      state: present
+      versioning: yes
+  - name: Setup S3 Bucket as website
+    community.aws.s3_website:
+      name: 'www.{{s3bucket}}'
+      state: present
+      suffix: index.html
+      error_key: 404.html
+  - name: Add pages
+    community.aws.s3_sync:
+      bucket: 'www.{{s3bucket}}'
+      file_root: 'files/www'
+    tags:
+      - debug
+  - name: Create empty apex redirect bucket
+    amazon.aws.s3_bucket:
+      name: '{{s3bucket}}'
+      state: present
+      versioning: no
+  - name: Setup redirect from apex to www.
+    community.aws.s3_website:
+      name: '{{s3bucket}}'
+      redirect_all_requests: 'www.{{s3bucket}}'
+      state: present
+  - name: Create logs bucket
+    amazon.aws.s3_bucket:
+      name: 'logs.{{s3bucket}}'
+      state: present
+      versioning: no
+  # 
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="manual-step-go-allow-public-access">Manual Step: Go 'allow public access'</h2>
+<a class="anchor" href="#manual-step-go-allow-public-access" aria-labelledby="manual-step-go-allow-public-access"><span hidden>#</span></a></div>
+<p>Now go do a manual change, because security teams say we cannot have nice things.</p>
+<blockquote>
+<p>In the new <code>www.</code> bucket, and the apex domain bucket, find and uncheck 'Block <em>all</em> public access'.</p>
+</blockquote>
+<blockquote>
+<p>Once that is done, this command (which will otherwise fail in the next playbook) should succeed.</p>
+</blockquote>
+<pre><code class="language-bash">aws s3api put-bucket-policy --bucket &quot;www.$SITE&quot; --policy &quot;file:///tmp/www.$SITE.acl.json&quot;
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="enable-public-access">Enable public access</h2>
+<a class="anchor" href="#enable-public-access" aria-labelledby="enable-public-access"><span hidden>#</span></a></div>
+<p>This command will enable public access to the <code>www.</code> and apex S3 buckets.</p>
+<pre><code class="language-bash">ansible-playbook -e &quot;s3bucket=$SITE&quot; s3site_2_allow_public_access.yml
+</code></pre>
+<pre><code class="language-yaml"># 
+---
+- name: Set up static site buckets on AWS as static s3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: create www. ACL file
+    template:
+      dest: /tmp/www.{{s3bucket}}.acl.json
+      src: files/www.public_s3.j2
+  - name: Clear www. access controls
+    shell:
+      aws s3api put-bucket-policy --bucket 'www.{{s3bucket}}' --policy 'file:///tmp/www.{{s3bucket}}.acl.json'
+  - name: create apex ACL file
+    template:
+      dest: /tmp/{{s3bucket}}.acl.json
+      src: files/public_s3.j2
+  - name: Clear apex access controls
+    shell:
+      aws s3api put-bucket-policy --bucket '{{s3bucket}}' --policy 'file:///tmp/{{s3bucket}}.acl.json'
+  # 
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="verify-public-access">Verify public access</h3>
+<a class="anchor" href="#verify-public-access" aria-labelledby="verify-public-access"><span hidden>#</span></a></div>
+<p>You can verify this worked by visiting the URL you under <code>Bucket website hosting</code> in the <code>www.</code> bucket.Find in under <code>Properties -&gt; Static website hosting</code>.</p>
+<p>If you get a <code>404 Not Found</code>, double check that you provided an <code>index.html</code> file, and a <code>errors/404.html</code> file.</p>
+<div class="heading-wrapper h2">
+<h2 id="logging">Logging</h2>
+<a class="anchor" href="#logging" aria-labelledby="logging"><span hidden>#</span></a></div>
+<p>Now we use the AWS console again to enable controlling the logs bucket with Ansible.</p>
+<p>In <code>logs.</code> find <code>Edit Object Ownership</code> and set it to <code>ACLs Enabled</code>.
+This is probably some kind of legacy thing, but this whole process is already a pain, and we are not building an enterprise here.</p>
+<p>Now run the next playbook:</p>
+<pre><code class="language-bash">ansible-playbook -e &quot;s3bucket=$SITE&quot; s3site_3_add_logging.yml
+</code></pre>
+<pre><code class="language-yaml"># 
+---
+- name: Set up static site buckets on AWS as static s3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: setup logging from www. to logs.
+    community.aws.s3_logging:
+      name: 'www.{{s3bucket}}'
+      state: present
+      target_bucket: 'logs.{{s3bucket}}'
+      target_prefix: 'logs/'
+  - name: log cleanup 
+    community.aws.s3_lifecycle:
+      name: 'logs.{{s3bucket}}'
+      transition_days: 7
+      expiration_days: 90
+      prefix: logs/
+      status: enabled
+      state: present
+# 
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="allow-your-iam-users-to-update-the-s3-bucket">Allow your IAM users to update the S3 bucket</h2>
+<a class="anchor" href="#allow-your-iam-users-to-update-the-s3-bucket" aria-labelledby="allow-your-iam-users-to-update-the-s3-bucket"><span hidden>#</span></a></div>
+<p>This step will create an IAM group that grants access to modify the contents of your new shiny <code>www.</code> S3 bucket.</p>
+<p>It will also grant members of the IAM group the ability to generate their own access keys, which they need if they are going to use a program like VSCode to maintain the files in the S3 bucket.</p>
+<p>You will add your existing IAM user to this group manually as a final step.</p>
+<pre><code class="language-bash">ansible-playbook -e &quot;s3bucket=$SITE&quot; s3site_4_create_iam_group.yml
+</code></pre>
+<pre><code class="language-yaml"># 
+---
+- name: Set up IAM user groups
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: create IAM policy file
+    template:
+      dest: '/tmp/iam_edit_s3_{{ s3bucket }}.json'
+      src: files/iam_edit_s3.j2
+  - name: create IAM group
+    community.aws.iam_group:
+      name: 'edit_{{ s3bucket }}'
+      state: present
+      purge_policies: yes # We are about to add the only desired policy
+  - name: apply policy
+    community.aws.iam_policy:
+      iam_name: 'edit_{{ s3bucket }}'
+      iam_type: group
+      policy_name: 'policy-edit-{{ s3bucket }}'
+      state: present
+      policy_document: '/tmp/iam_edit_s3_{{ s3bucket }}.json'
+  - name: allow this group to manage own access keys
+    community.aws.iam_group:
+      name: 'self_manage_acces_keys'
+      state: present
+      purge_policies: yes # We are about to add the only desired policy
+  - name: apply policy
+    community.aws.iam_policy:
+      iam_name: 'self_manage_acces_keys'
+      iam_type: group
+      policy_name: 'policy-manage-access-keys'
+      state: present
+      policy_document: 'files/iam.allow.accesskeys.json'
+# 
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="setup-dns">Setup DNS</h2>
+<a class="anchor" href="#setup-dns" aria-labelledby="setup-dns"><span hidden>#</span></a></div>
+<p>Next up, <a href="/blog/s3/dns/">setup DNS for a static website on S3</a>.</p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Create a MicroSite on AWS S3%20-%20https://edward.delaporte.us/blog/s3/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>
