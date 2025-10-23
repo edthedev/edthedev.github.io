@@ -11,7 +11,7 @@ I often give presentations on technical topics.
 
 In 2016, I began collecting the slide decks here.
 
-- [Developer Tour of A Cybersecurity Incident][47] talk on Robot Framework
+- [Developer Tour of A Cybersecurity Incident][47]
 - ['Nuts and Bolts'][46] talk on Robot Framework
 - ['Nuts and Bolts'][46] (Identity and Privacy and Cybersecurity talk series) talk on Hoppscotch.io
 - [IT Pro Forum 2022 Fall - Cybersecurity Year in Review](https://www.itproforum.illinois.edu/archives/fall_2022_conference)
@@ -44,5 +44,5 @@ In 2016, I began collecting the slide decks here.
 - Presented at Urbana IT Professionals Forum - Fall 2016, Spring 2018, Fall 2018, Spring 2019
 - Presented at University of Illinois Webmaster's Conference 2016
 -->
-[47]: /slides/2025.10.DeveloperTourCybersecurity.pptx
+[47]: /slides/DeveloperTourCybersecrity_Ed_Delaporte.pdf
 [46]: https://cybersecurity.illinois.edu/nuts-and-bolts-talks/
