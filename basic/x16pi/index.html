@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/basic.css" /> 
+  <title>BASIC Programs by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+<ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+<ul>
+  <li> <a href="/basic">Programs in BASIC</a>
+  </li>
+  <li> <a href="/learn2code">Learn to Code</a>
+  </li>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+<div class="heading-wrapper h2">
+<h2 id="x16-emulator-on-raspberry-pi">X16 Emulator on Raspberry Pi</h2>
+<a class="anchor" href="#x16-emulator-on-raspberry-pi" aria-labelledby="x16-emulator-on-raspberry-pi"><span hidden>#</span></a></div>
+<p>This recipe worked for me on Raspbian on a Pi 4.</p>
+<div class="heading-wrapper h3">
+<h3 id="install-dependencies">Install dependencies</h3>
+<a class="anchor" href="#install-dependencies" aria-labelledby="install-dependencies"><span hidden>#</span></a></div>
+<p>Install the dependencies.
+Run these commands with <code>sudo</code>.</p>
+<pre><code class="language-shell">apt install make cc65 git
+apt install libsdl2-dev
+</code></pre>
+<p>Update: I ran into <a href="https://github.com/commanderx16/x16-demo/issues/53">this issue</a>, and so I removed
+<code>cc64</code> via <code>apt</code> and installed version 2.19 from source instead. I posted more details on that issue.</p>
+<div class="heading-wrapper h3">
+<h3 id="build-the-software">Build the software</h3>
+<a class="anchor" href="#build-the-software" aria-labelledby="build-the-software"><span hidden>#</span></a></div>
+<p>This recipe creates the <code>x16emu</code> executable at <code>~/x16/x16-emulator/x16emu</code>.
+If you decide to move it, be sure to also move <code>rom.bin</code>.</p>
+<p>Build the ROM.</p>
+<pre><code class="language-sh">mkdir -p ~/x16
+
+cd ~/x16
+git clone https://github.com/commanderx16/x16-rom.git
+cd x16-rom
+make
+</code></pre>
+<p>Build the emulator.</p>
+<pre><code>cd ~/x16
+git clone https://github.com/commanderx16/x16-emulator.git
+cd x16-emulator
+make
+</code></pre>
+<p>Copy the ROM to the emulator folder.</p>
+<pre><code>cp ~/x16/x16-rom/build/x16/rom.bin ~/x16/x16-emulator/
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="further-reading">Further Reading</h3>
+<a class="anchor" href="#further-reading" aria-labelledby="further-reading"><span hidden>#</span></a></div>
+<ul>
+<li><a href="/basic/howto/">How to capture the output of BASIC programs with X16 Emulator</a></li>
+</ul>
+
+</div>
+<hr/>
+<div class="content" role="contentinfo">
+  <p><a href="/basic/howto">How to create these GIF files.</a></p>
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=BASIC Programs by Edward Delaporte%20-%20https://edward.delaporte.us/basic/x16pi/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>On Slide Decks with JavaScript - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> On Slide Decks with JavaScript </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="context">Context</h2>
+<a class="anchor" href="#context" aria-labelledby="context"><span hidden>#</span></a></div>
+<p>As I have mentioned before, I strive to ensure that everything I work with is plain text.</p>
+<p><img src="/img/plain_text_slides.jpg" alt="Padme is shocked that Anakin builds slide decks with plain text"></p>
+<p>I use the delightful <a href="https://github.com/gnab/remark">remark Javascript library</a> to convert <code>Markdown</code> into <a href="/slides">lovely slide decks</a>.</p>
+<p>Under the hood, most of my slide decks look like this:</p>
+<pre><code class="language-html">
+&lt;textarea id=&quot;source&quot;&gt;
+
+# Slide Title
+
+## Slide Subtitle
+
+- My keen and valuable insights
+- As bulleted lists
+- This is the way
+
+???
+
+My speaker notes.
+
+---
+
+# Another Slide Title
+
+&lt;/textarea&gt;
+&lt;!--&lt;script src=&quot;https://gnab.github.io/remark/downloads/remark-latest.min.js&quot;&gt;--&gt;
+&lt;script src=&quot;/js/remark-latest.min.js&quot; /&gt;
+&lt;script&gt;
+    var slideshow = remark.create();
+&lt;/script&gt;
+
+
+</code></pre>
+<blockquote>
+<p>Tip: Because the sides spend part of their life as <code>HTML</code>, I am able to style however I want using my mad <code>CSS</code> skills.</p>
+</blockquote>
+<p>Because I'm doing an extra bit of <code>JavaScript</code>, I must exempt the <code>/slides</code> folder from being processed by <code>Eleventy.js</code> in <code>.eleventy.js</code>:</p>
+<pre><code class="language-javascript">  eleventyConfig.addPassthroughCopy(&quot;slides&quot;);  // My slide decks
+</code></pre>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=On Slide Decks with JavaScript%20-%20https://edward.delaporte.us/meta/slides/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

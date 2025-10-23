@@ -1,0 +1,161 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Pyxel Lesson 01 - Red Light, Green Light - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Pyxel Lesson 01 - Red Light, Green Light </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about-red-light-green-light">About Red Light, Green Light</h2>
+<a class="anchor" href="#about-red-light-green-light" aria-labelledby="about-red-light-green-light"><span hidden>#</span></a></div>
+<p><code>Red Light, Green Light</code> is an example program to learn <a href="https://docs.python.org/3/">Python</a>, using <a href="https://github.com/kitao/pyxel">Pyxel</a>.</p>
+<p>I first wrote <code>Red Light, Green Light</code> in <a href="https://scratch.mit.edu/projects/editor/">MIT Scratch</a> to support teaching programming to kids at my local library. It's mean to be fun while using as few commands as possible.</p>
+<p><img src="/img/pyxel/redlight.gif" alt="an animation of red light green light"></p>
+<p>After you <a href="https://github.com/kitao/pyxel#how-to-install">Install Pyxel</a>, you can follow the steps below to create the program.</p>
+<div class="heading-wrapper h2">
+<h2 id="step-1-draw-a-runner">Step 1: Draw a runner</h2>
+<a class="anchor" href="#step-1-draw-a-runner" aria-labelledby="step-1-draw-a-runner"><span hidden>#</span></a></div>
+<p>Start up the <code>Pyxel</code> editor:</p>
+<pre><code class="language-sh">pyxel edit redlight
+</code></pre>
+<p>Now draw a runner in left window.</p>
+<p><img src="/img/pyxel/draw_bug.gif" alt="drawing a bug in Pyxel"></p>
+<blockquote>
+<p>Tip: The right window should show a smaller version of your bug drawing, and it should be in the very upper-left corner.</p>
+</blockquote>
+<p>Be sure to press <code>Ctrl+S</code> to save, before pressing <code>ESC</code> to exit.</p>
+<p>You should now have a file called <code>redlight.pyxres</code>.</p>
+<div class="heading-wrapper h2">
+<h2 id="step-2-draw-a-place-to-run">Step 2: Draw a place to run</h2>
+<a class="anchor" href="#step-2-draw-a-place-to-run" aria-labelledby="step-2-draw-a-place-to-run"><span hidden>#</span></a></div>
+<p>Start up the <code>Pyxel</code> editor:</p>
+<pre><code class="language-sh">pyxel edit redlight.pyxres
+</code></pre>
+<p>Click the second icon in the upper-left to switch to the 'Tile Map' window.</p>
+<p><img src="/img/pyxel/tilemap.gif" alt="switching to the tile map in Pyxel"></p>
+<div class="heading-wrapper h2">
+<h2 id="step-3-copy-in-the-code">Step 3: Copy in the Code</h2>
+<a class="anchor" href="#step-3-copy-in-the-code" aria-labelledby="step-3-copy-in-the-code"><span hidden>#</span></a></div>
+<p>Open a text editor, and copy the following code into it. Save it as <code>redlight.py</code>:</p>
+<pre><code class="language-python">
+import pyxel
+from dataclasses import dataclass
+
+
+@dataclass
+class Pixel:
+    x: int
+    y: int
+    color: int
+
+
+
+class App:
+    def __init__(self):
+        pyxel.init(200, 150, title=&quot;Red Light, Green Light&quot;)
+        pyxel.mouse(True)
+        pyxel.load('redlight.pyxres')
+
+        self.runner_x = 0
+        self.runner_y = 75
+
+        pyxel.run(self.update, self.draw)
+
+    def update(self):
+        self.update_runner()
+
+    def update_runner(self):
+        if pyxel.btn(pyxel.KEY_LEFT) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_LEFT):
+            self.runner_x = max(self.runner_x - 2, 0)
+        if pyxel.btn(pyxel.KEY_RIGHT) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_RIGHT):
+            self.runner_x = min(self.runner_x + 2, pyxel.width - 16)
+
+        if pyxel.btn(pyxel.KEY_UP) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_UP):
+            self.runner_y = max(self.runner_y - 2, 0)
+        if pyxel.btn(pyxel.KEY_DOWN) or pyxel.btn(pyxel.GAMEPAD1_BUTTON_DPAD_DOWN):
+            self.runner_y = min(self.runner_y + 2, pyxel.width - 16)
+
+
+    def draw(self):
+        pyxel.cls(6)  # Clear the screen to a light grey
+        pyxel.blt(0, 88, 0, 0, 88, 160, 32)
+        pyxel.blt(0, 88, 0, 0, 64, 160, 24, 12)
+
+        # Print text to tell us where the runner is
+        pyxel.text(x=3, y=3, s=&quot;runner is at: &quot; + str(self.runner_x), col=0)
+        pyxel.text(x=120, y=140, s=&quot;Press ESC to quit.&quot;, col=0)
+
+        # Draw the runner
+        pyxel.blt(x=self.runner_x, y=self.runner_y, # draw at runner X,Y
+            img=0, # From image bank 0
+            u=0, v=0, w=16, h=16, # Choose pixels 0,0 through 16,16
+            colkey=0 # Treat color 0 as transparent
+            )
+
+App()
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="step-3-play-red-light-green-light">Step 3: Play Red Light, Green Light</h2>
+<a class="anchor" href="#step-3-play-red-light-green-light" aria-labelledby="step-3-play-red-light-green-light"><span hidden>#</span></a></div>
+<pre><code class="language-sh">pxyel run redlight.py
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="step-4-remix">Step 4: Remix!</h2>
+<a class="anchor" href="#step-4-remix" aria-labelledby="step-4-remix"><span hidden>#</span></a></div>
+<p>Open <code>redlight.py</code> in your text editor, and change some numbers, save the file, and run the program again so see what changed.</p>
+<pre><code class="language-sh">pxyel run redlight.py
+</code></pre>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Pyxel Lesson 01 - Red Light, Green Light%20-%20https://edward.delaporte.us/pyxel/redlight/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

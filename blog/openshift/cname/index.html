@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Add custom URL for the OpenShift console - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Add custom URL for the OpenShift console </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="context">Context</h2>
+<a class="anchor" href="#context" aria-labelledby="context"><span hidden>#</span></a></div>
+<p>OpenShift seems neat, but <code>&lt;blink&gt;</code>OH MY GOODNESS! <code>&lt;/blink&gt;</code> - that console URL it generated is not something I am going to remember.</p>
+<p>While my console is conveniently served by default from <code>console-openshift-console.apps.openshift.mydomain.com</code>, I'm not going to remember that, and I am honor-bound by my blood oath never to use a bookmark manager. (It's a long story.)</p>
+<p>Whatever my reasons, I would rather visit <code>console.mydomain.com</code>, and so we were forcd to resort to DNS chicanery.</p>
+<div class="heading-wrapper h2">
+<h2 id="add-a-cname-record">Add a CNAME record</h2>
+<a class="anchor" href="#add-a-cname-record" aria-labelledby="add-a-cname-record"><span hidden>#</span></a></div>
+<p>Lookup the default router URL</p>
+<ol>
+<li>
+<p>In OpenShift, go to <code>Networking</code> -&gt; <code>Routes</code></p>
+</li>
+<li>
+<p>Near the top, select the <code>openshift-console</code> project.</p>
+</li>
+<li>
+<p>Click into the route named <code>console</code></p>
+</li>
+<li>
+<p>Scroll down and find (and copy) the <code>Router canonical hostname</code></p>
+</li>
+<li>
+<p>Keep this tab open, you will refer back to it later.</p>
+</li>
+</ol>
+<p>Add a <code>CNAME</code> record pointing to the default router URL</p>
+<ol start="6">
+<li>
+<p>Visit your DNS provider</p>
+</li>
+<li>
+<p>Add a CNAME record from your chosen external URL - i.e. <code>console.mydomain.com</code> to your router canonical hostname - i.e. <code>router-default.apps.clustername.mydomain.com</code></p>
+</li>
+<li>
+<p>Get a drink. DNS records take time to propegate.</p>
+</li>
+<li>
+<p>Confirm that visiting <code>console.mydomain.com</code> gives you the (for the moment) expected <code>503 - Service Not Available</code> error.</p>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="add-the-openshift-route">Add the OpenShift route</h2>
+<a class="anchor" href="#add-the-openshift-route" aria-labelledby="add-the-openshift-route"><span hidden>#</span></a></div>
+<p>Add the new domain name as a route in OpenShift</p>
+<ol>
+<li>
+<p>In OpenShift, go to <code>Networking</code> -&gt; <code>Routes</code></p>
+</li>
+<li>
+<p>Near the top, select the <code>openshift-console</code> project.</p>
+</li>
+<li>
+<p>Add a route.</p>
+</li>
+</ol>
+<p>Set the name to anything, and set the URL to the domain that you used in the CNAME record.</p>
+<pre><code>Name: anything
+Hostname: console.mydomain.com
+</code></pre>
+<p>Copy the rest of the settings from the route named <code>console</code>. Probably looks something like this:</p>
+<pre><code>Path: /
+Service: console
+Target port: &lt;choose the only option&gt;
+Security: Check `secure route`
+TLS termination: Re-encrypt
+Insecure traffic: Redirect
+</code></pre>
+<ol start="4">
+<li>Confirm that visiting <code>console.mydomain.com</code> takes you to your openshift console.</li>
+</ol>
+<blockquote>
+<p>Tip: Auth that you setup before should still work, but will redirect you back to the original console URL, which still works fine, thanks to the original console route.</p>
+</blockquote>
+<p>You could probably re-setup auth to redirect back to the new nicer domain, but I do not care enough to try it.</p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Add custom URL for the OpenShift console%20-%20https://edward.delaporte.us/blog/openshift/cname/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>
