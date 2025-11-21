@@ -9,6 +9,8 @@ eleventyNavigation:
 
 I often give presentations on technical topics.
 
+Some recordings of presentations that I gave or facilitated are available at [Illinois Mediaspace](https://mediaspace.illinois.edu/esearch/search?keyword=Edward%20delaporte).
+
 In 2016, I began collecting the slide decks here.
 
 - [Developer Tour of A Cybersecurity Incident][47]
