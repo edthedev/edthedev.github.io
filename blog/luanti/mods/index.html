@@ -1,0 +1,423 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>A Nice Set of MineTest Mods - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> A Nice Set of MineTest Mods </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about">About</h2>
+<a class="anchor" href="#about" aria-labelledby="about"><span hidden>#</span></a></div>
+<p>The best reason to play <code>MineGame</code> on the <code>MineTest</code> engine is the diversity of <code>mods</code> (game modifications) available.</p>
+<p>Seasoned <code>MineCraft: Java Edition</code> server admins will have learned that the practical limit of supported mods on moderated resources multiplayer server may be around one dozen.</p>
+<p>But <code>MineTest</code> was built from the ground-up with modding in mind.</p>
+<p>My modest <code>MineTest</code> server runs smoothly with half a dozen connected players <strong>while running around 80 plugins</strong>.</p>
+<div class="heading-wrapper h2">
+<h2 id="essentials">Essentials</h2>
+<a class="anchor" href="#essentials" aria-labelledby="essentials"><span hidden>#</span></a></div>
+<p><code>MineGame</code> is the default game for playing in <code>MineTest</code>. <code>MineGame</code> is minimalist, by design, so that server administrators can create customize their game world by choosing <code>mods</code>.</p>
+<p>Without <code>mods</code>, <code>MineGame</code> does not even include any trees.</p>
+<p>The following mods are ones that I consider <strong>essential</strong> for enjoying <code>MineGame</code> on the <code>MineTest</code> engine. <code>MineGame</code> is perfectly playable without these, but will lack some gameplay element that I consider critical.</p>
+<p><code>Charcoal</code> allows burning wood blocks to create an alternate coal-like item.</p>
+<ul>
+<li>Allows crafting torches before the players have established their first deep mine.</li>
+<li>Essential because light sources can be hard to come by, early game.</li>
+<li>Essential because requiring a deep mine to generate light of any kind is a significant immersion break in the early game.</li>
+</ul>
+<p><code>Farming Redo</code> adds so many crops.</p>
+<ul>
+<li>Essential because it makes seeds from all kinds of crops spawn randomly when a player digs in grass</li>
+</ul>
+<p><code>Legboat</code> adds a vehicle that climbs around on spider-like wooden legs.</p>
+<ul>
+<li>Cheap (four sticks and a boat)</li>
+<li>Practical. Allows traversing difficult terrain much more easily.</li>
+<li>Stylish. Looks like a wooden boat with long wooden legs.</li>
+<li>Adds the normal <code>boat</code> mod as a dependency, which I also consider essential.</li>
+<li>This is listed as essential because most people will overlook it otherwise. It takes a difficult part of exploring - getting home afterward, and makes it fun, without onerous costs.</li>
+<li>One could probably get by with only either this or <code>Movement Essentials</code>, but I prefer to have both.</li>
+<li>Unlike <code>Movement Essentials</code>, the resource costs (a bunch of wood) for this solution can be obtained almost anywhere.</li>
+</ul>
+<p><code>i3</code> rebuilds the inventory panel (<code>press I</code>) to add support for many other mods.</p>
+<p><code>Mesecons</code> add <code>mese</code> an ore that serves a role like redstone in Minecraft.</p>
+<ul>
+<li><code>mese</code> is the preferred macguffin when adding technology to the world of <code>MineGame</code>. Compare it to <code>redstone</code> in <code>MineCraft</code>.</li>
+<li>Essential, to me, because <code>Movement Essentials</code> requires it.</li>
+<li>Also required by most technology enhancing <code>MineGame</code> mods.</li>
+</ul>
+<p><code>Mobs Animal</code> adds animals.</p>
+<p><code>Mobs Monster</code> adds more monsters</p>
+<ul>
+<li>Gives players tons of interesting monsters to fight.</li>
+<li>Most mobs are aggressively trying to murder your pet sheep (and all other living things).</li>
+<li>The <code>MineGame</code> mob AI is much meaner than you might expect.</li>
+<li>Build protections, or lose your sheep / horses / moose / chickens / ostriches / ...</li>
+<li>I like to uncheck <code>Enable Damage</code> to allow invincible new players to learn the game without huddling underground at night in terror. Mechanics for vereran players are hardly affected, since great armor is cheap for players who know where to find diamond and mese.</li>
+<li>Veteran players with player damage disabled still have their work cut out keeping their sheep alive.</li>
+<li>Essential because <code>MineTest</code> really shines when mods that add tons of variety, like this one, are enabled.</li>
+</ul>
+<blockquote>
+<p>Tip: Most mobs are aggressively trying to murder your pet sheep.</p>
+</blockquote>
+<p><code>Movement Essentials</code> solves several practial movement challenges in one mod.</p>
+<ul>
+<li>Activate a <code>mese crystal</code> to teleport to your bed/spawn</li>
+<li>Throw a <code>mese shard</code> to teleport a short distance</li>
+<li>Umbrella caused bugs for us. My players avoid using the Umbrella. It may be a conflict with <code>Realistic Hang Gliders</code>. If I figure out the issue, I'll submit a pull request.</li>
+</ul>
+<p><code>More Trees!</code> adds more trees.</p>
+<ul>
+<li>Essential because more is better.</li>
+<li><code>MineGame</code> is intentionally minimalist and does not include any trees without a mod.</li>
+<li>These trees are great. You want them.</li>
+</ul>
+<p><code>Ore Deposits</code> causes additional ore to spawn on cleared stone floors.</p>
+<ul>
+<li>Makes ore resources renewable.</li>
+<li>Prevents a stylish quary build from running out of useful ore.</li>
+<li>Solves the classic 'I generated this world before I knew I wanted this interesting new ore' problem.</li>
+<li>Makes a lot of ore spawn.</li>
+<li>Will clutter every cleared stone floor in your builds with fresh ore. I install polished <code>stone block</code> floors to get a similar look without ore spawn.</li>
+</ul>
+<p><code>Signs Lib</code> causes signt text to display directly on each sign, rather than a separate floating display.</p>
+<ul>
+<li>Signs are great for labeling things.</li>
+<li>Essential because new players expect sign text to appear directly on signs.</li>
+</ul>
+<p><code>SkinsDB</code> adds more options for setting player appearance.</p>
+<ul>
+<li>I haven't given a lot of thought to player appearance.</li>
+<li>On my small server, this allows us all to not look identical.</li>
+</ul>
+<p><code>TavelNet</code> allows building a network of teleporters, and a practical elevator recipe</p>
+<ul>
+<li>Essential, because the depth in MineTest is 10,000 blocks, and many essential ores seem to only spawn down around 3,000.</li>
+<li>3,000 blocks is a lot is when you're digging straight down with a pickaxe, violating the first rule.</li>
+<li>3,000 blocks is even more when you're climbing a ladder to check on your sheep farm.</li>
+<li>Elevators are cheap, but finicky to setup. They must be directly vertical of eachother to connect.</li>
+<li>Teleporters are expensive, but can connect to each-other from anywhere.</li>
+<li>Doctor Who fans may wish to dye their teleporters blue.</li>
+</ul>
+<p><code>Wielded Light</code> causes any held light source to emit light while still in hand.</p>
+<ul>
+<li>Essential because it allows walking through a caves carrying a single torch.</li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="favorites">Favorites</h2>
+<a class="anchor" href="#favorites" aria-labelledby="favorites"><span hidden>#</span></a></div>
+<p>While I don't consider these mods <strong>essential</strong>, I encourage installing many mods as the server admin has interest in. <code>MineTest</code> can handle it.</p>
+<p><code>Anvil</code> allows repairing items that wear out, such as tools and clothing.</p>
+<ul>
+<li>This is <strong>not</strong> an essential mod, because <code>MineGame</code> wear is tuned quite well with the resource spawn.</li>
+<li>Players can still maintain having excellent tier items without this mod.</li>
+<li>If one of your other mods tunes the resource spawn rate, you might find this mod essential.</li>
+<li>Items enchanted with <code>X Enchanting</code> can still be repaired.</li>
+<li>The iron hammer wears out over time, but can be repaired with another iron hammer.</li>
+<li>Ability to repair iron hammers can be turned off, if you want to have an unavoidable cost to doing repairs. I leave it on, because iron is so available, anyway.</li>
+</ul>
+<p><code>Beautiful Flowers</code> adds so many kinds of flowers.</p>
+<ul>
+<li>Adds so many different flowers to the game world.</li>
+<li>When running <code>MineCraft: Java Edition</code> I had to remove my flowers mod, due to server resource costs. I have not had any resource issues with adding many mods like this one, on <code>MineTest</code>.</li>
+<li><code>Beautiful Flowers</code> does add a page or two of flowers to the recipe book search. There are so many flowers.</li>
+<li>I almost marked this as essential, because it highlights for new players why they should bother trying <code>MineTest</code> if they already play <code>MineCraft</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Enjoy some guilt-free flowers.</strong></p>
+</blockquote>
+<p><code>Bows</code> adds bows and arrows.</p>
+<ul>
+<li>Not essential to me, because I have terrible aim.</li>
+</ul>
+<p><code>Bonemeal</code> adds bonemeal that makes crops grow faster.</p>
+<ul>
+<li>Cook a <code>bone</code> to create <code>bonemeal</code></li>
+<li>I get my bones from roving night time skeleton mobs, added by <code>Mobs Skeletons</code>.</li>
+<li>Beware that skeletons will attack your sheep farm with direct malicious intent, and can shoot their arrows around 20 blocks</li>
+</ul>
+<p><code>Ethereal NG</code> by TenPlus1</p>
+<ul>
+<li>I added it mainly for the fishing rod</li>
+<li>Also adds many interesting biomes, trees, foods and tools</li>
+</ul>
+<p><code>GGraphiti</code> allows spray painting blocks.</p>
+<ul>
+<li>Refill spray cans with dyes.</li>
+<li>Dig blocks to clean off graphiti.</li>
+</ul>
+<p><code>Headanim</code> lets other players see which way you are looking.</p>
+<p><code>Item Frames and Pedestals</code> allows you to mount itmes on your walls, or on a stone pillar.</p>
+<ul>
+<li>Compliments to <code>Storage Drawers</code> since it stores items that <code>Storage Drawers</code> cannot, such as tools.</li>
+<li>Allows invisible item frames without using a command prompt.</li>
+<li>A good option for labeling your chests in  a sorting machine built with <code>Pipeworks</code>.</li>
+</ul>
+<p><code>Kart Car</code> adds a go cart to MineGame.</p>
+<ul>
+<li>Requires perfectly flat ground.</li>
+<li>If you're looking for pragmatic ways to get around, consider <code>Legboat</code>, <code>Movement Essentials</code>, <code>Realistic Hangglider</code> instead.</li>
+<li>Pairs very nicely with a mod that adds sloped blocks to build with.</li>
+<li>If you want to build a cool race track and race around on it, this is the mod!</li>
+</ul>
+<p><code>Living Villages</code> adds villagers with jobs.</p>
+<p><code>LWScratch</code> adds robots you can craft and program in a graphical language similar to <a href="https://scratch.mit.edu/">Scratch</a>.</p>
+<ul>
+<li>Make a robot do boring repetitive parts of your builds.</li>
+<li>Grab a copy of the <a href="https://github.com/loosewheel/lwscratch/tree/master/docs">LWScratch Docs</a> to help get started.</li>
+<li>See my <a href="/blog/minetest/robots">MineTest Robots Guide</a> for more help getting started.</li>
+</ul>
+<p><code>Mob Horse</code> adds a horse that you can tame and ride.</p>
+<ul>
+<li>Not essential, because LegBoats are better and cheaper.</li>
+</ul>
+<p><code>More Blocks</code> adds more blocks.</p>
+<ul>
+<li>More is better.</li>
+</ul>
+<p><code>More Boots</code> adds boots for jumping high and running fast.</p>
+<ul>
+<li>The fast boots caused us server lag when used for exploring new areas.</li>
+<li>We use the fast boots only to run within explored areas.</li>
+<li>Jumping boots are a great way to start a trip using <code>Realistic Hang Gliders</code>.</li>
+<li>Pairs well with <code>Anvil</code> to repair your expensive boots.</li>
+<li>The fastest and highest boots are very fast and very high. Inconveniently so, for both.  I believe this is by design, because it's fun.</li>
+<li>For best experience, use 2nd to highest tier of each boot.</li>
+</ul>
+<p><code>More Ores</code> adds more ores.</p>
+<ul>
+<li>More is better.</li>
+</ul>
+<p><code>Pie</code> adds recipes for pie.</p>
+<ul>
+<li>I don't even run with a stamina mob, and I still want to make pie.</li>
+<li>With <code>LWScratch</code> you can teach a robot to make pie.</li>
+</ul>
+<blockquote>
+<p><strong>Everyone wants a robot that makes pie.</strong></p>
+</blockquote>
+<p><code>Pipeworks</code> adds pipes for moving liquids and tubes for moving items and item stacks.</p>
+<ul>
+<li>Add a <code>vacuum tube</code> to suck up dropped items, like <code>saplings</code>.</li>
+<li>Use <code>sorting tubes</code> to sort items into labeled chests.</li>
+<li>Fill rooms with fast tubes full of items being sorted into rows of carefully organized chests.</li>
+<li>I guess it does water too. I haven't done much with that.</li>
+</ul>
+<p><code>Regrow</code> allows orchards by causing fruit trees to regrow their fruit.</p>
+<ul>
+<li>Without this mod, fruit only spawn when a tree first spawns.</li>
+<li>Pairs nicely with the <code>Pie</code> mod.</li>
+</ul>
+<p><code>Remove Unknowns</code> adds a server admin command to clean-up leftover blocks from retired mods.</p>
+<p>Example use:</p>
+<pre><code>- Set radius: `/ru 20`
+- Right click an unknown block to see an error with the full name, i.e. `fireextinguisher:fireretardant`
+- Clear all matching blocks within the radius: `/ru fireextinguisher:fireretardant`
+</code></pre>
+<p><code>Simple Woodcutter</code> causes striking the bottom block of a tree to mine any connected tree blocks.</p>
+<ul>
+<li>Reduces random floating bits of tree top.</li>
+<li>Saves time when tree farming.</li>
+</ul>
+<p><code>Storage Drawers</code> provides storage that automatically displays the single stacked item in each drawer.</p>
+<ul>
+<li>Pragmatic storage solution</li>
+<li>Partial block items will not display correctly.</li>
+<li>Cannot store items that can wear out, such as most tools.</li>
+<li>Cannot connect to vacuum tube sorter machine built in <code>Pipeworks</code>. So I use reguar chests and <code>Item Frames</code> for my sorting machines.</li>
+<li>Adds a delightful ambiance to your workshop</li>
+</ul>
+<p><code>Ultralight Trike</code> adds a motor propelled glider.</p>
+<ul>
+<li>Flying is fun.</li>
+<li>Controls may be unintuitive to new players.</li>
+<li>Requires <code>Biofuel</code>, which some other great mods also require.</li>
+<li>One of the few all-in-one travel solutions, since it does not require finding a cliff, building a tall tower, or rocket boots (<code>More boots</code>), the way most glider mods do (<code>Hang Glider</code>, <code>Realistic Hang Glider</code>, <code>Movement Essentials (Umbrella)</code>)</li>
+</ul>
+<p><code>Wilhelmines Living Jungle</code> adds a jungle biome.</p>
+<p><code>X Enchanting</code> adds a table that can add enchantments to tools, by spending <code>mese crystals</code> (redstone).</p>
+<ul>
+<li>Add classic enchantments such as <code>fortune</code>, <code>unbreaking</code> and <code>efficiency</code>.</li>
+<li>Pair with <code>Anvil</code> to allow repairing your favorite enchanted pickaxe.</li>
+<li>The crafting recipe requires <code>obsidian</code> with can be really hard to obtain in MineGame.</li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="honorable-mentions">Honorable Mentions</h2>
+<a class="anchor" href="#honorable-mentions" aria-labelledby="honorable-mentions"><span hidden>#</span></a></div>
+<p>These are mods that I have enjoyed, but am not currently using.</p>
+<p><code>Bees</code> adds bees, honey and crafting recipes for beekeeping.</p>
+<ul>
+<li>I have not figured out how to raise bees.</li>
+</ul>
+<p><code>Cleaner</code> replaces any unrecognized objects from uninstalled mods with a simple red block.</p>
+<ul>
+<li>Essential because you can remove mods that are not working, without worrying too much about unrecognized blocks left behind.</li>
+<li>Unrecognized blocks can be picked up and trashed.</li>
+<li>Gives a server admin freedom to remove mods that are not right for that server.</li>
+<li>Prevents a lot of error messages on start-up, after removing a mod.</li>
+</ul>
+<p><code>Cottonseed Oil Fertilizer</code> adds an alternative to bonemeal for growing crops faster.</p>
+<ul>
+<li>A nice option for peaceful servers that do not have skeletons to kill for <code>bonemeal</code>.</li>
+<li>I removed this mod after adding skeletons.</li>
+<li>I might try tuning the effect of the cottonseed oil fertiziler at some point to make it more potent.</li>
+</ul>
+<p><code>Doctor Who Tardis</code> adds a working Tardis, Cybermen and Daleks</p>
+<ul>
+<li>The working Tardis is seriously cool.</li>
+<li>Great way to find a missing biome you need, without using the in-game terminal</li>
+<li>Cybermen will murder all of your animals, burn through the sides of your buildings and mercilessly grief your structurs.</li>
+<li>Do not go away from keyboard.</li>
+<li>Be prepared.</li>
+<li>Be vigilant.</li>
+<li>Or you could just disable Cybermen and Daleks</li>
+</ul>
+<blockquote>
+<p>Tip: Cybermen and Daleks can be disabled by modifying <code>mintest.conf</code>:</p>
+</blockquote>
+<pre><code class="language-ini">drwho_tardis.enable_daleks = false
+drwho_tardis.enable_cybermen = false
+</code></pre>
+<p>You can verify this took by issuing this command from the in-game terminal:</p>
+<pre><code class="language-sh">/set drwho_tardis.enable_cybermen
+</code></pre>
+<blockquote>
+<p>&quot;The Cybermen were never allowed to play Rassilon's Game. They were too good.&quot; - The Second Doctor, The Five Doctors</p>
+</blockquote>
+<p><code>Fire Extinguisher</code> adds automated fire suppression and cleanup</p>
+<ul>
+<li>Place a fire extinguisher near fire to release fire suppressant foam.</li>
+<li>Place and activate a foam cleanup block to release a rapidly spreading cleaner foam that removes fire suppressant foam.</li>
+<li>I would call this essential, but it is not currently on ContentDB.</li>
+<li>Download the zip file from https://forum.minetest.net/viewtopic.php?t=23524 and unzip into the <code>mods</code> folder you find by clicking <code>About</code> and then clicking <code>Open User Data Directory</code></li>
+</ul>
+<p><code>Hang Glider</code> adds a cheap hang glider</p>
+<ul>
+<li>Cheap. Same recipe as <code>Realistic Hang Glider</code>. (3 wool, 3 sticks)</li>
+<li>Honorable mention because I use <code>Realistic Hang Glider</code> instead, because the rockets amuse me.</li>
+<li>For lower powered or higher player count servers, I would recommend this instead of <code>Realistic Hang Glider</code></li>
+<li>Pairs well with <code>More Boots</code> to get rocket boots to get a jumping start.</li>
+<li>I give my players discounted or free rocket boots to help them avoid litering the wilderness with dirt pillars.</li>
+</ul>
+<p><code>Mapgen with Rivers</code> replaces the default map generation with beautiful hills and rivers.</p>
+<ul>
+<li>Quite lovely.</li>
+<li>Causes huge elevation jumps when added to an existing map.</li>
+<li>Removed because no other biomes seemed to generate when I was using it.</li>
+</ul>
+<p><code>Mobs NPC</code> adds non-player characters to interact with.</p>
+<ul>
+<li>I use this mod, but haven't played with the mechanics enough to have much to say.</li>
+<li>I like it.</li>
+</ul>
+<p><code>MyDoors</code> adds lots of new types of doors.</p>
+<ul>
+<li>Add secret doors that look like bookshelves, stone walls, and more!</li>
+<li>Many admins will want one or more door mods, because <code>MineGame</code> includes only one plain-looking craftable door, by design.</li>
+<li>Crafting recipes for most doors are comparatively expensive, due to requiring very specific stained woods.</li>
+<li>For some players, ability to add secret doors is going to be their number one reason to try <code>MineTest</code>.</li>
+<li>Add a lot of blocks to the inventory viewer.</li>
+</ul>
+<p><code>OneBlock</code> allows playing the classic <code>One Block</code> game mode.</p>
+<ul>
+<li>I do not believe this is compatible with any other map generation (for obvious reasons).</li>
+<li>I've hosted this type of game before, and look forward to trying this one for a weekend special map game run.</li>
+</ul>
+<p><code>Realistic Hang Glider</code> provides a cheap practical MineTest equivalent to MineCraft Elytra.</p>
+<ul>
+<li>Inexpensive recipe (3 wool, 3 sticks)</li>
+<li>Includes rockets for extra boost.</li>
+<li>Fun way to visit friends, do tricks, and get a birds eye view of your builds</li>
+<li>Conflicts with <code>Movement Essentials</code></li>
+<li>Did not appear last time I searched?</li>
+</ul>
+<p><code>Stairs Redo</code> adds recipes for stairs in so many more materials</p>
+<ul>
+<li>I removed this mod because the recipe inventory is already 28 pages long on our server, and this mod adds even more pages. (Paging is a preferred way to look for recipes on Steamdeck, due to the virual keyboard being harder to access.)</li>
+<li>Great for adding colors and textures to builds</li>
+</ul>
+<p><code>Steampunk Blimp</code> adds a blimp that multiple players can ride around together</p>
+<ul>
+<li>Pretty epic.</li>
+<li>Be kind, don't park your blimp crashed into another players wall. They cannot move or destroy it.</li>
+<li>This was quite fun.</li>
+<li>I removed this mod because we found more practical ways to explore together. Most notably <code>Legboat</code> and <code>Realistic Hang Gliders</code>.</li>
+</ul>
+<p><code>Wilhelmines Animal World</code> adds so many animals.</p>
+<ul>
+<li>I disabled this mod because it added to overwhelming inventory choices.</li>
+</ul>
+<p><code>Wilhelmes People</code> add non-player characters to interact with.</p>
+<ul>
+<li>I use this mod, but haven't played with the mechanics enough to have much to say.</li>
+<li>I like it.</li>
+</ul>
+<p><code>Worm Farm</code> add a craftable worm farm for generating fishing bait</p>
+<p><code>X Bows</code> adds bows and arrows.</p>
+<ul>
+<li>Not essential, to me, because my aim is terrible.</li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="todo">TODO</h2>
+<a class="anchor" href="#todo" aria-labelledby="todo"><span hidden>#</span></a></div>
+<ul>
+<li>[ ] Add a way to allow cats to be tamed on our server</li>
+<li>[ ] Find a fishing mod that I love, or contribute to one until I love it</li>
+<li>[ ] Investigate mods for player appearance and provide some guidance to favorites</li>
+<li>[ ] Investigate more door mods and provide additional guidance</li>
+<li>[ ] Tune my own server NPC mods, and provide guidance on which other admins might choose.</li>
+<li>[ ] Run a <code>OneBlock</code> game weekend and add recommendations. Possibly a dedicated mods page.</li>
+</ul>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=A Nice Set of MineTest Mods%20-%20https://edward.delaporte.us/blog/luanti/mods/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>
