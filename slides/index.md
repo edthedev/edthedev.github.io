@@ -14,8 +14,8 @@ Some recordings of presentations that I gave or facilitated are available at [Il
 In 2016, I began collecting the slide decks here.
 
 - [Developer Tour of A Cybersecurity Incident][47] - October 2025
-- ['Nuts and Bolts'][46] talk on Robot Framework
-- ['Nuts and Bolts'][46] (Identity and Privacy and Cybersecurity talk series) talk on Hoppscotch.io
+- ['Nuts and Bolts' talk on Automated Web Testing with Robot Framework][46] - November 2023
+- ['Nuts and Bolts' Talk on API Exploration with Hoppscotch.io][46] - November 2023
 - [IT Pro Forum 2022 Fall - Cybersecurity Year in Review](https://www.itproforum.illinois.edu/archives/fall_2022_conference)
 - [Web Application Scanning - August 2022](/slides/WebApplicationScanning2022.pptx)
 - [Ensemble Programming - May 2022](/slides/ensemble)
