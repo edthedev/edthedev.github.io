@@ -13,7 +13,7 @@ Some recordings of presentations that I gave or facilitated are available at [Il
 
 In 2016, I began collecting the slide decks here.
 
-- [Developer Tour of A Cybersecurity Incident][47]
+- [Developer Tour of A Cybersecurity Incident][47] - October 2025
 - ['Nuts and Bolts'][46] talk on Robot Framework
 - ['Nuts and Bolts'][46] (Identity and Privacy and Cybersecurity talk series) talk on Hoppscotch.io
 - [IT Pro Forum 2022 Fall - Cybersecurity Year in Review](https://www.itproforum.illinois.edu/archives/fall_2022_conference)
