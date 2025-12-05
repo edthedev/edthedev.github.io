@@ -37,7 +37,7 @@ You may enjoy asking Edward what juggling fire taught him about information tech
 - [GitHub Pull Shark](https://github.com/edthedev?tab=achievements&achievement=pull-shark)
 - [GitHub YOLO](https://github.com/users/edthedev/achievements/yolo)
 
-## My Social Media
+## Contact Information
 
 - Personal Mastodon: <a href=https://mastodon.sdf.org/@Edthedev rel=me>ed@edward.delaporte.us</a> (hosted by SDF.org)
 - <a rel="me" href="https://mastodon.art/@edthedev">My Art on Mastodon</a>
@@ -49,3 +49,4 @@ You may enjoy asking Edward what juggling fire taught him about information tech
 - [My Art](/art/)
 - [My Code](/code)
 - [My Resume](/resume)
+- [My PGP Public Key](/publickey.edward@delaporte.us.asc)
