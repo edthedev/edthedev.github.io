@@ -49,4 +49,4 @@ You may enjoy asking Edward what juggling fire taught him about information tech
 - [My Art](/art/)
 - [My Code](/code)
 - [My Resume](/resume)
-- [My PGP Public Key](/publickey.edward@delaporte.us.asc)
+- [My PGP Public Key](/publickey.edward_at_delaporte.us.asc)
