@@ -1,0 +1,103 @@
+{
+	"v": 1,
+	"name": "POST Echo",
+	"folders": [],
+	"requests": [
+		{
+			"v": "1",
+			"auth": {
+				"authType": "none",
+				"authActive": true
+			},
+			"body": {
+				"body": "{\"data\": {\"message\": \"hello world\"}}",
+				"contentType": "application/json"
+			},
+			"name": "Hello World",
+			"method": "POST",
+			"params": [
+				{
+					"key": "type",
+					"value": "Dragon",
+					"active": true
+				}
+			],
+			"headers": [],
+			"endpoint": "https://api.restful-api.dev/objects",
+			"testScript": "",
+			"preRequestScript": ""
+		},
+		{
+			"v": "1",
+			"auth": {
+				"authType": "none",
+				"authActive": true
+			},
+			"body": {
+				"body": "{\"content\":\"hello world!\"}",
+				"contentType": "application/json"
+			},
+			"name": "Goodbye World",
+			"method": "DELETE",
+			"params": [
+				{
+					"key": "type",
+					"value": "Dragon",
+					"active": true
+				}
+			],
+			"headers": [],
+			"endpoint": "https://api.restful-api.dev/objects/ff8081818905fd0e0189080ec75c03d6",
+			"testScript": "",
+			"preRequestScript": ""
+		},
+		{
+			"v": "1",
+			"auth": {
+				"authType": "none",
+				"authActive": true
+			},
+			"body": {
+				"body": "{\"content\":\"hello world!\"}",
+				"contentType": "application/json"
+			},
+			"name": "Where is the world?",
+			"method": "GET",
+			"params": [
+				{
+					"key": "type",
+					"value": "Dragon",
+					"active": true
+				}
+			],
+			"headers": [],
+			"endpoint": "https://api.restful-api.dev/objects/ff8081818905fd0e0189080ec75c03d6",
+			"testScript": "",
+			"preRequestScript": ""
+		},
+		{
+			"v": "1",
+			"auth": {
+				"authType": "none",
+				"authActive": true
+			},
+			"body": {
+				"body": "{\"data\": {\"message\": \"hello Illinois\"}}",
+				"contentType": "application/json"
+			},
+			"name": "Hello Illinois",
+			"method": "PUT",
+			"params": [
+				{
+					"key": "type",
+					"value": "Dragon",
+					"active": true
+				}
+			],
+			"headers": [],
+			"endpoint": "https://api.restful-api.dev/objects/ff808181893962f30189407f0fa10359",
+			"testScript": "",
+			"preRequestScript": ""
+		}
+	]
+}

@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Messing with Grub - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Messing with Grub </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="why">Why</h2>
+<a class="anchor" href="#why" aria-labelledby="why"><span hidden>#</span></a></div>
+<p>Lately Grub won't blindly identify and add that shiny new bootable USB that I want to try out.</p>
+<div class="heading-wrapper h2">
+<h2 id="what">What</h2>
+<a class="anchor" href="#what" aria-labelledby="what"><span hidden>#</span></a></div>
+<p><code>sudo vi /etc/default/grub</code></p>
+<p><code>GRUB_DISABLE_OS_PROBER=false</code></p>
+<p>Now reboot.</p>
+<div class="heading-wrapper h2">
+<h2 id="cleanup">Cleanup</h2>
+<a class="anchor" href="#cleanup" aria-labelledby="cleanup"><span hidden>#</span></a></div>
+<p>Grub should be updated now, so we can save some boot time, and improve security, by undoing our change.</p>
+<p><code>sudo vi /etc/default/grub</code></p>
+<p><code>GRUB_DISABLE_OS_PROBER=true</code></p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Messing with Grub%20-%20https://edward.delaporte.us/blog/grub/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

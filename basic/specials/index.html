@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/basic.css" /> 
+  <title>BASIC Special Characters - Program by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+<ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+<ul>
+  <li> <a href="/basic">Programs in BASIC</a>
+  </li>
+  <li> <a href="/learn2code">Learn to Code</a>
+  </li>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+<div class="heading-wrapper h2">
+<h2 id="print-special-characters">Print Special Characters</h2>
+<a class="anchor" href="#print-special-characters" aria-labelledby="print-special-characters"><span hidden>#</span></a></div>
+<p>Here's a BASIC program that lists the special printable characters available.</p>
+<pre><code class="language-basic">10 COUNT = 95
+20 LOW = 160
+2010 FOR CH = LO TO COUNT+LO
+2012 LET Y = 5
+2015 LET RE = CH - (INT(CH/Y)*Y)
+2016 IF RE=0 THEN PRINT &quot;&quot;
+2020 PRINT CH;
+2030 PRINT CHR$(CH);
+2040 NEXT CH
+9000 PRINT &quot;&quot;
+</code></pre>
+<p><img src="/img/basic/specials.PNG" alt="BASIC program - list characters"></p>
+<div class="heading-wrapper h2">
+<h2 id="colors">Colors</h2>
+<a class="anchor" href="#colors" aria-labelledby="colors"><span hidden>#</span></a></div>
+<p>And here's one that shows the color codes:</p>
+<pre><code class="language-basic">10 COUNT = 10
+20 LOW = 150
+2010 FOR CH = LO TO COUNT+LO
+2012 LET Y = 5
+2015 LET RE = CH - (INT(CH/Y)*Y)
+2016 IF RE=0 THEN PRINT &quot;&quot;
+2030 PRINT CHR$(CH);
+2020 PRINT CH;
+2040 PRINT &quot; &quot;;
+2040 NEXT CH
+9000 PRINT &quot;&quot;
+</code></pre>
+<p><img src="/img/basic/colors.PNG" alt="BASIC program output - show colors"></p>
+
+</div>
+<hr/>
+<div class="content" role="contentinfo">
+  <p><a href="/basic/howto">How to create these GIF files.</a></p>
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=BASIC Special Characters - Program by Edward Delaporte%20-%20https://edward.delaporte.us/basic/specials/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

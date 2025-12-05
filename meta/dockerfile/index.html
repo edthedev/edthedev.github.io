@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>A Dockerfile for EleventyJS - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> A Dockerfile for EleventyJS </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="context">Context</h2>
+<a class="anchor" href="#context" aria-labelledby="context"><span hidden>#</span></a></div>
+<p>I like to use 'Long Term Support (LTS)' releases.
+These never include new enough versions of <code>NodeJS</code>
+to build my website.
+<code>podman</code> to the rescue.</p>
+<div class="heading-wrapper h2">
+<h2 id="here-is-a-quick-dockerfile">Here is a quick Dockerfile</h2>
+<a class="anchor" href="#here-is-a-quick-dockerfile" aria-labelledby="here-is-a-quick-dockerfile"><span hidden>#</span></a></div>
+<pre><code class="language-docker"># 
+FROM node:21.4 as builder
+
+FROM builder
+
+MAINTAINER Edward Delaporte 
+
+RUN npm add --location=global npm @11ty/eleventy
+WORKDIR /app
+
+COPY package.json /app
+COPY package-lock.json /app
+
+RUN cd /app;npm install
+
+ENTRYPOINT [&quot;npx&quot;, &quot;eleventy&quot;, &quot;--serve&quot;]
+# 
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="and-here-are-some-commands">And here are some commands</h2>
+<a class="anchor" href="#and-here-are-some-commands" aria-labelledby="and-here-are-some-commands"><span hidden>#</span></a></div>
+<ol>
+<li>Build the image</li>
+</ol>
+<pre><code class="language-sh">podman build -t website .
+</code></pre>
+<ol start="2">
+<li>Got an image built?</li>
+</ol>
+<pre><code class="language-sh">$ podman image list        
+REPOSITORY                     TAG         IMAGE ID      CREATED         SIZE
+localhost/website              latest      65b259905584  25 seconds ago  1.19 GB
+</code></pre>
+<ol start="3">
+<li>Run it!</li>
+</ol>
+<pre><code class="language-sh">podman run --rm -v .:/app -p 8080:8080 localhost/website
+</code></pre>
+<ol start="4">
+<li>Maybe dig around inside to debug it!</li>
+</ol>
+<pre><code class="language-sh">podman run --rm -v .:/app -p 8080:8080 -it --entrypoint bash localhost/website
+</code></pre>
+<ol start="5">
+<li>Audit and update packages.</li>
+</ol>
+<pre><code class="language-sh">podman run --rm -v .:/app -p 8080:8080 -it --entrypoint bash localhost/website
+npm audit fix
+</code></pre>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=A Dockerfile for EleventyJS%20-%20https://edward.delaporte.us/meta/dockerfile/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

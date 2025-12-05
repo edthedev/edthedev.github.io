@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>How this Site is Built - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> How this Site is Built </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="context">Context</h2>
+<a class="anchor" href="#context" aria-labelledby="context"><span hidden>#</span></a></div>
+<p>This blog is built with the <a href="https://www.11ty.dev/">Eleventy.js</a> framework.</p>
+<div class="heading-wrapper h2">
+<h2 id="markdown">Markdown</h2>
+<a class="anchor" href="#markdown" aria-labelledby="markdown"><span hidden>#</span></a></div>
+<p>Most of my website is just <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> that I've typed into a text editor and uploaded to <code>GitHub</code>.</p>
+<p>That's not the interesting bit, so I won't get into much detail here.</p>
+<p>Instead, let's talk about the bits that <em>aren't</em> <code>Markdown</code>.
+It's important to me that almost everything I work on is as simple as possible. So for the less simple bits, perhaps I had an interesting reason.</p>
+<div class="heading-wrapper h2">
+<h2 id="what-else-is-there">What Else Is There?</h2>
+<a class="anchor" href="#what-else-is-there" aria-labelledby="what-else-is-there"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="plain-text">Plain Text</h3>
+<a class="anchor" href="#plain-text" aria-labelledby="plain-text"><span hidden>#</span></a></div>
+<p>Let's start with an easy one. There's no <code>Markdown</code> specification for a <a href="https://answers.uillinois.edu/illinois/page.php?id=118277">SECURITY.TXT file</a>.</p>
+<p>So instead, I carve off that bit of the repository, and just serve the raw path and text of <code>/.well-known/security.txt</code>.</p>
+<p>I let <code>Eleventy</code> know that's what needs to happen by a line in <code>.eleventy.js</code>:</p>
+<pre><code class="language-javascript">  eleventyConfig.addPassthroughCopy(&quot;.well-known&quot;);  // security.txt
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="art-with-javascript">Art with JavaScript</h3>
+<a class="anchor" href="#art-with-javascript" aria-labelledby="art-with-javascript"><span hidden>#</span></a></div>
+<p><a href="/art/live">I make art with code</a>, using the <a href="https://p5js.org/">P5.js</a> JavaScript framework.</p>
+<p>To support this, and some other nonense, I need to serve JavaScript, CSS and image files unmodified:</p>
+<pre><code class="language-javascript">  eleventyConfig.addPassthroughCopy(&quot;css&quot;);  // Static files
+  eleventyConfig.addPassthroughCopy(&quot;js&quot;);
+  eleventyConfig.addPassthroughCopy(&quot;img&quot;);
+</code></pre>
+<blockquote>
+<p>This bit may go away in the near future, as I have added enough static art that I need to add a separate CDN (Content Delivery Network) soon.</p>
+</blockquote>
+<div class="heading-wrapper h3">
+<h3 id="clever-bits-in-javascript-plugins">Clever Bits in JavaScript (plugins)</h3>
+<a class="anchor" href="#clever-bits-in-javascript-plugins" aria-labelledby="clever-bits-in-javascript-plugins"><span hidden>#</span></a></div>
+<p>There's some bits of the site that I don't want to type over and over again. Most notably - the site navigation and RSS feeds. Thankfully, <code>Eleventy</code> has plugins for that:</p>
+<pre><code class="language-javascript">const eleventyNavigationPlugin = require(&quot;@11ty/eleventy-navigation&quot;);
+const pluginRss = require(&quot;@11ty/eleventy-plugin-rss&quot;);
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="more">More</h2>
+<a class="anchor" href="#more" aria-labelledby="more"><span hidden>#</span></a></div>
+<ul>
+<li><a href="/meta/slides">Slide Decks</a></li>
+<li><a href="/meta/dockerfile">Building locally with a Dockerfile</a></li>
+</ul>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=How this Site is Built%20-%20https://edward.delaporte.us/meta/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

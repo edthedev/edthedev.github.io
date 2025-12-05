@@ -1,0 +1,132 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Robot Turtle with Python - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Robot Turtle with Python </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="robot-turtles">Robot Turtles</h2>
+<a class="anchor" href="#robot-turtles" aria-labelledby="robot-turtles"><span hidden>#</span></a></div>
+<p><a href="https://en.wikipedia.org/wiki/Turtle_graphics">Turtle Graphics programs</a> are a cool part of computing history, and a useful way to teach programming.</p>
+<p>One of the simpler ways to try out Turtle programming, today, is through the <a href="https://docs.python.org/3/library/turtle.html">Python Turtle Module</a>.</p>
+<div class="heading-wrapper h2">
+<h2 id="getting-ready">Getting Ready</h2>
+<a class="anchor" href="#getting-ready" aria-labelledby="getting-ready"><span hidden>#</span></a></div>
+<blockquote>
+<p>Tip: Be sure that Python is installed with the <a href="https://docs.python.org/3/library/tkinter.html">Tkinter module</a> option enabled. This is usually a checkbox during install on Windows. On Linux and Mac it may be a specially named package, such as <code>python3-tk</code>.</p>
+</blockquote>
+<pre><code class="language-sh">sudo apt install python3-tk
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="launching-the-turtle-program">Launching the Turtle Program</h2>
+<a class="anchor" href="#launching-the-turtle-program" aria-labelledby="launching-the-turtle-program"><span hidden>#</span></a></div>
+<p>Type the command <code>python</code> into a terminal. Then, in the interactive Python session, type:</p>
+<pre><code class="language-python">from turtle import *
+</code></pre>
+<p>Now, to list the available commands, type:</p>
+<pre><code class="language-python">dir()
+</code></pre>
+<p>To learn more about a particular command, type use the <code>help</code> function:</p>
+<pre><code class="language-python">help(forward)
+</code></pre>
+<blockquote>
+<p>Tip: Press <code>Q</code> to exit the help viewer and return to Python.</p>
+</blockquote>
+<p>To display the Turtle window, type your first command:</p>
+<pre><code class="language-python">forward(100)
+</code></pre>
+<blockquote>
+<p>Tip: A new separate window should appear with an arrow pointing to the right.</p>
+</blockquote>
+<p>The tip of the arrow is your turle. The line coming out of the arrow is the 100 pixels of travel the turtle just completed.</p>
+<p>Now a list of interesting commands to explore.</p>
+<p>Move the turtle:</p>
+<ul>
+<li><code>forward(100)</code> move the turtle forward 100 pixels</li>
+<li><code>right(45) / left(90)</code> rotate left or right the number of degrees specified</li>
+<li><code>xcor() / ycor()</code> - show the current x or y coordinate</li>
+<li><code>heading()</code> - get the current heading (in degrees)</li>
+<li><code>goto(0,0)</code> - go directly to the x and y cordinates given</li>
+</ul>
+<blockquote>
+<p>Tip: All commands whould end in <code>()</code> - and some take arguments - a number or string of text between the <code>()</code>.</p>
+</blockquote>
+<p>Control the drawn line:</p>
+<ul>
+<li><code>penup()</code> - lift the pen to allow moving without drawing</li>
+<li><code>pendown()</code> - lower the pen to resume drawing</li>
+<li><code>pensize(10)</code> - change the pen line thickness to the given number of pixels</li>
+<li><code>color('green')</code> - change the turtle (and ink) to the given color</li>
+</ul>
+<p>Text output:</p>
+<ul>
+<li>`write('hello world') - write the given text next to the turtle</li>
+<li><code>setx(100) / sety(100)</code> - jump to the given x / y coordinate</li>
+</ul>
+<p>Stamps:</p>
+<ul>
+<li><code>shape(&quot;circle&quot;)</code> - change the turle's shape</li>
+<li><code>stamp()</code> - &quot;stamp&quot; the turtle's current appearance into the canvas</li>
+</ul>
+<p>Clean up:</p>
+<ul>
+<li><code>hideturtle()</code> - hide the turtle</li>
+<li><code>showturtle()</code> - show the turtle</li>
+<li><code>clearscreen()</code> - empty the canvas of all drawings</li>
+<li><code>undo()</code> - undo the previous command</li>
+</ul>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Robot Turtle with Python%20-%20https://edward.delaporte.us/blog/turtle/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

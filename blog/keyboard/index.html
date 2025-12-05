@@ -1,0 +1,95 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Building a Keyboard - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Building a Keyboard </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about">About</h2>
+<a class="anchor" href="#about" aria-labelledby="about"><span hidden>#</span></a></div>
+<p>I built a keyboard from a bad of parts. Hooray.</p>
+<div class="heading-wrapper h2">
+<h2 id="why">Why</h2>
+<a class="anchor" href="#why" aria-labelledby="why"><span hidden>#</span></a></div>
+<p>Because I can...probably.</p>
+<div class="heading-wrapper h2">
+<h2 id="lessons-learned">Lessons Learned</h2>
+<a class="anchor" href="#lessons-learned" aria-labelledby="lessons-learned"><span hidden>#</span></a></div>
+<ul>
+<li><a href="https://github.com/foostan/crkbd/tree/main">Corne V3</a> seemed widely available and a reasonable place to start.</li>
+<li>YouTube tutorials on Soldering were quite helpful.</li>
+<li>A reverse action tweezers is quite helpful for the tiny bits.</li>
+<li>The whole thing could have cost as little as $100.00 in parts. I already had a simple soldering iron, and safety equipment.</li>
+<li>But I learned that 'LP' means 'low profile'. The LP PCB I bought is only compatible with LP switches. The standard Corne case I bought is not compatible with the LP switches that I bought to go with the LP PCB I bought. Cherry keycaps actually work, but sort of defeat the purpose of 'low profile'.</li>
+<li>QMK is a Python package. It (probably) works fine on Linux.</li>
+</ul>
+<pre><code class="language-bash">python3 -m venv keyboard
+source keyboard/bin/activate
+python3 -m pip install qmk
+qmk setup
+</code></pre>
+<p>Say 'yes' to some prompts to install firmware, and dependencies.
+Give it <code>sudo</code> permission for the dependencies.</p>
+<p>Then maybe this?</p>
+<pre><code class="language-sh">qmk compile -kb crkbd/rev1 -km default
+qmk flash -kb crkbd/rev1 -km default
+</code></pre>
+<p>Follow up:</p>
+<ul>
+<li>How to do a knob?! Possible with Corne?</li>
+</ul>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Building a Keyboard%20-%20https://edward.delaporte.us/blog/keyboard/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>
