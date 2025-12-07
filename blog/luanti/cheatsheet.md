@@ -2,12 +2,16 @@
 layout: blog.njk
 title: My Luanti Cheat Sheet
 tags: ['blog', 'rss']
-date: 2025-05-26
+date: 2025-12-07
 ---
 
 ## About
 
 Here are some useful [Luanti](https://luanti.org) commands I often forget.
+
+## Useful links
+
+- [Server Commands](https://docs.luanti.org/for-players/server-commands/)
 
 ## Creative Mode
 
@@ -54,3 +58,16 @@ Then run the `/ru` command to remove the target item.
 ```
 /ru <full.item-name>
 ```
+
+## Teleportation
+
+`/teleport <player1> <player2>`
+
+From [Teleportation](https://docs.luanti.org/for-players/server-commands/#teleportation)
+
+## Reset a Password
+
+
+`/setpassword <player> <password>`
+
+From [Password Manipulation](https://docs.luanti.org/for-players/server-commands/#password-manipulation)
