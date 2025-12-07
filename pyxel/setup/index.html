@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Setup Pyxel On Ubuntu - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Setup Pyxel On Ubuntu </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="context">Context</h2>
+<a class="anchor" href="#context" aria-labelledby="context"><span hidden>#</span></a></div>
+<p>Let's play with <a href="https://github.com/kitao/pyxel">Pyxel</a> a new retro game engine called <code>Pyxel</code>, built with <code>Python</code>.</p>
+<blockquote>
+<p>Warning: If you're using a Windows or Mac computer, use the <a href="https://github.com/kitao/pyxel#how-to-install">Pyxel Install Instructions</a>, instead.</p>
+</blockquote>
+<div class="heading-wrapper h2">
+<h2 id="setup">Setup</h2>
+<a class="anchor" href="#setup" aria-labelledby="setup"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Install dependencies</p>
+<pre><code class="language-sh">sudo apt install libsdl2-dev python3-pip pipx -y
+</code></pre>
+</li>
+<li>
+<p>Install Pyxel</p>
+<pre><code class="language-sh">pipx install pyxel
+pipx ensurepath
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>Tip: Verify this worked with <code>which pyxel</code></p>
+</blockquote>
+<ol start="3">
+<li>
+<p>Install <code>codium</code></p>
+<p>Pyxel does not come with an editor.
+To follow [/pyxel/hello/] exactly, you'll want to install <code>codium</code>. Otherwise, just replace <code>codium</code> in any example with your preferred text editor.</p>
+<pre><code class="language-sh">sudo apt install codium
+which codium
+</code></pre>
+</li>
+</ol>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Setup Pyxel On Ubuntu%20-%20https://edward.delaporte.us/pyxel/setup/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

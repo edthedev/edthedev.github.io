@@ -1,0 +1,68 @@
+<div class="heading-wrapper h2">
+<h2 id="setup">Setup</h2>
+<a class="anchor" href="#setup" aria-labelledby="setup"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Install</p>
+<p><code>choco install openshift-cli</code></p>
+</li>
+<li>
+<p>Authenticate</p>
+<ol>
+<li>Select <code>Developer</code> view.</li>
+<li>Click your own name.</li>
+<li>Select <code>Copy Login Command</code></li>
+<li>Follow prompts and then copy and paste the provided <code>oc</code> command.</li>
+</ol>
+</li>
+<li>
+<p>Confirm you're connected</p>
+<p><code>oc projects</code></p>
+</li>
+<li>
+<p>Install <code>kompose</code> to support <code>docker-compose</code> to <code>openshift</code></p>
+<p>https://kompose.io/installation/</p>
+<p><code>go install github.com/kubernetes/kompose@latest</code></p>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="convert-from-docker-to-k8s">Convert from Docker to K8S</h2>
+<a class="anchor" href="#convert-from-docker-to-k8s" aria-labelledby="convert-from-docker-to-k8s"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Create a Docker compose file</p>
+<p>Example: <code>files/openshift/calibre-web/compose.yml</code></p>
+</li>
+<li>
+<p>Create a route file</p>
+<p>Example: <code>files/openshift/calibre-web/route.yml</code></p>
+</li>
+<li>
+<p>Update <code>compose.yml</code> with path to book files</p>
+</li>
+<li>
+<p>Use Create K8S files, from <code>compose.yml</code></p>
+<pre><code class="language-powershell">cd files/openshift/calibre-web/
+`kompose convert`
+</code></pre>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="deploy">Deploy</h2>
+<a class="anchor" href="#deploy" aria-labelledby="deploy"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Create an switch to a project</p>
+<pre><code class="language-powershell">oc new-project bookshelf
+</code></pre>
+</li>
+<li>
+<p>Deploy resources</p>
+<pre><code class="language-powershell">oc apply -f calibre-web-service.yaml
+oc apply -f calibre-web-deployment.yaml
+oc apply -f calibre-web-claim0-persistentvolumeclaim.yaml
+oc apply -f calibre-web-claim1-persistentvolumeclaim.yaml
+oc apply -f route.yaml
+</code></pre>
+</li>
+</ol>

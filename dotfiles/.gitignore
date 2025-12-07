@@ -1,0 +1,14 @@
+
+*.gif
+
+*.log
+DONE.md
+.github_access_token
+env/*
+*.conf
+*.*~
+*.swp
+vimrc~
+plug.vim
+
+node_modules

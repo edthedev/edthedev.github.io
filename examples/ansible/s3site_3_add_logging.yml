@@ -1,0 +1,23 @@
+# {% raw %}
+---
+- name: Set up static site buckets on AWS as static s3 bucket
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: setup logging from www. to logs.
+    community.aws.s3_logging:
+      name: 'www.{{s3bucket}}'
+      state: present
+      target_bucket: 'logs.{{s3bucket}}'
+      target_prefix: 'logs/'
+  - name: log cleanup 
+    community.aws.s3_lifecycle:
+      name: 'logs.{{s3bucket}}'
+      transition_days: 7
+      expiration_days: 90
+      prefix: logs/
+      status: enabled
+      state: present
+# {% endraw %}

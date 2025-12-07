@@ -1,0 +1,101 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+      normal: gray
+  grid:
+    columns: [80,40]
+    rows: [3,3,3, 4,40]
+  refreshInterval: 600
+  mods:
+    check_backups:
+      title: "Backups"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/check-backups.sh"]
+      enabled: true
+      position:
+        top: 0
+        left: 0
+        width: 1
+        height: 1
+      type: cmdrunner
+      refreshInterval: 6000
+    todo_count:
+      title: "Todo Count"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/todo_count.sh"]
+      enabled: true
+      position:
+        top: 0
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+      refreshInterval: 60
+    in_review:
+      title: "In Review"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/list-gh-in-review.sh"]
+      enabled: true
+      position:
+        top: 1
+        left: 0
+        width: 1
+        height: 1
+      type: cmdrunner
+    count_in_review:
+      title: "Count In Review"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/count-gh-in-review.sh"]
+      enabled: true
+      position:
+        top: 1
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+    count_in_progress:
+      title: "Count In Progress"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/count-gh-in-progress.sh"]
+      enabled: true
+      position:
+        top: 2
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+    count_done:
+      title: "Count Done"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/count-gh-done.sh"]
+      enabled: true
+      position:
+        top: 3
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+    in_progress:
+      title: "In Progress"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/list-gh-in-progress.sh"]
+      enabled: true
+      position:
+        top: 2
+        left: 0
+        width: 1
+        height: 2
+      type: cmdrunner
+    backlog:
+      title: "GitHub Backlog"
+      cmd: "bash"
+      args: ["/home/delaport/dotfiles/files/ts/list-gh-board.sh"]
+      enabled: true
+      position:
+        top: 4
+        left: 0
+        width: 2
+        height: 1
+      type: cmdrunner

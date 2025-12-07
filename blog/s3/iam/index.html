@@ -1,0 +1,150 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>IAM for an S3 Bucket</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> IAM for an S3 Bucket </h1>
+<blockquote>
+<p>Disclaimer: This is for a weekend project, not an enterprise organization.
+You'll see use of <code>*</code> here in IAM policies.
+As Chief Executive Officer of my stupid weekend project, I have been briefed by our Chief Information Officer of this stupid weekend project (also me) and I (as CEO) have accepted the associated risks.
+I (as CIO) do not approve, but I remain committed to support stupid weekend project in any way I can, until our Chief Technology Officer (also me) is able to assign someone (let's face it - me) to build thoughtful people-centric security IAM policies for stupid weekend project.</p>
+</blockquote>
+<div class="heading-wrapper h2">
+<h2 id="allow-editing-s3-buckets">Allow Editing S3 Buckets</h2>
+<a class="anchor" href="#allow-editing-s3-buckets" aria-labelledby="allow-editing-s3-buckets"><span hidden>#</span></a></div>
+<p>I created the basic IAM group I need with <code>setup.iam.s3site.yml</code>:</p>
+<p>This Ansible playbook applies the policy in <code>iam_edit_s3.j2</code>:</p>
+<pre><code class="language-json">{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+        {
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [&quot;s3:ListAllMyBuckets&quot;],
+            &quot;Resource&quot;: &quot;*&quot;
+        },
+        {
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [&quot;s3:ListBucket&quot;, &quot;s3:GetBucketLocation&quot;],
+            &quot;Resource&quot;: [&quot;arn:aws:s3:::www.&quot;]
+        },
+        {
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: &quot;s3:*Object&quot;,
+            &quot;Resource&quot;: [&quot;arn:aws:s3:::www./*&quot;]
+        }
+    ]
+}
+
+</code></pre>
+<p>Note that, as usual, this playbook must be run with the <code>s3bucket</code> variable set.</p>
+<pre><code class="language-shell">ansible-playbook -e &quot;s3bucket=edthe.dev&quot; setup.iam.s3site.yml
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="allow-use-of-s3-bucket-editing-software">Allow use of S3 Bucket Editing Software</h2>
+<a class="anchor" href="#allow-use-of-s3-bucket-editing-software" aria-labelledby="allow-use-of-s3-bucket-editing-software"><span hidden>#</span></a></div>
+<p>I also find that any user who needs to edit an S3 bucket is going to want to use a piece of editing software, which should typically use an access key. Rather than assign an access key, I grant permissions to users to manage their own in <code>setup.iam.accesskeys.yml</code>:</p>
+<pre><code class="language-yaml"># 
+---
+- name: Set up IAM user groups
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+  - name: group allowed to manage own access keys
+    community.aws.iam_group:
+      name: 'self_manage_acces_keys'
+      state: present
+      purge_policies: yes # We are about to add the only desired policy
+  - name: apply policy
+    community.aws.iam_policy:
+      iam_name: 'self_manage_acces_keys'
+      iam_type: group
+      policy_name: 'policy-manage-access-keys'
+      state: present
+      policy_document: '../files/iam.allow.accesskeys.json'
+# 
+</code></pre>
+<p>This playbook applies the policy in <code>iam.allow.accesskeys.json</code>.</p>
+<pre><code class="language-json">{
+    &quot;Version&quot;: &quot;2012-10-17&quot;,
+    &quot;Statement&quot;: [
+			  {
+            &quot;Sid&quot;: &quot;CreateOwnAccessKeys&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [
+                &quot;iam:CreateAccessKey&quot;,
+                &quot;iam:GetUser&quot;,
+                &quot;iam:ListAccessKeys&quot;
+            ],
+            &quot;Resource&quot;: &quot;arn:aws:iam::*:user/${aws:username}&quot;
+        },
+        {
+            &quot;Sid&quot;: &quot;ManageOwnAccessKeys&quot;,
+            &quot;Effect&quot;: &quot;Allow&quot;,
+            &quot;Action&quot;: [
+                &quot;iam:CreateAccessKey&quot;,
+                &quot;iam:DeleteAccessKey&quot;,
+                &quot;iam:GetAccessKeyLastUsed&quot;,
+                &quot;iam:GetUser&quot;,
+                &quot;iam:ListAccessKeys&quot;,
+                &quot;iam:UpdateAccessKey&quot;
+            ],
+            &quot;Resource&quot;: &quot;arn:aws:iam::*:user/${aws:username}&quot;
+        }
+    ]
+}
+
+</code></pre>
+<pre><code class="language-shell">ansible-playbook setup.iam.accesskeys.yml
+</code></pre>
+<blockquote>
+<p>Note: For once we don't need a bucket name, as this creates an independant role I assign to AWS Console IAM users to allow them to manage their own Access Keys.</p>
+</blockquote>
+<p>Once these are run, I manually assign the new <code>self_manage_access_keys</code> and <code>edit_edthe.dev</code> groups to my S3 bucket editors in AWS IAM.</p>
+
+</div>
+
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=IAM for an S3 Bucket%20-%20https://edward.delaporte.us/blog/s3/iam/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

@@ -1,0 +1,298 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/art.css" /> 
+  <title>A Crack in the Wall - 2023 December 10</title>
+  <script src="/js/p5.js"></script>
+  
+    <script src="/js/art/cracked_wall.js"></script>
+  
+    <script src="/js/art/share/draw_kit.js"></script>
+  
+    <script src="/js/art/share/brickwall.js"></script>
+  
+
+</head> 
+<body>
+
+<nav class="ye_navbar" role="navigation"> 
+<ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+</nav>
+
+
+<div class="content" role="main"> <!-- No role="main" here because the script will add a main tag. -->
+<h1> A Crack in the Wall - 2023 December 10 </h1>
+
+<main role="application"> <!-- Script output will be written here. -->
+</main>
+
+</div>
+<div class="content" role="contentinfo">
+<p>Edward Delaporte created this art using the <a href="https://p5js.org/">P5.js</a> JavaScript library, and the following additional code:
+</p>
+  
+    <h2><a href='/js/art/cracked_wall.js'>js/art/cracked_wall.js</a>:</h2>
+
+<pre>
+/*
+
+This is a Live Art work created by Edward Delaporte.
+
+This script is Copyright Edward Delaporte 2023.
+
+This script and the art it creates are licensed under 
+a Creative Commons Attribution-ShareAlike 4.0 
+International License.
+
+http://creativecommons.org/licenses/by-sa/4.0/
+
+You can share your own remix of this code 
+as long as you display this license and attribution.
+
+*/
+
+function start_fractal() {
+  line_bit = new_line_segment(color(0,0,0));
+  line_bit.y = 200;
+  line_bit.length = 70;
+  line_bit.x = 300;
+  line_bit.degrees = 0; 
+  roty = random(40, 170);
+  do_fractal(line_bit);
+  line_bit.degrees += roty; 
+  do_fractal(line_bit);
+  line_bit.degrees += roty; 
+  do_fractal(line_bit);
+  /* 
+  line_bit.degrees += roty; 
+  do_fractal(line_bit);
+  line_bit.degrees += roty; 
+  do_fractal(line_bit);
+  */
+}
+
+async function do_fractal(bit) {
+  stroke(random(150, 255),random(150,255),random(150, 255));
+  const next_bit = structuredClone(draw_line_segment(bit));
+  next_bit.length = next_bit.length*.67;
+  next_bit.weight = next_bit.weight*.67;
+  next_bit.degrees = add_degrees(bit.degrees, 45);
+
+  if(next_bit.length &amp;gt 1) {
+
+    await do_fractal(next_bit);
+    const bit2 = structuredClone(next_bit);
+    bit2.degrees = add_degrees(bit.degrees, -90);
+    await do_fractal(bit2);
+
+  }
+}
+
+function setup() {
+  // maxim = .5 * window.innderWidth;
+  maxim_x = 600;
+  maxim_y = 400;
+  midline = maxim_y / 2;
+  myCanvas = createCanvas(maxim_x, maxim_y);
+  tile_background(maxim_x, maxim_y);
+
+  //make_horizon(0, 0, maxim_x, maxim_y);
+  // draw_horizon(0, 0, maxim_x, maxim_y);
+  // setup_season();
+  // draw_ground(myCanvas, maxim_y /2);
+  start_fractal();
+  console.log(&quot;setup done&quot;);
+}
+
+function draw() {
+}
+
+function mouseClicked() {
+  // background(220);
+  // spinny(mouseX, mouseY, 20)
+}
+
+</pre>
+  
+    <h2><a href='/js/art/share/draw_kit.js'>js/art/share/draw_kit.js</a>:</h2>
+
+<pre>
+
+
+function toRadians (angle) {
+  return angle * (Math.PI / 180);
+}
+
+function add_degrees(angle, degrees) {
+  updated = angle + degrees;
+  if(updated &amp;gt 360) {
+    updated = updated - 360;
+  }
+  return updated;
+}
+
+var line_segment = {
+  x: 0,
+  y: 0,
+  weight: 4,
+  degrees: 0,
+  length: 20,
+  history: 0,
+  color: null,
+  color_seq: [],
+};
+
+function draw_line_segment(line_seg, hide=0) {
+  seg = structuredClone(line_seg);
+  seg.history+=1;
+  // stroke(seg.color.red, seg.color.green, seg.color.blue);
+  strokeWeight(seg.weight);
+  angleRad = toRadians(seg.degrees);
+  endx = seg.x + seg.length*Math.cos(angleRad);
+  endy = seg.y + seg.length*Math.sin(angleRad);
+  if(hide==0) {
+    line(seg.x, seg.y, endx, endy);
+  }
+  next_seg = structuredClone(seg);
+  next_seg.x = endx;
+  next_seg.y = endy;
+  return next_seg;
+}
+
+function draw_line_cross(line_seg, dx, dy, hide=0) {
+  seg = structuredClone(line_seg);
+  seg.history+=1;
+  strokeWeight(seg.weight);
+  angleRad = toRadians(seg.degrees + 90);
+  endx = seg.x + .5*seg.length*Math.cos(angleRad);
+  endy = seg.y + .5*seg.length*Math.sin(angleRad);
+  startx = seg.x - .5*seg.length*Math.cos(angleRad);
+  starty = seg.y - .5*seg.length*Math.sin(angleRad);
+  if(hide==0) line(startx+dx, starty+dy, 
+    endx+dx, endy+dy);
+  /*
+  next_seg = structuredClone(seg);
+  next_seg.x = endx;
+  next_seg.y = endy;
+  return next_seg;
+  */
+}
+
+
+
+function draw_line_with_kite_shadow(line_seg, color_seq) {
+
+  // prep
+  seg = structuredClone(line_seg);
+  angleRad = toRadians(seg.degrees);
+  endx = seg.x + seg.length*Math.cos(angleRad);
+  endy = seg.y + seg.length*Math.sin(angleRad);
+
+  if(line_seg.history &amp;gt 0) { // skip first line
+
+  // draw shadow
+  shadow_idx = (seg.history % color_seq.length);
+  sha_c = color_seq[shadow_idx];
+  stroke(sha_c.red, sha_c.green, sha_c.blue);
+  fill(sha_c);
+  swe = seg.weight*16;
+  quad(
+    seg.x,seg.y, 
+    seg.x+swe,seg.y+swe, 
+    endx,endy,
+    endx+swe,endy+swe
+    );
+
+  // draw line
+  stroke(seg.color.red, seg.color.green, seg.color.blue);
+  strokeWeight(seg.weight);
+  line(seg.x, seg.y, endx, endy);
+
+  } else {
+    endx = seg.x;
+    endy = seg.y;
+  }
+
+  // house keeping
+  seg.history+=1;
+  next_seg = structuredClone(seg);
+  next_seg.x = endx;
+  next_seg.y = endy;
+  return next_seg;
+}
+
+
+function new_line_segment(color_seq) {
+  seg = structuredClone(line_segment);
+  seg.color_seq = color_seq;
+  seg.color = seg.color_seq[0];
+  return seg;
+}
+</pre>
+  
+    <h2><a href='/js/art/share/brickwall.js'>js/art/share/brickwall.js</a>:</h2>
+
+<pre>
+function tile_background(maxim_x, maxim_y) {
+
+  line_shade = 70;
+  stroke(line_shade, line_shade, line_shade);
+  fill(150,50,50);
+  background(maxim_x,maxim_y);
+  xp = 0;
+  yp = 0;
+  min_tile_size = maxim_y;
+  while(yp&amp;ltmaxim_y) {
+    tile_size = random(40,100);
+    console.log(&quot;size&quot; + tile_size);
+    if(tile_size &amp;lt min_tile_size)
+    {
+      min_tile_size = tile_size;
+      console.log(&quot;min tile is now &quot; + min_tile_size);
+    }
+
+    rect(xp, yp, xp+tile_size, yp+tile_size);
+    xp += tile_size;
+    if(xp&amp;gtmaxim_x) {
+      xp=0;
+      yp+=min_tile_size;
+      min_tile_size = maxim_y;
+    }
+  }
+}
+</pre>
+  
+</div>
+
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=A Crack in the Wall - 2023 December 10%20-%20https://edward.delaporte.us/art/live/cracked_wall/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>
