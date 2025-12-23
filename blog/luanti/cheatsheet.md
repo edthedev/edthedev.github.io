@@ -2,7 +2,7 @@
 layout: blog.njk
 title: My Luanti Cheat Sheet
 tags: ['blog', 'rss']
-date: 2025-12-07
+date: 2025-12-22
 ---
 
 ## About
@@ -21,8 +21,8 @@ To enter creative mode:
 
 ```sh
 /grantme creative
-```
 
+```
 To exit creative mode:
 
 ```sh
@@ -71,3 +71,16 @@ From [Teleportation](https://docs.luanti.org/for-players/server-commands/#telepo
 `/setpassword <player> <password>`
 
 From [Password Manipulation](https://docs.luanti.org/for-players/server-commands/#password-manipulation)
+
+## Bypass world object protections
+
+To allow destroying items owned by other players:
+
+```
+  /grantme protection_bypass
+```
+
+> Tip: Airplanes are fun, but they tend to crash into things. Young players sometimes do not know how to remove them.
+
+From [Privilages](https://docs.luanti.org/for-players/privileges/)
+
