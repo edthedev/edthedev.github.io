@@ -84,3 +84,8 @@ To allow destroying items owned by other players:
 
 From [Privilages](https://docs.luanti.org/for-players/privileges/)
 
+
+## Server Administration
+
+For some useful commands for maintaining a remote Luanti server, see my [Remote Server Invoke File](https://codeberg.org/EdTheDev/dotfiles/src/branch/main/invoke/luanti-remote/tasks.py)
+
