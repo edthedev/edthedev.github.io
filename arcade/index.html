@@ -1,0 +1,142 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Arcade by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Arcade by Edward Delaporte </h1>
+<div class="heading-wrapper h1">
+<h1 id="teenage-mutant-ninja-turtles">Teenage Mutant Ninja Turtles</h1>
+<a class="anchor" href="#teenage-mutant-ninja-turtles" aria-labelledby="teenage-mutant-ninja-turtles"><span hidden>#</span></a></div>
+<div class="heading-wrapper h2">
+<h2 id="my-approach">My Approach</h2>
+<a class="anchor" href="#my-approach" aria-labelledby="my-approach"><span hidden>#</span></a></div>
+<p><img src="/img/arcade/upgraded.jpg" alt="cabinet upgraded with 8 additional front buttons"></p>
+<p>The vision for TMNTcade is to bring a shoulder-to-shoulder play experience to a selected set of games I own on other platforms - and to take apart an arcade machine and see how it ticks.</p>
+<p>A limit I set for myself is that I will not drill any new holes in the control surface. So I have four joysticks and at most 3 buttons per player to work with.</p>
+<p>I was okay with drilling holes through the &quot;J&quot; panel on the front of the cabinet, so I added &quot;start&quot; and &quot;coin&quot; buttons for each player to the front of the cabinet. This let me reclaim the &quot;start&quot; button on top for gameplay, bringing the total per player up to 3.</p>
+<p>The original &quot;start&quot; buttons per player are not close of the other controls, so unless the third button is a rarely used &quot;special&quot;, we will likely play only 1 and 2 button games.</p>
+<div class="heading-wrapper h2">
+<h2 id="parts-list">Parts List</h2>
+<a class="anchor" href="#parts-list" aria-labelledby="parts-list"><span hidden>#</span></a></div>
+<ul>
+<li>4x <a href="https://smile.amazon.com/gp/product/B01FZ797OC">Zero Delay Generic Game Controller USB</a></li>
+<li>4x <a href="https://smile.amazon.com/gp/product/B07S31JY9M">&quot;Player&quot; start buttons</a></li>
+<li>4x &quot;Coin&quot; buttons</li>
+<li><a href="https://smile.amazon.com/CanaKit-Raspberry-Premium-Supply-Listed/dp/B01C6EQNNK">Raspberry Pi Model 3</a> (Replaced almost immediately with a Model 4)</li>
+<li>HDMI Cable</li>
+<li><a href="https://smile.amazon.com/gp/product/B07ZVMWPZP">Video Encoder Chip</a></li>
+<li>3x <a href="https://smile.amazon.com/gp/product/B07ZNJB5BB">12 V power adapter</a> (purchased two additional, and reused the one that came with the cabinet)</li>
+<li>Surge protector</li>
+<li><a href="https://smile.amazon.com/gp/product/B07D241T3M">JST Connector Kit</a> for wiring up the additional buttons on J panel, since I had to run longer wires to reach that part of the cabinet. The kits would also have been helpful for the C panel buttons, but I managed to carefully re-use parts instead.</li>
+<li><s><a href="https://smile.amazon.com/gp/product/B007TUSXEY">Sound Amplifier</a></s></li>
+<li><s>3.5mm to RCA adapter</s></li>
+<li><s><a href="https://smile.amazon.com/gp/product/B07B8W2KHZ">Voice Controlled Outlet</a> - because the original on/off button no longer works.</s> Update: See link to Kongs R Us solution below.</li>
+</ul>
+<p><img src="/img/arcade/power_pi.jpg" alt="power supply and raspberry pi"></p>
+<p>This USB chip allowed the existing cabinet controls to be connected to the <a href="https://smile.amazon.com/CanaKit-Raspberry-Premium-Supply-Listed/dp/B01C6EQNNK">Raspbery Pi</a> as USB controllers. Rewiring these controls was the most time-consuming part of the project. I used four of these - one for each player (Leo, Mikey, Don and Raph).</p>
+<p><img src="/img/arcade/usb_1.jpg" alt="USB Controller"></p>
+<div class="heading-wrapper h2">
+<h2 id="heart">Heart</h2>
+<a class="anchor" href="#heart" aria-labelledby="heart"><span hidden>#</span></a></div>
+<p>The heart of this build is a Raspberry Pi, but pretty much any game system that can accept 4 USB controller and output HDMI, VGA or DVI video would have worked. The chief considerations are availability of titles that do not need many buttons, and systems that do not require swapping physical media. I might end up upgrading to a Steam machine.</p>
+<div class="heading-wrapper h2">
+<h2 id="wiring-the-controls">Wiring the Controls</h2>
+<a class="anchor" href="#wiring-the-controls" aria-labelledby="wiring-the-controls"><span hidden>#</span></a></div>
+<p><img src="/img/arcade/buttons.jpg" alt="the back of the TMNT contol board - panel c"></p>
+<ul>
+<li>For the buttons, I used a pliers and moved the existing JST connectors to my <a href="https://smile.amazon.com/gp/aw/d/B01FZ797OC?psc=1&amp;ref=ppx_pop_mob_b_asin_title">USB Connectors</a>. In some places there was some epoxy. I dealt with it by pulling harder with the pliers. I very nearly stripped one of the wires, but it worked out.</li>
+</ul>
+<p><img src="/img/arcade/rewired.jpg" alt="this 4 wire connector had to be turned into a pair of two wire connectors"></p>
+<ul>
+<li>For the joysticks I had to <a href="https://youtu.be/kRvDgiX4Sk4">learn how to disconnect and reconnect a JDT connector</a>. The joystick wires were in sets of 4, and my USB board needed sets of 2. I didn't have to pick anywhere special to put them - I just put them on the next open slot - following the usual advice to <strong>keep every control set wired in the same order</strong>.</li>
+</ul>
+<p><img src="/img/arcade/hole.jpg" alt="hole I cut larger to allow controller USB A to B wires through"></p>
+<ul>
+<li>To allow all the USB controllers wires to connect into the controls box, I used a rotary cutting tool to cut the existing plastic opening larger.</li>
+</ul>
+<p><img src="/img/arcade/controller_wires.jpg" alt="controller USB A to B wires going through the cut out"></p>
+<div class="heading-wrapper h2">
+<h2 id="wiring-the-screen">Wiring the Screen</h2>
+<a class="anchor" href="#wiring-the-screen" aria-labelledby="wiring-the-screen"><span hidden>#</span></a></div>
+<p>I used the part that gets recommended in most guides. It worked fine, except I haven't restored sound yet. It was initially not obvious to me that I had to a remove a cover on the back of the monitor, but once I did, I started finding connectors that matched up as I needed. I pretty much just plugged each wire where it fit, and it worked on the first try.</p>
+<div class="heading-wrapper h2">
+<h2 id="first-configuration-only-supports-2-button-games">First Configuration - Only supports 2 button games</h2>
+<a class="anchor" href="#first-configuration-only-supports-2-button-games" aria-labelledby="first-configuration-only-supports-2-button-games"><span hidden>#</span></a></div>
+<p>At this point, I had only one 'select' button. I wired the cabinet on/off switch to an extra button on Leonardo's controls. This worked for awhile, but eventually the controllers were detected on boot in a different order, and then it was no longer possible to press start+select on the new player 1, because while Donatello's controller has the same mapping, it lacks an button in that position.</p>
+<p>Eventually I added two more buttons per player to the front panel - mapped to start and select. This returned the surface top 'add coin' buttons for use on gameplay - brining the total per player up to 3 buttons, without modifying the top of the deck.</p>
+<div class="heading-wrapper h2">
+<h2 id="second-configuration-supports-3-button-games">Second Configuration - Supports 3 button games</h2>
+<a class="anchor" href="#second-configuration-supports-3-button-games" aria-labelledby="second-configuration-supports-3-button-games"><span hidden>#</span></a></div>
+<p><img src="/img/arcade/jpanel.jpg" alt="j panel drilled for additional buttons"></p>
+<p>By adding 8 buttons to the panel &quot;J&quot; on the front of the cabinet, the will free-up the 4 &quot;start&quot; buttons on the top of the cabinet for use during gameplay.</p>
+<div class="heading-wrapper h2">
+<h2 id="challenges">Challenges</h2>
+<a class="anchor" href="#challenges" aria-labelledby="challenges"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="sound">Sound</h3>
+<a class="anchor" href="#sound" aria-labelledby="sound"><span hidden>#</span></a></div>
+<p>As of this writing, I do not have sound. The Raspberry Pi outputs the sound into the HDMI signal, and the split that comes out of the video adapter is not strong enough to drive the speaker. I understand ETA Prime has a guide to solving this, and I plan to revisit.</p>
+<div class="heading-wrapper h3">
+<h3 id="power">Power</h3>
+<a class="anchor" href="#power" aria-labelledby="power"><span hidden>#</span></a></div>
+<p><img src="/img/arcade/power.jpg" alt="12 volt power supply"></p>
+<p>Some people wire the external on/off and sound controls deep into the heart of the their Raspberry Pi, but as of this writing I have not bothered. To solve turning the system on and off, I purchased a voice control ready wall outlet switch. So I just tell my voice control gadget to turn the arcade on and off as needed.</p>
+<div class="heading-wrapper h2">
+<h2 id="issues-after-first-build">Issues after first build</h2>
+<a class="anchor" href="#issues-after-first-build" aria-labelledby="issues-after-first-build"><span hidden>#</span></a></div>
+<ul>
+<li>FIXED: On/off is at surge protector. For a couple years I controlled the power with a voice controlled outlet.</li>
+<li>FIXED: I finally followed this <a href="https://www.youtube.com/watch?v=OvsatU5g15w&amp;t=608s">power switch guide by Kongs R Us</a> to wire up the power switch on the TMNT control panel.</li>
+<li>FIXED: Only Leo and Donny are recognized. Plan to debug this after I have a full set of buttons. This problem went away after a reboot.</li>
+<li>FIXEd: It deserves a fan and ventilation. I plan to replace the Pi model 3 with a model 4 that will come with heat sinks and a fan. - I upgraded to a Pi model 4 that came with a fan, and I have left the back off for now.</li>
+<li>FIXED: Should upgrade it to a Pi4.</li>
+<li>FIXED: For sound, I ended up buying a cheap pair of PC speakers and plugging them directly into the Raspberry Pi audio out.</li>
+<li>Arcade games like TMNT aren't playable without both a Coin and a Start button per player. Plan to order longer button wires and add 8 new coin and start buttons to the angled lower front panel. This keeps me from having to drill through the plastic controls case, and I will look the look better.</li>
+<li>It deserves lights. I'm planning to run a simple light strip along the back of the cabinet.</li>
+<li>Doesn't have enough buttons to do things like save/load or manage favorites. - I am contemplating removing the On/Off and Sound controls, and adding a small custom made button box that sits on top in the same space, and adds buttons for L/R shoulders to manage save states. I could run the wires through the On/Off button space without drilling any new holes. I might not bother as this is a Raspberry Pi specific need, and if my other plan to upgrade to a Steam Box happens first, there will be no need.</li>
+</ul>
+
+</div>
+
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Arcade by Edward Delaporte%20-%20https://edward.delaporte.us/arcade/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

@@ -1,0 +1,141 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>DNS for a static website on AWS S3 - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> DNS for a static website on AWS S3 </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="setup-s3-buckets">Setup S3 Buckets</h2>
+<a class="anchor" href="#setup-s3-buckets" aria-labelledby="setup-s3-buckets"><span hidden>#</span></a></div>
+<p>First I had to <a href="/blog/s3/">setup static website s3 buckets</a>.</p>
+<p>Anywhere you see <code>edthe.dev</code> and <code>www.edthe.dev</code>, substitute your own apex domain name (i.e. <code>yourdomainname.com</code>) and your <code>www.</code> subdomain (i.e. <code>www.yourdomainname.com</code>).</p>
+<div class="heading-wrapper h2">
+<h2 id="serve-a-static-website-from-an-s3-bucket">Serve a static website from an S3 Bucket</h2>
+<a class="anchor" href="#serve-a-static-website-from-an-s3-bucket" aria-labelledby="serve-a-static-website-from-an-s3-bucket"><span hidden>#</span></a></div>
+<p>Do a bunch of non-repetivite stuff manually in  the AWS Web Console:</p>
+<ol>
+<li>
+<p>Point my domain registrar NameSevers for <code>edthe.dev</code> to the name servers listed in my Route53 hosted zone for <code>edthe.dev</code>.</p>
+<pre><code>    ns-number.awsdns-number.com.
+    ns-number.awsdns-number.org.
+    ns-number.awsdns-number.co.uk.
+    ns-number.awsdns-number.net.
+</code></pre>
+</li>
+<li>
+<p>Request an SSL Certificate in <code>AWS Certificate Manager</code> that covers <code>edthe.dev</code> and <code>www.edthe.dev</code>.</p>
+<ul>
+<li>Be sure to choos <code>Validaton Method: DNS validation</code></li>
+<li>Accept the default <code>Key algorithm</code></li>
+</ul>
+</li>
+<li>
+<p>Do the <a href="https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html">DNS Domain Ownership verification dance</a>.</p>
+<ul>
+<li>The easiest way to do this is to ignore the detailed guide and instead click into the pending request in <code>Certificate Manager - Certificates</code> and scroll down. There should be a button that basially says <code>Add DNS Records to Route 53 for me</code>. I typically push that button, and go grab a coffee.</li>
+</ul>
+<blockquote>
+<p>Tip: Do not remove the certificate ownership DNS records. I have heard it is helpful to still have when the SSL Certificate needs renewed.</p>
+</blockquote>
+</li>
+<li>
+<p>Create 2 CloudFront instances, one for <code>edthe.dev</code> and one for <code>www.edthe.dev</code>.</p>
+<ul>
+<li>Select <code>edthe.dev</code> or <code>www.edthe.dev</code> for the <code>Origin Domain</code>. You will do this twice, once for each of your apex domain, and your <code>www.</code> sub-domain.</li>
+<li>Leave any option not mentioned here with the default values.</li>
+<li>Under <code>Viewer Protocol Policy</code>, select <code>Redirect HTTP to HTTPS</code>.</li>
+<li>Under <code>Web Application Firewall (WAF)</code> choose <code>Do not enable security protections</code>. A static website is immune to the attacks that a WAF protects against.</li>
+<li>Be sure to assign each CloudFront instance the appropriate <code>alternate domain name (CNAME)</code> i.e. <code>www.edthe.dev</code>.</li>
+</ul>
+<blockquote>
+<p>Tip: <code>alternate domain</code> is incredibly hard to find, but critical. Scroll back and forth up the page until you find it.</p>
+</blockquote>
+<ul>
+<li>Under <code>Custom SSL Cetificate - optional</code>, choose the SSL Certificate you requested earlier. It should be the only option in the list.</li>
+</ul>
+<blockquote>
+<p>Tip: If your SSL Certificate is not yet available, double check the steps above, and then just take a 20 minute coffee break.</p>
+</blockquote>
+</li>
+<li>
+<p>Assign each CloudFront instance the SSL Certificate.</p>
+</li>
+<li>
+<p>Add A and AAAA records for <code>www.edthe.dev</code> pointing to the <code>www.edthe.dev</code> CloudFront distribution.</p>
+<pre><code class="language-dns">    www.edthe.dev	A	Simple	-	1stbunchofletters.cloudfront.net.
+    www.edthe.dev	AAAAA	Simple	-	1stbunchofletters.cloudfront.net.
+</code></pre>
+<blockquote>
+<p>Tip - the same <code>(bunch of letters).cloudfront.net</code> goes in both of these DNS record's <code>value</code> field.</p>
+</blockquote>
+</li>
+<li>
+<p>Add A and AAAA records for <code>edthe.dev</code> pointing to the <code>edthe.dev</code> CloudFront (CDN) distribution.</p>
+<pre><code class="language-dns">    edthe.dev	A	Simple	-	2ndbunchofletters.cloudfront.net.
+    edthe.dev	A	Simple	-	2ndbunchofletters.cloudfront.net.
+</code></pre>
+<blockquote>
+<p>Tip - the same <code>(bunch of letters).cloudfront.net</code> goes in both of these DNS record's <code>value</code> field, as each-other, <strong>but the value is different</strong> than the <code>value</code> in the previous step for <code>www.</code>. This is because the <code>CDN</code> for <code>edthe.dev</code> and the <code>CDN</code> for <code>www.edthe.dev</code> are different.</p>
+</blockquote>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="related-tasks">Related Tasks</h2>
+<a class="anchor" href="#related-tasks" aria-labelledby="related-tasks"><span hidden>#</span></a></div>
+<p>Now my site exists, but I still need <a href="/blog/s3/">a way to modify my AWS S3 Bucket contents</a>.</p>
+<p>When it was time to set this up a second time for the domain I share with my spouse, I decided it would be wise to <a href="/code/iam.dns/">delegate access to manage AWS Route 53 DNS</a> to my spouse.</p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=DNS for a static website on AWS S3%20-%20https://edward.delaporte.us/blog/s3/dns/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

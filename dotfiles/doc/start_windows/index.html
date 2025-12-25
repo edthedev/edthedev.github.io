@@ -1,0 +1,68 @@
+<div class="heading-wrapper h2">
+<h2 id="getting-started-windows">Getting Started - Windows</h2>
+<a class="anchor" href="#getting-started-windows" aria-labelledby="getting-started-windows"><span hidden>#</span></a></div>
+<blockquote>
+<p>Note: Bookmark this guide. You're going to reboot at least a few times.</p>
+</blockquote>
+<p>Optional - change host name</p>
+<pre><code>Rename-Computer -NewName FOOOOOOO -Restart
+</code></pre>
+<ol>
+<li>
+<p><a href="https://chocolatey.org/install">Install chocolatey</a></p>
+</li>
+<li>
+<p>Tell <code>choco</code> to watch for reboots, as this is Windows.</p>
+</li>
+</ol>
+<pre><code>choco feature enable -name=exitOnRebootDetected
+</code></pre>
+<ol start="3">
+<li>Install a decent terminal. This invokes a bunch of KBs.</li>
+</ol>
+<pre><code class="language-powershell">choco install microsoft-windows-terminal # reboot after
+</code></pre>
+<ol start="3">
+<li>Set dark theme (non-admin prompt)</li>
+</ol>
+<pre><code>Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
+</code></pre>
+<ol start="4">
+<li>
+<p>Reboot after first setup - you may see errors in <code>choco</code> commands otherwise.</p>
+</li>
+<li>
+<p>Set the PC time zone correctly - otherwise expect an install error in later <code>choco</code> commands.</p>
+</li>
+<li>
+<p>More packages</p>
+</li>
+</ol>
+<pre><code>choco install git 
+choco install vscode
+choco install powertoys # reboot after
+</code></pre>
+<pre><code>git clone https://github.com/edthedev/dotfiles.git
+cd dotfiles
+code .
+</code></pre>
+<p>Admin prompt:</p>
+<pre><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+</code></pre>
+<p>Install VSCode plugins:</p>
+<pre><code>.\setup\code-plugins.ps1
+</code></pre>
+<p>Set git username.</p>
+<pre><code>git config --global user.email &quot;edward@delaporte.us&quot;
+git config --global user.name &quot;Edward Delaporte&quot;
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="setup-powershell-profile">Setup PowerShell Profile</h2>
+<a class="anchor" href="#setup-powershell-profile" aria-labelledby="setup-powershell-profile"><span hidden>#</span></a></div>
+<p>Edit your actual profile,</p>
+<pre><code>code $profile
+</code></pre>
+<p>And add something like:</p>
+<pre><code class="language-powershell">$env:realProfile = &quot;$HOME\dotfiles\files\Microsoft.PowerShell_profile.ps1&quot;
+$profileContents = [string]::join([environment]::newline, (get-content -path $env:realProfile));invoke-expression $profileContents
+</code></pre>

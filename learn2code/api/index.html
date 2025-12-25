@@ -1,0 +1,187 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>API Resources - Edward Delaporte&#39;s Guide - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> API Resources - Edward Delaporte&#39;s Guide </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about">About</h2>
+<a class="anchor" href="#about" aria-labelledby="about"><span hidden>#</span></a></div>
+<p>Here's a quick write-up of some resources for folks exploring APIs.</p>
+<div class="heading-wrapper h2">
+<h2 id="api-tools">API Tools</h2>
+<a class="anchor" href="#api-tools" aria-labelledby="api-tools"><span hidden>#</span></a></div>
+<p>I would start with a quick crash course in a tool like Hoppscotch.io (https://hoppscotch.io/) for API exploration.</p>
+<p>I gave about a presentation on the Hoppscotch, and the recording is here:
+https://cybersecurity.illinois.edu/nuts-and-bolts-talks/</p>
+<div class="heading-wrapper h2">
+<h2 id="recommended-apis">Recommended APIs</h2>
+<a class="anchor" href="#recommended-apis" aria-labelledby="recommended-apis"><span hidden>#</span></a></div>
+<p>A good API to work with while learning the ropes of APIs in general is (of course), the Magic the Gathering API.
+https://docs.magicthegathering.io/</p>
+<p>MagicTheGathering.io is nice because it is Restful and un-authenticated.</p>
+<p>I run several examples with this API during the recording linked above.
+MTG API Docs
+Documentation for the Magic: The Gathering API are at
+https://docs.magicthegathering.io</p>
+<p>Another good one to try out is (also demo-ed in the recording above) is https://restful-api.dev/ - This one let's you submit bits of data and fetch them back without any auth.</p>
+<p>Using Restful-API.dev is a bit more nuanced, so here is an example file you can import into Hoppscotch.io to try out. Note that anywhere you see a token, it has surely expired and you will need to update with tokens returned from your own calls.</p>
+<pre><code class="language-json">{
+	&quot;v&quot;: 1,
+	&quot;name&quot;: &quot;POST Echo&quot;,
+	&quot;folders&quot;: [],
+	&quot;requests&quot;: [
+		{
+			&quot;v&quot;: &quot;1&quot;,
+			&quot;auth&quot;: {
+				&quot;authType&quot;: &quot;none&quot;,
+				&quot;authActive&quot;: true
+			},
+			&quot;body&quot;: {
+				&quot;body&quot;: &quot;{\&quot;data\&quot;: {\&quot;message\&quot;: \&quot;hello world\&quot;}}&quot;,
+				&quot;contentType&quot;: &quot;application/json&quot;
+			},
+			&quot;name&quot;: &quot;Hello World&quot;,
+			&quot;method&quot;: &quot;POST&quot;,
+			&quot;params&quot;: [
+				{
+					&quot;key&quot;: &quot;type&quot;,
+					&quot;value&quot;: &quot;Dragon&quot;,
+					&quot;active&quot;: true
+				}
+			],
+			&quot;headers&quot;: [],
+			&quot;endpoint&quot;: &quot;https://api.restful-api.dev/objects&quot;,
+			&quot;testScript&quot;: &quot;&quot;,
+			&quot;preRequestScript&quot;: &quot;&quot;
+		},
+		{
+			&quot;v&quot;: &quot;1&quot;,
+			&quot;auth&quot;: {
+				&quot;authType&quot;: &quot;none&quot;,
+				&quot;authActive&quot;: true
+			},
+			&quot;body&quot;: {
+				&quot;body&quot;: &quot;{\&quot;content\&quot;:\&quot;hello world!\&quot;}&quot;,
+				&quot;contentType&quot;: &quot;application/json&quot;
+			},
+			&quot;name&quot;: &quot;Goodbye World&quot;,
+			&quot;method&quot;: &quot;DELETE&quot;,
+			&quot;params&quot;: [
+				{
+					&quot;key&quot;: &quot;type&quot;,
+					&quot;value&quot;: &quot;Dragon&quot;,
+					&quot;active&quot;: true
+				}
+			],
+			&quot;headers&quot;: [],
+			&quot;endpoint&quot;: &quot;https://api.restful-api.dev/objects/ff8081818905fd0e0189080ec75c03d6&quot;,
+			&quot;testScript&quot;: &quot;&quot;,
+			&quot;preRequestScript&quot;: &quot;&quot;
+		},
+		{
+			&quot;v&quot;: &quot;1&quot;,
+			&quot;auth&quot;: {
+				&quot;authType&quot;: &quot;none&quot;,
+				&quot;authActive&quot;: true
+			},
+			&quot;body&quot;: {
+				&quot;body&quot;: &quot;{\&quot;content\&quot;:\&quot;hello world!\&quot;}&quot;,
+				&quot;contentType&quot;: &quot;application/json&quot;
+			},
+			&quot;name&quot;: &quot;Where is the world?&quot;,
+			&quot;method&quot;: &quot;GET&quot;,
+			&quot;params&quot;: [
+				{
+					&quot;key&quot;: &quot;type&quot;,
+					&quot;value&quot;: &quot;Dragon&quot;,
+					&quot;active&quot;: true
+				}
+			],
+			&quot;headers&quot;: [],
+			&quot;endpoint&quot;: &quot;https://api.restful-api.dev/objects/ff8081818905fd0e0189080ec75c03d6&quot;,
+			&quot;testScript&quot;: &quot;&quot;,
+			&quot;preRequestScript&quot;: &quot;&quot;
+		},
+		{
+			&quot;v&quot;: &quot;1&quot;,
+			&quot;auth&quot;: {
+				&quot;authType&quot;: &quot;none&quot;,
+				&quot;authActive&quot;: true
+			},
+			&quot;body&quot;: {
+				&quot;body&quot;: &quot;{\&quot;data\&quot;: {\&quot;message\&quot;: \&quot;hello Illinois\&quot;}}&quot;,
+				&quot;contentType&quot;: &quot;application/json&quot;
+			},
+			&quot;name&quot;: &quot;Hello Illinois&quot;,
+			&quot;method&quot;: &quot;PUT&quot;,
+			&quot;params&quot;: [
+				{
+					&quot;key&quot;: &quot;type&quot;,
+					&quot;value&quot;: &quot;Dragon&quot;,
+					&quot;active&quot;: true
+				}
+			],
+			&quot;headers&quot;: [],
+			&quot;endpoint&quot;: &quot;https://api.restful-api.dev/objects/ff808181893962f30189407f0fa10359&quot;,
+			&quot;testScript&quot;: &quot;&quot;,
+			&quot;preRequestScript&quot;: &quot;&quot;
+		}
+	]
+}
+</code></pre>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=API Resources - Edward Delaporte&#39;s Guide%20-%20https://edward.delaporte.us/learn2code/api/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

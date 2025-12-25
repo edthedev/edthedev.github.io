@@ -1,0 +1,51 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "alt+home",
+        "command": "journal.today"
+    },
+    {
+        "key": "shift+alt+5",
+        "command": "remoteTargets.focus"
+    },
+    {
+        "key": "shift+alt+6",
+        "command": "vscode-journal-view-explorer.focus"
+    },
+    {
+        "key": "shift+alt+3",
+        "command": "workbench.view.search.focus"
+    },
+    {
+        "key": "shift+alt+4",
+        "command": "workbench.action.terminal.toggleTerminal",
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "shift+alt+5",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "shift+alt+6",
+        "command": "workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "alt+home",
+        "command": "-list.focusAnyFirst",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+    }
+]

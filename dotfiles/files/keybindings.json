@@ -1,0 +1,71 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+	{
+		"key": "shift+alt+8",
+		"command": "workbench.action.moveEditorToFirstGroup"
+	},
+	{
+		"key": "shift+alt+1",
+		"command": "-workbench.action.moveEditorToFirstGroup"
+	},
+	{
+		"key": "shift+alt+1",
+		"command": "journal.note"
+	},
+	{
+		"key": "alt+home",
+		"command": "journal.today"
+	},
+	{
+		"key": "shift+alt+3",
+		"command": "workbench.view.search.focus"
+	},
+	{
+		"key": "shift+alt+v",
+		"command": "workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
+	{
+		"key": "ctrl+shift+g",
+		"command": "-workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
+	{
+		"key": "shift+alt+6",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "shift+alt+5",
+		"command": "workbench.action.toggleMaximizedPanel"
+	},
+	{
+		"key": "shift+alt+4",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "alt+right",
+		"command": "journal.tomorrow"
+	},
+	{
+		"key": "alt+left",
+		"command": "journal.yesterday"
+	},
+	{
+		"key": "shift+alt+2",
+		"command": "workbench.action.toggleZenMode"
+	},
+	{
+		"key": "ctrl+k z",
+		"command": "-workbench.action.toggleZenMode"
+	}
+]

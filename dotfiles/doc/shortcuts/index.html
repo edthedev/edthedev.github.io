@@ -1,0 +1,78 @@
+<div class="heading-wrapper h1">
+<h1 id="shortcuts">Shortcuts</h1>
+<a class="anchor" href="#shortcuts" aria-labelledby="shortcuts"><span hidden>#</span></a></div>
+<div class="heading-wrapper h2">
+<h2 id="shortcuts-in-vscode">Shortcuts in VSCode</h2>
+<a class="anchor" href="#shortcuts-in-vscode" aria-labelledby="shortcuts-in-vscode"><span hidden>#</span></a></div>
+<p>In VSCode, I have quick keys assigned to Alt+Shift+1 through Alt+Shift+6.</p>
+<p>See also <code>files/vscodium/keybindings.json</code></p>
+<p>Here's a helpful mapping in VSCode.</p>
+<p>Alt+Shift+(1 through 6):</p>
+<pre><code>1. Journal: New Journal Note
+2. View: Toggle Zen Mode
+3. Search: Focus on Search View
+4. View: Toggle Terminal
+5. View: Toggle Maximized Panel (Helpful for expanding terminal upward)
+6. View: Toggle Primary Side Bar Visibility
+
+Alt+Home (Web Home) - Journal: Open Today
+Alt+Right (Web Forward) - Journal: Open Tomorrow
+Alt+Left (Web Back) - Journal: Open Yesterday
+</code></pre>
+<blockquote>
+<p>Tip: When reviewing shortcuts in VSCode, set the search to <code>User</code> to see your own.
+Tip: There is an option to <code>Reset Keybinding</code> in the right-click menu.</p>
+</blockquote>
+<div class="heading-wrapper h2">
+<h2 id="shortcuts-javascript">Shortcuts JavaScript</h2>
+<a class="anchor" href="#shortcuts-javascript" aria-labelledby="shortcuts-javascript"><span hidden>#</span></a></div>
+<p>I have a bit of JavaScript in the HTML file I use for my homepage. It causes the above buttons 1-6 to map to whatever I've set my 6 most visited sites to.</p>
+<pre><code class="language-html">&lt;!-- Script to jump to links on keypresses 1 through 6 --&gt;
+&lt;script&gt;
+	watch_keys = ['1','2','3','4','5','6'];
+	locations = [
+		'link here...',
+		'link here...',
+		'link here...',
+		'link here...',
+		'link here...',
+		'link here...',
+	];
+  document.onkeypress = function (e) {
+    if(e.key in watch_keys)
+      window.location = locations[parseInt(e.key)-1]
+    else {
+      console.log(e);
+    }
+  }
+&lt;/script&gt;
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="shortcuts-in-ms-powertoys">Shortcuts in MS PowerToys</h2>
+<a class="anchor" href="#shortcuts-in-ms-powertoys" aria-labelledby="shortcuts-in-ms-powertoys"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="remapped-keys">Remapped Keys</h3>
+<a class="anchor" href="#remapped-keys" aria-labelledby="remapped-keys"><span hidden>#</span></a></div>
+<p>In <code>Keyboard Manager</code>, <code>Remap a Key</code>:</p>
+<p>To Mute/Unmute the <code>Teams</code> microphone with the dedicated <code>Volume Mute</code> button:</p>
+<ul>
+<li><code>Volume Mute</code> to <code>Ctrl+Shift+M</code></li>
+</ul>
+<div class="heading-wrapper h3">
+<h3 id="remapped-shortcuts">Remapped Shortcuts</h3>
+<a class="anchor" href="#remapped-shortcuts" aria-labelledby="remapped-shortcuts"><span hidden>#</span></a></div>
+<p>In <code>Keyboard Manager</code>, <code>Remap a Shortcut</code>:</p>
+<p>For <code>Raise Hand</code>:</p>
+<ul>
+<li><code>Alt+Shift+4</code> to <code>Ctrl+Shift+K</code> in app <code>teams</code></li>
+<li><code>Alt+Shift+4</code> to <code>Alt+Y</code> in app <code>zoom</code></li>
+</ul>
+<p>For <code>Mute</code>:</p>
+<ul>
+<li><code>Alt+Shift+6</code> to <code>Ctrl+Shift+M</code> in app <code>teams</code></li>
+<li><code>Alt+Shift+6</code> to <code>Ctrl+A</code> in app <code>zoom</code></li>
+</ul>
+<p>For the VSCode/VSCodium terminal:</p>
+<ul>
+<li><code>Alt+Shift+4</code> to 'Ctrl+<code>' in app </code>All Apps`</li>
+</ul>

@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Learn Cybersecurity with OWASP Juice Shop - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Learn Cybersecurity with OWASP Juice Shop </h1>
+
+  <p>The OWASP Juice Shop is currently my favorite Cybersecurity learning tool. It's an intentionally vulnerable website that acts like a puzzle box - you use common vulnerabilities to break into it, and the more you learn the more layers become available to break into. It has some built in tutorials, and more hints can be found across variuos blogs. Also feel free to reach out to me - I'm working though it right now myself to improve my own skills.</p>
+<p>As of this blog's publish date, there's a version vailable at https://demo.owasp-juice.shop/#/. While exploring this version with standard manual approaches is fine, it is still rude to use heavy tool-based approaches against a site you are not hosting.</p>
+<div class="heading-wrapper h2">
+<h2 id="juice-shop-in-a-container">Juice Shop in a Container</h2>
+<a class="anchor" href="#juice-shop-in-a-container" aria-labelledby="juice-shop-in-a-container"><span hidden>#</span></a></div>
+<p>For advanced usage, I recommend running a local copy of Juice Shop using <code>Podman</code> or <code>Docker</code>. I prefer <code>Podman</code>, so my examples below will use it.</p>
+<blockquote>
+<p>Tip: Anywhere the command <code>podman</code> appears below, <code>docker</code> will work as well.</p>
+</blockquote>
+<p>First, run this once to install the files for Juice Shop:</p>
+<pre><code class="language-sh">podman pull bkimminich/juice-shop
+</code></pre>
+<p>Then, each time you want to run the Juice Shop, run:</p>
+<pre><code class="language-sh">podman run -d -p 3000:3000 bkimminich/juice-shop
+</code></pre>
+<p>Then visit <code>localhost:3000</code> in your browser.</p>
+<p>All progress in Juice Shop is saved in your local cookies, so your progress will be maintained between sessions, until you clear your cookies.</p>
+<div class="heading-wrapper h2">
+<h2 id="juice-shop-hints">Juice Shop Hints</h2>
+<a class="anchor" href="#juice-shop-hints" aria-labelledby="juice-shop-hints"><span hidden>#</span></a></div>
+<p>My favorite hint about OWASP Juice Shop is that all ethical hackers should look for the files <code>/.well-known/security.txt</code>. A file with this name is often placed on web servers to tell ethical hackers what is allowed and where to report problems. In the case of OWASP Juice Shop, it also contains the URL of a scoreboard that gives hints and keeps track of your achievements.</p>
+<p>Another wise place to check on any server is <code>robots.txt</code>, which describes acceptable ways to interact with the server. In the case of Juice-Shop, it tells scripts not to index a pretty intersting looking directory, which is needed to solve some of the puzzles.</p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Learn Cybersecurity with OWASP Juice Shop%20-%20https://edward.delaporte.us/blog/juice-shop/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

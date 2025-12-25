@@ -1,0 +1,175 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Pyxel Lesson 01 - Doodle Bug - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Pyxel Lesson 01 - Doodle Bug </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about-doodle-bug">About Doodle Bug</h2>
+<a class="anchor" href="#about-doodle-bug" aria-labelledby="about-doodle-bug"><span hidden>#</span></a></div>
+<p>Doodle Bug is an example program to learn <a href="https://docs.python.org/3/">Python</a>, using <a href="https://github.com/kitao/pyxel">Pyxel</a>.</p>
+<p><img src="/img/pyxel/doodlebug.gif" alt="an animation of doodle bug"></p>
+<p>Doodle bug is based on <a href="https://github.com/edthedev/scratch_lessons/blob/master/ScribbleBug.md">Scribble Bug</a>, which you can create in <a href="https://scratch.mit.edu/projects/editor/">MIT Scratch</a>.</p>
+<p>After you <a href="https://github.com/kitao/pyxel#how-to-install">Install Pyxel</a>, you can follow the steps below to create the Doodle bug program.</p>
+<div class="heading-wrapper h2">
+<h2 id="step-1-draw-a-bug">Step 1: Draw a Bug</h2>
+<a class="anchor" href="#step-1-draw-a-bug" aria-labelledby="step-1-draw-a-bug"><span hidden>#</span></a></div>
+<p>Start up the <code>Pyxel</code> editor:</p>
+<pre><code class="language-sh">pyxel edit doodlebug.pyxres
+</code></pre>
+<p>Now draw a bug in the left window.</p>
+<p><img src="/img/pyxel/draw_bug.gif" alt="drawing a bug in Pyxel"></p>
+<blockquote>
+<p>Tip: The right window should show a smaller version of your bug drawing, and it should be in the very upper-left corner.</p>
+</blockquote>
+<p>Be sure to press <code>Ctrl+S</code> to save, before pressing <code>ESC</code> to exit.</p>
+<p>You should now have a file called <code>doodlebug.pyxres</code>.</p>
+<div class="heading-wrapper h2">
+<h2 id="step-2-copy-in-the-code">Step 2: Copy in the Code</h2>
+<a class="anchor" href="#step-2-copy-in-the-code" aria-labelledby="step-2-copy-in-the-code"><span hidden>#</span></a></div>
+<p>Open a text editor, and copy the following code into it. Save it as <code>doodlebug.py</code>:</p>
+<pre><code class="language-python">import pyxel
+from dataclasses import dataclass
+
+
+@dataclass
+class Pixel:
+    x: int
+    y: int
+    color: int
+
+
+
+class App:
+    def __init__(self):
+        pyxel.init(200, 150, title=&quot;Doodle Bug&quot;)
+        pyxel.mouse(True)
+        pyxel.load('doodlebug.pyxres')
+
+        self.bug_x = 100
+        self.bug_y = 75
+        self.next_color_in = 10
+        self.color = 0
+        self.pixels = []
+
+        pyxel.run(self.update, self.draw)
+
+    def update(self):
+
+        # Move the bug toward the mouse
+        if self.bug_x &amp;lt pyxel.mouse_x:
+            self.bug_x += 1
+        else:
+            self.bug_x -= 1
+
+        if self.bug_y &amp;lt pyxel.mouse_y:
+            self.bug_y += 1
+        else:
+            self.bug_y -= 1
+
+        # Rotate drawing color
+        self.next_color_in -= 1
+        if(self.next_color_in&amp;lt0):
+            self.color+=1
+            self.next_color_in = 10
+        if(self.color&amp;gt16):
+            self.color=0
+
+        # Memorize what we drew so we can re-draw after each `pyxel.cls(6)`
+        p = Pixel(self.bug_x, self.bug_y, self.color)
+        self.pixels.append(p)
+
+        # Remove oldest pixel after 500
+        if(len(self.pixels)&amp;gt500):
+            self.pixels.pop(0)
+
+    def draw(self):
+        pyxel.cls(6)  # Clear the screen to a light grey
+
+        # Print text to tell us where the bug is
+        pyxel.text(x=3, y=3, s=&quot;Bug is at: &quot; + str(self.bug_x), col=0)
+        pyxel.text(x=3, y=13, s=&quot;Bug is pooping color: &quot; + str(self.color), col=0)
+        pyxel.text(x=120, y=140, s=&quot;Press ESC to quit.&quot;, col=0)
+
+        # Draw the bug
+        pyxel.blt(x=self.bug_x, y=self.bug_y, # draw at bug X,Y
+            img=0, # From image bank 0
+            u=0, v=0, w=16, h=16, # Choose pixels 0,0 through 16,16
+            colkey=0 # Treat color 0 as transparent
+            )
+
+        # Draw our pixels in the last 500 places the bug has been
+        for item in self.pixels:
+            pyxel.pset(x=item.x + 8,  # +8 - to the bug's middle
+                   y=item.y + 16,  # +16 - to the bug's butt
+                   col=item.color)
+
+App()
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="step-3-play-scribble-bug">Step 3: Play Scribble Bug!</h2>
+<a class="anchor" href="#step-3-play-scribble-bug" aria-labelledby="step-3-play-scribble-bug"><span hidden>#</span></a></div>
+<pre><code class="language-sh">pxyel run doodlebug.py
+</code></pre>
+<p>You can also <a href="/examples/pyxel/doodlebug.html">click here to try Doodlebug</a>.</p>
+<div class="heading-wrapper h2">
+<h2 id="step-4-remix">Step 4: Remix!</h2>
+<a class="anchor" href="#step-4-remix" aria-labelledby="step-4-remix"><span hidden>#</span></a></div>
+<p>Open <code>doodlebug.py</code> in your text editor, and change some numbers, save the file, and run the program again so see what changed.</p>
+<pre><code class="language-sh">pxyel run doodlebug.py
+</code></pre>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Pyxel Lesson 01 - Doodle Bug%20-%20https://edward.delaporte.us/pyxel/doodlebug/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

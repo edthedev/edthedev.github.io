@@ -1,0 +1,95 @@
+wtf:
+  colors:
+    border:
+      focusable: darkslateblue
+      focused: orange
+      normal: gray
+  grid:
+    columns: [40, 40]
+    rows: [5,15,15]
+  refreshInterval: 60
+  mods:
+    check_backups:
+      title: "Backups"
+      cmd: "sh"
+      args: ["/home/edward/dotfiles/files/check_backups.sh"]
+      enabled: true
+      position:
+        top: 0
+        left: 0
+        width: 1
+        height: 1
+      type: cmdrunner
+      refreshInterval: 6000
+    at_laptop:
+      title: "At My Laptop"
+      cmd: "todo-txt"
+      args: ["list", "@web"]
+      enabled: true
+      position:
+        top: 1
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+    on_deck:
+      title: "On Deck"
+      cmd: "todo-txt"
+      args: ["listpri", "A-C"]
+      enabled: true
+      position:
+        top: 1
+        left: 0
+        width: 1
+        height: 1
+      refreshInterval: 60
+      type: cmdrunner
+    project2:
+      title: "Project 2 - DeGoogle"
+      cmd: "todo-txt"
+      args: ["list", "+degoogle"]
+      enabled: false 
+      position:
+        top: 2
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+      refreshInterval: 60
+    legacy:
+      title: "Agenda"
+      cmd: "agenda"
+      args: ["-path", "/home/edward/Journal/{YYYY}/{MM}-{DD}.md"]
+      enabled: true 
+      position:
+        top: 2
+        left: 0
+        width: 1
+        height: 1
+      type: cmdrunner
+      refreshInterval: 600
+    books:
+      title: "Context @web"
+      cmd: "todo-txt"
+      args: ["list", "@web"]
+      enabled: true
+      position:
+        top: 2
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+      refreshInterval: 60
+    proj_list:
+      title: "Project List"
+      cmd: "todo-txt"
+      args: ["listproj"]
+      enabled: true
+      position:
+        top: 0
+        left: 1
+        width: 1
+        height: 1
+      type: cmdrunner
+
+

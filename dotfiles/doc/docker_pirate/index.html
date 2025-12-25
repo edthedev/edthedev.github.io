@@ -1,0 +1,37 @@
+<div class="heading-wrapper h1">
+<h1 id="docker-pirate">Docker Pirate</h1>
+<a class="anchor" href="#docker-pirate" aria-labelledby="docker-pirate"><span hidden>#</span></a></div>
+<div class="heading-wrapper h2">
+<h2 id="on-building-the-image">On Building the Image</h2>
+<a class="anchor" href="#on-building-the-image" aria-labelledby="on-building-the-image"><span hidden>#</span></a></div>
+<p>A Raspberry Pi network connected Docker host.</p>
+<ul>
+<li>https://blog.hypriot.com/faq/</li>
+<li>https://github.com/hypriot/image-builder-rpi/releases</li>
+</ul>
+<p>See existing volumes.</p>
+<pre><code>lsblk
+</code></pre>
+<p>Use the <code>dd</code> command from the tutorial.</p>
+<pre><code>sudo dd if=hypriotos-rpi-v1.12.3.img of=/dev/&lt;new thing that showed up&gt; bs=1M
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="on-finding-the-image">On Finding the Image</h2>
+<a class="anchor" href="#on-finding-the-image" aria-labelledby="on-finding-the-image"><span hidden>#</span></a></div>
+<p>No wireless support in the image.
+Plug into the network directly.</p>
+<pre><code>sudo apt install nmap
+hostname -I
+nmap -sP &lt;ip from command above&gt;.0/24
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="updates">Updates</h2>
+<a class="anchor" href="#updates" aria-labelledby="updates"><span hidden>#</span></a></div>
+<p>Remember to change the default username and password.</p>
+<pre><code>sudo raspi-config
+</code></pre>
+<p>To update the hostname:</p>
+<pre><code class="language-sh">ssh pirate@black-pearl.lan
+sudo vi /boot/user-data
+sudo reboot now
+</code></pre>

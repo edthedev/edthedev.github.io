@@ -1,0 +1,12 @@
+<div class="heading-wrapper h1">
+<h1 id="on-state">On State</h1>
+<a class="anchor" href="#on-state" aria-labelledby="on-state"><span hidden>#</span></a></div>
+<p>State is the bits of data that have to exist in your application.</p>
+<p>It is undesirable but necessary.</p>
+<p>A lot of folks argue needlessly about techniques that just hide state (object oriented programming) or move it around in needlessly complex ways (&quot;stateless&quot; procedural programming).</p>
+<p>More architecture crimes have been done in the name of managing applications state than good.</p>
+<p>That said, be aware of your state. Spend a lot of time, maybe 90% if your time figuring out of you even need whatever state you have.</p>
+<p>Any state you can get rid of will result in a simpler more maintainable more robust solution.</p>
+<p>But isn't my state just in the database?</p>
+<p>It's at rest in the database, but it's crawling through the pores of your application in ugly ways. It is the root of unnecessary complexity. It sits greedily at the heart of every traffic scaling problem, and every timing issue.</p>
+<p>Find it and deal with it. If you can't get rid of it - and you can't! - then at least get it out of your critical and your most used code.</p>

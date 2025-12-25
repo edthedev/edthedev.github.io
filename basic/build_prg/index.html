@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/basic.css" /> 
+  <title>Build and run a PRG file - Guide by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+<ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+<ul>
+  <li> <a href="/basic">Programs in BASIC</a>
+  </li>
+  <li> <a href="/learn2code">Learn to Code</a>
+  </li>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+<div class="heading-wrapper h1">
+<h1 id="build-and-run-a-prg-file">Build and Run a PRG File</h1>
+<a class="anchor" href="#build-and-run-a-prg-file" aria-labelledby="build-and-run-a-prg-file"><span hidden>#</span></a></div>
+<p>To practice, I decide to attempt building the <a href="https://github.com/commanderx16/x16-demo/tree/master/cc65-sprite">X16 Commander Sprite demo</a>.</p>
+<p>If you are following along, be sure to start with <a href="/basic/x16pi/">setting up the X16 Emulator on Raspberry Pi</a></p>
+<div class="heading-wrapper h2">
+<h2 id="dependencies">Dependencies</h2>
+<a class="anchor" href="#dependencies" aria-labelledby="dependencies"><span hidden>#</span></a></div>
+<p>I love that we're working with Python data conversion tools called from Makefiles.</p>
+<p>This must be how Superman felt the first time he stepped foot in the Bottle City of Kandor.
+I have never set foot here before, but I am at home.</p>
+<p>Here's what we need to install.</p>
+<pre><code class="language-sh">apt install make python3-pip python3-numpy
+pip3 install pillow # Python Image Library
+</code></pre>
+<blockquote>
+<p>Be sure to install <code>numpy</code> via apt to resolve the C dependencies on Raspberry Pi.</p>
+</blockquote>
+<div class="heading-wrapper h2">
+<h2 id="build-the-prg-file">Build the PRG file.</h2>
+<a class="anchor" href="#build-the-prg-file" aria-labelledby="build-the-prg-file"><span hidden>#</span></a></div>
+<pre><code class="language-sh">
+git clone https://github.com/commanderx16/x16-demo.git
+cde x16-demo/cc65-sprite
+make balloon.inc
+make 
+</code></pre>
+<p>The commands that get run by the Makefile are:</p>
+<pre><code>python3 ../tools/png2sprite.py -n balloon $&lt; $@
+cl65 -t cx16 -O -o demo.prg demo.c
+</code></pre>
+<p>So the interesting files are:</p>
+<ul>
+<li>balloon.png - A modern image!</li>
+<li>balloon.inc - A C include file with the converted image.</li>
+<li>demo.c - The program</li>
+<li>demo.prg - The machine readable file for X16 Commander, if all went to plan.</li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="run-the-program">Run the program</h2>
+<a class="anchor" href="#run-the-program" aria-labelledby="run-the-program"><span hidden>#</span></a></div>
+<p>Now let's give it a try!</p>
+<pre><code class="language-sh">x16emu -prg ./demo.prg -run
+</code></pre>
+<p><img src="/img/basic/cc65spritedemo.gif" alt="cc65 PRG demo in X16 Commander"></p>
+
+</div>
+<hr/>
+<div class="content" role="contentinfo">
+  <p><a href="/basic/howto">How to create these GIF files.</a></p>
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Build and run a PRG file - Guide by Edward Delaporte%20-%20https://edward.delaporte.us/basic/build_prg/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

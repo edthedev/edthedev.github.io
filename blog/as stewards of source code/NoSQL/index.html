@@ -1,0 +1,14 @@
+<div class="heading-wrapper h1">
+<h1 id="nosql">NoSQL</h1>
+<a class="anchor" href="#nosql" aria-labelledby="nosql"><span hidden>#</span></a></div>
+<p>SomeSQL, SQLMaybe</p>
+<p>Just aim for BCNF2. It makes it fast. I know you were taught to use BCNF3, but that road leads to needing NoSQL.</p>
+<p>D Todo: diagrams on where the validation happens in NoSQL va SQL databases.</p>
+<p>Grant permission to move only <em>some</em> of the validation, not <em>all</em>.</p>
+<p>But that sounds messy! Yes. It is. Stop looking for easy solutions to hard problems.</p>
+<p>Anything missing in normalization,   you can fix in the data access layer.</p>
+<p>Don't do every bit of validation in the data access layer - that's too expensive to maintain.</p>
+<p>Do the 2 out 3 most expensive integrity checks up in the app where you can do them while the user is distracted by choosing sock colors. Where you have the maximum amount of control.</p>
+<p>You can still enforce the integrity rule in a microsevice so the front end developer don't screw it up.</p>
+<p>Don't be afraid to have a separate blazing fast fully normalized BCNF4 reporting database downstream.</p>
+<p>But what happens when something shops through the cracks? You cope and you add a regression test. And you learn a bit about building resilient systems and you just got some free fault detection.</p>

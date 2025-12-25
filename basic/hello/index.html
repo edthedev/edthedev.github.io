@@ -1,0 +1,123 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/basic.css" /> 
+  <title>HELLO! - BASIC Program by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+<ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+<ul>
+  <li> <a href="/basic">Programs in BASIC</a>
+  </li>
+  <li> <a href="/learn2code">Learn to Code</a>
+  </li>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+<div class="heading-wrapper h2">
+<h2 id="hello">HELLO</h2>
+<a class="anchor" href="#hello" aria-labelledby="hello"><span hidden>#</span></a></div>
+<p>I enjoy ASCII art.
+Bitwise shifts are cool.</p>
+<p><a href="https://github.com/edthedev/edthedev.github.io/blob/main/_includes/basic/hello.bas">hello.bas</a></p>
+<pre><code class="language-basic">60 GOSUB 600
+80 REM SPELL HELL0
+110 IC = 53
+111 GOSUB 300
+115 IC = 18
+116 GOSUB 500
+117 IC = 46
+118 GOSUB 400
+120 IC = 21
+121 GOSUB 500
+123 IC = 18
+124 GOSUB 500
+125 IC = 42
+126 GOSUB 400
+130 IC = 55
+131 GOSUB 300
+132 IC = 18
+133 GOSUB 500
+134 IC = 42
+135 GOSUB 400
+140 IC = 21
+141 GOSUB 500
+143 IC = 18
+144 GOSUB 500
+146 IC = 10
+147 GOSUB 400
+150 IC = 53
+151 GOSUB 300
+152 IC = 54
+153 GOSUB 300
+154 IC = 46
+155 GOSUB 400
+198 GOSUB 600
+199 GOTO 9999
+300 REM PRINT ICON
+310 LET RE = IC - (INT(IC/2)*2)
+320 IF RE = 1 THEN PRINT CHR$(211);
+330 IF RE = 0 THEN PRINT &quot; &quot;;
+340 IF IC&lt;1 THEN GOTO 399
+350 IC = IC / 2
+360 IC = INT(IC)
+370 GOTO 310
+399 RETURN
+400 REM PRINT AND END LINE
+480 PRINT &quot;&quot;
+410 GOSUB 300
+499 RETURN
+500 REM PRINT AND A SPACE
+510 GOSUB 300
+520 PRINT &quot; &quot;;
+599 RETURN
+600 REM LINE
+650 PRINT &quot;------&quot;;
+655 PRINT &quot;------&quot;;
+660 PRINT &quot;--------&quot;
+699 RETURN
+
+9999 PRINT &quot;&quot;
+</code></pre>
+<p><img src="/img/basic/hello.gif" alt="Animation of BASIC program - HELLO"></p>
+
+</div>
+<hr/>
+<div class="content" role="contentinfo">
+  <p><a href="/basic/howto">How to create these GIF files.</a></p>
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=HELLO! - BASIC Program by Edward Delaporte%20-%20https://edward.delaporte.us/basic/hello/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

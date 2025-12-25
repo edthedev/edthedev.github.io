@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <link rel="stylesheet" href="/css/basic.css" /> 
+  <title>Capturing BASIC Program Output - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+<ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+<ul>
+  <li> <a href="/basic">Programs in BASIC</a>
+  </li>
+  <li> <a href="/learn2code">Learn to Code</a>
+  </li>
+</nav>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+<div class="heading-wrapper h2">
+<h2 id="example-program-waves">Example Program - Waves</h2>
+<a class="anchor" href="#example-program-waves" aria-labelledby="example-program-waves"><span hidden>#</span></a></div>
+<p>This program is older than I am, but makes a great test of whether my website is ready to share the code inline.</p>
+<pre><code class="language-basic">10 PRINT CHR$(205.5 + RND(1));
+20 GOTO 10
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="how-to-make-a-gif-file">How to make a GIF file!</h2>
+<a class="anchor" href="#how-to-make-a-gif-file" aria-labelledby="how-to-make-a-gif-file"><span hidden>#</span></a></div>
+<p>If you have clone my website,
+then you can generate this GIF with the following commands.</p>
+<pre><code class="language-powershell">New-Item -Type Directory c:\src
+cd c:\src
+git clone https://github.com/edthedev/edthedev.github.io.git
+cd c:\src\edthedev.github.io.git
+x16emu.exe -bas _includes\basic\waves.bas -gif img\basic\waves.gif
+</code></pre>
+<p>Now type RUN, and hit Return/Enter.
+When ready, exit X16emu.exe with the X in the corner.</p>
+<div class="heading-wrapper h2">
+<h2 id="results">Results</h2>
+<a class="anchor" href="#results" aria-labelledby="results"><span hidden>#</span></a></div>
+<p><img src="/img/basic/waves.gif" alt="Animation of the BASIC code above. Looks like waves or a maze."></p>
+
+</div>
+<hr/>
+<div class="content" role="contentinfo">
+  <p><a href="/basic/howto">How to create these GIF files.</a></p>
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Capturing BASIC Program Output - by Edward Delaporte%20-%20https://edward.delaporte.us/basic/howto/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

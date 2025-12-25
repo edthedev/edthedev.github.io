@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Markdown Tips by Edward Delaporte - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Markdown Tips by Edward Delaporte </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="generating-documents">Generating Documents</h2>
+<a class="anchor" href="#generating-documents" aria-labelledby="generating-documents"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="markdown-to-html">Markdown to HTML</h3>
+<a class="anchor" href="#markdown-to-html" aria-labelledby="markdown-to-html"><span hidden>#</span></a></div>
+<p>The usual VSCode plugins add a lot of weird junk (telemetry, perhaps), so I decided to start using brute force and minimal <code>GoLang</code> code to convert my Markdown into HTML.</p>
+<h4>Setup</h4>
+<pre><code class="language-powershell">go install github.com/gomarkdown/mdtohtml@latest
+mdtohtml -h
+</code></pre>
+<h4>Generate document</h4>
+<pre><code class="language-powershell">mdtohtml.exe -css https://edward.delaporte.us/css/edthedev.css .\Dashboard.md &gt; Dashboard.html
+</code></pre>
+<p>VSCode Settings:</p>
+<pre><code class="language-json">&quot;command-runner.terminal.name&quot;: &quot;runCommand&quot;,
+&quot;command-runner.terminal.autoClear&quot;: true,
+&quot;command-runner.terminal.autoFocus&quot;: true,
+&quot;command-runner.commands&quot;: {
+    &quot;markdown to HTML&quot;: &quot;mdtohtml.exe -css https://edward.delaporte.us/css/edthedev.css ${file} &gt; ${file}.html&quot;,
+	&quot;HTML to PDF&quot;: &quot;wkhtmltopdf.exe ${file}.html ${file}.pdf&quot;,
+},
+</code></pre>
+<p>Then <code>Ctrl+Shift+P</code>, <code>Run Command</code> and select <code>markdown to HTML</code>.</p>
+<div class="heading-wrapper h3">
+<h3 id="markdown-to-pdf">Markdown to PDF</h3>
+<a class="anchor" href="#markdown-to-pdf" aria-labelledby="markdown-to-pdf"><span hidden>#</span></a></div>
+<h4>Setup</h4>
+<p>Install <a href="https://wkhtmltopdf.org/">wkhtml2pdf.exe</a> somewhere on my path.</p>
+<h4>Use</h4>
+<pre><code class="language-powershell">wkhtmltopdf.exe .\Dashboard.md.html dash.pdf
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="nicer-print-outs">Nicer Print-outs</h2>
+<a class="anchor" href="#nicer-print-outs" aria-labelledby="nicer-print-outs"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="prevent-code-blocks-from-splitting-in-a-pdf-print">Prevent Code blocks from splitting in a PDF print</h3>
+<a class="anchor" href="#prevent-code-blocks-from-splitting-in-a-pdf-print" aria-labelledby="prevent-code-blocks-from-splitting-in-a-pdf-print"><span hidden>#</span></a></div>
+<p>Usually when I have a block of text indented, I do not want that block to split across a print-out page break, when converting to PDF.</p>
+<p>Conversion to PDF can happen when I do it on purpose, or when someone prints a webpage I built with Markdown.</p>
+<p>For these cases, I like to inject this bit of inline HTML, directly into the Markdown document:</p>
+<pre><code class="language-html">&lt;!-- Avoid page breaks within code blocks --&gt;
+&lt;style&gt; pre { page-break-inside: avoid; } &lt;/style&gt;
+</code></pre>
+<p>Obviously, it is readable to anyone reading the Markdown source. But for every other view (Markdown preview, HTML and PDF) it is correctly hidden.</p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Markdown Tips by Edward Delaporte%20-%20https://edward.delaporte.us/blog/markdown/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

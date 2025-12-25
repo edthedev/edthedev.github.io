@@ -1,0 +1,77 @@
+/* Stylesheet useful for making HTML dashboards from Markdown documents 
+
+.EXAMPLE:
+
+Insert this HTML into the Markdown to make it style the HTML.
+
+<link rel="stylesheet" href="dashboard.css" />
+
+.EXAMPLE
+
+Include this `div` tag to float panels to the right.
+
+<div class=right>
+
+## Markdown Section Here
+
+> Lorum ipsum...
+
+</div>
+*/
+code {
+    color: white;
+}
+pre {
+    background-color: rgba(0, 122, 204, 0.5);
+}
+a {
+  outline-style: dashed;
+  outline-width: medium;
+  padding: 1em;
+}
+h2 {
+  background-color:black;
+  border-radius: 0.5em;
+  padding: 0.3em;
+  padding-left:0.5em;
+}
+li {
+  margin: 2em;
+}
+ul {
+  list-style-type: none;
+}
+
+.right {
+    float:right;
+}
+
+
+/* Dark Theme */
+:root {
+  /* Backgrounds */
+  --main-bg-color: #181818;
+  --code-bg-color: #222222;
+
+  /* Foregrounds */
+  --main-text-color: #bbbbbb;
+  --link-text-color: #22A7F0;
+  --visited-link-color: #7462E0;
+}
+
+body
+{
+	/* font-family: 'times new roman', times, serif; */
+  font-family: monospace;
+	font-size:2vw;
+  color: var(--main-text-color);
+	background-color: var(--main-bg-color) !important;
+  margin: 0em;
+}
+
+a {
+  color: var(--link-text-color);
+}
+a:visited {
+  color: var(--visited-link-color);
+}

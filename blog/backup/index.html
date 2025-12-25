@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Backup Monitoring - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Backup Monitoring </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="setup">Setup</h2>
+<a class="anchor" href="#setup" aria-labelledby="setup"><span hidden>#</span></a></div>
+<p>Mount the Samba Share</p>
+<pre><code class="language-sh">sudo apt install cifs-utils psmisc
+sudo mount -t cifs -o username=$NAS_USER,password=$NAS_PASSWORD //$NAS_IP/home/ /mnt/nas/home
+</code></pre>
+<p>Install <code>checkback</code>:</p>
+<pre><code class="language-sh">go install github.com/edthedev/checkback
+which checkback
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="manual-check">Manual Check</h2>
+<a class="anchor" href="#manual-check" aria-labelledby="manual-check"><span hidden>#</span></a></div>
+<pre><code class="language-sh">checkback -path /mnt/nas/home/Backup/blaster/home/edward/minetest/worlds/SurfaceWorld/map.sqlite
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="add-to-wtfutil">Add to WTFUtil</h2>
+<a class="anchor" href="#add-to-wtfutil" aria-labelledby="add-to-wtfutil"><span hidden>#</span></a></div>
+<p>Add to WTFUtil config file:</p>
+<pre><code class="language-yaml">mods:
+    check_backups:
+      title: &quot;Backups&quot;
+      cmd: &quot;checkback&quot;
+      args: [&quot;-path&quot;, &quot;/mnt/nas/home/Backup/blaster/home/edward/minetest/worlds/SurfaceWorld/map.sqlite&quot;]
+      enabled: true
+</code></pre>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Backup Monitoring%20-%20https://edward.delaporte.us/blog/backup/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

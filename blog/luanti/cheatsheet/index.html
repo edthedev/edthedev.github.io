@@ -1,0 +1,138 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>My Luanti Cheat Sheet - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> My Luanti Cheat Sheet </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about">About</h2>
+<a class="anchor" href="#about" aria-labelledby="about"><span hidden>#</span></a></div>
+<p>Here are some useful <a href="https://luanti.org">Luanti</a> commands I often forget.</p>
+<div class="heading-wrapper h2">
+<h2 id="useful-links">Useful links</h2>
+<a class="anchor" href="#useful-links" aria-labelledby="useful-links"><span hidden>#</span></a></div>
+<ul>
+<li><a href="https://docs.luanti.org/for-players/server-commands/">Server Commands</a></li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="in-game-help">In Game Help</h2>
+<a class="anchor" href="#in-game-help" aria-labelledby="in-game-help"><span hidden>#</span></a></div>
+<p><code>/help all</code> and <code>/help &lt;command&gt;</code></p>
+<div class="heading-wrapper h2">
+<h2 id="permissions">Permissions</h2>
+<a class="anchor" href="#permissions" aria-labelledby="permissions"><span hidden>#</span></a></div>
+<p>New players may need some common permissions assigned:</p>
+<p><code>/privs [&lt;player&gt;]</code></p>
+<p>Here's some privileges I often grant to new players:</p>
+<p><code>/grant &lt;player&gt; fly, home, interact, railway_operator, settime, shout, track_builder, train_admin, train_operator, travelnet_attach, teleport</code></p>
+<div class="heading-wrapper h2">
+<h2 id="creative-mode">Creative Mode</h2>
+<a class="anchor" href="#creative-mode" aria-labelledby="creative-mode"><span hidden>#</span></a></div>
+<p>I mostly play in <code>Survival</code> or <code>Normal</code> mode, but sometimes I need to &quot;get creative&quot; to learn how to use a new mod.</p>
+<p>To enter creative mode:</p>
+<pre><code class="language-sh">/grantme creative
+
+</code></pre>
+<p>To exit creative mode:</p>
+<pre><code class="language-sh">/revokeme creative
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="flight">Flight</h2>
+<a class="anchor" href="#flight" aria-labelledby="flight"><span hidden>#</span></a></div>
+<p>I mostly play in survival, but I get tired of buidling scaffolding for my largest builds. Thankfully, free flight mode can be enabled separately.</p>
+<pre><code class="language-sh">/grantme fly
+</code></pre>
+<blockquote>
+<p>Tip: If playing with flight mode enabled, I always also set <code>Double tap jump for fly</code> to easily enter and exit flight mode.</p>
+</blockquote>
+<p>To set this <code>Double tap jump for fly</code>:</p>
+<p>Open <code>Settings</code>, click <code>Controls</code> -&gt; <code>General</code>, then check the box next to <code>Double tap jump for fly</code>.</p>
+<div class="heading-wrapper h2">
+<h2 id="clean-up">Clean Up</h2>
+<a class="anchor" href="#clean-up" aria-labelledby="clean-up"><span hidden>#</span></a></div>
+<p>Sometime I need to clean up an orphaned block from a removed mod.</p>
+<p>First, set the radius from the player to replace the target item with air. 20 blocks is usually reasonable:</p>
+<pre><code>/ru 20
+</code></pre>
+<p>Then run the <code>/ru</code> command to remove the target item.</p>
+<pre><code>/ru &lt;full.item-name&gt;
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="teleportation">Teleportation</h2>
+<a class="anchor" href="#teleportation" aria-labelledby="teleportation"><span hidden>#</span></a></div>
+<p><code>/teleport &lt;player1&gt; &lt;player2&gt;</code></p>
+<p>From <a href="https://docs.luanti.org/for-players/server-commands/#teleportation">Teleportation</a></p>
+<div class="heading-wrapper h2">
+<h2 id="reset-a-password">Reset a Password</h2>
+<a class="anchor" href="#reset-a-password" aria-labelledby="reset-a-password"><span hidden>#</span></a></div>
+<p><code>/setpassword &lt;player&gt; &lt;password&gt;</code></p>
+<p>From <a href="https://docs.luanti.org/for-players/server-commands/#password-manipulation">Password Manipulation</a></p>
+<div class="heading-wrapper h2">
+<h2 id="bypass-world-object-protections">Bypass world object protections</h2>
+<a class="anchor" href="#bypass-world-object-protections" aria-labelledby="bypass-world-object-protections"><span hidden>#</span></a></div>
+<p>To allow destroying items owned by other players:</p>
+<pre><code>  /grantme protection_bypass
+</code></pre>
+<blockquote>
+<p>Tip: Airplanes are fun, but they tend to crash into things. Young players sometimes do not know how to remove them.</p>
+</blockquote>
+<p>From <a href="https://docs.luanti.org/for-players/privileges/">Privilages</a></p>
+<div class="heading-wrapper h2">
+<h2 id="server-administration">Server Administration</h2>
+<a class="anchor" href="#server-administration" aria-labelledby="server-administration"><span hidden>#</span></a></div>
+<p>For some useful commands for maintaining a remote Luanti server, see my <a href="https://codeberg.org/EdTheDev/dotfiles/src/branch/main/invoke/luanti-remote/tasks.py">Remote Server Invoke File</a></p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=My Luanti Cheat Sheet%20-%20https://edward.delaporte.us/blog/luanti/cheatsheet/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>

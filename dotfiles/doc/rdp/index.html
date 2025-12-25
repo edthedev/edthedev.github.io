@@ -1,0 +1,6 @@
+<p>Enable incoming RDP.</p>
+<pre><code class="language-powershell">Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name &quot;fDenyTSConnections&quot; -Value 0
+Enable-NetFirewallRule -DisplayGroup &quot;Remote Desktop&quot;
+Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name &quot;UserAuthentication&quot; -Value 1
+</code></pre>
+<p>Now reboot.</p>

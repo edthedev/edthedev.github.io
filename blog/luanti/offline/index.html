@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html lang="en">
+
+<head> 
+<script src="/js/skipto.min.js"></script>
+<script> var SkipToConfig =  { 'settings': { 'skipTo': { displayOption: 'popup' } } }; </script>
+  
+  <link rel="stylesheet" href="/css/edthedev.css" /> 
+  <title>Play MineTest locally with Ubuntu - by Edward Delaporte</title>
+
+<nav class="ye_navbar" role="navigation"> 
+  <span class="ye_navbar">
+    <ul><li><a href="/">Edward.Delaporte.us</a></li>
+<li><a href="/slides/">Slides</a></li>
+<li><a href="/code/">Code</a></li>
+<li><a href="/art/">Art</a></li>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/resume/">Resume</a></li></ul>
+  </span>
+</nav>
+
+<style>
+
+h2 {
+/* For use with more_nav */
+  border-bottom-style:none;
+  box-shadow: none;
+}
+
+</style>
+
+</head> 
+<body>
+
+<div class="content" role="main">
+  <h1> Play MineTest locally with Ubuntu </h1>
+
+  <div class="heading-wrapper h2">
+<h2 id="about">About</h2>
+<a class="anchor" href="#about" aria-labelledby="about"><span hidden>#</span></a></div>
+<p><code>MineTest</code> doesn't natively require Internet access, after initial setup of game files, game engines and mod-packs.</p>
+<p>So it struck me that I ought to be able to achieve networked play between my Ubuntu laptop and a couple of Android phones, anywhere I want, without a trusted Internet connection.</p>
+<div class="heading-wrapper h2">
+<h2 id="host-from-ubuntu-without-a-local-network">Host from Ubuntu without a local network</h2>
+<a class="anchor" href="#host-from-ubuntu-without-a-local-network" aria-labelledby="host-from-ubuntu-without-a-local-network"><span hidden>#</span></a></div>
+<p>On your hosting Ubuntu PC, <strong>while on regular Internet</strong>, install <code>MineTest</code> and (from within MineTest) ensure you have the game you want to play downloaded, such as <code>MineGame</code>.</p>
+<p>In <code>Gnome</code> settings, select <code>Wi-Fi</code>.
+In the <code>...</code> toward the upper-right, choose <code>Turn On Wi-Fi Hotspot...</code>.
+Choose some options reasonable for your situation.</p>
+<p><em>From the command line</em>, run <code>hostname -I</code>, to learn your new IP address.</p>
+<ul>
+<li>Start <code>MineTest</code>.</li>
+<li>Be sure <code>Host Server</code> is enabled.</li>
+<li>Host a game from the <code>Start Game</code> tab.</li>
+</ul>
+<div class="heading-wrapper h2">
+<h2 id="connect-from-a-client-device">Connect from a client device</h2>
+<a class="anchor" href="#connect-from-a-client-device" aria-labelledby="connect-from-a-client-device"><span hidden>#</span></a></div>
+<p>On your client device - PC, Phone or SteamDeck:</p>
+<p><strong>While on regular Internet</strong>, install <code>MineTest</code> and ensure you have the game you want to play downloaded, such as <code>MineGame</code>.</p>
+<p>Now <strong>connect to the Wi-Fi hotspot</strong> you just created.</p>
+<ul>
+<li>Launch <code>MineTest</code>.</li>
+<li>Choose your game (usually <code>MineGame</code>).</li>
+<li>Select the <code>Join Game</code> tab.</li>
+<li>Ignore the (likely empty, since you're on a hotspot) list of servers in the left panel.</li>
+<li>In the right panel, enter the IP address returned by <code>hostname -I</code> earlier.</li>
+<li>Leave the default port, unless you changed it on the hosting PC.</li>
+<li>If this is your first time connecting to your new server, create a Name and Password and press <code>Register</code>.</li>
+<li>If you have played before, enter your Name and Password and press <code>Login</code>.</li>
+</ul>
+<p>Enjoy!</p>
+
+</div>
+<div class="content" role="contentinfo">
+  <a href="https://edward.delaporte.us/slides/share.html#text=Play MineTest locally with Ubuntu%20-%20https://edward.delaporte.us/blog/luanti/offline/ ">Share on Mastodon</a>
+  <p>
+  This work ©2020-2025 by Edward Delaporte is licensed under 
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0</a>
+  </p>
+</div>
+<div style="display: flex; gap: 0.25rem; justify-content: center">
+   <p>Click the links below to explore the <a href="https://www.webringworld.org/">web ring</a> I joined.</p>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/prev">⬅️</a>
+  <a href="https://graphics-programming.org/webring/">
+    <img
+      src="https://graphics-programming.org/img/froge.webp"
+      alt="a friendly froge"
+      style="object-fit: contain; width: 1.5em; height: 1.5em"
+    />
+  </a>
+  <a href="https://graphics-programming.org/webring/frogs/edthedev/next">➡️</a>
+</div>
+
+</html>
