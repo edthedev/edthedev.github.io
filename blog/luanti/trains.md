@@ -7,6 +7,8 @@ date: 2024-10-21
 
 ## Trains!
 
+![overhead view of some train tracks in Luanti](/img/blog/luanti_trains.png)
+
 Everyone deserves a digital train set to play with.
 Thanks to [Luanti / MineTest](https://www.minetest.net/), you can have one, and it's free!
 
