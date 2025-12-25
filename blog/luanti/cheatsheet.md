@@ -13,6 +13,21 @@ Here are some useful [Luanti](https://luanti.org) commands I often forget.
 
 - [Server Commands](https://docs.luanti.org/for-players/server-commands/)
 
+## In Game Help
+
+`/help all` and `/help <command>`
+
+
+## Permissions
+
+New players may need some common permissions assigned:
+
+`/privs [<player>]`
+
+Here's some privileges I often grant to new players:
+
+`/grant <player> fly, home, interact, railway_operator, settime, shout, track_builder, train_admin, train_operator, travelnet_attach, teleport`
+
 ## Creative Mode
 
 I mostly play in `Survival` or `Normal` mode, but sometimes I need to "get creative" to learn how to use a new mod.
