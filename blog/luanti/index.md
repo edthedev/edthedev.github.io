@@ -34,5 +34,6 @@ More honestly, these notes are so I can re-build my setup later after I inevitab
 
 - [Run a Dedicated Server](/blog/luanti/server)
 - [Backup your world files](/blog/luanti/backup)
+- [Christmas In Luanti - With Invoke File Examples](/blog/luanti/christmas)
 - [My Luanti Command Cheat Sheet](/blog/luanti/cheatsheet)
 - [My Luanti Invoke Files](/blog/luanti/invoke)
