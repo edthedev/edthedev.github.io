@@ -11,7 +11,7 @@ Let's add some Christmas decor to Luanti!
 
 ![a Luanti screenshot showing my inventory open with a candy cane, tinsel, garland and other Christmas decor](/img/blog/luanti_christmas.jpg)
 
-The commands below use [my Luanti invoke file](invoke).
+The commands below use [my Luanti invoke file][invoke].
 
 [invoke]: https://codeberg.org/EdTheDev/dotfiles/src/branch/main/invoke/luanti-remote/tasks.py
 
