@@ -5,7 +5,7 @@ tags: ['blog', 'rss']
 date: 2026-02-14
 ---
 
-Even in a digital world over which I have ultimate totol control...I can feel a little lazy sometimes.
+Even in a digital world over which I have ultimate total control...I can feel a little lazy sometimes.
 
 In particular, I'm not a huge fan of tilling soil, in my online gameplay.
 
