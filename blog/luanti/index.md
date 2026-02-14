@@ -37,3 +37,4 @@ More honestly, these notes are so I can re-build my setup later after I inevitab
 - [Christmas In Luanti - With Invoke File Examples](/blog/luanti/christmas)
 - [My Luanti Command Cheat Sheet](/blog/luanti/cheatsheet)
 - [My Luanti Invoke Files](/blog/luanti/invoke)
+- [My Garden Slug Mod](/blog/luanti/garden)
