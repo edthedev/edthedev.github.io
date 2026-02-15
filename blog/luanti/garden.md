@@ -23,16 +23,17 @@ And because this is still a `code` blog, here's some highlights:
 mobs:register_mob('garden:slug', {
     ...
     do_custom = function(self, dtime)
-        -- Yes, I borrowed code from a chicken!
-        self.egg_timer = (self.egg_timer or 0) + dtime
-        if self.egg_timer < 10 then return end
-        self.egg_timer = 0
-        local pos = self.object:get_pos()
-        local pos_down = vector.subtract(pos, vector.new(0,1,0))
-        core.set_node({x = pos_down.x, y = pos_down.y, z = pos_down.z}, {name = "farming:soil"})
-    end,
-    on_rightclick = function(self, clicker)
-        core.chat_send_all("Slug poked!")
+       -- Yes, I borrowed code from a chicken!
+       self.egg_timer = (self.egg_timer or 0) + dtime
+       if self.egg_timer < 2 then return end
+       self.egg_timer = 0
+       local pos = self.object:get_pos()
+       local pos_down = vector.subtract(pos, vector.new(0,1,0))
+       local sittin_on = core.get_node({x = pos_down.x, y = pos_down.y, z = pos_down.z})
+       -- core.chat_send_all('Sittin on ..' .. sittin_on.name)
+       if sittin_on.name == 'default:dirt' or sittin_on.name == 'default:dirt_with_grass' then
+         core.set_node({x = pos_down.x, y = pos_down.y, z = pos_down.z}, {name = "farming:soil"})
+       end
     end,
     drops = {
         {name = 'garden:slug', chance = 1, min = 1, max = 3},
