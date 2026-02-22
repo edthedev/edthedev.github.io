@@ -73,5 +73,9 @@ deb [signed-by=/usr/share/keyrings/vscodium.gpg] https://download.vscodium.com/d
 
 ## Initial Reactions
 
-
 It's so fast! Windows 10 was snappy when I first bought it, but had gotten slow with time and usage.
+
+## Updates
+
+I have since re-installed to Debian 12, because I do not trust the `snap` ecosystem.
+
