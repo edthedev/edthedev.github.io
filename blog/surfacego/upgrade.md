@@ -5,7 +5,7 @@ tags: ['blog']
 date: 2026-02-21
 ---
 
-Per my [earlier blog post](/surfacego), my Surface Go has now been running Linux for three years. I initially chose Ubuntu, and had a great experience.
+Per my [earlier blog post](/blog/surfacego), my Surface Go has now been running Linux for three years. I initially chose Ubuntu, and had a great experience.
 
 But based on the output of `cat /etc/*-release`, I upgraded to Debian at some point.
 
@@ -34,15 +34,15 @@ DOTFILES=f'{HOME}/dotfiles'
 def backup_package_list(c):
     c.run(f'dpkg --get-selections > {HOME}/backup/packages.{TODAY}.dpkg')
 
+
 @task
 def show_disk_space(c):
     print("Do we have at least 5G of free space?")
     c.run('df -h /')
 
+
 @task
 def backup_sources(c):
-    c.run(f'cp /etc/apt/sources.list {HOME}/backup/sources.list.{TODAY}.backup')
-
 
 
 @task
@@ -52,11 +52,13 @@ def backup_etc(c):
     login = os.getlogin()
     c.run(f'sudo chown {login}:{login} {HOME}/backup/etc.backup.{TODAY}.tar.gz')
 
+
 @task
 def checklist(c):
     print("- [ ] Review the output of `invoke review-backups`")
     print("- [ ] Verify that {HOME}/backup is backed up on a separate device.")
     print("- [ ] Verify we have at least 5G of free space. (`invoke show-disk-space`)")
+
 
 @task
 def review_backups(c):
@@ -69,11 +71,12 @@ def review_backups(c):
     c.run(f'ls -al --block-size=M {HOME}/backup')
     checklist(c)
 
+
 @task
 def backup(c):
     backup_package_list(c)
     backup_sources_list(c)
     backup_etc(c)
-    review_backup(c)
+    review_backups(c)
 ```
 
