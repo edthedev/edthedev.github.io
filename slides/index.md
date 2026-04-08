@@ -9,13 +9,18 @@ eleventyNavigation:
 
 I often give presentations on technical topics.
 
+
+Administrative Information Technology Services (AITS), COVID Response Cross Functional Technology Team, Campus Coding Community Meet-Up, Campus Collaborative IT Internship Program, Campus GitHub Governance Committee, Campus Research IT, Campus Web Tools, Campus cPanel Service, Center for Innovation in Teaching & Learning (CITL), Children’s Family Research Center (CFRC), Consortium of Academic and Research Libraries in Illinois, Cybersecurity Liaisons, Cybersecurity at University of Illinois at Chicago, Dept of Psychology, Engineering IT Shared Services, Facilities and Services, Fine and Applied Arts, Graduate College, Illinois IT Professionals Forum, Illinois Mobile App Team, Illinois.Chat, McKinley, MyIllini, National Center for Supercomputing Applications (NCSA), OFC CIO Application Services, OFC CIO Business Process Analysis Team, OFC CIO Cloud Infrastructure, OFC CIO Cybersecurity, OFC CIO Data Innovation, OFC CIO Help Desk, OFC CIO IT Service Delivery, OFC CIO Identity and Access Management, OFC CIO Managed Systems and Services (MSS), OFC CIO Networking, OFC CIO Privacy, OFC CIO Software Development Group, OFC CIO Staff Support, OFC CIO Technology Services, OFC of the Vice Chancelor of Research (OVCRI), Student Affairs Technology, University of Illinois at Springfield, University of Minnesota, Urbana Highschool, Web Conference at Illinois (WebCon)
+
+
+
 Some recordings of presentations that I gave or facilitated are available at [Illinois Mediaspace](https://mediaspace.illinois.edu/esearch/search?keyword=Edward%20delaporte).
 
 In 2016, I began collecting the slide decks here.
 
 - [Developer Tour of A Cybersecurity Incident][47] - October 2025
-- ['Nuts and Bolts' talk on Automated Web Testing with Robot Framework][46] - November 2023
-- ['Nuts and Bolts' Talk on API Exploration with Hoppscotch.io][46] - November 2023
+- ['Nuts and Bolts' talk on Automated Web Testing with Robot Framework][46] [Recording at Illinois Media Space](https://mediaspace.illinois.edu/media/t/1_y35bj4qx) - November 2023
+- ['Nuts and Bolts' Talk on API Exploration with Hoppscotch.io][46] [Recording at Illinois Media Space](https://mediaspace.illinois.edu/media/t/1_wobuqzav) - November 2023 
 - [IT Pro Forum 2022 Fall - Cybersecurity Year in Review](https://www.itproforum.illinois.edu/archives/fall_2022_conference)
 - [Web Application Scanning - August 2022](/slides/WebApplicationScanning2022.pptx)
 - [Ensemble Programming - May 2022](/slides/ensemble)
@@ -24,11 +29,11 @@ In 2016, I began collecting the slide decks here.
 - Panelist - CampIT API Gateway Panel Discussion - November 2021 (No Slides)
 - [Identifying, Paying, and Avoiding Technical Debt - October 2021](/slides/2021.10.26ITPFTechnicalDebt.pptx)
 - [Big Ten Academic Alliance - On the Illinois Cybersecurity Development Program - June 2021](/slides/btaa)
-- [Urbana IT Professionals Forum - Mobile Integration Testing for Safer Illinois - June 2021](/slides/ITPF2021Spring.MobileIntegrationTesting.pptx)
+- [Urbana IT Professionals Forum - Mobile Integration Testing for Safer Illinois - June 2021](/slides/ITPF2021Spring.MobileIntegrationTesting.pptx) [Recording at Illinois Media Space](https://mediaspace.illinois.edu/media/t/1_ptflw5ie)
 - [CampIT Cloud Security - How CISOs/InfoSec Leaders Have Adjusted to the Cloud World (Panel discussion) - Dec 2020](http://www.campiteducation.com/upcoming-virtualevents/cloudsecurity2/)
 - [InCommon IAM Online Webinar - Safer Illinois App: Testing, Tracing, Access in the Face of COVID-19 - Nov 2020](http://incommon.org/wp-content/uploads/2020/11/IAM-Online-November-2020.pdf)
 - [PowerShell Users Group 2020 July 8 - Pester with GitHub Actions](/slides/PUG2020Summer_Git.html)
-- [IT Pro Forum 2020 Spring - Putting the Security in SecDevOps](/slides/ITProForum2020Spring.html)
+- [IT Pro Forum 2020 Spring - Putting the Security in SecDevOps](/slides/ITProForum2020Spring.html) [Recording at Illinois Media Space](https://mediaspace.illinois.edu/media/t/1_19w91btn)
 - [Cybersecurity Operations 2020 Spring](/slides/SecOps2020Spring.html)
 - [IT Pro Forum 2019 Fall - Practical Git Tips and Tricks](ITProForum2019Fall.html#1)
 - [IT Pro Forum 2019 Spring - Advanced Git](ITProForum2019Spring.html#1)
