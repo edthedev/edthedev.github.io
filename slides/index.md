@@ -18,6 +18,7 @@ Some recordings of presentations that I gave or facilitated are available at [Il
 
 In 2016, I began collecting the slide decks here.
 
+- [Cybersecrity for Illinois.edu][48] - May 2026
 - [Developer Tour of A Cybersecurity Incident][47] - October 2025
 - ['Nuts and Bolts' talk on Automated Web Testing with Robot Framework][46] [Recording at Illinois Media Space](https://mediaspace.illinois.edu/media/t/1_y35bj4qx) - November 2023
 - ['Nuts and Bolts' Talk on API Exploration with Hoppscotch.io][46] [Recording at Illinois Media Space](https://mediaspace.illinois.edu/media/t/1_wobuqzav) - November 2023 
@@ -53,3 +54,4 @@ In 2016, I began collecting the slide decks here.
 -->
 [47]: /slides/DeveloperTourCybersecrity_Ed_Delaporte.pdf
 [46]: https://cybersecurity.illinois.edu/nuts-and-bolts-talks/
+[48]: /slides/2026.05.websec.html
