@@ -8,34 +8,35 @@ eleventyNavigation:
 
 # Edward C. Delaporte's Resume
 
-I apply my deep understanding of computers and strong empathy for humans to make computers better at meeting the needs of humans.
+I apply my deep understanding of computers and strong empathy for humans to make computers better at safely meeting the needs of humans.
 
 ## Contact Info
 
 - Email: [edward@delaporte.us](mailto:edward@delaporte.us)
 - Website: [https://edward.delaporte.us](https://edward.delaporte.us)
 - GitHub: [EdTheDev](http://github.com/edthedev)
+- CodeBerg: [EdTheDev](https://codeberg.org/EdTheDev/)
 - Resume: [Resume as PDF](https://edward.delaporte.us/pdf/Resume.Edward.Delaporte.pdf)
 
 ## Highlights
 
-- Bachelor's Degree In Computer Science from the College of Engineering at UIUC in 2006.
+- Bachelor's Degree In Computer Science from the College of Engineering at University of Illinois in 2006.
 - Writing software professionally since the year 2000, and unprofessionally since 1988.
 - Specialized in Cybersecurity since 2006.
+- Contributing to open source since 2008.
 - Leading software development teams since 2011.
-- Has built a lot of websites and integrations for a lot of purposes with a lot of different technologies.
-- Applies effective work habits and great interpersonal skills.
+- Effective work habits and great interpersonal skills.
 - Cybersecurity: Hacking, Hardening, Teaching, Mentorship
-- Windows Tech:  Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials, Active Directory, React.js, jQuery, Git, NuGet, PowerShell, Azure DevOps, Windows Subsystem for Linux
-- Linux Tech:  Python, WSGI, Apache, NGinx, Django, REST, JSON, LDAP, Linux shell, Syslog, SQL, GitHub enterprise, AWS, Docker, Podman, Vi
+- Technology hightlights: Python, Git, Django, Flask, fastMCP, REST, JSON, LDAP, Linux shell, C, C++, Syslog, SQL, GitHub Enterprise Administration, AWS Route 53, S3, EC2, Docker, Podman, Vi, Microsoft C Sharp (C#), ASP.Net, Active Directory, React.js, jQuery, PowerShell, Azure DevOps, Windows Subsystem for Linux (WSL)
 
 ## Career
 
 ### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
 
+- Supports overall Identity, Privacy and Cybersecurity Objectives.
 - Mentors developers, security engineers, and researchers across campus on vulnerability remediation.
-- Creates open lines of communication between campus researcher developers and Cybersecurity.
-- Created key resources for Open Source procedures, including a decision tree, product end-of-life language, and vulnerability disclosure.
+- Instigates collaboration between campus faculty, staff and researcher developers and the Cybersecurity team.
+- Created key resources for Open Source procedures at University of Illinois - including a decision tree, product end-of-life language, and vulnerability disclosure.
 - Established collaboration patterns supporting shared open source tools with the National Center for Supercomputing Applications (NCSA), Splunk, Energy Sciences Network (EsNet), and RokMetro.
 - Manages 4 full time Cybersecurity developers (fully remote team) and student interns.
 - Mentors key team leads on their path to becoming managers or architects.
@@ -44,7 +45,6 @@ I apply my deep understanding of computers and strong empathy for humans to make
 - Mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
 - Member of the GitHub Enterprise Commitee, and founding member of the GitHub Enterprise Community Interest Group. Maintainer of the GitHub Enterprise Campus Community Portal.
 - Member of the Technology Services Architecture Virtual Team.
-- Supports overall Identity, Privacy and Cybersecurity Objectives.
 
 [44]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
@@ -53,15 +53,15 @@ I apply my deep understanding of computers and strong empathy for humans to make
 - Managed remote DevOps team of 9 software developers and 2 automation engineers for Busey Bank and FirsTech Payment processor.
 - Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
-- Led successful custom software implementations that added another $1 million new revenue in 2018.
 - Mentored developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
 - Implemented development team self scanning with Accunetix.
 - Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
 - Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
 - Led the development team to successfully implement ongoing 100% code review.
 - Onboarded the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review in support of infrastructure-as-code implementations.
-- Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly 1/4 million in annual savings.
-  
+- Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly $250,000.00 in recurring annual savings.
+- Led successful custom software implementations that added another $1 million new revenue in 2018.
+
 ### January 2017 - August 2018: Programming Team Lead at Busey Bank, Champaign, IL
 
 - Managed 3 full time software developer direct reports.
@@ -139,7 +139,7 @@ Application Security Engineer Responsibilities
 
 *Interesting coursework:*
 
-- Wrote a binary program capable of detecting a specific manufacturing fault in a computer chip.
+- Wrote a binary program (in ones and zeroes) capable of detecting a specific manufacturing fault in a computer chip.
 - Wrote a research paper on the economics of the funding of the Mozilla Foundation.
 - Wrote several statistical gene analysis programs in Perl.
 - Designed and simulated a pipelined computer processor for MIPS assembler.
@@ -147,18 +147,23 @@ Application Security Engineer Responsibilities
 
 ## Open Source Contributions, October 2012 - Present
 
+- [Cybersecurity Development Template Repository](https://github.com/techservicesillinois/secdev-template-repository)
+- [University of Illinois Cookie Notice](https://github.com/techservicesillinois/cookie-notice)
+- [Borg Repository Sync](https://github.com/techservicesillinois/borg-repo-sync) - a tool for syncing template repository updates to downstream repositories.
 - [GitHub Arctic Code Vault Contributor][155] - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
 - [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
 - [Splunk SOAR][157] integrations for higher education use cases.
 - [McAirpos](https://github.com/edthedev/McAirpos) for playing [MakeCode Aracde](https://arcade.makecode.com/) creations on [RecalBox](https://www.recalbox.com/) to inspire more kids to learn to code.
 - Various simple command line utilities.
-- And [more...](https://github.com/edthedev/)
+- And more at [EdTheDev on GitHub](https://github.com/edthedev/)
+- And more at [EdTheDev on CodeBerg](https://codeberg.org/EdTheDev/)
 
 [155]: https://archiveprogram.github.com/
 [157]: https://www.splunk.com/en_us/data-insider/what-is-soar.html
 
 ## Professional Training - Highlights
 
+- CISCO/Splunk AI Workshop Series - July 2026
 - 'Kurbenetes Security' course on A Cloud Guru - May 2022
 - SANS SEC 510: Public Cloud Security: AWS, Azure, and GCP, May 2021
 - CampIT Enterprise Risk / Security Management, March 2021
@@ -174,8 +179,8 @@ Application Security Engineer Responsibilities
 - [U of I Information Technology Manager Development (MgrDev) class of 2014](https://publish.illinois.edu/managerdev/graduates/)
 - [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
 - [U of I Information Technology Leadership Workshop (ITLW) class of 2011](https://publish.illinois.edu/itleaders/graduates/)
-- [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
-- [SANS](https://www.sans.org/) On-site Secure Software Development Training
+- [SANS](https://www.sans.org/) SANS SEC546: IPv6 Essentials - 2011
+- [SANS](https://www.sans.org/) SANS On-site Secure Software Development Workshop - 2008
 
 ## Community Involvement
 
@@ -184,4 +189,4 @@ Application Security Engineer Responsibilities
 - Hosts a free "Learn Programming!" class for elementary students at local public libraries since 2017
 - OWASP Top Ten Privacy Project - Core contributor since 2015
 - Handled hosting, DNS and administration of various not-for-profit websites since 2007
-- [Recurring presenter](https://edward.delaporte.us/slides) at Urbana IT Professionals Forum, University of Illinois Webmasters Conference, Chicago Camp IT Conferences
+- [Recurring presenter](https://edward.delaporte.us/slides) including venues such as Urbana IT Professionals Forum, University of Illinois Webmasters Conference, InCommon IAM Online, Chicago Camp IT Conference, Big Ten Academic Alliance
