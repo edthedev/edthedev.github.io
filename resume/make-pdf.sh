@@ -1,0 +1,1 @@
+$HOME/envs/docs/bin/md2pdf -c ../css/resume.css -i index.md -o Resume.Edward.Delaporte.pdf
