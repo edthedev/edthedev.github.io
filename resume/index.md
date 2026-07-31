@@ -21,13 +21,34 @@ I make computers safer and more effective for human use, through expertise and e
 ## Highlights
 
 - Bachelor's Degree In Computer Science from the College of Engineering at University of Illinois in 2006.
-- Writing software professionally since the year 2000, and unprofessionally since 1988.
+- Writing software professionally since 2000, and for fun since 1988.
+- Coding in Python since 2005.
 - Specialized in Cybersecurity since 2006.
 - Contributing to open source since 2008.
 - Leading software development teams since 2011.
 - Effective work habits and great interpersonal skills.
 - Cybersecurity: Hacking, Hardening, Teaching, Mentorship
-- Technology hightlights: Python, Git, Django, Flask, fastMCP, REST, JSON, LDAP, Linux shell, C, C++, Syslog, SQL, GitHub Enterprise Administration, AWS Route 53, S3, EC2, Docker, Podman, Vi, Microsoft C Sharp (C#), ASP.Net, Active Directory, React.js, jQuery, PowerShell, Azure DevOps, Windows Subsystem for Linux (WSL)
+
+### Technologies
+
+Python, Git, Django, Flask, fastMCP, REST, JSON, LDAP, Linux shell, C, C++, Syslog, SQL, GitHub Enterprise Administration, AWS Route 53, S3, EC2, Docker, Podman, Vi, Microsoft C Sharp (C#), ASP.Net, Active Directory, React.js, jQuery, PowerShell, Azure DevOps, Windows Subsystem for Linux (WSL)
+
+### Open Source Contributions
+
+- [EdTheDev on GitHub](https://github.com/edthedev/)
+- [EdTheDev on CodeBerg](https://codeberg.org/EdTheDev/)
+- [University of Illinois Cookie Notice](https://github.com/techservicesillinois/cookie-notice)
+- [Cybersecurity Development Template Repository](https://github.com/techservicesillinois/secdev-template-repository)
+- [Borg Repository Sync](https://github.com/techservicesillinois/borg-repo-sync) - a tool for syncing template repository updates to downstream repositories.
+- [GitHub Arctic Code Vault Contributor][155] - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
+- [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
+- [Splunk SOAR][157] integrations for higher education use cases.
+- [McAirpos](https://github.com/edthedev/McAirpos) for playing [MakeCode Aracde](https://arcade.makecode.com/) creations on [RecalBox](https://www.recalbox.com/) to inspire more kids to learn to code.
+
+[155]: https://archiveprogram.github.com/
+[157]: https://www.splunk.com/en_us/data-insider/what-is-soar.html
+
+
 
 ## Career
 
@@ -46,7 +67,8 @@ I make computers safer and more effective for human use, through expertise and e
 
 [44]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
-### August 2018 - November 2019: Assistant Vice President - Software Development at Busey Bank, Champaign, IL
+
+### August 2018 - November 2019: Assistant Vice President - Software Development at Busey Bank, Champaign, IL (Remote/Hybrid)
 
 - Managed remote DevOps team of 9 software developers and 2 automation engineers for Busey Bank and FirsTech Payment processor.
 - Led development of secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
@@ -138,22 +160,6 @@ Application Security Engineer Responsibilities
 - Designed and simulated a pipelined computer processor for MIPS assembler.
 - Classwork languages included: Java, Perl, C, C++, Visual Basic, ColdFusion, Mainframe RPG, MIPS Assembler.
 
-## Open Source Contributions, October 2012 - Present
-
-- [Cybersecurity Development Template Repository](https://github.com/techservicesillinois/secdev-template-repository)
-- [University of Illinois Cookie Notice](https://github.com/techservicesillinois/cookie-notice)
-- [Borg Repository Sync](https://github.com/techservicesillinois/borg-repo-sync) - a tool for syncing template repository updates to downstream repositories.
-- [GitHub Arctic Code Vault Contributor][155] - for commits to `facebook/react-native`, `angular/angular.js`, `kivy/kivy` and more.
-- [PowerShell Desired State Config (DSC) Module for Center for Information Security (CIS) Benchmarks](https://github.com/techservicesillinois/SecOps-Powershell-CISDSC)
-- [Splunk SOAR][157] integrations for higher education use cases.
-- [McAirpos](https://github.com/edthedev/McAirpos) for playing [MakeCode Aracde](https://arcade.makecode.com/) creations on [RecalBox](https://www.recalbox.com/) to inspire more kids to learn to code.
-- Various simple command line utilities.
-- And more at [EdTheDev on GitHub](https://github.com/edthedev/)
-- And more at [EdTheDev on CodeBerg](https://codeberg.org/EdTheDev/)
-
-[155]: https://archiveprogram.github.com/
-[157]: https://www.splunk.com/en_us/data-insider/what-is-soar.html
-
 ## Professional Training - Highlights
 
 - CISCO/Splunk AI Workshop Series - July 2026
@@ -169,17 +175,20 @@ Application Security Engineer Responsibilities
 - Citigal OWASP Top Ten Training in 2017, 2018, 2019
 - Defensive Programming for C# - Citigal 2017
 - DevUp St Louis 2017, PowerShell Summit 2017
-- [U of I Information Technology Manager Development (MgrDev) class of 2014](https://publish.illinois.edu/managerdev/graduates/)
+- [U of I Information Technology Manager Development (MgrDev) class of 2014](https://www.mgrdev.org/graduates#2014)
 - [DjangoCon US](https://2015.djangocon.us/) [2012](http://pyvideo.org/category/23/djangocon-2012) and 2013
-- [U of I Information Technology Leadership Workshop (ITLW) class of 2011](https://publish.illinois.edu/itleaders/graduates/)
-- [SANS](https://www.sans.org/) SANS SEC546: IPv6 Essentials - 2011
-- [SANS](https://www.sans.org/) SANS On-site Secure Software Development Workshop - 2008
+- [U of I Information Technology Leadership Workshop (ITLW) class of 2011](https://publish.illinois.edu/itleaders/alumni/)
+- [SANS](https://www.sans.org/) SEC546: IPv6 Essentials - 2011
+- [SANS](https://www.sans.org/) On-site Secure Software Development Workshop - 2008
 
-## Community Involvement
+
+
+## Community Involvement 2007 to Present
 
 - Website Committee Chair - Rotary Club of Champaign, 2020 - 2022
 - Webmaster - Rotary Club of Champaign, 2018-2022
 - Hosts a free "Learn Programming!" class for elementary students at local public libraries since 2017
-- OWASP Top Ten Privacy Project - Core contributor since 2015
+- OWASP Top Ten Privacy Risks Project - Core contributor since 2015
 - Handled hosting, DNS and administration of various not-for-profit websites since 2007
 - [Recurring presenter](https://edward.delaporte.us/slides) including venues such as Urbana IT Professionals Forum, University of Illinois Webmasters Conference, InCommon IAM Online, Chicago Camp IT Conference, Big Ten Academic Alliance
+
