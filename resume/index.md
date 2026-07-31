@@ -8,7 +8,7 @@ eleventyNavigation:
 
 # Edward C. Delaporte's Resume
 
-I apply my deep understanding of computers and strong empathy for humans to make computers better at safely meeting the needs of humans.
+I make computers safer and more effective for human use, through expertise and empathy.
 
 ## Contact Info
 
@@ -31,34 +31,30 @@ I apply my deep understanding of computers and strong empathy for humans to make
 
 ## Career
 
-### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at University of Illinois, Champaign, IL
+### November 2019 - Present: Cybersecurity Manager of Software Development Assurance at the Office of the CIO, University of Illinois, Champaign, IL
 
 - Supports overall Identity, Privacy and Cybersecurity Objectives.
 - Mentors developers, security engineers, and researchers across campus on vulnerability remediation.
-- Instigates collaboration between campus faculty, staff and researcher developers and the Cybersecurity team.
-- Created key resources for Open Source procedures at University of Illinois - including a decision tree, product end-of-life language, and vulnerability disclosure.
-- Established collaboration patterns supporting shared open source tools with the National Center for Supercomputing Applications (NCSA), Splunk, Energy Sciences Network (EsNet), and RokMetro.
-- Manages 4 full time Cybersecurity developers (fully remote team) and student interns.
-- Mentors key team leads on their path to becoming managers or architects.
-- Led creation of [shared resources][44] for preventing secret disclosure, Cybersecurity code review, and automated regression testing.
-- Co-chair of the Next Generation Infrastructure Strategic Automation Working Group 2020-2022.
 - Mentored the development teams behind the highest volume community COVID testing response in the United States in 2020.
+- Instigates collaboration between campus faculty, staff and researcher developers and the Cybersecurity team.
+- Created key resources for Open Source procedures at University of Illinois - including a decision tree, product end-of-life language, and a vulnerability disclosure program.
+- Manages 4 full time Cybersecurity developers (fully remote team) and occassional student interns.
+- Led creation of [shared resources][44] for DevOps Cybersecurity 'good enough practices' to meet campus Information Technology Standards and policies.
+- Co-chair of the Next Generation Infrastructure Strategic Automation Working Group 2020-2022.
 - Member of the GitHub Enterprise Commitee, and founding member of the GitHub Enterprise Community Interest Group. Maintainer of the GitHub Enterprise Campus Community Portal.
-- Member of the Technology Services Architecture Virtual Team.
+- Member of the Office of the CIO Technology Services Architecture Virtual Team.
 
 [44]: https://answers.uillinois.edu/illinois/search.php?q=cybersecurity+developer&cat=0
 
 ### August 2018 - November 2019: Assistant Vice President - Software Development at Busey Bank, Champaign, IL
 
 - Managed remote DevOps team of 9 software developers and 2 automation engineers for Busey Bank and FirsTech Payment processor.
-- Led development secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
+- Led development of secure and PCI compliant FinTech software using C#, jQuery, Git, NuGet, PowerShell, and Azure DevOps.
 - Piloted the FirsTech contract solutions line of business - adding half a million new revenue.
 - Mentored developers, security engineers, networking professionals and DevOps team members in how to remediate vulnerabilities.
 - Implemented development team self scanning with Accunetix.
-- Led implementation of Continuous Integration (CI/CD) pipelines on AzureDevOps to improve delivery speed, reliability, security and agility.
-- Led implementation of PowerShell Desired State Config to secure new web servers with less effort and greater reliability.
-- Led the development team to successfully implement ongoing 100% code review.
-- Onboarded the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review in support of infrastructure-as-code implementations.
+- Led the development team to successfully implement ongoing 100% code review - starting from none.
+- Mentored the FirsTech and Busey infrastructure, networking and database teams to adopt source control and code review in support of infrastructure-as-code implementations.
 - Led requirements gathering and analysis to make build, buy, or open source adoption decisions, leading to roughly $250,000.00 in recurring annual savings.
 - Led successful custom software implementations that added another $1 million new revenue in 2018.
 
@@ -66,25 +62,24 @@ I apply my deep understanding of computers and strong empathy for humans to make
 
 - Managed 3 full time software developer direct reports.
 - Collaborated with security, infrastructure, operations and sales teams to improve custom software product offerings.
-- Provided data analysis support as the organization grew from $3.7 billion in 2015 managed assets to $7.9 billion in 2017.
+- Provided mentorship, collaboration and support for the emering data practitioners as the organization grew from $3.7 billion in 2015 managed assets to $7.9 billion in 2017.
 
 ### July 2015  - January 2017: Senior IT Programmer at Busey Bank, Champaign, IL
 
- - Guides projects through the software development life-cycle, including requirements, implementation, delivery, testing and maintenance.
- - Built financial transaction websites using Microsoft C Sharp (C#), ASP.Net, Model View Controller (MVC), Razor Partials and React.js.
+ - Guided projects through the software development life-cycle, including requirements, implementation, delivery, testing and maintenance.
  - Recognized as a key contributor in the integration of Pulaski Bank infrastructure.
- - Presents technology training at local conferences as part of the First Busey commitment to building our community.
+ - Presented technology training at local conferences as part of the First Busey commitment to building our community.
 
-### November  2011 - July 2015: Lead Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
+### November  2011 - July 2015: Lead Software Developer at Office of the CIO, Technology Services at University of Illinois, Urbana-Champaign, IL
 
 Lead Software Developer Responsibilities
 
- - Researched, tested, prototyped, documented, and presented technology stack improvements for the Software Architecture Management Office.
+ - Researched, tested, prototyped, documented, and presented technology stack improvements for the Office of the CIO Software Architecture Management Office.
  - Worked with the identity management team to analyze improvements to our provisioning, authentication and authorization solution architectures.
- - Proactively communicates with the Linux systems team to ensure support for core solution technologies.
+ - Collaborated with the Linux systems team to ensure support for core solution technologies.
  - Trained team members in Linux, version control, Light-weight Directory Access Protocol (LDAP), web application frameworks, and deployment technologies.
- - Author of the CITES Software Engineering Risk Knowledge Base (2012).
- - Retired a tightly integrated, but out of date, authentication system.
+ - Author of the Office of the CIO, Technology Services (CITES) Software Engineering Risk Knowledge Base (2012).
+ - Retired a tightly integrated, but out of date, authentication system (UIUC Bluestem) to improve campus Cybersecurity posture.
  - Produced integrations to maintain a consistent identity record across three campuses.
 
 Interim Manager Responsibilities 
@@ -93,19 +88,17 @@ Interim Manager Responsibilities
  - Regularly met one one one with developers to provide feedback and guidance.
  - Proactively communicated context for upcoming organizational changes.
 
-### July 2010 - November 2011: Senior Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
+### July 2010 - November 2011: Senior Software Developer at the Office of the CIO, Technology Services at University of Illinois, Urbana-Champaign, IL
 
 Senior Software Developer Responsibilities
 
  - Developed applications for the Office of Privacy and Information Assurance.
  - Mentored junior team members within the Software Development Group and the Office of Privacy and Information Assurance.
- - Fluent in several development languages, including Python, C#, Perl, Java and PHP.
  - Ensured applications comply with W3C and FAE accessibility guidelines.
- - Applied extensive knowledge of the application stack to solve issues - including Active Directory, Apache, Django, JSON, LDAP, Linux shell, Syslog, SQL, and WSGI.
 
 Application Security Engineer Responsibilities
 
- - Authored the Software Development Group Standard Security Practices (2011).
+ - Authored the Office of the CIO Software Development Group Standard Security Practices (2011).
  - Wrote and presented security training for campus IT professionals (2010-2013).
  - Established the Office of Privacy and Information Assurance Web Application Vulnerability Scanning Service (2011).
  - Provided recommendations to campus stakeholders based on vulnerability scan results (2011 - 2013).
@@ -114,8 +107,7 @@ Application Security Engineer Responsibilities
 ### March 2007 - June 2010: Software Developer at Technology Services at University of Illinois, Urbana-Champaign, IL
 
  - Developed applications for the Office of Privacy and Information Assurance.
- - Author of a series of Secure Software Development articles for campus IT professionals (2008 - 2013). A few articles are posted publicly to https://security.illinois.edu/blog.
- - Tested modules with unittest in Python, NUnit for .Net, and JUnit for Java.
+ - Author of a weekly series of Secure Software Development articles for campus IT professionals (2008 - 2013).
  - Prototyped the team’s first Django framework application. https://security.illinois.edu/content/register-your-computer
  - Reviewed the source code of high risk applications for the Office of Privacy and Information Assurance (2009 - 2014).
  - Crafted a password generation module for use in University Admissions, to provide a campus wide compliance solution to a time-sensitive audit result (2010).
@@ -126,10 +118,11 @@ Application Security Engineer Responsibilities
 
 ### May 2005 - March 2006: Systems Administrator at Imaging Technology Group at Beckman Institute, U of I     Champaign,IL
 
- - Solved diverse software and hardware configuration challenges.
+ - Solved diverse software and hardware configuration challenges in exchange for a modest salary and more importantly, an on-campus desk.
 
 ### May 2000 - Dec 2005: Software Developer at Ablesoft Solutions Inc. Oregon, IL
 
+ - Gathered requirements and delivered software solutions clients including a major restaurant chain, supply and logistics companies, and large argriculture clients.
  - Created an elegant extensible project template which allowed us to create applications more quickly with better standard features.
  - Used VB.Net, ASP.Net, ADO.Net, MS SQL Server, XML, and JavaScript to build advanced web interfaces.
 
