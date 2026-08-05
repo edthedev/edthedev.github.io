@@ -1,0 +1,69 @@
+{
+	"ERROR": {
+		"scope": "markdown",
+		"prefix": "ascii_error",
+		"body": [
+			"  ___ _ __ _ __ ___  _ __ ",
+			" / _ \\ '__| '__/ _ \\| '__|",
+			"|  __/ |  | | | (_) | |   ",
+			" \\___|_|  |_|  \\___/|_| "
+			],
+			"description": "Insert ASCII Error"
+	},
+	"GitHub Inbox": {
+		"scope": "markdown",
+		"prefix": "github",
+		"body": [
+			"https://github.com/notifications?query=is%3Aunread"
+		],
+		"description": "Insert Link to GitHub inbox"
+	},
+	"SWOT": {
+		"scope": "markdown",
+		"prefix": "ascii_swot",
+		"body": [
+			"## SWOT",
+			"",
+			"### Internal",
+			"",
+			"**Strengths**", 
+			"",
+			"**Weaknesses**",
+			"",
+			"### External",
+			"",
+			"**Opportunities**", 
+			"",
+			"**Threats**"],
+			"description": "Insert SWOT"
+	},
+	"Service Pyriamid": {
+		"scope": "markdown",
+		"prefix": "ascii_pyriamid",
+		"body": [
+"```",
+"         /\\ PEAK SERVICE",
+"        /  ",
+"       /",
+"      / ENHANCED SERVICE",
+"     / ",
+"    /  ",
+"   /",
+"  / BASIC SERVICE",
+" / ",
+"/ ",
+"```",
+		],
+		"description": "Insert Service Level Pyriamid"
+	},
+	"Shrug Emojii": {
+		"scope": "markdown",
+		"prefix": "ascii_shrug",
+		"body": [
+			"¯\\_(ツ)_/¯"
+		],
+		"description": "ASCII Shrug"
+	}
+
+
+}
