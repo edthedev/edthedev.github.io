@@ -11,7 +11,9 @@ eleventyNavigation:
 [I have written a lot of code.](/me/code)
 
 For some of my recent professional work,
-you can [browse my GitHub](https://github.com/edthedev).
+you can browse my GitHub. I am [EdTheDev on GitHub](https://github.com/edthedev).
+
+For my recent personal projects, see [EdTheDev on Codeberg](https://codeberg.org/EdTheDev).
 
 If you're curious about the variety of my experience, follow the links you find here.
 
