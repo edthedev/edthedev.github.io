@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cybersecurity Practices for Illinois.edu DevOps - Edward Delaporte</title>
+    <meta charset="utf-8">
+		<link rel="stylesheet" href="https://edward.delaporte.us/css/slides.css" />
+    <style>
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("https://edward.delaporte.us/slides/img/margin.jpg");
+	  }
+	  .remark-slide-content {
+      background-image: url("https://edward.delaporte.us/slides/img/capital_i.PNG");
+	  }
+    </style>
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  </head>
+
+<body>
+<textarea id="source">
+<pre>
+
+## Cybersecurity Practices for Illinois.edu DevOps
+
+Presentation by Edward Delaporte
+and Cybersecurity Development (SecDev)
+Office of the CIO, University of Illinois
+
+???
+
+Outline:
+
+- Vocabulary: Jargon, terms, etc.
+- Risks and face by a Tier 1 Research Institution Homepage
+- Tools, Techniques, Mitigations
+- SecDev/CSOC capabilities - knowing there is help, and where to reach us
+
+---
+
+## Why Listen to Me?
+
+- 25 years in Professional Software Development
+- 18 years with professional Cybersecurity responsibilities
+
+???
+
+- [ ] TODO: Add links to all jargon
+
+It has been my privilege to think hard about the intersection of Cybersecurity and pragmatic development for many years.
+
+---
+
+## Why Listen to Me?
+
+- 18 Years of Incident Response Experience
+
+???
+
+- My team, Cybersecurity Development - SecDev - get called in during a security incident involving code in a custom application.
+- Campus averages one such incident each year.
+- This can happen to any of us.
+- There's a good chance we will be there to help.
+
+---
+
+## Risks to University Websites
+
+- Defacement / Hacktivism
+- Credential Theft
+- Scraping / Denial of Service
+
+---
+
+## Risk - Defacement / Hacktivism
+
+We have seen a shift in bad actor motivation.
+
+- Attackers may be motivated by access to our users / audience.
+	- Illinois is a world-renowned research institution.
+	- Illinois web sites combined get at least 100,000 unique *daily* visitors.
+	- Respect for `.edu` domain is likely to be allowed through firewalls.
+- Defacement is not always about theft...
+	- But it can still be about theft...
+
+???
+
+- Defacement may be just to get a message across.
+- Defacement may also be a step toward theft
+
+
+---
+
+## Risk - Credential Theft
+
+Illinois.edu credentials have value.
+
+- May have access to non-public data.
+- Makes `phishing` more credible.
+- Stolen credentials can be used to `pivot`.
+
+???
+
+'phishing'
+- attacks using a combination of technology and social interaction
+- phishing can look more credible using a stolen identity
+
+pivot
+- using one compromised system as a launching point for another, more serious attack
+- may allow attacks on a previously unreachable target
+
+document object model clobbering
+- scripts served from highly trusted locations can take control of the entire browser experience
+
+---
+
+<img src=img/login.png alt='login boxes' style='float:right; min-height:20em'/>
+
+## Risk - Credential Theft - Methods
+
+How?
+
+- Fake login page
+- `redirects`
+- [document object model clobbering](https://en.wikipedia.org/wiki/DOM_clobbering)
+
+[Destroy the Web](https://kickassapp.com/) is a fun interactive DOM manipulator.
+
+> "there is nothing wrong with your ~~TV~~ **browser**...
+> we control all you are about to see and hear..."
+
+---
+
+## Risk - Scraping / Denial of Service
+
+We see scraping attacks causing `Denial of Service` to intended users
+
+- Many scrapers do not follow `netiquette`, causing outages
+
+- Bad actors try to update their `Language Learning Model (LLM / AI)`
+	- Most `LLM / AI` have already been fed all available public text.
+	- But libraries and Universities have new text.
+
+???
+
+Jargon:
+  - `netiquette` - Internet etiquette
+	- Denial of Service
+	- Language Learning Model
+	- Artificial Intelligence
+
+---
+
+## What to do?
+
+Reach out to Cybersecurity.
+
+- `security@illinois.edu` for potential breaches
+
+- `securitysupport@illinois.edu` for general assistance
+
+???
+- Start by contacting security.
+- However bad it is, we can help minimize the damage.
+- I use my communications team
+  - To the public, I use the word 'outage', not 'security incident', until communications team says
+- I keep my Cybersecurity Liaison in the loop
+- It helps to know who your Cybersecurity Liaison is, in advance
+  - Look for the Teams group and 'request access' if you want to join.
+  - Full time IT professionals are welcome to join
+
+---
+
+## Proactive Defense Checklist
+
+- Be ready to contain issues by creating a 503 page.
+- Equip your DevOps team with insights by logging all security events at INFO level or higher
+- Invite help from friendly security researchers by adding `.well_known/security.txt` to servers
+
+> Upcoming slides contain links to cheat-sheets in the Illinois Knowledge Base.
+
+???
+
+Jargon: containment
+
+
+---
+
+## Checklist - Create a 503 Page for Containment
+
+I create ready-made parking pages for each app.
+
++ Before there is an issue:
+
+> `curl $HOMEPAGE > 503_Unavailable.html`
+
++ Then edit "Site Temporarily Unavailable" into `503_Unavailable.html`
++ Keep it for a rainy day.
+
+Break glass in emergency:
+
++ Shut down complex web services as needed for safety.
++ Install the 503 page.
+
+> `cp 503_Unavailable.html $WEB_ROOT/index.html`
+
+???
+
+- DevOps sometimes needs to choose a brief site ourage to prevent potential ongoing damage.
+	- I have had times when it was too late to generate the standard HEADER and FOOTER once we had an issue.
+  - So I like to create a 503 page in advance 
+  - An attractive 503 page looks much more professional than a last minute one.
+		- I speak from experience, I have done both.
+
+HTTP 503
+- Service Unavailable
+- It's not You, It's Us
+- Prevents questions - since we indicate we know there's a problem
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/503
+
+---
+
+## Checklist - Log Security Events
+
+[Cybersecurity, Logging Practices for Application Developers](https://answers.uillinois.edu/illinois/62904)
+
+At the INFO level or higher, log:
+
+- Authentication and authorization events
+- Attempts to view, modify or delete sensitive information.
+- Attempts to view, modify or delete information which could lead to a security compromise.
+
+> Usual Log levels: DEBUG, INFO, WARNING, ERROR
+
+???
+
+- Great logs support solving issues
+	- Feel free to reach out to securitysupport@illinois.edu to talk about interesting logs
+- Great logs allow saying things like 'no data of type <TYPE> was accessed'
+- A common mistake is logging security events at the DEBUG level, and having those logs unavailable, later
+- See the link for detailed logging guidance
+
+---
+
+## Checklist - Add `.well-known/security.txt`
+
+Encourage `Responsible Disclosure` using a `security.txt` file.
+
+[Cybersecurity, Vulnerability Disclosure on the Knowledge Base](https://answers.uillinois.edu/illinois/118277)
+
+- Reports go to `security@illinois.edu`.
+- Your DevOps team gets a copy of everything we receive.
+- SecDev is available to answer **Frequently Asked Questions** about risk level, mitigation tools, etc.
+
+[go.illinois.edu/vulnerability](http://go.illinois.edu/vulnerability)
+
+???
+
+Responsible Disclosure
+
+	- Only Cybersecurity and your DevOps team are informed.
+	- Gives your DevOps team time to remediate.
+	- SecDev wrote good enough `security.txt` file content.
+	- I will personally thank your responsible discloser
+		(as long as they disclose properly and privately).
+
+
+---
+
+## Ongoing Defense Habits
+
+- Document each product and service
+- Monitor the software supply chain.
+
+---
+
+## Defense - Document Each Product or Service
+
+- [Keep a ChangeLog](https://keepachangelog.com/en/1.0.0/)
+- [Document Endpoints and Data Stores](https://answers.uillinois.edu/illinois/111571)
+- Add `SECURITY.txt` to project documents
+- Add an [End of Life Date](https://answers.uillinois.edu/illinois/109544) to each `README.md`
+- Adopt a [Code Review](https://answers.uillinois.edu/illinois/136520) practice
+
+???
+
+- CHANGELOGs, data stores, security.txt are my favorite  'good enough' starting point for documentation
+  - crucial during a Cybersecurity incident
+	- terrific when discussing replacements, upgrades, or re-factors
+- CHANGELOG can be a very informal but effective feature list
+- end-of-support dates help leaders assign time to maintenance
+	- I use end-of-life dates to support my hiring efforts.
+
+---
+
+## Defense - Supply Chain Security Tools
+
+- Enable [Dependabot](https://answers.uillinois.edu/illinois/110071), if you use GitHub
+- [Python Index of Packages (pip) for Python](https://pypi.org/project/pip-audit/): `pip audit`
+- [Node Package Manager (npm) for JavaScript](https://docs.npmjs.com/cli/v10/commands/npm-audit?v=true): `npm audit`
+- [Composer for PHP](https://php.watch/articles/composer-audit): `composer audit`
+- [A recipe for a one-line audit for C#](https://rewiring.bearblog.dev/one-line-npm-audit-for-dotnet/): `dotnet list package --vulnerable`
+
+???
+
+- There have been incidents on campus where one of these tools immediately reported the root cause, after we learned we had a problem
+- These make great CI/CD steps and git pre-commit hooks.
+
+Supply Chain Recovery
+
+- NPM un-listed every compromised package within 4 hours
+- Teams with automated CI/CD updates would recover with a simple re-deploy
+
+- *Do* check in generated files that indicate which versions of libraries are in use
+  - That history helps know when/if packages in use are vulnerable
+- Use 'Monthly Downloads' as a measure of security
+  - A gazelle should know when it is far from the herd
+- Vulnerability handling is an early sign of library health vs end-of-life
+- Learn your framework's `audit` command
+
+---
+
+## Questions and Answers
+
+[Contacting Cybersecurity](https://answers.uillinois.edu/illinois/89561)
+
+Contacting Edward Delaporte:
+
+- Email: <delaport@illinois.edu>
+- Web: https://edward.delaporte.us/me/
+
+</pre>
+</textarea>
+<!-- <script src="https://remarkjs.com/downloads/remark-latest.min.js" /> -->
+<script src="https://edward.delaporte.us/js/remark-latest.min.js">
+</script>
+<script>
+	var slideshow = remark.create();
+</script>
+</body>
+</html>

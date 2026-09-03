@@ -1,0 +1,402 @@
+{
+
+    "explorer.confirmDragAndDrop": false,
+
+    "files.exclude": {
+
+        "**/.git": true,
+
+        "**/.svn": true,
+
+        "**/.hg": true,
+
+        "**/CVS": true,
+
+        "**/.DS_Store": true,
+
+        "**/*.pdf": true,
+
+    },
+
+    "git.enableSmartCommit": true,
+
+    "vim.autoindent": false,
+
+    "vim.history": 20,
+
+    "vim.mouseSelectionGoesIntoVisualMode": false,
+
+    "vim.surround": false,
+
+    "vim.useCtrlKeys": false,
+
+    "vim.useSystemClipboard": true,
+
+    "vim.vimrc.enable": false,
+
+    "workbench.statusBar.visible": true,
+
+    "editor.renderControlCharacters": true,
+
+    "editor.tokenColorCustomizations": {
+
+        "textMateRules": [
+
+            {
+
+                "scope": "text.html.markdown.journal.task.open.bullet",
+
+                "settings": {
+
+                    "foreground": "#FFFF00"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.task.open.marker",
+
+                "settings": {
+
+                    "foreground": "#FFFF00"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.task.open.keyword",
+
+                "settings": {
+
+                    "fontStyle": "italic"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.task.open.text",
+
+                "settings": {}
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.task.completed.keyword",
+
+                "settings": {
+
+                    "fontStyle": "italic"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.task.completed.marker",
+
+                "settings": {
+
+                    "foreground": "#AAAAAA"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.task.completed.text",
+
+                "settings": {
+
+                    "foreground": "#AAAAAA"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.task.completed.bullet",
+
+                "settings": {
+
+                    "foreground": "#FFFF00"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.memo.keyword",
+
+                "settings": {
+
+                    "fontStyle": "italic"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.memo.bullet",
+
+                "settings": {
+
+                    "foreground": "#FFFF00"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.scope",
+
+                "settings": {
+
+                    "foreground": "#FFFF00"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.link.keyword",
+
+                "settings": {
+
+                    "fontStyle": "italic"
+
+                }
+
+            },
+
+            {
+
+                "scope": "text.html.markdown.journal.link.bullet",
+
+                "settings": {
+
+                    "foreground": "#FFFF00"
+
+                }
+
+            }
+
+        ]
+
+    },
+    "workbench.editor.enablePreview": false,
+
+    "editor.multiCursorModifier": "ctrlCmd",
+
+    "journal.dev": false,
+
+    "journal.patterns": {
+
+        "notes": {
+
+            "path": "${base}/${year}/",
+
+            "file": "${month}-${input}.${ext}"
+
+        },
+
+        "entries": {
+
+            "path": "${base}/${year}/",
+
+            "file": "${month}-${day}.${ext}"
+
+        }
+
+    },
+
+    "workbench.editorAssociations": {
+
+        "*.ipynb": "jupyter-notebook"
+
+    },
+
+    "editor.cursorStyle": "line",
+
+    "editor.lineNumbers": "on",
+
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+
+    "editor.wordWrap": "off",
+
+    "notebook.cellToolbarLocation": {
+
+        "default": "right",
+
+        "jupyter-notebook": "left"
+
+    },
+
+    "editor.rulers": [
+
+        80
+
+    ],
+
+    "terminal.integrated.copyOnSelection": true,
+
+    "window.zoomLevel": 1,
+
+   "git.confirmSync": false,
+
+    "editor.fontFamily": "Cascadia Code PL,Consolas, 'Courier New', monospace",
+
+    "workbench.startupEditor": "terminal",
+
+    "dashboard.projectData": null,
+
+    "editor.suggest.showMethods": true,
+
+    "editor.suggest.preview": true,
+
+    "editor.acceptSuggestionOnEnter": "on",
+
+    "editor.snippetSuggestions": "top",
+
+    "terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+
+    "explorer.confirmDelete": false,
+
+    "journal.openInNewEditorGroup": false,
+
+    "journal.scopes": [
+
+        {
+
+            "name": "meeting",
+
+            "patterns": {
+
+              "notes": {
+
+                "path": "${base}/Meetings",
+
+                "file": "${d: YYYY-MM}/${input}.${ext}"
+
+              },
+
+            }
+
+        },
+
+        {
+
+            "name": "staffing",
+
+            "patterns": {
+
+              "notes": {
+
+                "path": "${base}/Staffing",
+
+                "file": "${input}.${ext}"
+
+              },
+
+            }
+
+        },
+
+    ],
+
+    "journal.templates": [
+
+        {
+
+            "name": "memo",
+
+            "template": "- MEMO ${localTime}: ${input}"
+
+        },
+
+        {
+
+            "name": "task",
+
+            "template": "- [] ${d:LL} - Task: ${input}"
+
+        },
+
+        {
+
+            "name": "entry",
+
+            "template": "---\n\n\ntitle: Journal for ${d:dddd, MMMM DD YYYY}\nauthor: Edward Delaporte\ndate: ${d:dddd, MMMM DD YYYY}\n---\n\n## Self Care\n\n## Strategic Investment\n\n## Operational Commitment\n\n## Notes\n"
+
+        },
+
+        {
+
+            "name": "time",
+
+            "template": "${localTime}"
+
+        },
+
+        {
+
+            "name": "note",
+
+            "template": "---\ntitle: ${input}\nauthor: Edward Delaporte\ndate: ${d:dddd, MMMM DD YYYY}\n---\n\n## Context\n\n## Notes\n\n"
+
+        },
+
+        {
+
+            "name": "files",
+
+            "template": "- [${title}](${link})"
+
+        }
+
+    ],
+
+    "security.workspace.trust.untrustedFiles": "open",
+
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+
+    "sonarlint.disableTelemetry": true,
+
+    "[python]": {
+
+        "editor.formatOnType": true
+
+    },
+
+    "files.autoSave": "onFocusChange",
+    "workbench.editor.showTabs": "none",
+    "zenMode.showTabs": "none",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideStatusBar": false,
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.tabs.hideCondition": "never",
+    "workbench.panel.defaultLocation": "left",
+    "terminal.integrated.shellIntegration.decorationsEnabled": "overviewRuler",
+    "terminal.explorerKind": "external",
+    "accessibility.hideAccessibleView": true,
+    "accessibility.accessibleView.closeOnKeyPress": false,
+    "terminal.integrated.defaultLocation": "editor",
+    "editor.minimap.enabled": false
+    // "journal.base": "~/Documents"
+
+}

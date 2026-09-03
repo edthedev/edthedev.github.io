@@ -1,0 +1,20 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": ["s3:ListAllMyBuckets"],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+            "Resource": ["arn:aws:s3:::www.{{s3bucket}}"]
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:*Object",
+            "Resource": ["arn:aws:s3:::www.{{s3bucket}}/*"]
+        }
+    ]
+}

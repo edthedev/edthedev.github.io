@@ -1,0 +1,1 @@
+*.ipynb filter=$HOME/dotfiles/util/jupyter_git_clean.py
