@@ -9,11 +9,6 @@ eleventyNavigation:
 
 I often give presentations on technical topics.
 
-
-Administrative Information Technology Services (AITS), COVID Response Cross Functional Technology Team, Campus Coding Community Meet-Up, Campus Collaborative IT Internship Program, Campus GitHub Governance Committee, Campus Research IT, Campus Web Tools, Campus cPanel Service, Center for Innovation in Teaching & Learning (CITL), Children’s Family Research Center (CFRC), Consortium of Academic and Research Libraries in Illinois, Cybersecurity Liaisons, Cybersecurity at University of Illinois at Chicago, Dept of Psychology, Engineering IT Shared Services, Facilities and Services, Fine and Applied Arts, Graduate College, Illinois IT Professionals Forum, Illinois Mobile App Team, Illinois.Chat, McKinley, MyIllini, National Center for Supercomputing Applications (NCSA), OFC CIO Application Services, OFC CIO Business Process Analysis Team, OFC CIO Cloud Infrastructure, OFC CIO Cybersecurity, OFC CIO Data Innovation, OFC CIO Help Desk, OFC CIO IT Service Delivery, OFC CIO Identity and Access Management, OFC CIO Managed Systems and Services (MSS), OFC CIO Networking, OFC CIO Privacy, OFC CIO Software Development Group, OFC CIO Staff Support, OFC CIO Technology Services, OFC of the Vice Chancelor of Research (OVCRI), Student Affairs Technology, University of Illinois at Springfield, University of Minnesota, Urbana Highschool, Web Conference at Illinois (WebCon)
-
-
-
 Some recordings of presentations that I gave or facilitated are available at [Illinois Mediaspace](https://mediaspace.illinois.edu/esearch/search?keyword=Edward%20delaporte).
 
 In 2016, I began collecting the slide decks here.
