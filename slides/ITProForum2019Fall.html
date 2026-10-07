@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practical Git Tips and Tricks</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+	  .remark-slide, .remark-slide-container {
+		  background-image: url("img/webcon2016/slidesidebar.jpg");
+	  }
+    
+	  .remark-slide-content {
+		  background-image: url("img/itpro2019fall/background.png");
+	  }
+	  img {
+		  float:right;
+		  border-radius:22px;
+	  }
+	  img.left {
+		  float:left;
+	  }
+	  img.little {
+		  height:200px;
+	  }
+	  img.capture {
+		  border-radius:1px;
+	  }
+	  img.stretch {
+		  width:45%;
+		  padding: 10px;
+	  }
+	  img.flow{
+		  width: 100%;
+		  padding: 10px;
+		  background-color: white;
+	  }
+    </style>
+  </head>
+  <body>
+
+
+<textarea id="source">
+
+# Practical Git Tips and Tricks
+
+*** or ***
+
+## How I learned to stop worrying, 
+## and love `git revert`
+
+.small[
+Presented by [Edward Delaporte](mailto:edward.delaporte@busey.com)
+
+for [Busey Bank](https://www.busey.com)
+
+at [University of Illinois IT Professionals Forum](https://www.itproforum.illinois.edu/) on Nov 7, 2019.
+]
+
+This slide deck is online at http://edward.delaporte.us
+
+???
+
+- Peter Sellers would have loved Git. 
+- Git is elegant.
+- Git is often nonsensical.
+
+Edward
+- Team of 10 software developers
+- Team across 4 cities (Champaign, Decatur, Blomington, St. Louis)
+- Support 120 products that move money.
+- We move about 1/2 million per day
+- Payment Card Industry
+- Financial Sector Regulations
+- 100% code review shop
+- All developers take extensive security training
+- Everything is audited
+- Out of date JavaScript libs end up on the desk of the EVP of Risk and Compliance who reports to our CEO
+
+---
+
+# Topics
+
+1. Taking stock with `git status` and `git diff` 
+2. Undo
+3. The sometimes surprising results of `git revert` 
+4. Frequently Asked Questions - Answered.
+5. Pretty tools
+
+---
+
+# Taking Stock
+
+*Where am I?*
+
+>git status
+
+*What have I done?*
+
+>git diff
+
+*What am I about to commit?*
+
+>git diff --cached
+
+???
+
+- Visual tools and `git diff` are a great way to take stock.
+- Most visual editors will have a right-click way to see git diff --cached
+- If you see two separate threads of work in git diff --cached, it is time to check some work in.
+
+Git Status
+- think of an empty `git status` as a home base - return to it often.
+- Anything in git status is an unresolved future problem
+- untracked files not in gitignore
+- unpushed or unpulled commits
+
+---
+
+## Undo
+
+*That was a stupid change.*
+
+>git reset HEAD .\ITProForum2019Spring.html
+
+*Well that was a stupid commit.*
+
+>git revert {commit hash}
+
+???
+
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {first commit}
+
+<img class='stretch left little' src='img/itpro2019fall/Trees1.PNG'/>
+
+## git commit {second commit}
+<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {third commit}
+<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
+
+## git revert {third commit}
+<img class='stretch little' src='img/itpro2019fall/Trees2_Expected.PNG'/>
+
+???
+
+- As expected, we went back in time to a previous state.
++ The Revert Revert pattern - today's stupid mistake is tomorrow's 'good enough'
+
+---
+
+# Sometimes Surprising Results of Git Revert
+
+## git commit {third commit}
+<img class='stretch left little' src='img/itpro2019fall/Trees3.PNG'/>
+
+## git revert { second commit }
+<img class='stretch little' src='img/itpro2019fall/Trees2.PNG'/>
+
+???
+
+- Surprise - this state has never existed in history.
+
+
+---
+
+# Your Questions
+
+*What is the difference between `revert` and  `reset`?*
+
+## Revert
+- Will *not* lose your work.
+- Acts *on* a commit.
+- Supports the 'Revert Revert' pattern, that I love.
+
+## Reset
+- Takes you *to* a commit.
+- Often *throws away* work!
+- Can help you lie about what you actually did to get here.
+
+???
+
+- when in doubt, use git revert - reset can lose work, revert cannot.
+
+- discuss the value of the revert a revert pattern
+- when do we git reset? when our commit is being sent to Google or Facebook.
+
+- Revert acts *ON* a commit.
+- Reset acts *TO* a commit.
+
+
+---
+
+# Your Questions
+
+*Someone checked in and published a password.*
+
+- Change the password.
+
+???
+
+- History is impractical to change.
+- The Internet Way back Machine exists, even if you did change it.
+- Evil web crawler bots are looking for passwords, and they work fast. 
+- They may have already harvested it.
+
+---
+
+# Your Questions
+
+*How to fix a merge that contained incorrect files.*
+
+- If it went really badly, throw away your local (merge) branch and fix the original branches.
+- Otherwise, use the git tools to review and make correction, and commit the corrections.
+- Copy/Paste is your friend.
+
+---
+
+# Your Questions
+
+*Testing/writing code in different branches that use common local files.*
+
+- Merge from your friend's branches early and often.
+- Ignore your enemies' branches.
+- Merge from `develop` and `master` early and often.
+- Submit pull requests earlier and more often. 
+- No one rejects a pull request for being too easy to review.
+
+---
+
+# Your Questions
+
+*Letting different machines fall out of sync with origin and trying to merge work cleanly.*
+
+- Start with `git pull`
+- Use branches to experiment. Throw them away if they don't work.
+- Copy/Paste is your friend.
+
+---
+
+# Your Questions
+
+*Removing accidentally-checked in files from repos, without deleting them locally.*
+
+> git rm --cached .\BadFile.txt
+
+???
+
+- You won't remember this next slide, 
+- but you will remember that Copy/Paste is your friend.
+
+---
+
+# Your Questions
+
+*How do I keep these two branches separate forever?*
+
+> Separate the repositories. Everything in every branch is destined for master.
+
+???
+
+Separate branches forever?
+- Think of branches as streams flowing together to become rivers.
+- Anything you drop into any stream will someday reach the ocean (master branch).
+
+---
+
+# Your Questions
+
+*I know what I want the final files to look like, but not how to get it there in git?*
+
+> Copy/Paste is your friend.
+
+???
+
+Why is copy/paste great?
+- Just make it right.
+- Your history will show you got lost, and forced it right. That has value.
+
+---
+
+# Pretty Tools
+
+[Tortoise Git](https://tortoisegit.org/)
+
+- Add right-click menu items to Windows Explorer
+- Like TortoiseSvn, but for Git
+
+Atlassian SourceTree
+
+- [Atlassian SourceTree for Mac and Windows](https://www.sourcetreeapp.com/) 
+
+GitHub Desktop
+
+- [GitHub Desktop](https://desktop.github.com/)
+
+???
+
+Tortoise - Right click can be fun
+
+SourceTree
+- Point and click your way through Git history
+- Visual branch/merge history
+- See past revisions
+- Diff between arbitrary revisions
+- Manage branches and branch operations in a visual way
+
+---
+
+# Pretty Tools
+
+Visual Studio Code 
+
+- [Free/Open/Cross Platform from Microsoft](https://code.visualstudio.com/)
+- [GitLens Plugin](https://github.com/eamodio/vscode-gitlens/tree/master/#code-lens-)
+- Other great plugins include: VsVim, RainbowCSV, Markdown Paste, Markdown PDF
+
+???
+
+VSCode 
+
+- VsCode Handles git out of the box.
+- Searching Git in the plugin marketplace returned 5 pages of results.
+- Code Lens - see who changed which line last
+- Various visual ways to explore history
+- Native integrated shell
+
+---
+
+## Discussion
+
+- This slide deck is online at http://Edward.Delaporte.us
+- Need more git? Advanced Git session is after the break. 
+
+???
+
+- You can find this slide deck at Edward.Delaporte.us
+
+---
+
+# BONUS SLIDES
+
+---
+
+# Git INIT
+
+*I need a git server, but all I have is a Windows file share.*
+
+>cd \\remote\share\folder.git\
+>git init --bare
+
+???
+
++ using a Windows folder like any other remote
+
+---
+
+## Can I do better at staging my un-commited work?
+
+`git add --interactive`
+
+```powershell
+*** Commands ***
+  1: status       2: update       3: revert       4: add untracked
+  5: patch        6: diff         7: quit         8: help
+What now> p
+           staged     unstaged path
+  1:    unchanged        +4/-0 ITProForum2019Spring.html
+Patch update>>
+diff --git a/ITProForum2019Spring.html b/ITProForum2019Spring.html
+index 6a58513..323781d 100644
+--- a/ITProForum2019Spring.html
++++ b/ITProForum2019Spring.html
+@@ -108,6 +108,10 @@ Slide Count:
+ >git diff
+
++*Can I do better at staging my un-commited work?*
++
++>git add --interactive
+
+Stage this hunk [y,n,q,a,d,e,?]?
+```
+
+???
+
++ Yes. You can.
++ Not as scary as it looks here.
++ Giving it a try can give you an idea of the possibilities.
++ You can point and click to get this effect too. 
+
+---
+
+## How did line 9 of this file become so strange? 
+
+`git log -L`
+
+```powershell
+PS C:\Users\edthe\edthedev.github.io> git log -L 7,10:index.html
+```
+
+```powershell
+commit 4443e18da5c5729bdb8b7251dda5a8bb46b698a3
+Author: EdTheDev <edward@delaporte.us>
+Date:   Mon Jun 3 21:23:45 2019 -0500
+
+    Move presentations into more recent format
+
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -7,4 +7,4 @@
+ <body>
+ <div class="bootmark"
+-data-src="Welcome.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
++data-src="Welcome.md presentations.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
+ data-join="---"
+
+commit 8a76e94d789cc20c8b24987b94275462382b4acb
+Author: EdTheDev <edward@delaporte.us>
+Date:   Wed Apr 3 20:47:48 2019 -0500
+
+    Change up the order a bit.
+
+...more of same from above...
+```
+
+---
+
+## Who decided line 9 should be strange?!
+
+`git blame`
+
+```powershell
+PS C:\Users\edthe\edthedev.github.io> git blame .\index.html
+```
+
+```powershell
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500  1) <!DOCTYPE html>
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500  2) <html>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  3) <head>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  4) <link rel="stylesheet" href="static/edthedev.css" />
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  5) <script src="static/bootmark.min.js"></script>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  6) </head>
+e2e4117f (Edward Delaporte 2017-05-06 00:37:46 +0000  7) <body>
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000  8) <div class="bootmark"
+4443e18d (EdTheDev         2019-06-03 21:23:45 -0500  9) data-src="Welcome.md presentations.md Microbit.md Robobrawl.md Learn2Code.md Footer.md"
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000 10) data-join="---"
+4bf3f64c (Edward Delaporte 2017-05-06 05:10:05 +0000 11) ></div>
+7cf65857 (Edward Delaporte 2015-07-25 12:19:15 -0500 12) </body>
+3cbc7b3a (Edward Delaporte 2015-07-25 11:45:35 -0500 13) </html>
+```
+
+???
+
++ Each line of the file.
++ Who last modified each line.
++ When last modified each line.
+
+
+---
+
+## How to protect `master`
+
+```
+#!/bin/sh
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+(At the repo)
+Create file .git/hooks/pre-commit with following content:
+if [ "$branch" = "master" ]; then
+  echo "You can't commit directly to master branch"
+  exit 1
+fi
+```
+Make it executable (not required on Windows):
+```
+$ chmod +x .git/hooks/pre-commit
+```
+
+[Full solution at Stack Overflow][10]
+[10]: https://stackoverflow.com/questions/40462111/git-prevent-commits-in-master-branch
+
+???
+
++ Git hooks are just shell scripts.
++ You can and should do more with them.
++ You can make your chat bot cuss out whoever broke the build or forgot to comment.
+
+---
+
+## What else can `git diff` do?
+
+[Quite a bit][2]
+
+[2]: https://git-scm.com/docs/git-diff
+
+```
+git diff [<options>] [<commit>] [--] [<path>…​]
+git diff [<options>] --cached [<commit>] [--] [<path>…​]
+git diff [<options>] <commit> <commit> [--] [<path>…​]
+git diff [<options>] <blob> <blob>
+git diff [<options>] --no-index [--] <path> <path>
+```
+
+???
+
+- Diff can do more
+- but the default target is the last commit
+
+</textarea>
+    <!--<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">-->
+    <script src="/js/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

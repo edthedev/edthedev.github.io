@@ -1,0 +1,16 @@
+<div class="heading-wrapper h1">
+<h1 id="on-the-value-of-source-code">On the value of source code.</h1>
+<a class="anchor" href="#on-the-value-of-source-code" aria-labelledby="on-the-value-of-source-code"><span hidden>#</span></a></div>
+<p>Story: technically we own the code. Want us to sue him for it?</p>
+<p>Can you sue him for the careful trail of decision documents created by the team?</p>
+<p>No. We didn't do that.</p>
+<p>Good. Then I don't want the code. Leave it to my place it has any value - in the hands of the original author.</p>
+<p>Moral of the story:</p>
+<p>Culture and artifacts matter. Code is an implementation detail.</p>
+<p>Some programmers villainize feature branches. The truth is branches are fine as long as they go away (whether merged or not) in a day or two. Branches that survive any longer than that cost unnecessary energy to sync back up with the main work - and it can become the most expensive effort the team wastes their time on.</p>
+<p>For this reason, I recommend not having dev and test branches. They are, by nature, branches that survive too long.</p>
+<p>But feature branches are fine as long as everyone is committed to getting rid of them promptly. Branches are a temporary tool that becomes harmful if kept too long. Don't treat them like pets.</p>
+<p>How shall I know what is in development - it's everything that has not been tagged and released.</p>
+<p>How shall I know what is in test? Deploy every merge to main to test and you'll always know what is on test.</p>
+<p>How shall I know what is on production? Use your deployment tools version numbering system, and you can just ask it.</p>
+<p>Where shall we keep features that aren't ready to release in production? In the main branch, and turned off using feature flags.</p>

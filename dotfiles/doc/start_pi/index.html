@@ -1,0 +1,41 @@
+<div class="heading-wrapper h2">
+<h2 id="getting-started-raspberyy-pi">Getting Started - Raspberyy Pi</h2>
+<a class="anchor" href="#getting-started-raspberyy-pi" aria-labelledby="getting-started-raspberyy-pi"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="get-online">Get Online</h3>
+<a class="anchor" href="#get-online" aria-labelledby="get-online"><span hidden>#</span></a></div>
+<pre><code class="language-sh">rasppi-config
+</code></pre>
+<ul>
+<li>Set up wireless</li>
+<li>Set keyboard location</li>
+</ul>
+<div class="heading-wrapper h3">
+<h3 id="clone-this-repository">Clone this repository</h3>
+<a class="anchor" href="#clone-this-repository" aria-labelledby="clone-this-repository"><span hidden>#</span></a></div>
+<pre><code class="language-sh">sudo apt-get install git
+git clone https://github.com/edthedev/dotfiles.git
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="create-a-new-user">Create a new user</h3>
+<a class="anchor" href="#create-a-new-user" aria-labelledby="create-a-new-user"><span hidden>#</span></a></div>
+<pre><code class="language-sh">sudo useradd bob -m -G sudo
+sudo passwd bob
+sudo passwd pi
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="boostrap-cli">Boostrap CLI</h3>
+<a class="anchor" href="#boostrap-cli" aria-labelledby="boostrap-cli"><span hidden>#</span></a></div>
+<pre><code>sudo ./install_cli_basics.sh
+</code></pre>
+<div class="heading-wrapper h2">
+<h2 id="installations">Installations</h2>
+<a class="anchor" href="#installations" aria-labelledby="installations"><span hidden>#</span></a></div>
+<p>See the <code>\install</code> folder for scripts to install various handy utilities. Most of these rely on <code>Apt</code> on Linux, or <code>Chocolatey</code> on Windows.</p>
+<div class="heading-wrapper h2">
+<h2 id="setups">Setups</h2>
+<a class="anchor" href="#setups" aria-labelledby="setups"><span hidden>#</span></a></div>
+<p>See the <code>\setup</code> folder for configurations.
+These are, obviously, just my preferred configurations.</p>
+<p>In general, these work by setting up symlinks on Linux, and on Windows by copying a stub file that sources the versioned file.</p>
+<p>Most of these are cross platform <code>.ps1</code> files that run under PowerShell.</p>

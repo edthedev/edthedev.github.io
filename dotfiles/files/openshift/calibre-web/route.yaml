@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: calibre-web-route
+spec:
+  host: books.apps.homelab1.lab.delaporte.us
+  to:
+    kind: Service
+    name: calibre-web
+  port:
+    targetPort: 8080

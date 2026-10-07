@@ -1,0 +1,37 @@
+<div class="heading-wrapper h2">
+<h2 id="markdown-to-html">Markdown to HTML</h2>
+<a class="anchor" href="#markdown-to-html" aria-labelledby="markdown-to-html"><span hidden>#</span></a></div>
+<p>The usual VSCode plugins add a lot of weird junk (telemetry, perhaps), so I decided to start using brute force and minimal <code>GoLang</code> code to convert my Markdown into HTML.</p>
+<div class="heading-wrapper h3">
+<h3 id="setup">Setup</h3>
+<a class="anchor" href="#setup" aria-labelledby="setup"><span hidden>#</span></a></div>
+<pre><code class="language-powershell">go install github.com/gomarkdown/mdtohtml@latest
+mdtohtml -h
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="generate-document">Generate document</h3>
+<a class="anchor" href="#generate-document" aria-labelledby="generate-document"><span hidden>#</span></a></div>
+<pre><code class="language-powershell">mdtohtml.exe -css https://edward.delaporte.us/css/edthedev.css .\Dashboard.md &gt; Dashboard.html
+</code></pre>
+<p>VSCode Settings:</p>
+<pre><code class="language-json">&quot;command-runner.terminal.name&quot;: &quot;runCommand&quot;,
+&quot;command-runner.terminal.autoClear&quot;: true,
+&quot;command-runner.terminal.autoFocus&quot;: true,
+&quot;command-runner.commands&quot;: {
+    &quot;markdown to HTML&quot;: &quot;mdtohtml.exe -css https://edward.delaporte.us/css/edthedev.css ${file} &gt; ${file}.html&quot;,
+	&quot;HTML to PDF&quot;: &quot;wkhtmltopdf.exe ${file}.html ${file}.pdf&quot;,
+},
+</code></pre>
+<p>Then <code>Ctrl+Shift+P</code>, <code>Run Command</code> and select <code>markdown to HTML</code>.</p>
+<div class="heading-wrapper h2">
+<h2 id="markdown-to-pdf">Markdown to PDF</h2>
+<a class="anchor" href="#markdown-to-pdf" aria-labelledby="markdown-to-pdf"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="setup-1">Setup</h3>
+<a class="anchor" href="#setup-1" aria-labelledby="setup-1"><span hidden>#</span></a></div>
+<p>Install <a href="https://wkhtmltopdf.org/">wkhtml2pdf.exe</a> somewhere on my path.</p>
+<div class="heading-wrapper h3">
+<h3 id="use">Use</h3>
+<a class="anchor" href="#use" aria-labelledby="use"><span hidden>#</span></a></div>
+<pre><code class="language-powershell">wkhtmltopdf.exe .\Dashboard.md.html dash.pdf
+</code></pre>

@@ -1,0 +1,13 @@
+<div class="heading-wrapper h3">
+<h3 id="save-your-work">Save your Work</h3>
+<a class="anchor" href="#save-your-work" aria-labelledby="save-your-work"><span hidden>#</span></a></div>
+<pre><code>savehistory(&quot;/mnt/data/test_commands.txt&quot;)
+</code></pre>
+<div class="heading-wrapper h3">
+<h3 id="pie-receipt">Pie Receipt</h3>
+<a class="anchor" href="#pie-receipt" aria-labelledby="pie-receipt"><span hidden>#</span></a></div>
+<p>Pie chart with duplicate categories merged.</p>
+<pre><code class="language-rstudio">library(&quot;dplyr&quot;)          ## load
+TimeSum &lt;- (TimeTracking %&gt;% group_by(Category) %&gt;% summarize(Duration = sum(Duration))))
+pie(TimeSum$Duration, TimeSum$Category)
+</code></pre>

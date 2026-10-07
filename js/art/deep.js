@@ -1,0 +1,162 @@
+/*
+
+"Weave Strange" is a Live Art work created by Edward Delaporte.
+
+This script is Copyright Edward Delaporte 2020.
+
+This script and the art it creates are licensed under 
+a Creative Commons Attribution-ShareAlike 4.0 
+International License.
+
+http://creativecommons.org/licenses/by-sa/4.0/
+
+You can share your own remix of this code 
+as long as you display this license and attribution.
+
+*/
+
+var sprite = {
+  x: 0,
+  y: 0,
+  dx: 1,
+  dy: 1,
+  rulefun: dewit,
+  size: 20
+};
+
+function freshcolor() {
+  let c = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+  fill(c);
+}
+
+function starfield() {
+  // White start on black backgroud
+  background('#222222');
+  fill(color(255,255,255));
+  
+  // Randomly scatter stars.
+  starcount = random(20,60);
+  for(i=0;i<starcount;i++){
+    starx = random(0, maxim);
+    stary = random(0, maxim);
+    circle(starx, stary, 4);
+    if(random(0,5)==1) {
+      circle(starx -4, stary -4, 4);
+    }
+
+  }
+}
+
+function topspike() {
+  cornercount = random(6,10);
+  for(i=0;i<cornercount;i++){
+    freshcolor();
+    triangle(0,0, 50*i, 50*i+30, maxim/i, 0);
+  }
+  freshcolor();
+}
+
+
+function setup() {
+  // maxim = .5 * window.innderWidth;
+  counttofreeze = 550;
+  maxim = 400;
+  midline = maxim / 2;
+  createCanvas(maxim, maxim);
+  background(maxim,maxim);
+  balls = [];
+  ballcount = random(1,4);
+
+  starfield();
+  topspike();
+
+  theball = Object(sprite);
+  for(i=0;i<ballcount;i++){
+    newb = Object.assign({}, theball);
+    maxline = random(maxim/2, maxim);
+    minline = random(0, maxim/2);
+    newb.x = random(0,maxline);
+    newb.y = i * 22;
+    newb.color = color(random(0,10)*30,random(0,10)*30, random(0,10)*30);
+    balls.push([newb, dewit]);
+  }
+
+}
+
+function dewit(ball) {
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+
+  if(ball.x>maxim) ball.dx = -4;
+  if(ball.y>maxim) ball.dy = -4;
+  if(ball.x<0) ball.dx = 1;
+  if(ball.y<0) ball.dy = 1;
+  fill(ball.color);
+  circle(ball.x, ball.y, 20);
+  if(ball.y>maxim && random(0,2) > 1) {
+    // Random color
+    freshcolor();
+
+    ball.x -= 20;
+    ball.dx = -1 * ball.dx;
+    return [ball, backwards];
+  }
+  return [ball, dewit];
+}
+
+function backwards(ball) {
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+
+  if(ball.x>maxim) ball.dx = -2;
+  if(ball.y>maxim) ball.dy = -2;
+  if(ball.x<0) ball.dx = 1;
+  if(ball.y<0) ball.dy = 1;
+  square(ball.x, ball.y, 20);
+
+  if(ball.y>maxim && random(0,2) > 1) {
+    ball.x -= 20;
+    ball.dx = -1 * ball.dx;
+    return [ball, dewit];
+  }
+
+  return [ball, backwards];
+
+}
+
+function draw() {
+  counttofreeze -= 1;
+  // Only draw for so long.
+  if(counttofreeze>0){
+    balls = balls.map( item => item[1](item[0]) );
+  }
+  if(counttofreeze == 0){
+    noStroke();
+    topspike();
+  }
+}
+
+function mouseClicked() {
+  // background(220);
+  tree(mouseX, mouseY, 20)
+  // spinny(mouseX, mouseY, 20)
+}
+
+function tree(x, y, size, ang=1) {
+  freshcolor();
+  delta = size * .5
+  if(size % 4 == 0){
+    deltax = random(delta,delta*2)
+    newang = random([-1,1]) 
+    newx = x - deltax
+
+    tree(newx,y,size-1, newang)
+  }
+  if(size>4) {
+    circle(x, y, size)
+    deltax = random(0,delta*2)
+    newx = x - ang * deltax
+    newy = y - size * .5
+    tree(newx,newy,size-1)
+  }
+}

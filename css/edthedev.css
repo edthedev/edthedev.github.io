@@ -1,0 +1,194 @@
+/* 
+Check these with the color contrast checker:
+https://www.accessibilitychecker.org/color-contrast-checker/
+*/
+
+:root {
+  /* Backgrounds */
+  --main-bg-color: #181818;
+  --code-bg-color: #222222;
+
+  /* Foregrounds */
+  --main-text-color: #bbbbbb;
+  --link-text-color: #22A7F0;
+  --visited-link-color: #7462E0;
+}
+
+body
+{
+	/* font-family: 'times new roman', times, serif; */
+  font-family: monospace;
+	font-size:1.8vmax;
+  color: var(--main-text-color);
+	background-color: var(--main-bg-color) !important;
+  margin: 1vmax;
+}
+
+a {
+  color: var(--link-text-color);
+}
+a:visited {
+  color: var(--visited-link-color);
+}
+
+
+
+canvas{
+    padding-top: 3em;
+    padding-left: 1em;
+}
+
+h1 {
+  font-family: ui-monospace;
+	font-size: 3vmax;
+	font-weight: 400;
+	letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2 {
+	padding-left: 1vmax;
+  font-family: monospace;
+	font-size:2.5vmax;
+  /* border-bottom-style:solid;
+  box-shadow: 0px 4px darkcyan;
+  */
+  border: 1px solid #ccc !important;
+  border-radius: .2em;
+}
+
+h3, h4 {
+	font-size:2.4vmax;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+}
+
+#navlist label { 
+	color: #000;
+	border-bottom-style:solid;
+}
+
+/*** 
+
+Navigation Style 
+
+***/
+
+/* The navigation bar */
+
+.ye_navbar nav{
+  width: 100%; /* Full width */
+  line-height: 3.5em;
+}
+
+.ye_navbar span {
+  width: 100%; /* Full width */
+  position: fixed; /* Set the navbar to fixed position */
+  line-height: 1em;
+}
+
+.ye_navbar li {
+	list-style-type: none;
+	margin: 0;
+	padding: .5em;
+	padding-right: 2vmax;
+	float:left;
+}
+
+.ye_navbar ul { 
+	color: #000;
+	width:100%;
+  margin: 0;
+}
+
+
+.ye_navbar {
+  overflow: hidden;
+  background-color: #333;
+  top: 0; /* Position the navbar at the top of the page */
+  padding: 0;
+}
+
+/* Links inside the navbar */
+.ye_navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: .5vmax .5vmax;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.ye_navbar a:hover {
+  background: #ddd;
+  color: black;
+  width: 100%;
+}
+
+/* Tweak the main content to avoid overlap. */
+.bootmark {
+  margin-top: 2.5em; /* Add a top margin to avoid content overlay */
+}
+
+img {
+    max-width: 300px;
+    box-shadow: 0.2em 0.2em #757575d2
+}
+
+/* Code Block Defaults */
+
+pre {
+    font-size: 2.2vmax;
+    background-color: var(--code-bg-color);
+}
+code {
+    font-size: 2.2vmax;
+    background-color: var(--code-bg-color);
+}
+
+.content {
+  align-content: center;
+	margin: 1vmax;
+  margin-top: 3.5vmax; /* Do not drift under top bar. */
+  margin-left: 1vmax;
+  margin-right: 1vmax;
+  max-width: 95%;
+}
+
+/* Make quotes stand out a bit more */
+blockquote {
+  border-style: outset;
+  padding: 1vmax;
+}
+
+.skip-to button {
+padding: 0 0 0 0;
+}
+
+.skip-to {
+  font-size: .5vmax;
+}
+
+.more_nav {
+	list-style-type: none;
+	margin: 0;
+	padding: .5vmax;
+	padding-right: 2vmax;
+}
+
+.link_to_code {
+	list-style-type: none;
+	margin: 0;
+}
+
+.desktop_only {
+	display: none;
+}
+
+@media only screen and (min-width: 200em) {
+  /* For desktop: */
+.desktop_only {
+	display: block !important;
+}
+}

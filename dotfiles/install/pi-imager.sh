@@ -1,0 +1,1 @@
+flatpak install rpi-imager

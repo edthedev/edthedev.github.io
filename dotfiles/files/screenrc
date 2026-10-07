@@ -1,0 +1,29 @@
+
+# Being able to scroll back with Ctrl+] is nice.
+defscrollback 5000
+
+# don't display the copyright page
+startup_message off
+
+# Some status line stuff.
+caption string "%?%F%{= Bk}%? %C%A %D %d-%m-%Y %{= kB} %t%= %?%F%{= Bk}%:%{= wk}%? %n "
+hardstatus on
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}* %t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+# Default screens
+# screen -t shell1 0 alsamixer
+# screen -t shell1 0 mutt
+# screen -t shell2 1 ncmpc
+# screen -t shell2 1 mcabber
+
+# Pick ye olde shell.
+# shell /bin/zsh
+
+# if [ -d /opt/powershell ]; then
+#	shell /opt/powershell/pwsh
+#else
+#	shell /bin/bash
+#fi
+
+shell -$SHELL

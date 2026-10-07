@@ -1,0 +1,75 @@
+{
+
+    "journal.patterns": {
+
+
+        "notes": {
+
+            "path": "${base}/${year}/",
+
+            "file": "${month}-${input}.${ext}"
+
+        },
+        "entries": {
+
+            "path": "${base}/${year}/",
+
+            "file": "${month}-daily.${ext}"
+
+        }
+
+    },
+    "journal.openInNewEditorGroup": false,
+    "journal.templates": [
+
+        {
+
+            "name": "memo",
+
+            "template": "- MEMO ${localTime}: ${input}"
+
+        },
+
+        {
+
+            "name": "task",
+
+            "template": "- [] ${d:LL} - Task: ${input}"
+
+        },
+
+        {
+
+            "name": "entry",
+
+            "template": "---\n\n\ntitle: Journal for ${d:dddd, MMMM DD YYYY}\nauthor: Edward Delaporte\ndate: ${d:dddd, MMMM DD YYYY}\n---\n\n## Self Care\n\n## Strategic Investment\n\n## Operational Commitment\n\n## Notes\n"
+
+        },
+
+        {
+
+            "name": "time",
+
+            "template": "${localTime}"
+
+        },
+
+        {
+
+            "name": "note",
+
+            "template": "---\ntitle: ${input}\nauthor: Edward Delaporte\ndate: ${d:dddd, MMMM DD YYYY}\n---\n\n## Context\n\n## Notes\n\n"
+
+        },
+
+        {
+
+            "name": "files",
+
+            "template": "- [${title}](${link})"
+
+        }
+
+    ],
+    "journal.dev": false
+}

@@ -1,0 +1,92 @@
+<div class="heading-wrapper h2">
+<h2 id="setup">Setup</h2>
+<a class="anchor" href="#setup" aria-labelledby="setup"><span hidden>#</span></a></div>
+<ol>
+<li>
+<p>Start a cloud shell on the Exchange Admin website.</p>
+</li>
+<li>
+<p>The cloud shell defaults to <code>bash</code>. Change it to <code>PowerShell</code>.</p>
+</li>
+<li>
+<p>Run these commands once.</p>
+<p>The results of these commands will persisit in your Cloud Shell attached Azure storage.</p>
+<pre><code class="language-powershell">Install-Module -Name PSWSMan -AcceptLicense -Confirm
+Install-WSMan   # Web services for management
+Import-Module ExchangeOnlineManagement
+</code></pre>
+</li>
+<li>
+<p>Repeat these commands for each new Cloud Shell</p>
+<pre><code class="language-powershell">Import-Module ExchangeOnlineManagement
+Connect-ExchangeOnline
+</code></pre>
+</li>
+</ol>
+<div class="heading-wrapper h2">
+<h2 id="tasks">Tasks</h2>
+<a class="anchor" href="#tasks" aria-labelledby="tasks"><span hidden>#</span></a></div>
+<div class="heading-wrapper h3">
+<h3 id="distribution-group">Distribution Group</h3>
+<a class="anchor" href="#distribution-group" aria-labelledby="distribution-group"><span hidden>#</span></a></div>
+<p>A distribution list sends a copy of any incoming email to the inbox of every member. The list itself, has an email address, but does not have a mailbox, since a copy of every incoming message goes in the mailboxes of each list member.</p>
+<ol>
+<li>
+<p>Create distribution group</p>
+<pre><code class="language-powershell">$groupname = 'loves_tacos'
+new-distributiongroup $groupname
+</code></pre>
+</li>
+<li>
+<p>Add some folks to it</p>
+<pre><code class="language-powershell">Add-DistributionGroupMember -Identity $groupname -Member bob
+Add-DistributionGroupMember -Identity $groupname -Member larry
+</code></pre>
+</li>
+<li>
+<p>Verify the list is as desired</p>
+<pre><code class="language-powershell">get-distributiongroupmember -identity $groupname
+</code></pre>
+</li>
+<li>
+<p>Add an email alias</p>
+<pre><code class="language-powershell">$domain = 'tacos.net'
+set-distributiongroup -identity $groupname -EmailAddresses @{add=&quot;$groupname@$domain&quot;}
+get-distributiongroup $groupname | Select Alias, EmailAddresses, ManagedBy, DistinguishedName | Format-List
+</code></pre>
+</li>
+</ol>
+<div class="heading-wrapper h3">
+<h3 id="or-create-an-entire-shared-mailbox">Or create an entire shared mailbox</h3>
+<a class="anchor" href="#or-create-an-entire-shared-mailbox" aria-labelledby="or-create-an-entire-shared-mailbox"><span hidden>#</span></a></div>
+<p>A shared mailbox is an actual separate mailbox. Messages sent to it will not be copied into the mailboxes of the members with access. Members with access to a shared mailbox may also be allowed to send email out.</p>
+<p>A shared mailbox should be used if:</p>
+<pre><code>- A team of people need to send email out from the email address
+- Each email should only be handled by one person.
+</code></pre>
+<blockquote>
+<p>Warning: This recipe is likely incomplete, as I eventually decided not to use it.</p>
+</blockquote>
+<ol>
+<li>
+<p>Create a shared mailbox</p>
+<pre><code class="language-powershell">$groupname = 'tacos'
+$displayname = 'Loves Tacos'
+New-Mailbox -Shared -Name &quot;$groupname&quot; -DisplayName $displayname
+</code></pre>
+</li>
+<li>
+<p>Decide who to add.</p>
+<p>You can review your mailbox users with <code>Get-Mailbox</code></p>
+</li>
+<li>
+<p>Add people</p>
+<pre><code class="language-powershell">Add-MailboxPermission -Identity $groupname -AccessRights FullAccess -User &lt;user&gt;
+</code></pre>
+</li>
+<li>
+<p>Review</p>
+<pre><code class="language-powershell">Get-MailboxPermission $groupname
+</code></pre>
+</li>
+</ol>

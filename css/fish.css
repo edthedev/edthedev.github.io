@@ -1,0 +1,25 @@
+p, img { 
+	position: absolute; 
+	background-color: #abc;
+	left: 0px;
+	margin: 5px; 
+    background-color: transparent;
+}
+body {
+    background-color: #78D6D6;
+}
+
+#sand {
+	width:100%;
+	height:100%;
+    background-color: transparent;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  /* some CSS here */
+  img.sand {
+	  width: 480px;
+  }
+}
