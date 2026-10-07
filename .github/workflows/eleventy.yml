@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v7
 
         - name: update inventory mix and match  
           shell: pwsh
@@ -21,7 +21,7 @@ jobs:
             node-version: '21.x'
         - run: npm ci
         - name: clone dotfiles for examples
-          uses: actions/checkout@v2
+          uses: actions/checkout@v7
           with:
             repository: edthedev/dotfiles
             path: ./dotfiles
@@ -33,7 +33,7 @@ jobs:
           run: npx @11ty/eleventy
 
         - name: Deploy
-          uses: peaceiris/actions-gh-pages@v3
+          uses: peaceiris/actions-gh-pages@v5
           with:
             # deploy_key: ${{ secrets.DEPLOY_KEY }} - expects ssh rather than deploy key
             github_token: ${{ secrets.GITHUB_TOKEN }}
